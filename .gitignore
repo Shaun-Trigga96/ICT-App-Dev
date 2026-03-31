@@ -21,9 +21,32 @@ dist/
 .DS_Store
 Thumbs.db
 
+# -----------------------------------------------
+# Large media & binary files — DO NOT COMMIT
+# -----------------------------------------------
+*.mp4
+*.mp3
+*.avi
+*.mkv
+*.mov
+*.wmv
+*.flv
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.iso
+*.tar
+*.tar.gz
+
+# Large docs/media sometimes added accidentally  
+*.psd
+*.ai
+
 # Large files — add yours from Step 3 below
 # Example:
 # path/to/largefile.zip
-ICT App Dev Year 4\RESEARCH METHODOLOGY 4 (RME478S)\Term 1\Recordings\File.mp4.mp4
-ICT App Dev Year 4\REFERENCE WORK.zip
-ICT App Dev Year 4\PROJECTS 4 (PRJ470S)\Term 1\Week 5 Ethics\File.mp4
+ICT App Dev Year 4/RESEARCH METHODOLOGY 4 (RME478S)/Term 1/Recordings/File.mp4.mp4
+ICT App Dev Year 4/REFERENCE WORK.zip
+ICT App Dev Year 4/PROJECTS 4 (PRJ470S)/Term 1/Week 5 Ethics/File.mp4
