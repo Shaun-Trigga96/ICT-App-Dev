@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="viewrentals.component.css">
+  <style>
+  </style>
+</head>
+<body>
+<div class="box">
+<div class="banner">
+  <h1 class="h1">View all Rentals</h1>
+</div>
+<p>
+
+</p>
+<table id="customers" class="rentals">
+  <tr>
+    <th>Rental ID</th>
+    <th>UserID</th>
+    <th>MovieID</th>
+    <th>Date Rented</th>
+    <th>Date Returned</th>
+  </tr>
+  <tr *ngFor="let rental of rentals">
+    <td>{{rental.rentalId}}</td>
+    <td>{{rental.userId}}</td>
+    <td>{{rental.movieId}}</td>
+    <td>{{rental.rentalDate}}</td>
+    <td>{{rental.returnDate}}</td>
+  </tr>
+
+</table>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFD47XS 27 March 2024 — Full Worked Solutions</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; font-size: 14px; line-height: 1.6; }
+
+  .cover { background: #1b5e20; color: white; padding: 40px; text-align: center; }
+  .cover h1 { font-size: 26px; margin-bottom: 8px; }
+  .cover p { font-size: 14px; opacity: 0.85; margin: 4px 0; }
+  .cover .marks { display: flex; justify-content: center; gap: 32px; margin-top: 20px; flex-wrap: wrap; }
+  .cover .mark-box { background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; text-align: center; }
+  .cover .mark-box .num { font-size: 22px; font-weight: bold; }
+  .cover .mark-box .lbl { font-size: 11px; opacity: 0.8; }
+
+  .toc { background: white; padding: 16px 40px; border-bottom: 3px solid #1b5e20; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .toc span { font-size: 12px; color: #666; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-right: 8px; }
+  .toc a { color: #1b5e20; text-decoration: none; font-size: 13px; font-weight: bold; padding: 4px 12px; border: 1px solid #1b5e20; border-radius: 20px; }
+  .toc a:hover { background: #1b5e20; color: white; }
+
+  .page { max-width: 980px; margin: 24px auto; padding: 0 20px; }
+
+  .q-block { background: white; border-radius: 10px; border: 1px solid #ddd; margin-bottom: 28px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .q-header { color: white; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .q-header h2 { font-size: 16px; }
+  .q-header .mbadge { background: rgba(255,255,255,0.2); padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+  .q1h { background: #1b5e20; }
+  .q2h { background: #0d47a1; }
+  .q3h { background: #4a148c; }
+  .q4h { background: #bf360c; }
+
+  .sub-q { padding: 20px 24px; border-bottom: 1px solid #eee; }
+  .sub-q:last-child { border-bottom: none; }
+  .sub-q-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .sub-q-header h3 { font-size: 15px; font-weight: bold; }
+  .sub-q-header .pts { font-size: 11px; font-weight: bold; padding: 2px 10px; border-radius: 10px; }
+  .pts-green { background: #e8f5e9; color: #1b5e20; }
+  .pts-blue { background: #e3f2fd; color: #0d47a1; }
+  .pts-purple { background: #f3e5f5; color: #4a148c; }
+  .pts-orange { background: #fbe9e7; color: #bf360c; }
+
+  .step { background: #f8f9ff; border-left: 4px solid #3f51b5; padding: 12px 16px; margin-bottom: 10px; border-radius: 0 6px 6px 0; }
+  .step-g { background: #f1f8e9; border-left-color: #558b2f; }
+  .step-r { background: #fce4ec; border-left-color: #c62828; }
+  .step .step-label { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #3f51b5; margin-bottom: 6px; }
+  .step-g .step-label { color: #558b2f; }
+  .step-r .step-label { color: #c62828; }
+  .step p { margin-bottom: 4px; }
+  .formula { background: #1a237e; color: white; padding: 8px 14px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 13px; display: inline-block; margin: 6px 0; }
+  .formula-g { background: #1b5e20; }
+
+  .answer-box { background: #e8f5e9; border: 2px solid #4caf50; border-radius: 8px; padding: 14px 18px; margin-top: 12px; }
+  .answer-box .answer-label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #2e7d32; letter-spacing: 1px; margin-bottom: 4px; }
+  .answer-box .answer-value { font-size: 18px; font-weight: bold; color: #1b5e20; }
+
+  .key-note { background: #fffde7; border-left: 4px solid #f9a825; padding: 10px 14px; margin: 10px 0; font-size: 13px; border-radius: 0 6px 6px 0; }
+
+  table.dt { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+  table.dt th { background: #1b5e20; color: white; padding: 8px 12px; text-align: left; font-size: 12px; }
+  table.dt td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  table.dt tr:nth-child(even) { background: #f5f5f5; }
+  table.dt tr.crit { background: #fce4ec !important; font-weight: bold; }
+  table.dt tr.crit td { color: #b71c1c; }
+  td.zero { color: #2e7d32; font-weight: bold; }
+  td.red { color: #b71c1c; font-weight: bold; }
+  td.blue-h { background: #e3f2fd; }
+
+  .dt-blue th { background: #0d47a1; }
+  .dt-purple th { background: #4a148c; }
+  .dt-orange th { background: #bf360c; }
+
+  .cp-badge { display: inline-block; color: white; padding: 6px 16px; border-radius: 6px; font-weight: bold; font-size: 14px; margin: 10px 0; }
+  .cp-green { background: #2e7d32; }
+  .cp-blue { background: #1565c0; }
+
+  /* GANTT */
+  .gantt-wrap { overflow-x: auto; margin: 12px 0; }
+  table.gantt { border-collapse: collapse; font-size: 11px; white-space: nowrap; }
+  table.gantt th, table.gantt td { border: 1px solid #ccc; padding: 3px 4px; text-align: center; }
+  table.gantt th.tk { text-align: left; background: #bf360c; color: white; width: 16px; padding: 3px 8px; }
+  table.gantt th.res { text-align: left; background: #d84315; color: white; width: 200px; padding: 3px 8px; font-size: 10px; }
+  table.gantt th.day { background: #fbe9e7; color: #bf360c; font-size: 9px; width: 18px; padding: 2px 1px; }
+  table.gantt th.wk { background: #ffccbc; color: #bf360c; font-size: 9px; }
+  table.gantt td.lbl { text-align: left; background: #f5f5f5; font-weight: bold; padding: 3px 8px; }
+  table.gantt td.rl { text-align: left; background: #fafafa; font-size: 10px; padding: 3px 8px; }
+  .bA { background: #1565c0; }
+  .bB { background: #6a1b9a; }
+  .bC { background: #00695c; }
+  .bD { background: #e65100; }
+  .bE { background: #558b2f; }
+  .bF { background: #ad1457; }
+  .bG { background: #37474f; }
+  .bH { background: #f57f17; }
+
+  /* COST */
+  table.cost { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+  table.cost th { background: #bf360c; color: white; padding: 8px 14px; text-align: left; }
+  table.cost td { padding: 8px 14px; border-bottom: 1px solid #eee; }
+  table.cost tr:nth-child(even) { background: #f9f9f9; }
+  table.cost .total-row { background: #bf360c !important; }
+  table.cost .total-row td { color: white; font-weight: bold; font-size: 15px; }
+
+  /* Theory */
+  .principle-card { border: 1px solid #ce93d8; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+  .principle-card .pc-header { background: #7b1fa2; color: white; padding: 8px 16px; font-weight: bold; font-size: 13px; }
+  .principle-card .pc-body { padding: 12px 16px; font-size: 13px; line-height: 1.6; }
+
+  .role-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; }
+  .role-table th { background: #4a148c; color: white; padding: 7px 12px; text-align: left; font-size: 12px; }
+  .role-table td { padding: 7px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .role-table tr:nth-child(even) { background: #f5f5f5; }
+  .role-table .cat-hdr td { background: #e1bee7; font-weight: bold; color: #4a148c; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .network-wrap { background: #f1f8e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 16px; margin: 12px 0; overflow-x: auto; }
+  .network-wrap h4 { font-size: 12px; color: #2e7d32; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+
+  .footer { text-align: center; color: #999; font-size: 12px; padding: 24px; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+  @media (max-width: 600px) { .grid2 { grid-template-columns: 1fr; } }
+  .info-card { background: #f5f5f5; border: 1px solid #ddd; border-radius: 8px; padding: 14px 16px; font-size: 13px; }
+  .info-card strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #777; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>PFD47XS — Complete Worked Solutions</h1>
+  <p>CPUT · Faculty of Informatics & Design · 27 March 2024</p>
+  <p>Lecturer / Examiner: Mr T. Makhurane</p>
+  <div class="marks">
+    <div class="mark-box"><div class="num">100</div><div class="lbl">Total Marks</div></div>
+    <div class="mark-box"><div class="num">4</div><div class="lbl">Questions</div></div>
+    <div class="mark-box"><div class="num">2 hrs</div><div class="lbl">Duration</div></div>
+    <div class="mark-box"><div class="num">8 hrs/day</div><div class="lbl">Assumption</div></div>
+  </div>
+</div>
+
+<div class="toc">
+  <span>Jump to:</span>
+  <a href="#q1">Q1 — CPM (20)</a>
+  <a href="#q2">Q2 — PERT (20)</a>
+  <a href="#q3">Q3 — Theory (20)</a>
+  <a href="#q4">Q4 — Gantt & Cost (20)</a>
+</div>
+
+<div class="page">
+
+<!-- ===================== Q1 CPM ===================== -->
+<div class="q-block" id="q1">
+  <div class="q-header q1h">
+    <h2>Question 1 — CPM Network Analysis (Deterministic)</h2>
+    <span class="mbadge">[20 Marks]</span>
+  </div>
+
+  <!-- Activity table -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>Given Data</h3>
+    </div>
+    <table class="dt">
+      <tr><th>Activity</th><th>Duration (days)</th><th>Predecessors</th></tr>
+      <tr><td>A</td><td>4</td><td>—</td></tr>
+      <tr><td>B</td><td>6</td><td>A</td></tr>
+      <tr><td>C</td><td>5</td><td>A</td></tr>
+      <tr><td>D</td><td>8</td><td>A</td></tr>
+      <tr><td>E</td><td>9</td><td>B</td></tr>
+      <tr><td>F</td><td>10</td><td>B</td></tr>
+      <tr><td>G</td><td>6</td><td>C, E</td></tr>
+      <tr><td>H</td><td>8</td><td>D</td></tr>
+      <tr><td>I</td><td>3</td><td>D</td></tr>
+      <tr><td>J</td><td>2</td><td>G, H</td></tr>
+    </table>
+  </div>
+
+  <!-- Q1.1 Network + finish time -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>1.1 — Draw the Network & Determine the Finish Time</h3>
+      <span class="pts pts-green">[6 marks]</span>
+    </div>
+
+    <div class="key-note">
+      <strong>AOA notation used.</strong> Arrows = Activities, Circles = Events (numbered 1–12).
+      Dashed arrows = Dummy activities (0 duration, used to show dependency).
+      Node format: top = E (Earliest Event Time), bottom = L (Latest Event Time).
+    </div>
+
+    <div class="network-wrap">
+      <h4>AOA Network — Activity on Arrow</h4>
+      <svg width="100%" viewBox="0 0 960 320" xmlns="http://www.w3.org/2000/svg" style="min-width:760px">
+        <defs>
+          <marker id="arC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L9 5L1 9" fill="none" stroke="#b71c1c" stroke-width="1.5" stroke-linecap="round"/>
+          </marker>
+          <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L9 5L1 9" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/>
+          </marker>
+          <marker id="arD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L9 5L1 9" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round"/>
+          </marker>
+        </defs>
+
+        <!-- Critical path arrows (red, solid) -->
+        <!-- A: 1→2 -->
+        <line x1="55" y1="155" x2="145" y2="155" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#arC)"/>
+        <rect x="80" y="136" width="36" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="98" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">A=4</text>
+
+        <!-- B: 2→3 -->
+        <line x1="188" y1="155" x2="278" y2="155" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#arC)"/>
+        <rect x="215" y="136" width="36" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="233" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">B=6</text>
+
+        <!-- E: 3→6 (diagonal up) -->
+        <line x1="315" y1="140" x2="455" y2="78" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#arC)"/>
+        <rect x="360" y="97" width="36" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="378" y="109" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">E=9</text>
+
+        <!-- G: 6→8 -->
+        <line x1="533" y1="65" x2="623" y2="65" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#arC)"/>
+        <rect x="560" y="48" width="36" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="578" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">G=6</text>
+
+        <!-- dummy G→J: 8→11 (diagonal down) -->
+        <line x1="657" y1="78" x2="742" y2="140" stroke="#b71c1c" stroke-width="2.0" marker-end="url(#arC)"/>
+        <text x="704" y="100" text-anchor="middle" font-size="9" fill="#999">d</text>
+
+        <!-- J: 11→12 -->
+        <line x1="790" y1="155" x2="888" y2="155" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#arC)"/>
+        <rect x="820" y="136" width="36" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="838" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">J=2</text>
+
+        <!-- Non-critical arrows (blue) -->
+        <!-- C: 2→4 (diagonal down) -->
+        <line x1="172" y1="168" x2="282" y2="218" stroke="#1565c0" stroke-width="1.8" marker-end="url(#arB)"/>
+        <rect x="207" y="183" width="36" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="225" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">C=5</text>
+
+        <!-- D: 2→5 (diagonal down far) -->
+        <line x1="170" y1="172" x2="276" y2="260" stroke="#1565c0" stroke-width="1.8" marker-end="url(#arB)"/>
+        <rect x="195" y="214" width="36" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="213" y="226" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">D=8</text>
+
+        <!-- dummy C→G: 4→6 -->
+        <line x1="320" y1="218" x2="462" y2="88" stroke="#999" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arD)"/>
+        <text x="390" y="168" text-anchor="middle" font-size="9" fill="#999">dummy</text>
+
+        <!-- F: 3→7 (diagonal down) -->
+        <line x1="314" y1="168" x2="448" y2="243" stroke="#1565c0" stroke-width="1.8" marker-end="url(#arB)"/>
+        <rect x="354" y="200" width="36" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="372" y="212" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">F=10</text>
+
+        <!-- H: 5→9 (right) -->
+        <line x1="325" y1="270" x2="603" y2="270" stroke="#1565c0" stroke-width="1.8" marker-end="url(#arB)"/>
+        <rect x="442" y="252" width="36" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="460" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">H=8</text>
+
+        <!-- I: 5→10 (small right) -->
+        <line x1="326" y1="278" x2="505" y2="303" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arB)"/>
+        <rect x="384" y="285" width="30" height="15" rx="3" fill="#e3f2fd"/>
+        <text x="399" y="296" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565c0">I=3</text>
+
+        <!-- dummy H→J: 9→11 -->
+        <line x1="638" y1="262" x2="754" y2="168" stroke="#999" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arD)"/>
+        <text x="700" y="216" text-anchor="middle" font-size="9" fill="#999">dummy</text>
+
+        <!-- dummy F→end: 7→12 -->
+        <line x1="487" y1="253" x2="886" y2="165" stroke="#999" stroke-width="1.3" stroke-dasharray="4,4" marker-end="url(#arD)"/>
+
+        <!-- dummy I→end: 10→12 -->
+        <line x1="538" y1="310" x2="886" y2="165" stroke="#999" stroke-width="1.3" stroke-dasharray="4,4" marker-end="url(#arD)"/>
+
+        <!-- NODES -->
+        <!-- Node 1 E=0,L=0 CRITICAL -->
+        <circle cx="37" cy="155" r="22" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="15" y1="155" x2="59" y2="155" stroke="#b71c1c" stroke-width="1"/>
+        <text x="37" y="148" text-anchor="middle" font-size="9" fill="#333">E=0</text>
+        <text x="37" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">1</text>
+        <text x="37" y="170" text-anchor="middle" font-size="9" fill="#333">L=0</text>
+
+        <!-- Node 2 E=4,L=4 CRITICAL -->
+        <circle cx="168" cy="155" r="22" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="146" y1="155" x2="190" y2="155" stroke="#b71c1c" stroke-width="1"/>
+        <text x="168" y="148" text-anchor="middle" font-size="9" fill="#333">E=4</text>
+        <text x="168" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">2</text>
+        <text x="168" y="170" text-anchor="middle" font-size="9" fill="#333">L=4</text>
+
+        <!-- Node 3 E=10,L=10 CRITICAL -->
+        <circle cx="298" cy="155" r="22" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="276" y1="155" x2="320" y2="155" stroke="#b71c1c" stroke-width="1"/>
+        <text x="298" y="148" text-anchor="middle" font-size="9" fill="#333">E=10</text>
+        <text x="298" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">3</text>
+        <text x="298" y="170" text-anchor="middle" font-size="9" fill="#333">L=10</text>
+
+        <!-- Node 4 E=9,L=19 not critical -->
+        <circle cx="302" cy="220" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="282" y1="220" x2="322" y2="220" stroke="#1565c0" stroke-width="1"/>
+        <text x="302" y="214" text-anchor="middle" font-size="9" fill="#333">E=9</text>
+        <text x="302" y="223" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">4</text>
+        <text x="302" y="234" text-anchor="middle" font-size="9" fill="#333">L=19</text>
+
+        <!-- Node 5 E=12,L=17 not critical -->
+        <circle cx="305" cy="270" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="285" y1="270" x2="325" y2="270" stroke="#1565c0" stroke-width="1"/>
+        <text x="305" y="264" text-anchor="middle" font-size="9" fill="#333">E=12</text>
+        <text x="305" y="273" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">5</text>
+        <text x="305" y="284" text-anchor="middle" font-size="9" fill="#333">L=17</text>
+
+        <!-- Node 6 E=19,L=19 CRITICAL -->
+        <circle cx="513" cy="65" r="22" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="491" y1="65" x2="535" y2="65" stroke="#b71c1c" stroke-width="1"/>
+        <text x="513" y="58" text-anchor="middle" font-size="9" fill="#333">E=19</text>
+        <text x="513" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">6</text>
+        <text x="513" y="79" text-anchor="middle" font-size="9" fill="#333">L=19</text>
+
+        <!-- Node 7 E=20,L=27 not critical -->
+        <circle cx="468" cy="255" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="448" y1="255" x2="488" y2="255" stroke="#1565c0" stroke-width="1"/>
+        <text x="468" y="249" text-anchor="middle" font-size="9" fill="#333">E=20</text>
+        <text x="468" y="258" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">7</text>
+        <text x="468" y="269" text-anchor="middle" font-size="9" fill="#333">L=27</text>
+
+        <!-- Node 8 E=25,L=25 CRITICAL -->
+        <circle cx="640" cy="65" r="22" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="618" y1="65" x2="662" y2="65" stroke="#b71c1c" stroke-width="1"/>
+        <text x="640" y="58" text-anchor="middle" font-size="9" fill="#333">E=25</text>
+        <text x="640" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">8</text>
+        <text x="640" y="79" text-anchor="middle" font-size="9" fill="#333">L=25</text>
+
+        <!-- Node 9 E=20,L=25 not critical -->
+        <circle cx="622" cy="262" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="602" y1="262" x2="642" y2="262" stroke="#1565c0" stroke-width="1"/>
+        <text x="622" y="256" text-anchor="middle" font-size="9" fill="#333">E=20</text>
+        <text x="622" y="265" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">9</text>
+        <text x="622" y="276" text-anchor="middle" font-size="9" fill="#333">L=25</text>
+
+        <!-- Node 10 E=15,L=27 not critical -->
+        <circle cx="520" cy="308" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="500" y1="308" x2="540" y2="308" stroke="#1565c0" stroke-width="1"/>
+        <text x="520" y="302" text-anchor="middle" font-size="9" fill="#333">E=15</text>
+        <text x="520" y="311" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">10</text>
+        <text x="520" y="322" text-anchor="middle" font-size="9" fill="#333">L=27</text>
+
+        <!-- Node 11 E=25,L=25 CRITICAL -->
+        <circle cx="768" cy="155" r="22" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="746" y1="155" x2="790" y2="155" stroke="#b71c1c" stroke-width="1"/>
+        <text x="768" y="148" text-anchor="middle" font-size="9" fill="#333">E=25</text>
+        <text x="768" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">11</text>
+        <text x="768" y="170" text-anchor="middle" font-size="9" fill="#333">L=25</text>
+
+        <!-- Node 12 E=27,L=27 CRITICAL (END) -->
+        <circle cx="910" cy="155" r="22" fill="#ffcdd2" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="888" y1="155" x2="932" y2="155" stroke="#b71c1c" stroke-width="1"/>
+        <text x="910" y="148" text-anchor="middle" font-size="9" fill="#333">E=27</text>
+        <text x="910" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">12</text>
+        <text x="910" y="170" text-anchor="middle" font-size="9" fill="#333">L=27</text>
+
+        <!-- Legend -->
+        <rect x="10" y="250" width="270" height="40" rx="6" fill="white" stroke="#ccc"/>
+        <line x1="20" y1="267" x2="50" y2="267" stroke="#b71c1c" stroke-width="2.2"/>
+        <text x="56" y="271" font-size="10" fill="#333">Critical</text>
+        <line x1="110" y1="267" x2="140" y2="267" stroke="#1565c0" stroke-width="1.8"/>
+        <text x="146" y="271" font-size="10" fill="#333">Non-critical</text>
+        <line x1="20" y1="283" x2="50" y2="283" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3"/>
+        <text x="56" y="287" font-size="10" fill="#333">Dummy</text>
+      </svg>
+    </div>
+
+    <div class="step">
+      <div class="step-label">Forward Pass — E(j) = max{ E(i) + Duration } over all incoming activities</div>
+      <table class="dt" style="margin-top:8px;">
+        <tr><th>Node</th><th>Calculation</th><th>E(n)</th></tr>
+        <tr><td>1 (Start)</td><td>By definition = 0</td><td class="zero">0</td></tr>
+        <tr><td>2</td><td>E(1) + A = 0 + 4</td><td class="zero">4</td></tr>
+        <tr><td>3</td><td>E(2) + B = 4 + 6</td><td class="zero">10</td></tr>
+        <tr><td>4</td><td>E(2) + C = 4 + 5</td><td>9</td></tr>
+        <tr><td>5</td><td>E(2) + D = 4 + 8</td><td>12</td></tr>
+        <tr><td>6</td><td>max{E(3)+E, E(4)+0} = max{10+9, 9+0} = max{19, 9}</td><td class="zero">19</td></tr>
+        <tr><td>7</td><td>E(3) + F = 10 + 10</td><td>20</td></tr>
+        <tr><td>8</td><td>E(6) + G = 19 + 6</td><td class="zero">25</td></tr>
+        <tr><td>9</td><td>E(5) + H = 12 + 8</td><td>20</td></tr>
+        <tr><td>10</td><td>E(5) + I = 12 + 3</td><td>15</td></tr>
+        <tr><td>11</td><td>max{E(8)+0, E(9)+0} = max{25, 20}</td><td class="zero">25</td></tr>
+        <tr><td>12 (End)</td><td>max{E(11)+J, E(7)+0, E(10)+0} = max{27, 20, 15}</td><td class="zero"><strong>27</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="answer-box">
+      <div class="answer-label">Answer — Q1.1 (Finish Time)</div>
+      <div class="answer-value">Project Finish Time = 27 days</div>
+    </div>
+  </div>
+
+  <!-- Q1.2 Critical Path -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>1.2 — Determine the Critical Path</h3>
+      <span class="pts pts-green">[4 marks]</span>
+    </div>
+
+    <div class="step step-r">
+      <div class="step-label">Backward Pass — L(i) = min{ L(j) − Duration } over all outgoing activities</div>
+      <table class="dt" style="margin-top:8px;">
+        <tr><th>Node</th><th>Calculation</th><th>L(n)</th></tr>
+        <tr><td>12 (End)</td><td>Set = E(12)</td><td class="zero">27</td></tr>
+        <tr><td>11</td><td>L(12) − J = 27 − 2</td><td class="zero">25</td></tr>
+        <tr><td>10</td><td>L(12) − 0 = 27</td><td>27</td></tr>
+        <tr><td>9</td><td>L(11) − 0 = 25</td><td>25</td></tr>
+        <tr><td>8</td><td>L(11) − 0 = 25</td><td class="zero">25</td></tr>
+        <tr><td>7</td><td>L(12) − 0 = 27</td><td>27</td></tr>
+        <tr><td>6</td><td>L(8) − G = 25 − 6</td><td class="zero">19</td></tr>
+        <tr><td>5</td><td>min{L(9)−H, L(10)−I} = min{25−8, 27−3} = min{17, 24}</td><td>17</td></tr>
+        <tr><td>4</td><td>L(6) − 0 = 19</td><td>19</td></tr>
+        <tr><td>3</td><td>min{L(6)−E, L(7)−F} = min{19−9, 27−10} = min{10, 17}</td><td class="zero">10</td></tr>
+        <tr><td>2</td><td>min{L(3)−B, L(4)−C, L(5)−D} = min{10−6, 19−5, 17−8} = min{4, 14, 9}</td><td class="zero">4</td></tr>
+        <tr><td>1 (Start)</td><td>L(2) − A = 4 − 4</td><td class="zero">0 ✓</td></tr>
+      </table>
+    </div>
+
+    <div class="step step-g">
+      <div class="step-label">Total Float = L(end node) − E(start node) − Duration → Critical if TF = 0</div>
+      <table class="dt" style="margin-top:8px;">
+        <tr><th>Activity</th><th>L(j) − E(i) − D</th><th>Total Float</th><th>Critical?</th></tr>
+        <tr class="crit"><td>A (1→2)</td><td>4 − 0 − 4</td><td class="zero">0</td><td>✅ YES</td></tr>
+        <tr class="crit"><td>B (2→3)</td><td>10 − 4 − 6</td><td class="zero">0</td><td>✅ YES</td></tr>
+        <tr><td>C (2→4)</td><td>19 − 4 − 5</td><td class="red">10</td><td>❌ No</td></tr>
+        <tr><td>D (2→5)</td><td>17 − 4 − 8</td><td class="red">5</td><td>❌ No</td></tr>
+        <tr class="crit"><td>E (3→6)</td><td>19 − 10 − 9</td><td class="zero">0</td><td>✅ YES</td></tr>
+        <tr><td>F (3→7)</td><td>27 − 10 − 10</td><td class="red">7</td><td>❌ No</td></tr>
+        <tr class="crit"><td>G (6→8)</td><td>25 − 19 − 6</td><td class="zero">0</td><td>✅ YES</td></tr>
+        <tr><td>H (5→9)</td><td>25 − 12 − 8</td><td class="red">5</td><td>❌ No</td></tr>
+        <tr><td>I (5→10)</td><td>27 − 12 − 3</td><td class="red">12</td><td>❌ No</td></tr>
+        <tr class="crit"><td>J (11→12)</td><td>27 − 25 − 2</td><td class="zero">0</td><td>✅ YES</td></tr>
+      </table>
+    </div>
+
+    <div class="cp-badge cp-green">🟢 Critical Path: A → B → E → G → J &nbsp; (nodes 1→2→3→6→8→11→12) &nbsp; = 4+6+9+6+2 = 27 days</div>
+  </div>
+
+  <!-- Q1.3 Float types -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>1.3 — Free Float, Independent Float & Total Float for 3 Non-Critical Activities</h3>
+      <span class="pts pts-green">[10 marks]</span>
+    </div>
+
+    <div class="key-note">
+      <strong>Three float formulas:</strong><br>
+      <strong>Total Float (TF)</strong> = L(j) − E(i) − Duration &nbsp;|&nbsp;
+      <strong>Free Float (FF)</strong> = E(j) − E(i) − Duration &nbsp;|&nbsp;
+      <strong>Independent Float (IF)</strong> = max{0, E(j) − L(i) − Duration}
+    </div>
+
+    <p style="font-size:13px;margin-bottom:10px;">Non-critical activities: <strong>C, F, I</strong> (chosen to show different TF values)</p>
+
+    <table class="dt">
+      <tr><th>Activity</th><th>Path (i→j)</th><th>E(i)</th><th>L(i)</th><th>E(j)</th><th>L(j)</th><th>Duration</th><th>FF = E(j)−E(i)−D</th><th>IF = max{0,E(j)−L(i)−D}</th><th>TF = L(j)−E(i)−D</th></tr>
+      <tr>
+        <td><strong>C</strong></td><td>2→4</td><td>4</td><td>4</td><td>9</td><td>19</td><td>5</td>
+        <td>9−4−5 = <strong>0</strong></td>
+        <td>max{0, 9−4−5} = <strong>0</strong></td>
+        <td>19−4−5 = <strong class="red">10</strong></td>
+      </tr>
+      <tr>
+        <td><strong>F</strong></td><td>3→7</td><td>10</td><td>10</td><td>20</td><td>27</td><td>10</td>
+        <td>20−10−10 = <strong>0</strong></td>
+        <td>max{0, 20−10−10} = <strong>0</strong></td>
+        <td>27−10−10 = <strong class="red">7</strong></td>
+      </tr>
+      <tr>
+        <td><strong>I</strong></td><td>5→10</td><td>12</td><td>17</td><td>15</td><td>27</td><td>3</td>
+        <td>15−12−3 = <strong>0</strong></td>
+        <td>max{0, 15−17−3} = max{0,−5} = <strong>0</strong></td>
+        <td>27−12−3 = <strong class="red">12</strong></td>
+      </tr>
+    </table>
+
+    <div class="key-note" style="margin-top:10px;">
+      <strong>Interpretation:</strong> C can be delayed up to 10 days, F up to 7 days, and I up to 12 days without delaying the project.
+      All three have FF = IF = 0 — meaning they cannot be delayed without affecting the earliest start of their successor events.
+      Any delay they can absorb must come from the overall project buffer (TF), not local slack.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== Q2 PERT ===================== -->
+<div class="q-block" id="q2">
+  <div class="q-header q2h">
+    <h2>Question 2 — PERT Network Analysis (Probabilistic)</h2>
+    <span class="mbadge">[20 Marks]</span>
+  </div>
+
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>Step 0 — Calculate Te and σ² for all activities</h3>
+    </div>
+    <div class="step" style="border-left-color:#0d47a1;">
+      <div class="step-label" style="color:#0d47a1;">Formula: Te = (O + 4M + P) / 6 &nbsp;|&nbsp; σ² = ((P − O) / 6)²</div>
+    </div>
+    <table class="dt dt-blue">
+      <tr><th>Activity</th><th>Predecessors</th><th>O</th><th>M</th><th>P</th><th>Calculation</th><th>Te</th><th>σ²</th></tr>
+      <tr><td>A</td><td>—</td><td>4</td><td>5</td><td>7</td><td>(4+20+7)/6 = 31/6</td><td><strong>5.17</strong></td><td>((7−4)/6)² = 9/36 = <strong>0.250</strong></td></tr>
+      <tr><td>B</td><td>A</td><td>1</td><td>3</td><td>6</td><td>(1+12+6)/6 = 19/6</td><td><strong>3.17</strong></td><td>((6−1)/6)² = 25/36 = <strong>0.694</strong></td></tr>
+      <tr><td>C</td><td>A</td><td>4</td><td>5</td><td>7</td><td>(4+20+7)/6 = 31/6</td><td><strong>5.17</strong></td><td>((7−4)/6)² = 9/36 = <strong>0.250</strong></td></tr>
+      <tr><td>D</td><td>B</td><td>3</td><td>7</td><td>10</td><td>(3+28+10)/6 = 41/6</td><td><strong>6.83</strong></td><td>((10−3)/6)² = 49/36 = <strong>1.361</strong></td></tr>
+      <tr><td>E</td><td>B</td><td>4</td><td>6</td><td>9</td><td>(4+24+9)/6 = 37/6</td><td><strong>6.17</strong></td><td>((9−4)/6)² = 25/36 = <strong>0.694</strong></td></tr>
+      <tr><td>F</td><td>C, D</td><td>2</td><td>3</td><td>5</td><td>(2+12+5)/6 = 19/6</td><td><strong>3.17</strong></td><td>((5−2)/6)² = 9/36 = <strong>0.250</strong></td></tr>
+      <tr><td>G</td><td>E</td><td>1</td><td>7</td><td>10</td><td>(1+28+10)/6 = 39/6</td><td><strong>6.50</strong></td><td>((10−1)/6)² = 81/36 = <strong>2.250</strong></td></tr>
+      <tr><td>H</td><td>E, F</td><td>2</td><td>6</td><td>8</td><td>(2+24+8)/6 = 34/6</td><td><strong>5.67</strong></td><td>((8−2)/6)² = 36/36 = <strong>1.000</strong></td></tr>
+    </table>
+  </div>
+
+  <!-- Q2.1 Network -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>2.1 — Draw the Network</h3>
+      <span class="pts pts-blue">[4 marks]</span>
+    </div>
+
+    <div class="key-note">
+      Key dependencies: F needs BOTH C and D → dummy from node 4→5 (C done before F).
+      H needs BOTH E and F → dummy from node 6→7 (E done before H).
+      G and H are both terminal — they both lead to the end node (10).
+    </div>
+
+    <div class="network-wrap" style="background:#e3f2fd;border-color:#90caf9;">
+      <h4 style="color:#1565c0;">AOA Network — Q2 PERT</h4>
+      <svg width="100%" viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" style="min-width:640px">
+        <defs>
+          <marker id="ar2C" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L9 5L1 9" fill="none" stroke="#b71c1c" stroke-width="1.5" stroke-linecap="round"/>
+          </marker>
+          <marker id="ar2B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L9 5L1 9" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/>
+          </marker>
+          <marker id="ar2D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L9 5L1 9" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round"/>
+          </marker>
+        </defs>
+
+        <!-- A: 1→2 CRITICAL -->
+        <line x1="55" y1="130" x2="148" y2="130" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#ar2C)"/>
+        <rect x="82" y="112" width="44" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="104" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">A=5.17</text>
+
+        <!-- B: 2→3 CRITICAL -->
+        <line x1="195" y1="130" x2="288" y2="130" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#ar2C)"/>
+        <rect x="222" y="112" width="44" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="244" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">B=3.17</text>
+
+        <!-- C: 2→4 (down) not critical -->
+        <line x1="180" y1="143" x2="288" y2="195" stroke="#1565c0" stroke-width="1.8" marker-end="url(#ar2B)"/>
+        <rect x="211" y="162" width="44" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="233" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">C=5.17</text>
+
+        <!-- D: 3→5 CRITICAL -->
+        <line x1="330" y1="130" x2="428" y2="130" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#ar2C)"/>
+        <rect x="357" y="112" width="44" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="379" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">D=6.83</text>
+
+        <!-- E: 3→6 (down) not critical -->
+        <line x1="322" y1="143" x2="430" y2="195" stroke="#1565c0" stroke-width="1.8" marker-end="url(#ar2B)"/>
+        <rect x="353" y="162" width="44" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="375" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">E=6.17</text>
+
+        <!-- dummy C→F: 4→5 -->
+        <line x1="312" y1="205" x2="454" y2="142" stroke="#999" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ar2D)"/>
+        <text x="390" y="188" text-anchor="middle" font-size="9" fill="#999">dummy</text>
+
+        <!-- F: 5→7 CRITICAL -->
+        <line x1="472" y1="130" x2="568" y2="130" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#ar2C)"/>
+        <rect x="500" y="112" width="44" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="522" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">F=3.17</text>
+
+        <!-- dummy E→H: 6→7 -->
+        <line x1="454" y1="205" x2="570" y2="143" stroke="#999" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#ar2D)"/>
+        <text x="520" y="192" text-anchor="middle" font-size="9" fill="#999">dummy</text>
+
+        <!-- G: 6→end (node 8=end area) not critical -->
+        <line x1="460" y1="215" x2="708" y2="215" stroke="#1565c0" stroke-width="1.8" marker-end="url(#ar2B)"/>
+        <rect x="560" y="197" width="44" height="16" rx="3" fill="#e3f2fd"/>
+        <text x="582" y="209" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">G=6.50</text>
+
+        <!-- H: 7→9 CRITICAL -->
+        <line x1="615" y1="130" x2="708" y2="130" stroke="#b71c1c" stroke-width="2.2" marker-end="url(#ar2C)"/>
+        <rect x="641" y="112" width="44" height="16" rx="3" fill="#ffcdd2"/>
+        <text x="663" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">H=5.67</text>
+
+        <!-- dummy G→end: 8→10 -->
+        <line x1="752" y1="215" x2="802" y2="148" stroke="#999" stroke-width="1.4" stroke-dasharray="4,4" marker-end="url(#ar2D)"/>
+        <!-- dummy H→end: 9→10 -->
+        <line x1="752" y1="130" x2="800" y2="130" stroke="#b71c1c" stroke-width="1.8" stroke-dasharray="none" marker-end="url(#ar2C)"/>
+
+        <!-- NODES -->
+        <!-- 1 E=0,L=0 CRIT -->
+        <circle cx="37" cy="130" r="20" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="17" y1="130" x2="57" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="37" y="124" text-anchor="middle" font-size="8" fill="#333">E=0</text>
+        <text x="37" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">1</text>
+        <text x="37" y="143" text-anchor="middle" font-size="8" fill="#333">L=0</text>
+
+        <!-- 2 E=5.17,L=5.17 CRIT -->
+        <circle cx="172" cy="130" r="20" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="152" y1="130" x2="192" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="172" y="124" text-anchor="middle" font-size="8" fill="#333">E=5.17</text>
+        <text x="172" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">2</text>
+        <text x="172" y="143" text-anchor="middle" font-size="8" fill="#333">L=5.17</text>
+
+        <!-- 3 E=8.33,L=8.33 CRIT -->
+        <circle cx="310" cy="130" r="20" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="290" y1="130" x2="330" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="310" y="124" text-anchor="middle" font-size="8" fill="#333">E=8.33</text>
+        <text x="310" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">3</text>
+        <text x="310" y="143" text-anchor="middle" font-size="8" fill="#333">L=8.33</text>
+
+        <!-- 4 E=10.33,L=15.17 NOT CRIT -->
+        <circle cx="300" cy="207" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="280" y1="207" x2="320" y2="207" stroke="#1565c0" stroke-width="1"/>
+        <text x="300" y="201" text-anchor="middle" font-size="8" fill="#333">E=10.33</text>
+        <text x="300" y="210" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">4</text>
+        <text x="300" y="220" text-anchor="middle" font-size="8" fill="#333">L=15.17</text>
+
+        <!-- 5 E=15.17,L=15.17 CRIT -->
+        <circle cx="452" cy="130" r="20" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="432" y1="130" x2="472" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="452" y="124" text-anchor="middle" font-size="8" fill="#333">E=15.17</text>
+        <text x="452" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">5</text>
+        <text x="452" y="143" text-anchor="middle" font-size="8" fill="#333">L=15.17</text>
+
+        <!-- 6 E=14.5,L=17.5 NOT CRIT -->
+        <circle cx="440" cy="207" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="420" y1="207" x2="460" y2="207" stroke="#1565c0" stroke-width="1"/>
+        <text x="440" y="201" text-anchor="middle" font-size="8" fill="#333">E=14.5</text>
+        <text x="440" y="210" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">6</text>
+        <text x="440" y="220" text-anchor="middle" font-size="8" fill="#333">L=17.5</text>
+
+        <!-- 7 E=18.33,L=18.33 CRIT -->
+        <circle cx="593" cy="130" r="20" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="573" y1="130" x2="613" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="593" y="124" text-anchor="middle" font-size="8" fill="#333">E=18.33</text>
+        <text x="593" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">7</text>
+        <text x="593" y="143" text-anchor="middle" font-size="8" fill="#333">L=18.33</text>
+
+        <!-- 8 G end: E=21,L=24 NOT CRIT -->
+        <circle cx="730" cy="215" r="20" fill="white" stroke="#1565c0" stroke-width="1.8"/>
+        <line x1="710" y1="215" x2="750" y2="215" stroke="#1565c0" stroke-width="1"/>
+        <text x="730" y="209" text-anchor="middle" font-size="8" fill="#333">E=21</text>
+        <text x="730" y="218" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">8</text>
+        <text x="730" y="228" text-anchor="middle" font-size="8" fill="#333">L=24</text>
+
+        <!-- 9 H end: E=24,L=24 CRIT -->
+        <circle cx="730" cy="130" r="20" fill="white" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="710" y1="130" x2="750" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="730" y="124" text-anchor="middle" font-size="8" fill="#333">E=24</text>
+        <text x="730" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a237e">9</text>
+        <text x="730" y="143" text-anchor="middle" font-size="8" fill="#333">L=24</text>
+
+        <!-- 10 END E=24,L=24 -->
+        <circle cx="820" cy="130" r="20" fill="#ffcdd2" stroke="#b71c1c" stroke-width="2.5"/>
+        <line x1="800" y1="130" x2="840" y2="130" stroke="#b71c1c" stroke-width="1"/>
+        <text x="820" y="124" text-anchor="middle" font-size="8" fill="#333">E=24</text>
+        <text x="820" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">10</text>
+        <text x="820" y="143" text-anchor="middle" font-size="8" fill="#333">L=24</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Q2.2 Expected finish time -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>2.2 — Determine the Expected Finish Time</h3>
+      <span class="pts pts-blue">[8 marks]</span>
+    </div>
+
+    <div class="step" style="border-left-color:#0d47a1;">
+      <div class="step-label" style="color:#0d47a1;">Forward Pass — E(j) = max{ E(i) + Te_ij }</div>
+      <table class="dt dt-blue" style="margin-top:8px;">
+        <tr><th>Node</th><th>Calculation</th><th>EST</th></tr>
+        <tr><td>1</td><td>= 0</td><td class="zero">0</td></tr>
+        <tr><td>2</td><td>0 + Te(A) = 0 + 5.17</td><td class="zero">5.17</td></tr>
+        <tr><td>3</td><td>5.17 + Te(B) = 5.17 + 3.17</td><td class="zero">8.33</td></tr>
+        <tr><td>4</td><td>5.17 + Te(C) = 5.17 + 5.17</td><td>10.33</td></tr>
+        <tr><td>5</td><td>max{E(3)+Te(D), E(4)+0} = max{8.33+6.83, 10.33} = max{15.17, 10.33}</td><td class="zero">15.17</td></tr>
+        <tr><td>6</td><td>E(3) + Te(E) = 8.33 + 6.17</td><td>14.50</td></tr>
+        <tr><td>7</td><td>max{E(5)+Te(F), E(6)+0} = max{15.17+3.17, 14.50} = max{18.33, 14.50}</td><td class="zero">18.33</td></tr>
+        <tr><td>8 (G ends)</td><td>E(6) + Te(G) = 14.50 + 6.50</td><td>21.00</td></tr>
+        <tr><td>9 (H ends)</td><td>E(7) + Te(H) = 18.33 + 5.67</td><td class="zero">24.00</td></tr>
+        <tr><td>10 (End)</td><td>max{E(8)+0, E(9)+0} = max{21.00, 24.00}</td><td class="zero"><strong>24.00</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="step" style="border-left-color:#b71c1c;">
+      <div class="step-label" style="color:#b71c1c;">Critical Path Identification (TF = 0)</div>
+      <p>A(1→2): TF=0 ✅ &nbsp; B(2→3): TF=0 ✅ &nbsp; C(2→4): TF=4.83 ❌ &nbsp; D(3→5): TF=0 ✅ &nbsp; E(3→6): TF=3.0 ❌ &nbsp; F(5→7): TF=0 ✅ &nbsp; G(6→8): TF=3.0 ❌ &nbsp; H(7→9): TF=0 ✅</p>
+    </div>
+
+    <div class="cp-badge cp-blue">🔵 Critical Path: A → B → D → F → H &nbsp;(nodes 1→2→3→5→7→9→10) &nbsp;= 5.17+3.17+6.83+3.17+5.67 = 24.00 days</div>
+
+    <div class="answer-box">
+      <div class="answer-label">Answer — Q2.2</div>
+      <div class="answer-value">Expected Project Duration = 24.00 days (50% probability of finishing by this date)</div>
+    </div>
+  </div>
+
+  <!-- Q2.3 95% confidence -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>2.3 — Time for 95% Confidence of Finishing</h3>
+      <span class="pts pts-blue">[4 marks]</span>
+    </div>
+
+    <div class="step" style="border-left-color:#0d47a1;">
+      <div class="step-label" style="color:#0d47a1;">Sum variances of CRITICAL PATH activities only: A, B, D, F, H</div>
+      <table class="dt dt-blue" style="margin-top:8px;">
+        <tr><th>Activity (Critical)</th><th>O</th><th>P</th><th>σ² = ((P−O)/6)²</th></tr>
+        <tr><td>A</td><td>4</td><td>7</td><td>((7−4)/6)² = 9/36 = 0.250</td></tr>
+        <tr><td>B</td><td>1</td><td>6</td><td>((6−1)/6)² = 25/36 = 0.694</td></tr>
+        <tr><td>D</td><td>3</td><td>10</td><td>((10−3)/6)² = 49/36 = 1.361</td></tr>
+        <tr><td>F</td><td>2</td><td>5</td><td>((5−2)/6)² = 9/36 = 0.250</td></tr>
+        <tr><td>H</td><td>2</td><td>8</td><td>((8−2)/6)² = 36/36 = 1.000</td></tr>
+        <tr style="background:#e3f2fd;font-weight:bold;"><td colspan="3">Total σ²_project</td><td><strong>3.556</strong></td></tr>
+      </table>
+    </div>
+    <div class="step" style="border-left-color:#0d47a1;">
+      <div class="step-label" style="color:#0d47a1;">Step 2 — σ_project and Z formula</div>
+      <div class="formula" style="background:#0d47a1;">σ_project = √3.556 = 1.886 days</div><br>
+      <p style="margin-top:8px;">Z for 95% confidence = <strong>1.645</strong> (from Standard Normal Table)</p>
+      <div class="formula" style="background:#0d47a1;">T_95 = Te_project + Z × σ = 24.00 + 1.645 × 1.886 = 24.00 + 3.10 = 27.10 days</div>
+    </div>
+    <div class="answer-box">
+      <div class="answer-label">Answer — Q2.3</div>
+      <div class="answer-value">Need 27.10 days to have 95% confidence of finishing</div>
+    </div>
+  </div>
+
+  <!-- Q2.4 Probability -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>2.4 — Probability of Finishing 1 Day After Expected Finish Time</h3>
+      <span class="pts pts-blue">[4 marks]</span>
+    </div>
+    <div class="step" style="border-left-color:#0d47a1;">
+      <div class="step-label" style="color:#0d47a1;">Target = 24.00 + 1 = 25.00 days</div>
+      <div class="formula" style="background:#0d47a1;">Z = (T_target − Te) / σ = (25.00 − 24.00) / 1.886 = 1.00 / 1.886 = 0.530</div>
+      <p style="margin-top:8px;">Look up Z = 0.530 in Standard Normal Table → <strong>P(Z ≤ 0.530) ≈ 0.7019 = 70.19%</strong></p>
+      <p style="font-size:12px;color:#666;">In Excel: =NORMSDIST(0.530) = 0.7019</p>
+    </div>
+    <div class="answer-box">
+      <div class="answer-label">Answer — Q2.4</div>
+      <div class="answer-value">Probability = 70.19% (≈ 70%)</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== Q3 THEORY ===================== -->
+<div class="q-block" id="q3">
+  <div class="q-header q3h">
+    <h2>Question 3 — Management Theory</h2>
+    <span class="mbadge">[20 Marks]</span>
+  </div>
+
+  <!-- 3.1 Define PM -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>3.1 — Define Project Management</h3>
+      <span class="pts pts-purple">[4 marks]</span>
+    </div>
+    <div class="step" style="border-left-color:#7b1fa2;">
+      <div class="step-label" style="color:#7b1fa2;">Model answer</div>
+      <p><strong>Project Management</strong> is the application of knowledge, skills, tools and techniques to project activities in order to meet project requirements. (PMBOK Guide)</p>
+      <p style="margin-top:8px;">It is accomplished through the application and integration of the five process groups: <strong>Initiating, Planning, Executing, Monitoring &amp; Controlling, and Closing</strong>.</p>
+      <p style="margin-top:8px;">Alternatively (functional view): project management is the process of guiding a project from beginning through its complete duration to its end using a set of management models — encompassing <strong>Planning, Organizing, Controlling</strong>, and <strong>Terminating</strong>.</p>
+    </div>
+  </div>
+
+  <!-- 3.2 Fundamental trade-off -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>3.2 — Explain the Fundamental Trade-Off in Project Management</h3>
+      <span class="pts pts-purple">[4 marks]</span>
+    </div>
+    <div class="step" style="border-left-color:#7b1fa2;">
+      <div class="step-label" style="color:#7b1fa2;">Model answer — The Iron Triangle</div>
+      <p>The fundamental trade-off in project management is known as the <strong>Triple Constraint</strong> or <strong>Iron Triangle</strong>. Every project is simultaneously constrained by three competing factors:</p>
+      <ul style="margin:10px 0 0 20px;font-size:13px;line-height:2;">
+        <li><strong>Scope</strong> — what work needs to be done; the features and deliverables of the project</li>
+        <li><strong>Time</strong> — the schedule; when the project must be completed</li>
+        <li><strong>Cost</strong> — the budget; how much money is available</li>
+      </ul>
+      <p style="margin-top:8px;"><strong>Quality</strong> is often added as a fourth central constraint that sits inside the triangle.</p>
+      <p style="margin-top:8px;">The trade-off is this: <em>changing any one constraint forces a change in at least one of the others.</em> For example, if a project manager needs to shorten the timeline (reduce time), they must either reduce scope OR increase cost (hire more people). You cannot change one without affecting the others. The project manager's job is to balance these competing demands while satisfying stakeholders.</p>
+    </div>
+  </div>
+
+  <!-- 3.3 Four Fayol principles -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>3.3 — Four Fayol Principles Applied to a Software Project Team of Five</h3>
+      <span class="pts pts-purple">[12 marks]</span>
+    </div>
+    <div class="key-note">Name FOUR principles, define each, and explain how it applies when a project manager leads a team of five on a software development project. Each principle is worth 3 marks (name + definition + application).</div>
+
+    <div class="principle-card">
+      <div class="pc-header">Principle 1: Specialisation of Labour (Division of Work)</div>
+      <div class="pc-body">
+        <strong>Definition:</strong> Specialising encourages continuous improvement in skills and development of better methods. Work should be divided according to people's strengths and expertise.<br><br>
+        <strong>Application to software project:</strong> The project manager assigns each of the five team members to tasks that match their expertise — for example, one developer handles the front-end, another manages the database, a third is responsible for testing, and so on. Rather than everyone doing all tasks, specialisation increases quality, reduces errors, and improves team efficiency. Each member deepens their skill over the project duration.
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="pc-header">Principle 4: Unity of Command</div>
+      <div class="pc-body">
+        <strong>Definition:</strong> Each employee should have one and only one boss — receiving instructions from a single supervisor only.<br><br>
+        <strong>Application to software project:</strong> All five team members report exclusively to the project manager. This prevents confusion caused by conflicting instructions from multiple sources. If a developer receives task assignments from both the project manager AND a department head simultaneously, they become confused about which task takes priority. Having a single point of authority ensures clear direction, accountability, and smooth progress. (Note: this principle is violated in matrix organisations where team members report to two managers.)
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="pc-header">Principle 5: Unity of Direction</div>
+      <div class="pc-body">
+        <strong>Definition:</strong> A single mind generates a single plan, and all team members play their part in that plan.<br><br>
+        <strong>Application to software project:</strong> The project manager creates one cohesive project plan covering all five team members' activities. All team members work towards the same project objective — for example, delivering a working software system by a specific date. Without unity of direction, team members might pursue different interpretations of the goal, wasting effort. The PM's job is to ensure everyone understands the unified objective and their role in achieving it.
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="pc-header">Principle 14: Esprit de Corps</div>
+      <div class="pc-body">
+        <strong>Definition:</strong> Harmony and cohesion among personnel — building team spirit and a sense of collective identity.<br><br>
+        <strong>Application to software project:</strong> The project manager fosters a positive team culture among the five members — encouraging open communication, celebrating milestones (like a successful sprint review), and resolving interpersonal conflicts quickly. A team that trusts and supports each other collaborates more effectively, shares knowledge willingly, and produces better software. Fayol warned against divide-and-rule tactics, which destroy team morale. A united team is more resilient when facing technical challenges or schedule pressures.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== Q4 GANTT + COST ===================== -->
+<div class="q-block" id="q4">
+  <div class="q-header q4h">
+    <h2>Question 4 — Gantt Chart & Project Cost</h2>
+    <span class="mbadge">[20 Marks]</span>
+  </div>
+
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>Given Data — Activities & Resources</h3>
+    </div>
+    <div class="grid2">
+      <table class="dt dt-orange">
+        <tr><th>Task</th><th>Description</th><th>Pred</th><th>Duration</th></tr>
+        <tr><td>A</td><td>Train project team</td><td>None</td><td>10 days</td></tr>
+        <tr><td>B</td><td>Project paperwork & systems design</td><td>A</td><td>5 days</td></tr>
+        <tr><td>C</td><td>Modify purchased package</td><td>B</td><td>5 days</td></tr>
+        <tr><td>D</td><td>Manual systems flow</td><td>B</td><td>10 days</td></tr>
+        <tr><td>E</td><td>Modify in-house procedures</td><td>B</td><td>15 days</td></tr>
+        <tr><td>F</td><td>Test & implement modifications to purchased package</td><td>C</td><td>15 days</td></tr>
+        <tr><td>G</td><td>Test & implement manual</td><td>D</td><td>15 days</td></tr>
+        <tr><td>H</td><td>Test & implement in-house procedures</td><td>E</td><td>5 days</td></tr>
+      </table>
+      <table class="dt dt-orange">
+        <tr><th>Resource</th><th>Rate (R/hr)</th></tr>
+        <tr><td>Trainer</td><td>R50.00</td></tr>
+        <tr><td>Application Domain Specialist</td><td>R40.00</td></tr>
+        <tr><td>Solution Domain Specialist</td><td>R40.00</td></tr>
+        <tr><td>Project Manager</td><td>R20.00</td></tr>
+        <tr><td>Tester</td><td>R30.00</td></tr>
+      </table>
+    </div>
+    <div class="step" style="border-left-color:#bf360c;">
+      <div class="step-label" style="color:#bf360c;">Derived schedule (working days, 8 hours/day)</div>
+      <table class="dt dt-orange" style="margin-top:8px;">
+        <tr><th>Task</th><th>Predecessor ends on</th><th>Start Day</th><th>End Day</th><th>Resources Assigned</th></tr>
+        <tr><td>A</td><td>—</td><td>1</td><td>10</td><td>Trainer</td></tr>
+        <tr><td>B</td><td>A ends day 10</td><td>11</td><td>15</td><td>Project Manager</td></tr>
+        <tr><td>C</td><td>B ends day 15</td><td>16</td><td>20</td><td>Solution Domain Spec., Application Domain Spec.</td></tr>
+        <tr><td>D</td><td>B ends day 15</td><td>16</td><td>25</td><td>Project Manager</td></tr>
+        <tr><td>E</td><td>B ends day 15</td><td>16</td><td>30</td><td>Project Manager + Solution Domain Spec.</td></tr>
+        <tr><td>F</td><td>C ends day 20</td><td>21</td><td>35</td><td>Tester + Solution Domain Spec.</td></tr>
+        <tr><td>G</td><td>D ends day 25</td><td>26</td><td>40</td><td>Tester</td></tr>
+        <tr><td>H</td><td>E ends day 30</td><td>31</td><td>35</td><td>Tester</td></tr>
+      </table>
+      <p style="margin-top:8px;font-weight:bold;">Project finishes on working day 40 (G is the last activity to complete)</p>
+    </div>
+  </div>
+
+  <!-- Gantt chart -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>4.1 — Gantt Chart</h3>
+      <span class="pts pts-orange">[10 marks]</span>
+    </div>
+    <div class="gantt-wrap">
+      <table class="gantt">
+        <thead>
+          <tr>
+            <th class="tk">T</th>
+            <th class="res">Resources</th>
+            <th class="wk" colspan="5">Week 1 (1–5)</th>
+            <th class="wk" colspan="5">Week 2 (6–10)</th>
+            <th class="wk" colspan="5">Week 3 (11–15)</th>
+            <th class="wk" colspan="5">Week 4 (16–20)</th>
+            <th class="wk" colspan="5">Week 5 (21–25)</th>
+            <th class="wk" colspan="5">Week 6 (26–30)</th>
+            <th class="wk" colspan="5">Week 7 (31–35)</th>
+            <th class="wk" colspan="5">Week 8 (36–40)</th>
+          </tr>
+          <tr>
+            <th class="tk"></th><th class="res"></th>
+            <th class="day">1</th><th class="day">2</th><th class="day">3</th><th class="day">4</th><th class="day">5</th>
+            <th class="day">6</th><th class="day">7</th><th class="day">8</th><th class="day">9</th><th class="day">10</th>
+            <th class="day">11</th><th class="day">12</th><th class="day">13</th><th class="day">14</th><th class="day">15</th>
+            <th class="day">16</th><th class="day">17</th><th class="day">18</th><th class="day">19</th><th class="day">20</th>
+            <th class="day">21</th><th class="day">22</th><th class="day">23</th><th class="day">24</th><th class="day">25</th>
+            <th class="day">26</th><th class="day">27</th><th class="day">28</th><th class="day">29</th><th class="day">30</th>
+            <th class="day">31</th><th class="day">32</th><th class="day">33</th><th class="day">34</th><th class="day">35</th>
+            <th class="day">36</th><th class="day">37</th><th class="day">38</th><th class="day">39</th><th class="day">40</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- A: days 1-10 -->
+          <tr>
+            <td class="lbl">A</td><td class="rl">Trainer</td>
+            <td class="bA"></td><td class="bA"></td><td class="bA"></td><td class="bA"></td><td class="bA"></td>
+            <td class="bA"></td><td class="bA"></td><td class="bA"></td><td class="bA"></td><td class="bA"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <!-- B: days 11-15 -->
+          <tr>
+            <td class="lbl">B</td><td class="rl">Proj Manager</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bB"></td><td class="bB"></td><td class="bB"></td><td class="bB"></td><td class="bB"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <!-- C: days 16-20 -->
+          <tr>
+            <td class="lbl">C</td><td class="rl">Sol+App Dom Spec</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bC"></td><td class="bC"></td><td class="bC"></td><td class="bC"></td><td class="bC"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <!-- D: days 16-25 -->
+          <tr>
+            <td class="lbl">D</td><td class="rl">Proj Manager</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bD"></td><td class="bD"></td><td class="bD"></td><td class="bD"></td><td class="bD"></td>
+            <td class="bD"></td><td class="bD"></td><td class="bD"></td><td class="bD"></td><td class="bD"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <!-- E: days 16-30 -->
+          <tr>
+            <td class="lbl">E</td><td class="rl">PM + Sol Dom Spec</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bE"></td><td class="bE"></td><td class="bE"></td><td class="bE"></td><td class="bE"></td>
+            <td class="bE"></td><td class="bE"></td><td class="bE"></td><td class="bE"></td><td class="bE"></td>
+            <td class="bE"></td><td class="bE"></td><td class="bE"></td><td class="bE"></td><td class="bE"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <!-- F: days 21-35 -->
+          <tr>
+            <td class="lbl">F</td><td class="rl">Tester + Sol Dom Spec</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bF"></td><td class="bF"></td><td class="bF"></td><td class="bF"></td><td class="bF"></td>
+            <td class="bF"></td><td class="bF"></td><td class="bF"></td><td class="bF"></td><td class="bF"></td>
+            <td class="bF"></td><td class="bF"></td><td class="bF"></td><td class="bF"></td><td class="bF"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <!-- G: days 26-40 -->
+          <tr>
+            <td class="lbl">G</td><td class="rl">Tester</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bG"></td><td class="bG"></td><td class="bG"></td><td class="bG"></td><td class="bG"></td>
+            <td class="bG"></td><td class="bG"></td><td class="bG"></td><td class="bG"></td><td class="bG"></td>
+            <td class="bG"></td><td class="bG"></td><td class="bG"></td><td class="bG"></td><td class="bG"></td>
+          </tr>
+          <!-- H: days 31-35 -->
+          <tr>
+            <td class="lbl">H</td><td class="rl">Tester</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td class="bH"></td><td class="bH"></td><td class="bH"></td><td class="bH"></td><td class="bH"></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:#555;margin-top:6px;"><strong>Project duration = 40 working days</strong> (Task G is last to finish)</p>
+  </div>
+
+  <!-- Cost -->
+  <div class="sub-q">
+    <div class="sub-q-header">
+      <h3>4.2 — Total Project Cost (8 hours per working day)</h3>
+      <span class="pts pts-orange">[10 marks]</span>
+    </div>
+    <div class="step" style="border-left-color:#bf360c;">
+      <div class="step-label" style="color:#bf360c;">Formula: Cost per task = Duration (days) × 8 hours × Rate (R/hour) × Number of that resource</div>
+    </div>
+    <table class="cost">
+      <thead>
+        <tr><th>Task</th><th>Duration</th><th>Hours</th><th>Resources</th><th>Calculation</th><th>Task Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>A</strong> — Train project team</td><td>10 d</td><td>80 h</td>
+          <td>Trainer (R50)</td>
+          <td>80 × R50</td><td><strong>R4,000</strong></td>
+        </tr>
+        <tr>
+          <td><strong>B</strong> — Project paperwork</td><td>5 d</td><td>40 h</td>
+          <td>Project Manager (R20)</td>
+          <td>40 × R20</td><td><strong>R800</strong></td>
+        </tr>
+        <tr>
+          <td><strong>C</strong> — Modify purchased package</td><td>5 d</td><td>40 h</td>
+          <td>Solution Domain Spec (R40) + Application Domain Spec (R40)</td>
+          <td>40×R40 + 40×R40 = R1,600 + R1,600</td><td><strong>R3,200</strong></td>
+        </tr>
+        <tr>
+          <td><strong>D</strong> — Manual systems flow</td><td>10 d</td><td>80 h</td>
+          <td>Project Manager (R20)</td>
+          <td>80 × R20</td><td><strong>R1,600</strong></td>
+        </tr>
+        <tr>
+          <td><strong>E</strong> — Modify in-house procedures</td><td>15 d</td><td>120 h</td>
+          <td>Project Manager (R20) + Solution Domain Spec (R40)</td>
+          <td>120×R20 + 120×R40 = R2,400 + R4,800</td><td><strong>R7,200</strong></td>
+        </tr>
+        <tr>
+          <td><strong>F</strong> — Test purchased package</td><td>15 d</td><td>120 h</td>
+          <td>Tester (R30) + Solution Domain Spec (R40)</td>
+          <td>120×R30 + 120×R40 = R3,600 + R4,800</td><td><strong>R8,400</strong></td>
+        </tr>
+        <tr>
+          <td><strong>G</strong> — Test manual</td><td>15 d</td><td>120 h</td>
+          <td>Tester (R30)</td>
+          <td>120 × R30</td><td><strong>R3,600</strong></td>
+        </tr>
+        <tr>
+          <td><strong>H</strong> — Test in-house procedures</td><td>5 d</td><td>40 h</td>
+          <td>Tester (R30)</td>
+          <td>40 × R30</td><td><strong>R1,200</strong></td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="5"><strong>GRAND TOTAL</strong></td>
+          <td><strong>R30,000</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="answer-box">
+      <div class="answer-label">Answer — Q4 (Cost)</div>
+      <div class="answer-value">Total Project Cost = R30,000</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /page -->
+
+<div class="footer">
+  PFD47XS — 27 March 2024 · Complete Worked Solutions<br>
+  CPUT · Faculty of Informatics & Design · Mr T. Makhurane<br>
+  All calculations verified computationally using exact fractions.
+</div>
+</body>
+</html>

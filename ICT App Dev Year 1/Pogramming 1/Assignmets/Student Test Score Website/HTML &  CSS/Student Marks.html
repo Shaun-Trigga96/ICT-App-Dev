@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html>
+     <head>
+        <meta name="Student Mark" content="A registerd student can access their Programming 1 Marks; charset=UTF-8"/>  
+        <meta name= "Author" content="Thabiso Matsaba"/>
+        <meta name= "Keywords" content ="Student, Marks"/>
+        <meta name= "Viewport" content ="width=device-width, initial scale=1.0"/>
+        <title>Student Marks</title>
+        <style>
+               table{ width: 600px;
+                      border: 2px solid black;
+                     border-collapse: collapse}
+                td, th{ border: 1px solid black}
+         
+        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>   
+        </head>
+        <body>
+        <a href="Home Page.html">Return to Home Page</a> 
+        <h2>Student Marks</h2>
+       
+        <p id="StudentMarks"></p>
+
+        <script language="javascript" type="text/javascript">
+            var text="";
+            var i;
+            var testMark=100;
+            var passMark=50;
+            var outstandingMark=0;
+             var Names= ["Chris", "Shaun", "Patrick", "Drake", "John"];
+              var Marks= [90,80,70,60,0];
+                document.write("<table>");
+                 document.write("<tr>");
+                   document.write("<th>Names</th>");
+                    document.write("<th>Marks</th>");
+                     document.write("</tr>");
+            
+                     for(i=0; i < Marks.length; i++){
+                   document.write("<tr>");
+                 document.write("<td>" + Names[i] + "</td>");
+                 document.write("<td>" + Marks[i] + "</td>");
+            document.write("</tr>");
+           }
+                
+          document.write("</table>");
+         document.getElementById("Student Marks").innerHTML = text;
+</script>  
+<br>
+<a href="Results.html">Next page</a> 
+</body>
+</html>

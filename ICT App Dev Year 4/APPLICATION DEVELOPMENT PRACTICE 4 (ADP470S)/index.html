@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADP470S Learning System – User Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0d1117;
+    --surface:   #161b22;
+    --border:    #21262d;
+    --green:     #3fb950;
+    --green-dim: #1a4d2a;
+    --yellow:    #d29922;
+    --cyan:      #39c5cf;
+    --red:       #f85149;
+    --purple:    #bc8cff;
+    --text:      #c9d1d9;
+    --muted:     #6e7681;
+    --white:     #f0f6fc;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 40px 48px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0d1117 0%, #0f1f12 60%, #0d1117 100%);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(63,185,80,.08) 0%, transparent 70%);
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--green-dim);
+    color: var(--green);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    max-width: 640px;
+  }
+  .hero h1 span { color: var(--green); }
+  .hero p {
+    margin-top: 14px;
+    color: var(--muted);
+    max-width: 520px;
+    font-size: 14px;
+  }
+
+  /* ── Layout ── */
+  .wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+  }
+
+  /* ── Section headings ── */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  /* ── Step cards ── */
+  .steps { display: flex; flex-direction: column; gap: 18px; margin-bottom: 48px; }
+
+  .step {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 0 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    transition: border-color .2s;
+  }
+  .step:hover { border-color: var(--green); }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--green-dim);
+    color: var(--green);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-body h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .step-body p { color: var(--text); font-size: 14px; }
+
+  /* ── Terminal block ── */
+  .terminal {
+    background: #010409;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+  .terminal .prompt { color: var(--green); }
+  .terminal .cmd    { color: var(--white); }
+  .terminal .out    { color: var(--muted); }
+  .terminal .hi     { color: var(--cyan); }
+  .terminal .warn   { color: var(--yellow); }
+
+  /* ── Nav map ── */
+  .nav-map {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 48px;
+  }
+  .nav-map h2 { margin-bottom: 6px; }
+
+  .map-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .map-row:last-child { border-bottom: none; }
+
+  .key-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    background: #1c2128;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 2px 9px;
+    flex-shrink: 0;
+    min-width: 42px;
+    text-align: center;
+  }
+  .key-badge.g { color: var(--green); }
+  .key-badge.y { color: var(--yellow); }
+  .key-badge.c { color: var(--cyan); }
+  .key-badge.r { color: var(--red); }
+
+  .map-row p { font-size: 14px; }
+  .map-row p strong { color: var(--white); }
+
+  /* ── Tips ── */
+  .tips { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 48px; }
+  @media (max-width: 560px) { .tips { grid-template-columns: 1fr; } }
+
+  .tip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    padding: 16px;
+  }
+  .tip.warn-tip { border-left-color: var(--yellow); }
+  .tip h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .tip p { font-size: 13px; color: var(--muted); }
+
+  /* ── Progress overview ── */
+  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 48px; }
+  @media (max-width: 560px) { .terms-grid { grid-template-columns: 1fr; } }
+
+  .term-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .term-card .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .term-card h4 { font-size: 14px; color: var(--white); margin-bottom: 4px; }
+  .term-card ul { padding-left: 16px; font-size: 12px; color: var(--muted); }
+  .term-card ul li { margin-bottom: 2px; }
+
+  .t1 .badge { background: rgba(63,185,80,.15); color: var(--green); }
+  .t2 .badge { background: rgba(57,197,207,.12); color: var(--cyan); }
+  .t3 .badge { background: rgba(188,140,255,.12); color: var(--purple); }
+  .t4 .badge { background: rgba(210,153,34,.12); color: var(--yellow); }
+
+  /* ── Divider ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Hero ── -->
+<div class="hero">
+  <div class="hero-tag">ADP470S · User Guide</div>
+  <h1>How to use the<br><span>Learning System</span> Script</h1>
+  <p>A complete navigation guide — from launching the script to completing quizzes and tracking your progress across all 4 terms.</p>
+</div>
+
+<div class="wrapper">
+
+  <!-- ── Part 1: Launching ── -->
+  <div class="section-label">Part 1</div>
+  <h2>Launching the Script</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Open a Terminal</h3>
+        <p>On <strong>Linux/Mac</strong>: open your Terminal app. On <strong>Windows</strong>: open <strong>Git Bash</strong> (not PowerShell or CMD — the script won't work there).</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Navigate to the script's folder</h3>
+        <p>Use <code>cd</code> to go to the folder where you saved <strong>adp470s_learning_system.sh</strong>. For example, if it's on your Desktop:</p>
+        <div class="terminal">
+          <div><span class="prompt">$</span> <span class="cmd">cd ~/Desktop</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Make the script executable (first time only)</h3>
+        <p>You only need to do this once — it gives the script permission to run.</p>
+        <div class="terminal">
+          <div><span class="prompt">$</span> <span class="cmd">chmod +x adp470s_learning_system.sh</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3>Run the script</h3>
+        <p>Type the command below and press <strong>Enter</strong>. You should see the main menu appear.</p>
+        <div class="terminal">
+          <div><span class="prompt">$</span> <span class="cmd">./adp470s_learning_system.sh</span></div>
+          <div><span class="out">Initializing ADP470S Learning System...</span></div>
+          <div><span class="out">Ready!</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Part 2: Main Menu ── -->
+  <div class="section-label">Part 2</div>
+  <h2>The Main Menu</h2>
+
+  <p style="margin-bottom:18px; font-size:14px; color:var(--muted);">After launching, you will see the main menu. It shows all 4 terms with a live progress bar for each. Type a number and press <strong>Enter</strong> to select.</p>
+
+  <div class="nav-map" style="margin-bottom:48px;">
+    <div class="section-label">Main Menu Choices</div>
+    <h2>What each number does</h2>
+
+    <div class="map-row">
+      <span class="key-badge g">1</span>
+      <p><strong>Term 1</strong> — Algorithms &amp; Complexity (10% weight). Opens the Term 1 sub-menu with 7 weekly topics + a practice test.</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge g">2</span>
+      <p><strong>Term 2</strong> — Stacks, Queues, Trees &amp; Sorting (35% weight). Opens 13 weekly topics + a practice test.</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge g">3</span>
+      <p><strong>Term 3</strong> — Graphs &amp; Hashing (20% + Project). Opens 8 weekly topics, a project entry, and a practice test.</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge g">4</span>
+      <p><strong>Term 4</strong> — Advanced Topics &amp; Review (35% weight). Opens 6 weekly topics + the final test.</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge y">5</span>
+      <p><strong>View All Progress &amp; Scores</strong> — Shows a full overview of every term's completion bar and your most recent quiz scores.</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge y">6</span>
+      <p><strong>Reset All Progress</strong> — Wipes your saved progress and quiz scores. You'll be asked to confirm by typing <code>yes</code>.</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge r">0</span>
+      <p><strong>Exit</strong> — Closes the script.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Part 3: Inside a Term ── -->
+  <div class="section-label">Part 3</div>
+  <h2>Navigating Inside a Term</h2>
+
+  <p style="margin-bottom:18px; font-size:14px; color:var(--muted);">Once you enter a term, you see a checklist of all its weeks. Here's how each action works:</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">A</div>
+      <div class="step-body">
+        <h3>Mark a week as complete / incomplete</h3>
+        <p>Type the <strong>week number</strong> (e.g. <code>2</code>) and press Enter. It will toggle between <span style="color:var(--green)">✓ Complete</span> and <span style="color:var(--muted)">[ ] Incomplete</span>. The progress bar at the top updates instantly.</p>
+        <div class="terminal">
+          <div><span class="out">Choice: </span><span class="cmd">2</span></div>
+          <div><span class="hi">Marked as complete!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">B</div>
+      <div class="step-body">
+        <h3>Take a quiz on a specific week</h3>
+        <p>In <strong>Term 1</strong>, type <code>9</code> for the quiz option. You'll then be asked which week number you want to quiz on (1–7).</p>
+        <div class="terminal">
+          <div><span class="out">Choice: </span><span class="cmd">9</span></div>
+          <div><span class="out">Enter week number (1-7) for quiz: </span><span class="cmd">2</span></div>
+          <div><span class="hi">═══ Term 1 Week 2 Quiz ═══</span></div>
+        </div>
+        <p style="margin-top:10px; font-size:13px; color:var(--muted);">Term 2 uses <code>15</code>, Term 3 uses <code>11</code>, Term 4 uses <code>8</code> for their quiz options.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">C</div>
+      <div class="step-body">
+        <h3>Take the practice exam / test</h3>
+        <p>Each term has one exam entry at the bottom of its list. In Term 1 it's option <code>8</code>. In Term 2 it's <code>14</code>. Term 3 is <code>10</code>. Term 4 is <code>7</code>. The exam is automatically saved when you finish it.</p>
+        <div class="terminal">
+          <div><span class="out">Choice: </span><span class="cmd">8</span></div>
+          <div><span class="warn">═══ TERM 1 PRACTICE EXAM (10% Weight) ═══</span></div>
+          <div><span class="out">Ready to start? (y/n): </span><span class="cmd">y</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">D</div>
+      <div class="step-body">
+        <h3>Go back to the Main Menu</h3>
+        <p>Type <code>0</code> and press Enter from any term sub-menu to return to the main screen.</p>
+        <div class="terminal">
+          <div><span class="out">Choice: </span><span class="cmd">0</span></div>
+          <div><span class="out">← Returns to main menu</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Part 4: Answering Quiz Questions ── -->
+  <div class="section-label">Part 4</div>
+  <h2>Answering Quiz Questions</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Each question shows 3 options</h3>
+        <p>Read the question, then type <code>1</code>, <code>2</code>, or <code>3</code> and press <strong>Enter</strong>.</p>
+        <div class="terminal">
+          <div><span class="out">Q1: Recursion requires:</span></div>
+          <div><span class="out">1) A base case</span></div>
+          <div><span class="out">2) Loops</span></div>
+          <div><span class="out">3) Arrays</span></div>
+          <div><span class="out">Answer (1-3): </span><span class="cmd">1</span></div>
+          <div><span class="hi">Correct!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Your score is shown at the end</h3>
+        <p>After all 5 questions (or 10 for the exam), you see your score, percentage, and it's automatically saved to your history.</p>
+        <div class="terminal">
+          <div><span class="hi">═══════════════════════════</span></div>
+          <div><span class="out">Score: </span><span class="hi">4</span><span class="out">/5 (80%)</span></div>
+          <div><span class="hi">═══════════════════════════</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Press Enter to continue</h3>
+        <p>After the score is shown, just press <strong>Enter</strong> (no number needed) to go back to the term menu.</p>
+        <div class="terminal">
+          <div><span class="out">Press Enter to continue...</span><span class="cmd"> ↵</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Part 5: Term overview ── -->
+  <div class="section-label">Part 5</div>
+  <h2>What's Inside Each Term</h2>
+
+  <div class="terms-grid">
+    <div class="term-card t1">
+      <span class="badge">Term 1 · 10%</span>
+      <h4>Algorithms &amp; Complexity</h4>
+      <ul>
+        <li>Week 1: Intro &amp; Complexity</li>
+        <li>Week 2: Recursion &amp; Fibonacci</li>
+        <li>Week 3: Linear &amp; Binary Search</li>
+        <li>Week 4: Bubble Sort</li>
+        <li>Week 5: 2D Arrays</li>
+        <li>Week 6: Singly Linked Lists</li>
+        <li>Week 7: Doubly &amp; Circular Lists</li>
+        <li>Option 8: Practice Test</li>
+        <li>Option 9: Take a Weekly Quiz</li>
+      </ul>
+    </div>
+    <div class="term-card t2">
+      <span class="badge">Term 2 · 35%</span>
+      <h4>Stacks, Queues, Trees &amp; Sorting</h4>
+      <ul>
+        <li>Weeks 1–2: Review sessions</li>
+        <li>Week 3: Stack Operations</li>
+        <li>Week 4: Queues &amp; Circular Queues</li>
+        <li>Week 5: Priority Queues</li>
+        <li>Week 6–7: Binary &amp; AVL Trees</li>
+        <li>Weeks 9–12: Sorting Algorithms</li>
+        <li>Week 13: Analysis</li>
+        <li>Option 14: Practice Test</li>
+        <li>Option 15: Take a Weekly Quiz</li>
+      </ul>
+    </div>
+    <div class="term-card t3">
+      <span class="badge">Term 3 · 20% + Project</span>
+      <h4>Graphs &amp; Hashing</h4>
+      <ul>
+        <li>Weeks 1–3: Graph representations &amp; traversal</li>
+        <li>Week 4: Short Test</li>
+        <li>Week 5: Dijkstra &amp; Prim's</li>
+        <li>Week 6: Kruskal's &amp; Floyd-Warshall</li>
+        <li>Week 7: Hashing Techniques</li>
+        <li>Week 8: Project Work</li>
+        <li>Option 9: Mark Project Submitted</li>
+        <li>Option 10: Practice Test</li>
+        <li>Option 11: Take a Weekly Quiz</li>
+      </ul>
+    </div>
+    <div class="term-card t4">
+      <span class="badge">Term 4 · 35%</span>
+      <h4>Advanced Topics &amp; Review</h4>
+      <ul>
+        <li>Week 1: GPS &amp; Bitmaps</li>
+        <li>Week 2: Practical Exercises</li>
+        <li>Week 3: Parity Bits &amp; CRC</li>
+        <li>Week 4: Comprehensive Review</li>
+        <li>Week 5: Assessment Prep</li>
+        <li>Week 6: Makeup Assessments</li>
+        <li>Option 7: Final Test (35%)</li>
+        <li>Option 8: Take a Weekly Quiz</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Tips ── -->
+  <div class="section-label">Tips &amp; Troubleshooting</div>
+  <h2>Good to Know</h2>
+
+  <div class="tips">
+    <div class="tip">
+      <h4>✓ Only type numbers</h4>
+      <p>All menus only accept numbers. Typing letters or leaving the answer blank and pressing Enter will show an error message — just try again.</p>
+    </div>
+    <div class="tip">
+      <h4>✓ Your progress is saved automatically</h4>
+      <p>A hidden file called <code>.adp470s_progress.json</code> is created in the same folder as the script. Don't delete it or you'll lose your progress.</p>
+    </div>
+    <div class="tip warn-tip">
+      <h4>⚠ Reset is permanent</h4>
+      <p>Main Menu option <code>6</code> deletes all your progress and quiz scores. You must type the full word <code>yes</code> to confirm — <code>y</code> alone won't work.</p>
+    </div>
+    <div class="tip warn-tip">
+      <h4>⚠ Python 3 must be installed</h4>
+      <p>The script uses Python 3 to save and read progress. If you see errors about <code>python3</code>, install it from <strong>python.org</strong> first.</p>
+    </div>
+    <div class="tip">
+      <h4>✓ Toggling works both ways</h4>
+      <p>Selecting a week number that's already marked complete will unmark it. Useful if you accidentally checked off the wrong week.</p>
+    </div>
+    <div class="tip">
+      <h4>✓ Quiz scores are cumulative</h4>
+      <p>Every quiz attempt is stored with a timestamp. The "View All Progress" screen shows your most recent score for each topic.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Quick ref cheat sheet ── -->
+  <div class="section-label">Quick Reference</div>
+  <h2>Cheat Sheet</h2>
+
+  <div class="nav-map">
+    <div class="map-row">
+      <span class="key-badge g">1–4</span>
+      <p><strong>Main Menu</strong> — Open a term's sub-menu</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge g">1–N</span>
+      <p><strong>Inside a Term</strong> — Toggle week N complete/incomplete</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge c">Quiz</span>
+      <p><strong>Term 1:</strong> <code>9</code> &nbsp;|&nbsp; <strong>Term 2:</strong> <code>15</code> &nbsp;|&nbsp; <strong>Term 3:</strong> <code>11</code> &nbsp;|&nbsp; <strong>Term 4:</strong> <code>8</code></p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge y">Exam</span>
+      <p><strong>Term 1:</strong> <code>8</code> &nbsp;|&nbsp; <strong>Term 2:</strong> <code>14</code> &nbsp;|&nbsp; <strong>Term 3:</strong> <code>10</code> &nbsp;|&nbsp; <strong>Term 4:</strong> <code>7</code></p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge r">0</span>
+      <p>Go back / Exit from any screen</p>
+    </div>
+    <div class="map-row">
+      <span class="key-badge y">↵</span>
+      <p>Press Enter after seeing quiz results to return to the menu</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ADP470S Data Structures &amp; Algorithms · Learning System Guide · adp470s_learning_system.sh
+</footer>
+
+</body>
+</html>

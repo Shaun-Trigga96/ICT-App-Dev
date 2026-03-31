@@ -1,0 +1,79 @@
+html,body{margin:0;padding:0
+}
+
+body {font: 200% rubik,sans-serif;text-align:left;
+}
+
+
+body {
+    background-image: url("Programming image.jpg");
+    background-color: #9b9b9b;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: center;
+  }
+  
+     p {
+     margin:0 10px 10pxn
+  }
+
+       a {
+       padding:5px; text-decoration:none; color:#000000;}
+
+         div#header{
+             background-color:#F3F2ED;
+      } 
+
+         div#header h1 {
+            height:80px;line-height:80px;margin:0;padding-left:10px;
+      }
+
+          div#container {
+            text-align:left
+      }
+
+         div#content p {
+            line-height:1.4
+      }
+
+         div#navigation {
+            background:whitesmoke;
+      }
+
+         div#navigation ul{
+            margin:20px 0; padding:0; list-style-type:left;
+      }
+
+         div#navigation li{
+             margin-bottom:50px; 
+      }
+
+         div#extra{
+            background:#CCC8B3;
+     }
+
+       div#footer{
+           background:#BFBD93;
+     }
+
+       div#footer p{
+            float:left; margin-left:0; padding:5x 10px
+    }    
+
+       div#container{
+           width:700px; margin:0 
+    }
+
+      div#content{
+           float:left; width:500px
+    }
+
+      div#navigation{
+        float:left; width:200px
+    }
+
+     div#extra{
+           clear:both;width:200%
+}

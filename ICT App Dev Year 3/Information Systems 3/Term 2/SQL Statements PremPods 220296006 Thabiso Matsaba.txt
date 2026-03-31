@@ -1,0 +1,60 @@
+Q1.
+SELECT CUStnumb, CUStNAME,ordnumb, orddte
+FROM CUSTOMER NATURAL JOIN orders NATURAL JOIN ORDLINE
+NATURAL JOIN PART;
+
+Q2.
+select concat("The total for Warehouse#",
+wrhsnumb,"--", sum(unonhand)) as 'Total Units on Hand'
+from part
+group by wrhsnumb
+order by wrhsnumb;
+
+Q3.
+SELECT A.CUStnumb, CUStNAME, B.ordnumb, orddte
+FROM CUSTOMER A LEFT JOIN orders B ON 
+A.custnumb=B.custnumb;
+
+Q4.
+SELECT A.CUStnumb, CUStNAME, A.ordnumb, orddte
+FROM ORDERS A RIGHT JOIN CUSTOMER B ON 
+A.custnumb=B.custnumb;
+
+Q5. 
+SELECT A.ordnum, CUStNAME, A.ordnumb, orddte
+FROM ORDERS A LEFT JOIN CUSTOMER B ON 
+A.custnumb=B.custnumb;
+
+Q6.
+SELECT Partnumb, partdesc, unitprce,
+(SELECT avg(unitprce) FROM Part)
+AS AVGPRICE
+FROM Part;
+
+Q7.
+SELECT ordnumb, partnumb, numord
+FROM part, ordline
+WHERE part.partnumb = ordline.partnumb and
+numord > (select avg(numord) from
+ordline)
+
+Q8.
+Create a New Routine
+begin
+alter table slsrep engine=innodb;
+alter table CUSTOMER engine=innodb;
+alter table orders engine=innodb;
+alter table ordline engine=innodb;
+alter table part engine=innodb;
+
+
+
+
+
+
+
+
+
+
+
+

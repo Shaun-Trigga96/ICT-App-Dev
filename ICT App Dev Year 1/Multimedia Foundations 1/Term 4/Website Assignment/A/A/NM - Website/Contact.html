@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<style>
+body { background-color: #141311;
+background-position: auto;
+background-repeat: no repeat;
+margin: 0;}
+
+ol { list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: rgba(106,190,216);
+   margin-bottom: 3px solid black;}
+   
+li { float: left; }
+
+li a {
+  display: block;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-family: caviar dreams;
+  font-size: 20px;
+}
+
+li a:hover{
+  background-color: rgb(0,0,255,0.3);
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   overflow: hidden;
+   padding-left: 30px;
+   background-image: url("nm.jpg");
+   background-repeat: no-repeat;
+   background-size: 150px 80px;
+   background-position: center;
+   background-color: rgba(106,190,216);
+   color: rgba(106,190,216);
+   margin: 0;
+   margin-top: 3px solid black;
+} 
+
+h3{ font-family: caviar dreams;
+    color: white;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	margin-left: 150px;
+	margin-top: 70px;
+	margin-right: 150px;
+	color: rgba(106,190,216);
+	}
+
+h5{font-family: caviar dreams;
+text-align: center;
+    color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 150px;
+	margin-right: 150px;
+	color: white);
+}
+	
+.submit{
+  font-weight: bold;
+  font-size: 20px;
+  style-type: none;
+  }
+
+.submit:hover{
+  color: #757571;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: caviar dreams;
+  color: black;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin: 20;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #757571;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: caviar dreams;
+}
+
+input[type=submit]:hover {
+  background-color: #b0aba0;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 200px;
+  font-family: caviar dreams;
+  color: black;
+  font-weight: bold;
+}
+
+
+</style>
+</head>
+<br><br>
+<body>
+
+<ol>
+<li><a href="Homepage.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="Contact.html">Contact</a></li>
+<li><a href="Gallery.html">Gallery</a></li>
+<li><a href="Services.html">Services</a></li>
+</ol>
+<br><br>
+<h3>Contact Me</h3>
+<h5>079 774 6155 | mahoneynaeem@gmail.com</h5>
+<h3>For more information or queries please feal free to provide your details below</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="Position">Position</label>
+    <select id="Position" name="Position">
+      <option value="Lecturer">Lecturer</option>
+      <option value="Student">Student</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+     <a href="ThankYou.html"><h4 class="submit">Submit</h4> </a>
+  </form>
+</div>
+
+<div class="footer">
+ <h4>l</h4> 
+</div>
+</body>
+
+</html>

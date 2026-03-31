@@ -1,0 +1,50 @@
+.h1{
+    font-family: Helvetica;
+    text-align: center;
+  
+  }
+  .banner {
+    position: relative;
+    height: 100px;
+    background-color: #66B2FF;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 0 0 25px  #66B2FF;
+    border-radius: 20px;
+  }
+  .rentals {
+    font-family: Helvetica;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .rentals td, .rentals th {
+    border: 1px solid #66B2FF;
+    padding: 10px;
+  }
+  
+  .rentals tr:nth-child(even){
+    background-color: white;}
+  
+  .rentals tr:hover {
+    background-color: gray;}
+  
+  .rentals th {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: left;
+    background-color: black;
+    color: white;
+  }
+  .box {
+    width: 98%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 25px  #66B2FF;
+  }
+  

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html <body>
+
+<h2>JavaScript Arrays</h2>
+ <p id = 'demo'> ***** </p>
+<script>
+ var text = "";
+ var i;
+var maxIndex = 0;
+ var min = 9999;
+ var max = 0;
+ var SalesPersons = ["John","Nancy","Tobela","Samson","Tracy"];
+ var sales = [2562,2415,5632,3625,4215];
+ //1. Search for the SalesPersons who has the most sales
+ //2. Search and Show the sales value for Samson
+ //3. Search for the person with the least sales
+ //4. Search for persons with sales more then 3000
+ alert(sales.length);
+ for(i = 0; i < sales.length; i++){
+ alert(i);
+ if(sales[i] < min){
+ min = sales[i];
+ maxIndex = i;
+ }
+ }
+ text += "The Person with the least sales = " + SalesPersons[maxIndex] + " with
+sales of " + min;
+ document.getElementById("demo").innerHTML = text;
+ </script>
+
+ </body>
+ </html>
