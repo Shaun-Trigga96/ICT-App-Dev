@@ -1,0 +1,156 @@
+package za.ac.cput.privatedoctorapplication;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.os.StrictMode;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import org.h2.tools.Server;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        TextView Payment_Number = findViewById(R.id.editTextPayment_No);
+        TextView Receipt_Number = findViewById(R.id.editTextReceipt_No);
+        TextView Payment_Amount = findViewById(R.id.editTextPayment_Amount);
+        TextView Payment_Type = findViewById(R.id.Payment_Type);
+        TextView Payment_Date = findViewById(R.id.editTextDate);
+        TextView Appointment_No = findViewById(R.id.editTextAppointment_No);
+        Button btnPay = findViewById(R.id.btnPay);
+        Button btnUpdate = findViewById(R.id.btnUpdate);
+        Button btnDelete = findViewById(R.id.btnDelete);
+        Button btnDisplay = findViewById(R.id.btnDisplay);
+
+        btnPay.setOnClickListener(v -> {
+            Log.e("STATE", "Payment Received!!!!!!!!");
+            try {
+                Connection connection = null;
+                connection = connectToDb();
+                Log.e("STATE", connection.getCatalog());
+                String sqlInsert = "Insert into Payment ('" + Payment_Number.getText().toString() + "','" + Receipt_Number.getText().toString() + "'," +
+                        " '" + Payment_Amount.getText().toString() + "','" + Payment_Type.getText().toString() + "'," +
+                        "' '" + Payment_Date.getText().toString() + "','" + Appointment_No.getText().toString() + "')";
+                Statement st = connection.createStatement();
+                ResultSet rs = st.executeQuery(sqlInsert);
+
+            } catch (Exception exception) {
+                Log.e("Error", exception.getMessage());
+            }
+        });
+
+        btnUpdate.setOnClickListener(v -> {
+            try {
+                Connection connection = null;
+                connection = connectToDb();
+                if (connection != null) {
+                    String sqlDelete = "Update Payment Set Payment_Number ='" + Payment_Number.getText().toString() + "',Receipt_Number ='" + Receipt_Number.getText().toString() + "',Payment_Amount=" +
+                            " '" + Payment_Amount.getText().toString() + "',Payment_Type ='" + Payment_Type.getText().toString() + "'Payment_Date =" +
+                            "' '" + Payment_Date.getText().toString() + "''" + "',Appointment_No ='" + Appointment_No.getText().toString() + "'where Payment_Number = '" + Payment_Number.getText().toString() + "'";
+                    Statement st = connection.createStatement();
+                    ResultSet rs = st.executeQuery(sqlDelete);
+
+                }
+            } catch (Exception exception) {
+                Log.e("Error", exception.getMessage());
+            }
+        });
+
+        btnDelete.setOnClickListener(v -> {
+            try {
+                Connection connection = null;
+                connection = connectToDb();
+                if (connection != null) {
+                    String sqlDelete = "Delete Payment where Payment_Number ='" + Payment_Number.getText().toString() +"'";
+                    Statement st = connection.createStatement();
+                    ResultSet rs = st.executeQuery(sqlDelete);
+
+                }
+            } catch (Exception exception) {
+                Log.e("Error", exception.getMessage());
+            }
+        });
+
+        btnDisplay.setOnClickListener(v -> {
+            try {
+                Connection connection = null;
+                connection = connectToDb();
+                if (connection != null) {
+                    String sqlGet = "Select * from Payment where Payment_Number ='" + Payment_Number.getText().toString() +"'";
+                    Statement st = connection.createStatement();
+                    ResultSet rs = st.executeQuery(sqlGet);
+
+                    while(rs.next()){
+                    Payment_Number.setText(rs.getString(2));
+                    Receipt_Number.setText(rs.getString(3));
+                    Payment_Amount.setText(rs.getString(4));
+                    Payment_Type.setText(rs.getString(5));
+                    Payment_Date.setText(rs.getString(6));
+                    Appointment_No.setText(rs.getString(7));
+                    }
+                }
+            } catch (Exception exception) {
+                Log.e("Error", exception.getMessage());
+            }
+        });
+
+    }
+
+
+
+    @SuppressLint("New Api")
+    public Connection connectToDb() throws Exception{
+        StrictMode.ThreadPolicy tp = null;
+        tp = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(tp);
+        Server server = Server.createTcpServer("-ifNotExists").start();
+        Class.forName("org.h2.Driver");
+
+        return DriverManager.getConnection(" jdbc:h2:tcp://localhost/~/test", "sa", "");
+    }
+
+   /* public String getCreatePayment()
+    {
+        String sql =  "CREATE TABLE IF NOT EXISTS Payment" +
+                "(Payment_Number auto_increment not NULL," +
+                " Receipt_Number VARCHAR(100)," +
+                " Payment_Amount VARCHAR(100),"
+                + "Payment_Type VARCHAR(100),"
+                + "Payment_Date VARCHAR(100),"
+                + "Appointment_No VARCHAR(100),"+
+                " PRIMARY KEY (Payment_Number ))";
+        return sql;
+    }*/
+
+    /*@SuppressLint("New Api")*/
+  /*  public Connection connection(){
+
+        Connection con = null;
+        String ip = "192.169.42.1";
+        String port = "3306";
+        String username = "root";
+        String password = "Saba@6006";
+        String databaseName ="PrivateDoctorApp-DB";
+
+        StrictMode.ThreadPolicy tp = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(tp);
+
+        try {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+            String connectionUrl = "jdbc:jtds:sqlserver://"+ip+":"+port+";databaseName="+databaseName+";User="+username+";password="+password+";";
+            con = DriverManager.getConnection(connectionUrl);
+        }
+        catch(Exception exception){
+            Log.e("Error", exception.getMessage());
+        }
+
+        return con;
+    }*/
+}

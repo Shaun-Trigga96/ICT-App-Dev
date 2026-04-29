@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFD473S — Complete Study Index</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0b1320;
+  --navy2: #111d30;
+  --navy3: #192540;
+  --blue: #1a5fd4;
+  --blue-light: #3b82f6;
+  --blue-dim: #1a3a6e;
+  --gold: #f5a623;
+  --gold-dim: #7a5010;
+  --green: #22c55e;
+  --green-dim: #14532d;
+  --red: #ef4444;
+  --red-dim: #7f1d1d;
+  --teal: #14b8a6;
+  --text: #e8edf5;
+  --text2: #8fa3c0;
+  --text3: #4a6080;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --card: #131e30;
+  --card2: #192540;
+  --mono: 'IBM Plex Mono', monospace;
+  --head: 'Syne', sans-serif;
+  --body: 'DM Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  background: var(--navy);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* HERO */
+.hero {
+  background: var(--navy2);
+  border-bottom: 1px solid var(--border2);
+  padding: 56px 32px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(26,95,212,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  border: 1px solid var(--blue-dim);
+  background: rgba(26,95,212,0.1);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: var(--head);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  font-size: 16px;
+  color: var(--text2);
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+.chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.chip {
+  font-size: 12px;
+  font-family: var(--mono);
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  background: rgba(255,255,255,0.04);
+}
+.chip.hi { border-color: var(--blue-dim); color: var(--blue-light); background: rgba(26,95,212,0.1); }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(11,19,32,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px;
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  scrollbar-width: none;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  display: block;
+  padding: 13px 16px;
+  font-size: 12px;
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text3);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav a:hover { color: var(--blue-light); border-bottom-color: var(--blue-light); }
+
+/* LAYOUT */
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px 80px; }
+
+/* SECTION HEADERS */
+.sec { margin-bottom: 56px; scroll-margin-top: 64px; }
+.sec-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 8px;
+}
+.sec-title {
+  font-family: var(--head);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.sec-sub {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-family: var(--head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-title .mark {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: auto;
+}
+.mark-gold { background: rgba(245,166,35,0.15); color: var(--gold); border: 1px solid rgba(245,166,35,0.3); }
+.mark-blue { background: rgba(26,95,212,0.15); color: var(--blue-light); border: 1px solid var(--blue-dim); }
+.mark-green { background: rgba(34,197,94,0.12); color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+.mark-red { background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+
+/* FORMULA BOXES */
+.formula-box {
+  background: var(--navy3);
+  border: 1px solid var(--blue-dim);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.formula-box .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: 12px;
+}
+.formula-big {
+  font-family: var(--mono);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.formula-note { font-size: 13px; color: var(--text2); }
+
+.formula-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.formula-mini {
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+.formula-mini .fm-label { font-size: 11px; color: var(--text2); font-family: var(--mono); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.formula-mini .fm-val { font-family: var(--mono); font-size: 1.1rem; color: var(--gold); }
+
+/* STEP BOXES */
+.steps { counter-reset: step; }
+.step {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+.step-n {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  color: white; margin-top: 2px;
+}
+.step-content { flex: 1; }
+.step-content strong { color: var(--text); display: block; margin-bottom: 4px; font-size: 14px; }
+.step-content p { font-size: 14px; color: var(--text2); }
+
+/* TABLES */
+.tbl-wrap { overflow-x: auto; margin-bottom: 16px; border-radius: 10px; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th {
+  background: var(--navy3);
+  padding: 10px 14px;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text2);
+  border-bottom: 1px solid var(--border2);
+  font-weight: 500;
+}
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+tr:last-child td { border-bottom: none; }
+.td-mono { font-family: var(--mono); font-size: 12px; }
+.td-gold { color: var(--gold); font-family: var(--mono); font-weight: 500; }
+.td-crit { background: rgba(26,95,212,0.1); }
+.td-yes { color: var(--green); font-family: var(--mono); }
+.td-no { color: var(--red); font-family: var(--mono); }
+
+/* ANSWER BOX */
+.answer {
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #86efac;
+  margin-top: 16px;
+}
+.answer strong { color: var(--green); }
+
+/* TIP BOX */
+.tip {
+  background: rgba(245,166,35,0.07);
+  border-left: 3px solid var(--gold);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #fcd34d;
+  margin: 12px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* INLINE CODE */
+code {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: rgba(255,255,255,0.07);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--gold);
+}
+
+/* PATH BADGE */
+.path-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(26,95,212,0.12);
+  border: 1px solid var(--blue-dim);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--blue-light);
+  margin: 8px 4px 8px 0;
+}
+.path-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue-light); }
+
+/* DIVIDER */
+.divider { height: 1px; background: var(--border); margin: 32px 0; }
+
+/* ACCORDION */
+details { margin-bottom: 10px; }
+summary {
+  cursor: pointer;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; font-size: 18px; color: var(--text2); }
+details[open] summary::after { content: '−'; }
+details[open] summary { border-radius: 10px 10px 0 0; border-bottom-color: transparent; }
+.details-body {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* GRID */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 16px; }
+
+/* EXAM TAG */
+.exam-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tag-exam { background: rgba(245,166,35,0.15); color: var(--gold); border: 1px solid rgba(245,166,35,0.3); }
+.tag-test { background: rgba(20,184,166,0.15); color: var(--teal); border: 1px solid rgba(20,184,166,0.3); }
+
+/* FLOAT TABLE colours */
+.tf { color: #60a5fa; }
+.ff { color: #34d399; }
+.iif { color: #f472b6; }
+
+@media (max-width: 600px) {
+  .hero { padding: 40px 16px 36px; }
+  .container { padding: 24px 16px 60px; }
+  .formula-big { font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">PFD473S · CPUT · Complete Study Index</div>
+  <h1>Planning, Scheduling <span>&</span> PERT/CPM</h1>
+  <p>Every formula, worked example, and theory answer from both exam papers — in one place.</p>
+  <div class="chips">
+    <span class="chip hi">PERT Calculations</span>
+    <span class="chip hi">CPM & Critical Path</span>
+    <span class="chip">Float Types</span>
+    <span class="chip">Gantt & Cost</span>
+    <span class="chip">Management Theory</span>
+    <span class="chip">Fayol & Mintzberg</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#formulas">Formulas</a>
+  <a href="#pert-steps">PERT Steps</a>
+  <a href="#exam2024-pert">2024 Exam Q2</a>
+  <a href="#test1-pert">Test 1 Q1</a>
+  <a href="#cpm2024">2024 Exam Q1 — CPM</a>
+  <a href="#float">Float Types</a>
+  <a href="#gantt">Gantt & Cost</a>
+  <a href="#theory">Theory</a>
+  <a href="#cheatsheet">Cheat Sheet</a>
+</nav>
+
+<div class="container">
+
+<!-- ===== SECTION: ALL FORMULAS ===== -->
+<div class="sec" id="formulas">
+  <div class="sec-label">Core Formulas</div>
+  <div class="sec-title">Every formula you need</div>
+  <div class="sec-sub">Learn these — they appear in every PERT question.</div>
+
+  <div class="formula-box">
+    <div class="label">PERT Expected Duration (Te)</div>
+    <div class="formula-big">Te = (O + 4M + P) / 6</div>
+    <div class="formula-note">O = Optimistic &nbsp;|&nbsp; M = Most Likely &nbsp;|&nbsp; P = Pessimistic &nbsp;|&nbsp; M is weighted 4× because it is the most likely outcome</div>
+  </div>
+
+  <div class="formula-grid">
+    <div class="formula-mini">
+      <div class="fm-label">Variance (one activity)</div>
+      <div class="fm-val">σ² = ((P − O) / 6)²</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Project variance</div>
+      <div class="fm-val">σ²_proj = Σ σ²_critical</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Project std deviation</div>
+      <div class="fm-val">σ_proj = √σ²_proj</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Z-score (probability)</div>
+      <div class="fm-val">Z = (T_target − Te) / σ</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Target date for X% confidence</div>
+      <div class="fm-val">T = Te + Z × σ</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Common Z values</div>
+      <div class="fm-val">90%→1.28 &nbsp; 95%→1.645</div>
+    </div>
+  </div>
+
+  <div class="formula-grid">
+    <div class="formula-mini">
+      <div class="fm-label">Total Float (TF)</div>
+      <div class="fm-val">L(j) − E(i) − Duration</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Free Float (FF)</div>
+      <div class="fm-val">E(j) − E(i) − Duration</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Independent Float (IF)</div>
+      <div class="fm-val">max{0, E(j) − L(i) − D}</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Forward Pass</div>
+      <div class="fm-val">E(j) = max{ E(i) + D }</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Backward Pass</div>
+      <div class="fm-val">L(i) = min{ L(j) − D }</div>
+    </div>
+    <div class="formula-mini">
+      <div class="fm-label">Critical Path Rule</div>
+      <div class="fm-val">TF = 0 on every activity</div>
+    </div>
+  </div>
+
+  <div class="tip">The project Te gives you a <strong>50% probability</strong> of finishing on time. You need the Z-score formula for any other probability target.</div>
+</div>
+
+<!-- ===== SECTION: PERT STEPS ===== -->
+<div class="sec" id="pert-steps">
+  <div class="sec-label">How-to</div>
+  <div class="sec-title">PERT — step by step</div>
+  <div class="sec-sub">Follow this order for every PERT question in the exam.</div>
+
+  <div class="card">
+    <div class="card-title">The 5-step PERT process</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-content">
+          <strong>Calculate Te and σ² for every activity</strong>
+          <p>Use <code>Te = (O + 4M + P) / 6</code> and <code>σ² = ((P − O) / 6)²</code> for every row in the table. Write the working clearly — marks are given for the calculation, not just the answer.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-content">
+          <strong>Draw the AOA network and run the Forward Pass</strong>
+          <p>Arrows = activities (use Te values). Circles = nodes. Dashed arrows = dummy activities (0 duration). Forward pass: <code>E(j) = max{ E(i) + Te }</code>. Take the longest route into each node.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-content">
+          <strong>Run the Backward Pass and find Total Float</strong>
+          <p>Start at the end: set L(end) = E(end). Work backwards: <code>L(i) = min{ L(j) − Te }</code>. Then for each activity: <code>TF = L(j) − E(i) − Te</code>. Activities with TF = 0 are critical.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-content">
+          <strong>State the Critical Path and expected project duration</strong>
+          <p>List the critical path as a sequence: e.g. A → B → D → F → H. The project duration = sum of Te on the critical path. State: <em>"There is a 50% probability of finishing by this date."</em></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">5</div>
+        <div class="step-content">
+          <strong>Probability calculation (if asked)</strong>
+          <p>Sum σ² for critical path activities only → take √ to get σ_project → apply <code>Z = (T − Te) / σ</code> for probability, or <code>T = Te + Z × σ</code> for a confidence date.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION: 2024 EXAM Q2 PERT ===== -->
+<div class="sec" id="exam2024-pert">
+  <div class="sec-label">Worked Example</div>
+  <div class="sec-title">2024 Exam — Q2 PERT (20 marks)</div>
+  <div class="sec-sub"><span class="exam-tag tag-exam">27 March 2024</span> Full worked solution — 8 activities, probabilistic scheduling</div>
+
+  <div class="card">
+    <div class="card-title">Step 0 — Calculate Te and σ² for all activities <span class="mark mark-blue">Te = (O+4M+P)/6</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Activity</th><th>Pred.</th><th>O</th><th>M</th><th>P</th><th>Working</th><th>Te</th><th>σ²</th></tr>
+        <tr class="td-crit"><td class="td-mono">A</td><td>—</td><td>4</td><td>5</td><td>7</td><td class="td-mono">(4+20+7)/6 = 31/6</td><td class="td-gold">5.17</td><td class="td-mono">((7−4)/6)² = 9/36 = 0.250</td></tr>
+        <tr class="td-crit"><td class="td-mono">B</td><td>A</td><td>1</td><td>3</td><td>6</td><td class="td-mono">(1+12+6)/6 = 19/6</td><td class="td-gold">3.17</td><td class="td-mono">((6−1)/6)² = 25/36 = 0.694</td></tr>
+        <tr><td class="td-mono">C</td><td>A</td><td>4</td><td>5</td><td>7</td><td class="td-mono">(4+20+7)/6 = 31/6</td><td class="td-mono">5.17</td><td class="td-mono">((7−4)/6)² = 9/36 = 0.250</td></tr>
+        <tr class="td-crit"><td class="td-mono">D</td><td>B</td><td>3</td><td>7</td><td>10</td><td class="td-mono">(3+28+10)/6 = 41/6</td><td class="td-gold">6.83</td><td class="td-mono">((10−3)/6)² = 49/36 = 1.361</td></tr>
+        <tr><td class="td-mono">E</td><td>B</td><td>4</td><td>6</td><td>9</td><td class="td-mono">(4+24+9)/6 = 37/6</td><td class="td-mono">6.17</td><td class="td-mono">((9−4)/6)² = 25/36 = 0.694</td></tr>
+        <tr class="td-crit"><td class="td-mono">F</td><td>C, D</td><td>2</td><td>3</td><td>5</td><td class="td-mono">(2+12+5)/6 = 19/6</td><td class="td-gold">3.17</td><td class="td-mono">((5−2)/6)² = 9/36 = 0.250</td></tr>
+        <tr><td class="td-mono">G</td><td>E</td><td>1</td><td>7</td><td>10</td><td class="td-mono">(1+28+10)/6 = 39/6</td><td class="td-mono">6.50</td><td class="td-mono">((10−1)/6)² = 81/36 = 2.250</td></tr>
+        <tr class="td-crit"><td class="td-mono">H</td><td>E, F</td><td>2</td><td>6</td><td>8</td><td class="td-mono">(2+24+8)/6 = 34/6</td><td class="td-gold">5.67</td><td class="td-mono">((8−2)/6)² = 36/36 = 1.000</td></tr>
+      </table>
+    </div>
+    <div class="tip">Highlighted rows = Critical Path activities. You will use their σ² values in the probability question.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q2.2 — Expected Finish Time (Forward Pass) <span class="mark mark-gold">8 marks</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Node</th><th>Calculation</th><th>EST E(n)</th></tr>
+        <tr><td class="td-mono">1 (Start)</td><td>= 0 by definition</td><td class="td-gold">0</td></tr>
+        <tr><td class="td-mono">2</td><td>E(1) + Te(A) = 0 + 5.17</td><td class="td-gold">5.17</td></tr>
+        <tr><td class="td-mono">3</td><td>E(2) + Te(B) = 5.17 + 3.17</td><td class="td-gold">8.33</td></tr>
+        <tr><td class="td-mono">4</td><td>E(2) + Te(C) = 5.17 + 5.17</td><td class="td-mono">10.33</td></tr>
+        <tr><td class="td-mono">5</td><td>max{ E(3)+Te(D), E(4)+0 } = max{ 8.33+6.83, 10.33 } = max{ 15.17, 10.33 }</td><td class="td-gold">15.17</td></tr>
+        <tr><td class="td-mono">6</td><td>E(3) + Te(E) = 8.33 + 6.17</td><td class="td-mono">14.50</td></tr>
+        <tr><td class="td-mono">7</td><td>max{ E(5)+Te(F), E(6)+0 } = max{ 15.17+3.17, 14.50 } = max{ 18.33, 14.50 }</td><td class="td-gold">18.33</td></tr>
+        <tr><td class="td-mono">8 (G ends)</td><td>E(6) + Te(G) = 14.50 + 6.50</td><td class="td-mono">21.00</td></tr>
+        <tr><td class="td-mono">9 (H ends)</td><td>E(7) + Te(H) = 18.33 + 5.67</td><td class="td-gold">24.00</td></tr>
+        <tr><td class="td-mono">10 (End)</td><td>max{ E(8)+0, E(9)+0 } = max{ 21.00, 24.00 }</td><td class="td-gold">24.00</td></tr>
+      </table>
+    </div>
+    <div style="margin-bottom:12px;font-size:14px;color:var(--text2);">Critical path (TF = 0): A → B → D → F → H &nbsp; = &nbsp; 5.17 + 3.17 + 6.83 + 3.17 + 5.67</div>
+    <div class="path-badge"><span class="dot"></span>A</div>
+    <div class="path-badge"><span class="dot"></span>B</div>
+    <div class="path-badge"><span class="dot"></span>D</div>
+    <div class="path-badge"><span class="dot"></span>F</div>
+    <div class="path-badge"><span class="dot"></span>H</div>
+    <div class="answer"><strong>Answer Q2.2:</strong> Expected project duration = <strong>24.00 days</strong> (50% probability of finishing by this date)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q2.3 — Time for 95% Confidence <span class="mark mark-gold">4 marks</span></div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-content">
+          <strong>Sum σ² for critical path activities only (A, B, D, F, H)</strong>
+          <div class="tbl-wrap" style="margin-top:10px;">
+            <table>
+              <tr><th>Activity</th><th>O</th><th>P</th><th>σ² = ((P−O)/6)²</th></tr>
+              <tr><td class="td-mono">A</td><td>4</td><td>7</td><td class="td-mono">((7−4)/6)² = 9/36 = 0.250</td></tr>
+              <tr><td class="td-mono">B</td><td>1</td><td>6</td><td class="td-mono">((6−1)/6)² = 25/36 = 0.694</td></tr>
+              <tr><td class="td-mono">D</td><td>3</td><td>10</td><td class="td-mono">((10−3)/6)² = 49/36 = 1.361</td></tr>
+              <tr><td class="td-mono">F</td><td>2</td><td>5</td><td class="td-mono">((5−2)/6)² = 9/36 = 0.250</td></tr>
+              <tr><td class="td-mono">H</td><td>2</td><td>8</td><td class="td-mono">((8−2)/6)² = 36/36 = 1.000</td></tr>
+              <tr><td colspan="3" style="text-align:right;color:var(--text2);font-size:13px;">Total σ²_project =</td><td class="td-gold" style="font-weight:500;">3.556</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-content">
+          <strong>Project standard deviation</strong>
+          <p style="font-family:var(--mono);color:var(--gold);margin-top:6px;">σ_project = √3.556 = 1.886 days</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-content">
+          <strong>Apply the T = Te + Z × σ formula</strong>
+          <p style="font-family:var(--mono);color:var(--text);margin-top:6px;">Z for 95% = 1.645<br>T = 24.00 + 1.645 × 1.886 = 24.00 + 3.10 = <span style="color:var(--gold)">27.10 days</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="answer"><strong>Answer Q2.3:</strong> Need <strong>27.10 days</strong> to have 95% confidence of finishing</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q2.4 — Probability of finishing 1 day after expected <span class="mark mark-gold">4 marks</span></div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-content">
+          <strong>Set the target date</strong>
+          <p>Target = Te + 1 = 24.00 + 1 = 25.00 days</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-content">
+          <strong>Calculate Z</strong>
+          <p style="font-family:var(--mono);margin-top:4px;">Z = (25.00 − 24.00) / 1.886 = 1.00 / 1.886 = <span style="color:var(--gold)">0.530</span></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-content">
+          <strong>Look up Z = 0.530 in the Z-table</strong>
+          <p>P(Z ≤ 0.530) ≈ 0.7019 &nbsp;|&nbsp; In Excel: <code>=NORMSDIST(0.530)</code></p>
+        </div>
+      </div>
+    </div>
+    <div class="answer"><strong>Answer Q2.4:</strong> Probability = <strong>70.19%</strong> (≈ 70%)</div>
+  </div>
+</div>
+
+<!-- ===== SECTION: TEST 1 Q1 PERT ===== -->
+<div class="sec" id="test1-pert">
+  <div class="sec-label">Worked Example</div>
+  <div class="sec-title">Test 1 — Q1 PERT (20 marks)</div>
+  <div class="sec-sub"><span class="exam-tag tag-test">3 April 2025</span> 8 activities — longer critical path, 90% confidence asked</div>
+
+  <div class="card">
+    <div class="card-title">Step 0 — Te and σ² for all activities</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Activity</th><th>Pred.</th><th>O</th><th>M</th><th>P</th><th>Working</th><th>Te</th><th>σ²</th></tr>
+        <tr class="td-crit"><td class="td-mono">A</td><td>—</td><td>3</td><td>5</td><td>7</td><td class="td-mono">(3+20+7)/6 = 30/6</td><td class="td-gold">5.00</td><td class="td-mono">((7−3)/6)² = 16/36 = 0.444</td></tr>
+        <tr class="td-crit"><td class="td-mono">B</td><td>A</td><td>1</td><td>3</td><td>4</td><td class="td-mono">(1+12+4)/6 = 17/6</td><td class="td-gold">2.83</td><td class="td-mono">((4−1)/6)² = 9/36 = 0.250</td></tr>
+        <tr class="td-crit"><td class="td-mono">C</td><td>A,B</td><td>4</td><td>5</td><td>7</td><td class="td-mono">(4+20+7)/6 = 31/6</td><td class="td-gold">5.17</td><td class="td-mono">((7−4)/6)² = 9/36 = 0.250</td></tr>
+        <tr class="td-crit"><td class="td-mono">D</td><td>C</td><td>6</td><td>8</td><td>9</td><td class="td-mono">(6+32+9)/6 = 47/6</td><td class="td-gold">7.83</td><td class="td-mono">((9−6)/6)² = 9/36 = 0.250</td></tr>
+        <tr><td class="td-mono">E</td><td>C</td><td>3</td><td>4</td><td>5</td><td class="td-mono">(3+16+5)/6 = 24/6</td><td class="td-mono">4.00</td><td class="td-mono">((5−3)/6)² = 4/36 = 0.111</td></tr>
+        <tr><td class="td-mono">F</td><td>D,E</td><td>2</td><td>4</td><td>7</td><td class="td-mono">(2+16+7)/6 = 25/6</td><td class="td-mono">4.17</td><td class="td-mono">((7−2)/6)² = 25/36 = 0.694</td></tr>
+        <tr class="td-crit"><td class="td-mono">G</td><td>D</td><td>7</td><td>9</td><td>10</td><td class="td-mono">(7+36+10)/6 = 53/6</td><td class="td-gold">8.83</td><td class="td-mono">((10−7)/6)² = 9/36 = 0.250</td></tr>
+        <tr class="td-crit"><td class="td-mono">H</td><td>F,G</td><td>12</td><td>15</td><td>17</td><td class="td-mono">(12+60+17)/6 = 89/6</td><td class="td-gold">14.83</td><td class="td-mono">((17−12)/6)² = 25/36 = 0.694</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q1.2 — Expected Finish Time <span class="mark mark-gold">6 marks</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Node</th><th>Calculation</th><th>EST</th></tr>
+        <tr><td class="td-mono">1</td><td>= 0</td><td class="td-gold">0</td></tr>
+        <tr><td class="td-mono">2</td><td>0 + 5.00 (A)</td><td class="td-gold">5.00</td></tr>
+        <tr><td class="td-mono">3</td><td>5.00 + 2.83 (B)</td><td class="td-gold">7.83</td></tr>
+        <tr><td class="td-mono">4</td><td>7.83 + 5.17 (C)</td><td class="td-gold">13.00</td></tr>
+        <tr><td class="td-mono">5</td><td>13.00 + 7.83 (D)</td><td class="td-gold">20.83</td></tr>
+        <tr><td class="td-mono">6</td><td>13.00 + 4.00 (E)</td><td class="td-mono">17.00</td></tr>
+        <tr><td class="td-mono">7</td><td>20.83 + 8.83 (G)</td><td class="td-gold">29.67</td></tr>
+        <tr><td class="td-mono">8</td><td>max{ E(5)+0, E(6)+0 } = max{ 20.83, 17.00 }</td><td class="td-mono">20.83</td></tr>
+        <tr><td class="td-mono">9</td><td>20.83 + 4.17 (F)</td><td class="td-mono">25.00</td></tr>
+        <tr><td class="td-mono">10</td><td>max{ E(7)+0, E(9)+0 } = max{ 29.67, 25.00 }</td><td class="td-gold">29.67</td></tr>
+        <tr><td class="td-mono">11 (End)</td><td>29.67 + 14.83 (H)</td><td class="td-gold">44.50</td></tr>
+      </table>
+    </div>
+    <div style="margin-bottom:12px;font-size:14px;color:var(--text2);">Critical path: A → B → C → D → G → H &nbsp;=&nbsp; 5.00 + 2.83 + 5.17 + 7.83 + 8.83 + 14.83</div>
+    <div class="path-badge"><span class="dot"></span>A</div>
+    <div class="path-badge"><span class="dot"></span>B</div>
+    <div class="path-badge"><span class="dot"></span>C</div>
+    <div class="path-badge"><span class="dot"></span>D</div>
+    <div class="path-badge"><span class="dot"></span>G</div>
+    <div class="path-badge"><span class="dot"></span>H</div>
+    <div class="answer"><strong>Answer Q1.2:</strong> Expected Finish Time = <strong>44.50 days</strong> (50% probability)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q1.3 — Time for 90% Confidence <span class="mark mark-gold">4 marks</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Activity (Critical)</th><th>O</th><th>P</th><th>σ² = ((P−O)/6)²</th></tr>
+        <tr><td class="td-mono">A</td><td>3</td><td>7</td><td class="td-mono">(4/6)² = 16/36 = 0.4444</td></tr>
+        <tr><td class="td-mono">B</td><td>1</td><td>4</td><td class="td-mono">(3/6)² = 9/36 = 0.2500</td></tr>
+        <tr><td class="td-mono">C</td><td>4</td><td>7</td><td class="td-mono">(3/6)² = 9/36 = 0.2500</td></tr>
+        <tr><td class="td-mono">D</td><td>6</td><td>9</td><td class="td-mono">(3/6)² = 9/36 = 0.2500</td></tr>
+        <tr><td class="td-mono">G</td><td>7</td><td>10</td><td class="td-mono">(3/6)² = 9/36 = 0.2500</td></tr>
+        <tr><td class="td-mono">H</td><td>12</td><td>17</td><td class="td-mono">(5/6)² = 25/36 = 0.6944</td></tr>
+        <tr><td colspan="3" style="text-align:right;color:var(--text2);font-size:13px;">Total σ²_project =</td><td class="td-gold">77/36 = 2.1389</td></tr>
+      </table>
+    </div>
+    <p style="font-family:var(--mono);font-size:13px;color:var(--text);margin-bottom:8px;">σ_project = √2.1389 = <span style="color:var(--gold)">1.4625 days</span></p>
+    <p style="font-family:var(--mono);font-size:13px;color:var(--text);">Z for 90% = 1.28 &nbsp;→&nbsp; T = 44.50 + 1.28 × 1.4625 = 44.50 + 1.87 = <span style="color:var(--gold)">46.37 days</span></p>
+    <div class="answer"><strong>Answer Q1.3:</strong> Need <strong>46.37 days</strong> for 90% confidence</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q1.4 — Probability of finishing 1 day after expected <span class="mark mark-gold">4 marks</span></div>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Target = 44.50 + 1 = 45.50 days</p>
+    <p style="font-family:var(--mono);font-size:13px;color:var(--text);margin-bottom:8px;">Z = (45.50 − 44.50) / 1.4625 = 1.00 / 1.4625 = <span style="color:var(--gold)">0.684</span></p>
+    <p style="font-size:14px;color:var(--text2);">Look up Z = 0.684 → P ≈ 0.7529 &nbsp;|&nbsp; Excel: <code>=NORMSDIST(0.684)</code></p>
+    <div class="answer"><strong>Answer Q1.4:</strong> Probability = <strong>75.29%</strong> (≈ 75%)</div>
+  </div>
+</div>
+
+<!-- ===== SECTION: CPM 2024 ===== -->
+<div class="sec" id="cpm2024">
+  <div class="sec-label">Worked Example</div>
+  <div class="sec-title">2024 Exam — Q1 CPM (20 marks)</div>
+  <div class="sec-sub"><span class="exam-tag tag-exam">27 March 2024</span> Deterministic scheduling — single duration per activity</div>
+
+  <div class="card">
+    <div class="card-title">Given data</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Activity</th><th>Duration (days)</th><th>Predecessors</th></tr>
+        <tr><td class="td-mono">A</td><td>4</td><td>—</td></tr>
+        <tr><td class="td-mono">B</td><td>6</td><td>A</td></tr>
+        <tr><td class="td-mono">C</td><td>5</td><td>A</td></tr>
+        <tr><td class="td-mono">D</td><td>8</td><td>A</td></tr>
+        <tr><td class="td-mono">E</td><td>9</td><td>B</td></tr>
+        <tr><td class="td-mono">F</td><td>10</td><td>B</td></tr>
+        <tr><td class="td-mono">G</td><td>6</td><td>C, E</td></tr>
+        <tr><td class="td-mono">H</td><td>8</td><td>D</td></tr>
+        <tr><td class="td-mono">I</td><td>3</td><td>D</td></tr>
+        <tr><td class="td-mono">J</td><td>2</td><td>G, H</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q1.1 — Forward Pass (EST) <span class="mark mark-gold">6 marks</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Node</th><th>Calculation</th><th>E(n)</th></tr>
+        <tr><td class="td-mono">1</td><td>= 0</td><td class="td-gold">0</td></tr>
+        <tr><td class="td-mono">2</td><td>E(1) + A = 0 + 4</td><td class="td-gold">4</td></tr>
+        <tr><td class="td-mono">3</td><td>E(2) + B = 4 + 6</td><td class="td-gold">10</td></tr>
+        <tr><td class="td-mono">4</td><td>E(2) + C = 4 + 5</td><td class="td-mono">9</td></tr>
+        <tr><td class="td-mono">5</td><td>E(2) + D = 4 + 8</td><td class="td-mono">12</td></tr>
+        <tr><td class="td-mono">6</td><td>max{ E(3)+E, E(4)+0 } = max{ 10+9, 9+0 } = max{ 19, 9 }</td><td class="td-gold">19</td></tr>
+        <tr><td class="td-mono">7</td><td>E(3) + F = 10 + 10</td><td class="td-mono">20</td></tr>
+        <tr><td class="td-mono">8</td><td>E(6) + G = 19 + 6</td><td class="td-gold">25</td></tr>
+        <tr><td class="td-mono">9</td><td>E(5) + H = 12 + 8</td><td class="td-mono">20</td></tr>
+        <tr><td class="td-mono">10</td><td>E(5) + I = 12 + 3</td><td class="td-mono">15</td></tr>
+        <tr><td class="td-mono">11</td><td>max{ E(8)+0, E(9)+0 } = max{ 25, 20 }</td><td class="td-gold">25</td></tr>
+        <tr><td class="td-mono">12 (End)</td><td>max{ E(11)+J, E(7)+0, E(10)+0 } = max{ 27, 20, 15 }</td><td class="td-gold">27</td></tr>
+      </table>
+    </div>
+    <div class="answer"><strong>Answer Q1.1:</strong> Project Finish Time = <strong>27 days</strong></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Q1.2 — Critical Path (Backward Pass + TF) <span class="mark mark-gold">4 marks</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Activity</th><th>TF = L(j) − E(i) − D</th><th>Total Float</th><th>Critical?</th></tr>
+        <tr class="td-crit"><td class="td-mono">A (1→2)</td><td class="td-mono">4 − 0 − 4</td><td class="td-mono">0</td><td class="td-yes">YES</td></tr>
+        <tr class="td-crit"><td class="td-mono">B (2→3)</td><td class="td-mono">10 − 4 − 6</td><td class="td-mono">0</td><td class="td-yes">YES</td></tr>
+        <tr><td class="td-mono">C (2→4)</td><td class="td-mono">19 − 4 − 5</td><td class="td-mono">10</td><td class="td-no">No</td></tr>
+        <tr><td class="td-mono">D (2→5)</td><td class="td-mono">17 − 4 − 8</td><td class="td-mono">5</td><td class="td-no">No</td></tr>
+        <tr class="td-crit"><td class="td-mono">E (3→6)</td><td class="td-mono">19 − 10 − 9</td><td class="td-mono">0</td><td class="td-yes">YES</td></tr>
+        <tr><td class="td-mono">F (3→7)</td><td class="td-mono">27 − 10 − 10</td><td class="td-mono">7</td><td class="td-no">No</td></tr>
+        <tr class="td-crit"><td class="td-mono">G (6→8)</td><td class="td-mono">25 − 19 − 6</td><td class="td-mono">0</td><td class="td-yes">YES</td></tr>
+        <tr><td class="td-mono">H (5→9)</td><td class="td-mono">25 − 12 − 8</td><td class="td-mono">5</td><td class="td-no">No</td></tr>
+        <tr><td class="td-mono">I (5→10)</td><td class="td-mono">27 − 12 − 3</td><td class="td-mono">12</td><td class="td-no">No</td></tr>
+        <tr class="td-crit"><td class="td-mono">J (11→12)</td><td class="td-mono">27 − 25 − 2</td><td class="td-mono">0</td><td class="td-yes">YES</td></tr>
+      </table>
+    </div>
+    <div class="path-badge"><span class="dot"></span>A</div>
+    <div class="path-badge"><span class="dot"></span>B</div>
+    <div class="path-badge"><span class="dot"></span>E</div>
+    <div class="path-badge"><span class="dot"></span>G</div>
+    <div class="path-badge"><span class="dot"></span>J</div>
+    <div class="answer" style="margin-top:12px;"><strong>Critical Path:</strong> A → B → E → G → J &nbsp; = &nbsp; 4+6+9+6+2 = <strong>27 days</strong></div>
+  </div>
+</div>
+
+<!-- ===== SECTION: FLOAT TYPES ===== -->
+<div class="sec" id="float">
+  <div class="sec-label">Float</div>
+  <div class="sec-title">Three types of float</div>
+  <div class="sec-sub">Exam Q1.3 (2024) asked for all three for non-critical activities.</div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title"><span class="tf">■</span> &nbsp;Total Float (TF)</div>
+      <div class="formula-mini" style="margin-bottom:12px;"><div class="fm-val">L(j) − E(i) − Duration</div></div>
+      <p style="font-size:14px;color:var(--text2);">How much an activity can be delayed without delaying the whole project. Uses Latest possible times.</p>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="ff">■</span> &nbsp;Free Float (FF)</div>
+      <div class="formula-mini" style="margin-bottom:12px;"><div class="fm-val">E(j) − E(i) − Duration</div></div>
+      <p style="font-size:14px;color:var(--text2);">How much an activity can be delayed without delaying the earliest start of its successor. Uses Earliest times.</p>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="iif">■</span> &nbsp;Independent Float (IF)</div>
+      <div class="formula-mini" style="margin-bottom:12px;"><div class="fm-val">max{0, E(j) − L(i) − Duration}</div></div>
+      <p style="font-size:14px;color:var(--text2);">Delay possible with no effect on anything — predecessors finish as late as possible, successors start as early as possible. Never goes negative (use 0).</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked: Float for C, F, I (2024 Exam Q1.3) <span class="mark mark-gold">10 marks</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Activity</th><th>Path</th><th>E(i)</th><th>L(i)</th><th>E(j)</th><th>L(j)</th><th>D</th><th class="ff">FF</th><th class="iif">IF</th><th class="tf">TF</th></tr>
+        <tr>
+          <td class="td-mono">C</td><td>2→4</td><td>4</td><td>4</td><td>9</td><td>19</td><td>5</td>
+          <td class="ff td-mono">9−4−5 = 0</td>
+          <td class="iif td-mono">max{0, 9−4−5} = 0</td>
+          <td class="tf td-mono">19−4−5 = 10</td>
+        </tr>
+        <tr>
+          <td class="td-mono">F</td><td>3→7</td><td>10</td><td>10</td><td>20</td><td>27</td><td>10</td>
+          <td class="ff td-mono">20−10−10 = 0</td>
+          <td class="iif td-mono">max{0, 20−10−10} = 0</td>
+          <td class="tf td-mono">27−10−10 = 7</td>
+        </tr>
+        <tr>
+          <td class="td-mono">I</td><td>5→10</td><td>12</td><td>17</td><td>15</td><td>27</td><td>3</td>
+          <td class="ff td-mono">15−12−3 = 0</td>
+          <td class="iif td-mono">max{0, 15−17−3} = 0</td>
+          <td class="tf td-mono">27−12−3 = 12</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tip">C, F, I all have FF = IF = 0 — their only flexibility comes from the total project buffer (TF). They cannot shift without affecting their successors' earliest start.</div>
+  </div>
+</div>
+
+<!-- ===== SECTION: GANTT & COST ===== -->
+<div class="sec" id="gantt">
+  <div class="sec-label">Gantt & Cost</div>
+  <div class="sec-title">Gantt chart & project cost</div>
+  <div class="sec-sub">Both exams include a Gantt + cost question worth 20 marks.</div>
+
+  <div class="card">
+    <div class="card-title">Cost formula <span class="mark mark-blue">Always 8 hrs/day</span></div>
+    <div class="formula-box">
+      <div class="label">Task cost</div>
+      <div class="formula-big">Cost = Duration × 8 hrs × Rate (R/hr) × No. of that resource</div>
+    </div>
+    <div class="tip">If two resources are on the same task, calculate each separately and add. The question always states 8 working hours per day.</div>
+  </div>
+
+  <details>
+    <summary>2024 Exam Q4 — Gantt & Cost (R30,000 total)</summary>
+    <div class="details-body">
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Task</th><th>Start</th><th>End</th><th>Resources</th><th>Calculation</th><th>Cost</th></tr>
+          <tr><td>A — Train team</td><td>1</td><td>10</td><td>Trainer (R50)</td><td>80h × R50</td><td class="td-gold">R4,000</td></tr>
+          <tr><td>B — Paperwork</td><td>11</td><td>15</td><td>Project Manager (R20)</td><td>40h × R20</td><td class="td-gold">R800</td></tr>
+          <tr><td>C — Modify package</td><td>16</td><td>20</td><td>Sol. Dom. Spec (R40) + App. Dom. Spec (R40)</td><td>40×R40 + 40×R40</td><td class="td-gold">R3,200</td></tr>
+          <tr><td>D — Manual flow</td><td>16</td><td>25</td><td>Project Manager (R20)</td><td>80h × R20</td><td class="td-gold">R1,600</td></tr>
+          <tr><td>E — In-house procedures</td><td>16</td><td>30</td><td>PM (R20) + Sol. Dom. Spec (R40)</td><td>120×R20 + 120×R40</td><td class="td-gold">R7,200</td></tr>
+          <tr><td>F — Test package</td><td>21</td><td>35</td><td>Tester (R30) + Sol. Dom. Spec (R40)</td><td>120×R30 + 120×R40</td><td class="td-gold">R8,400</td></tr>
+          <tr><td>G — Test manual</td><td>26</td><td>40</td><td>Tester (R30)</td><td>120h × R30</td><td class="td-gold">R3,600</td></tr>
+          <tr><td>H — Test in-house</td><td>31</td><td>35</td><td>Tester (R30)</td><td>40h × R30</td><td class="td-gold">R1,200</td></tr>
+          <tr><td colspan="5" style="text-align:right;color:var(--text2);">Grand Total</td><td class="td-gold" style="font-weight:500;">R30,000</td></tr>
+        </table>
+      </div>
+      <div class="answer"><strong>Project duration = 40 working days</strong> (Task G finishes last)</div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Test 1 Q2 — Gantt & Cost (R99,920 total)</summary>
+    <div class="details-body">
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Task</th><th>Start</th><th>End</th><th>Resources</th><th>Calculation</th><th>Cost</th></tr>
+          <tr><td>A</td><td>1</td><td>5</td><td>John (R100) + Musi (R100)</td><td>40×R100 + 40×R100</td><td class="td-gold">R8,000</td></tr>
+          <tr><td>B</td><td>6</td><td>11</td><td>Brian (R240)</td><td>48h × R240</td><td class="td-gold">R11,520</td></tr>
+          <tr><td>C</td><td>12</td><td>17</td><td>Brian (R240) + John (R100)</td><td>48×R240 + 48×R100</td><td class="td-gold">R16,320</td></tr>
+          <tr><td>D</td><td>12</td><td>19</td><td>Musi (R100)</td><td>64h × R100</td><td class="td-gold">R6,400</td></tr>
+          <tr><td>E</td><td>12</td><td>19</td><td>Avela (R230)</td><td>64h × R230</td><td class="td-gold">R14,720</td></tr>
+          <tr><td>F</td><td>18</td><td>26</td><td>John (R100)</td><td>72h × R100</td><td class="td-gold">R7,200</td></tr>
+          <tr><td>G</td><td>20</td><td>28</td><td>Avela (R230)</td><td>72h × R230</td><td class="td-gold">R16,560</td></tr>
+          <tr><td>H</td><td>20</td><td>29</td><td>Brian (R240)</td><td>80h × R240</td><td class="td-gold">R19,200</td></tr>
+          <tr><td colspan="5" style="text-align:right;color:var(--text2);">Grand Total</td><td class="td-gold" style="font-weight:500;">R99,920</td></tr>
+        </table>
+      </div>
+      <div class="answer"><strong>Project duration = 29 working days</strong> (Task H finishes last)</div>
+    </div>
+  </details>
+</div>
+
+<!-- ===== SECTION: THEORY ===== -->
+<div class="sec" id="theory">
+  <div class="sec-label">Management Theory</div>
+  <div class="sec-title">Theory answers</div>
+  <div class="sec-sub">Both papers include a 20-mark theory section. Definitions and applications.</div>
+
+  <details>
+    <summary>Project Management — Definition (2024 Exam Q3.1, 4 marks)</summary>
+    <div class="details-body">
+      <p><strong>Project Management</strong> is the application of knowledge, skills, tools and techniques to project activities in order to meet project requirements. (PMBOK Guide)</p>
+      <br>
+      <p>It is accomplished through the application and integration of five process groups: <strong>Initiating, Planning, Executing, Monitoring & Controlling, and Closing.</strong></p>
+      <br>
+      <p>Alternatively (functional view): PM is the process of guiding a project from beginning to end using management models — encompassing <strong>Planning, Organizing, Controlling, and Terminating.</strong></p>
+    </div>
+  </details>
+
+  <details>
+    <summary>The Iron Triangle — Triple Constraint (2024 Exam Q3.2, 4 marks)</summary>
+    <div class="details-body">
+      <p>The fundamental trade-off is known as the <strong>Triple Constraint</strong> or <strong>Iron Triangle</strong>. Every project is simultaneously constrained by:</p>
+      <br>
+      <p><strong>Scope</strong> — what work needs to be done; features and deliverables.</p>
+      <p><strong>Time</strong> — the schedule; when the project must be completed.</p>
+      <p><strong>Cost</strong> — the budget; how much money is available.</p>
+      <p><strong>Quality</strong> is often added as a fourth central constraint inside the triangle.</p>
+      <br>
+      <p>The trade-off: <em>changing any one constraint forces a change in at least one of the others.</em> For example, if you shorten the timeline you must either reduce scope OR increase cost.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Fayol's Principles — 4 for exam (2024 Q3.3, 12 marks)</summary>
+    <div class="details-body">
+      <p style="color:var(--text2);margin-bottom:16px;">Each principle = 3 marks: name + definition + application. Below are well-tested choices.</p>
+
+      <p><strong>1. Specialisation of Labour (Division of Work)</strong><br>
+      Specialising encourages continuous improvement in skills. In an ICT project: developers develop, testers test, PM plans — not everyone doing everything. Increases quality and speed.</p>
+      <div class="divider"></div>
+
+      <p><strong>4. Unity of Command</strong><br>
+      Each employee has one and only one boss. In project management this is violated in a <em>matrix organisation</em>, where a team member reports to both a department head and a project manager. Fayol considered this a major disadvantage of the matrix structure.</p>
+      <div class="divider"></div>
+
+      <p><strong>14. Esprit de Corps</strong><br>
+      Harmony and cohesion among personnel. Management should foster teamwork and mutual trust. Fayol warned against "divide and rule" strategies, which destroy team spirit.</p>
+      <div class="divider"></div>
+
+      <p><strong>Other valid choices:</strong> Authority (#2), Discipline (#3), Unity of Direction (#5), Remuneration (#7), Scalar Chain (#9), Equity (#11), Initiative (#13)</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Mintzberg's 10 Management Roles (Test 1 Q3.2, 10 marks)</summary>
+    <div class="details-body">
+      <p style="color:var(--text2);margin-bottom:16px;">Mintzberg identified 10 roles in 3 categories. He argued they are inseparable — the whole is greater than the sum of its parts.</p>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Category</th><th>Role</th><th>What the manager does</th></tr>
+          <tr><td rowspan="3" style="font-weight:500;color:var(--blue-light);">Interpersonal</td><td>Figurehead</td><td>Performs ceremonial duties as head of unit — attending functions, meeting dignitaries.</td></tr>
+          <tr><td>Leader</td><td>Responsible for the work of people in their unit. Motivates and guides. PMs often rely on influence, not formal authority.</td></tr>
+          <tr><td>Liaison</td><td>Makes contacts outside the vertical chain of command. Builds informal external information networks.</td></tr>
+          <tr><td rowspan="3" style="font-weight:500;color:var(--gold);">Informational</td><td>Monitor</td><td>Scans environment for information — including gossip, hearsay, and speculation ("soft information").</td></tr>
+          <tr><td>Disseminator</td><td>Shares information with team members. Managers who hoard information fail their teams.</td></tr>
+          <tr><td>Spokesperson</td><td>Passes information outside the unit — presenting project status to senior managers or clients.</td></tr>
+          <tr><td rowspan="4" style="font-weight:500;color:var(--teal);">Decisional</td><td>Entrepreneur</td><td>Initiates voluntary change — identifies opportunities and drives improvements.</td></tr>
+          <tr><td>Disturbance Handler</td><td>Responds to involuntary situations and crises — strikes, loss of key staff, failing vendor.</td></tr>
+          <tr><td>Resource Allocator</td><td>Decides who gets what — time, money, equipment, personnel. Determines project priorities.</td></tr>
+          <tr><td>Negotiator</td><td>Negotiates with parties inside and outside the organisation — contracts, deadlines, resources.</td></tr>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Three Fayol Principles (Test 1 Q3.1, 10 marks)</summary>
+    <div class="details-body">
+      <p style="color:var(--text2);margin-bottom:16px;">Same principle library as the 2024 exam — pick any three and give name, definition, and explanation.</p>
+      <p>See the full Fayol section above. Recommended picks for Test 1: <strong>Unity of Command, Specialisation of Labour, Esprit de Corps</strong> — these have the most exam-relevant ICT/PM applications and the cleanest explanations.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ===== CHEAT SHEET ===== -->
+<div class="sec" id="cheatsheet">
+  <div class="sec-label">Quick Reference</div>
+  <div class="sec-title">Exam cheat sheet</div>
+  <div class="sec-sub">Everything you need on one screen. Print or screenshot this section.</div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">PERT vs CPM</div>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th></th><th>CPM</th><th>PERT</th></tr>
+          <tr><td>Durations</td><td>1 estimate (certain)</td><td>3 estimates (uncertain)</td></tr>
+          <tr><td>Best for</td><td>Construction, repetitive</td><td>R&D, new projects</td></tr>
+          <tr><td>Probability</td><td>No</td><td>Yes — Z-score</td></tr>
+          <tr><td>Formula</td><td>Use duration directly</td><td>Te = (O+4M+P)/6</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Z-values to memorise</div>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Confidence %</th><th>Z value</th></tr>
+          <tr><td>50%</td><td class="td-mono">0.000</td></tr>
+          <tr><td>75%</td><td class="td-mono">0.674</td></tr>
+          <tr><td>80%</td><td class="td-mono">0.842</td></tr>
+          <tr><td>90%</td><td class="td-gold">1.280</td></tr>
+          <tr><td>95%</td><td class="td-gold">1.645</td></tr>
+          <tr><td>99%</td><td class="td-mono">2.326</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Common errors to avoid</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.9;">
+        ✗ &nbsp;Adding σ² from non-critical activities<br>
+        ✗ &nbsp;Using σ instead of σ² when summing<br>
+        ✗ &nbsp;Forgetting dummy activities in the network<br>
+        ✗ &nbsp;Taking min in forward pass (it's max)<br>
+        ✗ &nbsp;Taking max in backward pass (it's min)<br>
+        ✗ &nbsp;Saying TF = 0 activities are "not critical"<br>
+        ✗ &nbsp;Stating Te gives 100% probability
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-title">Dummy activity rules</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.9;">
+        Drawn as a dashed arrow (- - - →)<br>
+        Duration = 0 &nbsp;|&nbsp; Resources = 0<br><br>
+        You need one when:<br>
+        • Two activities share the same pair of nodes<br>
+        • A dependency exists but no real work is involved<br>
+        • Two activities merge into one successor
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">All formulas — one place</div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>What</th><th>Formula</th></tr>
+        <tr><td>PERT expected time</td><td class="td-gold td-mono">Te = (O + 4M + P) / 6</td></tr>
+        <tr><td>Variance (one activity)</td><td class="td-mono">σ² = ((P − O) / 6)²</td></tr>
+        <tr><td>Project variance (critical path sum)</td><td class="td-mono">σ²_proj = Σ σ²_i (critical only)</td></tr>
+        <tr><td>Project standard deviation</td><td class="td-mono">σ_proj = √σ²_proj</td></tr>
+        <tr><td>Z-score (find probability)</td><td class="td-gold td-mono">Z = (T_target − Te_proj) / σ_proj</td></tr>
+        <tr><td>Target date (find date for X% confidence)</td><td class="td-gold td-mono">T = Te_proj + Z × σ_proj</td></tr>
+        <tr><td>Forward pass</td><td class="td-mono">E(j) = max{ E(i) + Duration }</td></tr>
+        <tr><td>Backward pass</td><td class="td-mono">L(i) = min{ L(j) − Duration }</td></tr>
+        <tr><td>Total Float</td><td class="td-mono">TF = L(j) − E(i) − Duration</td></tr>
+        <tr><td>Free Float</td><td class="td-mono">FF = E(j) − E(i) − Duration</td></tr>
+        <tr><td>Independent Float</td><td class="td-mono">IF = max{ 0, E(j) − L(i) − Duration }</td></tr>
+        <tr><td>Task cost</td><td class="td-mono">Duration × 8 hrs × Rate (R/hr)</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<script>
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    document.querySelectorAll('.nav a').forEach(l => l.style.color = '');
+    link.style.color = 'var(--blue-light)';
+    link.style.borderBottomColor = 'var(--blue-light)';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+DROP TABLE IF EXISTS Sale;
+DROP TABLE IF EXISTS Agent;
+DROP TABLE IF EXISTS Property;
+DROP TABLE IF EXISTS Owner;
+
+CREATE TABLE IF NOT EXISTS [Agent] (
+	"agent_no" INTEGER NOT NULL UNIQUE,
+	"name" TEXT,
+	"homePhone" INTEGER,
+	"cellPhone"	INTEGER,
+	"email"	TEXT,
+	"annual_sales" REAL,
+	PRIMARY KEY("agent_no" AUTOINCREMENT)
+);
+
+CREATE TABLE IF NOT EXISTS [Owner] (
+	"owner_no" INTEGER UNIQUE,
+	"name" TEXT,
+	"homePhone" INTEGER,
+	"cellPhone" INTEGER,
+	"email"	TEXT,
+	PRIMARY KEY("owner_no" AUTOINCREMENT)
+);
+
+CREATE TABLE IF NOT EXISTS [Property] (
+	"property_no"	INTEGER,
+	"owner_no"	INTEGER,
+	"prop_address" TEXT,
+	"year_built" INTEGER,
+	"no_bedrooms" INTEGER,
+	"no_bathrooms" INTEGER,
+	"no_garages" INTEGER,
+	"date_listed" TEXT,
+	"asking_price" REAL,
+	"last_update" TEXT,
+	"status" TEXT,
+	FOREIGN KEY ("owner_no") REFERENCES Owner("owner_no")
+	PRIMARY KEY("property_no" AUTOINCREMENT)
+);
+
+CREATE TABLE IF NOT EXISTS [Sale] (
+	"property_no" INTEGER,
+	"owner_no" INTEGER,
+	"agent_no" INTEGER,
+	"sale_date"	TEXT,
+	"sale_price" REAL,
+	FOREIGN KEY("property_no") REFERENCES Property("property_no")
+	FOREIGN KEY("owner_no") REFERENCES Owner("owner_no")
+	FOREIGN KEY("agent_no") REFERENCES Agent("agent_no")
+	PRIMARY KEY("property_no","owner_no","agent_no")
+);
+
+INSERT INTO Agent (name, homePhone, cellPhone, email, annual_sales) 
+VALUES 
+("Jack", 0123456789, 0813335555, "jack@email.com", 150000.90),
+("Vicki", 0212624545, 0624517845, "vicki@email.com", 250000.70),
+("Jade", 0126963251, 0723334411, "jade@email.com", 625000.00),
+("Olivia", 0314235124, 0839596232, "olivia@email.com", 3500000.00),
+("Shai", 4017458124, 0714421245, "shai@email.com", 435000.10),
+("Nicole", 0112457895, 0865349251, "nicole@email.com", 264000.30),
+("Luke", 0605471235, 0794251236, "luke@email.com", 423000.69),
+("Lauren", 0124561233, 0812023404, "lauren@email.com", 865000.42),
+("Nigel", 0114995555, 0838824651, "nigel@email.com", 500000.36),
+("Dean", 3012457844, 0734568216, "dean@email.com", 480000.29);
+
+INSERT INTO Owner (name, homePhone, cellPhone, email) 
+VALUES 
+("Joe", 7894563215, 0821113366, "joe@email.com"),
+("Sasha", 5421541122, 0839995547, "sasha@email.com"),
+("Falon", 6632514251, 0721463344, "falon@email.com"),
+("Helana", 8754542151, 0798754875, "helena@email.com"),
+("Leonie", 4512368794, 0834147788, "leonie@email.com"),
+("Randal", 7412458754, 0634573333, "randal@email.com"),
+("Kim", 6521456254, 0724514875, "kim@email.com"),
+("Alric", 7451236985, 0745691111, "alric@email.com"),
+("Liezle", 1213657845, 0897418296, "liezle@email.com"),
+("Rueben", 6412368954, 0847842255, "rueben@email.com");
+
+INSERT INTO Property (
+	owner_no, 
+	prop_address, 
+	year_built, 
+	no_bedrooms, 
+	no_bathrooms,
+	no_garages,
+	date_listed,
+	asking_price,
+	last_update,
+	status)
+VALUES 
+(1, "16 Add Street", 2020, 10, 7, 9, "2020-10-15", 500.99, "2020-10-16", "Available"),
+(2, "17 Add Street", 2020, 10, 1, 7, "2020-09-15", 600, "2020-10-17", "Available"),
+(3, "18 Add Street", 2019, 10, 5, 12, "2019-08-15", 199.99, "2019-09-17", "Unavailable"),
+(4, "19 Add Street", 2019, 10, 6, 15, "2019-07-15", 299.99, "2019-09-14", "Available"),
+(5, "20 Add Street", 2018, 10, 9, 1, "2018-06-15", 419.99, "2018-08-14", "Unavailable"),
+(6, "21 Add Street", 2018, 10, 2, 9, "2018-05-15", 1299.99, "2018-07-12", "Unavailable"),
+(7, "22 Add Street", 2017, 10, 1, 4, "2017-04-15", 1699.99, "2018-07-13", "Available"),
+(8, "23 Add Street", 2017, 10, 12, 13, "2017-03-15", 1599.99, "2017-06-17", "Available"),
+(9, "24 Add Street", 2016, 10, 13, 14, "2016-02-15", 2999.99, "2017-06-16", "Unavailable"),
+(10, "25 Add Street", 2016, 10, 17, 15, "2016-01-15", 1499.99, "2016-05-16", "Unavailable");
+
+INSERT INTO Sale 
+VALUES 
+(2, 2, 2, "2020-10-01", 599.99),
+(3, 3, 3, "2020-09-02", 700),
+(4, 4, 4, "2020-08-03", 299.99),
+(5, 5, 5, "2020-07-04", 400),
+(6, 2, 3, "2020-06-05", 500),
+(7, 4, 2, "2020-05-06", 1500),
+(8, 5, 4, "2020-04-07", 1999.99),
+(9, 10, 8, "2020-03-08", 3000),
+(1, 6, 9, "2020-02-09", 3999.99),
+(2, 5, 3, "2021-01-10", 1700);
+
+UPDATE Sale 
+SET sale_price = 7000.50
+WHERE property_no = 2 AND owner_no = 5;
+
+DELETE FROM Property WHERE property_no = 10;

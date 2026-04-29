@@ -1,0 +1,69 @@
+<style type="text/css">
+    header h1 {
+      display: inline;
+      font-size: 45px;
+      font-family: arial;
+      vertical-align: 90%;
+      margin: 30px;
+    }
+    header {
+      background-color: #bbccdd;
+      padding-bottom: 0px;
+      height: 121px;
+    }
+    .navmenu {
+      float:left;
+      background-color: #bbccdd;
+      min-width: 8.8%;
+      height: 580px;
+      display: inline-block;
+    }
+    .navmenu hr {
+      border: 1px solid grey;
+    }
+    .navmenu ul {
+      margin-top: 0;
+      padding-left: 2px;
+      display: inline-block;
+    }
+    .navmenu li {
+      height: 35px;
+      padding-top: 32px;
+      padding-left: 32px;
+      padding-right: 30px;
+      font-family: arial;
+      color: grey;
+      display: inline-block;
+    }
+    .navmenu li a {
+      color: #888888;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navmenu a:link {
+      color: #888888;
+    }
+    .paragraph {
+      width: 90.2%;
+      margin-left: 10%;
+      border-top: 0;
+    }
+    </style>
+    <body style="max-width:900px; text-align:center;margin-left:auto ;margin-right:auto">
+     </style>
+
+     <style>
+ .Sbox {
+    max-width: 30%;
+    color: black; 
+    font-size: 10px;
+    padding 10px;
+    cursor: pointer;
+    border: 3px solid black;
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+ }
+
+</style>
+  

@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ADP470S — April 2025 Test 1 Tutor</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Epilogue:wght@400;500;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#07090f;--bg2:#0b0e18;--card:#0f1322;--card2:#131828;
+  --border:#1a2235;--border2:#243050;
+  --accent:#5b9bff;--green:#2dd4a0;--orange:#ffaa44;--red:#ff6060;--purple:#a07cff;--pink:#ff6eb4;
+  --text:#dde4f0;--muted:#5c6e8a;--dim:#253042;
+  --mono:'JetBrains Mono',monospace;--head:'Epilogue',sans-serif;--body:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(91,155,255,.022) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(91,155,255,.022) 1px,transparent 1px);
+  background-size:44px 44px;pointer-events:none;z-index:0}
+
+.wrap{position:relative;z-index:1;max-width:1020px;margin:0 auto;padding:0 22px}
+
+/* HEADER */
+header{border-bottom:1px solid var(--border);padding:15px 0;position:sticky;top:0;
+  background:rgba(7,9,15,.92);backdrop-filter:blur(20px);z-index:300}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hdr-left{display:flex;align-items:center;gap:10px}
+.badge{background:linear-gradient(135deg,var(--accent),var(--purple));color:#fff;
+  font-family:var(--mono);font-size:10px;font-weight:600;padding:3px 10px;border-radius:4px;letter-spacing:.06em}
+.hdr-title{font-family:var(--head);font-weight:700;font-size:14px}
+.score-wrap{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}
+#score-bar-bg{width:130px;height:3px;background:var(--dim);border-radius:4px;overflow:hidden}
+#score-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--green));transition:width .4s;border-radius:4px}
+#score-txt{font-family:var(--mono);font-size:11px;color:var(--green)}
+
+/* HERO */
+.hero{padding:52px 0 34px;text-align:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,96,96,.07);
+  border:1px solid rgba(255,96,96,.22);border-radius:100px;padding:5px 16px 5px 10px;
+  font-family:var(--mono);font-size:11px;color:var(--red);letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:22px}
+.hero-tag span{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:var(--head);font-size:clamp(1.8rem,4vw,3rem);font-weight:800;
+  letter-spacing:-.02em;line-height:1.1;margin-bottom:12px;
+  background:linear-gradient(135deg,#dde4f0 35%,var(--orange) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:var(--muted);max-width:520px;margin:0 auto 28px;font-weight:300;font-size:15px}
+.hero-meta{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.meta-pill{background:var(--card);border:1px solid var(--border);border-radius:100px;
+  padding:5px 16px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.meta-pill strong{color:var(--text)}
+
+/* SECTION GROUPS */
+.section-group{margin-bottom:12px}
+.group-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding:4px 0 10px;display:flex;align-items:center;gap:12px}
+.group-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* QUESTION CARD */
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+  margin-bottom:10px;overflow:hidden;scroll-margin-top:76px;
+  transition:border-color .2s}
+.q-card.open{border-color:var(--border2)}
+.q-header{padding:18px 22px;display:flex;align-items:flex-start;gap:14px;
+  cursor:pointer;transition:background .2s;user-select:none}
+.q-header:hover{background:rgba(255,255,255,.015)}
+.q-num{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;
+  align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:600;color:#fff}
+.q-meta{flex:1}
+.q-topic{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.q-text{font-size:14px;font-weight:500;color:var(--text);line-height:1.4}
+.q-info{display:flex;gap:10px;margin-top:5px;align-items:center;flex-wrap:wrap}
+.q-marks{font-family:var(--mono);font-size:11px;background:rgba(255,255,255,.05);
+  border:1px solid var(--border);padding:2px 8px;border-radius:4px;color:var(--muted)}
+.q-chevron{color:var(--muted);font-size:18px;transition:transform .3s;flex-shrink:0;margin-top:9px}
+.q-card.open .q-chevron{transform:rotate(180deg)}
+.q-body{display:none}
+.q-card.open .q-body{display:block}
+
+/* TABS */
+.tabs{display:flex;background:var(--bg2);border-bottom:1px solid var(--border);overflow-x:auto}
+.tab{padding:11px 18px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;
+  border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;margin-bottom:-1px}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-panel{display:none;padding:22px 24px}
+.tab-panel.active{display:block}
+
+/* CODE */
+pre{background:#050710;border:1px solid var(--border);border-radius:10px;
+  padding:16px 20px;font-family:var(--mono);font-size:12.5px;line-height:1.8;
+  overflow-x:auto;margin:10px 0}
+.kw{color:#a07cff}.fn{color:#5b9bff}.cm{color:#2a3d58;font-style:italic}
+.nm{color:#2dd4a0}.op{color:#ff6060}.ty{color:#ffaa44}
+
+/* PROSE */
+.explain{color:var(--muted);font-size:14px;line-height:1.8;font-weight:300}
+.explain strong{color:var(--text);font-weight:500}
+.explain h4{font-family:var(--head);font-size:15px;font-weight:700;color:var(--text);margin:18px 0 8px}
+.explain ul{padding-left:18px;margin:8px 0}.explain li{margin-bottom:6px}
+
+/* INSIGHT BOXES */
+.ins{border-radius:10px;padding:13px 17px;margin:12px 0;font-size:13.5px;line-height:1.7}
+.ins.blue{background:rgba(91,155,255,.07);border-left:3px solid var(--accent);color:var(--text)}
+.ins.green{background:rgba(45,212,160,.07);border-left:3px solid var(--green);color:var(--text)}
+.ins.orange{background:rgba(255,170,68,.07);border-left:3px solid var(--orange);color:var(--text)}
+.ins.red{background:rgba(255,96,96,.07);border-left:3px solid var(--red);color:var(--text)}
+.ins.purple{background:rgba(160,124,255,.07);border-left:3px solid var(--purple);color:var(--text)}
+.ins strong{font-weight:600}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:8px 13px;border-bottom:1px solid var(--border)}
+td{padding:9px 13px;border-bottom:1px solid rgba(26,34,53,.7);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(91,155,255,.02)}
+td:first-child{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.swap-row td{background:rgba(255,170,68,.05)}
+.swap-row td:first-child{color:var(--orange)}
+
+/* ARRAY VIZ */
+.arr{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0}
+.arr-label{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:4px;letter-spacing:.04em}
+.box{width:40px;height:40px;border:1px solid var(--border2);border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);background:var(--card2);flex-shrink:0}
+.box.sw{border-color:var(--orange);background:rgba(255,170,68,.1);color:var(--orange)}
+.box.pv{border-color:var(--purple);background:rgba(160,124,255,.1);color:var(--purple)}
+.box.ok{border-color:var(--green);background:rgba(45,212,160,.08);color:var(--green)}
+.box.hi{border-color:var(--accent);background:rgba(91,155,255,.1);color:var(--accent)}
+.box.heap{border-color:var(--pink);background:rgba(255,110,180,.1);color:var(--pink)}
+
+/* HEAP TREE */
+.tree{font-family:var(--mono);font-size:12px;line-height:1.9;color:var(--muted);
+  background:#050710;border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:10px 0}
+.tree .node{color:var(--text)}
+.tree .root{color:var(--pink)}
+.tree .swp{color:var(--orange)}
+
+/* QUIZ */
+.quiz-q{font-size:14px;font-weight:500;color:var(--text);margin-bottom:12px;line-height:1.5}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{background:var(--card2);border:1px solid var(--border);border-radius:9px;
+  padding:10px 15px;cursor:pointer;font-size:13.5px;color:var(--muted);
+  transition:all .2s;display:flex;align-items:center;gap:9px}
+.opt:hover{border-color:var(--border2);color:var(--text)}
+.opt.ok{background:rgba(45,212,160,.07);border-color:var(--green);color:var(--green)}
+.opt.no{background:rgba(255,96,96,.07);border-color:var(--red);color:var(--red)}
+.q-fb{margin-top:12px;padding:11px 15px;border-radius:8px;font-size:13px;display:none;line-height:1.6}
+.q-fb.show{display:block}
+.q-fb.ok{background:rgba(45,212,160,.07);border:1px solid rgba(45,212,160,.2);color:var(--green)}
+.q-fb.no{background:rgba(255,96,96,.07);border:1px solid rgba(255,96,96,.2);color:var(--red)}
+.q-nxt{margin-top:12px;background:rgba(91,155,255,.08);border:1px solid rgba(91,155,255,.22);
+  color:var(--accent);padding:8px 18px;border-radius:7px;cursor:pointer;font-size:13px;
+  font-weight:500;display:none;transition:all .2s}
+.q-nxt:hover{background:rgba(91,155,255,.16)}
+.q-nxt.show{display:inline-block}
+
+/* DONE BUTTON */
+.done-btn{background:transparent;border:1px solid var(--border);border-radius:7px;
+  color:var(--muted);padding:6px 14px;font-size:12px;cursor:pointer;
+  transition:all .2s;font-family:var(--mono)}
+.done-btn:hover{border-color:var(--green);color:var(--green)}
+.done-btn.marked{background:rgba(45,212,160,.07);border-color:var(--green);color:var(--green)}
+.q-footer{padding:12px 22px;border-top:1px solid var(--border);display:flex;justify-content:flex-end}
+
+/* STACK FRAME VIZ */
+.stack{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin:14px 0}
+.frame{border-radius:8px;padding:9px 16px;font-family:var(--mono);font-size:12px;transition:all .2s}
+
+footer{border-top:1px solid var(--border);padding:26px 0;text-align:center;
+  font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;margin-top:32px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.q-card{animation:fadeUp .4s ease both}
+
+@media(max-width:600px){
+  .hero-meta{gap:8px}
+  .tabs{overflow-x:auto}
+  .arr{gap:3px}.box{width:34px;height:34px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<div class="hdr">
+  <div class="hdr-left">
+    <span class="badge">ADP470S</span>
+    <span class="hdr-title">Test 1 — 3 April 2025</span>
+  </div>
+  <div class="score-wrap">
+    <span>Completed</span>
+    <div id="score-bar-bg"><div id="score-bar"></div></div>
+    <span id="score-txt">0 / 10</span>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="wrap">
+  <div class="hero-tag"><span></span>Past Paper · 75 Marks · Interactive Tutor</div>
+  <h1>April 2025 Test 1</h1>
+  <p class="hero-sub">Every question from the actual paper — taught, traced, and tested. Master this and you're ready.</p>
+  <div class="hero-meta">
+    <div class="meta-pill">📅 <strong>3 April 2025</strong></div>
+    <div class="meta-pill">📊 <strong>75 marks total</strong></div>
+    <div class="meta-pill">⏱ <strong>Section 1: Big O · Section 2: Recursion · Section 3: Sorting</strong></div>
+  </div>
+</div>
+</section>
+
+<div class="wrap">
+
+<!-- ══════════════════════════════════ -->
+<!-- SECTION 1 — BIG O                 -->
+<!-- ══════════════════════════════════ -->
+<div class="section-group">
+<div class="group-label" style="color:var(--accent)">Section 1 — Big O Analysis &nbsp;·&nbsp; 9 marks</div>
+
+<!-- Q1.1 -->
+<div class="q-card" id="q11" style="animation-delay:.05s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#5b9bff,#a07cff)">1.1</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--accent)">Big O — Sequential Loops</div>
+    <div class="q-text">Determine the Big O expression for this code excerpt</div>
+    <div class="q-info"><span class="q-marks">[3 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e11')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a11')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z11')">🧠 Quiz</div>
+</div>
+<div id="e11" class="tab-panel active">
+<pre><span class="ty">int</span> <span class="nm">sum</span> = <span class="op">0</span>;
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="op">0</span>; i &lt; n; i++) {   <span class="cm">// Loop A</span>
+    sum = sum + a[i];
+}
+<span class="kw">for</span> (<span class="ty">int</span> j = <span class="op">0</span>; j &lt; n; j++) {   <span class="cm">// Loop B</span>
+    sum = sum + a[j];
+}</pre>
+  <div class="explain">
+    <h4>Key rule: Sequential (not nested) loops ADD their complexities</h4>
+    <ul>
+      <li>Loop A runs <strong>n times</strong> → O(n)</li>
+      <li>Loop B runs <strong>n times</strong> → O(n)</li>
+      <li>Total = O(n) + O(n) = O(2n)</li>
+      <li>Drop the constant 2 → <strong>O(n)</strong></li>
+    </ul>
+  </div>
+  <div class="ins blue"><strong>Why drop constants?</strong> Big O describes growth rate as n → ∞. Whether you do 2n or 100n operations, the shape of the curve is the same — linear. So we simplify to O(n).</div>
+</div>
+<div id="a11" class="tab-panel">
+  <div class="ins green"><strong>Answer: O(n)</strong><br>Two sequential loops each O(n) → O(n) + O(n) = O(2n) → drop constant → <strong>O(n)</strong>. Time: O(n). Space: O(1) — only variables sum, i, j.</div>
+  <div class="explain"><h4>For 3 marks write:</h4>
+  "Loop A iterates n times [1 mark]. Loop B independently iterates n times [1 mark]. Combined: O(n) + O(n) = O(2n) = O(n) after dropping the constant [1 mark]."</div>
+</div>
+<div id="z11" class="tab-panel">
+  <div class="quiz-q">What is the Big O of two separate (non-nested) loops each running n times?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n²) — because there are two loops</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> O(n) — they add, giving O(2n), and constants are dropped</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(2) — two loops, constant time</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(log n)</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,0)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q1.2 -->
+<div class="q-card" id="q12" style="animation-delay:.08s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#2dd4a0,#5b9bff)">1.2</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--green)">Big O — Nested Loop (logarithmic inner)</div>
+    <div class="q-text">Determine the Big O expression for this code excerpt</div>
+    <div class="q-info"><span class="q-marks">[3 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e12')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a12')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z12')">🧠 Quiz</div>
+</div>
+<div id="e12" class="tab-panel active">
+<pre><span class="ty">int</span> <span class="nm">prod</span> = <span class="op">1</span>;
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="op">1</span>; i &lt; n; i++) {          <span class="cm">// Outer: i=1,2,3... → runs n times → O(n)</span>
+    <span class="kw">for</span> (<span class="ty">int</span> j = <span class="op">1</span>; j &lt; n; j = j * <span class="op">3</span>) { <span class="cm">// Inner: j=1,3,9,27... → runs log₃(n) times</span>
+        prod = prod * j;
+    }
+}</pre>
+  <div class="explain">
+    <h4>The critical insight: j = j * 3</h4>
+    When a loop variable <strong>multiplies</strong> each iteration, it grows exponentially — so it reaches n in far fewer steps.
+    <ul>
+      <li>j = 1, 3, 9, 27, 81... After k steps, j = 3^k</li>
+      <li>Loop ends when 3^k ≥ n → k = log₃(n)</li>
+      <li>Inner loop = <strong>O(log n)</strong></li>
+      <li>Outer loop = <strong>O(n)</strong></li>
+    </ul>
+  </div>
+  <div class="ins blue"><strong>Nested loops MULTIPLY:</strong> O(n) × O(log n) = <strong>O(n log n)</strong></div>
+  <table>
+    <thead><tr><th>Loop</th><th>Variable</th><th>Step</th><th>Complexity</th></tr></thead>
+    <tbody>
+      <tr><td>Outer</td><td>i++</td><td>+1 each time</td><td style="color:var(--accent)">O(n)</td></tr>
+      <tr><td>Inner</td><td>j*=3</td><td>×3 each time</td><td style="color:var(--green)">O(log n)</td></tr>
+      <tr><td>Combined</td><td>—</td><td>Nested</td><td style="color:var(--orange)">O(n log n)</td></tr>
+    </tbody>
+  </table>
+</div>
+<div id="a12" class="tab-panel">
+  <div class="ins green"><strong>Answer: O(n log n)</strong><br>Outer loop: O(n). Inner loop j = j*3 means j grows as powers of 3 → runs log₃(n) times → O(log n). Nested = O(n) × O(log n) = <strong>O(n log n)</strong>.</div>
+</div>
+<div id="z12" class="tab-panel">
+  <div class="quiz-q">A loop runs with j = j * 3 starting at j=1. How many iterations until j ≥ n?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> n iterations</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> log₃(n) iterations — because 3^k = n when k = log₃(n)</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> n/3 iterations</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> n² iterations</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,1)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q1.3 -->
+<div class="q-card" id="q13" style="animation-delay:.11s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#ffaa44,#ff6060)">1.3</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--orange)">Big O — Nested Loop (step-3 outer)</div>
+    <div class="q-text">Determine the Big O expression for this code excerpt</div>
+    <div class="q-info"><span class="q-marks">[3 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e13')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a13')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z13')">🧠 Quiz</div>
+</div>
+<div id="e13" class="tab-panel active">
+<pre><span class="ty">int</span> <span class="nm">sum</span> = <span class="op">0</span>;
+<span class="kw">for</span> (i=<span class="op">0</span>; i&lt;=n-<span class="op">1</span>; i+=<span class="op">3</span>) {    <span class="cm">// i=0,3,6,9... → runs n/3 times</span>
+    <span class="kw">for</span> (j=n-<span class="op">1</span>; j&gt;<span class="op">0</span>; j--) {     <span class="cm">// j starts at n-1, decrements to 1 → n-1 times ≈ n</span>
+        sum = sum + (i * j);
+    }
+}</pre>
+  <div class="explain">
+    <h4>Outer loop: i += 3 (not i++)</h4>
+    i goes: 0, 3, 6, 9 ... n-1. That's n/3 iterations. But <strong>n/3 = O(n)</strong> because constants are dropped.
+    <h4>Inner loop: j-- (counts down from n)</h4>
+    j goes from n-1 down to 1 → that's n-1 ≈ <strong>n iterations → O(n)</strong>
+    <h4>Nested = multiply</h4>
+    O(n/3) × O(n) = O(n²/3) → drop constant 1/3 → <strong>O(n²)</strong>
+  </div>
+  <div class="ins orange"><strong>Exam trap:</strong> Students write O(n/3 × n) = O(n²/3). That's correct calculation but the final answer must drop the constant → <strong>O(n²)</strong></div>
+</div>
+<div id="a13" class="tab-panel">
+  <div class="ins green"><strong>Answer: O(n²)</strong><br>Outer: i+=3 → n/3 iterations = O(n). Inner: j-- from n-1 to 0 → O(n). Nested: O(n) × O(n) = <strong>O(n²)</strong>.</div>
+</div>
+<div id="z13" class="tab-panel">
+  <div class="quiz-q">If outer loop does n/3 iterations and inner loop does n iterations (nested), what is the Big O?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n/3) — because the outer is divided by 3</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n log n)</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> O(n²) — n/3 × n = n²/3, drop the constant</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(3n²)</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,2)">Mark done ✓</button></div>
+</div>
+</div>
+</div><!-- /section 1 -->
+
+<!-- ══════════════════════════════════ -->
+<!-- SECTION 2 — RECURSION             -->
+<!-- ══════════════════════════════════ -->
+<div class="section-group">
+<div class="group-label" style="color:var(--purple)">Section 2 — Recursion &nbsp;·&nbsp; 15 marks</div>
+
+<!-- Q2.1 -->
+<div class="q-card" id="q21" style="animation-delay:.14s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#a07cff,#5b9bff)">2.1</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--purple)">Recursion — Stack Frames · Execution Demo</div>
+    <div class="q-text">Demonstrate how recursive factorial executes. Report time & space complexity in Big O.</div>
+    <div class="q-info"><span class="q-marks">[9 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e21')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a21')">✅ Full Answer</div>
+  <div class="tab" onclick="stab(this,'z21')">🧠 Quiz</div>
+</div>
+<div id="e21" class="tab-panel active">
+  <div class="explain">
+    <h4>The recursive factorial formula</h4>
+    factorial(n) = 1 &nbsp;&nbsp; if n = 0 or n = 1<br>
+    factorial(n) = n × factorial(n-1) &nbsp;&nbsp; if n &gt; 1
+    <h4>What happens when you call factorial(5)?</h4>
+    Each call suspends, creates a <strong>stack frame</strong> in memory, and waits for the next call to return. The stack grows until the base case, then unwinds.
+  </div>
+  <div class="ins blue"><strong>Stack frame =</strong> a block of memory that holds the method's local variables (n) and where to return when done. Like a bookmark inside a book — you pause here and go deeper.</div>
+  <div class="explain"><h4>Phase 1: Winding down (building the stack)</h4></div>
+  <div class="stack">
+    <div class="frame" style="background:rgba(91,155,255,.06);border:1px solid rgba(91,155,255,.2);width:320px;margin-left:0">
+      <span style="color:var(--accent)">factorial(5)</span> — n=5, calls factorial(4), <em>waits</em>
+    </div>
+    <div class="frame" style="background:rgba(160,124,255,.06);border:1px solid rgba(160,124,255,.2);width:300px;margin-left:12px">
+      <span style="color:var(--purple)">factorial(4)</span> — n=4, calls factorial(3), <em>waits</em>
+    </div>
+    <div class="frame" style="background:rgba(45,212,160,.06);border:1px solid rgba(45,212,160,.2);width:280px;margin-left:24px">
+      <span style="color:var(--green)">factorial(3)</span> — n=3, calls factorial(2), <em>waits</em>
+    </div>
+    <div class="frame" style="background:rgba(255,170,68,.06);border:1px solid rgba(255,170,68,.2);width:260px;margin-left:36px">
+      <span style="color:var(--orange)">factorial(2)</span> — n=2, calls factorial(1), <em>waits</em>
+    </div>
+    <div class="frame" style="background:rgba(255,96,96,.08);border:1px solid rgba(255,96,96,.3);width:240px;margin-left:48px">
+      <span style="color:var(--red)">factorial(1)</span> — n=1, <strong>BASE CASE — returns 1 ✓</strong>
+    </div>
+    <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px;margin-left:4px">↑ All 5 frames in memory simultaneously = O(n) space</div>
+  </div>
+  <div class="explain"><h4>Phase 2: Unwinding (returning values)</h4></div>
+  <table>
+    <thead><tr><th>Frame returns</th><th>Returns value</th><th>Running product</th></tr></thead>
+    <tbody>
+      <tr><td>factorial(1)</td><td>1</td><td>1</td></tr>
+      <tr><td>factorial(2)</td><td>2 × 1 = 2</td><td>2</td></tr>
+      <tr><td>factorial(3)</td><td>3 × 2 = 6</td><td>6</td></tr>
+      <tr><td>factorial(4)</td><td>4 × 6 = 24</td><td>24</td></tr>
+      <tr><td style="color:var(--green)">factorial(5)</td><td style="color:var(--green)">5 × 24 = 120</td><td style="color:var(--green)">120 ✓</td></tr>
+    </tbody>
+  </table>
+</div>
+<div id="a21" class="tab-panel">
+<pre><span class="cm">/**
+ * Time:  O(n)  — makes exactly n recursive calls
+ * Space: O(n)  — n stack frames live in memory simultaneously
+ */</span>
+<span class="kw">public static int</span> <span class="fn">factorial</span>(<span class="ty">int</span> n) {
+    <span class="kw">if</span> (n == <span class="op">0</span> || n == <span class="op">1</span>) <span class="kw">return</span> <span class="op">1</span>;   <span class="cm">// base case</span>
+    <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="op">1</span>);          <span class="cm">// recursive case</span>
+}</pre>
+  <div class="ins green"><strong>Time Complexity O(n):</strong> factorial(n) makes exactly n recursive calls — factorial(n), factorial(n-1), ... factorial(1). Each call does exactly 1 multiplication. Total operations = n → O(n).</div>
+  <div class="ins orange"><strong>Space Complexity O(n):</strong> Each call pushes a new stack frame onto the call stack. At peak depth, all n frames exist simultaneously. Stack frame holds: local variable n, return address. Total memory used grows with n → O(n). This is the hidden cost of recursion.</div>
+  <div class="ins red"><strong>Risk:</strong> For large n (e.g. 10,000), the call stack overflows → StackOverflowError. Iterative factorial has O(1) space and no overflow risk.</div>
+</div>
+<div id="z21" class="tab-panel">
+  <div class="quiz-q">For factorial(5), how many stack frames are held in memory at peak (before any return)?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> 1 — only the current frame</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> 4 — n-1 frames</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> 5 — frames for factorial(5) down to factorial(1) all waiting simultaneously</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> 25 — n² frames</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,3)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q2.2 -->
+<div class="q-card" id="q22" style="animation-delay:.17s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#ff6eb4,#a07cff)">2.2</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--pink)">Recursion vs Iteration — Comparison</div>
+    <div class="q-text">Report on the space complexity and time complexity of factorial in Big O notation.</div>
+    <div class="q-info"><span class="q-marks">[6 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e22')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a22')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z22')">🧠 Quiz</div>
+</div>
+<div id="e22" class="tab-panel active">
+  <div class="explain">
+    <h4>This question is worth 6 marks — it wants BOTH methods compared</h4>
+    You need to address: recursive factorial AND iterative factorial, each with time AND space. That's 4 facts = 4 marks + 2 for justification.
+  </div>
+  <table>
+    <thead><tr><th>Version</th><th>Time</th><th>Space</th><th>Why?</th></tr></thead>
+    <tbody>
+      <tr><td>Recursive</td><td style="color:var(--accent)">O(n)</td><td style="color:var(--red)">O(n)</td><td>n calls, n stack frames</td></tr>
+      <tr><td>Iterative</td><td style="color:var(--accent)">O(n)</td><td style="color:var(--green)">O(1)</td><td>n iterations, only 2 vars</td></tr>
+    </tbody>
+  </table>
+  <div class="ins blue"><strong>Same time, different space.</strong> Both do n multiplications. But iterative only ever uses variables <code>prod</code> and <code>i</code> — fixed regardless of n. Recursive creates a new frame for every n.</div>
+</div>
+<div id="a22" class="tab-panel">
+  <div class="ins green">
+    <strong>Recursive Factorial:</strong><br>
+    Time O(n) — n recursive calls, each performing one multiplication.<br>
+    Space O(n) — n stack frames held simultaneously at peak recursion depth.<br><br>
+    <strong>Iterative Factorial:</strong><br>
+    Time O(n) — loop runs n times, one multiplication per iteration.<br>
+    Space O(1) — only variables prod and i regardless of n; no call stack growth.<br><br>
+    <strong>Conclusion:</strong> Iterative is preferred where memory is constrained. Both are equivalent in time performance.
+  </div>
+</div>
+<div id="z22" class="tab-panel">
+  <div class="quiz-q">Recursive factorial is O(n) time. What is its space complexity and why?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(1) — because n is just one integer</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> O(n) — each recursive call creates a stack frame; n frames exist simultaneously</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n²) — nested call overhead</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(log n) — stack shrinks by half each time</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,4)">Mark done ✓</button></div>
+</div>
+</div>
+</div><!-- /section 2 -->
+
+<!-- ══════════════════════════════════ -->
+<!-- SECTION 3 — SORTING               -->
+<!-- ══════════════════════════════════ -->
+<div class="section-group">
+<div class="group-label" style="color:var(--orange)">Section 3 — Sorting Algorithms &nbsp;·&nbsp; 51 marks</div>
+
+<!-- Q3.1 BUBBLE SORT TRACE -->
+<div class="q-card" id="q31" style="animation-delay:.2s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#ffaa44,#ff6060)">3.1</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--orange)">Bubble Sort — Trace</div>
+    <div class="q-text">Show how Bubble Sort modifies {90, 23, 5, 109, 12} as it executes.</div>
+    <div class="q-info"><span class="q-marks">[12 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e31')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a31')">✅ Full Trace</div>
+  <div class="tab" onclick="stab(this,'z31')">🧠 Quiz</div>
+</div>
+<div id="e31" class="tab-panel active">
+  <div class="explain">
+    <h4>Bubble Sort mechanism</h4>
+    Compare adjacent pairs. If left &gt; right, swap. Repeat for each pass. After each pass, the largest unsorted element "bubbles" to its final position.
+    <ul>
+      <li>Pass 1 → largest element is in correct position</li>
+      <li>Pass 2 → second largest is in correct position</li>
+      <li>Continue until sorted</li>
+    </ul>
+  </div>
+  <div class="ins blue"><strong>For 12 marks:</strong> Show at least 2 full passes. Label each comparison. Mark swaps clearly. Show the sorted portion building up at the right end after each pass.</div>
+</div>
+<div id="a31" class="tab-panel">
+  <div class="explain"><h4>Array: {90, 23, 5, 109, 12}</h4></div>
+  <div class="arr-label">INITIAL</div>
+  <div class="arr"><div class="box">90</div><div class="box">23</div><div class="box">5</div><div class="box">109</div><div class="box">12</div></div>
+
+  <div class="explain" style="margin-top:16px"><strong>PASS 1 — compare all adjacent pairs:</strong></div>
+  <table>
+    <thead><tr><th>Step</th><th>Compare</th><th>Action</th><th>Array</th></tr></thead>
+    <tbody>
+      <tr class="swap-row"><td>1.1</td><td>90 vs 23</td><td>SWAP (90&gt;23)</td><td>{23, 90, 5, 109, 12}</td></tr>
+      <tr class="swap-row"><td>1.2</td><td>90 vs 5</td><td>SWAP (90&gt;5)</td><td>{23, 5, 90, 109, 12}</td></tr>
+      <tr><td>1.3</td><td>90 vs 109</td><td style="color:var(--green)">no swap</td><td>{23, 5, 90, 109, 12}</td></tr>
+      <tr class="swap-row"><td>1.4</td><td>109 vs 12</td><td>SWAP (109&gt;12)</td><td>{23, 5, 90, 12, 109}</td></tr>
+    </tbody>
+  </table>
+  <div class="arr-label" style="margin-top:8px">After Pass 1 — 109 final ✓</div>
+  <div class="arr"><div class="box">23</div><div class="box">5</div><div class="box">90</div><div class="box">12</div><div class="box ok">109</div></div>
+
+  <div class="explain" style="margin-top:14px"><strong>PASS 2:</strong></div>
+  <table>
+    <thead><tr><th>Step</th><th>Compare</th><th>Action</th><th>Array</th></tr></thead>
+    <tbody>
+      <tr class="swap-row"><td>2.1</td><td>23 vs 5</td><td>SWAP (23&gt;5)</td><td>{5, 23, 90, 12, 109}</td></tr>
+      <tr><td>2.2</td><td>23 vs 90</td><td style="color:var(--green)">no swap</td><td>{5, 23, 90, 12, 109}</td></tr>
+      <tr class="swap-row"><td>2.3</td><td>90 vs 12</td><td>SWAP (90&gt;12)</td><td>{5, 23, 12, 90, 109}</td></tr>
+    </tbody>
+  </table>
+  <div class="arr-label" style="margin-top:8px">After Pass 2 — 90, 109 final ✓</div>
+  <div class="arr"><div class="box">5</div><div class="box">23</div><div class="box">12</div><div class="box ok">90</div><div class="box ok">109</div></div>
+
+  <div class="explain" style="margin-top:14px"><strong>PASS 3:</strong></div>
+  <table>
+    <thead><tr><th>Step</th><th>Compare</th><th>Action</th><th>Array</th></tr></thead>
+    <tbody>
+      <tr><td>3.1</td><td>5 vs 23</td><td style="color:var(--green)">no swap</td><td>{5, 23, 12, 90, 109}</td></tr>
+      <tr class="swap-row"><td>3.2</td><td>23 vs 12</td><td>SWAP (23&gt;12)</td><td>{5, 12, 23, 90, 109}</td></tr>
+    </tbody>
+  </table>
+  <div class="arr-label" style="margin-top:8px">After Pass 3 — SORTED ✓</div>
+  <div class="arr"><div class="box ok">5</div><div class="box ok">12</div><div class="box ok">23</div><div class="box ok">90</div><div class="box ok">109</div></div>
+  <div class="ins green" style="margin-top:12px"><strong>Final: {5, 12, 23, 90, 109}</strong></div>
+</div>
+<div id="z31" class="tab-panel">
+  <div class="quiz-q">After Pass 1 of Bubble Sort on any array, what is guaranteed?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> The array is fully sorted</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> The largest element has moved to its correct final position</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> The smallest element is at index 0</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> Exactly n/2 swaps occurred</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,5)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q3.2 BUBBLE SORT BIG O -->
+<div class="q-card" id="q32" style="animation-delay:.23s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#ffaa44,#2dd4a0)">3.2</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--orange)">Bubble Sort — Big O</div>
+    <div class="q-text">Show and explain the Big O expression for Bubble Sort.</div>
+    <div class="q-info"><span class="q-marks">[5 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e32')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a32')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z32')">🧠 Quiz</div>
+</div>
+<div id="e32" class="tab-panel active">
+  <div class="explain">
+    <h4>Count the steps</h4>
+    Bubble sort has two nested loops. Outer runs n-1 passes. Inner runs n-1 comparisons per pass.<br>
+    Total comparisons = (n-1) × (n-1) = n² - 2n + 1
+    <h4>Simplify with Big O rules</h4>
+    Drop lower-order terms: n² - 2n + 1 → drop 2n and 1 → <strong>n²</strong> → <strong>O(n²)</strong>
+  </div>
+  <table>
+    <thead><tr><th>Case</th><th>When?</th><th>Complexity</th></tr></thead>
+    <tbody>
+      <tr><td style="color:var(--green)">Best</td><td>Already sorted (optimised version)</td><td style="color:var(--green)">O(n)</td></tr>
+      <tr><td style="color:var(--accent)">Average</td><td>Random input</td><td style="color:var(--accent)">O(n²)</td></tr>
+      <tr><td style="color:var(--red)">Worst</td><td>Reverse sorted</td><td style="color:var(--red)">O(n²)</td></tr>
+    </tbody>
+  </table>
+  <div class="ins blue">Space complexity: <strong>O(1)</strong> — only a temp variable for swapping. No extra array needed.</div>
+</div>
+<div id="a32" class="tab-panel">
+  <div class="ins green"><strong>Time: O(n²)</strong> — Two nested loops each running n-1 times. Total steps = (n-1)² = n²-2n+1 → O(n²) after dropping lower-order terms.<br><br><strong>Space: O(1)</strong> — Only 3 variables (i, j, temp). Fixed regardless of n.<br><br><strong>Best case O(n)</strong> possible with optimised version that stops early if no swaps in a pass.</div>
+</div>
+<div id="z32" class="tab-panel">
+  <div class="quiz-q">What is the space complexity of Bubble Sort and why?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n) — needs a copy of the array</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> O(1) — sorts in-place using only a temp variable, no extra memory proportional to n</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n²) — matches time complexity</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(log n)</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,6)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q3.3 QUICK SORT TRACE -->
+<div class="q-card" id="q33" style="animation-delay:.26s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#2dd4a0,#5b9bff)">3.3</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--green)">Quick Sort — Trace</div>
+    <div class="q-text">Show how Quick Sort modifies {90, 23, 5, 109, 12}. (Use first element as pivot — standard.)</div>
+    <div class="q-info"><span class="q-marks">[12 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e33')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a33')">✅ Full Trace</div>
+  <div class="tab" onclick="stab(this,'z33')">🧠 Quiz</div>
+</div>
+<div id="e33" class="tab-panel active">
+  <div class="explain">
+    <h4>Quick Sort — Divide and Conquer</h4>
+    <ul>
+      <li><strong>Step 1:</strong> Choose a pivot (usually first, last, or middle element)</li>
+      <li><strong>Step 2:</strong> Partition — move all elements &lt; pivot to its left, all &gt; pivot to its right</li>
+      <li><strong>Step 3:</strong> Pivot is now in its <em>final position</em> — never moves again</li>
+      <li><strong>Step 4:</strong> Recursively sort left sub-array and right sub-array</li>
+    </ul>
+  </div>
+  <div class="ins blue"><strong>Key insight:</strong> After partitioning, the pivot is in its exact correct sorted position. Quick Sort is efficient because each partition reduces the problem size.</div>
+  <div class="ins orange"><strong>Note on this paper:</strong> The question doesn't specify pivot choice. Using first element as pivot is the most common default. If your lecturer taught a different method, use that — show your method clearly and you get the marks.</div>
+</div>
+<div id="a33" class="tab-panel">
+  <div class="explain"><h4>Array: {90, 23, 5, 109, 12} — Pivot = first element</h4></div>
+
+  <div class="arr-label">INITIAL — pivot = 90</div>
+  <div class="arr"><div class="box pv">90</div><div class="box">23</div><div class="box">5</div><div class="box">109</div><div class="box">12</div></div>
+
+  <div class="ins orange" style="margin-top:12px">
+    <strong>Partition around 90:</strong><br>
+    Elements &lt; 90: {23, 5, 12}<br>
+    Pivot: <span style="color:var(--purple)">90</span> ← placed in final position<br>
+    Elements &gt; 90: {109}
+  </div>
+  <div class="arr-label">After first partition</div>
+  <div class="arr"><div class="box hi">23</div><div class="box hi">5</div><div class="box hi">12</div><div class="box pv">90</div><div class="box ok">109</div></div>
+
+  <div class="explain" style="margin-top:14px"><strong>Recurse LEFT sub-array {23, 5, 12} — pivot = 23:</strong></div>
+  <div class="ins orange">
+    Elements &lt; 23: {5, 12}<br>
+    Pivot: <span style="color:var(--purple)">23</span> ← final position ✓<br>
+    Elements &gt; 23: {} (none)
+  </div>
+  <div class="arr-label">After second partition</div>
+  <div class="arr"><div class="box hi">5</div><div class="box hi">12</div><div class="box pv">23</div><div class="box ok">90</div><div class="box ok">109</div></div>
+
+  <div class="explain" style="margin-top:14px"><strong>Recurse LEFT sub-array {5, 12} — pivot = 5:</strong></div>
+  <div class="ins orange">
+    Elements &lt; 5: {} (none)<br>
+    Pivot: <span style="color:var(--purple)">5</span> ← final position ✓<br>
+    Elements &gt; 5: {12} ← single element, already sorted ✓
+  </div>
+  <div class="arr-label">FINAL — fully sorted ✓</div>
+  <div class="arr"><div class="box ok">5</div><div class="box ok">12</div><div class="box ok">23</div><div class="box ok">90</div><div class="box ok">109</div></div>
+  <div class="ins green" style="margin-top:12px"><strong>Final: {5, 12, 23, 90, 109}</strong></div>
+  <div class="ins red"><strong>Notice:</strong> On this input, Quick Sort with first-element pivot has poor partitioning because 90 &gt; most elements. In the worst case (sorted array + first pivot), it degrades to O(n²).</div>
+</div>
+<div id="z33" class="tab-panel">
+  <div class="quiz-q">After partitioning around pivot 90 in {90, 23, 5, 109, 12}, what is guaranteed about 90?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> 90 needs to be sorted further</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> 90 is in its exact final sorted position and will never move again</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> 90 moves to index 0</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> All elements less than 90 have been sorted among themselves</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,7)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q3.4 QUICK SORT BIG O -->
+<div class="q-card" id="q34" style="animation-delay:.29s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#2dd4a0,#ffaa44)">3.4</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--green)">Quick Sort — Big O</div>
+    <div class="q-text">Show and explain the Big O expression for Quick Sort.</div>
+    <div class="q-info"><span class="q-marks">[5 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e34')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a34')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z34')">🧠 Quiz</div>
+</div>
+<div id="e34" class="tab-panel active">
+  <table>
+    <thead><tr><th>Case</th><th>When?</th><th>Time</th><th>Why?</th></tr></thead>
+    <tbody>
+      <tr><td style="color:var(--green)">Best</td><td>Pivot always splits in half</td><td style="color:var(--green)">O(n log n)</td><td>log n levels × n work per level</td></tr>
+      <tr><td style="color:var(--accent)">Average</td><td>Random input</td><td style="color:var(--accent)">O(n log n)</td><td>Expected balanced partitions</td></tr>
+      <tr><td style="color:var(--red)">Worst</td><td>Pivot always min or max</td><td style="color:var(--red)">O(n²)</td><td>n levels × n work = n²</td></tr>
+    </tbody>
+  </table>
+  <div class="ins blue"><strong>Space:</strong> O(log n) average (recursion stack depth). O(n) worst case.</div>
+  <div class="ins orange"><strong>Worst case happens when:</strong> array is already sorted + using first or last element as pivot. Each partition only removes 1 element → n levels of recursion × n comparisons = O(n²).</div>
+</div>
+<div id="a34" class="tab-panel">
+  <div class="ins green"><strong>Best and Average: O(n log n)</strong> — Pivot splits array roughly in half each time. log n levels of recursion, n comparisons per level → n log n total.<br><br><strong>Worst: O(n²)</strong> — Unbalanced partitions (pivot always smallest/largest). Degrades to n levels each doing n work.<br><br><strong>Space: O(log n)</strong> average — recursion stack grows to depth log n. O(n) worst case.</div>
+</div>
+<div id="z34" class="tab-panel">
+  <div class="quiz-q">When does Quick Sort degrade to O(n²)?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> When the array has duplicate elements</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> When the pivot is always the smallest or largest element causing maximally unbalanced partitions</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> When n is an odd number</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> Always — Quick Sort is never better than O(n²)</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,8)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q3.5 HEAP SORT TRACE -->
+<div class="q-card" id="q35" style="animation-delay:.32s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#ff6eb4,#ff6060)">3.5</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--pink)">Heap Sort — Trace ⭐ New Topic</div>
+    <div class="q-text">Show how Heap Sort modifies {90, 23, 5, 109, 12} as it executes.</div>
+    <div class="q-info"><span class="q-marks">[12 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e35')">📖 Teach Me First</div>
+  <div class="tab" onclick="stab(this,'a35')">✅ Full Trace</div>
+  <div class="tab" onclick="stab(this,'z35')">🧠 Quiz</div>
+</div>
+<div id="e35" class="tab-panel active">
+  <div class="explain">
+    <h4>What is a Heap?</h4>
+    A <strong>max-heap</strong> is a binary tree where every parent is ≥ both its children. The <strong>root is always the maximum</strong> element. Heap Sort uses an array to represent the heap — no actual tree is created.
+    <h4>Array → Heap mapping (0-indexed)</h4>
+    For element at index i:
+    <ul>
+      <li>Left child = index 2i + 1</li>
+      <li>Right child = index 2i + 2</li>
+      <li>Parent = floor((i-1)/2)</li>
+    </ul>
+    <h4>Two phases of Heap Sort</h4>
+    <ul>
+      <li><strong>Phase 1 — Build Max-Heap:</strong> Rearrange array so it satisfies max-heap property (heapify from last non-leaf down to root)</li>
+      <li><strong>Phase 2 — Extract Max Repeatedly:</strong> Swap root (max) with last element, reduce heap size by 1, heapify root to restore max-heap, repeat</li>
+    </ul>
+  </div>
+  <div class="ins blue"><strong>Heapify:</strong> Given a node, if it's smaller than either child, swap it with the larger child. Repeat downward until heap property is restored. This is the core operation.</div>
+  <div class="ins orange"><strong>Why this works:</strong> After extracting the max to the end of the array each time, sorted elements accumulate at the right — just like Bubble Sort, but much faster!</div>
+
+  <div class="explain"><h4>Array {90, 23, 5, 109, 12} as a tree (before heapify)</h4></div>
+  <div class="tree">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="node">90</span> [0]<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="node">23</span> [1]&nbsp;&nbsp;<span class="node">5</span> [2]<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;\<br>
+      <span class="node">109</span>[3]&nbsp;<span class="node">12</span>[4]<br><br>
+      <span style="color:var(--muted)">Last non-leaf = index floor((5-2)/2) = 1 → start heapify from index 1</span>
+  </div>
+</div>
+<div id="a35" class="tab-panel">
+  <div class="explain"><h4>Array: {90, 23, 5, 109, 12}</h4></div>
+
+  <div class="arr-label">INITIAL (as array)</div>
+  <div class="arr"><div class="box">90</div><div class="box">23</div><div class="box">5</div><div class="box">109</div><div class="box">12</div></div>
+
+  <div class="explain" style="margin-top:16px"><strong>PHASE 1 — Build Max-Heap</strong><br>Start from last non-leaf (index 1) and heapify down to index 0:</div>
+
+  <div class="ins purple"><strong>Heapify index 1 (value=23):</strong><br>
+  Left child [3]=109, Right child [4]=12. Max child = 109 at [3].<br>
+  23 &lt; 109 → SWAP index 1 and index 3.<br>
+  Array: {90, <span style="color:var(--orange)">109</span>, 5, <span style="color:var(--orange)">23</span>, 12}</div>
+  <div class="arr"><div class="box">90</div><div class="box sw">109</div><div class="box">5</div><div class="box sw">23</div><div class="box">12</div></div>
+
+  <div class="ins purple" style="margin-top:10px"><strong>Heapify index 0 (value=90):</strong><br>
+  Left child [1]=109, Right child [2]=5. Max child = 109 at [1].<br>
+  90 &lt; 109 → SWAP index 0 and index 1.<br>
+  Array: {<span style="color:var(--orange)">109</span>, <span style="color:var(--orange)">90</span>, 5, 23, 12}</div>
+  <div class="arr"><div class="box sw">109</div><div class="box sw">90</div><div class="box">5</div><div class="box">23</div><div class="box">12</div></div>
+
+  <div class="ins green" style="margin-top:6px"><strong>Max-Heap built!</strong> Root = 109 (maximum). Heap property: every parent ≥ children ✓</div>
+
+  <div class="explain" style="margin-top:16px"><strong>PHASE 2 — Extract Max Repeatedly</strong></div>
+
+  <div class="ins orange" style="margin-top:8px"><strong>Extract 1:</strong> Swap root (109) with last element (12). Heap size → 4.<br>
+  {<span style="color:var(--orange)">12</span>, 90, 5, 23, <span style="color:var(--green)">109</span>}<br>
+  Heapify root (12): left=90 bigger → swap. Then 12 vs 23 → swap.<br>
+  Result: {90, 23, 5, 12, 109}</div>
+  <div class="arr"><div class="box">90</div><div class="box">23</div><div class="box">5</div><div class="box">12</div><div class="box ok">109</div></div>
+
+  <div class="ins orange" style="margin-top:8px"><strong>Extract 2:</strong> Swap root (90) with last in heap (12). Heap size → 3.<br>
+  {12, 23, 5, <span style="color:var(--green)">90</span>, 109}<br>
+  Heapify root (12): left=23 bigger → swap.<br>
+  Result: {23, 12, 5, 90, 109}</div>
+  <div class="arr"><div class="box">23</div><div class="box">12</div><div class="box">5</div><div class="box ok">90</div><div class="box ok">109</div></div>
+
+  <div class="ins orange" style="margin-top:8px"><strong>Extract 3:</strong> Swap root (23) with last in heap (5). Heap size → 2.<br>
+  {5, 12, <span style="color:var(--green)">23</span>, 90, 109}<br>
+  Heapify root (5): left=12 bigger → swap.<br>
+  Result: {12, 5, 23, 90, 109}</div>
+  <div class="arr"><div class="box">12</div><div class="box">5</div><div class="box ok">23</div><div class="box ok">90</div><div class="box ok">109</div></div>
+
+  <div class="ins orange" style="margin-top:8px"><strong>Extract 4:</strong> Swap root (12) with last in heap (5). Heap size → 1.<br>
+  {5, <span style="color:var(--green)">12</span>, 23, 90, 109}<br>
+  Single element remaining — done.</div>
+
+  <div class="arr-label" style="margin-top:10px">FINAL — SORTED ✓</div>
+  <div class="arr"><div class="box ok">5</div><div class="box ok">12</div><div class="box ok">23</div><div class="box ok">90</div><div class="box ok">109</div></div>
+  <div class="ins green" style="margin-top:12px"><strong>Final: {5, 12, 23, 90, 109}</strong></div>
+</div>
+<div id="z35" class="tab-panel">
+  <div class="quiz-q">In a max-heap, what is always true about the root node?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> It contains the smallest element</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> It contains the largest element — every parent is ≥ its children</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> It is the median value</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> It is always at index 1</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,9)">Mark done ✓</button></div>
+</div>
+</div>
+
+<!-- Q3.6 HEAP SORT BIG O -->
+<div class="q-card" id="q36" style="animation-delay:.35s">
+<div class="q-header" onclick="tog(this)">
+  <div class="q-num" style="background:linear-gradient(135deg,#ff6eb4,#a07cff)">3.6</div>
+  <div class="q-meta">
+    <div class="q-topic" style="color:var(--pink)">Heap Sort — Big O</div>
+    <div class="q-text">Show and explain the Big O expression for Heap Sort.</div>
+    <div class="q-info"><span class="q-marks">[5 marks]</span></div>
+  </div>
+  <div class="q-chevron">⌄</div>
+</div>
+<div class="q-body">
+<div class="tabs">
+  <div class="tab active" onclick="stab(this,'e36')">📖 Teach Me</div>
+  <div class="tab" onclick="stab(this,'a36')">✅ Answer</div>
+  <div class="tab" onclick="stab(this,'z36')">🧠 Quiz</div>
+</div>
+<div id="e36" class="tab-panel active">
+  <div class="explain">
+    <h4>Why Heap Sort is always O(n log n)</h4>
+    <ul>
+      <li>Building the heap: O(n) — can be proven mathematically</li>
+      <li>Each extraction: O(log n) — heapify goes from root to leaf, tree height = log n</li>
+      <li>n extractions × O(log n) each = <strong>O(n log n)</strong></li>
+    </ul>
+  </div>
+  <table>
+    <thead><tr><th>Case</th><th>Time</th><th>Why?</th></tr></thead>
+    <tbody>
+      <tr><td style="color:var(--green)">Best</td><td style="color:var(--green)">O(n log n)</td><td>Same structure regardless of input</td></tr>
+      <tr><td style="color:var(--accent)">Average</td><td style="color:var(--accent)">O(n log n)</td><td>Always n extractions × log n heapify</td></tr>
+      <tr><td style="color:var(--red)">Worst</td><td style="color:var(--red)">O(n log n)</td><td>No worst case — guaranteed!</td></tr>
+    </tbody>
+  </table>
+  <div class="ins green"><strong>Heap Sort's great advantage:</strong> Unlike Quick Sort, it has <strong>no O(n²) worst case</strong>. It's guaranteed O(n log n) regardless of input. Space O(1) — sorts in-place.</div>
+  <div class="ins blue"><strong>Comparison with other sorts:</strong><br>
+  Bubble Sort: O(n²) time / O(1) space<br>
+  Quick Sort: O(n log n) avg / O(n²) worst<br>
+  Heap Sort: O(n log n) always / O(1) space ← best of both worlds</div>
+</div>
+<div id="a36" class="tab-panel">
+  <div class="ins green"><strong>Time: O(n log n) — all cases</strong><br>
+  Phase 1 (Build heap): O(n). Phase 2 (n extractions each requiring heapify): n × O(log n) = O(n log n). Total: O(n) + O(n log n) = O(n log n).<br><br>
+  <strong>Space: O(1)</strong> — Heap Sort is in-place. No auxiliary array needed. Only a few variables for swapping.<br><br>
+  <strong>Key advantage over Quick Sort:</strong> No worst-case O(n²). Performance is consistent regardless of input order.</div>
+</div>
+<div id="z36" class="tab-panel">
+  <div class="quiz-q">What is Heap Sort's worst-case time complexity?</div>
+  <div class="opts">
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n²) — like Bubble Sort</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n²) — like Quick Sort's worst case</div>
+    <div class="opt" onclick="ans(this,true)"><span>○</span> O(n log n) — guaranteed, same as best and average case</div>
+    <div class="opt" onclick="ans(this,false)"><span>○</span> O(n) — it only needs one pass</div>
+  </div>
+  <div class="q-fb"></div><button class="q-nxt" onclick="rq(this)">Next →</button>
+</div>
+<div class="q-footer"><button class="done-btn" onclick="done(this,10)">Mark done ✓</button></div>
+</div>
+</div>
+
+</div><!-- /section 3 -->
+
+<!-- FINAL SUMMARY TABLE -->
+<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;margin-bottom:40px">
+  <div style="font-family:var(--head);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:18px">
+    📊 Algorithm Comparison — The Cheat Sheet
+  </div>
+  <table>
+    <thead><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Space</th><th>Stable?</th></tr></thead>
+    <tbody>
+      <tr><td>Bubble Sort</td><td style="color:var(--green)">O(n)*</td><td style="color:var(--red)">O(n²)</td><td style="color:var(--red)">O(n²)</td><td style="color:var(--green)">O(1)</td><td style="color:var(--green)">Yes</td></tr>
+      <tr><td>Quick Sort</td><td style="color:var(--green)">O(n log n)</td><td style="color:var(--accent)">O(n log n)</td><td style="color:var(--red)">O(n²)</td><td style="color:var(--accent)">O(log n)</td><td style="color:var(--red)">No</td></tr>
+      <tr><td>Heap Sort</td><td style="color:var(--green)">O(n log n)</td><td style="color:var(--green)">O(n log n)</td><td style="color:var(--green)">O(n log n)</td><td style="color:var(--green)">O(1)</td><td style="color:var(--red)">No</td></tr>
+    </tbody>
+  </table>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:8px">* Optimised Bubble Sort with early termination only</div>
+</div>
+
+</div><!-- /wrap -->
+
+<footer>
+  <div class="wrap">ADP470S · Test 1 · 3 April 2025 · 75 Marks · Interactive Tutor · CPUT 2026</div>
+</footer>
+
+<script>
+const total = 11;
+const done_arr = new Array(total).fill(false);
+
+function tog(hdr){
+  const c = hdr.parentElement;
+  c.classList.toggle('open');
+}
+
+function stab(tab, pid){
+  const body = tab.closest('.q-body');
+  body.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  body.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  tab.classList.add('active');
+  document.getElementById(pid).classList.add('active');
+}
+
+function ans(opt, correct){
+  const opts = opt.closest('.opts');
+  if(opts.dataset.done) return;
+  opts.dataset.done='1';
+  opts.querySelectorAll('.opt').forEach(o=>o.style.pointerEvents='none');
+  const panel = opt.closest('.tab-panel');
+  const fb = panel.querySelector('.q-fb');
+  const nxt = panel.querySelector('.q-nxt');
+  if(correct){
+    opt.classList.add('ok');
+    opt.querySelector('span').textContent='✓';
+    fb.textContent='✅ Correct!';
+    fb.className='q-fb show ok';
+  } else {
+    opt.classList.add('no');
+    opt.querySelector('span').textContent='✗';
+    opts.querySelectorAll('.opt').forEach(o=>{
+      if(o.getAttribute('onclick').includes('true')){
+        o.classList.add('ok');
+        o.querySelector('span').textContent='✓';
+      }
+    });
+    fb.textContent='❌ Not quite — see the correct answer highlighted above. Review the Teach Me and Answer tabs.';
+    fb.className='q-fb show no';
+  }
+  nxt.classList.add('show');
+}
+
+function rq(btn){
+  const panel = btn.closest('.tab-panel');
+  const opts = panel.querySelector('.opts');
+  delete opts.dataset.done;
+  opts.querySelectorAll('.opt').forEach(o=>{
+    o.className='opt';
+    o.querySelector('span').textContent='○';
+    o.style.pointerEvents='';
+  });
+  panel.querySelector('.q-fb').className='q-fb';
+  btn.classList.remove('show');
+}
+
+function done(btn, idx){
+  done_arr[idx] = !done_arr[idx];
+  btn.classList.toggle('marked', done_arr[idx]);
+  btn.textContent = done_arr[idx]?'Done ✓':'Mark done ✓';
+  const count = done_arr.filter(Boolean).length;
+  document.getElementById('score-bar').style.width=(count/total*100)+'%';
+  document.getElementById('score-txt').textContent=count+' / '+total;
+}
+</script>
+</body>
+</html>

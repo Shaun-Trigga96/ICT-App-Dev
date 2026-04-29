@@ -1,0 +1,19 @@
+.section{
+  height: 100vh;
+}
+
+#home{
+  width: 2024px;
+  position: relative;
+  left: -16px;
+  height: 109vh;
+}
+
+#mov{
+  font-size: 150px;
+  position: relative;
+  font-family: Helvetica;
+  color: white;
+  top: -792px;
+  right: -400px;
+}

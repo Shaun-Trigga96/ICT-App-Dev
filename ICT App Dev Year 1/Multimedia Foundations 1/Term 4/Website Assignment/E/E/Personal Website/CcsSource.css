@@ -1,0 +1,78 @@
+<style>
+  header {
+    background-color: black;
+    padding-bottom: 0px;
+    height: 0px;
+  }
+  .navmenu {
+    float: left;
+    background-color: #bbccdd;
+    min-width: 8.8%;
+    height: 580px;
+    display: inline-block;
+    position: fixed;
+  }
+  .navmenu hr {
+    border: 1px solid grey;
+  }
+  .navmenu ul {
+    margin-top: 0;
+    padding-left: 2px;
+    display: inline-block;
+  }
+  .navmenu li {
+    height: 35px;
+    padding-top: 45px;
+    padding-left: 5px;
+    font-family: arial;
+    color: grey;
+    display: inline-block;
+  }
+  .navmenu li a {
+    color: #888888;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .navmenu a:link {
+    color: #888888;
+  }
+  .paragraph {
+    width: 90.2%;
+    margin-left: 10%;
+    border-top: 0;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom:  5px;
+    padding-right: 0px;
+    display:block;
+    }
+    </style>
+
+  
+<style>
+    .boxed{
+      background-color: white;
+      width: 300px;
+      border: 15px solid black;
+      padding: 50px;
+      margin: 10px;
+      float: right;
+  }  
+
+  .Sbox {
+    max-width: 28.20%;
+    color: black;
+    padding 10px;
+    cursor: pointer;
+    border: 6px solid black;
+
+
+  }
+
+   
+    
+  
+</style>

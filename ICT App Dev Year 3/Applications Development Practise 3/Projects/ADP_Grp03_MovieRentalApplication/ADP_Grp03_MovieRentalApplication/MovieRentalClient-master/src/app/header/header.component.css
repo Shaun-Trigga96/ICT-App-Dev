@@ -1,0 +1,41 @@
+
+.navbar
+{
+  background-color: black;
+  color: white;
+  height: 8rem;
+  width: 100%;
+}
+
+.navbar-item
+{
+
+  font-family: "Helvetica";
+  color: white;
+  font-size: 25px;
+  padding-right: 30px;
+
+}
+.navbar-item:hover
+{
+  background-color: black;
+  color: #66B2FF;
+}
+
+.navbar-link
+{
+  color: black;
+  background-color: black;
+}
+.navbar-link:hover
+{
+  background-color: black;
+  color: #66B2FF;
+}
+
+.navbar-start{
+  position: relative;
+  left: 22px;
+  top: 57px;
+}
+

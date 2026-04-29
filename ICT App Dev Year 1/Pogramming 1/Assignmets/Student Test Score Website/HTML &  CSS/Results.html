@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Student Marks" content= "A registered student can access their Programming 1 Marks; charset=UTF-8"/>  
+        <meta name= "Author" content = "Thabiso Matsaba"/>
+        <meta name= "Keywords" content = "Student, Marks"/>
+        <meta name= "Viewport" content = "width=device-width, initial scale=1.0"/>
+        <title>Results</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>   
+    </head>
+    <body>
+        <a href="Student Marks.html">Return to Student Marks</a> 
+        <h2>Results</h2>
+       
+        <p id="Results"></p>
+          <script language="javascript" type="text/javascript">
+            var text="";
+             var i;
+               var testMark=100;
+                var passMark=50;
+                  var outstandingMark=0;
+                    var Names= ["Chris", "Shaun", "Patrick", "Drake", "John"];
+                      var Marks= [90,80,70,60,0];
+                       
+                      for(i=0; i < Marks.length; i++){
+                      
+                    if (Marks[i] >= passMark){
+                  text+= "Student:" +"" + "" + "\t" + Names[i] + "" + "\t"+ Marks[i] +"\t" + "Pass" + "<br>";
+                }
+            else 
+        text+= "Student:" + "" + "\t" + Names[i] + "" + "\t" + Marks[i] +"\t" + "Fail" + "<br>";
+                
+    if(Marks[i] === outstandingMark){
+            
+text+= "Student:" +""+ "\t" + Names[i] + "" + "\t" + Marks[i] + "\t" + "Mark is Outstanding" + "<br>";
+}
+}
+document.getElementById("Results").innerHTML = text;
+</script>  
+<br>
+<a href="Home Page.html">Return to Home Page</a> 
+</body>
+</html>

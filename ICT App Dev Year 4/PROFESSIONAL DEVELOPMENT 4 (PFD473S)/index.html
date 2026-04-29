@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFD473S – PERT & Planning/Scheduling Study Guide</title>
+<style>
+  :root {
+    --primary: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --accent3: #16213e;
+    --highlight: #f5a623;
+    --green: #27ae60;
+    --blue: #2980b9;
+    --purple: #8e44ad;
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #2c3e50;
+    --muted: #7f8c8d;
+    --border: #e0e0e0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 48px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(233, 69, 96, 0.3);
+    border: 1px solid rgba(233, 69, 96, 0.6);
+    color: #ff8fa3;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+  .hero h1 span { color: #e94560; }
+  .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 24px; }
+  .hero-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .chip {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .chip.active { background: #e94560; border-color: #e94560; }
+
+  /* NAV */
+  .nav {
+    background: white;
+    border-bottom: 2px solid var(--border);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    overflow-x: auto;
+  }
+  .nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 13px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .nav a:hover, .nav a.active { color: #e94560; border-bottom-color: #e94560; }
+
+  /* LAYOUT */
+  .container { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 48px; scroll-margin-top: 60px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .icon-red { background: #fdeaea; }
+  .icon-blue { background: #e8f4fd; }
+  .icon-green { background: #eafaf1; }
+  .icon-purple { background: #f4eafb; }
+  .icon-orange { background: #fef9e7; }
+  .section-header h2 { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+  .section-header .tag {
+    margin-left: auto;
+    background: #fdeaea;
+    color: #e94560;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .tag.green { background: #eafaf1; color: #27ae60; }
+  .tag.blue { background: #e8f4fd; color: #2980b9; }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card p { color: var(--text); margin-bottom: 10px; }
+  .card p:last-child { margin-bottom: 0; }
+
+  /* FORMULA BOX */
+  .formula-box {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .formula-box h3 { font-size: 1rem; color: rgba(255,255,255,0.7); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+  .formula {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #f5a623;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .formula-note { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  .formula-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 600px) { .formula-grid { grid-template-columns: 1fr; } }
+
+  .formula-mini {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .formula-mini h4 { font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .formula-mini .f { font-size: 1.2rem; font-weight: 700; color: #f5a623; font-family: 'Courier New', monospace; }
+
+  /* WORKED EXAMPLE */
+  .example {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #e94560;
+    border-radius: 0 10px 10px 0;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .example h4 { font-weight: 700; margin-bottom: 12px; color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* STEPS */
+  .steps { list-style: none; padding: 0; }
+  .steps li {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-num.blue { background: var(--blue); }
+  .step-num.green { background: var(--green); }
+  .steps li div strong { display: block; margin-bottom: 4px; color: var(--primary); }
+  .steps li div p { color: var(--text); font-size: 0.95rem; margin: 0; }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-bottom: 12px; }
+  th {
+    background: var(--primary);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) { background: #f9f9f9; }
+  tr:last-child td { border-bottom: none; }
+  .highlight-row { background: #fff3cd !important; font-weight: 700; }
+  td.critical { color: #e94560; font-weight: 700; }
+  td.zero { color: #27ae60; font-weight: 700; }
+
+  /* ALERT */
+  .alert {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .alert-red { background: #fdeaea; border: 1px solid #f5c6cb; }
+  .alert-blue { background: #e8f4fd; border: 1px solid #bee3f8; }
+  .alert-yellow { background: #fef9e7; border: 1px solid #f9d56e; }
+  .alert-green { background: #eafaf1; border: 1px solid #a9dfbf; }
+  .alert strong { display: block; margin-bottom: 4px; font-size: 0.9rem; }
+  .alert p { font-size: 0.9rem; margin: 0; line-height: 1.5; }
+
+  /* DEFINITION */
+  .def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  @media (max-width: 600px) { .def-grid { grid-template-columns: 1fr; } }
+  .def-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .def-card .term { font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #0f3460; margin-bottom: 6px; }
+  .def-card .meaning { font-size: 0.9rem; color: var(--text); }
+  .def-card .formula-tag {
+    margin-top: 8px;
+    display: inline-block;
+    background: #fef9e7;
+    border: 1px solid #f9d56e;
+    color: #856404;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+  }
+
+  /* NETWORK DIAGRAM (CSS art) */
+  .network-wrapper {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+  }
+  .network-wrapper h4 { font-weight: 700; margin-bottom: 16px; color: var(--primary); font-size: 0.95rem; }
+
+  .node-diagram {
+    background: #f0f4f8;
+    border: 1px solid #cdd5de;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    white-space: pre;
+    overflow-x: auto;
+    color: #1a1a2e;
+  }
+
+  /* NODE BOX */
+  .node-box {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    border: 2px solid #1a1a2e;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    width: 70px;
+  }
+  .node-box .top-l { border-right: 1px solid #1a1a2e; border-bottom: 1px solid #1a1a2e; padding: 3px; color: #2980b9; }
+  .node-box .top-r { border-bottom: 1px solid #1a1a2e; padding: 3px; color: #e94560; }
+  .node-box .center { grid-column: 1 / -1; padding: 4px; font-size: 13px; color: #1a1a2e; background: #e8f0fe; }
+
+  /* RESOURCES */
+  .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .resource-grid { grid-template-columns: 1fr; } }
+  .resource-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .resource-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .resource-icon {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .yt { background: #fdeaea; }
+  .li { background: #e8f0fb; }
+  .or { background: #f4eafb; }
+  .bk { background: #eafaf1; }
+  .resource-card .title { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; color: var(--primary); }
+  .resource-card .desc { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+  .resource-card .search { font-size: 0.75rem; color: #e94560; margin-top: 6px; font-style: italic; }
+
+  /* CHEAT SHEET */
+  .cheat {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 12px;
+    padding: 28px;
+    color: white;
+  }
+  .cheat h3 { font-size: 1.1rem; margin-bottom: 20px; color: #f5a623; text-transform: uppercase; letter-spacing: 1px; }
+  .cheat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .cheat-grid { grid-template-columns: 1fr; } }
+  .cheat-item {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .cheat-item .label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .cheat-item .value { font-size: 0.95rem; color: #f5a623; font-family: 'Courier New', monospace; font-weight: 700; }
+
+  /* DIFF TABLE */
+  .diff-table th:first-child { background: var(--blue); }
+  .diff-table th:last-child { background: var(--green); }
+  .diff-table td:first-child { color: var(--blue); font-weight: 600; }
+  .diff-table td:last-child { color: var(--green); font-weight: 600; }
+
+  /* PILL */
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .pill-red { background: #fdeaea; color: #e94560; }
+  .pill-blue { background: #e8f4fd; color: #2980b9; }
+  .pill-green { background: #eafaf1; color: #27ae60; }
+
+  code {
+    background: #f0f4f8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #e94560;
+  }
+
+  /* DUMMY ACTIVITY NOTE */
+  .dummy-box {
+    border: 2px dashed #e94560;
+    border-radius: 10px;
+    padding: 16px 20px;
+    background: #fff8f8;
+    margin-bottom: 16px;
+  }
+  .dummy-box h4 { color: #e94560; font-weight: 700; margin-bottom: 8px; }
+
+  .footer {
+    background: var(--primary);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+  .footer strong { color: white; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">PFD473S · CPUT · 2026</div>
+  <h1>Planning, Scheduling <span>&</span> PERT/CPM</h1>
+  <p>A deep-dive study guide built directly from your lecture slides — covering every concept, formula, and worked example you need for your tests.</p>
+  <div class="hero-chips">
+    <div class="chip active">🎯 PERT/CPM Diagrams</div>
+    <div class="chip active">📅 Planning & Scheduling</div>
+    <div class="chip">Forward/Backward Pass</div>
+    <div class="chip">Float & Critical Path</div>
+    <div class="chip">Probability Calculations</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#scheduling" class="active">📅 Scheduling Concepts</a>
+  <a href="#cpm">🔗 CPM & Networks</a>
+  <a href="#pert">📐 PERT Formulas</a>
+  <a href="#worked">✏️ Worked Examples</a>
+  <a href="#float">🕐 Float Types</a>
+  <a href="#resources">📚 Resources</a>
+  <a href="#cheatsheet">⚡ Cheat Sheet</a>
+</nav>
+
+<div class="container">
+
+  <!-- ===================== SECTION 1: SCHEDULING ===================== -->
+  <div class="section" id="scheduling">
+    <div class="section-header">
+      <div class="section-icon icon-blue">📅</div>
+      <h2>Planning & Scheduling Fundamentals</h2>
+      <span class="tag blue">From L2 Slides</span>
+    </div>
+
+    <div class="alert alert-blue">
+      <div class="alert-icon">💡</div>
+      <div>
+        <strong>The Big Picture — from your lecturer</strong>
+        <p>Project management = organizing and directing people to achieve a planned result <strong>within budget and on schedule</strong>. The baseline plan is built at the start; during the project you monitor and intervene when departures occur.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🏗️ Work Breakdown Structure (WBS)</h3>
+      <p>The WBS is the <strong>hierarchical representation of all tasks</strong> in a project. It is the foundation for everything else — schedule, resources, cost estimates.</p>
+      <p>Think of it like an outline for a research paper: you break the big project into deliverables, then into sub-deliverables, then into individual <strong>work packages</strong> (the smallest units of manageable work).</p>
+      <div class="example">
+        <h4>📌 Your lecturer's exact definition</h4>
+        <p>A <strong>task</strong> is the smallest unit of work that is subject to project management. It has a description, a duration, and is assigned to a role. A <strong>work package</strong> describes the work products to be produced, resources needed, expected duration, dependencies on inputs, acceptance criteria, and responsible person/unit.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📋 Steps to Produce a Project Schedule</h3>
+      <ul class="steps">
+        <li>
+          <div class="step-num">1</div>
+          <div><strong>Develop the WBS</strong><p>List all tasks and their durations. This is the foundation for everything.</p></div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div><strong>Identify Dependencies</strong><p>Which tasks must be completed before others can start? Document predecessor relationships.</p></div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div><strong>Estimate Durations</strong><p>Use the PERT formula (O + 4M + P) / 6 when uncertain, or historical data for CPM.</p></div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div><strong>Build PERT/CPM Chart</strong><p>Draw the network diagram. Assists in assigning tasks and identifying the critical path.</p></div>
+        </li>
+        <li>
+          <div class="step-num">5</div>
+          <div><strong>Create Gantt Chart</strong><p>Map tasks onto a timeline with bars showing duration and a tracking Gantt for progress.</p></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📊 Gantt Chart vs PERT/CPM Network</h3>
+      <table>
+        <tr><th>Feature</th><th>Gantt Chart</th><th>PERT/CPM Network</th></tr>
+        <tr><td>Shows</td><td>Tasks on a timeline (bars)</td><td>Task dependencies (arrows/nodes)</td></tr>
+        <tr><td>Best for</td><td>Communicating schedule to stakeholders</td><td>Calculating critical path &amp; float</td></tr>
+        <tr><td>Shows dependencies</td><td>Partially (with arrows)</td><td>Yes — this is its primary purpose</td></tr>
+        <tr><td>Shows float/slack</td><td>No</td><td>Yes — calculated automatically</td></tr>
+        <tr><td>Used for</td><td>Tracking &amp; reporting</td><td>Scheduling &amp; risk analysis</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 2: CPM & NETWORKS ===================== -->
+  <div class="section" id="cpm">
+    <div class="section-header">
+      <div class="section-icon icon-red">🔗</div>
+      <h2>Critical Path Method (CPM) & Network Diagrams</h2>
+      <span class="tag">Exam Heavy</span>
+    </div>
+
+    <div class="alert alert-yellow">
+      <div class="alert-icon">⚠️</div>
+      <div>
+        <strong>Activity on Arrow (AOA) — your lecturer's chosen notation</strong>
+        <p>Your slides specifically say: <em>"We will use 'activity on the arrow'."</em> In this style, <strong>arrows = activities</strong> and <strong>circles (nodes) = milestones/events</strong>. Know this distinction for your tests.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔵 Key Terminology</h3>
+      <div class="def-grid">
+        <div class="def-card">
+          <div class="term">Milestone / Event</div>
+          <div class="meaning">A specific accomplishment that takes place at a particular <strong>instance in time</strong>. Does NOT consume time or resources. Represented as a circle (node).</div>
+        </div>
+        <div class="def-card">
+          <div class="term">Activity</div>
+          <div class="meaning">What is done <strong>between</strong> two milestones. Uses time and resources. Represented as an arrow between two nodes. Cannot start until its preceding event is achieved.</div>
+        </div>
+        <div class="def-card">
+          <div class="term">Dummy Activity</div>
+          <div class="meaning">Takes <strong>no time and no resources</strong>. Used to show dependency between events. Drawn as a <strong>dashed arrow</strong>.</div>
+        </div>
+        <div class="def-card">
+          <div class="term">Critical Path</div>
+          <div class="meaning">The <strong>longest path</strong> through the network. Any delay here delays the whole project. All activities on it have <strong>Total Float = 0</strong>.</div>
+        </div>
+        <div class="def-card">
+          <div class="term">EST (Earliest Start Time)</div>
+          <div class="meaning">The earliest possible time a milestone can be achieved. Calculated in the <strong>forward pass</strong> (left to right).</div>
+          <div class="formula-tag">E(j) = max{E(i) + D_ij}</div>
+        </div>
+        <div class="def-card">
+          <div class="term">LST (Latest Start Time)</div>
+          <div class="meaning">The latest a milestone can be achieved without delaying the project. Calculated in the <strong>backward pass</strong> (right to left).</div>
+          <div class="formula-tag">L(i) = min{L(j) − D_ij}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dummy-box">
+      <h4>⚡ Dummy Activities — Easy to Miss in Tests!</h4>
+      <p>A <strong>dummy activity</strong> is drawn as a <strong>dashed arrow</strong> (- - - →). It has <strong>zero duration and zero resources</strong>. You need them when two activities share the same start AND end node, or when a dependency exists but no real work is involved. Always check your network for these!</p>
+    </div>
+
+    <div class="card">
+      <h3>🔢 The Algorithms (from your slides — know these!)</h3>
+
+      <div class="example">
+        <h4>Event Numbering Algorithm</h4>
+        <p><strong>Step 1:</strong> Give the starting event number 0.</p>
+        <p><strong>Step 2:</strong> Give the next number to any unnumbered event whose <em>predecessor events are each already numbered</em>.</p>
+        <p>Repeat Step 2 until all events are numbered.</p>
+      </div>
+
+      <div class="example" style="border-left-color: #2980b9;">
+        <h4 style="color:#2980b9;">Forward Pass — Earliest Event Time (EST)</h4>
+        <p><strong>Step 1:</strong> Set <code>E(0) = 0</code></p>
+        <p><strong>Step 2:</strong> For j = 1, 2, 3, ..., n:</p>
+        <p style="margin-left:20px;font-family:'Courier New',monospace;background:#f0f4f8;padding:8px;border-radius:6px;"><strong>E(j) = maximum { E(i) + D<sub>ij</sub> }</strong></p>
+        <p>where the maximum is over all activities (i,j) that have j as the ending event.</p>
+        <p><em>Translation: Take the longest route to reach each node.</em></p>
+      </div>
+
+      <div class="example" style="border-left-color: #27ae60;">
+        <h4 style="color:#27ae60;">Backward Pass — Latest Event Time (LST)</h4>
+        <p><strong>Step 1:</strong> Set <code>L(n) = E(n)</code> (the required completion time)</p>
+        <p><strong>Step 2:</strong> For i = n-1, n-2, ..., 0:</p>
+        <p style="margin-left:20px;font-family:'Courier New',monospace;background:#f0f4f8;padding:8px;border-radius:6px;"><strong>L(i) = minimum { L(j) − D<sub>ij</sub> }</strong></p>
+        <p>where the minimum is over all activities (i,j) that have i as the starting event.</p>
+        <p><em>Translation: Work backwards, taking the shortest route from the end.</em></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📋 5 Steps to Draw &amp; Analyse a CPA Chart</h3>
+      <ul class="steps">
+        <li><div class="step-num blue">1</div><div><strong>List all project activities and milestones</strong><p>Every task, its ID, duration, and what it produces.</p></div></li>
+        <li><div class="step-num blue">2</div><div><strong>Determine dependencies</strong><p>What must be finished before each activity can start? Be careful not to add spurious dependencies.</p></div></li>
+        <li><div class="step-num blue">3</div><div><strong>Estimate durations (ED)</strong><p>Use CPM (single estimate) or PERT (three estimates). See PERT section.</p></div></li>
+        <li><div class="step-num blue">4</div><div><strong>Draw the network &amp; perform forward/backward passes</strong><p>Calculate EST and LST for every node.</p></div></li>
+        <li><div class="step-num blue">5</div><div><strong>Identify the critical path</strong><p>Find all nodes where EST = LST (slack = 0). Mark with double bars on the arrows.</p></div></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>⚠️ Common CPM Errors (from your slides)</h3>
+      <p>Your lecturer listed these — watch for them in exercises:</p>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+        <li style="background:#fdeaea;padding:10px;border-radius:8px;font-size:0.9rem;">❌ Estimated activity durations may be wrong</li>
+        <li style="background:#fdeaea;padding:10px;border-radius:8px;font-size:0.9rem;">❌ Predecessor relationships may contain cycles</li>
+        <li style="background:#fdeaea;padding:10px;border-radius:8px;font-size:0.9rem;">❌ List of prerequisites contains more than immediate predecessors</li>
+        <li style="background:#fdeaea;padding:10px;border-radius:8px;font-size:0.9rem;">❌ Some predecessor relationships may be overlooked</li>
+        <li style="background:#fdeaea;padding:10px;border-radius:8px;font-size:0.9rem;">❌ Some listed predecessor relationships may be spurious (fake)</li>
+        <li style="background:#fdeaea;padding:10px;border-radius:8px;font-size:0.9rem;">❌ Some tasks may be missing entirely</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 3: PERT ===================== -->
+  <div class="section" id="pert">
+    <div class="section-header">
+      <div class="section-icon icon-purple">📐</div>
+      <h2>PERT — Program Evaluation & Review Technique</h2>
+      <span class="tag">Core Formulas</span>
+    </div>
+
+    <div class="alert alert-red">
+      <div class="alert-icon">🔑</div>
+      <div>
+        <strong>CPM vs PERT — The Key Difference (from your slides)</strong>
+        <p><strong>CPM</strong> = deterministic durations (you know exactly how long). Uses data from previous similar projects. Suited to <em>construction-type</em> projects.<br>
+        <strong>PERT</strong> = probabilistic durations (you're uncertain). Better for <em>Research &amp; Development</em> projects with limited historical data. PERT = CPM + probabilistic task times.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📊 The Three PERT Time Estimates</h3>
+      <table>
+        <tr><th>Symbol</th><th>Name</th><th>Definition (from your slides)</th></tr>
+        <tr>
+          <td><strong style="color:#27ae60;">A (or O)</strong></td>
+          <td>Optimistic Time</td>
+          <td>Minimum time if everything goes right. Assumed NOT to be delayed by <em>even likely events</em> like employee absence.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:#2980b9;">M</strong></td>
+          <td>Most Likely Time</td>
+          <td>Duration under <strong>normal working conditions</strong>. The most frequent duration based on past experience.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:#e94560;">B (or P)</strong></td>
+          <td>Pessimistic Time</td>
+          <td>Time required under <strong>particularly bad circumstances</strong>. Equipment arrives late, technical problems occur, staff ill. Should be exceeded no more than <strong>1% of the time</strong>.</td>
+        </tr>
+      </table>
+      <div class="alert alert-green" style="margin-top:12px;margin-bottom:0;">
+        <div class="alert-icon">📌</div>
+        <div><p>These three estimates assume a <strong>Beta distribution</strong> for each task duration — this is why the formula weights M four times more heavily than A or B.</p></div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <h3>⭐ The PERT Expected Duration Formula</h3>
+      <div class="formula">Te = (A + 4M + B) / 6</div>
+      <div class="formula-note">Where A = Optimistic, M = Most Likely, B = Pessimistic<br>M is weighted <strong>4 times</strong> because it is the most likely outcome</div>
+    </div>
+
+    <div class="formula-grid">
+      <div class="formula-mini">
+        <h4>Variance of One Activity</h4>
+        <div class="f">σ² = ((B − A) / 6)²</div>
+      </div>
+      <div class="formula-mini">
+        <h4>Standard Deviation</h4>
+        <div class="f">σ = (B − A) / 6</div>
+      </div>
+      <div class="formula-mini">
+        <h4>Project Variance (Critical Path)</h4>
+        <div class="f">σ²_project = Σσ²_critical</div>
+      </div>
+      <div class="formula-mini">
+        <h4>Z-Score for Probability</h4>
+        <div class="f">z = (T_target − T_e) / σ_project</div>
+      </div>
+    </div>
+
+    <div class="alert alert-blue">
+      <div class="alert-icon">📌</div>
+      <div>
+        <strong>Important: The 50% Rule</strong>
+        <p>From your PERT slides: <em>"because the durations are probabilistic, when we find the duration for a project, it means there is a <strong>50% chance</strong> of finishing the project by that time."</em> This is why we use the Z-score formula to find the probability of meeting a specific target date.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Using the Z-Score for Probability of Meeting a Deadline</h3>
+      <ul class="steps">
+        <li><div class="step-num green">1</div><div><strong>Calculate Te for all activities</strong><p>Use Te = (A + 4M + B) / 6 for every activity on the critical path.</p></div></li>
+        <li><div class="step-num green">2</div><div><strong>Sum Te for the critical path</strong><p>This gives you the expected project completion time (Te_project). Remember: 50% probability of finishing by this date.</p></div></li>
+        <li><div class="step-num green">3</div><div><strong>Calculate σ² for each critical path activity</strong><p>Use σ² = ((B − A) / 6)²</p></div></li>
+        <li><div class="step-num green">4</div><div><strong>Sum all critical path variances</strong><p>σ²_project = Σσ²_i (for all i on critical path only)</p></div></li>
+        <li><div class="step-num green">5</div><div><strong>Find σ_project = √(σ²_project)</strong><p>Take the square root to get the standard deviation of the project.</p></div></li>
+        <li><div class="step-num green">6</div><div><strong>Calculate Z</strong><p>z = (T_target − Te_project) / σ_project</p></div></li>
+        <li><div class="step-num green">7</div><div><strong>Look up Z in standard normal table</strong><p>Or use Excel: <code>=NORMSDIST(z)</code> to find the probability.</p></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 4: WORKED EXAMPLE ===================== -->
+  <div class="section" id="worked">
+    <div class="section-header">
+      <div class="section-icon icon-orange">✏️</div>
+      <h2>Worked Example — Full Network Analysis</h2>
+      <span class="tag">Practice This!</span>
+    </div>
+
+    <div class="alert alert-yellow">
+      <div class="alert-icon">📝</div>
+      <div>
+        <strong>Based on data from your L2 Planning & Scheduling slides (Slide 27–28)</strong>
+        <p>Your lecturer showed computed values for a 10-node network. The worked example below follows the same methodology.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📋 Step 1 — Activity Table with PERT Estimates</h3>
+      <p>Given a project with 5 activities and the following three time estimates (in days):</p>
+      <table>
+        <tr><th>Activity</th><th>Predecessor</th><th>A (Optimistic)</th><th>M (Most Likely)</th><th>B (Pessimistic)</th><th>Te = (A+4M+B)/6</th><th>σ² = ((B-A)/6)²</th></tr>
+        <tr><td><strong>1→2</strong></td><td>—</td><td>1</td><td>2</td><td>3</td><td>(1+8+3)/6 = <strong>2.0</strong></td><td>((3-1)/6)² = <strong>0.11</strong></td></tr>
+        <tr><td><strong>1→3</strong></td><td>—</td><td>4</td><td>5</td><td>12</td><td>(4+20+12)/6 = <strong>6.0</strong></td><td>((12-4)/6)² = <strong>1.78</strong></td></tr>
+        <tr><td><strong>2→3</strong></td><td>1→2</td><td>1</td><td>2</td><td>3</td><td>(1+8+3)/6 = <strong>2.0</strong></td><td>((3-1)/6)² = <strong>0.11</strong></td></tr>
+        <tr><td><strong>3→4</strong></td><td>1→3, 2→3</td><td>1</td><td>2</td><td>3</td><td>(1+8+3)/6 = <strong>2.0</strong></td><td>((3-1)/6)² = <strong>0.11</strong></td></tr>
+        <tr><td><strong>4→5</strong></td><td>3→4</td><td>2</td><td>4</td><td>12</td><td>(2+16+12)/6 = <strong>5.0</strong></td><td>((12-2)/6)² = <strong>2.78</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>➡️ Step 2 — Forward Pass (Calculate EST)</h3>
+      <p>Rule: <code>E(j) = max { E(i) + D_ij }</code> for all activities ending at node j. Start with <code>E(0) = 0</code>.</p>
+      <table>
+        <tr><th>Node</th><th>Calculation</th><th>EST</th></tr>
+        <tr><td>Node 1 (Start)</td><td>By convention</td><td class="zero"><strong>0</strong></td></tr>
+        <tr><td>Node 2</td><td>E(1) + D(1→2) = 0 + 2</td><td class="zero"><strong>2</strong></td></tr>
+        <tr><td>Node 3</td><td>max{ E(1)+D(1→3), E(2)+D(2→3) } = max{0+6, 2+2} = max{6, 4}</td><td class="zero"><strong>6</strong></td></tr>
+        <tr><td>Node 4</td><td>E(3) + D(3→4) = 6 + 2</td><td class="zero"><strong>8</strong></td></tr>
+        <tr><td>Node 5 (End)</td><td>E(4) + D(4→5) = 8 + 5</td><td class="zero"><strong>13</strong></td></tr>
+      </table>
+      <div class="alert alert-green" style="margin-top:12px;margin-bottom:0;">
+        <div class="alert-icon">✅</div>
+        <div><p><strong>Project Expected Duration = 13 days</strong> (50% probability of finishing by this date)</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>⬅️ Step 3 — Backward Pass (Calculate LST)</h3>
+      <p>Rule: <code>L(i) = min { L(j) − D_ij }</code> for all activities starting at node i. Start with <code>L(end) = E(end) = 13</code>.</p>
+      <table>
+        <tr><th>Node</th><th>Calculation</th><th>LST</th></tr>
+        <tr><td>Node 5 (End)</td><td>Set equal to EST = 13</td><td class="zero"><strong>13</strong></td></tr>
+        <tr><td>Node 4</td><td>L(5) − D(4→5) = 13 − 5</td><td class="zero"><strong>8</strong></td></tr>
+        <tr><td>Node 3</td><td>L(4) − D(3→4) = 8 − 2</td><td class="zero"><strong>6</strong></td></tr>
+        <tr><td>Node 2</td><td>L(3) − D(2→3) = 6 − 2</td><td><strong>4</strong></td></tr>
+        <tr><td>Node 1 (Start)</td><td>min{ L(2)−D(1→2), L(3)−D(1→3) } = min{4−2, 6−6} = min{2, 0}</td><td class="zero"><strong>0</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>📊 Step 4 — Float & Critical Path</h3>
+      <p><strong>Slack = LST − EST</strong> at each node. Activities connecting nodes where Slack = 0 are on the critical path.</p>
+      <table>
+        <tr><th>Activity</th><th>EST of start node</th><th>LST of start node</th><th>Slack (LST−EST)</th><th>Critical?</th></tr>
+        <tr><td>1 → 2</td><td>0</td><td>2</td><td>2</td><td>❌ No (has slack)</td></tr>
+        <tr class="highlight-row"><td>1 → 3</td><td>0</td><td>0</td><td class="critical">0</td><td class="critical">✅ CRITICAL</td></tr>
+        <tr><td>2 → 3</td><td>2</td><td>4</td><td>2</td><td>❌ No (has slack)</td></tr>
+        <tr class="highlight-row"><td>3 → 4</td><td>6</td><td>6</td><td class="critical">0</td><td class="critical">✅ CRITICAL</td></tr>
+        <tr class="highlight-row"><td>4 → 5</td><td>8</td><td>8</td><td class="critical">0</td><td class="critical">✅ CRITICAL</td></tr>
+      </table>
+      <div class="alert alert-red" style="margin-top:12px;margin-bottom:0;">
+        <div class="alert-icon">🎯</div>
+        <div><p><strong>Critical Path: 1 → 3 → 4 → 5</strong> (duration = 6 + 2 + 5 = 13 days). Any delay here delays the whole project!</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🎲 Step 5 — Probability Calculation</h3>
+      <p>What is the probability of finishing within <strong>15 days</strong>?</p>
+      <div class="example">
+        <h4>Critical path variances only (activities 1→3, 3→4, 4→5):</h4>
+        <p>σ²_project = 1.78 + 0.11 + 2.78 = <strong>4.67</strong></p>
+        <p>σ_project = √4.67 = <strong>2.16 days</strong></p>
+        <p style="margin-top:10px;">Z = (T_target − Te) / σ = (15 − 13) / 2.16 = <strong>+0.93</strong></p>
+        <p>Look up Z = 0.93 in Z-table → P ≈ <strong>82.4%</strong> chance of finishing within 15 days</p>
+        <p>In Excel: <code>=NORMSDIST(0.93)</code> → 0.824</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 5: FLOAT TYPES ===================== -->
+  <div class="section" id="float">
+    <div class="section-header">
+      <div class="section-icon icon-green">🕐</div>
+      <h2>Types of Float (Directly from Your Slides)</h2>
+      <span class="tag green">Often Tested</span>
+    </div>
+
+    <div class="alert alert-yellow">
+      <div class="alert-icon">📌</div>
+      <div>
+        <strong>Your lecturer defined THREE types of float</strong>
+        <p>Most textbooks only cover Total Float — but your slides also define Free Float and Independent Float. Make sure you know all three!</p>
+      </div>
+    </div>
+
+    <div class="def-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="def-card" style="border-top: 4px solid #e94560;">
+        <div class="term" style="color:#e94560;">Total Float</div>
+        <div class="meaning">The <strong>maximum delay</strong> that can be assigned to any activity without delaying the entire project, assuming no delays in other activities.</div>
+        <div class="formula-tag">TF = L(j) − E(i) − D_ij</div>
+        <div style="margin-top:10px;font-size:0.85rem;color:#e94560;font-weight:700;">Critical activity = TF of 0</div>
+      </div>
+      <div class="def-card" style="border-top: 4px solid #2980b9;">
+        <div class="term" style="color:#2980b9;">Free Float</div>
+        <div class="meaning">The delay that can be assigned to an activity <strong>without delaying subsequent activities</strong> — takes into account the effect on activities that come afterwards.</div>
+        <div class="formula-tag">FF = E(j) − E(i) − D_ij</div>
+      </div>
+      <div class="def-card" style="border-top: 4px solid #27ae60;">
+        <div class="term" style="color:#27ae60;">Independent Float</div>
+        <div class="meaning">Delay possible <strong>without affecting subsequent OR preceding</strong> activities. Calculated assuming worst case: predecessors finish at their <em>latest</em> times, successors begin at their <em>earliest</em> times.</div>
+        <div class="formula-tag">IF = E(j) − L(i) − D_ij</div>
+        <div style="margin-top:6px;font-size:0.8rem;color:#27ae60;">If negative → treat as 0</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📊 Float Comparison from Your Slide 28 Data</h3>
+      <p>Your lecturer showed these exact values from a Java program calculation:</p>
+      <table>
+        <tr><th>Activity (i,j)</th><th>Free Float</th><th>Independent Float</th><th>Total Float</th><th>Critical?</th></tr>
+        <tr><td>1, 2</td><td>0.0</td><td>0.0</td><td class="zero">3.0</td><td>❌</td></tr>
+        <tr class="highlight-row"><td>1, 3</td><td>0.0</td><td>0.0</td><td class="critical">0.0</td><td class="critical">✅</td></tr>
+        <tr><td>2, 3</td><td>3.0</td><td>0.0</td><td class="zero">3.0</td><td>❌</td></tr>
+        <tr class="highlight-row"><td>3, 4</td><td>0.0</td><td>0.0</td><td class="critical">0.0</td><td class="critical">✅</td></tr>
+        <tr><td>4, 5</td><td>0.0</td><td>0.0</td><td class="zero">7.0</td><td>❌</td></tr>
+        <tr class="highlight-row"><td>4, 7</td><td>0.0</td><td>0.0</td><td class="critical">0.0</td><td class="critical">✅</td></tr>
+        <tr><td>7, 8</td><td>0.0</td><td>0.0</td><td class="zero">1.0</td><td>❌</td></tr>
+        <tr class="highlight-row"><td>7, 9</td><td>0.0</td><td>0.0</td><td class="critical">0.0</td><td class="critical">✅</td></tr>
+        <tr class="highlight-row"><td>9, 10</td><td>0.0</td><td>0.0</td><td class="critical">0.0</td><td class="critical">✅</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>💰 Cost/Time Trade-Off — Crashing (from your slides)</h3>
+      <p>Your slides note: <em>"Most activities can be done faster if you pay more money — work overtime, hire more people, rent extra equipment, incentive contracts."</em></p>
+      <p>PERT/CPM has the ability to <strong>crash a schedule</strong> — shorten activity time to reduce overall project completion time, at the cost of increased spending. You crash activities on the <em>critical path only</em> — there's no benefit to crashing non-critical activities.</p>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 6: RESOURCES ===================== -->
+  <div class="section" id="resources">
+    <div class="section-header">
+      <div class="section-icon icon-blue">📚</div>
+      <h2>Curated Learning Resources</h2>
+      <span class="tag blue">All Platforms</span>
+    </div>
+
+    <h3 style="font-size:1rem;margin-bottom:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">📺 YouTube — Free, Visual, Great for PERT/CPM</h3>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-icon yt">▶️</div>
+        <div>
+          <div class="title">PERT/CPM Step-by-Step (OnlinePMCourses)</div>
+          <div class="desc">Mike Clayton's channel — crystal clear CPM forward/backward pass with worked examples. Highly recommended.</div>
+          <div class="search">🔍 Search: "Mike Clayton CPM critical path method"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon yt">▶️</div>
+        <div>
+          <div class="title">PERT Solved Numerical Examples</div>
+          <div class="desc">Engineering Funda channel — walks through full PERT problems with 3-estimate calculations and probability.</div>
+          <div class="search">🔍 Search: "Engineering Funda PERT CPM solved problems"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon yt">▶️</div>
+        <div>
+          <div class="title">Forward Pass & Backward Pass Tutorial</div>
+          <div class="desc">Visual step-by-step on how to traverse a network diagram. Essential for your Activity on Arrow notation.</div>
+          <div class="search">🔍 Search: "forward pass backward pass project management AOA"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon yt">▶️</div>
+        <div>
+          <div class="title">CPM vs PERT — What's the Difference?</div>
+          <div class="desc">Simplilearn explains the key conceptual difference: deterministic vs probabilistic durations. Great for tests.</div>
+          <div class="search">🔍 Search: "Simplilearn PERT vs CPM project management"</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;margin:24px 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">💼 LinkedIn Learning — Structured Courses</h3>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-icon li">in</div>
+        <div>
+          <div class="title">Project Management Foundations</div>
+          <div class="desc">Bob McGannon — covers WBS, scheduling, critical path. Perfect for your L1 + L2 content. ~3 hours.</div>
+          <div class="search">🔍 linkedin.com/learning → search "Project Management Foundations"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon li">in</div>
+        <div>
+          <div class="title">Project Management: Scheduling</div>
+          <div class="desc">Deep dive into Gantt charts, network diagrams, float calculation. Directly matches your L2 content.</div>
+          <div class="search">🔍 linkedin.com/learning → search "Project Management Scheduling"</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;margin:24px 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">📖 O'Reilly / Books — Deep Understanding</h3>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-icon bk">📗</div>
+        <div>
+          <div class="title">Information Technology Project Management — Kathy Schwalbe</div>
+          <div class="desc"><strong>Your prescribed textbook from the subject guide!</strong> Chapters on scheduling and network analysis match your curriculum exactly.</div>
+          <div class="search">🔍 O'Reilly search: "Information Technology Project Management Schwalbe"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon or">🦅</div>
+        <div>
+          <div class="title">Head First PMP — Greene & Stellman</div>
+          <div class="desc">Visual, example-heavy guide. Has excellent worked PERT/CPM examples with diagrams. Great for visual learners.</div>
+          <div class="search">🔍 O'Reilly search: "Head First PMP"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon or">🦅</div>
+        <div>
+          <div class="title">Operations Management — Heizer & Render</div>
+          <div class="desc">Has a full, self-contained chapter on PERT/CPM with Beta distribution explanation and probability calculations.</div>
+          <div class="search">🔍 O'Reilly search: "Operations Management Heizer Render PERT"</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon bk">📘</div>
+        <div>
+          <div class="title">PMBOK Guide (PMI)</div>
+          <div class="desc">The industry standard — covers all knowledge areas your L1 slides reference. Reference sections on Time Management.</div>
+          <div class="search">🔍 O'Reilly search: "PMBOK Guide Project Management Body of Knowledge"</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;margin:24px 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">🛠️ Practice Tools (Free)</h3>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-icon bk">🖥️</div>
+        <div>
+          <div class="title">ProjectLibre (Free Download)</div>
+          <div class="desc">Free open-source PM tool. Draw PERT networks and Gantt charts, see critical path automatically calculated.</div>
+          <div class="search">🌐 projectlibre.com — free download</div>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon bk">📊</div>
+        <div>
+          <div class="title">Excel PERT/CPM</div>
+          <div class="desc">Use Excel with =NORMSDIST(z) for probability calculations. Build your own PERT table for practice.</div>
+          <div class="search">🔍 Search: "PERT CPM Excel template free download"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 7: CHEAT SHEET ===================== -->
+  <div class="section" id="cheatsheet">
+    <div class="section-header">
+      <div class="section-icon icon-red">⚡</div>
+      <h2>Quick Revision Cheat Sheet</h2>
+      <span class="tag">Print This!</span>
+    </div>
+
+    <div class="cheat">
+      <h3>🧠 All Formulas — PERT & CPM</h3>
+      <div class="cheat-grid">
+        <div class="cheat-item"><div class="label">PERT Expected Time</div><div class="value">Te = (A + 4M + B) / 6</div></div>
+        <div class="cheat-item"><div class="label">Activity Variance</div><div class="value">σ² = ((B − A) / 6)²</div></div>
+        <div class="cheat-item"><div class="label">Standard Deviation</div><div class="value">σ = (B − A) / 6</div></div>
+        <div class="cheat-item"><div class="label">Project Variance</div><div class="value">σ²_proj = Σσ²_critical</div></div>
+        <div class="cheat-item"><div class="label">Z-Score for Probability</div><div class="value">z = (T_target − Te) / σ_proj</div></div>
+        <div class="cheat-item"><div class="label">Forward Pass</div><div class="value">E(j) = max{E(i) + D_ij}</div></div>
+        <div class="cheat-item"><div class="label">Backward Pass</div><div class="value">L(i) = min{L(j) − D_ij}</div></div>
+        <div class="cheat-item"><div class="label">Total Float</div><div class="value">TF = L(j) − E(i) − D_ij</div></div>
+        <div class="cheat-item"><div class="label">Free Float</div><div class="value">FF = E(j) − E(i) − D_ij</div></div>
+        <div class="cheat-item"><div class="label">Independent Float</div><div class="value">IF = E(j) − L(i) − D_ij</div></div>
+        <div class="cheat-item"><div class="label">Critical Path</div><div class="value">Total Float = 0</div></div>
+        <div class="cheat-item"><div class="label">Project Duration (PERT)</div><div class="value">50% probability at Te</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>🔑 Key Distinctions — Test Trap Avoidance</h3>
+      <table>
+        <tr><th>Concept</th><th>Remember This</th></tr>
+        <tr><td>CPM vs PERT</td><td>CPM = deterministic (one estimate). PERT = probabilistic (three estimates). <strong>PERT = CPM + probabilistic times.</strong></td></tr>
+        <tr><td>Activity vs Milestone</td><td>Activity = uses time &amp; resources (arrow). Milestone = point in time, no time/resources consumed (node/circle).</td></tr>
+        <tr><td>Dummy Activity</td><td>Dashed arrow. Zero time, zero resources. Used to show dependency where none exists physically.</td></tr>
+        <tr><td>Float = 0 means...</td><td>The activity is on the <strong>critical path</strong>. Delaying it delays the project.</td></tr>
+        <tr><td>Forward Pass</td><td>Left to right. Take the <strong>maximum</strong> when multiple paths merge at a node.</td></tr>
+        <tr><td>Backward Pass</td><td>Right to left. Take the <strong>minimum</strong> when multiple paths branch at a node.</td></tr>
+        <tr><td>Which activities for σ²_project?</td><td><strong>Critical path activities ONLY.</strong> Non-critical variances are NOT summed.</td></tr>
+        <tr><td>A in PERT</td><td>Optimistic. Assumes NO delays, not even likely ones (no sick days!).</td></tr>
+        <tr><td>B in PERT</td><td>Pessimistic. Should be exceeded <strong>no more than 1%</strong> of the time.</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <strong>PFD473S Study Guide — CPUT 2026</strong><br>
+  Built from your lecture slides: L1 Introduction to PM, L2 Planning &amp; Scheduling, PERT.pptx<br>
+  Prescribed textbook: <em>Information Technology Project Management</em> — Kathy Schwalbe
+</div>
+
+<script>
+  // Sticky nav highlight
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

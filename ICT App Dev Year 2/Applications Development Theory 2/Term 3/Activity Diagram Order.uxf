@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>40</y>
+      <w>340</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>User
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>40</y>
+      <w>280</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>FoodFoward SA System</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>60</y>
+      <w>650</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;630.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>190</x>
+      <y>100</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Request Food Parcel Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>110</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>560</x>
+      <y>100</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Display Available Food Parcels</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>200</x>
+      <y>190</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Select Food Parcel Items</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>130</y>
+      <w>380</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;360.0;20.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>570</x>
+      <y>190</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Create Order 
+Link to User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>200</y>
+      <w>230</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>160</x>
+      <y>380</y>
+      <w>240</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Display Food Parcle as Out of Stock</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>220</y>
+      <w>380</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;30.0;360.0;30.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>240</x>
+      <y>290</y>
+      <w>80</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Available?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>280</y>
+      <w>80</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>
+No
+
+
+
+
+
+lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;40.0;60.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>300</y>
+      <w>310</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Yes
+
+
+
+lt=&lt;-
+</panel_attributes>
+    <additional_attributes>270.0;60.0;270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>510</x>
+      <y>460</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Display Oder ready for Shipment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>530</x>
+      <y>360</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Update Order 
+Link to User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>390</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>490</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>570</x>
+      <y>530</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

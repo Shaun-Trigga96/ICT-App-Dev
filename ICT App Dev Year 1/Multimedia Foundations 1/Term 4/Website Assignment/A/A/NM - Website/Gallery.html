@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141311;
+background-position: auto;
+background-repeat: no repeat;
+margin: 0;
+}
+
+ol { list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: rgba(106,190,216);
+   margin-bottom: 3px solid black;}
+   
+li { float: left; }
+
+li a {
+  display: block;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-family: caviar dreams;
+  font-size: 20px;
+}
+
+li a:hover{
+  background-color: rgb(0,0,255,0.3);
+}
+
+h2{font-family: caviar dreams;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 110px;
+}
+
+h4{font-family: caviar dreams;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+
+}  
+p{font-family: caviar dreams;
+  text-align: center;
+  font-size: 17px;
+}
+  
+.footer {
+   text-align: left;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   overflow: hidden;
+   padding-left: 30px;
+   background-image: url("nm.jpg");
+   background-repeat: no-repeat;
+   background-size: 150px 80px;
+   background-position: center;
+   background-color: rgba(106,190,216);
+   color: rgba(106,190,216);
+   font-weight: bold;
+   margin: 0;
+   margin-top: 3px solid black;
+}
+
+.main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.content {
+text-align: center;
+font-family: caviar dreams;
+  background-color: white;
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<ol>
+<li><a href="Homepage.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="Contact.html">Contact</a></li>
+<li><a href="Gallery.html">Gallery</a></li>
+<li><a href="Services.html">Services</a></li>
+</ol>
+<div class="footer">
+ <h4>l</h4> 
+</div>
+
+<div class="main">
+
+<h2>Gallery</h2>
+<h4>This page covers work I have completed during my first year</h4>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="Charity Poster.jpg" alt="Charity Poster" style="width:100%">
+      <h3>Charity Poster</h3>
+      <p>A poster designed for awareness of a charity event being held for a nigh shelter<p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="Haven Nighshelter Poster 2.jpg" alt="Nighshelter" style="width:100%">
+      <h3>Charity Poster - Rough</h3>
+      <p>The first draft of the charity poster. <br>Used as a referral for the final</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="Jive Logo.jpg" alt="Jive Logo" style="width:100%">
+      <h3>Jive Redesign</h3>
+      <p>We were tasked to do a redesign of popular South African soft drink known as Jive. </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="Carpool Flyer 1.png" alt="Flyer" style="width:100%">
+      <h3>Carpool Flyer</h3>
+      <p>A flyer used to advertise a carpool website we developed for a group project</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="content">
+  <img src="Carpool - BC 2.png" alt="Business Card" style="width:100%">
+  <h3>Business Card</h3>
+  <p>A business card that was also designed for the carpool project</p>
+</div>
+<br>
+<div class="content">
+  <img src="Jive Logo Redesign.jpg" alt="Logo" style="width:100%">
+  <h3>Jive Logo Concept</h3>
+  <p>A throwaway design for the jive logo</p>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+</body>
+</html>

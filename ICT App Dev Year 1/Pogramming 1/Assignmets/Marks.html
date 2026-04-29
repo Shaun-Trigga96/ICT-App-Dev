@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Student Mark" content="A registerd student can access their Programming 1 Marks; charset=UTF-8"/>  
+        <meta name= "Author" content="Thabiso Matsaba"/>
+        <meta name= "Keywords" content ="Student, Marks"/>
+        <meta name= "Viewport" content ="width=device-width, initial scale=1.0"/>
+        <title>Student Marks</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>     
+    </head>
+    <body>
+        <a href="Home Page.html">Return to Home Page</a> 
+        <h2>Student Marks</h2>
+       
+        <p id="Student Marks"></p>
+        
+   <script>
+var text="";
+var i;
+var testMark=100;
+var passMark=50;
+var outstandingMark=0;
+var Names= ["Thabiso", "Shaun", "Patrick", "Luvo", "Zweli"];
+var Marks= [90,80,70,60,0];
+document.write("<table>");
+document.write("<tr>");
+document.write("<th>Names</th>");
+document.write("<th>Marks</th>");
+document.write("<tr>");
+alert(Marks.length);
+
+    for(i=0; testResult.length; i++){
+document.write("<tr>");
+document.write("<td>" + Names[ctr] + "</td>");
+document.write("<th>" + Marks[ctr] + "</td>");
+document.write("<tr>");
+
+    if (testResult[i] >= passMark){
+    
+    text+= testResult[i] + "Passes" + "<br>";
+    }
+    else 
+        text+= "Student:"+ + Marks[i] +"Fails" + "<br>";
+    
+     if(Marks == outstandingMark){
+
+        text+= "Student:"+ Marks[i] + "Mark is Outstanding" + "<br>";
+    }
+    }
+    document.write("<table>");
+    document.getElementById("Student Marks").innerHTML = text;
+  </script>
+
+</body>
+</html>
