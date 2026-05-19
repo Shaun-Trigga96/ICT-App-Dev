@@ -1,0 +1,603 @@
+1
+00:00:00,090 --> 00:00:03,480
+Hello, all my friends, and welcome to exercise number 36.
+
+2
+00:00:03,660 --> 00:00:08,220
+And this exercise, we were asked to write a program to add to mystery cases.
+
+3
+00:00:08,760 --> 00:00:17,010
+So let's revise some basics of the addition of two mattresses of the same size.
+
+4
+00:00:17,520 --> 00:00:26,170
+Here we have two matrices is three eight four six plus four zero one nine minus nine.
+
+5
+00:00:26,190 --> 00:00:28,320
+We add the.
+
+6
+00:00:29,350 --> 00:00:37,270
+Elements at the same URL at the same column with the same row and same column, and we at it, we get
+
+7
+00:00:37,270 --> 00:00:41,440
+the result and stored them in a result of Matrix.
+
+8
+00:00:41,930 --> 00:00:46,120
+OK, so addition of two mattresses, this will result in a matrix.
+
+9
+00:00:46,600 --> 00:00:50,080
+OK, so we start by.
+
+10
+00:00:50,860 --> 00:00:57,340
+So we add the first element the elements of the same cell with the same position.
+
+11
+00:00:57,340 --> 00:01:02,650
+We add them to get a result of three plus four equal to seven.
+
+12
+00:01:02,650 --> 00:01:07,560
+So we store it inside matrix in the same cell in the same position.
+
+13
+00:01:07,570 --> 00:01:11,560
+So eight plus zero eight.
+
+14
+00:01:11,740 --> 00:01:20,140
+So it will result in the second column and the first through here we have in the second row the first
+
+15
+00:01:20,140 --> 00:01:27,730
+column for second row and the first column one four plus one is equal to five.
+
+16
+00:01:27,730 --> 00:01:31,780
+So we have five and six minute plus minus nine.
+
+17
+00:01:31,780 --> 00:01:34,090
+It will result in minus three.
+
+18
+00:01:34,390 --> 00:01:39,730
+So this is how we add that to mattresses of the same size.
+
+19
+00:01:40,180 --> 00:01:42,820
+How to implement this encoding.
+
+20
+00:01:43,330 --> 00:01:45,430
+And this exercise is as good.
+
+21
+00:01:45,430 --> 00:01:56,290
+In an Amazon interview, he told the interviewer tells that the candidate to make a program an algorithm
+
+22
+00:01:56,410 --> 00:01:58,450
+that add two matrices.
+
+23
+00:01:59,020 --> 00:02:02,650
+It's very simple, but how to implement it in the code.
+
+24
+00:02:03,610 --> 00:02:08,200
+First of all, we need to detect the number of rows and number of God.
+
+25
+00:02:08,320 --> 00:02:10,030
+So the first step?
+
+26
+00:02:13,780 --> 00:02:21,250
+Remember, in order to download all the source code that the code, please watch the video about the
+
+27
+00:02:21,250 --> 00:02:27,760
+resources and how to download it from the resources folder inside our Udemy courses.
+
+28
+00:02:27,980 --> 00:02:35,710
+OK, so on every on every video, there is a resource folder and the enemy, of course, is to download
+
+29
+00:02:35,710 --> 00:02:44,050
+its its corresponding resource quoting source code and C and D.
+
+30
+00:02:44,410 --> 00:02:44,740
+OK.
+
+31
+00:02:45,010 --> 00:02:47,980
+I am creating these variables now.
+
+32
+00:02:48,010 --> 00:02:50,950
+I need this cannot allow the user to enter
+
+33
+00:02:54,010 --> 00:02:55,450
+there at these values.
+
+34
+00:02:55,640 --> 00:02:59,770
+OK, I implemented the package import Java digital scanner.
+
+35
+00:03:01,650 --> 00:03:06,480
+System Dot and OK.
+
+36
+00:03:08,580 --> 00:03:17,880
+System that out, the Brent Allen input
+
+37
+00:03:20,430 --> 00:03:26,520
+number of rows or peas, no frills.
+
+38
+00:03:31,420 --> 00:03:35,860
+An equal number of and entered next and
+
+39
+00:03:40,270 --> 00:03:51,610
+OK system, now we need to get number of columns, so system that our footprint L and number of columns,
+
+40
+00:03:51,790 --> 00:03:52,480
+no
+
+41
+00:03:55,000 --> 00:03:56,380
+number of columns.
+
+42
+00:04:00,700 --> 00:04:12,970
+And equal to I and next and OK, how this is how to gather the information about the mattresses.
+
+43
+00:04:13,340 --> 00:04:20,740
+OK, now I am here, the first step creating mattresses.
+
+44
+00:04:24,320 --> 00:04:33,980
+Also, we need to continue with this step by making an array one of the array, so the Matrix is two
+
+45
+00:04:35,120 --> 00:04:43,520
+dimensional array and we have learned about that and that doubly or two dimensional array.
+
+46
+00:04:43,700 --> 00:04:54,970
+OK, so array to having these equal to you and of em and that and these are the dimension.
+
+47
+00:04:55,590 --> 00:05:09,370
+And OK, now the resulting array is called sum or a result result, or some some of thirties.
+
+48
+00:05:10,520 --> 00:05:18,920
+It's also a two dimensional array, new and array of m and balls.
+
+49
+00:05:19,220 --> 00:05:19,660
+OK.
+
+50
+00:05:20,540 --> 00:05:27,020
+This is the first step of creating these these elements.
+
+51
+00:05:27,110 --> 00:05:31,910
+OK, now step number two.
+
+52
+00:05:34,780 --> 00:05:48,100
+We need do to allow the user to enter the numbers inside the Matrix, so filling the first matrix,
+
+53
+00:05:49,960 --> 00:05:50,930
+how to fill it.
+
+54
+00:05:50,950 --> 00:05:52,030
+We start by.
+
+55
+00:05:52,750 --> 00:05:55,780
+We tell the user the system that ab the two.
+
+56
+00:05:57,000 --> 00:06:03,760
+And please enter enter first matrix.
+
+57
+00:06:05,860 --> 00:06:11,040
+We start by a for loop starting from C equal to zero.
+
+58
+00:06:11,050 --> 00:06:19,450
+This is the the element that we have created c less than the number of rows and C plus plus.
+
+59
+00:06:19,960 --> 00:06:24,790
+In order to fill it to the other 2D array, we need another loop.
+
+60
+00:06:24,820 --> 00:06:28,950
+So the equal to zero in nested loop.
+
+61
+00:06:28,960 --> 00:06:33,790
+So when working with when working with through the array.
+
+62
+00:06:33,820 --> 00:06:39,880
+Think about the nested looks like and searching, meeting and searching or whatever you want.
+
+63
+00:06:39,910 --> 00:06:48,120
+So this exercise is we are practicing the insertion of of elements inside to the me.
+
+64
+00:06:48,910 --> 00:06:49,360
+OK.
+
+65
+00:06:54,650 --> 00:06:56,390
+And what next?
+
+66
+00:06:57,130 --> 00:07:01,160
+And this is the first.
+
+67
+00:07:02,790 --> 00:07:05,520
+That's step number three.
+
+68
+00:07:06,270 --> 00:07:12,450
+Filling the second matrix the same way.
+
+69
+00:07:12,480 --> 00:07:20,070
+I will copy this copy and paste system and spring second.
+
+70
+00:07:21,890 --> 00:07:29,790
+And their second element, see what 2:00am C++ D four, two zero D of the same concept.
+
+71
+00:07:29,870 --> 00:07:30,330
+OK.
+
+72
+00:07:30,710 --> 00:07:32,570
+We are filling the second.
+
+73
+00:07:33,680 --> 00:07:36,410
+But here is the array number two.
+
+74
+00:07:36,680 --> 00:07:37,130
+OK.
+
+75
+00:07:37,640 --> 00:07:38,990
+This is the trick.
+
+76
+00:07:39,990 --> 00:07:40,420
+OK.
+
+77
+00:07:41,940 --> 00:07:48,890
+Now we need to make the summation, OK?
+
+78
+00:07:50,470 --> 00:07:52,390
+We need to start the submission.
+
+79
+00:07:53,140 --> 00:08:03,180
+Step number three, four step number four is telling us to make that addition.
+
+80
+00:08:06,970 --> 00:08:08,560
+OK, how to make additions.
+
+81
+00:08:08,560 --> 00:08:15,550
+We start also by looping through the and inserting inside the inside the sum.
+
+82
+00:08:15,580 --> 00:08:20,200
+This is the sum out of an array two dimensional array.
+
+83
+00:08:20,350 --> 00:08:27,010
+We need to start inserting inside the some the elements that are resulting from the addition of elements
+
+84
+00:08:27,010 --> 00:08:29,590
+of Array one and array two of the same position.
+
+85
+00:08:29,680 --> 00:08:31,840
+Inside some, this is the algorithm.
+
+86
+00:08:32,020 --> 00:08:32,320
+OK.
+
+87
+00:08:32,710 --> 00:08:36,430
+Don't worry if you don't understand we are working with you.
+
+88
+00:08:36,790 --> 00:08:37,810
+Step by step.
+
+89
+00:08:37,840 --> 00:08:44,500
+So see equal to zero start by sequence zero see less than in the same concept and the same dimensional
+
+90
+00:08:45,400 --> 00:08:46,530
+C++.
+
+91
+00:08:47,770 --> 00:08:58,030
+Now we need for the equal to zero, the less then and the plus plus gain.
+
+92
+00:09:00,250 --> 00:09:10,030
+Now, the sum at the end of the same and you see, guys, this is the algorithm C and D that call them
+
+93
+00:09:11,200 --> 00:09:17,170
+the same column and the same row of the first element and the second element.
+
+94
+00:09:17,560 --> 00:09:34,000
+Here we are, adding array one at Index C and an Index D of gay plus array to array two of C and D.
+
+95
+00:09:35,050 --> 00:09:35,680
+OK.
+
+96
+00:09:36,070 --> 00:09:40,420
+We are just adding that elements of the same position.
+
+97
+00:09:40,600 --> 00:09:49,420
+You see guys, the Index C and Index D and RF array one and element of Array two at the index and Index
+
+98
+00:09:49,420 --> 00:09:53,950
+D, so consider C equal to one and the equal to two.
+
+99
+00:09:54,250 --> 00:10:01,420
+We are adding C one and C two and we are putting inside this one and two.
+
+100
+00:10:01,720 --> 00:10:11,980
+I am telling that the element of the resulting array at a throw one column two is equal to the element
+
+101
+00:10:12,610 --> 00:10:20,620
+of the summation of elements of array, one column row, a throw one and column two, and an element
+
+102
+00:10:20,620 --> 00:10:23,770
+of array two of row one and column two.
+
+103
+00:10:23,890 --> 00:10:31,630
+So the resulting addition will be stored in the same position of row one and row to and column.
+
+104
+00:10:31,870 --> 00:10:32,230
+OK.
+
+105
+00:10:32,410 --> 00:10:40,420
+This is would be made every time we have C and D and that dimension.
+
+106
+00:10:40,430 --> 00:10:49,390
+So if we have inserted like three by three, so we would make this addition nine times, OK, if we
+
+107
+00:10:49,390 --> 00:10:55,120
+have two by two, it will result in four times four iteration of this loop.
+
+108
+00:10:55,570 --> 00:10:55,930
+OK.
+
+109
+00:10:56,980 --> 00:10:57,370
+No
+
+110
+00:10:59,920 --> 00:11:12,430
+system that out, that print, we need to print some of the metrics we are going to display the result
+
+111
+00:11:12,640 --> 00:11:14,350
+of the mattresses.
+
+112
+00:11:21,300 --> 00:11:31,470
+In order to print the metrics, we need step number five printing to the.
+
+113
+00:11:33,480 --> 00:11:41,430
+This exercise will we have learned about and we have practiced about like making conditions, storing
+
+114
+00:11:41,430 --> 00:11:47,680
+inside today, inserting elements and printing the results and so on.
+
+115
+00:11:47,730 --> 00:11:53,370
+So this is this exercise covers many, many important topics.
+
+116
+00:11:53,880 --> 00:11:59,490
+So see, less than M C is plus plus in the same way.
+
+117
+00:11:59,490 --> 00:12:04,680
+So for the equal to zero.
+
+118
+00:12:05,730 --> 00:12:07,800
+The same concept as above K.
+
+119
+00:12:12,360 --> 00:12:13,470
+Same concept.
+
+120
+00:12:14,010 --> 00:12:27,690
+We are just printing them out of print and print, some at index see and Index B OK.
+
+121
+00:12:27,990 --> 00:12:29,970
+We are printing business.
+
+122
+00:12:32,220 --> 00:12:34,170
+A. OK.
+
+123
+00:12:36,250 --> 00:12:38,710
+After we finish from this loop.
+
+124
+00:12:40,400 --> 00:12:40,750
+Lou?
+
+125
+00:12:42,130 --> 00:12:42,670
+OK.
+
+126
+00:12:42,940 --> 00:12:52,240
+We are going to put it every time on another line system that our print.
+
+127
+00:12:54,420 --> 00:12:57,090
+Ellen Mueller, gay.
+
+128
+00:13:00,060 --> 00:13:02,010
+Now, let's start.
+
+129
+00:13:03,040 --> 00:13:04,880
+Examining this program.
+
+130
+00:13:06,010 --> 00:13:07,120
+No afros.
+
+131
+00:13:08,110 --> 00:13:08,500
+OK.
+
+132
+00:13:09,520 --> 00:13:12,400
+We will insert three, eight, four six.
+
+133
+00:13:13,030 --> 00:13:13,510
+So.
+
+134
+00:13:16,990 --> 00:13:21,060
+The number of rows is through number of columns is two.
+
+135
+00:13:21,520 --> 00:13:24,610
+The first matrix is three.
+
+136
+00:13:26,440 --> 00:13:30,330
+Eight, four, six.
+
+137
+00:13:31,500 --> 00:13:39,960
+And the second matrix, four zero one minus nine, four, sorry, four zero.
+
+138
+00:13:41,990 --> 00:13:43,150
+Sir, you.
+
+139
+00:13:44,350 --> 00:13:46,360
+One minus nine.
+
+140
+00:13:48,250 --> 00:13:53,390
+The some of the metrics, as in metrics, seven, eight, five minus three.
+
+141
+00:13:53,410 --> 00:13:54,590
+Let's see.
+
+142
+00:13:57,260 --> 00:13:59,180
+Seven, eight, five minus three.
+
+143
+00:13:59,240 --> 00:14:05,870
+OK, so we are making this program works by preventing by.
+
+144
+00:14:07,090 --> 00:14:15,610
+Showing here I read some of the mother's print alarm system, the Delta brand and everything working
+
+145
+00:14:15,610 --> 00:14:15,910
+fine.
+
+146
+00:14:17,050 --> 00:14:18,420
+And here we go.
+
+147
+00:14:18,430 --> 00:14:29,050
+We have done everything clearly and we have and we have discussed many topics about that to the arrays
+
+148
+00:14:29,050 --> 00:14:37,570
+and like feeling like inserting the elements inside to the area, making the addition between two dimensional
+
+149
+00:14:37,570 --> 00:14:38,020
+array.
+
+150
+00:14:38,350 --> 00:14:42,490
+And we have printing that to the editor.
+
+151
+00:14:42,950 --> 00:14:45,250
+OK, so it's very simple.

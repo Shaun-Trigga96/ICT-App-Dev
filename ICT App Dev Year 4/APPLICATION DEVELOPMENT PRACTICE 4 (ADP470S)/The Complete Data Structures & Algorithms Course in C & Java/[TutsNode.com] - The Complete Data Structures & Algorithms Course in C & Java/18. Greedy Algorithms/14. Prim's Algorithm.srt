@@ -1,0 +1,187 @@
+1
+00:00:00,330 --> 00:00:08,100
+Dreams algorithm brings the algorithm is a minimum spanning tree algorithm that takes a graph as input
+
+2
+00:00:08,100 --> 00:00:18,660
+and file the subset of the edges of that graph, which form a tree that includes every vertex and has
+
+3
+00:00:18,660 --> 00:00:25,110
+the minimum sum of weights among all the trees that can be formed from that crop.
+
+4
+00:00:26,670 --> 00:00:36,930
+So the Prem's algorithm falls under a class of algorithms called greedy algorithms that find the local
+
+5
+00:00:36,930 --> 00:00:40,290
+optimum in the hopes of finding a global optimum.
+
+6
+00:00:41,250 --> 00:00:48,150
+We start from one vertex and keep adding edges with the lowest weight until we reach our goal.
+
+7
+00:00:48,870 --> 00:00:57,330
+The steps for implementing Prem's algorithms are as follows We start by analysing the minimum spanning
+
+8
+00:00:57,330 --> 00:00:59,790
+tree with a vertex chosen at random.
+
+9
+00:01:00,660 --> 00:01:08,850
+Find all edges that connect that connect the tree to new vertices and find the minimum and add it to
+
+10
+00:01:08,850 --> 00:01:09,420
+the tree.
+
+11
+00:01:10,380 --> 00:01:17,720
+The third step is keep repeating step number two until we get the minimum spanning tree, so that's
+
+12
+00:01:17,730 --> 00:01:18,630
+took an example.
+
+13
+00:01:20,020 --> 00:01:27,070
+Start with a weighted graph, I want from you to write this example down on your copy book in order
+
+14
+00:01:27,070 --> 00:01:35,080
+to understand it and in order to implement it with sea language and Java language and the next videos.
+
+15
+00:01:35,200 --> 00:01:44,680
+So in order to understand what we are going to do later on encoding, please understand this algorithm,
+
+16
+00:01:45,460 --> 00:01:46,480
+this animation.
+
+17
+00:01:46,600 --> 00:01:51,130
+So the first step we start with a weighted the graph here.
+
+18
+00:01:51,250 --> 00:01:58,000
+This is the way the graph and we choose the any in any starting point.
+
+19
+00:01:58,000 --> 00:01:58,900
+We start from C.
+
+20
+00:02:02,100 --> 00:02:05,580
+Choose a vertex, which is the vertex.
+
+21
+00:02:06,630 --> 00:02:11,700
+We choose the short edge from this vertex and add it.
+
+22
+00:02:14,790 --> 00:02:20,730
+The third step is adding the nearest vertex, not yet in the solution.
+
+23
+00:02:21,060 --> 00:02:25,350
+So we are getting the shortest way from this starting point.
+
+24
+00:02:26,160 --> 00:02:27,180
+We add.
+
+25
+00:02:28,300 --> 00:02:38,770
+The step number five, the shortest way with with the next with the next points, so f is that as near
+
+26
+00:02:38,860 --> 00:02:43,180
+to E and we add it to the path.
+
+27
+00:02:43,600 --> 00:02:46,930
+So we choose the nearest edge, not yet in the solution.
+
+28
+00:02:47,170 --> 00:02:51,310
+If there are multiple choices, so choose one at random.
+
+29
+00:02:51,850 --> 00:03:00,280
+If we have multiple choices, so he has a three and weighted city so we can choose either F or we can
+
+30
+00:03:00,280 --> 00:03:01,770
+choose either D..
+
+31
+00:03:02,230 --> 00:03:03,670
+So you can create.
+
+32
+00:03:05,310 --> 00:03:14,100
+In the previous step, even as see with Connected because it is having three waited three or you can
+
+33
+00:03:14,100 --> 00:03:19,380
+choose F, which is way that three you can choose at Atlanta, whatever you want.
+
+34
+00:03:20,160 --> 00:03:29,460
+So we have to choose E and F, and we choose C and D again, and now we implement until having the spanning
+
+35
+00:03:29,460 --> 00:03:31,950
+three Cell C will be connected with A.
+
+36
+00:03:32,730 --> 00:03:35,820
+This is the Prem's algorithm now.
+
+37
+00:03:35,820 --> 00:03:42,930
+Prince versus Cruz call algorithm guru skills algorithm is another popular minimum spanning tree algorithm
+
+38
+00:03:43,230 --> 00:03:51,810
+that uses a different logic to find that the unknown at three minimum spanning tree of a graph instead
+
+39
+00:03:51,810 --> 00:03:59,190
+of starting from a vertex scale algorithm, sort all the edges from the low way to high and keeps adding
+
+40
+00:03:59,190 --> 00:04:05,490
+keep adding the lowest edges, ignoring those edges that create a cycle.
+
+41
+00:04:05,640 --> 00:04:15,810
+So the premise algorithms complexity would be e loug v e represent the number of edges and log v the
+
+42
+00:04:15,810 --> 00:04:23,130
+v two percent that vertices no nets c that primes algorithm application.
+
+43
+00:04:23,130 --> 00:04:31,500
+We can see it in the laying laying cables of electrical wiring in network designed or to make protocols
+
+44
+00:04:31,500 --> 00:04:33,240
+in network cycles.
+
+45
+00:04:34,020 --> 00:04:36,570
+So this is the premise algorithm.
+
+46
+00:04:36,840 --> 00:04:44,820
+Now let's move to implement the coding of Prem's algorithm in C language and the next videos we are
+
+47
+00:04:44,820 --> 00:04:46,050
+going to implement.

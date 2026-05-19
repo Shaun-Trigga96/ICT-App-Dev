@@ -1,0 +1,179 @@
+1
+00:00:00,630 --> 00:00:06,270
+After we have learned about the insertion sorting algorithm and we have seen the animation and we get
+
+2
+00:00:06,270 --> 00:00:08,040
+deeply in its complexity.
+
+3
+00:00:09,130 --> 00:00:16,240
+Let's learn about implementing the insertion algorithm insertion sort algorithm in sea language and
+
+4
+00:00:16,240 --> 00:00:23,830
+next video, we are going to solve exercise that that will implement the insertion salt algorithm in
+
+5
+00:00:23,830 --> 00:00:24,340
+Java.
+
+6
+00:00:24,760 --> 00:00:32,590
+So we start by including the math, but the action as to the IO detach and let's create a function to
+
+7
+00:00:32,590 --> 00:00:35,500
+sort an array using the insertion stop.
+
+8
+00:00:35,770 --> 00:00:44,210
+So the void insertion sort took into the perimeter of the array that we are going to sort and end,
+
+9
+00:00:44,230 --> 00:00:53,980
+and the size of this array will create entirely the key and we start to making an outer loop for I equals
+
+10
+00:00:53,980 --> 00:00:59,770
+to one Islas then and going through all the elements by using iteration I plus plus.
+
+11
+00:01:01,960 --> 00:01:11,260
+We make and we assigned the key valuable is equal to the array, and then Jay is equal to I'm minus
+
+12
+00:01:11,260 --> 00:01:11,560
+one.
+
+13
+00:01:11,770 --> 00:01:14,710
+We decreased by one.
+
+14
+00:01:15,640 --> 00:01:26,680
+And we assign it to now move elements of array at index from zero till I minus one that are greater
+
+15
+00:01:26,680 --> 00:01:30,640
+than the key to one position ahead of their current position.
+
+16
+00:01:30,850 --> 00:01:38,650
+So we are picking them and we are comparing it with the sort that they're considered sought to position
+
+17
+00:01:39,130 --> 00:01:40,090
+elements of that.
+
+18
+00:01:40,930 --> 00:01:45,760
+We have a wide loop j greater than or equal to zero.
+
+19
+00:01:46,180 --> 00:01:55,820
+And Jay a sortie and array at index greater than the key then array at Index J +1 equal to array at
+
+20
+00:01:55,820 --> 00:02:01,000
+the next J and J equals to J minus one with degrees j by one.
+
+21
+00:02:01,330 --> 00:02:09,240
+So in this case, we are comparing it with considered sorted elements.
+
+22
+00:02:09,520 --> 00:02:13,510
+Array at Index J Plus one equals the key by assigning it.
+
+23
+00:02:15,100 --> 00:02:15,430
+OK.
+
+24
+00:02:15,580 --> 00:02:16,680
+This is the insurgency.
+
+25
+00:02:17,260 --> 00:02:23,410
+If you tell it the function to print and everyday, we have seen this function previously.
+
+26
+00:02:24,070 --> 00:02:26,170
+And I'm not going to talk about that.
+
+27
+00:02:26,980 --> 00:02:30,040
+Just a for loop that goes through all the elements of that.
+
+28
+00:02:30,970 --> 00:02:31,700
+And print them.
+
+29
+00:02:32,110 --> 00:02:37,600
+So we need a driver program to test the insurgents sort we made in Iraq.
+
+30
+00:02:37,960 --> 00:02:41,410
+We get the size of the array and store it inside and.
+
+31
+00:02:41,590 --> 00:02:47,230
+And we called the function in certain insertion sort by passing there that we are going to sort and
+
+32
+00:02:47,230 --> 00:02:48,120
+the size of its.
+
+33
+00:02:49,950 --> 00:02:52,560
+And we print the array after sorting.
+
+34
+00:02:52,920 --> 00:02:57,570
+So this is how we make the insertion sort algorithm and see.
+
+35
+00:02:57,870 --> 00:03:02,550
+So as a recap, what we have done here is making a for loop.
+
+36
+00:03:02,550 --> 00:03:09,570
+This is the out of the loop that goes that separates the array and start considering the first element
+
+37
+00:03:09,570 --> 00:03:19,260
+is or the first section is sorted and the second section is unsorted and start picking from this unsorted
+
+38
+00:03:19,260 --> 00:03:24,390
+one and comparing it with this sorted one by using the wide loop.
+
+39
+00:03:24,600 --> 00:03:33,210
+And when we have an element that greater than we assign it, greater than or equal to zero and greater
+
+40
+00:03:33,210 --> 00:03:34,950
+than equal to the key.
+
+41
+00:03:35,370 --> 00:03:37,740
+Then we assign and make the swap here.
+
+42
+00:03:37,980 --> 00:03:42,300
+And this is the algorithm behind the insertion circuit.
+
+43
+00:03:42,810 --> 00:03:49,710
+Please go back to the animation video in the previous videos, and let's learn about the insertion story
+
+44
+00:03:50,340 --> 00:03:52,120
+now in the next video.
+
+45
+00:03:52,140 --> 00:03:54,700
+We are going to implement the insertion sort.

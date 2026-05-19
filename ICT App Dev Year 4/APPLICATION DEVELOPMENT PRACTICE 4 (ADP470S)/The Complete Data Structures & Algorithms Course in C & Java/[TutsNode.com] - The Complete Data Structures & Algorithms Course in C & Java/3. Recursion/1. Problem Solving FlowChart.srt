@@ -1,0 +1,355 @@
+1
+00:00:00,120 --> 00:00:07,370
+Interviews are supposed to be difficult if you don't get every or any answer immediately.
+
+2
+00:00:07,410 --> 00:00:08,280
+That's OK.
+
+3
+00:00:09,210 --> 00:00:12,600
+That's the normal experience and it is not back.
+
+4
+00:00:14,020 --> 00:00:20,650
+Listen for the guidance from the interview, the interviewer might take a more active or less active
+
+5
+00:00:20,650 --> 00:00:27,400
+role in your public problem solving the level of interviewer participation depends on your performance.
+
+6
+00:00:27,850 --> 00:00:34,360
+The difficulty of the question, what the interviewer is looking for and the interviewers on personality.
+
+7
+00:00:35,460 --> 00:00:37,260
+When you are given a problem.
+
+8
+00:00:38,450 --> 00:00:43,130
+Work your way through it using the approach below.
+
+9
+00:00:43,370 --> 00:00:48,350
+So first approach I need you to understand is listening.
+
+10
+00:00:48,800 --> 00:00:50,870
+So listen carefully.
+
+11
+00:00:51,530 --> 00:00:59,780
+You've likely hear this advice before, but I am saying something a bit more than the standard.
+
+12
+00:01:00,110 --> 00:01:02,660
+Make sure you hear the problem correctly.
+
+13
+00:01:02,660 --> 00:01:03,230
+Advice.
+
+14
+00:01:05,250 --> 00:01:11,220
+Yes, you do want to listen to the problem and make sure you hear it correctly.
+
+15
+00:01:11,910 --> 00:01:16,290
+You do want to ask questions about anything you are unsure about.
+
+16
+00:01:18,010 --> 00:01:22,450
+But I am saying something more than that.
+
+17
+00:01:22,780 --> 00:01:30,880
+Listen carefully to the problem and be sure that you have mentally recorded any unique information in
+
+18
+00:01:30,880 --> 00:01:31,420
+the problem.
+
+19
+00:01:31,930 --> 00:01:37,270
+For example, suppose a question starts with one of the following lines.
+
+20
+00:01:37,960 --> 00:01:45,880
+It's reasonable to assume that the information is there for a reason given to arrays that are sorted
+
+21
+00:01:46,690 --> 00:01:48,880
+find, for example, and et cetera.
+
+22
+00:01:49,420 --> 00:01:56,380
+You probably need to know that the data is sorted, so the optimal algorithm for the sorted situation
+
+23
+00:01:56,380 --> 00:02:01,270
+is probably different than the optimal algorithm for unsorted situation.
+
+24
+00:02:02,170 --> 00:02:05,410
+OK, so it's unlikely.
+
+25
+00:02:06,480 --> 00:02:12,330
+That your interviewer would give you this information if it didn't affect the algorithm?
+
+26
+00:02:12,940 --> 00:02:23,580
+OK, your first algorithm does not need to use the information, but if you find yourself stuck or you
+
+27
+00:02:23,580 --> 00:02:31,740
+are still working to develop something more optimal, ask yourself if you have used all information
+
+28
+00:02:31,740 --> 00:02:37,110
+in that problem, so be patient and listen carefully.
+
+29
+00:02:38,260 --> 00:02:44,710
+The second advice and the flow problem solving flow chart chart is drew an example.
+
+30
+00:02:46,060 --> 00:02:50,890
+An example can dynamically improve your ability to solve an interview question.
+
+31
+00:02:51,520 --> 00:02:58,930
+And yet so many candidates just tried to solve the questions in their hats.
+
+32
+00:02:59,800 --> 00:03:06,430
+When you hear a question, get out of your chair, go to the whiteboard and draw an example.
+
+33
+00:03:07,640 --> 00:03:16,460
+OK, so we have solved a bit, and we solved the exercises in the previous section about the big go
+
+34
+00:03:16,460 --> 00:03:23,890
+in rotation by drawing and taking an example of every algorithm in order to know the big own notation.
+
+35
+00:03:24,290 --> 00:03:33,090
+And later on in the arrays and the data structure and the algorithms we are going to draw also and an
+
+36
+00:03:33,160 --> 00:03:42,320
+an example on every thing in order to get the desired that pattern in order to get to know that algorithm.
+
+37
+00:03:42,620 --> 00:03:51,330
+And in order to get what he needs to and what is the sequence that program is following?
+
+38
+00:03:53,210 --> 00:03:59,180
+The third step in a problem solving flow chart is brute force.
+
+39
+00:04:00,320 --> 00:04:09,890
+Once you have an example done state a brute force, it's OK and expect that your initial algorithm won't
+
+40
+00:04:09,890 --> 00:04:11,030
+be very optimal.
+
+41
+00:04:11,750 --> 00:04:18,200
+Some candidates don't state the brute force because they think it is both obvious and terrible.
+
+42
+00:04:18,710 --> 00:04:26,030
+But there's the thing even if it is obvious for you, it's not necessarily obvious for all candidates.
+
+43
+00:04:26,420 --> 00:04:33,650
+You don't want your interviewer to think that you are stuck, struggling to see even the easy solution.
+
+44
+00:04:33,950 --> 00:04:41,210
+So despite being possibly slow, a brute force algorithm is valuable to discuss.
+
+45
+00:04:41,600 --> 00:04:47,960
+It's a starting point for optimization, and it helps you wrap your head around the problem.
+
+46
+00:04:48,810 --> 00:04:57,480
+The fourth step is optimize once you have a brute force algorithm, you should work on optimizing it.
+
+47
+00:04:57,870 --> 00:05:02,310
+If you technique that's worthwhile, are look for unused information.
+
+48
+00:05:02,850 --> 00:05:04,840
+Use a fresh example.
+
+49
+00:05:05,370 --> 00:05:10,710
+Solve it incorrectly and make time versus space tradeoff.
+
+50
+00:05:11,610 --> 00:05:18,300
+Pre compute information and use a hash table and think about the best convenience store and time.
+
+51
+00:05:18,960 --> 00:05:24,870
+Walk through the brute force with these ideas in mind and look for that optimization.
+
+52
+00:05:27,030 --> 00:05:27,810
+Walk through.
+
+53
+00:05:29,590 --> 00:05:37,510
+And approach after you have nailed down an optimal algorithm, you don't just dive into code.
+
+54
+00:05:38,110 --> 00:05:43,150
+Take a moment to solidify your understanding of an algorithm.
+
+55
+00:05:43,510 --> 00:05:45,310
+Whiteboard coding is slow.
+
+56
+00:05:45,550 --> 00:05:46,330
+Very slow.
+
+57
+00:05:46,690 --> 00:05:49,890
+So is testing your code and fixing it.
+
+58
+00:05:51,350 --> 00:05:59,630
+As a result, you need to make sure that you get it as close to perfect in the beginning as possible.
+
+59
+00:06:00,330 --> 00:06:07,670
+OK, if you don't understand exactly what you are about to write, you will struggle to code that it
+
+60
+00:06:07,670 --> 00:06:14,180
+will take your longer to finish that code and you are more likely to make major errors.
+
+61
+00:06:14,750 --> 00:06:17,210
+The sixth step is implement.
+
+62
+00:06:17,690 --> 00:06:26,570
+Now that you have an optimal algorithm and you know exactly what you are going to write, go ahead and
+
+63
+00:06:26,570 --> 00:06:27,350
+implement it.
+
+64
+00:06:27,740 --> 00:06:33,950
+Start coding in the far top left corner of the whiteboard and avoid line creep.
+
+65
+00:06:34,580 --> 00:06:40,460
+It makes your code looks messy, look messy and can be very confusing when working.
+
+66
+00:06:40,460 --> 00:06:44,600
+When white boy wants white whitespace sensitive language like white.
+
+67
+00:06:45,470 --> 00:06:53,630
+Remember that you only have a short amount of code to demonstrate that you are a great developer, so
+
+68
+00:06:54,110 --> 00:06:55,730
+everything counts.
+
+69
+00:06:56,350 --> 00:06:56,840
+OK?
+
+70
+00:06:59,320 --> 00:07:08,200
+Now, the step number seven is the test you would not check in the code, in the code, in the real
+
+71
+00:07:08,200 --> 00:07:08,620
+life.
+
+72
+00:07:09,660 --> 00:07:17,400
+Without testing it, and you should not submit code in and in an interview without testing it, there
+
+73
+00:07:17,400 --> 00:07:21,750
+are smart and not too and not too so smart
+
+74
+00:07:24,750 --> 00:07:27,540
+ways to test your code, though.
+
+75
+00:07:28,550 --> 00:07:28,970
+Why?
+
+76
+00:07:30,010 --> 00:07:38,170
+What are what many candidates do is take their earlier example and test it against their code that might
+
+77
+00:07:38,170 --> 00:07:39,190
+discover bugs.
+
+78
+00:07:39,520 --> 00:07:42,890
+But it will take a really long time to do so.
+
+79
+00:07:43,330 --> 00:07:45,250
+And testing is very slow.
+
+80
+00:07:45,550 --> 00:07:54,460
+If you really did use a nice big example to develop your algorithm, then it will take you a very long
+
+81
+00:07:54,460 --> 00:08:00,370
+time to find that little off by one error at the end of that code.
+
+82
+00:08:00,490 --> 00:08:01,540
+What does this mean?
+
+83
+00:08:01,720 --> 00:08:07,540
+Instead, trying this approach starts with the conceptual test.
+
+84
+00:08:08,550 --> 00:08:09,090
+OK.
+
+85
+00:08:09,540 --> 00:08:16,710
+Hard to spot, identify the hotspot like you have coded long enough to know that things are likely to
+
+86
+00:08:16,710 --> 00:08:17,520
+cause problem.
+
+87
+00:08:18,360 --> 00:08:21,540
+Small tests, cases and special cases.
+
+88
+00:08:22,230 --> 00:08:25,800
+Always try to optimize and solve technique.
+
+89
+00:08:26,280 --> 00:08:32,550
+OK, so this is the flow chart of the problem solving.

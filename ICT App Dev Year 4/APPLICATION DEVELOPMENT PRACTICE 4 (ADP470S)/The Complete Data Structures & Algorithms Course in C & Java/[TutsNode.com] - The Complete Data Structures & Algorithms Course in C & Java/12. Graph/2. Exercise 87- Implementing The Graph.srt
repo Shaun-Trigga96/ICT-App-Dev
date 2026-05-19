@@ -1,0 +1,891 @@
+1
+00:00:00,330 --> 00:00:03,840
+Hello, my friends, and welcome to exercise number 87.
+
+2
+00:00:03,900 --> 00:00:11,370
+And this exercise, we are going to implement the graph data structure and job, so I will create a
+
+3
+00:00:11,370 --> 00:00:13,920
+Java program that is very similar to see.
+
+4
+00:00:13,920 --> 00:00:21,520
+So I will implement it in Java here and you can make it as in C compiler, but you can change that.
+
+5
+00:00:21,560 --> 00:00:23,430
+This is some syntax.
+
+6
+00:00:23,910 --> 00:00:24,390
+Things.
+
+7
+00:00:24,720 --> 00:00:25,020
+OK.
+
+8
+00:00:25,350 --> 00:00:31,460
+So what is the final solution that I need to get it in the output?
+
+9
+00:00:31,470 --> 00:00:40,770
+I need to from this program to draw for me or to create for me a graph that connects the notes together?
+
+10
+00:00:40,980 --> 00:00:48,510
+So the final solution that I'm going to work with and I will give an example of this is that graph the
+
+11
+00:00:48,820 --> 00:00:49,860
+the first node.
+
+12
+00:00:50,730 --> 00:00:52,200
+These are the nodes.
+
+13
+00:00:53,740 --> 00:00:54,370
+And.
+
+14
+00:00:55,860 --> 00:01:00,580
+This is five, this is due, this is four, and this is silly.
+
+15
+00:01:01,650 --> 00:01:05,190
+I need to connect one three one with two.
+
+16
+00:01:05,700 --> 00:01:07,020
+One was for.
+
+17
+00:01:08,110 --> 00:01:18,070
+Duel with four three was four and the three was five and four with five and two with five.
+
+18
+00:01:18,270 --> 00:01:26,710
+OK, I need to get a final result of this exercise to make this graph.
+
+19
+00:01:27,010 --> 00:01:32,140
+So are you ready guys to implement that graph data structure?
+
+20
+00:01:32,410 --> 00:01:44,020
+It is something something like complex, but trust me, you will be a master in graph after solving
+
+21
+00:01:44,020 --> 00:01:44,890
+this exercise.
+
+22
+00:01:45,070 --> 00:01:46,030
+So let's begin.
+
+23
+00:01:46,510 --> 00:01:52,840
+The first step is understanding that basic component of the graph class.
+
+24
+00:01:53,080 --> 00:02:00,130
+I have created a graph chart new Java class here called a graph.
+
+25
+00:02:00,430 --> 00:02:02,770
+OK, so let me.
+
+26
+00:02:03,810 --> 00:02:09,000
+Make it here public, let me create it here.
+
+27
+00:02:09,990 --> 00:02:14,130
+Public class graph.
+
+28
+00:02:17,010 --> 00:02:17,370
+Yeah.
+
+29
+00:02:17,760 --> 00:02:28,350
+So we have created this class and inside this class, the first step and the building blocks and the
+
+30
+00:02:28,350 --> 00:02:32,700
+building codes is that node and that edge.
+
+31
+00:02:32,850 --> 00:02:43,980
+So let's create that class edge and first step is creating the edge class at.
+
+32
+00:02:45,060 --> 00:02:59,730
+Here and this class will give us or will contain and the source and the destination between any points
+
+33
+00:02:59,730 --> 00:03:01,110
+between two points.
+
+34
+00:03:01,410 --> 00:03:07,980
+We have a an edge and this edge, if we go, it's a straight line.
+
+35
+00:03:08,040 --> 00:03:16,050
+If we are going to represent it, if we will say that it's sourced from the first point and its destination
+
+36
+00:03:16,050 --> 00:03:20,460
+to the second point, it's very simple in terms of logic.
+
+37
+00:03:22,320 --> 00:03:29,300
+So we have created the edge that contains the source and the destination as integer variable.
+
+38
+00:03:29,680 --> 00:03:30,870
+OK, no.
+
+39
+00:03:31,140 --> 00:03:44,760
+The second step is creating the number of vertices and at just number of vertices and edges and vertices
+
+40
+00:03:45,180 --> 00:03:46,200
+and edges.
+
+41
+00:03:47,610 --> 00:03:48,120
+OK.
+
+42
+00:03:48,450 --> 00:03:51,770
+This is the number of vertices and that edges.
+
+43
+00:03:52,320 --> 00:03:52,620
+OK.
+
+44
+00:03:53,340 --> 00:03:54,540
+It's very simple.
+
+45
+00:03:56,640 --> 00:04:02,890
+Know how many vertices and how many edges that we are going to create.
+
+46
+00:04:04,470 --> 00:04:07,290
+We need to create an array.
+
+47
+00:04:08,460 --> 00:04:15,750
+The third step, an array to store all their edges, all the edges.
+
+48
+00:04:16,200 --> 00:04:16,650
+OK.
+
+49
+00:04:16,830 --> 00:04:23,670
+So I will create an edge edge array called edges.
+
+50
+00:04:24,990 --> 00:04:27,260
+Or can I create it as edge?
+
+51
+00:04:28,110 --> 00:04:28,400
+OK.
+
+52
+00:04:29,550 --> 00:04:35,400
+I have created an array of objects called add edges.
+
+53
+00:04:36,510 --> 00:04:41,130
+This is why we have this goes navigate the previous declaration.
+
+54
+00:04:42,230 --> 00:04:42,640
+OK.
+
+55
+00:04:43,190 --> 00:04:45,970
+And edges only to create that edge.
+
+56
+00:04:46,400 --> 00:04:46,750
+OK.
+
+57
+00:04:48,020 --> 00:04:49,640
+Because we have created before.
+
+58
+00:04:51,300 --> 00:04:55,260
+First step, creating the edge that contains the source and destination.
+
+59
+00:04:56,040 --> 00:05:01,650
+The second step creating how many number of vertices and edges that we are going to create, and the
+
+60
+00:05:01,650 --> 00:05:05,820
+third step is storing all the edges in an array.
+
+61
+00:05:06,540 --> 00:05:11,190
+Now let's create that constructor.
+
+62
+00:05:11,790 --> 00:05:19,440
+The fourth step constructor, we start by creating a graph.
+
+63
+00:05:19,660 --> 00:05:23,760
+This new graph and you create a new graph.
+
+64
+00:05:23,760 --> 00:05:28,440
+You should specify the vertices and the edges.
+
+65
+00:05:28,650 --> 00:05:40,500
+OK, so this vertices is equal to vertices is how many vertices is and how many edges.
+
+66
+00:05:41,160 --> 00:05:41,630
+OK.
+
+67
+00:05:46,260 --> 00:05:47,370
+Very simple.
+
+68
+00:05:48,090 --> 00:05:49,520
+This is the constructor.
+
+69
+00:05:50,710 --> 00:05:56,040
+Now the fifth step is initializing.
+
+70
+00:05:56,280 --> 00:05:57,060
+Or we can.
+
+71
+00:05:57,060 --> 00:06:00,630
+We will continue with the constructor.
+
+72
+00:06:01,260 --> 00:06:04,110
+We are going to initialized the edge array.
+
+73
+00:06:04,380 --> 00:06:08,190
+So here the fifth step is initializing
+
+74
+00:06:10,890 --> 00:06:15,570
+the edge array since we have created.
+
+75
+00:06:16,360 --> 00:06:23,770
+And when we create a new graph and we insert there are diseases that just as numbers and we specify
+
+76
+00:06:23,780 --> 00:06:26,470
+them, we should create an array.
+
+77
+00:06:26,980 --> 00:06:36,260
+This is the array at in the same number of edges, so equal to new edge array of edges.
+
+78
+00:06:36,670 --> 00:06:37,150
+And.
+
+79
+00:06:38,850 --> 00:06:42,930
+Of the same number of the edges that we have best.
+
+80
+00:06:43,200 --> 00:06:49,380
+OK, so what we are going what we have created is creating a constructor of the craft that took into
+
+81
+00:06:49,380 --> 00:06:57,060
+parameter to the vertices and the edges, and then we have initialized the edge array with the past
+
+82
+00:06:57,060 --> 00:06:58,530
+30 meters edges.
+
+83
+00:06:58,830 --> 00:07:09,510
+OK, we specify how many edges and we create that at the array edge with fixed size of the past edges.
+
+84
+00:07:09,870 --> 00:07:19,080
+And we start looping through it and equal to zero I at less than just.
+
+85
+00:07:20,570 --> 00:07:25,340
+Because we need to pass through all the elements, all the edges.
+
+86
+00:07:25,940 --> 00:07:28,550
+And what we are going to do.
+
+87
+00:07:29,060 --> 00:07:36,140
+Each element of the array is an object of edge, though, so I need to specify here.
+
+88
+00:07:36,410 --> 00:07:40,370
+Let me tell you, because sometimes maybe confused.
+
+89
+00:07:40,550 --> 00:08:00,230
+So each element of the edge array is an object of its type, but it's very, very obvious that we are
+
+90
+00:08:00,230 --> 00:08:03,980
+creating an element of we are creating an array of edges.
+
+91
+00:08:03,980 --> 00:08:09,020
+So all the each element inside this edge array is an edge.
+
+92
+00:08:09,380 --> 00:08:10,220
+So edge.
+
+93
+00:08:11,790 --> 00:08:18,350
+At and I will be watching you at creating a new edge.
+
+94
+00:08:18,910 --> 00:08:19,410
+OK.
+
+95
+00:08:20,400 --> 00:08:24,240
+No, what we are going to specify.
+
+96
+00:08:25,530 --> 00:08:33,840
+We are going to specify that this thenation and the source for every edge that we have created, so
+
+97
+00:08:33,870 --> 00:08:38,370
+how to specify if we are going to go to there?
+
+98
+00:08:40,050 --> 00:08:47,390
+We are going to make a driver clad driver code that tests our code.
+
+99
+00:08:47,400 --> 00:08:51,030
+So public static void main.
+
+100
+00:08:51,120 --> 00:08:53,850
+This is the main and inside the main.
+
+101
+00:08:53,860 --> 00:08:55,630
+We can specify the connection.
+
+102
+00:08:55,660 --> 00:08:58,440
+So args here.
+
+103
+00:09:00,660 --> 00:09:06,910
+You look at the edge compared with the previously created data structures.
+
+104
+00:09:06,930 --> 00:09:15,240
+It is better, it is more complex with was the edge and the vertices and using the array and enclosing
+
+105
+00:09:15,240 --> 00:09:18,030
+that loop here in the constructor.
+
+106
+00:09:18,450 --> 00:09:25,230
+It may be sometimes confusing, but if you understand this, this exercise, it's very simple to make
+
+107
+00:09:25,230 --> 00:09:30,240
+and create an object of graph class and specify the edges, the notes and other.
+
+108
+00:09:30,630 --> 00:09:34,500
+So let's begin that
+
+109
+00:09:37,260 --> 00:09:39,270
+step number six here.
+
+110
+00:09:40,290 --> 00:09:56,580
+Creating graph object but we will create I will create and number offered diseases in the exercise I
+
+111
+00:09:56,580 --> 00:09:57,830
+would show you again.
+
+112
+00:10:00,480 --> 00:10:02,010
+You will tell me.
+
+113
+00:10:02,190 --> 00:10:04,960
+And number of edges.
+
+114
+00:10:05,700 --> 00:10:15,300
+Also, you will tell me so in the exercise in the beginning of this exercise, how many edges that we
+
+115
+00:10:15,300 --> 00:10:25,950
+have, we have one, two, three, four and five for diseases and how many edges we have.
+
+116
+00:10:26,160 --> 00:10:34,980
+One two three four, five, six, seven and eight.
+
+117
+00:10:35,190 --> 00:10:42,360
+We have eight edges, eight edges and five vertices.
+
+118
+00:10:42,870 --> 00:10:50,400
+OK, so this is our program that we are going to create this, our graph that we are going to create.
+
+119
+00:10:50,400 --> 00:10:52,200
+So please continue with me.
+
+120
+00:10:52,680 --> 00:10:57,000
+We have eight edges and we have five.
+
+121
+00:10:57,000 --> 00:11:01,560
+Vertices is OK now let's create the graph here.
+
+122
+00:11:01,560 --> 00:11:07,500
+Graph G equal to new new graph.
+
+123
+00:11:07,980 --> 00:11:15,000
+What we have, we have per two meters the end vertices and at just the number of vertices and the number
+
+124
+00:11:15,000 --> 00:11:17,010
+of edges I need to create.
+
+125
+00:11:17,520 --> 00:11:23,940
+Five vertices is and number of edges are eight.
+
+126
+00:11:24,990 --> 00:11:26,490
+OK, now
+
+127
+00:11:29,520 --> 00:11:35,250
+creating the edges between.
+
+128
+00:11:36,700 --> 00:11:37,810
+Let me show you again.
+
+129
+00:11:38,260 --> 00:11:46,300
+Between one and two, there is a connection between one and the city, there is a connection and between
+
+130
+00:11:46,300 --> 00:11:48,160
+one and four there is a connection.
+
+131
+00:11:48,490 --> 00:11:56,320
+Let me concentrate on one one connection in order to understand it.
+
+132
+00:11:56,320 --> 00:12:01,660
+And if you understand this connection between the one, the first node and the second.
+
+133
+00:12:01,700 --> 00:12:03,090
+No, no.
+
+134
+00:12:03,210 --> 00:12:09,310
+Number two, you will understand the other eight notes.
+
+135
+00:12:09,460 --> 00:12:09,760
+OK.
+
+136
+00:12:10,570 --> 00:12:11,290
+Connections.
+
+137
+00:12:11,590 --> 00:12:18,100
+So in order to create an edge between one and two, I will create Jib Dot agile.
+
+138
+00:12:19,180 --> 00:12:25,510
+Add at index zero, because we are storing it inside a
+
+139
+00:12:28,540 --> 00:12:30,070
+inside an array.
+
+140
+00:12:30,580 --> 00:12:33,040
+So what is the source of this?
+
+141
+00:12:34,540 --> 00:12:36,300
+What is the source of this at?
+
+142
+00:12:38,290 --> 00:12:40,840
+Edge between one and two, the source.
+
+143
+00:12:42,090 --> 00:12:44,940
+Is from one to two.
+
+144
+00:12:45,360 --> 00:12:50,580
+So this is the source and this is the destination.
+
+145
+00:12:51,510 --> 00:12:52,050
+OK.
+
+146
+00:12:56,540 --> 00:12:58,310
+This is the source, and this is the.
+
+147
+00:12:59,330 --> 00:12:59,690
+No.
+
+148
+00:13:04,500 --> 00:13:10,920
+The source is from want and need that edge at index zero.
+
+149
+00:13:11,490 --> 00:13:16,830
+The destination is going to vertex number two.
+
+150
+00:13:16,950 --> 00:13:25,620
+So this is the edge from one to two.
+
+151
+00:13:25,890 --> 00:13:26,370
+OK.
+
+152
+00:13:26,820 --> 00:13:32,340
+This is the edge, the edge from one to two.
+
+153
+00:13:32,970 --> 00:13:39,660
+OK, let me create the other edges between one and three.
+
+154
+00:13:40,170 --> 00:13:40,610
+OK.
+
+155
+00:13:41,100 --> 00:13:41,760
+The same.
+
+156
+00:13:42,360 --> 00:13:47,790
+I will copy this edge from one to three, from one to three.
+
+157
+00:13:48,120 --> 00:13:52,860
+The destination is one and the source is one and destination is three.
+
+158
+00:13:53,220 --> 00:13:58,600
+The edge would be the second edge and edge getting there.
+
+159
+00:13:59,220 --> 00:13:59,690
+OK.
+
+160
+00:14:00,240 --> 00:14:02,430
+Let me copy and paste it here.
+
+161
+00:14:03,230 --> 00:14:07,800
+The second edge, the second and next, which is the third edge.
+
+162
+00:14:09,210 --> 00:14:11,190
+From one to four.
+
+163
+00:14:11,500 --> 00:14:15,420
+OK, till now, I have four here.
+
+164
+00:14:15,750 --> 00:14:21,310
+One two, one two, one three and one for one.
+
+165
+00:14:21,360 --> 00:14:23,070
+Have any other connection?
+
+166
+00:14:23,100 --> 00:14:23,490
+No.
+
+167
+00:14:23,490 --> 00:14:25,680
+So I will go to number two.
+
+168
+00:14:26,200 --> 00:14:26,670
+OK.
+
+169
+00:14:30,040 --> 00:14:33,570
+Let me go two from two.
+
+170
+00:14:34,330 --> 00:14:43,330
+We have two one, we have created a previous year from one to two.
+
+171
+00:14:47,770 --> 00:14:53,970
+From two to four, we need to create a connection and from two to five, we need to create this connection.
+
+172
+00:14:53,980 --> 00:14:59,860
+So we have two connections to four and two five two two four.
+
+173
+00:15:01,060 --> 00:15:02,560
+Here will be the index.
+
+174
+00:15:02,650 --> 00:15:07,690
+Three, three, two and four.
+
+175
+00:15:08,830 --> 00:15:24,340
+And now create the AJA from two to five, which is deck the edge number five in the sequence from two
+
+176
+00:15:24,910 --> 00:15:26,080
+to five.
+
+177
+00:15:26,230 --> 00:15:35,370
+I need from you to understand the data structure here and how the edges work and how we connect it with
+
+178
+00:15:35,380 --> 00:15:35,860
+codes.
+
+179
+00:15:36,370 --> 00:15:39,490
+Now do we have finished at three?
+
+180
+00:15:39,760 --> 00:15:40,890
+Have was one.
+
+181
+00:15:40,900 --> 00:15:42,220
+We have talked about it.
+
+182
+00:15:42,850 --> 00:15:43,990
+We need to connect.
+
+183
+00:15:43,990 --> 00:15:46,660
+The city was four and three was five.
+
+184
+00:15:46,780 --> 00:15:48,070
+OK, so.
+
+185
+00:15:51,200 --> 00:15:55,370
+We paced front from three to four.
+
+186
+00:15:57,860 --> 00:16:04,040
+This is the and the next five from three to four.
+
+187
+00:16:04,310 --> 00:16:09,140
+And we need to create two from three to five.
+
+188
+00:16:09,710 --> 00:16:11,840
+Therefore, the edge here.
+
+189
+00:16:13,560 --> 00:16:14,280
+Six.
+
+190
+00:16:15,120 --> 00:16:17,400
+We have three to five.
+
+191
+00:16:17,850 --> 00:16:18,380
+OK.
+
+192
+00:16:18,700 --> 00:16:26,010
+No, we have created to create from four to five.
+
+193
+00:16:28,190 --> 00:16:30,050
+We have the edge here.
+
+194
+00:16:31,550 --> 00:16:32,690
+As seven.
+
+195
+00:16:34,460 --> 00:16:37,010
+From four to five.
+
+196
+00:16:37,700 --> 00:16:38,120
+OK.
+
+197
+00:16:39,290 --> 00:16:46,940
+Five, we have said two and five, we have said five and four, and we have five and three.
+
+198
+00:16:47,660 --> 00:16:49,700
+Everything is working fine.
+
+199
+00:16:49,820 --> 00:16:59,110
+So if we count these edges one, two, three, four, five, six and seven and eight, so here we go.
+
+200
+00:16:59,120 --> 00:17:02,540
+We are covering all the possibilities and all the edges.
+
+201
+00:17:02,630 --> 00:17:02,980
+OK.
+
+202
+00:17:05,150 --> 00:17:07,820
+Now, let's print that graph here.
+
+203
+00:17:07,970 --> 00:17:13,700
+The step number seven printing the graph.
+
+204
+00:17:14,540 --> 00:17:28,220
+Let's see how to print the graph for Int I equal to zero I less than number of edges and I + +.
+
+205
+00:17:28,340 --> 00:17:36,590
+I need to start printing and going through all the elements from zero to number of edges, which is
+
+206
+00:17:36,590 --> 00:17:42,720
+in the case, a about the print and.
+
+207
+00:17:44,830 --> 00:17:52,890
+I need to get G dot edges or edge at index, I thought source, I need the source of it.
+
+208
+00:17:53,540 --> 00:17:54,040
+Plus.
+
+209
+00:17:58,560 --> 00:18:03,540
+Minus, this is a dash plus G.
+
+210
+00:18:05,480 --> 00:18:06,410
+The edge.
+
+211
+00:18:07,800 --> 00:18:12,120
+Appendix, I thought this Dinesh Gay.
+
+212
+00:18:14,350 --> 00:18:20,680
+That's Iran and see this configuration, I need to Iran the main in the graph.
+
+213
+00:18:24,880 --> 00:18:28,570
+And here we go, we have eight connections.
+
+214
+00:18:31,190 --> 00:18:40,880
+Between one and two, between one and the three, we have connection one four two four two five.
+
+215
+00:18:42,920 --> 00:18:47,420
+Three, four, three, five and four five.
+
+216
+00:18:47,780 --> 00:18:48,080
+OK.
+
+217
+00:18:48,740 --> 00:18:56,390
+So congratulations, guys, we have implemented the graph data structure inside Java, and it's very
+
+218
+00:18:56,390 --> 00:19:03,500
+similar to see and I need from you to understand the basics, except the basics of the data structure
+
+219
+00:19:03,500 --> 00:19:04,760
+and how it works.
+
+220
+00:19:05,240 --> 00:19:06,170
+Then more.
+
+221
+00:19:06,170 --> 00:19:14,300
+We move to the syntax because syntax is not very important because we concentrate and the interviewer
+
+222
+00:19:14,300 --> 00:19:23,150
+will concentrate on the understanding of the data structure and the implementation, and that exam will
+
+223
+00:19:23,150 --> 00:19:23,470
+also.

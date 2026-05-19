@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ADP470S – June Exam Notes 2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232636;
+    --border: #2e3347;
+    --accent: #4f9cf9;
+    --accent2: #a78bfa;
+    --accent3: #34d399;
+    --accent4: #fb923c;
+    --accent5: #f472b6;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --code-bg: #0d1117;
+    --code-border: #30363d;
+    --warn: #fbbf24;
+    --red: #f87171;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 0 60px;
+  }
+
+  /* HEADER */
+  .hero {
+    background: linear-gradient(135deg, #1a1d27 0%, #0f1117 60%, #1a1d27 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: 40px 40px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,156,249,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(79,156,249,0.15);
+    color: var(--accent);
+    border: 1px solid rgba(79,156,249,0.3);
+    border-radius: 20px;
+    padding: 3px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #e2e8f0, #4f9cf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .hero p { color: var(--muted); font-size: 14px; }
+
+  /* NAV */
+  .toc {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .toc a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .toc a:hover { color: var(--accent); border-color: var(--accent); background: rgba(79,156,249,0.08); }
+
+  /* MAIN */
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 30px; }
+
+  /* SECTION */
+  .section {
+    margin: 40px 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .section-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .section-body { padding: 24px 28px; }
+
+  /* SUB SECTIONS */
+  .sub { margin: 20px 0; }
+  .sub h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sub h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent3);
+    margin: 14px 0 6px;
+  }
+
+  /* PROSE */
+  p { margin: 8px 0; color: var(--text); }
+  strong { color: #fff; }
+
+  /* CODE */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  code {
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    color: #e6edf3;
+  }
+  .comment { color: #8b949e; font-style: italic; }
+  .keyword { color: #ff7b72; }
+  .string { color: #a5d6ff; }
+  .number { color: #79c0ff; }
+  .type { color: #ffa657; }
+  .method { color: #d2a8ff; }
+  .var { color: #e6edf3; }
+
+  /* INLINE CODE */
+  .ic {
+    background: rgba(79,156,249,0.12);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 13px;
+  }
+
+  /* CALLOUT BOXES */
+  .box {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+  }
+  .box-tip { background: rgba(52,211,153,0.08); border-color: var(--accent3); }
+  .box-tip strong { color: var(--accent3); }
+  .box-warn { background: rgba(251,191,36,0.08); border-color: var(--warn); }
+  .box-warn strong { color: var(--warn); }
+  .box-info { background: rgba(79,156,249,0.08); border-color: var(--accent); }
+  .box-info strong { color: var(--accent); }
+  .box-key { background: rgba(167,139,250,0.08); border-color: var(--accent2); }
+  .box-key strong { color: var(--accent2); }
+  .box-danger { background: rgba(248,113,113,0.08); border-color: var(--red); }
+  .box-danger strong { color: var(--red); }
+
+  /* COMPLEXITY BADGE */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Cascadia Code', monospace;
+    margin: 2px;
+  }
+  .b-green { background: rgba(52,211,153,0.15); color: var(--accent3); border: 1px solid rgba(52,211,153,0.3); }
+  .b-blue  { background: rgba(79,156,249,0.15); color: var(--accent); border: 1px solid rgba(79,156,249,0.3); }
+  .b-orange{ background: rgba(251,146,60,0.15); color: var(--accent4); border: 1px solid rgba(251,146,60,0.3); }
+  .b-red   { background: rgba(248,113,113,0.15); color: var(--red); border: 1px solid rgba(248,113,113,0.3); }
+  .b-purple{ background: rgba(167,139,250,0.15); color: var(--accent2); border: 1px solid rgba(167,139,250,0.3); }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  th {
+    background: var(--surface2);
+    color: var(--accent);
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--border);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  td {
+    padding: 9px 14px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  tr:hover td { background: rgba(79,156,249,0.05); }
+
+  /* STEPS */
+  .steps { list-style: none; counter-reset: step; }
+  .steps li {
+    counter-increment: step;
+    padding: 10px 14px 10px 50px;
+    position: relative;
+    border-left: 2px solid var(--border);
+    margin: 6px 0;
+    border-radius: 0 8px 8px 0;
+    background: rgba(255,255,255,0.02);
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: -1px;
+    top: 10px;
+    width: 28px; height: 28px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* GRID */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .grid2 { grid-template-columns: 1fr; } }
+
+  /* COMPLEXITY TABLE VISUAL */
+  .complexity-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .complexity-card .big { font-size: 1.6rem; font-weight: 800; font-family: 'Cascadia Code', monospace; }
+  .complexity-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .complexity-card .verdict { font-size: 12px; font-weight: 700; margin-top: 6px; }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 30px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+  }
+
+  /* SECTION COLORS */
+  .c-blue   { background: rgba(79,156,249,0.15); color: var(--accent); }
+  .c-purple { background: rgba(167,139,250,0.15); color: var(--accent2); }
+  .c-green  { background: rgba(52,211,153,0.15); color: var(--accent3); }
+  .c-orange { background: rgba(251,146,60,0.15); color: var(--accent4); }
+  .c-pink   { background: rgba(244,114,182,0.15); color: var(--accent5); }
+  .c-red    { background: rgba(248,113,113,0.15); color: var(--red); }
+  .c-yellow { background: rgba(251,191,36,0.15); color: var(--warn); }
+
+  h2.c-blue, h2.c-purple, h2.c-green, h2.c-orange, h2.c-pink, h2.c-red, h2.c-yellow { color: inherit; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">ADP470S · CPUT · 2026</div>
+    <h1>June Exam Study Notes</h1>
+    <p>Applications Development Practice 4 &nbsp;·&nbsp; Data Structures & Algorithms &nbsp;·&nbsp; NQF Level 7</p>
+    <p style="margin-top:6px">Based on all lecture slides + subject guide &nbsp;·&nbsp; Code explained like you're 5 🍭</p>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <a href="#s1">1. Algorithms</a>
+  <a href="#s2">2. Big O Notation</a>
+  <a href="#s3">3. Recursion vs Iteration</a>
+  <a href="#s4">4. Factorial & Fibonacci</a>
+  <a href="#s5">5. Sorting Algorithms</a>
+  <a href="#s6">6. Stack</a>
+  <a href="#s7">7. Linked Lists</a>
+  <a href="#s8">8. Quick Reference</a>
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 1. ALGORITHMS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <div class="section-icon c-blue">🧠</div>
+    <div>
+      <h2 class="c-blue">1. What is an Algorithm?</h2>
+      <span style="color:var(--muted);font-size:13px">The foundation of everything — know this cold</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="box box-key">
+      <strong>Simple Definition:</strong> An algorithm is like a recipe 🍳. It's a <em>step-by-step set of instructions</em> to solve a problem — and it <strong>must finish</strong> in a limited number of steps. You can't have a recipe that says "keep stirring forever."
+    </div>
+
+    <div class="sub">
+      <h3>📌 Official Definition (learn this!)</h3>
+      <p>An algorithm is a <strong>finite</strong> and <strong>definite</strong> procedure for solving a problem.</p>
+      <ul style="padding-left:20px; margin-top:8px;">
+        <li style="margin:4px 0"><strong>Finite</strong> → It MUST stop. It cannot run forever.</li>
+        <li style="margin:4px 0"><strong>Definite</strong> → Every step must make progress toward a solution. No guessing!</li>
+      </ul>
+    </div>
+
+    <div class="sub">
+      <h3>🔍 What do we study about algorithms?</h3>
+      <div class="grid2">
+        <div class="box box-info">
+          <strong>1. Speed (Time Complexity)</strong><br>How fast does it run as input grows? This is the BIG one — measured with Big O.
+        </div>
+        <div class="box box-info">
+          <strong>2. Space Complexity</strong><br>How much extra memory does it need? Some fast algorithms waste a ton of RAM.
+        </div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>🎓 Classic Example: Two ways to find HCF (Highest Common Factor)</h3>
+      <p>The <strong>Euclidean algorithm</strong> (Method 1) is considered excellent — simple and fast. Method 2 works but is much slower.</p>
+
+<pre><code><span class="comment">// METHOD 1: Euclid's Algorithm (FAST — O(log n))</span>
+<span class="keyword">public static int</span> <span class="method">hcf</span>(<span class="type">int</span> n, <span class="type">int</span> m) {
+    <span class="keyword">do</span> {
+        <span class="type">int</span> l = n % m;  <span class="comment">// get remainder</span>
+        n = m;          <span class="comment">// shift values down</span>
+        m = l;
+    } <span class="keyword">while</span> (m != <span class="number">0</span>);
+    <span class="keyword">return</span> n;
+}
+
+<span class="comment">// METHOD 2: Brute Force (SLOW — tries every number from min down to 1)</span>
+<span class="keyword">public static int</span> <span class="method">hcfSlow</span>(<span class="type">int</span> n, <span class="type">int</span> m) {
+    <span class="type">int</span> start = n < m ? n : m; <span class="comment">// start from the smaller number</span>
+    <span class="type">int</span> d;
+    <span class="keyword">for</span> (d = start; d > <span class="number">0</span>; d--)
+        <span class="keyword">if</span> (n % d == <span class="number">0</span> && m % d == <span class="number">0</span>)  <span class="comment">// does d divide both?</span>
+            <span class="keyword">break</span>;
+    <span class="keyword">return</span> d;
+}</code></pre>
+
+      <div class="box box-tip">
+        <strong>Why does this matter?</strong> For HCF of two 6-digit numbers, Euclid finishes in ~40 steps. Method 2 could take up to 999,999 steps. Same correct answer — wildly different speed!
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 2. BIG O NOTATION -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <div class="section-icon c-purple">📈</div>
+    <div>
+      <h2 class="c-purple">2. Big O Notation</h2>
+      <span style="color:var(--muted);font-size:13px">How to measure how bad (or good) an algorithm is as input grows</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="box box-key">
+      <strong>The 5-year-old version:</strong> Imagine you have a pile of toys to sort. Big O tells you — if your pile gets 10× bigger, does sorting take 10× longer? 100× longer? Or the same time? It describes the <strong>worst-case growth rate</strong>.
+    </div>
+
+    <div class="sub">
+      <h3>⚡ O(1) — Constant Time</h3>
+      <p><strong>No matter how big the input is, it always takes the same time.</strong> Like checking if the first light in a hallway is off — doesn't matter if the hallway has 10 lights or 1 million.</p>
+
+<pre><code><span class="comment">// EXAMPLE: Checking the first element of an array</span>
+<span class="keyword">boolean</span> <span class="method">isFirstNull</span>(<span class="type">String</span>[] strings) {
+    <span class="comment">// Always ONE operation — no loop, no matter how big the array is</span>
+    <span class="keyword">if</span> (strings[<span class="number">0</span>] == <span class="keyword">null</span>) {
+        <span class="keyword">return true</span>;
+    }
+    <span class="keyword">return false</span>;
+}</code></pre>
+      <div class="box box-tip"><strong>Exam hint:</strong> O(1) = no loops, no recursion that grows with input. Direct access by index.</div>
+    </div>
+
+    <hr>
+
+    <div class="sub">
+      <h3>📏 O(n) — Linear Time</h3>
+      <p><strong>If you double the input, the time doubles.</strong> Like reading every page of a book — 200 pages takes 2× as long as 100 pages.</p>
+
+<pre><code><span class="comment">// EXAMPLE: Linear Search — has to check every element in worst case</span>
+<span class="keyword">boolean</span> <span class="method">containsValue</span>(<span class="type">String</span>[] strings, <span class="type">String</span> value) {
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i < strings.length; i++) {
+        <span class="comment">// Could find it on first try (best case)</span>
+        <span class="comment">// But BIG O always assumes WORST CASE = scan entire array</span>
+        <span class="keyword">if</span> (strings[i] == value) {
+            <span class="keyword">return true</span>;
+        }
+    }
+    <span class="keyword">return false</span>;  <span class="comment">// not found after checking ALL n items</span>
+}</code></pre>
+    </div>
+
+    <hr>
+
+    <div class="sub">
+      <h3>📐 O(n²) — Quadratic Time</h3>
+      <p><strong>If input doubles, time quadruples (2² = 4).</strong> The classic sign: a loop inside a loop. Like comparing every person in a room to every OTHER person in the room.</p>
+
+<pre><code><span class="comment">// EXAMPLE: Check if any duplicates exist</span>
+<span class="keyword">boolean</span> <span class="method">hasDuplicates</span>(<span class="type">String</span>[] strings) {
+    <span class="comment">// OUTER loop: pick each element one by one</span>
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i < strings.length; i++) {
+        <span class="comment">// INNER loop: compare it against ALL other elements</span>
+        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j < strings.length; j++) {
+            <span class="keyword">if</span> (i == j) <span class="keyword">continue</span>;  <span class="comment">// don't compare item with itself</span>
+            <span class="keyword">if</span> (strings[i] == strings[j]) {
+                <span class="keyword">return true</span>;
+            }
+        }
+    }
+    <span class="keyword">return false</span>;
+}
+<span class="comment">// For 1000 items: ~1,000,000 comparisons. Very slow for large n!</span></code></pre>
+
+      <div class="box box-warn"><strong>Key point:</strong> Bubble Sort is O(n²). For 1000 numbers → about 1 000 000 comparisons!</div>
+    </div>
+
+    <hr>
+
+    <div class="sub">
+      <h3>🌲 O(log n) — Logarithmic Time</h3>
+      <p><strong>Input doubles, but time only increases by 1 step.</strong> This is FAST! Like looking up a word in a dictionary by opening to the middle and cutting the problem in half each time — that's Binary Search.</p>
+
+<pre><code><span class="comment">// EXAMPLE: Binary Search — only works on SORTED arrays!</span>
+<span class="comment">// Think of it like: "Is it left half or right half?" — keep halving</span>
+<span class="type">int</span> <span class="method">binarySearch</span>(<span class="type">int</span>[] a, <span class="type">int</span> value, <span class="type">int</span> left, <span class="type">int</span> right) {
+    <span class="keyword">while</span> (left <= right) {
+        <span class="type">int</span> middle = (left + right) / <span class="number">2</span>;  <span class="comment">// find the middle index</span>
+        
+        <span class="keyword">if</span> (a[middle] == value)
+            <span class="keyword">return</span> middle;              <span class="comment">// FOUND! 🎉</span>
+        <span class="keyword">else if</span> (a[middle] > value)
+            right = middle - <span class="number">1</span>;          <span class="comment">// value must be in LEFT half</span>
+        <span class="keyword">else</span>
+            left = middle + <span class="number">1</span>;           <span class="comment">// value must be in RIGHT half</span>
+    }
+    <span class="keyword">return</span> -<span class="number">1</span>;  <span class="comment">// not found</span>
+}
+<span class="comment">// For 1,000,000 items, Binary Search takes only ~20 steps! O(log n) is amazing.</span></code></pre>
+    </div>
+
+    <hr>
+
+    <div class="sub">
+      <h3>💥 O(2ⁿ) — Exponential Time</h3>
+      <p><strong>Every extra element DOUBLES the time.</strong> Grows insanely fast. Adding just one more item makes the algorithm 2× slower. Classic example: naive recursive Fibonacci.</p>
+      <div class="box box-danger"><strong>Avoid O(2ⁿ) at all costs for large inputs!</strong> For n=50, that's over 1 quadrillion operations.</div>
+    </div>
+
+    <hr>
+
+    <div class="sub">
+      <h3>📊 Speed Comparison (from FASTEST to SLOWEST)</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin:12px 0;">
+        <div class="complexity-card" style="flex:1; min-width:100px;">
+          <div class="big" style="color:var(--accent3)">O(1)</div>
+          <div class="label">Constant</div>
+          <div class="verdict" style="color:var(--accent3)">🚀 Best</div>
+        </div>
+        <div class="complexity-card" style="flex:1; min-width:100px;">
+          <div class="big" style="color:var(--accent3)">O(log n)</div>
+          <div class="label">Logarithmic</div>
+          <div class="verdict" style="color:var(--accent3)">✅ Excellent</div>
+        </div>
+        <div class="complexity-card" style="flex:1; min-width:100px;">
+          <div class="big" style="color:var(--accent)">O(n)</div>
+          <div class="label">Linear</div>
+          <div class="verdict" style="color:var(--accent)">👍 Good</div>
+        </div>
+        <div class="complexity-card" style="flex:1; min-width:100px;">
+          <div class="big" style="color:var(--accent4)">O(n log n)</div>
+          <div class="label">Linearithmic</div>
+          <div class="verdict" style="color:var(--accent4)">⚡ OK</div>
+        </div>
+        <div class="complexity-card" style="flex:1; min-width:100px;">
+          <div class="big" style="color:var(--red)">O(n²)</div>
+          <div class="label">Quadratic</div>
+          <div class="verdict" style="color:var(--red)">⚠️ Slow</div>
+        </div>
+        <div class="complexity-card" style="flex:1; min-width:100px;">
+          <div class="big" style="color:var(--red)">O(2ⁿ)</div>
+          <div class="label">Exponential</div>
+          <div class="verdict" style="color:var(--red)">💀 Terrible</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 3. RECURSION VS ITERATION -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <div class="section-icon c-green">🔁</div>
+    <div>
+      <h2 class="c-green">3. Recursion vs Iteration</h2>
+      <span style="color:var(--muted);font-size:13px">Two ways to repeat things — know the trade-offs</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="box box-key">
+      <strong>Simple explanation:</strong><br>
+      <strong>Iteration</strong> = a loop (for/while). You spin around doing the same thing until done.<br>
+      <strong>Recursion</strong> = a function that calls <em>itself</em>. Like standing between two mirrors — you see yourself reflected inside yourself, inside yourself...
+    </div>
+
+    <div class="sub">
+      <h3>🏗️ How Recursion Works Internally (The Call Stack)</h3>
+      <p>Every time a function calls itself, the computer saves the current state on the <strong>call stack</strong> — like stacking plates. When the function finally hits the <strong>base case</strong>, it starts returning values, popping plates off one by one.</p>
+
+      <div class="grid2">
+        <div class="box box-warn">
+          <strong>⚠️ Stack Overflow!</strong><br>If recursion goes too deep (no base case, or n is huge), the stack runs out of space → <code>StackOverflowError</code>
+        </div>
+        <div class="box box-tip">
+          <strong>Two rules for recursion:</strong><br>
+          1. A <strong>base case</strong> (when to STOP)<br>
+          2. A <strong>recursive case</strong> (makes the problem smaller each time)
+        </div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>⚖️ Iteration vs Recursion Trade-offs</h3>
+      <table>
+        <tr><th>Aspect</th><th>Iteration</th><th>Recursion</th></tr>
+        <tr><td>Memory</td><td>✅ O(1) — uses a single loop variable</td><td>⚠️ O(n) — stack frame for each call</td></tr>
+        <tr><td>Readability</td><td>Usually easier to read for simple loops</td><td>Elegant for tree/recursive structures</td></tr>
+        <tr><td>Risk</td><td>Safe — won't crash from too many iterations</td><td>Stack Overflow if base case missing</td></tr>
+        <tr><td>Convertible?</td><td colspan="2">✅ Every recursive algorithm CAN be written iteratively (but it's not always easy)</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 4. FACTORIAL & FIBONACCI -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <div class="section-icon c-orange">🔢</div>
+    <div>
+      <h2 class="c-orange">4. Factorial &amp; Fibonacci</h2>
+      <span style="color:var(--muted);font-size:13px">The two classic recursion examples — both will be in the exam</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <!-- FACTORIAL -->
+    <div class="sub">
+      <h3>🎯 Factorial — What is it?</h3>
+      <p>Factorial of n (written n!) means: multiply n × (n-1) × (n-2) × ... × 1</p>
+      <p>Example: 5! = 5 × 4 × 3 × 2 × 1 = <strong>120</strong></p>
+      <p>Special case: 0! = 1 (base case — memorise this!)</p>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <h4 style="color:var(--accent3);margin:10px 0 8px">✅ Recursive Factorial (Java)</h4>
+<pre><code><span class="keyword">public static int</span> <span class="method">factorial</span>(<span class="type">int</span> n) {
+    <span class="comment">// BASE CASE: stop here! 0! = 1</span>
+    <span class="keyword">if</span> (n == <span class="number">0</span>) {
+        <span class="keyword">return</span> <span class="number">1</span>;
+    }
+    <span class="comment">// RECURSIVE CASE: n! = n × (n-1)!</span>
+    <span class="comment">// Calls itself with a SMALLER number each time</span>
+    <span class="keyword">return</span> n * <span class="method">factorial</span>(n - <span class="number">1</span>);
+}</code></pre>
+        <div class="box box-info" style="font-size:13px">
+          <strong>Trace: factorial(5)</strong><br>
+          factorial(5) → 5 × factorial(4)<br>
+          factorial(4) → 4 × factorial(3)<br>
+          factorial(3) → 3 × factorial(2)<br>
+          factorial(2) → 2 × factorial(1)<br>
+          factorial(1) → 1 × factorial(0)<br>
+          factorial(0) → <strong>1</strong> (BASE CASE HIT!)<br>
+          Then unwinds: 1×1=1, 2×1=2, 3×2=6, 4×6=24, 5×24=<strong>120</strong>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:var(--accent);margin:10px 0 8px">🔄 Iterative Factorial (Java)</h4>
+<pre><code><span class="keyword">public static int</span> <span class="method">factorial</span>(<span class="type">int</span> n) {
+    <span class="type">int</span> result = <span class="number">1</span>; <span class="comment">// start at 1 (neutral for multiplication)</span>
+    
+    <span class="comment">// Multiply 1 × 2 × 3 × ... × n</span>
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i <= n; i++) {
+        result *= i;  <span class="comment">// same as: result = result * i</span>
+    }
+    <span class="keyword">return</span> result;
+}
+<span class="comment">// Trace for factorial(5):
+// i=1: result = 1
+// i=2: result = 2
+// i=3: result = 6
+// i=4: result = 24
+// i=5: result = 120 ✓</span></code></pre>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px">
+      <strong>Complexity — Factorial:</strong>
+      Both recursive and iterative are <span class="badge b-blue">O(n) time</span>.
+      But recursive uses <span class="badge b-orange">O(n) space</span> (stack frames) vs iterative <span class="badge b-green">O(1) space</span> (one variable). <strong>Iterative wins on memory!</strong>
+    </div>
+
+    <hr>
+
+    <!-- FIBONACCI -->
+    <div class="sub">
+      <h3>🌀 Fibonacci — What is it?</h3>
+      <p>The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...</p>
+      <p>Each number = sum of the previous two. fib(0) = 0, fib(1) = 1, fib(n) = fib(n-1) + fib(n-2)</p>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <h4 style="color:var(--red);margin:10px 0 8px">⚠️ Recursive Fibonacci (SLOW!)</h4>
+<pre><code><span class="keyword">public static int</span> <span class="method">fibonacci</span>(<span class="type">int</span> n) {
+    <span class="comment">// BASE CASE: fib(0)=0, fib(1)=1</span>
+    <span class="keyword">if</span> (n <= <span class="number">1</span>) <span class="keyword">return</span> n;
+    
+    <span class="comment">// TWO recursive calls — this is the problem!</span>
+    <span class="comment">// fib(5) calls fib(4) AND fib(3)</span>
+    <span class="comment">// fib(4) calls fib(3) AND fib(2) — fib(3) computed TWICE!</span>
+    <span class="comment">// Gets worse as n grows → O(2ⁿ) time complexity 💀</span>
+    <span class="keyword">return</span> <span class="method">fibonacci</span>(n - <span class="number">1</span>) + <span class="method">fibonacci</span>(n - <span class="number">2</span>);
+}</code></pre>
+        <div class="box box-danger" style="font-size:13px">
+          <strong>Why it's terrible:</strong> fib(5) computes fib(3) TWICE, fib(2) THREE TIMES. For fib(50) it computes over a trillion calls. Time: <span class="badge b-red">O(2ⁿ)</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:var(--accent3);margin:10px 0 8px">✅ Iterative Fibonacci (FAST!)</h4>
+<pre><code><span class="keyword">public static int</span> <span class="method">fibonacci</span>(<span class="type">int</span> n) {
+    <span class="keyword">if</span> (n <= <span class="number">1</span>) <span class="keyword">return</span> n;  <span class="comment">// handle edge cases</span>
+    
+    <span class="comment">// Only remember the LAST TWO numbers — O(1) space!</span>
+    <span class="type">int</span> prev = <span class="number">0</span>, curr = <span class="number">1</span>;
+    
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i <= n; i++) {
+        <span class="type">int</span> next = prev + curr;  <span class="comment">// compute next fib number</span>
+        prev = curr;             <span class="comment">// slide the window forward</span>
+        curr = next;
+    }
+    <span class="keyword">return</span> curr;
+}
+<span class="comment">// Trace for fib(5):
+// i=2: next=1, prev=1, curr=1
+// i=3: next=2, prev=1, curr=2
+// i=4: next=3, prev=2, curr=3
+// i=5: next=5, prev=3, curr=5 ✓</span></code></pre>
+        <div class="box box-tip" style="font-size:13px">Time: <span class="badge b-blue">O(n)</span> &nbsp; Space: <span class="badge b-green">O(1)</span> — massively better!</div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>📊 Full Complexity Comparison Table</h3>
+      <table>
+        <tr><th>Algorithm</th><th>Approach</th><th>Time Complexity</th><th>Space Complexity</th><th>Winner?</th></tr>
+        <tr><td>Factorial</td><td>Recursive</td><td><span class="badge b-blue">O(n)</span></td><td><span class="badge b-orange">O(n)</span></td><td>❌</td></tr>
+        <tr><td>Factorial</td><td>Iterative</td><td><span class="badge b-blue">O(n)</span></td><td><span class="badge b-green">O(1)</span></td><td>✅ Use this</td></tr>
+        <tr><td>Fibonacci</td><td>Recursive</td><td><span class="badge b-red">O(2ⁿ)</span></td><td><span class="badge b-orange">O(n)</span></td><td>❌ Terrible</td></tr>
+        <tr><td>Fibonacci</td><td>Iterative</td><td><span class="badge b-blue">O(n)</span></td><td><span class="badge b-green">O(1)</span></td><td>✅ Use this</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 5. SORTING ALGORITHMS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <div class="section-icon c-pink">🔀</div>
+    <div>
+      <h2 class="c-pink">5. Sorting Algorithms</h2>
+      <span style="color:var(--muted);font-size:13px">Know each algorithm's logic, code, and Big O complexity</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <!-- BUBBLE SORT -->
+    <div class="sub">
+      <h3>🫧 5.1 Bubble Sort</h3>
+      <p><strong>Idea:</strong> Compare neighbours. If left > right, SWAP them. Repeat. Bigger elements "bubble up" to the end like bubbles rising in water.</p>
+      <div class="box box-info">
+        <strong>Steps:</strong> Do (n-1) passes. In each pass, do (n-1) comparisons. Big elements float to the top each pass.
+      </div>
+<pre><code><span class="keyword">public void</span> <span class="method">bubbleSort</span>(<span class="type">int</span>[] a) {
+    <span class="comment">// Outer loop: each pass puts one more element in its final position</span>
+    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j < a.length - <span class="number">1</span>; j++) {
+        <span class="comment">// Inner loop: compare adjacent pairs. Each pass, last j elements are sorted</span>
+        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i < a.length - <span class="number">1</span> - j; i++) {
+            <span class="keyword">if</span> (a[i] > a[i + <span class="number">1</span>]) {  <span class="comment">// if left neighbour is bigger...</span>
+                <span class="comment">// SWAP them! Use a temp variable (like swapping cups)</span>
+                <span class="type">int</span> temp = a[i];
+                a[i] = a[i + <span class="number">1</span>];
+                a[i + <span class="number">1</span>] = temp;
+            }
+        }
+    }
+}</code></pre>
+      <table>
+        <tr><th>Case</th><th>Comparisons</th><th>Swaps</th><th>Big O</th></tr>
+        <tr><td>Best (already sorted)</td><td>(n-1)</td><td>0</td><td><span class="badge b-blue">O(n)</span> with adaptive</td></tr>
+        <tr><td>Average</td><td>~n²/2</td><td>~n²/4</td><td><span class="badge b-red">O(n²)</span></td></tr>
+        <tr><td>Worst (reverse sorted)</td><td>(n-1)²</td><td>(n-1)²</td><td><span class="badge b-red">O(n²)</span></td></tr>
+      </table>
+      <div class="box box-warn"><strong>Key insight:</strong> Bubble sort has a weird asymmetry. A small element in the wrong place at the "heavy" end only moves ONE position per pass. This is why it's slow!</div>
+    </div>
+
+    <hr>
+
+    <!-- SHAKER SORT -->
+    <div class="sub">
+      <h3>🍹 5.2 Shaker Sort (Cocktail Sort)</h3>
+      <p><strong>Improvement on Bubble Sort:</strong> Goes left-to-right AND right-to-left alternately. Fixes the asymmetry problem. Works best when data is <em>almost sorted</em>.</p>
+<pre><code><span class="keyword">public void</span> <span class="method">shakerSort</span>(<span class="type">int</span>[] a) {
+    <span class="type">int</span> l = <span class="number">0</span>;             <span class="comment">// left boundary</span>
+    <span class="type">int</span> r = a.length - <span class="number">2</span>; <span class="comment">// right boundary</span>
+    <span class="type">int</span> k = a.length;
+    <span class="keyword">do</span> {
+        <span class="comment">// LEFT → RIGHT pass: bubbles big elements to the right</span>
+        <span class="keyword">for</span> (<span class="type">int</span> i = l; i < r + <span class="number">1</span>; i++) {
+            <span class="keyword">if</span> (a[i] > a[i + <span class="number">1</span>]) {
+                <span class="type">int</span> temp = a[i]; a[i] = a[i+<span class="number">1</span>]; a[i+<span class="number">1</span>] = temp;
+                k = i;
+            }
+        }
+        r = k - <span class="number">1</span>;  <span class="comment">// shrink right boundary</span>
+        
+        <span class="comment">// RIGHT → LEFT pass: bubbles small elements to the left</span>
+        <span class="keyword">for</span> (<span class="type">int</span> i = r; i >= l; i--) {
+            <span class="keyword">if</span> (a[i + <span class="number">1</span>] < a[i]) {
+                <span class="type">int</span> temp = a[i]; a[i] = a[i+<span class="number">1</span>]; a[i+<span class="number">1</span>] = temp;
+                k = i;
+            }
+        }
+        l = k + <span class="number">1</span>;  <span class="comment">// shrink left boundary</span>
+    } <span class="keyword">while</span> (l < r);
+}</code></pre>
+      <div class="box box-tip">Still O(n²) overall but <strong>faster in practice</strong> for nearly-sorted data.</div>
+    </div>
+
+    <hr>
+
+    <!-- SELECTION SORT -->
+    <div class="sub">
+      <h3>🔍 5.3 Selection Sort</h3>
+      <p><strong>Idea:</strong> Find the SMALLEST element in the unsorted part, swap it to the front. Repeat. Like picking the shortest person and moving them to the start of a line.</p>
+<pre><code><span class="keyword">public void</span> <span class="method">selectionSort</span>(<span class="type">int</span>[] a) {
+    <span class="comment">// For each position i, find the smallest remaining element</span>
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i < a.length - <span class="number">1</span>; i++) {
+        <span class="type">int</span> smallest = a[i];  <span class="comment">// assume current is smallest</span>
+        <span class="type">int</span> pos = i;
+        
+        <span class="comment">// Search the UNSORTED part for a smaller value</span>
+        <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j < a.length; j++) {
+            <span class="keyword">if</span> (a[j] < smallest) {
+                smallest = a[j];  <span class="comment">// found a smaller one!</span>
+                pos = j;          <span class="comment">// remember where it is</span>
+            }
+        }
+        <span class="comment">// Swap the smallest into position i</span>
+        <span class="type">int</span> temp = a[pos]; a[pos] = a[i]; a[i] = temp;
+    }
+}
+<span class="comment">// Still O(n²) but FEWER swaps than bubble sort → better in practice</span></code></pre>
+    </div>
+
+    <hr>
+
+    <!-- INSERTION SORT -->
+    <div class="sub">
+      <h3>🃏 5.4 Insertion Sort</h3>
+      <p><strong>Idea:</strong> Like sorting a hand of playing cards. Take one card at a time and INSERT it into the correct position in your already-sorted hand.</p>
+<pre><code><span class="keyword">public void</span> <span class="method">insertionSort</span>(<span class="type">int</span>[] a) {
+    <span class="comment">// Start from index 1 (index 0 is already "sorted" by itself)</span>
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i < a.length; i++) {
+        <span class="type">int</span> val = a[i];  <span class="comment">// pick up the current card</span>
+        <span class="type">int</span> j = i - <span class="number">1</span>;
+        
+        <span class="comment">// Shift larger elements to the right to make room</span>
+        <span class="keyword">while</span> (j >= <span class="number">0</span> && val < a[j]) {
+            a[j + <span class="number">1</span>] = a[j];  <span class="comment">// slide element right</span>
+            j--;
+        }
+        <span class="comment">// Insert val into its correct position</span>
+        a[j + <span class="number">1</span>] = val;
+    }
+}
+<span class="comment">// NATURAL behaviour: best case O(n) for already-sorted input!</span></code></pre>
+      <div class="box box-tip"><strong>Natural behaviour:</strong> If data is already sorted, inner while loop never executes → O(n). If data is reverse sorted → O(n²). Great for small or nearly-sorted data.</div>
+    </div>
+
+    <hr>
+
+    <!-- SHELL SORT -->
+    <div class="sub">
+      <h3>🐚 5.5 Shell Sort (Insert Sort by Diminishing Increment)</h3>
+      <p><strong>Idea:</strong> Improved Insertion Sort. Instead of moving elements one step at a time, jump large gaps first. Gradually reduce the gap. This moves elements farther in fewer steps.</p>
+<pre><code><span class="keyword">public void</span> <span class="method">shellSort</span>(<span class="type">int</span>[] a) {
+    <span class="comment">// Start with a large gap, then shrink it (÷2 each time)</span>
+    <span class="type">int</span> inc = a.length / <span class="number">2</span>;
+    <span class="keyword">while</span> (inc > <span class="number">0</span>) {
+        <span class="comment">// Do insertion sort with elements 'inc' apart</span>
+        <span class="keyword">for</span> (<span class="type">int</span> i = inc; i < a.length; i += inc) {
+            <span class="type">int</span> temp = a[i];
+            <span class="type">int</span> j = i;
+            <span class="keyword">while</span> (j >= inc && a[j - inc] > temp) {
+                a[j] = a[j - inc];
+                j -= inc;
+            }
+            a[j] = temp;
+        }
+        inc /= <span class="number">2</span>;  <span class="comment">// halve the gap — keep going until gap = 1</span>
+    }
+}
+<span class="comment">// Big O: approximately O(n^1.2) — MUCH better than O(n²)!</span></code></pre>
+      <div class="box box-info"><strong>Knuth's suggested increments:</strong> 1, 3, 7, 15, 31 or 1, 4, 13, 40, 121... These give better performance than simple halving.</div>
+    </div>
+
+    <hr>
+
+    <!-- QUICK SORT -->
+    <div class="sub">
+      <h3>⚡ 5.6 Quick Sort</h3>
+      <p><strong>Idea:</strong> Pick a <strong>pivot</strong> element. Move all elements smaller than pivot to the LEFT, all larger to the RIGHT. Then recursively sort each half. Divide and conquer!</p>
+      <div class="box box-info"><strong>Think of it like:</strong> Pick someone's height as the pivot. Everyone shorter goes left, everyone taller goes right. Now sort each group the same way.</div>
+<pre><code><span class="comment">// Main sort method — calls the recursive helper</span>
+<span class="keyword">public void</span> <span class="method">sort</span>(<span class="type">int</span>[] a) {
+    <span class="method">quickSort</span>(a, <span class="number">0</span>, a.length - <span class="number">1</span>);
+}
+
+<span class="comment">// Recursive method: sorts the subarray a[left..right]</span>
+<span class="keyword">private void</span> <span class="method">quickSort</span>(<span class="type">int</span>[] a, <span class="type">int</span> left, <span class="type">int</span> right) {
+    <span class="type">int</span> index = <span class="method">partition</span>(a, left, right);  <span class="comment">// partition around pivot</span>
+    
+    <span class="comment">// Recursively sort LEFT half (elements < pivot)</span>
+    <span class="keyword">if</span> (left < index - <span class="number">1</span>)
+        <span class="method">quickSort</span>(a, left, index - <span class="number">1</span>);
+    
+    <span class="comment">// Recursively sort RIGHT half (elements > pivot)</span>
+    <span class="keyword">if</span> (index < right)
+        <span class="method">quickSort</span>(a, index, right);
+}
+
+<span class="comment">// Partition: pick middle element as pivot, move small ones left, big ones right</span>
+<span class="keyword">private int</span> <span class="method">partition</span>(<span class="type">int</span>[] a, <span class="type">int</span> left, <span class="type">int</span> right) {
+    <span class="type">int</span> i = left;
+    <span class="type">int</span> j = right;
+    <span class="comment">// Pick the MIDDLE element as pivot (avoids worst-case on sorted data)</span>
+    <span class="type">int</span> pivot = a[(left + right) / <span class="number">2</span>];
+    
+    <span class="keyword">while</span> (i <= j) {
+        <span class="keyword">while</span> (a[i] < pivot) i++;  <span class="comment">// find element on left that's >= pivot</span>
+        <span class="keyword">while</span> (a[j] > pivot) j--;  <span class="comment">// find element on right that's <= pivot</span>
+        
+        <span class="keyword">if</span> (i <= j) {
+            <span class="comment">// Swap them — i-element was too big, j-element was too small</span>
+            <span class="type">int</span> temp = a[i]; a[i] = a[j]; a[j] = temp;
+            i++; j--;
+        }
+    }
+    <span class="keyword">return</span> i;
+}</code></pre>
+      <table>
+        <tr><th>Case</th><th>Time</th><th>Space (stack)</th></tr>
+        <tr><td>Best / Average</td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-green">O(log n)</span></td></tr>
+        <tr><td>Worst (already sorted, bad pivot)</td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-orange">O(n)</span></td></tr>
+      </table>
+    </div>
+
+    <hr>
+
+    <!-- HEAP SORT -->
+    <div class="sub">
+      <h3>🌳 5.7 Heap Sort</h3>
+      <p><strong>You need to understand TWO things:</strong> what a heap is, and how sorting uses it.</p>
+
+      <h4>What is a Heap?</h4>
+      <p>A heap is a <strong>complete binary tree</strong> stored as an array, with the <strong>max-heap property</strong>: every parent is LARGER than its children. The root (index 0) is always the BIGGEST element.</p>
+      <div class="box box-info">
+        <strong>Array index math (memorise this!):</strong><br>
+        • Left child of i → index <code class="ic">2*i + 1</code><br>
+        • Right child of i → index <code class="ic">2*i + 2</code><br>
+        • Parent of i → index <code class="ic">(i-1) / 2</code>
+      </div>
+
+      <h4>Heap Sort Steps:</h4>
+      <ol class="steps">
+        <li>Take your unsorted array and <strong>buildHeap</strong> — rearrange it into a max-heap (O(n))</li>
+        <li>The ROOT is the largest element. <strong>Swap it with the last element</strong></li>
+        <li>Shrink the heap (reduce n by 1), then <strong>sift down</strong> the new root to fix the heap</li>
+        <li>Repeat steps 2-3 until heap has 1 element — array is sorted!</li>
+      </ol>
+
+<pre><code><span class="keyword">int</span> n;  <span class="comment">// tracks current heap size</span>
+
+<span class="keyword">public void</span> <span class="method">sort</span>(<span class="type">int</span>[] a) {
+    n = a.length;
+    <span class="method">buildHeap</span>(a);      <span class="comment">// Step 1: convert array to max-heap</span>
+    <span class="keyword">while</span> (n > <span class="number">1</span>) {
+        n--;             <span class="comment">// shrink heap size</span>
+        <span class="method">exchange</span>(a, <span class="number">0</span>, n); <span class="comment">// Step 2: swap root (max) to end</span>
+        <span class="method">sift</span>(a, <span class="number">0</span>);        <span class="comment">// Step 3: restore heap property from root</span>
+    }
+}
+
+<span class="comment">// Build heap by sifting down from all non-leaf nodes (bottom-up)</span>
+<span class="keyword">private void</span> <span class="method">buildHeap</span>(<span class="type">int</span>[] a) {
+    <span class="keyword">for</span> (<span class="type">int</span> i = n / <span class="number">2</span> - <span class="number">1</span>; i >= <span class="number">0</span>; i--)  <span class="comment">// start from last non-leaf</span>
+        <span class="method">sift</span>(a, i);
+}
+
+<span class="comment">// Sift down: move element at i DOWN until heap property is restored</span>
+<span class="keyword">private void</span> <span class="method">sift</span>(<span class="type">int</span>[] a, <span class="type">int</span> i) {
+    <span class="type">int</span> j = <span class="number">2</span> * i + <span class="number">1</span>;  <span class="comment">// left child of i</span>
+    <span class="keyword">while</span> (j < n) {
+        <span class="comment">// Pick the LARGER child</span>
+        <span class="keyword">if</span> (j + <span class="number">1</span> < n && a[j + <span class="number">1</span>] > a[j])
+            j++;  <span class="comment">// right child is bigger, use it</span>
+        
+        <span class="keyword">if</span> (a[i] >= a[j])
+            <span class="keyword">return</span>;  <span class="comment">// heap property satisfied, stop!</span>
+        
+        <span class="method">exchange</span>(a, i, j);  <span class="comment">// swap parent with larger child</span>
+        i = j;              <span class="comment">// move down to the child</span>
+        j = <span class="number">2</span> * i + <span class="number">1</span>;    <span class="comment">// next left child</span>
+    }
+}
+
+<span class="keyword">private void</span> <span class="method">exchange</span>(<span class="type">int</span>[] a, <span class="type">int</span> i, <span class="type">int</span> j) {
+    <span class="type">int</span> temp = a[i]; a[i] = a[j]; a[j] = temp;
+}</code></pre>
+      <table>
+        <tr><th>Case</th><th>Time</th><th>Space</th></tr>
+        <tr><td>All cases</td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-green">O(1)</span></td></tr>
+      </table>
+      <div class="box box-tip"><strong>Heap Sort advantage:</strong> Always O(n log n) — no worst case surprise like QuickSort. Also O(1) extra space unlike MergeSort.</div>
+    </div>
+
+    <hr>
+
+    <!-- MERGE SORT -->
+    <div class="sub">
+      <h3>🧩 5.8 Merge Sort</h3>
+      <p><strong>Idea:</strong> Keep splitting the array in half until you have single elements (trivially sorted). Then merge pairs back together in sorted order. Classic divide-and-conquer.</p>
+      <div class="box box-key">
+        <strong>Steps:</strong>
+        1. Find midpoint → 2. Recursively sort left half → 3. Recursively sort right half → 4. Merge both sorted halves into one sorted array
+      </div>
+      <table>
+        <tr><th>Case</th><th>Time</th><th>Space</th><th>Stable?</th></tr>
+        <tr><td>All cases (best, avg, worst)</td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-orange">O(n)</span></td><td>✅ Yes</td></tr>
+      </table>
+      <div class="box box-warn"><strong>Downside:</strong> Needs O(n) extra memory (temporary arrays). Great for sorting linked lists or when stability matters.</div>
+    </div>
+
+    <hr>
+
+    <!-- SUMMARY TABLE -->
+    <div class="sub">
+      <h3>📊 Sorting Algorithms Summary (Exam Cheat Sheet)</h3>
+      <table>
+        <tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Space</th><th>Stable</th><th>Notes</th></tr>
+        <tr><td>Bubble Sort</td><td><span class="badge b-blue">O(n)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-green">O(1)</span></td><td>✅</td><td>Simple but slow</td></tr>
+        <tr><td>Shaker Sort</td><td><span class="badge b-blue">O(n)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-green">O(1)</span></td><td>✅</td><td>Better for nearly sorted</td></tr>
+        <tr><td>Selection Sort</td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-green">O(1)</span></td><td>❌</td><td>Fewer swaps than bubble</td></tr>
+        <tr><td>Insertion Sort</td><td><span class="badge b-blue">O(n)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-green">O(1)</span></td><td>✅</td><td>Great for small/nearly sorted</td></tr>
+        <tr><td>Shell Sort</td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-orange">O(n^1.2)</span></td><td><span class="badge b-orange">O(n^1.5)</span></td><td><span class="badge b-green">O(1)</span></td><td>❌</td><td>Good all-rounder</td></tr>
+        <tr><td><strong>Quick Sort</strong></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-red">O(n²)</span></td><td><span class="badge b-green">O(log n)</span></td><td>❌</td><td>Fastest in practice avg</td></tr>
+        <tr><td><strong>Heap Sort</strong></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-green">O(1)</span></td><td>❌</td><td>Consistent, in-place</td></tr>
+        <tr><td><strong>Merge Sort</strong></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-blue">O(n log n)</span></td><td><span class="badge b-orange">O(n)</span></td><td>✅</td><td>Stable, needs extra memory</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 6. STACK -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <div class="section-icon c-yellow">📚</div>
+    <div>
+      <h2 class="c-yellow">6. Stack Data Structure</h2>
+      <span style="color:var(--muted);font-size:13px">LIFO — Last In, First Out</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="box box-key">
+      <strong>Simple explanation:</strong> A stack is like a stack of plates 🍽️. You can only add to the TOP and only take from the TOP. The LAST plate you put on is the FIRST one you take off. This is <strong>LIFO (Last In, First Out)</strong>.
+    </div>
+
+    <div class="sub">
+      <h3>🔧 Stack Operations</h3>
+      <div class="grid2">
+        <div class="box box-info"><strong>push(item)</strong> — add an item to the TOP of the stack</div>
+        <div class="box box-info"><strong>pop()</strong> — remove and return the TOP item</div>
+        <div class="box box-info"><strong>peek()</strong> — look at the top item WITHOUT removing it</div>
+        <div class="box box-info"><strong>isEmpty()</strong> — check if the stack has no items</div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>🏗️ Two Ways to Build a Stack</h3>
+
+      <h4>Method 1: Using an Array (Static/Fixed Size)</h4>
+<pre><code><span class="comment">// Stack backed by an array — has a fixed maximum size</span>
+<span class="keyword">class</span> <span class="type">ArrayStack</span> {
+    <span class="keyword">private int</span>[] data;
+    <span class="keyword">private int</span> top = -<span class="number">1</span>;  <span class="comment">// -1 means stack is empty</span>
+    
+    <span class="type">ArrayStack</span>(<span class="type">int</span> size) {
+        data = <span class="keyword">new int</span>[size];  <span class="comment">// allocate fixed array</span>
+    }
+    
+    <span class="keyword">void</span> <span class="method">push</span>(<span class="type">int</span> item) {
+        top++;         <span class="comment">// move pointer up</span>
+        data[top] = item;  <span class="comment">// place item at new top</span>
+    }
+    
+    <span class="keyword">int</span> <span class="method">pop</span>() {
+        <span class="type">int</span> item = data[top];  <span class="comment">// grab the top item</span>
+        top--;                 <span class="comment">// move pointer down</span>
+        <span class="keyword">return</span> item;
+    }
+    
+    <span class="keyword">int</span> <span class="method">peek</span>() {
+        <span class="keyword">return</span> data[top];  <span class="comment">// look but don't remove</span>
+    }
+    
+    <span class="keyword">boolean</span> <span class="method">isEmpty</span>() {
+        <span class="keyword">return</span> top == -<span class="number">1</span>;  <span class="comment">// nothing in stack</span>
+    }
+}</code></pre>
+
+      <h4>Method 2: Using a Linked Structure (Dynamic Size)</h4>
+<pre><code><span class="comment">// Node for linked stack — each node holds data + pointer to next</span>
+<span class="keyword">class</span> <span class="type">Node</span> {
+    <span class="type">int</span> data;
+    <span class="type">Node</span> next;
+    <span class="type">Node</span>(<span class="type">int</span> data) { <span class="keyword">this</span>.data = data; }
+}
+
+<span class="keyword">class</span> <span class="type">LinkedStack</span> {
+    <span class="keyword">private</span> <span class="type">Node</span> top = <span class="keyword">null</span>;  <span class="comment">// null = empty stack</span>
+    
+    <span class="keyword">void</span> <span class="method">push</span>(<span class="type">int</span> item) {
+        <span class="type">Node</span> newNode = <span class="keyword">new</span> <span class="type">Node</span>(item);
+        newNode.next = top;  <span class="comment">// new node points to old top</span>
+        top = newNode;       <span class="comment">// update top to new node</span>
+    }
+    
+    <span class="keyword">int</span> <span class="method">pop</span>() {
+        <span class="type">int</span> item = top.data;
+        top = top.next;  <span class="comment">// top now points to the one below</span>
+        <span class="keyword">return</span> item;
+    }
+}
+<span class="comment">// Linked stack: grows as needed, no fixed size limit</span></code></pre>
+    </div>
+
+    <div class="sub">
+      <h3>🎯 Real-World Uses of Stacks (exam questions love these!)</h3>
+      <table>
+        <tr><th>Use Case</th><th>How stack is used</th></tr>
+        <tr><td>Reverse Polish Notation (RPN)</td><td>Push operands, pop when you see an operator, push result back</td></tr>
+        <tr><td>Reversing a string</td><td>Push each character, then pop them all — they come out backwards</td></tr>
+        <tr><td>Palindrome check</td><td>Push first half, compare with second half as you pop</td></tr>
+        <tr><td>Recursion itself</td><td>JVM uses a call stack — each function call is a stack frame</td></tr>
+        <tr><td>Undo feature in apps</td><td>Each action pushed to stack; Ctrl+Z pops the last action</td></tr>
+        <tr><td>Browser back button</td><td>Each visited page pushed to stack; Back = pop</td></tr>
+      </table>
+    </div>
+
+    <div class="sub">
+      <h3>🔢 Linear vs Non-Linear Data Structures</h3>
+      <div class="grid2">
+        <div class="box box-info">
+          <strong>Linear (one after another):</strong><br>
+          • List (Array / LinkedList)<br>
+          • Stack<br>
+          • Queue
+        </div>
+        <div class="box box-key">
+          <strong>Non-Linear (branching/connected):</strong><br>
+          • Binary Search Tree<br>
+          • Heap<br>
+          • Graph
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 7. LINKED LISTS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <div class="section-icon c-red">🔗</div>
+    <div>
+      <h2 class="c-red">7. Linked Lists</h2>
+      <span style="color:var(--muted);font-size:13px">Dynamic data structures — overcome array limitations</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="box box-key">
+      <strong>Simple explanation:</strong> A linked list is like a treasure hunt 🗺️. Each clue (node) tells you where the NEXT clue is. Unlike an array where everything is next to each other in memory, a linked list's nodes can be anywhere — they just hold a pointer to the next one.
+    </div>
+
+    <div class="sub">
+      <h3>⚠️ Why not just use arrays?</h3>
+      <div class="grid2">
+        <div class="box box-danger">
+          <strong>Array Limitations:</strong><br>
+          • Fixed size — can't grow easily<br>
+          • Inserting/deleting in middle requires shifting ALL elements<br>
+          • Wasted space if array is bigger than needed
+        </div>
+        <div class="box box-tip">
+          <strong>Linked List Advantages:</strong><br>
+          • Dynamic size — grows/shrinks as needed<br>
+          • Insert/delete: just change a pointer<br>
+          • No wasted pre-allocated space
+        </div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>🔗 Types of Linked Lists</h3>
+      <table>
+        <tr><th>Type</th><th>Description</th><th>Pointer(s) per node</th></tr>
+        <tr>
+          <td><strong>Singly Linked List</strong></td>
+          <td>Each node has data + ONE pointer (to next node). Can only traverse forward.</td>
+          <td><code class="ic">next</code></td>
+        </tr>
+        <tr>
+          <td><strong>Doubly Linked List</strong></td>
+          <td>Each node has data + TWO pointers (to next AND previous). Can traverse both directions.</td>
+          <td><code class="ic">next</code> + <code class="ic">prev</code></td>
+        </tr>
+        <tr>
+          <td><strong>Circular Linked List</strong></td>
+          <td>Last node's next pointer points BACK to the first node. Forms a circle.</td>
+          <td><code class="ic">next</code> (last → first)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="sub">
+      <h3>🏗️ Basic Singly Linked List Node</h3>
+<pre><code><span class="comment">// A node is like one link in a chain</span>
+<span class="keyword">class</span> <span class="type">Node</span> {
+    <span class="type">int</span> data;       <span class="comment">// the actual value we're storing</span>
+    <span class="type">Node</span> next;      <span class="comment">// pointer to the NEXT node (null if last)</span>
+    
+    <span class="type">Node</span>(<span class="type">int</span> data) {
+        <span class="keyword">this</span>.data = data;
+        <span class="keyword">this</span>.next = <span class="keyword">null</span>;
+    }
+}
+
+<span class="keyword">class</span> <span class="type">LinkedList</span> {
+    <span class="type">Node</span> head = <span class="keyword">null</span>;  <span class="comment">// start of the list (null = empty list)</span>
+    
+    <span class="comment">// Add to the END of the list</span>
+    <span class="keyword">void</span> <span class="method">add</span>(<span class="type">int</span> val) {
+        <span class="type">Node</span> newNode = <span class="keyword">new</span> <span class="type">Node</span>(val);
+        <span class="keyword">if</span> (head == <span class="keyword">null</span>) {       <span class="comment">// empty list</span>
+            head = newNode;
+        } <span class="keyword">else</span> {
+            <span class="type">Node</span> current = head;
+            <span class="keyword">while</span> (current.next != <span class="keyword">null</span>)  <span class="comment">// walk to the end</span>
+                current = current.next;
+            current.next = newNode;        <span class="comment">// attach new node at end</span>
+        }
+    }
+    
+    <span class="comment">// Print all elements in the list</span>
+    <span class="keyword">void</span> <span class="method">print</span>() {
+        <span class="type">Node</span> current = head;
+        <span class="keyword">while</span> (current != <span class="keyword">null</span>) {
+            System.out.<span class="method">print</span>(current.data + <span class="string">" → "</span>);
+            current = current.next;  <span class="comment">// move to next node</span>
+        }
+        System.out.<span class="method">println</span>(<span class="string">"null"</span>);  <span class="comment">// end of list</span>
+    }
+}</code></pre>
+    </div>
+
+    <div class="sub">
+      <h3>🔄 Doubly Linked List Node</h3>
+<pre><code><span class="comment">// Each node can look forward AND backward</span>
+<span class="keyword">class</span> <span class="type">DNode</span> {
+    <span class="type">int</span> data;
+    <span class="type">DNode</span> next;  <span class="comment">// pointer to the node AFTER this one</span>
+    <span class="type">DNode</span> prev;  <span class="comment">// pointer to the node BEFORE this one</span>
+    
+    <span class="type">DNode</span>(<span class="type">int</span> data) {
+        <span class="keyword">this</span>.data = data;
+        next = <span class="keyword">null</span>;
+        prev = <span class="keyword">null</span>;
+    }
+}
+<span class="comment">// Advantages: can traverse backwards, easier deletion (no need to track previous node)</span>
+<span class="comment">// Disadvantages: uses more memory (extra pointer per node)</span></code></pre>
+    </div>
+
+    <div class="sub">
+      <h3>📊 Array vs Linked List (classic exam question)</h3>
+      <table>
+        <tr><th>Operation</th><th>Array</th><th>Linked List</th></tr>
+        <tr><td>Access by index</td><td><span class="badge b-green">O(1)</span> — direct</td><td><span class="badge b-red">O(n)</span> — must traverse</td></tr>
+        <tr><td>Insert at beginning</td><td><span class="badge b-red">O(n)</span> — shift all</td><td><span class="badge b-green">O(1)</span> — change head</td></tr>
+        <tr><td>Insert at end</td><td><span class="badge b-green">O(1)</span> amortized</td><td><span class="badge b-orange">O(n)</span> traverse to end</td></tr>
+        <tr><td>Delete from middle</td><td><span class="badge b-red">O(n)</span> — shift elements</td><td><span class="badge b-green">O(1)</span> — change pointers</td></tr>
+        <tr><td>Memory</td><td>Contiguous — may waste</td><td>Non-contiguous — uses pointer overhead</td></tr>
+        <tr><td>Size</td><td>Fixed at creation</td><td>Dynamic — grows/shrinks</td></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 8. QUICK REFERENCE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <div class="section-icon c-green">⚡</div>
+    <div>
+      <h2 class="c-green">8. Quick Reference — Exam Brain Dump</h2>
+      <span style="color:var(--muted);font-size:13px">The things you MUST know by heart going in</span>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="sub">
+      <h3>🎓 Definitions to Know Cold</h3>
+      <table>
+        <tr><th>Term</th><th>Definition</th></tr>
+        <tr><td><strong>Algorithm</strong></td><td>A finite and definite procedure for solving a problem</td></tr>
+        <tr><td><strong>Big O</strong></td><td>Notation describing worst-case growth rate of an algorithm as input grows</td></tr>
+        <tr><td><strong>Recursion</strong></td><td>A function that calls itself to solve a smaller instance of the same problem</td></tr>
+        <tr><td><strong>Base case</strong></td><td>The condition that stops recursion — must exist or you get StackOverflowError</td></tr>
+        <tr><td><strong>Stack</strong></td><td>LIFO data structure — Last In, First Out</td></tr>
+        <tr><td><strong>Queue</strong></td><td>FIFO data structure — First In, First Out</td></tr>
+        <tr><td><strong>Heap</strong></td><td>Complete binary tree where parent is always ≥ children (max-heap)</td></tr>
+        <tr><td><strong>Stable sort</strong></td><td>Elements with equal values keep their original relative order</td></tr>
+        <tr><td><strong>In-place sort</strong></td><td>Sorting algorithm that uses O(1) extra space</td></tr>
+        <tr><td><strong>Pivot</strong></td><td>The element chosen to partition the array in QuickSort</td></tr>
+        <tr><td><strong>Singly Linked List</strong></td><td>Chain of nodes where each node has data + one pointer (next)</td></tr>
+        <tr><td><strong>Doubly Linked List</strong></td><td>Like singly but each node also has a prev pointer</td></tr>
+      </table>
+    </div>
+
+    <div class="sub">
+      <h3>📌 Numbers to Memorise</h3>
+      <table>
+        <tr><th>Fact</th><th>Answer</th></tr>
+        <tr><td>Bubble sort comparisons for n elements</td><td>(n-1)² in worst case ≈ n²</td></tr>
+        <tr><td>Bubble sort passes</td><td>(n-1) passes, each with (n-1) comparisons</td></tr>
+        <tr><td>1000 elements with Bubble Sort</td><td>~1,000,000 comparisons</td></tr>
+        <tr><td>Left child of node i (heap)</td><td>2*i + 1</td></tr>
+        <tr><td>Right child of node i (heap)</td><td>2*i + 2</td></tr>
+        <tr><td>Parent of node i (heap)</td><td>(i-1) / 2</td></tr>
+        <tr><td>Recursive Fibonacci complexity</td><td>O(2ⁿ) — terrible!</td></tr>
+        <tr><td>Iterative Fibonacci complexity</td><td>O(n) time, O(1) space</td></tr>
+        <tr><td>Binary search complexity</td><td>O(log n) — requires SORTED array</td></tr>
+        <tr><td>MergeSort space complexity</td><td>O(n) — needs extra array</td></tr>
+        <tr><td>Knuth's Shell Sort increments</td><td>1, 3, 7, 15, 31 or 1, 4, 13, 40, 121</td></tr>
+        <tr><td>Shell Sort Big O</td><td>O(n^1.2) — Knuth's analysis</td></tr>
+      </table>
+    </div>
+
+    <div class="sub">
+      <h3>🎯 Common Exam Question Patterns</h3>
+      <div class="box box-info">
+        <strong>Q: "Trace the execution of BubbleSort on [5,3,1,4,2]"</strong><br>
+        → Show each pass, show swaps, show the array after each pass. Underline sorted elements.
+      </div>
+      <div class="box box-info">
+        <strong>Q: "What is the Big O of this code?"</strong><br>
+        → Count the loops. One loop = O(n). Nested loops = O(n²). Halving loop = O(log n). No loop = O(1).
+      </div>
+      <div class="box box-info">
+        <strong>Q: "Compare recursive vs iterative factorial"</strong><br>
+        → Same time O(n). Recursive uses O(n) stack space. Iterative uses O(1) space. Prefer iterative.
+      </div>
+      <div class="box box-info">
+        <strong>Q: "Why is recursive Fibonacci inefficient?"</strong><br>
+        → Same subproblems computed multiple times (fib(3) called many times). Use memoization or iteration.
+      </div>
+      <div class="box box-info">
+        <strong>Q: "What is the advantage of Heap Sort over Quick Sort?"</strong><br>
+        → Heap Sort guarantees O(n log n) in ALL cases. QuickSort degrades to O(n²) in worst case.
+      </div>
+      <div class="box box-info">
+        <strong>Q: "What are the limitations of an array? How does a linked list solve them?"</strong><br>
+        → Fixed size, costly insert/delete. Linked list: dynamic size, O(1) insert at known position.
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>🏆 Subject Breakdown Reminder (Term 1 & 2 — June Exam scope)</h3>
+      <table>
+        <tr><th>Term</th><th>Topic</th><th>Weight</th></tr>
+        <tr><td>T1</td><td>Algorithms & Complexity, Recursion vs Iteration, Linear Search, Binary Search, Bubble Sort, 2D Arrays, Linked Lists</td><td>10%</td></tr>
+        <tr><td>T2</td><td>Stack Operations, Sorting Algorithms (Quick, Heap, Shell, Insert, Select, Merge), Algorithm Analysis</td><td>35%</td></tr>
+      </table>
+      <div class="box box-warn">
+        <strong>T2 is worth 35% — that's your biggest single test!</strong> Focus hard on sorting algorithms and their complexities.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<div class="footer">
+  ADP470S June Exam Notes · CPUT Faculty of Informatics &amp; Design · NQF Level 7 · 2026<br>
+  Based on: L1Algorithms, Recursion, BubbleSort, QuickSort, HeapSort, AlgorithmicScale, Stack, Subject Guide<br>
+  <strong style="color:var(--accent3)">Go get that cum laude, Thabiso! 🎓🔥</strong>
+</div>
+
+</body>
+</html>

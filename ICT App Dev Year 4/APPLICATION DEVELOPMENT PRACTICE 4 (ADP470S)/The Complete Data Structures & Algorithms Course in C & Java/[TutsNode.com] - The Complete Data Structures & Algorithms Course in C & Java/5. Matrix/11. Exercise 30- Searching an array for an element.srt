@@ -1,0 +1,179 @@
+1
+00:00:00,390 --> 00:00:06,060
+Hello, all my friends, and welcome again to the complete data structure and algorithms course in this
+
+2
+00:00:06,060 --> 00:00:11,820
+exercise number 30, we are asked to write a program to check if an array contains a specific value.
+
+3
+00:00:11,940 --> 00:00:20,010
+So both the video and think about how to check for an array if it contains a specific bad look through
+
+4
+00:00:20,010 --> 00:00:24,660
+all that, all the elements and search for a specific value.
+
+5
+00:00:26,380 --> 00:00:33,490
+We have learned in that lecture in the previous videos how to search for a given array for a given value
+
+6
+00:00:33,490 --> 00:00:36,070
+inside their array, and they see.
+
+7
+00:00:36,310 --> 00:00:42,460
+And we didn't implement the complete program and like test it in real life.
+
+8
+00:00:42,550 --> 00:00:54,820
+So in order to write it in a real life program, I will create a function called contains so public
+
+9
+00:00:54,820 --> 00:01:02,930
+static boolean it's returning Typekit as Boolean and code contains.
+
+10
+00:01:03,580 --> 00:01:06,580
+This function is called contains.
+
+11
+00:01:06,970 --> 00:01:18,130
+It took inside its parameter and int array called air air and into the item that we are going to search
+
+12
+00:01:18,130 --> 00:01:18,460
+for.
+
+13
+00:01:18,910 --> 00:01:19,300
+OK.
+
+14
+00:01:19,930 --> 00:01:29,890
+So this method will search inside the air for the specific element item it is contained or not.
+
+15
+00:01:30,580 --> 00:01:39,570
+OK, so we start for each int and say the array.
+
+16
+00:01:39,580 --> 00:01:51,880
+This is that for each loop that I have told you inside the lecture that we have specific and a special
+
+17
+00:01:51,880 --> 00:01:58,240
+type of array of loops that loops it through all the elements of the array.
+
+18
+00:01:59,050 --> 00:02:04,570
+And for each element inside the array, it will create a variable and end.
+
+19
+00:02:05,230 --> 00:02:16,060
+And we need to check inside this element if the item that we have passed inside the perimeter is equal
+
+20
+00:02:16,060 --> 00:02:16,990
+equal to.
+
+21
+00:02:17,020 --> 00:02:22,420
+And so we are looping through all the elements inside the array and the check.
+
+22
+00:02:22,420 --> 00:02:30,820
+If the item that we are searching for is equal to and if it is equal to an it return it true because
+
+23
+00:02:31,060 --> 00:02:36,160
+we our our function is returning Boolean.
+
+24
+00:02:36,520 --> 00:02:36,880
+OK.
+
+25
+00:02:38,630 --> 00:02:48,200
+Now it will return false if it is not if it loops through all the elements and exit from this loop without
+
+26
+00:02:48,590 --> 00:02:49,790
+returning through.
+
+27
+00:02:51,920 --> 00:03:01,430
+Satisfying the condition that I am equal to, and it will return false, so no elements are found equal
+
+28
+00:03:01,430 --> 00:03:02,840
+to the item passed.
+
+29
+00:03:03,320 --> 00:03:06,770
+OK, now let's test this approach.
+
+30
+00:03:08,100 --> 00:03:11,970
+How to test it, I will create an entire array here.
+
+31
+00:03:12,670 --> 00:03:24,450
+And array array one equal to that search for let's make our program.
+
+32
+00:03:24,630 --> 00:03:26,160
+These are the numbers.
+
+33
+00:03:33,010 --> 00:03:33,430
+OK.
+
+34
+00:03:35,270 --> 00:03:42,680
+This is the era, and let's search for a system that out that brand.
+
+35
+00:03:46,780 --> 00:03:57,010
+And I call the math it contains, I will add the method contains called the method contains I will pass
+
+36
+00:03:57,580 --> 00:04:02,920
+the array one as the first parameter am searching inside their a'wan for what?
+
+37
+00:04:04,310 --> 00:04:11,420
+For that item, like let's search for the element 14.
+
+38
+00:04:13,800 --> 00:04:15,600
+OK, let's run and see.
+
+39
+00:04:17,650 --> 00:04:23,560
+False, it returns false, because Element 14 is not inside these.
+
+40
+00:04:25,680 --> 00:04:29,040
+This Saturday, now let's search for 21.
+
+41
+00:04:32,520 --> 00:04:41,270
+OK, if it's here, let's run and see if our algorithm is working fine and here we go, we have true.
+
+42
+00:04:41,400 --> 00:04:45,030
+So we are checking for the array.
+
+43
+00:04:45,600 --> 00:04:54,240
+It contains a specific item or not by doing a method called contains and looping through all the elements
+
+44
+00:04:54,240 --> 00:04:58,320
+of the array and check if this element equal to the last item.
+
+45
+00:04:58,620 --> 00:05:02,070
+If there's equal, it will return it through and otherwise it would return.

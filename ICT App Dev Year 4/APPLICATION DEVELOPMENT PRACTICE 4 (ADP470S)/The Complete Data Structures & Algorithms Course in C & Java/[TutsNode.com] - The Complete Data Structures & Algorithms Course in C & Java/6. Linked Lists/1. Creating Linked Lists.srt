@@ -1,0 +1,231 @@
+1
+00:00:00,060 --> 00:00:02,760
+Now, let's talk about Link at last.
+
+2
+00:00:03,700 --> 00:00:12,340
+The list contains a consist of a number of darts in which each none has in next pointer to the following
+
+3
+00:00:12,340 --> 00:00:12,970
+element.
+
+4
+00:00:13,360 --> 00:00:20,290
+The length of the last nod is there and the list is null, which indicates the end of the list.
+
+5
+00:00:20,710 --> 00:00:25,450
+This is very important and think about it not inside the link.
+
+6
+00:00:25,450 --> 00:00:35,170
+At least that consists of not like a two separate that two separate boxes, the one that contains data
+
+7
+00:00:35,170 --> 00:00:38,720
+and the other that contains a reference to the next.
+
+8
+00:00:39,090 --> 00:00:40,810
+Not OK.
+
+9
+00:00:41,170 --> 00:00:50,860
+So in order to create a link, at least in C, we start by struct nod and inside the node.
+
+10
+00:00:50,890 --> 00:01:00,340
+We inside the node structure we have int data variable called data and struck node and the pointer for
+
+11
+00:01:00,340 --> 00:01:02,170
+the next note.
+
+12
+00:01:02,410 --> 00:01:11,070
+This is the reference, so the first one is making an end data that stores the data of an integer and
+
+13
+00:01:11,070 --> 00:01:19,830
+int linked list and struck note that contains a reference to the next node and this link at list to
+
+14
+00:01:19,840 --> 00:01:23,270
+it to create a linkage list or sorry.
+
+15
+00:01:23,310 --> 00:01:28,390
+It would create a none for the linkage list in Java.
+
+16
+00:01:28,660 --> 00:01:36,190
+We start by public last list note and we start by making private and data and private lists, not the
+
+17
+00:01:36,190 --> 00:01:40,150
+next and we, the constructor and getters and setters.
+
+18
+00:01:40,330 --> 00:01:48,430
+Later on in the end, examples and exercises, we are going to construct this link at least from zero.
+
+19
+00:01:48,820 --> 00:01:49,210
+So.
+
+20
+00:01:50,480 --> 00:02:01,460
+The linked list and see, we have created it before the struck note and very important note that in
+
+21
+00:02:01,460 --> 00:02:05,870
+sea there is no class, so we use the struct structure.
+
+22
+00:02:06,440 --> 00:02:13,880
+We are creating a new data structure called node, and this node contains data and struck notes that
+
+23
+00:02:13,880 --> 00:02:15,170
+point to for the next.
+
+24
+00:02:16,270 --> 00:02:23,800
+And we create a structure A. We have three nodes the head, the middle and the last.
+
+25
+00:02:24,280 --> 00:02:27,760
+We start by creating had equal malak.
+
+26
+00:02:28,060 --> 00:02:33,280
+We are reserving memory allocation the size for the struct node.
+
+27
+00:02:33,310 --> 00:02:41,200
+So when we call that malloc, we are reserving the memory and we are creating a structure inside this
+
+28
+00:02:41,590 --> 00:02:45,580
+memory middle had and last.
+
+29
+00:02:45,970 --> 00:02:46,300
+OK.
+
+30
+00:02:46,930 --> 00:02:50,230
+Now, in order to assign the variables.
+
+31
+00:02:51,630 --> 00:03:01,440
+And the data to the variables or to their nodes, so we put had this flash, so dash and this this angle,
+
+32
+00:03:01,840 --> 00:03:11,160
+this diamond data equal to 18, so this line will give us 18 to the head.
+
+33
+00:03:11,280 --> 00:03:14,400
+So you see guys here, we have three nods.
+
+34
+00:03:14,400 --> 00:03:17,400
+We have created three nodes head, middle and last.
+
+35
+00:03:17,700 --> 00:03:24,260
+And these numbers like 1024 2024 and three thousand forty.
+
+36
+00:03:24,740 --> 00:03:32,370
+Are there indices that are that addresses inside that memory?
+
+37
+00:03:32,430 --> 00:03:34,200
+So don't worry about them.
+
+38
+00:03:34,470 --> 00:03:35,130
+We are.
+
+39
+00:03:35,640 --> 00:03:36,180
+We are.
+
+40
+00:03:36,930 --> 00:03:40,410
+We are interested in understanding.
+
+41
+00:03:41,760 --> 00:03:48,300
+That the memory inside the mirror, in order to create the nods, we have to use Malak and in order
+
+42
+00:03:48,300 --> 00:03:57,480
+to insert data inside these nodes we use had Dash this flash and we put data equal to 18.
+
+43
+00:03:57,480 --> 00:03:59,620
+We are inserting inside.
+
+44
+00:03:59,660 --> 00:04:11,310
+We are associating and instantiating that data valuable to 18 in hard data variable, 66 in the middle
+
+45
+00:04:11,550 --> 00:04:15,810
+and the data variable equal to one one nine in the last.
+
+46
+00:04:16,350 --> 00:04:17,640
+Not OK.
+
+47
+00:04:18,430 --> 00:04:26,220
+No, they're very important thing that we should take care, that it is a linked list so we are not
+
+48
+00:04:26,220 --> 00:04:27,000
+making.
+
+49
+00:04:27,000 --> 00:04:30,840
+These nodes are like separate notes.
+
+50
+00:04:30,870 --> 00:04:33,600
+We need to link them how to link them.
+
+51
+00:04:33,810 --> 00:04:38,600
+We need to associate and tell every node what its next.
+
+52
+00:04:38,610 --> 00:04:46,470
+So we are telling head, we are accessing that the head and the next pointer to it would be the middle
+
+53
+00:04:46,800 --> 00:04:50,220
+and the next to the middle would be the last.
+
+54
+00:04:50,670 --> 00:04:51,250
+OK.
+
+55
+00:04:51,450 --> 00:04:54,370
+And the last would be the No.
+
+56
+00:04:54,930 --> 00:04:55,290
+OK.
+
+57
+00:04:55,470 --> 00:05:04,800
+So this association will tell us how to create the ending at less OK in the next video.
+
+58
+00:05:04,830 --> 00:05:07,350
+We are going to talk about printing the link.

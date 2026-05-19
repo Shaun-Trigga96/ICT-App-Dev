@@ -1,0 +1,127 @@
+1
+00:00:01,220 --> 00:00:08,330
+Say temptation, this sanitation decides whether the upper and lower bounds of a given function or algorithm
+
+2
+00:00:08,330 --> 00:00:09,260
+are the same.
+
+3
+00:00:09,950 --> 00:00:16,130
+So the average running time of an algorithm is always between the lower bound and the upper bound.
+
+4
+00:00:16,700 --> 00:00:25,160
+If the upper bound on notation and the lower bound is omega and notation give the same result, then
+
+5
+00:00:25,160 --> 00:00:29,360
+the thetan rotation will also have the same rate of growth.
+
+6
+00:00:30,170 --> 00:00:39,490
+OK, so the rate of growth is in the best case and the worst case are the same like f of an equals 10
+
+7
+00:00:39,490 --> 00:00:42,080
+and plus n as a result.
+
+8
+00:00:42,200 --> 00:00:48,520
+The average case will also be the same for a given algorithm or function.
+
+9
+00:00:48,530 --> 00:00:57,080
+If the rate of growth over the bounds for oil and omega are not the same, then the rate of growth of
+
+10
+00:00:57,080 --> 00:01:00,710
+the sedimentation will not be the same.
+
+11
+00:01:01,070 --> 00:01:07,080
+In this case, we need to consider all possible time complexities and take the average of those.
+
+12
+00:01:07,130 --> 00:01:09,620
+So the average time is that that annotation.
+
+13
+00:01:10,400 --> 00:01:18,590
+So if the upper and lower bound are the same, so average and the set then would be the same if lower
+
+14
+00:01:18,590 --> 00:01:21,380
+and upper bound are not the same.
+
+15
+00:01:21,530 --> 00:01:28,430
+We took the average time of all algorithm between them and consider them as if that that notation,
+
+16
+00:01:28,760 --> 00:01:33,770
+for example, of this we need to to get f of MN.
+
+17
+00:01:37,900 --> 00:01:45,070
+Half of an equal to any square over two minus.
+
+18
+00:01:45,310 --> 00:01:51,790
+And over to find that thatthat bound for that half of an.
+
+19
+00:01:53,060 --> 00:01:55,400
+If we have here.
+
+20
+00:01:56,360 --> 00:02:03,590
+This function, we have two terms, the first one and the second one we have and square over two and
+
+21
+00:02:03,830 --> 00:02:05,720
+the minus and over two.
+
+22
+00:02:05,990 --> 00:02:13,310
+So this function is between less than or equal that and the square.
+
+23
+00:02:14,880 --> 00:02:18,090
+And it is about a greater than.
+
+24
+00:02:19,300 --> 00:02:23,230
+Or equal to any square over five.
+
+25
+00:02:24,260 --> 00:02:32,660
+So for all and greater than to whatever and greater than to so.
+
+26
+00:02:33,700 --> 00:02:42,220
+And square over five less than or equal and square of a two minus and over two less than or equal to
+
+27
+00:02:42,230 --> 00:02:42,970
+any square.
+
+28
+00:02:43,480 --> 00:02:48,490
+In this case, the other an average notation is that the.
+
+29
+00:02:50,410 --> 00:02:58,510
+OK, so that that notation is set of and of squares and power.
+
+30
+00:02:59,680 --> 00:03:00,850
+Two, OK.
+
+31
+00:03:01,660 --> 00:03:08,230
+This is the third penetration, this is the average time between the upper bound and the lower bound,
+
+32
+00:03:08,230 --> 00:03:14,320
+and it's calculated according to the average algorithms, the time taken.

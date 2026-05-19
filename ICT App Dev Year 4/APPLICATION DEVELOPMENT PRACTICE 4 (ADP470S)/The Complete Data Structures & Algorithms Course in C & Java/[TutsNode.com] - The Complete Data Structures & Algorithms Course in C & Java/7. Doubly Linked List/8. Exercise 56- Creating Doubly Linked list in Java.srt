@@ -1,0 +1,267 @@
+1
+00:00:00,060 --> 00:00:05,190
+All my friends and welcome again to the complete data structure and algorithms course in this video,
+
+2
+00:00:05,190 --> 00:00:09,750
+we are going to implement and create doubly link and list.
+
+3
+00:00:09,980 --> 00:00:14,790
+So how to create and java that w link last.
+
+4
+00:00:15,210 --> 00:00:24,750
+We have seen this, this coding and the lectures before, and we are going to implement it in real coding
+
+5
+00:00:24,750 --> 00:00:29,850
+program in order to execute more and more complex things and algorithms.
+
+6
+00:00:30,090 --> 00:00:39,150
+So let's begin and we are going to use this data structured the link, at least in the next core exercises
+
+7
+00:00:39,150 --> 00:00:46,170
+and next videos in order to make things about them, like exercises like methods.
+
+8
+00:00:46,170 --> 00:00:46,690
+And so.
+
+9
+00:00:46,800 --> 00:00:58,170
+So let's go here and intelligent idea our or any or any program that runs Java and compile the Java
+
+10
+00:00:58,170 --> 00:01:01,260
+programs create in you.
+
+11
+00:01:01,350 --> 00:01:12,630
+Go to the source folder, create new Java class, and I will name this Java class as doubly doubly.
+
+12
+00:01:12,820 --> 00:01:14,250
+Make it list.
+
+13
+00:01:15,270 --> 00:01:15,630
+OK.
+
+14
+00:01:16,200 --> 00:01:24,480
+So if I open this source folder, I have a link and less double link, at least file.
+
+15
+00:01:25,290 --> 00:01:28,620
+And I will allow the.
+
+16
+00:01:30,450 --> 00:01:32,580
+If I go to the settings.
+
+17
+00:01:34,040 --> 00:01:36,080
+I go to the editor.
+
+18
+00:01:37,740 --> 00:01:48,040
+Or Ed in general, and I put here that think about change font size with control measures apply and
+
+19
+00:01:48,570 --> 00:01:56,190
+in order to allow the zooming of their code when I click on control and scroll a mouse.
+
+20
+00:01:56,400 --> 00:02:05,790
+OK, so this is better now, as I told you, in order to create a link, at least double link at lest
+
+21
+00:02:05,790 --> 00:02:08,490
+we start by creating its own note.
+
+22
+00:02:08,880 --> 00:02:19,680
+So it's similar to the single single list, but here we have a an extra point there, which refers to
+
+23
+00:02:19,680 --> 00:02:20,370
+the previous.
+
+24
+00:02:20,490 --> 00:02:28,770
+So I will create a class note class note here and.
+
+25
+00:02:31,280 --> 00:02:32,330
+I will often
+
+26
+00:02:36,380 --> 00:02:45,230
+and I put the data, I will make a double link at least that contains end of data of type and you can
+
+27
+00:02:45,530 --> 00:02:50,450
+manipulate the characters strings or or any other objects.
+
+28
+00:02:50,450 --> 00:02:59,990
+But now I I love working with End because it's very, very healthy and very like, very similar and
+
+29
+00:02:59,990 --> 00:03:06,230
+simpler for a new learner to learn and demonstrate things using numbers.
+
+30
+00:03:06,470 --> 00:03:09,080
+OK, so I will create A..
+
+31
+00:03:09,830 --> 00:03:10,940
+This is warfare.
+
+32
+00:03:11,240 --> 00:03:19,340
+As for previous and note, this is the point of for next in singly linked list we have seen and data
+
+33
+00:03:19,340 --> 00:03:20,870
+and known next.
+
+34
+00:03:22,090 --> 00:03:28,810
+The thing that we introduced in the double link, at least, is that reference to the previous note.
+
+35
+00:03:29,190 --> 00:03:34,240
+OK, now I will create the constructor to it, constructor.
+
+36
+00:03:35,920 --> 00:03:42,190
+This constructor will be no the same as the class and the look and.
+
+37
+00:03:43,120 --> 00:03:43,660
+And.
+
+38
+00:03:45,760 --> 00:03:48,760
+I put data equal to.
+
+39
+00:03:51,090 --> 00:03:58,970
+The I will prefer putting a data here, so I can put this this data.
+
+40
+00:04:00,260 --> 00:04:02,570
+This data are equal to data.
+
+41
+00:04:02,750 --> 00:04:13,040
+OK, so till now, we have finished the no the class and we we are going to use it and the next videos
+
+42
+00:04:13,610 --> 00:04:19,040
+and we have created that, that look.
+
+43
+00:04:19,990 --> 00:04:29,380
+Of the first look of that link, at least now I will create a general note in jail, no object called
+
+44
+00:04:29,380 --> 00:04:30,880
+head, OK.
+
+45
+00:04:32,320 --> 00:04:40,030
+Inside this class, it contains a class, an anaesthetic class.
+
+46
+00:04:41,760 --> 00:04:47,880
+And we have an object of this class called no, there's named as hat.
+
+47
+00:04:48,280 --> 00:04:49,860
+OK, so.
+
+48
+00:04:52,470 --> 00:05:01,680
+Let's start making that addition, that insertion, pushing, removing and so.
+
+49
+00:05:02,640 --> 00:05:14,850
+OK, now let's allow to create a method that allows the pushing adding a new node at the front of their
+
+50
+00:05:15,030 --> 00:05:15,660
+list.
+
+51
+00:05:17,430 --> 00:05:23,210
+First of all, I will create a method called public, OK?
+
+52
+00:05:23,520 --> 00:05:29,670
+And this is, let me name it, as exercise or exercise.
+
+53
+00:05:29,820 --> 00:05:38,420
+No, I think it is 56 public void bush.
+
+54
+00:05:40,590 --> 00:05:48,540
+This is the method that adds adding he knows.
+
+55
+00:05:49,970 --> 00:05:51,380
+At the front
+
+56
+00:05:54,170 --> 00:05:54,950
+of the list.
+
+57
+00:05:55,760 --> 00:06:02,720
+So I need from you to complete this push method.
+
+58
+00:06:03,230 --> 00:06:06,560
+And give me the solution and that comment below.
+
+59
+00:06:07,160 --> 00:06:08,780
+We have created the note.
+
+60
+00:06:09,320 --> 00:06:11,480
+We have created a double link at last.
+
+61
+00:06:12,600 --> 00:06:18,630
+And we are going to push now the notes and start making the double link ad lists.
+
+62
+00:06:19,110 --> 00:06:19,530
+OK.
+
+63
+00:06:19,710 --> 00:06:20,940
+So I am waiting.
+
+64
+00:06:20,980 --> 00:06:23,940
+Your your solutions.
+
+65
+00:06:24,180 --> 00:06:25,740
+Your recommendations.
+
+66
+00:06:26,130 --> 00:06:28,500
+Any questions or any doubts?
+
+67
+00:06:28,830 --> 00:06:29,730
+And I am less.

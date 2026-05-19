@@ -1,0 +1,371 @@
+1
+00:00:00,390 --> 00:00:05,550
+Well, my friends, let's make a quick sort algorithm and see language.
+
+2
+00:00:05,820 --> 00:00:14,970
+So first of all, we start by including the studiato and making a function to swab the elements.
+
+3
+00:00:15,750 --> 00:00:23,130
+We have made this function many times in the previous videos, so we need a temporary element and a
+
+4
+00:00:23,130 --> 00:00:29,460
+variable tee that swaps the variable a two variable B and variable B to variable A.
+
+5
+00:00:30,960 --> 00:00:39,900
+And the first steps to bring in the temp, the value of a second step, a equal to B and B equal to
+
+6
+00:00:39,910 --> 00:00:41,760
+that the value.
+
+7
+00:00:42,810 --> 00:00:45,600
+Let's make it function to find the part the chin position.
+
+8
+00:00:47,990 --> 00:00:57,290
+We have talked about this algorithm in the previous videos that we need a partition method that start
+
+9
+00:00:57,310 --> 00:00:58,940
+partitioning that.
+
+10
+00:01:00,170 --> 00:01:11,180
+And a function that allow us to make that quick sort and call it recursively starting by left and right
+
+11
+00:01:12,020 --> 00:01:14,630
+by segmentation and sorting.
+
+12
+00:01:14,780 --> 00:01:21,330
+So for that, we start by making a function and that that does turn.
+
+13
+00:01:21,350 --> 00:01:28,310
+Its returning type is integer and called partition took into the parameters, the array that we are
+
+14
+00:01:28,310 --> 00:01:32,690
+going to partition that low and the high.
+
+15
+00:01:33,760 --> 00:01:42,730
+And this is that we are going to see, so select the rightmost element as before, so we get that pivot
+
+16
+00:01:42,730 --> 00:01:44,800
+equal to the array, equal to high.
+
+17
+00:01:44,830 --> 00:01:53,560
+So the last element the great, the rightmost element aspect, the pointer for the greater element are
+
+18
+00:01:53,560 --> 00:01:56,170
+entirely equal to low minus one.
+
+19
+00:01:56,440 --> 00:02:01,780
+Now traverse each element of the array, compare to them with their pivot.
+
+20
+00:02:02,050 --> 00:02:13,230
+So for that, we need to make an early and a loop before glue that starts from equal to low and stops
+
+21
+00:02:13,240 --> 00:02:18,130
+at less than the high and go through all the element by G Plus Plus.
+
+22
+00:02:19,570 --> 00:02:29,890
+If the array at index is less than or equal to the pivot, then make the smaller pivot is found so it
+
+23
+00:02:29,890 --> 00:02:35,900
+with a greater element pointed by AI and we increase it by plus +1.
+
+24
+00:02:36,500 --> 00:02:47,230
+Now swap element at eye with the element at J swapping here at the end of array at index AI and Array
+
+25
+00:02:47,230 --> 00:02:55,180
+at Index J then swept the pivot element with the greater element at AI.
+
+26
+00:02:55,420 --> 00:02:58,360
+We make again swab.
+
+27
+00:02:58,570 --> 00:03:09,670
+We call them functions where we swept the array index at the Element at Array Index AI +1 with array
+
+28
+00:03:09,670 --> 00:03:11,080
+at index high.
+
+29
+00:03:11,470 --> 00:03:19,030
+So we are switching and swapping the pivot element with that greater element at high and return the
+
+30
+00:03:19,030 --> 00:03:21,010
+part the chimp point i +1.
+
+31
+00:03:21,460 --> 00:03:23,980
+This is the watch the chin function.
+
+32
+00:03:25,060 --> 00:03:27,220
+We make the.
+
+33
+00:03:28,440 --> 00:03:36,390
+Second, function that we will use that is quick sort, this sort will trigger that partition method
+
+34
+00:03:36,390 --> 00:03:37,830
+that we have created.
+
+35
+00:03:38,580 --> 00:03:40,380
+And when it is used.
+
+36
+00:03:40,590 --> 00:03:48,730
+So also, it took into the parameters that they that we are going to sort that low and the high, if
+
+37
+00:03:48,750 --> 00:03:56,220
+low less than high, then find the pivot elements such that the elements greater than pivot are on the
+
+38
+00:03:56,220 --> 00:03:59,490
+left of pivot and elements greater.
+
+39
+00:03:59,490 --> 00:04:02,400
+Then pivot are on the right of the front.
+
+40
+00:04:02,910 --> 00:04:03,390
+OK.
+
+41
+00:04:05,520 --> 00:04:10,980
+And create an integer called PI equal to part the chin.
+
+42
+00:04:11,850 --> 00:04:19,620
+This is the usage of the part, the function that we have created called part the chin.
+
+43
+00:04:19,800 --> 00:04:23,430
+We passed the array and the low and high.
+
+44
+00:04:23,850 --> 00:04:32,130
+So these are the parameters that we are going to do, pass them into the main function that later we
+
+45
+00:04:32,130 --> 00:04:36,480
+will create recursive call of the left of the pivot.
+
+46
+00:04:36,660 --> 00:04:45,950
+We said that in the previous video that we need to use recursion two times and divide and conquer this.
+
+47
+00:04:46,260 --> 00:04:51,060
+That quick sort is one of the divide and conquer algorithms.
+
+48
+00:04:51,210 --> 00:04:56,690
+So divide and conquer algorithm is based on research.
+
+49
+00:04:57,030 --> 00:04:59,960
+And here as the usage of the recursion.
+
+50
+00:04:59,970 --> 00:05:04,860
+So we are going to call that quick sword with the array past.
+
+51
+00:05:05,190 --> 00:05:10,270
+And here we passed the element there at the perimeter low.
+
+52
+00:05:11,100 --> 00:05:19,140
+OK, at the first step, we start by look at five months and the second step we call also the recursive
+
+53
+00:05:19,140 --> 00:05:21,000
+call on the right of the pivot.
+
+54
+00:05:21,240 --> 00:05:24,450
+But here we have passed that high.
+
+55
+00:05:24,780 --> 00:05:31,100
+This will allow us to make a quick sorting for the left substrate.
+
+56
+00:05:31,110 --> 00:05:39,720
+This is the array and this will ensure that all the elements of the left substrate are sorted and they
+
+57
+00:05:39,720 --> 00:05:43,290
+are segmented into elements, single elements.
+
+58
+00:05:43,620 --> 00:05:44,010
+So.
+
+59
+00:05:46,220 --> 00:05:50,240
+That goal and the target of the quick sword algorithm.
+
+60
+00:05:51,380 --> 00:05:54,610
+Is to reach and serve them according.
+
+61
+00:05:54,650 --> 00:06:03,710
+Accordingly and use and and reaches a step where we have single elements.
+
+62
+00:06:06,140 --> 00:06:14,930
+So for that, we have made this for the left the first time and the second step.
+
+63
+00:06:15,170 --> 00:06:23,570
+We start by making recursively and passing the high and right of privacy.
+
+64
+00:06:23,750 --> 00:06:33,410
+So we also made this for the right, so we need to get the right elements are segmented into single
+
+65
+00:06:33,410 --> 00:06:35,330
+elements and they are.
+
+66
+00:06:37,170 --> 00:06:40,280
+Sort, this is that, Richard.
+
+67
+00:06:40,710 --> 00:06:44,160
+This is the usage of recursion in this way.
+
+68
+00:06:44,730 --> 00:06:51,090
+No, the function to print the elements of the array, we have talked about it many times, starting
+
+69
+00:06:51,090 --> 00:06:54,660
+from zero and less than size.
+
+70
+00:06:55,050 --> 00:07:00,380
+And then we will create and print the element at today and.
+
+71
+00:07:01,830 --> 00:07:06,690
+Main function, we will create a function called data.
+
+72
+00:07:07,970 --> 00:07:13,740
+Sorry, not function, it's the main function, and here is an array data that we are going to sort,
+
+73
+00:07:14,480 --> 00:07:24,530
+and we will start by making an and is created by the size of data.
+
+74
+00:07:25,250 --> 00:07:29,210
+This is really over the size of data at Index Z.
+
+75
+00:07:29,420 --> 00:07:29,990
+OK.
+
+76
+00:07:30,140 --> 00:07:35,390
+This is the way that how we can get the size of the array and see.
+
+77
+00:07:36,960 --> 00:07:44,400
+Now printing unsorted array, we print the array that it is not sorted, so we will get this.
+
+78
+00:07:44,940 --> 00:07:50,730
+And after that, we perform a quick search on the data, so we called the method the quick sort.
+
+79
+00:07:51,240 --> 00:07:56,730
+This is the quick sort and we pass the array data.
+
+80
+00:07:57,150 --> 00:07:59,550
+We start from zero.
+
+81
+00:07:59,910 --> 00:08:07,650
+This is the low and the index, and minus one is the high, which is the last element of that data,
+
+82
+00:08:07,740 --> 00:08:10,830
+which is the last index, the element of that.
+
+83
+00:08:11,520 --> 00:08:20,970
+Now, in order to print that, a certain array in an ascending order print data and and this is the
+
+84
+00:08:20,970 --> 00:08:23,130
+size and this is the thing.
+
+85
+00:08:24,040 --> 00:08:24,640
+OK.
+
+86
+00:08:26,160 --> 00:08:31,410
+This is the quick sort algorithm, we have implemented it in sea correctly.
+
+87
+00:08:31,500 --> 00:08:39,360
+And they want from you to write this code in your C compiler and test it and play with with the codes
+
+88
+00:08:39,360 --> 00:08:47,030
+and see the functionality of how to if we if we need to make it ascending or descending order.
+
+89
+00:08:47,040 --> 00:08:51,780
+If I pass the right without the high and high, without the low.
+
+90
+00:08:52,770 --> 00:08:55,200
+So, so please, please, guys.
+
+91
+00:08:55,200 --> 00:09:03,000
+Write this and your compiler and try to to make everything by your own and write them down because they
+
+92
+00:09:03,000 --> 00:09:04,080
+are very important.
+
+93
+00:09:04,080 --> 00:09:10,640
+And these that these questions are asked in the university and in and the inverse the.

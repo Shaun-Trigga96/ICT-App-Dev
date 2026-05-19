@@ -1,0 +1,347 @@
+1
+00:00:00,120 --> 00:00:07,290
+My friends and welcome again to the complete data structure and algorithms, of course, so we are going
+
+2
+00:00:07,290 --> 00:00:12,000
+to implement and create our circular link at least.
+
+3
+00:00:12,540 --> 00:00:18,540
+So we go to the source folder and we create a new Java class called Circular
+
+4
+00:00:21,000 --> 00:00:22,690
+Linkage List.
+
+5
+00:00:23,310 --> 00:00:23,680
+OK.
+
+6
+00:00:24,930 --> 00:00:34,140
+And this is our class that we are going to solve the following exercises in the next videos and to manipulate
+
+7
+00:00:34,140 --> 00:00:36,390
+our circular linked list.
+
+8
+00:00:36,420 --> 00:00:45,960
+So the first exercise here in exercise number 66 and circular link list, we are asked to implement
+
+9
+00:00:45,960 --> 00:00:52,470
+the circular link list creating its node, and we make the print function and the main function.
+
+10
+00:00:52,530 --> 00:00:58,260
+OK, so first of all, we start by creating the note.
+
+11
+00:00:59,100 --> 00:01:03,160
+No, the class, but guys think about it.
+
+12
+00:01:03,180 --> 00:01:08,910
+What we need from a from the anatomy of that node, what it contains.
+
+13
+00:01:09,300 --> 00:01:10,530
+It contains data.
+
+14
+00:01:10,620 --> 00:01:14,760
+So I will create static class
+
+15
+00:01:17,070 --> 00:01:26,850
+node and it would contains that data that I need, which is of type and data.
+
+16
+00:01:26,850 --> 00:01:31,370
+You can make a type of card or type, string type, any object you need.
+
+17
+00:01:31,380 --> 00:01:36,890
+But we are working with integers linked lists or for this exercises.
+
+18
+00:01:36,900 --> 00:01:41,520
+And the following exercises are in and of type int data.
+
+19
+00:01:42,420 --> 00:01:46,170
+And what we need from a circle and this circle.
+
+20
+00:01:46,170 --> 00:01:52,050
+And this contains only data and the pointer to the next one.
+
+21
+00:01:52,380 --> 00:02:01,080
+But the trick behind circular linkage list and what distinguish it from the singly linked list is that
+
+22
+00:02:01,080 --> 00:02:09,420
+the last node referred and the reference to the first node, so it would be a circular forms a circle.
+
+23
+00:02:09,840 --> 00:02:15,270
+So for that, I need just a reference to the next note.
+
+24
+00:02:15,660 --> 00:02:16,040
+OK.
+
+25
+00:02:16,440 --> 00:02:22,240
+So I create a note of contains data and contains next point.
+
+26
+00:02:22,250 --> 00:02:24,170
+It just came.
+
+27
+00:02:25,920 --> 00:02:28,170
+This is how we create a class here.
+
+28
+00:02:29,120 --> 00:02:29,430
+Now.
+
+29
+00:02:31,950 --> 00:02:39,430
+I need function to insert we will see it in the previous in the next videos.
+
+30
+00:02:40,020 --> 00:02:49,950
+And I need a method that print and I need a driver code that make that that execution of the methods.
+
+31
+00:02:50,170 --> 00:02:55,440
+OK, so first of all, I will put here that so, you
+
+32
+00:02:58,380 --> 00:02:59,640
+know, the class.
+
+33
+00:03:07,240 --> 00:03:10,150
+I will put here the methods.
+
+34
+00:03:15,900 --> 00:03:16,530
+Methods
+
+35
+00:03:21,870 --> 00:03:23,400
+and I will put here.
+
+36
+00:03:26,380 --> 00:03:35,160
+Them and driver code or testing driver code.
+
+37
+00:03:38,590 --> 00:03:46,870
+We are going to create in the methods in the next exercises and the testing will start by public
+
+38
+00:03:50,290 --> 00:03:52,870
+static void, main
+
+39
+00:03:55,870 --> 00:04:07,860
+stream paths and we put here what we call the methods that we are going to see in the next few days.
+
+40
+00:04:08,410 --> 00:04:16,680
+Now I will create a method that will print that list printing the list.
+
+41
+00:04:16,690 --> 00:04:28,900
+So the first method that we are going to create is called parentless public static void print.
+
+42
+00:04:29,170 --> 00:04:40,600
+Last note had it took had as part of meter to start to start printing from the head till the end of
+
+43
+00:04:40,600 --> 00:04:41,800
+the list.
+
+44
+00:04:42,430 --> 00:04:46,930
+But I need to frame you to concentrate because there is a trick here.
+
+45
+00:04:47,590 --> 00:04:50,980
+No attempt equal to hat.
+
+46
+00:04:51,730 --> 00:04:59,080
+I would have to tap if head does not equal to null.
+
+47
+00:05:01,130 --> 00:05:02,570
+Then it is not empty.
+
+48
+00:05:02,990 --> 00:05:03,500
+OK.
+
+49
+00:05:04,100 --> 00:05:09,630
+We start by making you do system those out.
+
+50
+00:05:10,340 --> 00:05:10,700
+Don't.
+
+51
+00:05:11,900 --> 00:05:23,450
+We get the data from it by using them data glass space between it and camp that most of that next one.
+
+52
+00:05:23,450 --> 00:05:26,810
+So we are making a do why and do.
+
+53
+00:05:28,780 --> 00:05:37,320
+That moves the cursor from one to one until reaching had equal to no or temp equal to hand.
+
+54
+00:05:37,870 --> 00:05:43,210
+And system that allowed the print stamp does not attempt that data.
+
+55
+00:05:43,210 --> 00:05:45,610
+We are extracting that data from the then.
+
+56
+00:05:46,390 --> 00:05:51,550
+There is a trick here, guys, since we have stored them equal to had.
+
+57
+00:05:51,550 --> 00:05:52,720
+So we are storing.
+
+58
+00:05:53,120 --> 00:05:54,250
+We we checked.
+
+59
+00:05:54,610 --> 00:05:56,230
+This is not null.
+
+60
+00:05:56,300 --> 00:06:01,500
+So there is no empty list and we start printing.
+
+61
+00:06:02,050 --> 00:06:05,840
+We have stored temp, had the head into a temp.
+
+62
+00:06:06,490 --> 00:06:07,000
+Why?
+
+63
+00:06:07,240 --> 00:06:13,510
+Because we will start moving at the end of the list.
+
+64
+00:06:13,810 --> 00:06:18,880
+How to know that we have reached at the end of this circular list.
+
+65
+00:06:19,450 --> 00:06:21,700
+This is very important.
+
+66
+00:06:22,030 --> 00:06:23,290
+Thank you, guys.
+
+67
+00:06:23,590 --> 00:06:31,870
+Please pay attention in order to understand and to know that we have reached the end of this circular
+
+68
+00:06:31,870 --> 00:06:32,350
+list.
+
+69
+00:06:32,650 --> 00:06:40,180
+We need to compare all with the temp that we are moving from with the hat.
+
+70
+00:06:40,390 --> 00:06:49,360
+So if if temp does not equal to had then continue and the printing until reaching temp equal equal to
+
+71
+00:06:49,360 --> 00:06:49,570
+had.
+
+72
+00:06:49,580 --> 00:06:51,850
+So it reaches, for example.
+
+73
+00:06:51,970 --> 00:06:53,530
+Let me give you an example.
+
+74
+00:06:53,650 --> 00:07:02,530
+We have one two three four five, six, seven, eight and nine.
+
+75
+00:07:02,890 --> 00:07:10,330
+We start, we put here they had a temp equal to hat and we start moving using temp.
+
+76
+00:07:10,330 --> 00:07:13,180
+The next and the printing, OK.
+
+77
+00:07:13,420 --> 00:07:17,890
+Printing the data, printing, printing, printing and then reaching nine, nine.
+
+78
+00:07:17,890 --> 00:07:19,480
+What is the next of it?
+
+79
+00:07:19,680 --> 00:07:22,960
+It is one because it is circular lists.
+
+80
+00:07:22,960 --> 00:07:30,580
+So when temp equal to had so it when it comes again, the temp equal to had.
+
+81
+00:07:30,910 --> 00:07:35,530
+Then we reached the end of the circular link list.
+
+82
+00:07:35,770 --> 00:07:38,410
+This is the trick behind it.
+
+83
+00:07:39,110 --> 00:07:52,030
+OK, so this print list will cost us making all of em because it is all of that we are traversing.
+
+84
+00:07:53,560 --> 00:08:02,080
+We are traversing through all the elements through all that notes in the list and start printing it
+
+85
+00:08:02,080 --> 00:08:03,580
+using the Do Y loop.
+
+86
+00:08:04,060 --> 00:08:13,540
+And this will result and depends on the number of the notes and the list to be executing this method.
+
+87
+00:08:13,690 --> 00:08:14,750
+So it is.

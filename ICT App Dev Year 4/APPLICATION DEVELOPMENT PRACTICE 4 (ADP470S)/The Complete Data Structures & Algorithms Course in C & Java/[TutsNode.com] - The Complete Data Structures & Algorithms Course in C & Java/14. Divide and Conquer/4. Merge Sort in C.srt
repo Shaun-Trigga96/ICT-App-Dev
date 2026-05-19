@@ -1,0 +1,347 @@
+1
+00:00:00,060 --> 00:00:02,280
+We have learned about the Merge sort.
+
+2
+00:00:02,550 --> 00:00:09,360
+Now let's implement the Merge sort algorithm in sea language and later on in the next video, we are
+
+3
+00:00:09,360 --> 00:00:13,680
+going to sort of exercise that boom and the merge sort of algorithm in Java.
+
+4
+00:00:14,550 --> 00:00:23,340
+So we start by including the S, the IOC search and now merging two sub arrays and into editing.
+
+5
+00:00:23,460 --> 00:00:36,020
+So this is the method that starts by merging the two arrays, submarines and into array or OK, so it
+
+6
+00:00:36,060 --> 00:00:37,770
+took meet their array.
+
+7
+00:00:38,960 --> 00:00:46,430
+Air that integer B and the integer Q and the integer off we start.
+
+8
+00:00:47,940 --> 00:01:02,040
+Creating the L separate from a at Index B do a index Q and creating a separate M from a Index Q Plus
+
+9
+00:01:02,040 --> 00:01:03,600
+want to index on.
+
+10
+00:01:03,990 --> 00:01:07,590
+So we have here we have created.
+
+11
+00:01:08,960 --> 00:01:12,650
+This out of we have divided it.
+
+12
+00:01:13,730 --> 00:01:21,420
+And to P and Q, you and I, so we have to and this is here.
+
+13
+00:01:21,440 --> 00:01:27,530
+The P that Q and I know this is the left.
+
+14
+00:01:27,530 --> 00:01:32,470
+This is the L subreddit and this is the sub.
+
+15
+00:01:33,620 --> 00:01:35,660
+This is what we have created.
+
+16
+00:01:36,830 --> 00:01:44,360
+We create and one equal Q minus B plus one and two equal R minus Q.
+
+17
+00:01:44,390 --> 00:01:46,820
+These are the indices that we are going to use.
+
+18
+00:01:47,060 --> 00:01:53,540
+So al at index M one and M and and two.
+
+19
+00:01:53,900 --> 00:02:00,260
+For that, we create the entire equal to zero i less than N1 and A-plus.
+
+20
+00:02:00,260 --> 00:02:02,920
+Plus we create L.
+
+21
+00:02:04,520 --> 00:02:13,830
+At index equal to array at index, B-plus, I and in another loop that starts from equal to zero and
+
+22
+00:02:13,830 --> 00:02:16,580
+j less than M2 and J + +.
+
+23
+00:02:16,880 --> 00:02:25,490
+So we create we assign the values of Index J equal to a rate at Index Q plus one plus J.
+
+24
+00:02:26,120 --> 00:02:28,480
+These are two separate.
+
+25
+00:02:28,490 --> 00:02:30,740
+It's very, very important.
+
+26
+00:02:31,070 --> 00:02:32,930
+They are not nested.
+
+27
+00:02:33,500 --> 00:02:34,700
+They are not nested.
+
+28
+00:02:34,700 --> 00:02:38,000
+They are all standalone loops.
+
+29
+00:02:38,150 --> 00:02:39,440
+So they are not.
+
+30
+00:02:42,430 --> 00:02:42,830
+OK.
+
+31
+00:02:44,230 --> 00:02:50,860
+The second step is maintained the current index of sub arrays and main array.
+
+32
+00:02:52,790 --> 00:02:55,190
+And I, J and K three.
+
+33
+00:02:56,980 --> 00:03:04,030
+Variables are equal to zero, equal to zero, and K equals to be the third step until we reach either
+
+34
+00:03:04,030 --> 00:03:13,690
+end of either L or pick the larger among elements L and and place them in the correct position at a.
+
+35
+00:03:13,930 --> 00:03:16,920
+Index from B to R.
+
+36
+00:03:16,930 --> 00:03:25,420
+So while i less than and j less than N2, so i less than N1 and j less than +2.
+
+37
+00:03:25,750 --> 00:03:38,380
+If L at index i less than or equal and index j then make a rank equal and index i and increase i + +.
+
+38
+00:03:38,650 --> 00:03:48,580
+Otherwise, it will make a rate at index equal at then this j and increase J + + other and in all cases,
+
+39
+00:03:48,580 --> 00:03:50,530
+increase the K + +.
+
+40
+00:03:52,310 --> 00:03:52,670
+Now.
+
+41
+00:03:53,700 --> 00:04:04,080
+When we run out of elements in either and pick up the remaining elements and put in a at index B to
+
+42
+00:04:04,170 --> 00:04:04,500
+us.
+
+43
+00:04:05,310 --> 00:04:08,040
+So while I less than anyone.
+
+44
+00:04:12,610 --> 00:04:23,860
+Array at Index Gate Equal, Ray and I so while I has been a no on increase, I buy one by one and close
+
+45
+00:04:23,860 --> 00:04:24,700
+this loop.
+
+46
+00:04:25,550 --> 00:04:28,090
+Wild J less than and two.
+
+47
+00:04:28,120 --> 00:04:38,320
+So we are comparing the I for N1 and J with related with N to while j less than M to array at Index
+
+48
+00:04:38,320 --> 00:04:44,110
+K equal at Index J and J + + + +.
+
+49
+00:04:45,290 --> 00:04:50,300
+Then we divide the array into subsidies and sort them and merge them.
+
+50
+00:04:50,540 --> 00:04:53,330
+We create that method.
+
+51
+00:04:53,720 --> 00:05:01,040
+Merge sort that took into the parameters that I read that we are going to sort that into and are if
+
+52
+00:05:01,040 --> 00:05:10,220
+l less, then are is the point where the array is divided into sub to two sub arrays.
+
+53
+00:05:10,340 --> 00:05:16,400
+So this is the middle L plus l minus R over to the merge sort.
+
+54
+00:05:16,420 --> 00:05:19,560
+We called the method that we have created here.
+
+55
+00:05:19,610 --> 00:05:21,350
+This is that occurred near recursion.
+
+56
+00:05:21,560 --> 00:05:23,830
+We best array and and.
+
+57
+00:05:24,800 --> 00:05:25,330
+OK.
+
+58
+00:05:26,090 --> 00:05:26,480
+So.
+
+59
+00:05:27,510 --> 00:05:32,400
+Merge, sort again, we call this and this merger sort.
+
+60
+00:05:32,730 --> 00:05:35,490
+We have seen this in their algorithm.
+
+61
+00:05:36,640 --> 00:05:42,400
+How to ride the algorithm, so please go back to the previous video in order to see why we are calling
+
+62
+00:05:42,400 --> 00:05:43,360
+this the times.
+
+63
+00:05:45,010 --> 00:05:47,250
+This is AL and this is embarrassing.
+
+64
+00:05:47,260 --> 00:05:55,210
+The Parametres here AMC+ one and the odd because we have divided into two sub two sub arrays, we have
+
+65
+00:05:55,210 --> 00:05:59,320
+best the first and the here is the second sound editing.
+
+66
+00:06:00,260 --> 00:06:00,650
+OK.
+
+67
+00:06:02,120 --> 00:06:08,870
+Now merged the sort the sub raised by calling them the merge that we have created before.
+
+68
+00:06:09,170 --> 00:06:15,380
+So this method will merge the two subcategories and I'm an.
+
+69
+00:06:16,500 --> 00:06:16,950
+OK.
+
+70
+00:06:18,160 --> 00:06:26,280
+The the that we have created this method many times, it's a just a lot that go through all the elements
+
+71
+00:06:26,280 --> 00:06:26,910
+of the action.
+
+72
+00:06:27,290 --> 00:06:35,880
+Now a driver program, yesterday we create an array and the mean we get the size of this array by making
+
+73
+00:06:35,880 --> 00:06:41,160
+size equal size of a tray at over size of the next zero.
+
+74
+00:06:41,580 --> 00:06:47,670
+And we use the Amersfoort method that we have created here in order to.
+
+75
+00:06:50,160 --> 00:06:51,330
+To America, the sort.
+
+76
+00:06:53,130 --> 00:06:59,650
+Merge sort of this at today and with print assorted array by using the print array.
+
+77
+00:07:00,810 --> 00:07:08,520
+In this video, we have learned how to merge sort in sea language and in next video, we are going to
+
+78
+00:07:08,520 --> 00:07:11,430
+implement and test this code in Java.
+
+79
+00:07:11,550 --> 00:07:16,680
+So the same syntax, the same algorithm will be implemented.
+
+80
+00:07:17,430 --> 00:07:21,960
+So I need from you to to memorize this.
+
+81
+00:07:22,710 --> 00:07:26,220
+This kind of sorting this is very complex.
+
+82
+00:07:26,220 --> 00:07:27,420
+I know this.
+
+83
+00:07:27,540 --> 00:07:37,770
+I have difficulty with Amersfoort when I was making when I was making that at university exams and interviews.
+
+84
+00:07:38,160 --> 00:07:48,960
+And this is a very complex sorting, but it's very simple if you understand it step by step and repeat
+
+85
+00:07:48,960 --> 00:07:52,200
+the videos and the till mastering this.
+
+86
+00:07:52,560 --> 00:07:57,660
+So in my, in my opinion, this is the best.
+
+87
+00:07:58,900 --> 00:08:08,350
+Sorting and the complex sort and the most complex sorting algorithm in all of search on all the.

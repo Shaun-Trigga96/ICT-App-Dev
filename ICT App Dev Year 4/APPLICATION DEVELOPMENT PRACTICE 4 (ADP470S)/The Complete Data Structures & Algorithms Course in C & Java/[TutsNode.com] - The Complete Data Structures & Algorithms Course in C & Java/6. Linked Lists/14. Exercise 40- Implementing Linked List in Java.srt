@@ -1,0 +1,411 @@
+1
+00:00:00,330 --> 00:00:01,380
+Hello, my friends.
+
+2
+00:00:01,530 --> 00:00:03,390
+And welcome to exercise number 40.
+
+3
+00:00:03,630 --> 00:00:08,370
+We are asked to implement the link at list in Java and create three notes.
+
+4
+00:00:08,700 --> 00:00:15,300
+So for that, we have learned about how to implement it in Java A..
+
+5
+00:00:15,660 --> 00:00:20,750
+But we need to show you the code, how it works with that idea.
+
+6
+00:00:21,180 --> 00:00:30,040
+OK, so we have learned deeply in C, and the exercises would cover a big part of Java.
+
+7
+00:00:30,090 --> 00:00:37,410
+So this course is mixing and showing you the code in both C and Java.
+
+8
+00:00:37,740 --> 00:00:45,600
+If you are a C program and or a Java programmer, so you can go with this course without any problem.
+
+9
+00:00:45,870 --> 00:00:46,320
+OK.
+
+10
+00:00:46,590 --> 00:00:46,950
+So.
+
+11
+00:00:48,670 --> 00:00:49,450
+We start.
+
+12
+00:00:49,810 --> 00:00:59,270
+I will delete this class and make a class new class Java class here called linkage list.
+
+13
+00:01:01,300 --> 00:01:11,600
+This class link and list, it contains a class called aesthetic class static class.
+
+14
+00:01:11,680 --> 00:01:16,900
+This is as a structure and as you c language.
+
+15
+00:01:17,350 --> 00:01:22,990
+I will create an inner class called not OK.
+
+16
+00:01:23,950 --> 00:01:24,610
+This no.
+
+17
+00:01:24,610 --> 00:01:28,860
+This in our class is made static so that the main can access it.
+
+18
+00:01:30,500 --> 00:01:42,610
+And later, I will make a link list of of by end and a pointer to the No.
+
+19
+00:01:43,030 --> 00:01:46,460
+OK, I will create a constructor here.
+
+20
+00:01:46,610 --> 00:02:02,870
+This is the constructor and the and here I refer to the data equal today and the next equal to none.
+
+21
+00:02:03,860 --> 00:02:04,400
+OK.
+
+22
+00:02:04,550 --> 00:02:06,080
+It's very simple.
+
+23
+00:02:06,290 --> 00:02:09,110
+This is the constructor.
+
+24
+00:02:10,230 --> 00:02:10,560
+Now.
+
+25
+00:02:11,990 --> 00:02:12,620
+Here.
+
+26
+00:02:13,970 --> 00:02:20,390
+In the linked list class, I will create a new object from this class called had.
+
+27
+00:02:22,740 --> 00:02:25,860
+This would be have of their list.
+
+28
+00:02:26,150 --> 00:02:26,460
+OK.
+
+29
+00:02:28,540 --> 00:02:32,830
+Till now, we have created a class called Not.
+
+30
+00:02:34,110 --> 00:02:37,830
+And we have created an object from it called heÉp.
+
+31
+00:02:38,280 --> 00:02:46,380
+OK, now let's move to the method, the main method that we need to create to run it and create the
+
+32
+00:02:46,380 --> 00:02:51,660
+three no public static void main.
+
+33
+00:02:52,620 --> 00:02:57,040
+And I will make strange args.
+
+34
+00:02:57,390 --> 00:02:59,010
+The keys are in Java.
+
+35
+00:03:03,310 --> 00:03:03,820
+OK.
+
+36
+00:03:05,050 --> 00:03:07,290
+Let's start with empty list.
+
+37
+00:03:08,070 --> 00:03:09,820
+Empty list.
+
+38
+00:03:11,370 --> 00:03:14,070
+Linked list, I will create an object from linkage list.
+
+39
+00:03:15,720 --> 00:03:19,470
+Linked list equal to new link this.
+
+40
+00:03:23,100 --> 00:03:30,150
+Link, at least now Dot had this is the hat I'm referencing to air new nod.
+
+41
+00:03:30,720 --> 00:03:36,750
+So what I am specifying in the note, I need to pass and an end date.
+
+42
+00:03:37,020 --> 00:03:41,580
+OK, so look at here, guys link list Dot had.
+
+43
+00:03:42,180 --> 00:03:43,270
+This is the head.
+
+44
+00:03:43,290 --> 00:03:44,760
+This is the first one.
+
+45
+00:03:45,330 --> 00:03:48,080
+It will make and you nod.
+
+46
+00:03:48,150 --> 00:03:51,490
+But what it will contain, it will contain data.
+
+47
+00:03:51,510 --> 00:03:54,870
+So what is the number it would be like number one?
+
+48
+00:03:54,990 --> 00:03:59,790
+This is that data that is contained in the first note.
+
+49
+00:04:00,880 --> 00:04:08,740
+Now, in order to make a second and third, not now, it would be not second
+
+50
+00:04:11,650 --> 00:04:18,640
+equal to new nod, and we specify using this constructor.
+
+51
+00:04:18,730 --> 00:04:26,830
+What is the data is it was good to know if I need to create the third node third, not in the same way.
+
+52
+00:04:27,310 --> 00:04:32,920
+Equal, equal to new node of diversity of data.
+
+53
+00:04:32,920 --> 00:04:33,250
+Three.
+
+54
+00:04:33,610 --> 00:04:33,950
+OK.
+
+55
+00:04:34,330 --> 00:04:35,980
+This is very simple.
+
+56
+00:04:37,060 --> 00:04:40,200
+Three nodes have been allocated dynamically.
+
+57
+00:04:40,210 --> 00:04:46,660
+We have references to these three blocks as head second and third.
+
+58
+00:04:46,960 --> 00:04:47,350
+OK.
+
+59
+00:04:47,530 --> 00:04:52,600
+So I want from you to think about this as this demonstration.
+
+60
+00:04:53,740 --> 00:05:00,880
+So as I told you, think about this, I am making Lincoln List that contains.
+
+61
+00:05:02,000 --> 00:05:04,230
+The data as end.
+
+62
+00:05:04,460 --> 00:05:13,610
+So the first one is called, had this is the had the first known, it contains no one as data and the
+
+63
+00:05:13,610 --> 00:05:14,570
+reference.
+
+64
+00:05:15,550 --> 00:05:16,930
+There is no difference here.
+
+65
+00:05:17,180 --> 00:05:20,680
+OK, so it didn't create any difference till now.
+
+66
+00:05:21,490 --> 00:05:25,560
+The second, not we just create the notes, OK?
+
+67
+00:05:26,050 --> 00:05:33,160
+The second note contains number two and the third nod is containing number three.
+
+68
+00:05:33,400 --> 00:05:33,830
+OK.
+
+69
+00:05:34,240 --> 00:05:36,730
+This is the code second.
+
+70
+00:05:38,220 --> 00:05:42,410
+This is called third, not OK.
+
+71
+00:05:42,690 --> 00:05:50,610
+I need from you to understand these concepts because they are very important, and you may ask deeply
+
+72
+00:05:50,610 --> 00:05:52,230
+what this means.
+
+73
+00:05:52,450 --> 00:06:00,090
+Okay, so this is the head we just specified by linkage list that had equal to Newnan.
+
+74
+00:06:00,870 --> 00:06:08,660
+We have created this head here linked list that had I'm accessing the class that had gay.
+
+75
+00:06:08,730 --> 00:06:15,840
+I'm specifying as the main node the main had would be equal to one.
+
+76
+00:06:16,200 --> 00:06:21,330
+OK, now our mission is to make that reference.
+
+77
+00:06:21,360 --> 00:06:29,130
+So how to make the reference, how to make the linking, how to allow this to be referencing to another
+
+78
+00:06:29,370 --> 00:06:30,030
+and not.
+
+79
+00:06:30,060 --> 00:06:30,690
+OK.
+
+80
+00:06:30,720 --> 00:06:33,390
+This will return at this with reference to none.
+
+81
+00:06:33,630 --> 00:06:39,510
+This to reference the three and one reference to two with which is the next note.
+
+82
+00:06:39,630 --> 00:06:40,830
+So how to do this?
+
+83
+00:06:40,830 --> 00:06:42,520
+How to make this link?
+
+84
+00:06:43,320 --> 00:06:44,900
+So we start.
+
+85
+00:06:44,910 --> 00:06:46,830
+This is the linking.
+
+86
+00:06:47,980 --> 00:06:48,400
+Stacked
+
+87
+00:06:51,370 --> 00:06:56,440
+list, linked list, the tab dot next.
+
+88
+00:06:56,920 --> 00:07:04,470
+I am referencing the first one is the next of the head would be the second.
+
+89
+00:07:04,480 --> 00:07:04,760
+No.
+
+90
+00:07:04,840 --> 00:07:07,060
+I am linking the first with the second.
+
+91
+00:07:07,390 --> 00:07:15,400
+Now, in order to link the second with the third, I am just make second, not the next I am accessing
+
+92
+00:07:15,400 --> 00:07:15,640
+now.
+
+93
+00:07:15,640 --> 00:07:23,800
+So you see guys here, we have seen that, that that we create that data inside.
+
+94
+00:07:24,250 --> 00:07:28,630
+Now, in order to make the reference and the link, I will make here.
+
+95
+00:07:29,140 --> 00:07:31,450
+Second, not an equal to the third.
+
+96
+00:07:31,480 --> 00:07:32,590
+Not OK.
+
+97
+00:07:33,040 --> 00:07:35,060
+This is that link.
+
+98
+00:07:35,530 --> 00:07:39,160
+Now, next of then, the second node refers to the third.
+
+99
+00:07:39,280 --> 00:07:41,980
+So all the three nodes are linked.
+
+100
+00:07:42,400 --> 00:07:42,880
+OK.
+
+101
+00:07:43,180 --> 00:07:52,240
+This is how we make that data structure link at least inside Java and create that the three nodes.
+
+102
+00:07:52,390 --> 00:07:59,140
+And we have to link them to each other in the next videos.
+
+103
+00:07:59,140 --> 00:08:04,140
+We are going to print their list and make operation on it.

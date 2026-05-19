@@ -1,0 +1,295 @@
+1
+00:00:00,090 --> 00:00:02,730
+Let's learn about Phil Binary Tree.
+
+2
+00:00:03,030 --> 00:00:10,560
+A full binary tree is a special type of binary tree in which every parent node or internal node has
+
+3
+00:00:10,560 --> 00:00:12,600
+either two or no children.
+
+4
+00:00:13,020 --> 00:00:15,810
+It is also known as a proper binary tree.
+
+5
+00:00:16,260 --> 00:00:19,080
+This is an example of by a full binary tree.
+
+6
+00:00:20,610 --> 00:00:29,700
+The algorithm theorem behind making it for binary tree is considering that the number of leaves is that
+
+7
+00:00:29,700 --> 00:00:33,750
+equal to the number of internal nodes plus one.
+
+8
+00:00:36,040 --> 00:00:43,900
+The total number of nodes is equal to two times the number of internal nodes plus one.
+
+9
+00:00:44,930 --> 00:00:54,770
+The number of internal nodes is equal to N minus one over two and would be the number of total number
+
+10
+00:00:54,770 --> 00:00:55,400
+of notes.
+
+11
+00:00:56,430 --> 00:01:02,810
+But the number of lives is equal to NUM total number of nodes plus one over two.
+
+12
+00:01:03,230 --> 00:01:10,360
+And the total number number of nodes is two times number of lives minus one.
+
+13
+00:01:10,610 --> 00:01:17,710
+And the number of internal nodes is equal to L minus one, which is the number of lives minus one.
+
+14
+00:01:18,290 --> 00:01:25,160
+And the number of lives is at most is due to power a number of levels minus one.
+
+15
+00:01:26,360 --> 00:01:27,650
+We are not going.
+
+16
+00:01:27,770 --> 00:01:35,900
+I just mentioned this theory, but all what we need and what we are interested in is the code.
+
+17
+00:01:36,320 --> 00:01:41,120
+So how we write the full binary tree in C.
+
+18
+00:01:42,360 --> 00:01:53,310
+Starting by include SD, the eye ball as the ball SD diode and SD I, that's to the left, we create
+
+19
+00:01:53,310 --> 00:01:54,000
+A..
+
+20
+00:01:54,520 --> 00:01:56,400
+And item.
+
+21
+00:01:57,700 --> 00:02:01,420
+And we create a no reference left and right.
+
+22
+00:02:02,080 --> 00:02:07,600
+So this would be the basic structure of the end of any three.
+
+23
+00:02:08,820 --> 00:02:15,840
+And we have seen it before, the creation of a new note struck note, we create a new note method.
+
+24
+00:02:16,020 --> 00:02:25,470
+And it took into the meters, the car key and I have created here a tree or that accepts the car, not
+
+25
+00:02:25,470 --> 00:02:26,130
+integers.
+
+26
+00:02:26,280 --> 00:02:30,600
+You can make it integers, the strings, any other object.
+
+27
+00:02:30,600 --> 00:02:40,770
+But the the target and the goal from making these data structures is the algorithm and how we think,
+
+28
+00:02:40,830 --> 00:02:43,480
+how we create not the syntax.
+
+29
+00:02:43,590 --> 00:02:43,890
+OK.
+
+30
+00:02:44,940 --> 00:02:51,940
+We start by making and allocating the memory by note, and we put a stop to that item data and the note
+
+31
+00:02:51,960 --> 00:02:53,550
+data is equal to K.
+
+32
+00:02:53,940 --> 00:02:59,670
+Then note right is equal to the note left equal to not initialize them equal to null.
+
+33
+00:02:59,970 --> 00:03:08,610
+And with then we have seen this in the previous video in that three traversal methods and three traversal
+
+34
+00:03:08,820 --> 00:03:09,620
+exercises.
+
+35
+00:03:09,900 --> 00:03:10,210
+OK.
+
+36
+00:03:11,630 --> 00:03:18,410
+Now, let's make a method called bull is full binary tree structure node three.
+
+37
+00:03:20,700 --> 00:03:28,830
+And it took it to the perimeter of the road note, and we start checking the three empty a fruit equal
+
+38
+00:03:28,830 --> 00:03:31,680
+equal to now than it is an empty tree.
+
+39
+00:03:32,310 --> 00:03:37,290
+Check the presence of the children a fruit left it will not and route right.
+
+40
+00:03:37,290 --> 00:03:39,500
+It will then then return it to.
+
+41
+00:03:39,960 --> 00:03:48,270
+So if it is full binary tree, it should have the left and the right equal to none.
+
+42
+00:03:48,510 --> 00:03:48,960
+So.
+
+43
+00:03:50,270 --> 00:03:54,140
+It has either two or no children.
+
+44
+00:03:54,350 --> 00:04:03,680
+So this is the presence of the children checking, and we are going to check that the route left, the
+
+45
+00:04:03,680 --> 00:04:08,180
+left section and the road section of any node is equal to now.
+
+46
+00:04:08,330 --> 00:04:16,730
+Then it is returning to if the route left and the route right, they are through and return.
+
+47
+00:04:17,360 --> 00:04:19,880
+This is full binary tree.
+
+48
+00:04:20,300 --> 00:04:26,060
+Start making the recursive method here to their left and to the right.
+
+49
+00:04:26,330 --> 00:04:32,420
+So if we have many children, we start checking it to their left.
+
+50
+00:04:32,630 --> 00:04:42,920
+It is a full binary tree to the left and it is full binary to the right by by specifying and the checking.
+
+51
+00:04:42,920 --> 00:04:51,410
+And if the left side has either two or no children and the right section and the right sub tree is equal
+
+52
+00:04:51,410 --> 00:04:54,890
+to and have either two or no children.
+
+53
+00:04:55,460 --> 00:05:05,480
+These both conditions should be true in order to return as binary tree function to true.
+
+54
+00:05:05,840 --> 00:05:11,330
+Otherwise, it will return false if we need to test this method.
+
+55
+00:05:11,570 --> 00:05:20,660
+This program, we start by going to end main and we create the root and we initialize the root by creating
+
+56
+00:05:20,660 --> 00:05:21,860
+node equal to one.
+
+57
+00:05:22,010 --> 00:05:32,540
+So we have created the new node equal to one, and we start creating this tree that it is in the picture
+
+58
+00:05:32,540 --> 00:05:32,930
+here.
+
+59
+00:05:33,620 --> 00:05:34,310
+OK?
+
+60
+00:05:35,210 --> 00:05:39,470
+We specify them creating one two, three, four, five, six and seven.
+
+61
+00:05:41,080 --> 00:05:50,560
+If binary tree is a tree binary or is full binary tree, we passed the rule, that tree is a full binary
+
+62
+00:05:50,560 --> 00:05:50,890
+tree.
+
+63
+00:05:51,220 --> 00:05:54,190
+If it is true, otherwise it will print.
+
+64
+00:05:54,190 --> 00:05:57,040
+The tree is not full binary tree.
+
+65
+00:05:57,370 --> 00:06:01,160
+And in this example, it will return for us.
+
+66
+00:06:01,180 --> 00:06:05,560
+It is through and the tree is full binary tree.
+
+67
+00:06:06,100 --> 00:06:16,090
+This is very important question that you may ask in in your interview or in your university to check
+
+68
+00:06:16,110 --> 00:06:16,590
+it.
+
+69
+00:06:16,600 --> 00:06:25,060
+Three or a given tree is full binary tree, and I told you that the tree and the key behind the checking
+
+70
+00:06:25,060 --> 00:06:32,260
+it is by by checking the root left and the right equal equal to null.
+
+71
+00:06:32,500 --> 00:06:38,800
+And if they are having data, then the root left and the right is.
+
+72
+00:06:40,000 --> 00:06:46,930
+Full binary tree to the left and full binary tree to the right, so we are going to check up this sub
+
+73
+00:06:46,930 --> 00:06:55,280
+tree is fully binary tree and we check the right section if it is fully binary tree.
+
+74
+00:06:55,870 --> 00:07:02,170
+If it is true here and true to their left, then it would be a full binary.

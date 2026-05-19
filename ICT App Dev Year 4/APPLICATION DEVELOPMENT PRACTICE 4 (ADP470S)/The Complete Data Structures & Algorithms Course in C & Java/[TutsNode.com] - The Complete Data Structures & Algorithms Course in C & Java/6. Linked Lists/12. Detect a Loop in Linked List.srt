@@ -1,0 +1,131 @@
+1
+00:00:00,060 --> 00:00:07,920
+One of the frequently asked questions and exercises in university and interviews is how to detect a
+
+2
+00:00:07,920 --> 00:00:09,750
+loop in the injured list.
+
+3
+00:00:11,520 --> 00:00:19,510
+Not obligatory that the last node in the linked list will refer indifference to that.
+
+4
+00:00:19,530 --> 00:00:23,790
+Now it may be a reference to another No.
+
+5
+00:00:25,040 --> 00:00:25,400
+OK.
+
+6
+00:00:25,640 --> 00:00:27,320
+Exactly like this shape.
+
+7
+00:00:27,500 --> 00:00:35,750
+So we have five nodes, 100, 200, 300, 400 and 500, and the last node this 500 is referencing to
+
+8
+00:00:35,750 --> 00:00:38,720
+200 and this is the cycle.
+
+9
+00:00:38,720 --> 00:00:49,820
+This is the loop that we are going to check if this link list is telling us and referencing two in loop
+
+10
+00:00:49,820 --> 00:00:51,050
+or not.
+
+11
+00:00:51,650 --> 00:00:52,100
+OK.
+
+12
+00:00:53,910 --> 00:01:01,170
+The algorithm tells us to make two pointers, fast and slow and.
+
+13
+00:01:02,390 --> 00:01:04,560
+They are at the position had.
+
+14
+00:01:04,790 --> 00:01:08,750
+So the farce that we have seen in the previous videos.
+
+15
+00:01:09,110 --> 00:01:11,120
+It removes two by two.
+
+16
+00:01:11,480 --> 00:01:12,020
+OK.
+
+17
+00:01:12,320 --> 00:01:13,010
+Two nuts.
+
+18
+00:01:13,310 --> 00:01:27,560
+While the slow moves by one so and has loop, this is that this is the and the method that we are going
+
+19
+00:01:27,560 --> 00:01:32,090
+to work with to detect if this has a loop or not.
+
+20
+00:01:32,300 --> 00:01:39,560
+So the struck don't slow and slow, slow and fast equal to had they are at the head, while slow does
+
+21
+00:01:39,560 --> 00:01:42,590
+not equal to null and fast does not equal to none.
+
+22
+00:01:43,040 --> 00:01:49,920
+And Fast Pointer next does not equal to null makes law next and fast.
+
+23
+00:01:49,940 --> 00:01:50,360
+Next.
+
+24
+00:01:50,360 --> 00:01:50,790
+Next.
+
+25
+00:01:50,890 --> 00:01:58,340
+OK, Fast will move two by two two knots, while slow will move by one if slow.
+
+26
+00:01:58,610 --> 00:01:59,210
+Equal.
+
+27
+00:01:59,210 --> 00:02:01,910
+Equal to first, then return one.
+
+28
+00:02:02,310 --> 00:02:05,540
+OK, this is how they meet here.
+
+29
+00:02:05,720 --> 00:02:11,750
+Slow and fast and it returns one that detects that there is a loop.
+
+30
+00:02:12,740 --> 00:02:20,030
+So this is the algorithm behind their detection of a loop inside linked list.
+
+31
+00:02:20,060 --> 00:02:28,700
+So we create two pointers and they move one two by two and the other by one.
+
+32
+00:02:29,060 --> 00:02:40,100
+And if they meet at specific condition, we're using the while loop, then it will return one if it
+
+33
+00:02:40,100 --> 00:02:44,060
+is there, if there is a loop, if not, it will not return.

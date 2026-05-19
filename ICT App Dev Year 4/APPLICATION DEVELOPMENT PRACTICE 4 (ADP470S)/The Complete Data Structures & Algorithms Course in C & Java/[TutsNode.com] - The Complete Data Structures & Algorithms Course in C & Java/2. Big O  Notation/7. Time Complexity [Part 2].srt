@@ -1,0 +1,531 @@
+1
+00:00:00,770 --> 00:00:07,730
+We will continue with the time, complexity and let's introduce that logarithmic time complexity of
+
+2
+00:00:07,730 --> 00:00:08,690
+log and.
+
+3
+00:00:09,730 --> 00:00:15,490
+Algorithm brands and proportionally to that logarithmic of that input size.
+
+4
+00:00:16,960 --> 00:00:25,400
+Let's take an overview about the graph of the logarithmic y equal log X in the blue and white equal
+
+5
+00:00:25,400 --> 00:00:26,830
+limb x in Iran.
+
+6
+00:00:27,460 --> 00:00:30,430
+We are interested in studying the Log X.
+
+7
+00:00:31,580 --> 00:00:35,840
+So, or like Logan, this is the same concept.
+
+8
+00:00:36,080 --> 00:00:36,500
+So.
+
+9
+00:00:37,460 --> 00:00:44,150
+As we see the algorithm, an algorithm run in a proportional to the logarithmic of the input sites,
+
+10
+00:00:44,630 --> 00:00:50,450
+for example, our cars are ordered and split into two parts.
+
+11
+00:00:51,020 --> 00:00:52,460
+If I told you.
+
+12
+00:00:53,990 --> 00:01:03,620
+Go and get that 10 of the spades if we are working with the linear and they are ordered.
+
+13
+00:01:03,650 --> 00:01:06,530
+I'm telling you that it is ordinary.
+
+14
+00:01:06,800 --> 00:01:15,590
+So in case of linear, I need to go all of these passing through these 13 plus 13 plus 13.
+
+15
+00:01:16,040 --> 00:01:20,860
+They are equal to 39 and still reaching 10.
+
+16
+00:01:20,960 --> 00:01:27,650
+So I am going to search about 48 cards to reach that.
+
+17
+00:01:28,280 --> 00:01:32,930
+But in case of logarithmic time complexity.
+
+18
+00:01:34,030 --> 00:01:42,760
+I am going to divide this deck into two main parts, the first part it will include.
+
+19
+00:01:47,230 --> 00:01:47,800
+There.
+
+20
+00:01:49,710 --> 00:01:55,710
+Diamonds and the clubs, and the second part will includes the hearts and the spades.
+
+21
+00:01:56,250 --> 00:02:03,870
+So I I'm going to search for the 10th then spades and they are ordered.
+
+22
+00:02:04,350 --> 00:02:05,790
+Deck of cards.
+
+23
+00:02:06,870 --> 00:02:11,610
+So I decided to separate their cards.
+
+24
+00:02:12,450 --> 00:02:15,120
+All the cards to two main parts.
+
+25
+00:02:15,120 --> 00:02:21,750
+The first part contains the diamonds and the second part contains diamonds and clubs, and the second
+
+26
+00:02:21,750 --> 00:02:23,820
+part contains the heart and spades.
+
+27
+00:02:24,600 --> 00:02:29,250
+Remember, I am searching for the dance of the spade, then spade.
+
+28
+00:02:30,000 --> 00:02:39,750
+So automatically, I'm not going to search in this first part because the spades are in the second part.
+
+29
+00:02:40,770 --> 00:02:45,360
+I have removed half of these cards.
+
+30
+00:02:45,750 --> 00:02:47,010
+They are 52.
+
+31
+00:02:47,430 --> 00:02:50,130
+I have removed 26 cards.
+
+32
+00:02:51,770 --> 00:03:02,150
+Now, if they are ordered in the same the same way as picture being told us or showing us, I can remove
+
+33
+00:03:02,150 --> 00:03:06,460
+all their dead things because spades are there.
+
+34
+00:03:06,500 --> 00:03:10,580
+That is so black, so I removed that red.
+
+35
+00:03:11,790 --> 00:03:12,870
+Their hearts.
+
+36
+00:03:13,170 --> 00:03:21,730
+So the spades are now 13, I have removed till now, 26 plus 13 as equal to 39.
+
+37
+00:03:23,340 --> 00:03:27,850
+I decided to split it since they are ordered.
+
+38
+00:03:27,870 --> 00:03:38,250
+I decided to get rid of half of these cards because the 10 is the half of the 13 is seven.
+
+39
+00:03:38,650 --> 00:03:41,280
+The six point six point five.
+
+40
+00:03:41,730 --> 00:03:43,770
+So I removed six cards.
+
+41
+00:03:44,160 --> 00:03:49,520
+I have now seven eight nine 10 J Q and OK.
+
+42
+00:03:50,910 --> 00:04:01,680
+Now I need again to get half a get rid of half of these paper cards, so I removed these three because
+
+43
+00:04:01,860 --> 00:04:12,900
+then now is that middle and I get this in this way, I am one more time we will divide into two and
+
+44
+00:04:12,900 --> 00:04:16,800
+we can see that the ten in the middle element.
+
+45
+00:04:17,460 --> 00:04:17,970
+Okay.
+
+46
+00:04:18,210 --> 00:04:25,920
+So we are not looking through all the elements of this car of these cards.
+
+47
+00:04:26,190 --> 00:04:26,670
+Okay.
+
+48
+00:04:26,760 --> 00:04:33,750
+We are not searching one by one, one by one by one for for these cards.
+
+49
+00:04:34,500 --> 00:04:38,420
+We are just eliminating half.
+
+50
+00:04:39,240 --> 00:04:46,740
+Every time we eliminate half of these half of these cards in order to get a certain level.
+
+51
+00:04:47,020 --> 00:04:54,570
+Okay, so this time complexity is a logarithmic time complexity.
+
+52
+00:04:55,170 --> 00:04:55,520
+OK.
+
+53
+00:04:57,190 --> 00:04:57,580
+Now.
+
+54
+00:04:59,110 --> 00:05:00,690
+Let's go to that code.
+
+55
+00:05:01,750 --> 00:05:11,530
+We have an algorithmic complexity, an example of a flawed loop that it is going to prison system that
+
+56
+00:05:11,530 --> 00:05:12,850
+out the print hello.
+
+57
+00:05:13,120 --> 00:05:15,790
+But this time it's very different.
+
+58
+00:05:17,020 --> 00:05:18,820
+You see, guys, I.
+
+59
+00:05:19,830 --> 00:05:32,190
+And it will start from Wuhan and stops at KNH, but this time it would that the iteration will be increased
+
+60
+00:05:32,190 --> 00:05:34,320
+every time by city.
+
+61
+00:05:34,590 --> 00:05:44,490
+So every time I will jump through and add three, so if I have.
+
+62
+00:05:45,430 --> 00:05:48,640
+Thirty I entered and equal to 30.
+
+63
+00:05:49,180 --> 00:05:57,160
+OK, this loop will print system that hollowed out that print.
+
+64
+00:05:57,160 --> 00:05:57,550
+Hello.
+
+65
+00:05:58,390 --> 00:06:04,930
+OK, so this slope will not the print, the times the Hello.
+
+66
+00:06:05,320 --> 00:06:05,800
+OK.
+
+67
+00:06:06,610 --> 00:06:10,390
+It will print ten times because.
+
+68
+00:06:11,690 --> 00:06:21,350
+We have and now is what the third and every time I is at it three times, so it's start by one one plus
+
+69
+00:06:22,160 --> 00:06:27,260
+three is equal to four now and equal to four.
+
+70
+00:06:27,590 --> 00:06:31,220
+But it is the first iteration and printing the hello.
+
+71
+00:06:31,220 --> 00:06:40,340
+Only one time I becomes equal to four and I becomes seven, then I becomes 10.
+
+72
+00:06:40,440 --> 00:06:46,130
+So these are the iterations through and equal to 30.
+
+73
+00:06:46,670 --> 00:06:59,630
+This is very important because we are not going through every element we are of n because M from one
+
+74
+00:06:59,630 --> 00:07:08,150
+to 30, we are jumping at the third level and the third number every time we are skipping two numbers
+
+75
+00:07:08,150 --> 00:07:10,160
+and adding the third one.
+
+76
+00:07:10,640 --> 00:07:11,120
+OK.
+
+77
+00:07:11,480 --> 00:07:21,800
+So the total time here is all lug and this is the time complexity for this example, in the loop, while
+
+78
+00:07:21,800 --> 00:07:31,790
+we have adding I plus three, the third type of time complexity is the quadratic time complexity all
+
+79
+00:07:31,790 --> 00:07:40,220
+of and square represents an algorithm whose performance is directly proportional to the square size
+
+80
+00:07:40,220 --> 00:07:41,960
+of input date.
+
+81
+00:07:42,560 --> 00:07:46,490
+Think about it as linear, but it's a square.
+
+82
+00:07:47,270 --> 00:07:57,470
+So for example, if we have a card deck here and I told you to pick the first card, you will pick the
+
+83
+00:07:57,890 --> 00:07:58,760
+ace of
+
+84
+00:08:01,490 --> 00:08:07,610
+clubs and I told you get all cards with the same number.
+
+85
+00:08:08,060 --> 00:08:13,580
+So you are going to search all the deck for the Aces.
+
+86
+00:08:13,880 --> 00:08:14,370
+OK.
+
+87
+00:08:14,600 --> 00:08:18,590
+So you search all the aces here.
+
+88
+00:08:21,020 --> 00:08:27,860
+Ace of Diamond, ace of clubs and ace of diamonds and hearts and spades.
+
+89
+00:08:28,280 --> 00:08:28,590
+OK.
+
+90
+00:08:28,760 --> 00:08:31,610
+These are the four cards.
+
+91
+00:08:32,090 --> 00:08:40,940
+OK, so you every time you are searching for a card for Ace and Diamond, you looked through all the
+
+92
+00:08:40,940 --> 00:08:42,660
+cards, OK?
+
+93
+00:08:43,310 --> 00:08:47,630
+And then you are going to search for a heart.
+
+94
+00:08:47,930 --> 00:08:51,950
+So you loop all the the hearts and the spades.
+
+95
+00:08:52,910 --> 00:09:02,710
+So we are picking a specific card with a specific number among all of the cards.
+
+96
+00:09:02,720 --> 00:09:03,140
+So.
+
+97
+00:09:04,470 --> 00:09:08,940
+If we are choosing only one card, it will be a linear.
+
+98
+00:09:09,060 --> 00:09:16,440
+But if we are choosing a specific number that can be all the cards, all cards with the same number,
+
+99
+00:09:16,830 --> 00:09:23,130
+we are using a quadratic time complexity in terms of coding the.
+
+100
+00:09:24,860 --> 00:09:32,420
+The running time of Lou is the running time of the statement inside the the loop, including tests multiplied
+
+101
+00:09:32,420 --> 00:09:34,280
+by the number of iterations.
+
+102
+00:09:35,990 --> 00:09:37,940
+Let me show you this example.
+
+103
+00:09:38,150 --> 00:09:39,650
+We start from here.
+
+104
+00:09:39,710 --> 00:09:40,790
+This is a loop.
+
+105
+00:09:40,970 --> 00:09:42,260
+Having a complex.
+
+106
+00:09:42,410 --> 00:09:44,120
+Having end times.
+
+107
+00:09:44,310 --> 00:09:56,150
+OK, but in your mind that we are going to loop through this red one and times?
+
+108
+00:09:56,420 --> 00:09:56,810
+OK.
+
+109
+00:10:01,240 --> 00:10:12,130
+And we have here a for loop and having also and so this is a nested loop and we are going to look through
+
+110
+00:10:12,130 --> 00:10:17,560
+this green one, green statements and times.
+
+111
+00:10:17,950 --> 00:10:27,580
+So every we are going to loop and times in the red and every time we are, we loop inside and there
+
+112
+00:10:27,820 --> 00:10:33,550
+and we are going to execute and times the green one.
+
+113
+00:10:33,970 --> 00:10:42,280
+So this will be printing if we are entering five here and equal to five.
+
+114
+00:10:42,310 --> 00:10:48,760
+So an equal to five, I will go and loop five times this loop.
+
+115
+00:10:49,150 --> 00:10:55,990
+And this will also printing hello five times every time it will be executed.
+
+116
+00:10:56,260 --> 00:11:01,600
+So five times five is equal to twenty five times.
+
+117
+00:11:02,080 --> 00:11:10,120
+So therefore we have the total time here since we have learned that system that out print.
+
+118
+00:11:10,140 --> 00:11:13,720
+This is not this is not real.
+
+119
+00:11:14,230 --> 00:11:19,280
+It's not related to any input of the user, which is RN.
+
+120
+00:11:20,200 --> 00:11:23,920
+So it is a constant so this constant time.
+
+121
+00:11:26,120 --> 00:11:28,190
+This constant time and.
+
+122
+00:11:29,420 --> 00:11:31,730
+Blue correspond to see.
+
+123
+00:11:33,020 --> 00:11:33,640
+OK.
+
+124
+00:11:34,370 --> 00:11:36,770
+And and this and in.
+
+125
+00:11:37,790 --> 00:11:40,790
+And Green refers to this and that.
+
+126
+00:11:41,710 --> 00:11:50,710
+The inner loop inside the outer loop, and this will be referring to the outer loop.
+
+127
+00:11:51,100 --> 00:11:52,330
+OK, so.
+
+128
+00:11:53,470 --> 00:12:04,000
+The outer loop is n multiplied by the inner loop and and this statement is constant, so it will result
+
+129
+00:12:04,000 --> 00:12:06,280
+in C and Square.
+
+130
+00:12:06,610 --> 00:12:16,500
+And since we have one term and we took the highest, the highest degree and the constant is removed,
+
+131
+00:12:16,510 --> 00:12:19,090
+so it will result in all.
+
+132
+00:12:19,480 --> 00:12:20,980
+And square.
+
+133
+00:12:21,790 --> 00:12:25,030
+So this is the time complexity of the quadratic.

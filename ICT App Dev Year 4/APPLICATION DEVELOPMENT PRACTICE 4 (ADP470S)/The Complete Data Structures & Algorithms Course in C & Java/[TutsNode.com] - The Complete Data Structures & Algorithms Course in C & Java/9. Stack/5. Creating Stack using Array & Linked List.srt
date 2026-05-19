@@ -1,0 +1,195 @@
+1
+00:00:00,120 --> 00:00:06,540
+In this video, we are going to see the different types, how to create a stack.
+
+2
+00:00:07,460 --> 00:00:11,640
+Consider the first case that we create is Stack using their array.
+
+3
+00:00:12,080 --> 00:00:20,780
+So this is the stack implementation in C and we are going to see it and the exercises, but using Java,
+
+4
+00:00:20,780 --> 00:00:22,190
+they are the same concept.
+
+5
+00:00:22,190 --> 00:00:32,000
+But we we are concentrating on that concept on how we deal, how we think, how the algorithm behind
+
+6
+00:00:32,000 --> 00:00:33,260
+the stack works.
+
+7
+00:00:33,380 --> 00:00:33,740
+OK.
+
+8
+00:00:34,160 --> 00:00:37,580
+There is different syntax, but it is OK.
+
+9
+00:00:37,580 --> 00:00:44,750
+We are we are clarifying everything and see and exercises and Jeff.
+
+10
+00:00:45,110 --> 00:00:45,440
+OK.
+
+11
+00:00:45,890 --> 00:00:56,990
+So we define max equals three and and count equal to zero, then creating the stack of curves by creating
+
+12
+00:00:56,990 --> 00:01:03,680
+an int array called items that contains max that we have.
+
+13
+00:01:03,890 --> 00:01:07,930
+We have it as a three, as three elements.
+
+14
+00:01:07,940 --> 00:01:13,070
+We it have three elements at maximum and end, though.
+
+15
+00:01:13,640 --> 00:01:14,020
+OK.
+
+16
+00:01:14,060 --> 00:01:24,500
+So in order to create a stack, you can see we need to make a struct stack and it is a containing an
+
+17
+00:01:24,500 --> 00:01:26,180
+array called items.
+
+18
+00:01:26,570 --> 00:01:33,620
+And and so there is two items it through things that you should take care about.
+
+19
+00:01:33,620 --> 00:01:35,180
+Them cause stack.
+
+20
+00:01:37,170 --> 00:01:46,310
+Creation, if there's an array and there is an integer variable called top type definition and defined
+
+21
+00:01:46,500 --> 00:01:55,500
+the strike a struct stack as though we are creating a method as we are creating an object of this stack.
+
+22
+00:01:55,950 --> 00:01:57,150
+Now let's see.
+
+23
+00:01:57,330 --> 00:02:04,200
+This is the fact that we have created array at zero, array at one and that right at index two.
+
+24
+00:02:04,830 --> 00:02:05,330
+OK.
+
+25
+00:02:05,580 --> 00:02:08,430
+And this is the variable that we are creating.
+
+26
+00:02:08,430 --> 00:02:11,910
+It is in the end refers to minus one.
+
+27
+00:02:12,820 --> 00:02:24,190
+While we are the second a second way, creating an attack attack using Link, at least we start by making
+
+28
+00:02:24,190 --> 00:02:25,910
+an at a link list.
+
+29
+00:02:27,220 --> 00:02:35,290
+So but why we are doing this, why we are making an array and a link at least.
+
+30
+00:02:36,690 --> 00:02:44,190
+Because linked lists are different from a race, and we have seen this in the previous videos.
+
+31
+00:02:44,520 --> 00:02:50,940
+And what are the advantages behind that, Ray and that what are the advantages of using the at list
+
+32
+00:02:52,140 --> 00:02:52,980
+over at night?
+
+33
+00:02:53,610 --> 00:02:59,740
+But there is a very important thing since armies are not dynamic.
+
+34
+00:02:59,940 --> 00:03:04,050
+We can't increase the size of the list during run time.
+
+35
+00:03:04,410 --> 00:03:13,860
+So if we create a stack using array, we should specify the size of this stack and we are not able to
+
+36
+00:03:13,860 --> 00:03:16,410
+expand it or during runtime.
+
+37
+00:03:16,920 --> 00:03:22,740
+The solution of dynamic stack is to create a stack using the link, at least.
+
+38
+00:03:22,950 --> 00:03:26,610
+So you remember our friend link at last?
+
+39
+00:03:27,270 --> 00:03:29,880
+This is the link at least we have had.
+
+40
+00:03:30,300 --> 00:03:36,570
+If we insert a new node, we are inserting a new item in the stack.
+
+41
+00:03:36,840 --> 00:03:45,390
+So if we insert the new item in the stack, the head will be moved and we increase that had by one and
+
+42
+00:03:45,390 --> 00:03:48,030
+we insert a new node at the beginning.
+
+43
+00:03:48,090 --> 00:03:52,920
+So if we remove, we need to remove these items from the linked list.
+
+44
+00:03:52,920 --> 00:03:57,570
+We start from the head, OK, bumping from the hat.
+
+45
+00:03:57,930 --> 00:04:04,950
+How does this thing and using the linked list works in coding.
+
+46
+00:04:05,370 --> 00:04:10,170
+We have seen the creation of a stack using array.
+
+47
+00:04:10,530 --> 00:04:16,290
+We have seen the push and pop methods using the array method way and way.
+
+48
+00:04:16,860 --> 00:04:25,350
+While we are in the next videos, we are going to see how to push and pull data into a stack, but a
+
+49
+00:04:25,410 --> 00:04:27,480
+stack created by link.

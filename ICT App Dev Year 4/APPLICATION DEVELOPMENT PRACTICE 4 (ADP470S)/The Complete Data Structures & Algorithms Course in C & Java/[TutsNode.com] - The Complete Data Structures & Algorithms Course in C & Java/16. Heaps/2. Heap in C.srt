@@ -1,0 +1,271 @@
+1
+00:00:00,630 --> 00:00:02,880
+Let's implement the heap in sea.
+
+2
+00:00:04,140 --> 00:00:08,780
+Include a studio, and we make that valuable.
+
+3
+00:00:08,950 --> 00:00:10,290
+Size equal to zero.
+
+4
+00:00:11,640 --> 00:00:14,610
+We create a new function called swap.
+
+5
+00:00:16,080 --> 00:00:23,610
+We have learned about it many times in the previous videos and data structures and algorithms, so we
+
+6
+00:00:23,610 --> 00:00:27,900
+need to swab the value of A to B and the value of B to A.
+
+7
+00:00:27,990 --> 00:00:31,500
+We create a temporary variable variable called death.
+
+8
+00:00:31,950 --> 00:00:37,590
+We initialize its value to be B now equal to A and eight equal to them.
+
+9
+00:00:38,400 --> 00:00:48,420
+Now we create a void, a method called hip ify hip before I met make mean or the arrangement of the
+
+10
+00:00:48,690 --> 00:00:53,240
+hip in the hip arrangements and orders.
+
+11
+00:00:53,250 --> 00:00:58,650
+So the smallest number would be the parent and the child would be greater than that.
+
+12
+00:00:59,160 --> 00:01:00,690
+This is the meaning of hip ify.
+
+13
+00:01:02,040 --> 00:01:09,900
+It took into that perimeter the entire day we had there in size, and I if size equal, equal to one
+
+14
+00:01:10,080 --> 00:01:19,560
+then single element in the heap else, if it is greater than one and it contains in the heap, elements
+
+15
+00:01:20,370 --> 00:01:30,030
+make a largest variable called largest equal to I and and I and added equal to two I.
+
+16
+00:01:30,130 --> 00:01:41,470
++1 and input are equal to two I plus two if less than size and array at index L greater than that rate
+
+17
+00:01:41,550 --> 00:01:45,060
+and next largest, then largest equal to end.
+
+18
+00:01:45,330 --> 00:01:53,070
+And if are less than size and array at index are greater than a rate at index largest than the largest
+
+19
+00:01:53,070 --> 00:01:53,590
+equal to.
+
+20
+00:01:54,240 --> 00:01:54,690
+Please.
+
+21
+00:01:56,390 --> 00:02:04,370
+Revise the previous video about the heap data structure in order to learn how to hit before and what
+
+22
+00:02:04,370 --> 00:02:10,970
+is the purpose of it before an operation for a florist does not equal to.
+
+23
+00:02:10,970 --> 00:02:20,120
+I then swept the elements and then called the heap defy method again, using here that occurred in passing
+
+24
+00:02:20,120 --> 00:02:24,230
+that say the size and the largest that has that elements.
+
+25
+00:02:25,070 --> 00:02:27,160
+OK, here we have used the.
+
+26
+00:02:28,950 --> 00:02:30,720
+The method swab.
+
+27
+00:02:30,930 --> 00:02:33,600
+And here we have used the hip fire version.
+
+28
+00:02:35,420 --> 00:02:39,680
+Now we need to make our Floyd Ensor method.
+
+29
+00:02:39,980 --> 00:02:42,110
+It took him to the perimeter of that ray.
+
+30
+00:02:43,270 --> 00:02:50,880
+And the new number that we know we need to insert scientists a if size equal equal to zero, then they
+
+31
+00:02:51,580 --> 00:02:56,350
+put this array element at index zero to new numbers.
+
+32
+00:02:56,350 --> 00:02:58,940
+So we are inserting it into a new assay.
+
+33
+00:02:59,710 --> 00:03:04,510
+Otherwise, we need to make a very at index size equal to a new nut.
+
+34
+00:03:05,050 --> 00:03:14,800
+We are adding it to the list and increase the size by one fourth and I less than or equal to size over
+
+35
+00:03:14,800 --> 00:03:21,040
+two minus one I less than I greater than zero minus minus.
+
+36
+00:03:21,280 --> 00:03:31,180
+Then we need to be fine because we need to typify the size over two because we thought we learn about
+
+37
+00:03:31,180 --> 00:03:40,120
+if we have inserting a new element here, would we need to change that half of the tree before we continue?
+
+38
+00:03:40,310 --> 00:03:43,350
+OK, so we need to hit before it.
+
+39
+00:03:43,360 --> 00:03:49,130
+We need to call this method and first the array the size and I pretty.
+
+40
+00:03:50,870 --> 00:03:58,580
+Now, delayed lead truth, we need to make the lead through a method to into perimeter the array and
+
+41
+00:03:58,580 --> 00:04:06,950
+and that number that we are going to delete the number from its early start from equal to zero Ireland
+
+42
+00:04:06,950 --> 00:04:12,740
+than size and I plus plus if no equal equal to array at index I.
+
+43
+00:04:13,070 --> 00:04:15,500
+So the number it's found, then break.
+
+44
+00:04:16,910 --> 00:04:27,470
+Otherwise, we swab the arrays and the element of that in the eye with that ray element in the exercise
+
+45
+00:04:27,470 --> 00:04:37,490
+minus one, and we decrease the size by what otherwise we also need to make the for loop from that the
+
+46
+00:04:37,500 --> 00:04:40,680
+last the till the middle of the airway.
+
+47
+00:04:40,700 --> 00:04:42,080
+So this is the other day.
+
+48
+00:04:42,530 --> 00:04:43,630
+This is the middle.
+
+49
+00:04:43,640 --> 00:04:50,900
+We start from the end to the middle and we start typifying this three.
+
+50
+00:04:52,980 --> 00:04:55,680
+Now printing the array, it's very simple.
+
+51
+00:04:57,600 --> 00:05:05,940
+Function starts from equal to zero eyelids, then sighs, we need to print Ray, and we passed its size,
+
+52
+00:05:06,060 --> 00:05:12,960
+its corresponding size, and we start printing that as a pretext now to test the code we make and into
+
+53
+00:05:12,960 --> 00:05:18,540
+Maine, and we start by making an array at that 10.
+
+54
+00:05:19,470 --> 00:05:30,030
+So we have created arrays with 10 variables, then digits, and now we need to insert into the array
+
+55
+00:05:30,030 --> 00:05:38,610
+that three called their method insert here called this repository array that we have created and the
+
+56
+00:05:38,610 --> 00:05:46,020
+value that we are going to insert, which is three and we insert also four, we insert nine, we insert
+
+57
+00:05:46,020 --> 00:05:48,240
+five and reinsert two.
+
+58
+00:05:49,680 --> 00:05:54,630
+Now the maximum hip and knee printing array.
+
+59
+00:05:54,750 --> 00:05:58,530
+We passed the array here and the size for it.
+
+60
+00:05:59,880 --> 00:06:01,470
+Which is equal to zero.
+
+61
+00:06:02,010 --> 00:06:10,170
+Now that they lived through it, we delete the array and that a number four, so we need to add two
+
+62
+00:06:10,170 --> 00:06:15,040
+or delete the four by using that delete root method.
+
+63
+00:06:15,060 --> 00:06:22,860
+And after that, we didn't need to to print the elements by using the print tray again.
+
+64
+00:06:23,580 --> 00:06:24,080
+OK.
+
+65
+00:06:25,500 --> 00:06:28,650
+So this is the heap in a sea.
+
+66
+00:06:28,710 --> 00:06:36,450
+We have created it correctly and we have used the heap ify method, the insert method and the delete
+
+67
+00:06:36,450 --> 00:06:37,500
+route method.
+
+68
+00:06:37,920 --> 00:06:43,350
+So let's go to Java and try to implement the heap.

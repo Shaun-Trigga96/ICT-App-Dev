@@ -1,0 +1,231 @@
+1
+00:00:00,330 --> 00:00:04,380
+Hello, my friends, and welcome to exercise number 102.
+
+2
+00:00:04,560 --> 00:00:10,980
+And this exercise, we are going to create the linear search algorithm inside Java.
+
+3
+00:00:11,190 --> 00:00:20,260
+So how to make a linear search function that go through an array and search for a specific element?
+
+4
+00:00:20,280 --> 00:00:30,350
+If this found or not using the linear search, it's very simple and we have done this in the array section.
+
+5
+00:00:30,720 --> 00:00:36,420
+But in this material, I will go deeply and be specific in the linear search.
+
+6
+00:00:36,420 --> 00:00:39,030
+So and thus sources.
+
+7
+00:00:39,030 --> 00:00:46,710
+I would go to the algorithms and click on Java class and create a new linear search.
+
+8
+00:00:50,840 --> 00:00:52,670
+Okay, so
+
+9
+00:00:55,760 --> 00:00:58,870
+we start by making here.
+
+10
+00:01:00,020 --> 00:01:14,120
+Public static int linear search, we need to return the index of the element in the array where we have
+
+11
+00:01:14,120 --> 00:01:17,250
+found the element inside it or not.
+
+12
+00:01:17,270 --> 00:01:25,130
+So int array that we are going to search inside it and index that we are going to search for.
+
+13
+00:01:28,140 --> 00:01:41,310
+We start by making it an equal to at a dog length for going through array sequentially, so going through
+
+14
+00:01:42,330 --> 00:01:44,670
+they sequentially.
+
+15
+00:01:50,560 --> 00:01:51,780
+See when.
+
+16
+00:01:53,610 --> 00:01:54,470
+Sequin.
+
+17
+00:01:59,740 --> 00:02:00,250
+Shelly.
+
+18
+00:02:01,490 --> 00:02:09,920
+OK, so Ford and I equal to zero.
+
+19
+00:02:09,950 --> 00:02:19,700
+We start from zero I less than an eye plus plus than we make if.
+
+20
+00:02:20,390 --> 00:02:28,880
+Are they at Index II equal equal to X, then we to.
+
+21
+00:02:29,620 --> 00:02:39,080
+I mean, otherwise if we don't find anything, then we need to return minus one.
+
+22
+00:02:39,170 --> 00:02:42,130
+And this is why we have created the end.
+
+23
+00:02:42,140 --> 00:02:44,310
+They're returning Typekit.
+
+24
+00:02:45,230 --> 00:02:49,760
+So we will return the index if it is found otherwise.
+
+25
+00:02:49,760 --> 00:02:52,340
+If is not found, we return minus one.
+
+26
+00:02:52,340 --> 00:02:53,840
+So if it is.
+
+27
+00:03:00,590 --> 00:03:02,930
+Not found where to turn minus one.
+
+28
+00:03:03,210 --> 00:03:03,550
+OK.
+
+29
+00:03:05,240 --> 00:03:12,980
+It's very simple exercise, but I should mention it because we need to compare it with binary search
+
+30
+00:03:12,980 --> 00:03:13,920
+in the next video.
+
+31
+00:03:13,940 --> 00:03:15,560
+So public static void,
+
+32
+00:03:18,560 --> 00:03:22,580
+main string args
+
+33
+00:03:26,210 --> 00:03:28,670
+and we start inthe array.
+
+34
+00:03:33,710 --> 00:03:37,740
+One or two, Steve.
+
+35
+00:03:38,510 --> 00:03:39,890
+These are the numbers
+
+36
+00:03:42,830 --> 00:03:45,650
+and an X equal to one.
+
+37
+00:03:46,340 --> 00:03:54,860
+I need to search for one end result, equal to linear search.
+
+38
+00:03:54,860 --> 00:03:55,430
+I will.
+
+39
+00:03:56,780 --> 00:04:05,120
+But the returning value of calling this function inside a variable called the result, so I will pass
+
+40
+00:04:05,120 --> 00:04:11,390
+the array that we are going to search for inside it and that x that we are going to search for.
+
+41
+00:04:11,570 --> 00:04:19,160
+So we are looking wine for X, which is equal to one in the array, which is these numbers are incomplete.
+
+42
+00:04:19,430 --> 00:04:36,250
+So if the result equal equal to minus one, then we bring the system out that print and element not
+
+43
+00:04:36,500 --> 00:04:36,960
+fact.
+
+44
+00:04:39,620 --> 00:04:47,360
+Otherwise, we will print them out to print and the element
+
+45
+00:04:50,480 --> 00:04:55,430
+found at index
+
+46
+00:04:58,940 --> 00:04:59,590
+clusters.
+
+47
+00:05:00,680 --> 00:05:05,240
+Let's run and see, and here we go.
+
+48
+00:05:05,240 --> 00:05:08,090
+We have that element not found.
+
+49
+00:05:08,360 --> 00:05:10,130
+Let me try number six.
+
+50
+00:05:11,470 --> 00:05:12,130
+That's right.
+
+51
+00:05:14,410 --> 00:05:19,030
+And here we go, element found at index two, zero, one and two.
+
+52
+00:05:19,120 --> 00:05:21,940
+So this is that linear search.
+
+53
+00:05:22,270 --> 00:05:27,220
+I told you that it is complexity is Oh, do.
+
+54
+00:05:27,740 --> 00:05:35,230
+And look, it's all of and because it depends on how many numbers inside the array that we are going
+
+55
+00:05:35,230 --> 00:05:37,480
+to search for a specific.
+
+56
+00:05:37,900 --> 00:05:39,790
+So it contains 100.
+
+57
+00:05:39,790 --> 00:05:42,460
+It was its complexity would be 100.
+
+58
+00:05:42,760 --> 00:05:45,490
+And we are searching for 100 in the worst case.

@@ -1,0 +1,415 @@
+1
+00:00:00,720 --> 00:00:01,770
+Hello, my friends.
+
+2
+00:00:02,010 --> 00:00:04,200
+And welcome to exercise number 27.
+
+3
+00:00:04,890 --> 00:00:08,910
+We are going to explain the functionality of the following function.
+
+4
+00:00:09,900 --> 00:00:21,870
+It is written in C so function f one function, one take into parameter and n and do the following stuff.
+
+5
+00:00:22,770 --> 00:00:27,510
+It starts with equal to zero, which initializing equal to zero.
+
+6
+00:00:28,410 --> 00:00:31,140
+Check if n greater than one.
+
+7
+00:00:31,620 --> 00:00:36,750
+It will call again the function one and pass and minus one.
+
+8
+00:00:36,870 --> 00:00:39,540
+So this is a recursion occurs here.
+
+9
+00:00:39,760 --> 00:00:40,110
+OK.
+
+10
+00:00:42,150 --> 00:00:53,610
+Otherwise it will go and continue for a loop and the print and print the star, according to Idlis and
+
+11
+00:00:53,910 --> 00:01:02,070
+starting from I equate to zero and following all and passing all the elements from zero to an Eilat's,
+
+12
+00:01:02,070 --> 00:01:10,890
+then OK, post the video and think about it, what is the result and how the functionality of this function
+
+13
+00:01:10,890 --> 00:01:12,570
+works as the previous use?
+
+14
+00:01:12,750 --> 00:01:13,850
+We have explained.
+
+15
+00:01:16,090 --> 00:01:19,330
+OK, please come into your solution and the comments below.
+
+16
+00:01:20,110 --> 00:01:20,890
+Let's start.
+
+17
+00:01:23,050 --> 00:01:27,700
+We have I will tell you, I told you to take always an example.
+
+18
+00:01:28,210 --> 00:01:32,110
+So I will take an equal to five.
+
+19
+00:01:35,080 --> 00:01:35,510
+OK.
+
+20
+00:01:36,970 --> 00:01:40,300
+So at the first iteration.
+
+21
+00:01:45,660 --> 00:01:46,170
+I.
+
+22
+00:01:47,190 --> 00:01:48,180
+Is equal to zero.
+
+23
+00:01:53,820 --> 00:01:57,510
+Or at the first execution, if any, greater than one.
+
+24
+00:01:57,960 --> 00:02:02,400
+Yes, and equal to five call function and minus one.
+
+25
+00:02:02,790 --> 00:02:06,630
+So this will lead to function.
+
+26
+00:02:08,130 --> 00:02:09,170
+Of fought.
+
+27
+00:02:09,660 --> 00:02:12,360
+So this is half of life.
+
+28
+00:02:12,810 --> 00:02:17,340
+OK, let me explain it better.
+
+29
+00:02:17,910 --> 00:02:19,110
+I remove this.
+
+30
+00:02:22,350 --> 00:02:28,170
+And F of five calls, F of four again, f of four.
+
+31
+00:02:28,860 --> 00:02:31,340
+You see guys that here at the stop.
+
+32
+00:02:31,620 --> 00:02:40,200
+It does not execute that loop because as I told you, the algorithm and the pattern that recursion,
+
+33
+00:02:41,580 --> 00:02:48,300
+execute and follows is executing and calling the methods until it get back.
+
+34
+00:02:48,660 --> 00:02:55,110
+That results and then it go to the next lines and execute the following codes.
+
+35
+00:02:55,380 --> 00:03:04,260
+So for stops here at sort of four five stops here as four four, it goes up and equal to zero and greater
+
+36
+00:03:04,260 --> 00:03:04,780
+than one.
+
+37
+00:03:04,800 --> 00:03:06,180
+Yes, and equal to four.
+
+38
+00:03:06,210 --> 00:03:13,680
+So it will execute f of three and call F of three without continuing to do.
+
+39
+00:03:13,680 --> 00:03:14,850
+Go through this.
+
+40
+00:03:15,240 --> 00:03:15,630
+OK.
+
+41
+00:03:17,410 --> 00:03:20,140
+This is the trick behind recursion.
+
+42
+00:03:21,280 --> 00:03:33,220
+OK, now three, again, it will call F2 and f of two, it will call F of what F1 here are equal to
+
+43
+00:03:33,220 --> 00:03:33,500
+zero.
+
+44
+00:03:33,520 --> 00:03:35,660
+Yes, and greater than one.
+
+45
+00:03:35,710 --> 00:03:37,990
+No one is not the greater than one.
+
+46
+00:03:38,200 --> 00:03:45,550
+So this will be skipped and it will go and execute this for loop.
+
+47
+00:03:45,970 --> 00:03:46,570
+OK.
+
+48
+00:03:46,960 --> 00:03:48,040
+This for a loop.
+
+49
+00:03:50,170 --> 00:03:51,100
+This for a loop.
+
+50
+00:03:52,470 --> 00:03:58,080
+It will start from printing from equal to zero.
+
+51
+00:04:02,350 --> 00:04:07,150
+And still, I less than and which is one.
+
+52
+00:04:10,850 --> 00:04:11,780
+Which is one.
+
+53
+00:04:15,220 --> 00:04:19,180
+And plus plus, okay, it will print off.
+
+54
+00:04:21,260 --> 00:04:22,130
+From zero.
+
+55
+00:04:22,850 --> 00:04:26,020
+It will print only one star.
+
+56
+00:04:26,390 --> 00:04:26,810
+OK.
+
+57
+00:04:29,080 --> 00:04:32,050
+Now we have finished off of one.
+
+58
+00:04:32,500 --> 00:04:32,930
+Okay.
+
+59
+00:04:34,720 --> 00:04:37,810
+This is the iteration of of one.
+
+60
+00:04:38,560 --> 00:04:47,230
+But F of two and three and four and five, they are opened and they need to continue their execution
+
+61
+00:04:47,230 --> 00:04:49,060
+and execute this for a loop.
+
+62
+00:04:49,390 --> 00:04:53,200
+So this is due to f of one.
+
+63
+00:04:53,530 --> 00:05:04,000
+OK, f off one f of one calls again f of two and tell it to continue its loop.
+
+64
+00:05:04,420 --> 00:05:07,690
+So four zero two two.
+
+65
+00:05:08,650 --> 00:05:11,470
+So f of two equal.
+
+66
+00:05:16,230 --> 00:05:17,610
+It will go through.
+
+67
+00:05:18,850 --> 00:05:26,800
+And sprint from zero, it said, Lou, are equal to zero and less then and and and is equal to two.
+
+68
+00:05:27,130 --> 00:05:35,230
+So from zero to two, there is two zero and one because I less than and not equal.
+
+69
+00:05:35,560 --> 00:05:36,080
+OK.
+
+70
+00:05:36,150 --> 00:05:36,580
+Two.
+
+71
+00:05:36,850 --> 00:05:39,880
+So it will print two stars.
+
+72
+00:05:40,180 --> 00:05:48,280
+Okay, this is f of an f and calls again f of three and tell it to continue its slope.
+
+73
+00:05:48,430 --> 00:05:49,720
+So f of three.
+
+74
+00:05:50,930 --> 00:05:59,990
+Will continue, and it will print from zero to three three is not included, so it will print one two
+
+75
+00:06:00,560 --> 00:06:02,720
+zero one two stars.
+
+76
+00:06:02,870 --> 00:06:15,740
+OK, f of three calls back A for four and it will print four stars OK, from zero two four four four.
+
+77
+00:06:15,890 --> 00:06:24,650
+It calls F of five to continue its loop because it stopped here and it will print this.
+
+78
+00:06:26,560 --> 00:06:28,000
+From zero to five.
+
+79
+00:06:28,690 --> 00:06:29,200
+OK.
+
+80
+00:06:29,350 --> 00:06:32,260
+Five is not included, zero is inaccurate.
+
+81
+00:06:33,010 --> 00:06:36,550
+You see, guys, how many stars have been printing?
+
+82
+00:06:37,090 --> 00:06:37,660
+This is.
+
+83
+00:06:40,140 --> 00:06:49,140
+This is how this function works, so if we print that, if we see the variables.
+
+84
+00:06:50,370 --> 00:06:51,240
+The stars.
+
+85
+00:06:52,800 --> 00:06:54,120
+This is the pattern.
+
+86
+00:06:57,140 --> 00:06:57,770
+OK.
+
+87
+00:07:00,680 --> 00:07:02,210
+Of an equal to five.
+
+88
+00:07:04,160 --> 00:07:06,020
+OK and equal to five.
+
+89
+00:07:07,550 --> 00:07:12,770
+So how to find the pattern, we need to know how this algorithm.
+
+90
+00:07:12,930 --> 00:07:18,860
+And based on so it it is based on, we start with an.
+
+91
+00:07:21,320 --> 00:07:30,510
+Times how many times and minus one, five times for over two.
+
+92
+00:07:30,830 --> 00:07:35,030
+So five times four is twenty over two.
+
+93
+00:07:35,960 --> 00:07:36,620
+We have.
+
+94
+00:07:38,660 --> 00:07:48,920
+It's not here, it's plus and into any plus one over two, because one two three plus three is six plus
+
+95
+00:07:48,920 --> 00:07:53,840
+four, then plus five is equal to 20.
+
+96
+00:07:54,270 --> 00:07:54,620
+So.
+
+97
+00:07:57,020 --> 00:08:00,500
+Five times six is equal to 30.
+
+98
+00:08:02,780 --> 00:08:07,520
+And we have 15 stars, so sorry, it is not 20.
+
+99
+00:08:07,940 --> 00:08:16,930
+It is 15 stars, so five, according to this equation, five times six of us, two is equal to 15.
+
+100
+00:08:16,940 --> 00:08:19,980
+This is the number of stars that we have in this.
+
+101
+00:08:20,000 --> 00:08:22,100
+So the following functions.
+
+102
+00:08:22,760 --> 00:08:33,440
+The following function is based on this formula and into any +1 over to always when you see this increasing
+
+103
+00:08:33,440 --> 00:08:39,650
+order according to their line use and end to end +1 over two.
+
+104
+00:08:39,830 --> 00:08:41,540
+This is the trick of this question.

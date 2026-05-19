@@ -1,0 +1,627 @@
+1
+00:00:00,750 --> 00:00:04,690
+Hello, my friends, and welcome to exercise number 74.
+
+2
+00:00:04,710 --> 00:00:11,820
+And this exercise, we are going to implement stack data structure and Java.
+
+3
+00:00:12,060 --> 00:00:23,670
+So first of all, open the A.J. idea or your I.D. Java ID this that we have created before link at least
+
+4
+00:00:23,670 --> 00:00:25,530
+double in closed circle link at last.
+
+5
+00:00:26,370 --> 00:00:32,910
+I will create a new Java class concerned about stack called Stack.
+
+6
+00:00:32,940 --> 00:00:40,680
+So this is a public class stack will serve as our main method of creating the stack.
+
+7
+00:00:40,950 --> 00:00:52,620
+So I told you that we have two methods of creating a stack, using a link at list or using an array.
+
+8
+00:00:53,520 --> 00:00:57,090
+Personally, I prefer using arrays.
+
+9
+00:00:57,750 --> 00:00:58,230
+OK.
+
+10
+00:00:58,460 --> 00:01:02,010
+I prefer working with arrays in the stack.
+
+11
+00:01:02,490 --> 00:01:02,910
+OK.
+
+12
+00:01:04,020 --> 00:01:10,200
+I will create an input array here and a private.
+
+13
+00:01:10,680 --> 00:01:23,790
+We need a and called top to indicate set up element, and we need to create and get capacity in order
+
+14
+00:01:23,790 --> 00:01:27,000
+to create the array with a specific capacity.
+
+15
+00:01:27,550 --> 00:01:28,010
+OK.
+
+16
+00:01:29,010 --> 00:01:41,220
+Again, I need from you to revise that stack stack, of course, and and lessons and I need from you
+
+17
+00:01:41,220 --> 00:01:50,730
+also to make and write these notes on paper and your notebook, because these are very important and
+
+18
+00:01:50,730 --> 00:01:55,230
+you revised them when you have an exam or an interview.
+
+19
+00:01:55,560 --> 00:02:06,030
+So that constructor creating a stack whenever you create an object from this stack class, you need
+
+20
+00:02:06,030 --> 00:02:09,510
+a constructor called Stack.
+
+21
+00:02:09,930 --> 00:02:20,730
+This is Stack took into 30 meter size and here are equal to new.
+
+22
+00:02:24,410 --> 00:02:28,550
+New and array of the same size.
+
+23
+00:02:28,630 --> 00:02:37,970
+OK, so whenever you create a stack, you specify its size and this size would be referring as an ashtray.
+
+24
+00:02:38,270 --> 00:02:41,180
+And we will create the new array with the same size.
+
+25
+00:02:41,210 --> 00:02:46,970
+So basically, we are creating an array and capacity equal to size.
+
+26
+00:02:47,480 --> 00:02:55,370
+And initially we have to initialized up to minus one goes and empty stack.
+
+27
+00:02:55,910 --> 00:03:03,890
+So this is how we initialize a stack and recreate a stack glass inside job.
+
+28
+00:03:04,640 --> 00:03:10,170
+Now let's add new methods to it.
+
+29
+00:03:10,190 --> 00:03:19,160
+We have the push, we have the part and we have is empty pop at the peak.
+
+30
+00:03:19,160 --> 00:03:20,420
+And so OK.
+
+31
+00:03:20,750 --> 00:03:23,960
+So these are the methods.
+
+32
+00:03:26,780 --> 00:03:28,580
+And let me mark this
+
+33
+00:03:31,070 --> 00:03:32,990
+method of exercise.
+
+34
+00:03:35,570 --> 00:03:38,500
+Exercise number 74.
+
+35
+00:03:38,840 --> 00:03:39,150
+OK?
+
+36
+00:03:40,460 --> 00:03:41,120
+Public.
+
+37
+00:03:41,600 --> 00:03:46,700
+We start by adding These are the methods.
+
+38
+00:03:47,330 --> 00:03:53,420
+One adding elements into stack.
+
+39
+00:03:55,160 --> 00:03:58,100
+So public void.
+
+40
+00:03:58,890 --> 00:04:06,800
+Bush, we have bush and we need to get the elements that we need to push, which is X.
+
+41
+00:04:06,890 --> 00:04:07,250
+OK.
+
+42
+00:04:07,460 --> 00:04:15,620
+So I need when I have to call Bush, I need to pass and enter an inner variable called X.
+
+43
+00:04:15,920 --> 00:04:24,230
+And this X would be clarifying that we need to check if it is full or not.
+
+44
+00:04:24,290 --> 00:04:31,730
+So I will call method called is it is full, is full.
+
+45
+00:04:32,840 --> 00:04:44,210
+And later on, I will create that then system that out that Brent and.
+
+46
+00:04:48,090 --> 00:05:01,350
+Stack is full of tech and system the exit one status one.
+
+47
+00:05:01,620 --> 00:05:01,940
+OK.
+
+48
+00:05:02,730 --> 00:05:12,390
+Otherwise, it will create a system that that brand alarm inserting.
+
+49
+00:05:15,790 --> 00:05:22,790
+And we put X here, and we insert it by making every act.
+
+50
+00:05:23,680 --> 00:05:25,260
+You see guys plus plus.
+
+51
+00:05:26,080 --> 00:05:27,340
+We increased the up.
+
+52
+00:05:27,340 --> 00:05:31,300
+This is the pretty increment, the top.
+
+53
+00:05:31,480 --> 00:05:36,880
+And we put array at this index equal to X.
+
+54
+00:05:37,180 --> 00:05:42,670
+We have seen this in the lecture in written in C language.
+
+55
+00:05:43,270 --> 00:05:52,900
+I learned you and teach you in this course how to think, how you get that knowledge, how you get the
+
+56
+00:05:52,900 --> 00:06:00,550
+concept behind pushing a popping and dealing with data structures, not learning you that syntax.
+
+57
+00:06:00,550 --> 00:06:09,700
+But by the way, I prefer writing everything in Java and C because we have the same concept that we
+
+58
+00:06:09,700 --> 00:06:10,120
+have.
+
+59
+00:06:10,120 --> 00:06:15,070
+We have the same algorithm and they are very similar.
+
+60
+00:06:15,190 --> 00:06:16,990
+See, and Jeff?
+
+61
+00:06:17,170 --> 00:06:17,530
+OK.
+
+62
+00:06:17,890 --> 00:06:20,320
+So what do you prefer?
+
+63
+00:06:20,620 --> 00:06:30,400
+I I can make new courses and you videos, so comment here in below the outcome of your favorite language.
+
+64
+00:06:30,620 --> 00:06:31,090
+OK?
+
+65
+00:06:31,210 --> 00:06:37,120
+In order to make new videos and new courses with it's like the language that you prefer.
+
+66
+00:06:37,240 --> 00:06:45,460
+OK, so the second method that we are going to implement in our stack is called removing the element
+
+67
+00:06:45,700 --> 00:06:48,400
+from the stack if there's like chopping.
+
+68
+00:06:48,670 --> 00:06:57,550
+So you remember popping so public and pop element.
+
+69
+00:06:58,030 --> 00:07:07,240
+So whenever we call this method pop, we will check if this stack is empty.
+
+70
+00:07:07,240 --> 00:07:17,980
+So I need to create a new method called empty, OK, system dot out dot print l
+
+71
+00:07:20,890 --> 00:07:23,980
+stack as empty.
+
+72
+00:07:24,640 --> 00:07:29,350
+So you are not emptying anything system that exit
+
+73
+00:07:31,990 --> 00:07:34,390
+one state this one.
+
+74
+00:07:34,720 --> 00:07:42,810
+Otherwise, it will return array at index top minus minus.
+
+75
+00:07:43,000 --> 00:07:43,390
+OK.
+
+76
+00:07:43,990 --> 00:07:52,780
+So we both increment and decrement the top and we specify return in the array.
+
+77
+00:07:52,780 --> 00:08:01,150
+As this index of is, this will be returning the element that we have removed.
+
+78
+00:08:01,660 --> 00:08:02,230
+OK.
+
+79
+00:08:04,080 --> 00:08:12,270
+OK, now let's check and create this is empty and is full method.
+
+80
+00:08:12,540 --> 00:08:12,860
+OK.
+
+81
+00:08:14,640 --> 00:08:17,280
+Three is empty,
+
+82
+00:08:21,060 --> 00:08:24,990
+so public is empty.
+
+83
+00:08:25,070 --> 00:08:32,410
+It's its answer is by true or false?
+
+84
+00:08:32,430 --> 00:08:35,820
+So it would be Boolean is.
+
+85
+00:08:37,140 --> 00:08:49,260
+A. It was return stub, as you would check, if the tarp equal equal to minus one, if it is true,
+
+86
+00:08:49,740 --> 00:08:51,390
+then it will return true.
+
+87
+00:08:51,720 --> 00:08:54,140
+Otherwise, it will return false.
+
+88
+00:08:54,210 --> 00:08:56,130
+It's a very simple method.
+
+89
+00:08:56,130 --> 00:09:01,980
+And again, we are going to check if it is full public.
+
+90
+00:09:03,270 --> 00:09:18,060
+Boolean is full and here return to equal equal to capacity minus one.
+
+91
+00:09:18,540 --> 00:09:23,430
+We check if to equal the capacity minus one.
+
+92
+00:09:24,000 --> 00:09:28,800
+If it returns true, it will go and here returning true.
+
+93
+00:09:29,160 --> 00:09:31,320
+Otherwise, it will return false.
+
+94
+00:09:32,070 --> 00:09:45,660
+Now let's make the fifth method called size the check, the return, the size of the stack size of stack.
+
+95
+00:09:46,290 --> 00:09:56,010
+So public event because we are searching for the size of add the stack size.
+
+96
+00:09:58,200 --> 00:10:05,550
+It will return the tarp because the tarp will indicate for us its position and the plus one because
+
+97
+00:10:05,880 --> 00:10:09,360
+the top the first element at the top is equal to zero.
+
+98
+00:10:10,200 --> 00:10:14,940
+So if we insert one element in the stack, the tarp will indicate it as zero.
+
+99
+00:10:15,300 --> 00:10:25,850
+We increase it by one, we add plus one here, so the tarp becomes one and indicate that there is a
+
+100
+00:10:25,920 --> 00:10:26,310
+one.
+
+101
+00:10:26,510 --> 00:10:27,780
+And OK.
+
+102
+00:10:28,260 --> 00:10:32,250
+It's very important to understand how to deal with data structures.
+
+103
+00:10:33,810 --> 00:10:37,180
+Method number six is the print stack.
+
+104
+00:10:37,230 --> 00:10:38,760
+So printing
+
+105
+00:10:42,030 --> 00:10:49,830
+stack, public void print stack.
+
+106
+00:10:51,000 --> 00:10:57,540
+This will make for us a method that will print our full stack.
+
+107
+00:10:58,210 --> 00:11:08,220
+But printing the stack the whole stack will assure for us or will use the loop.
+
+108
+00:11:08,550 --> 00:11:10,590
+Yes, you are thinking about that.
+
+109
+00:11:10,890 --> 00:11:14,430
+So we have used this in the previous data structure.
+
+110
+00:11:14,430 --> 00:11:20,550
+So and are equal to zero I less than
+
+111
+00:11:23,400 --> 00:11:33,540
+or equal to top and a plus plus this will indicate the system.
+
+112
+00:11:34,290 --> 00:11:41,580
+And this will print system that out that print and the array at the position.
+
+113
+00:11:42,700 --> 00:11:43,180
+OK.
+
+114
+00:11:44,580 --> 00:11:44,980
+OK.
+
+115
+00:11:45,030 --> 00:11:46,560
+It's very simple.
+
+116
+00:11:48,960 --> 00:11:55,980
+Now let's create in the main method and the try to check our product.
+
+117
+00:11:56,760 --> 00:11:57,210
+OK.
+
+118
+00:11:57,690 --> 00:12:02,280
+So here the driver, the main method.
+
+119
+00:12:03,690 --> 00:12:04,650
+The driver.
+
+120
+00:12:07,180 --> 00:12:11,350
+Public static void main.
+
+121
+00:12:12,130 --> 00:12:14,400
+And there's string parks.
+
+122
+00:12:17,630 --> 00:12:27,470
+Let's test our stack by creating a stack stack equal to new stack of five elements I need to make.
+
+123
+00:12:27,490 --> 00:12:35,500
+Five elements here I need to push you see guys, how I can push the elements.
+
+124
+00:12:35,500 --> 00:12:44,560
+One stack the push element to stack the push element.
+
+125
+00:12:44,560 --> 00:12:45,130
+Three.
+
+126
+00:12:45,880 --> 00:12:49,060
+Stack the push element four.
+
+127
+00:12:50,140 --> 00:12:50,710
+OK.
+
+128
+00:12:51,710 --> 00:12:53,660
+Now I need.
+
+129
+00:12:54,630 --> 00:12:56,880
+To top the atom.
+
+130
+00:12:57,180 --> 00:13:00,330
+But first of all, let me stand.
+
+131
+00:13:00,780 --> 00:13:02,850
+Let me print print stack.
+
+132
+00:13:03,200 --> 00:13:03,650
+OK.
+
+133
+00:13:05,530 --> 00:13:08,830
+Now, let's pop system that out.
+
+134
+00:13:11,250 --> 00:13:14,550
+Dr. Brent Allen.
+
+135
+00:13:19,030 --> 00:13:22,420
+Stack after popping.
+
+136
+00:13:29,820 --> 00:13:38,430
+Stack the top, OK, then stack the current stack.
+
+137
+00:13:39,270 --> 00:13:40,410
+Let's run, Nancy.
+
+138
+00:13:44,690 --> 00:13:50,180
+If is full here is full, it's on again.
+
+139
+00:13:52,490 --> 00:13:53,630
+And here we go.
+
+140
+00:13:54,650 --> 00:13:58,010
+Oh, so we have we need to.
+
+141
+00:13:59,340 --> 00:14:02,130
+And if the configuration and run.
+
+142
+00:14:03,090 --> 00:14:03,930
+The stack.
+
+143
+00:14:05,890 --> 00:14:09,040
+I need to run this tank and here.
+
+144
+00:14:14,300 --> 00:14:15,320
+Let me check.
+
+145
+00:14:16,430 --> 00:14:17,870
+Or is there or?
+
+146
+00:14:20,160 --> 00:14:22,950
+Sometimes it it may.
+
+147
+00:14:25,920 --> 00:14:27,480
+OK, there we go.
+
+148
+00:14:28,380 --> 00:14:36,390
+We have that configuration of running the previously created methods into the class.
+
+149
+00:14:36,540 --> 00:14:37,850
+So here we go.
+
+150
+00:14:37,860 --> 00:14:38,550
+We have.
+
+151
+00:14:39,740 --> 00:14:45,890
+Inserting one, inserting two, inserting three and setting forward if we are printing the list of the
+
+152
+00:14:45,890 --> 00:14:48,080
+stack one, two, three and four.
+
+153
+00:14:48,200 --> 00:14:49,400
+So it's very good.
+
+154
+00:14:50,060 --> 00:14:56,690
+After popping the last element, so stack after popping one, two or three, we have removed four from
+
+155
+00:14:56,690 --> 00:14:58,130
+our list.
+
+156
+00:14:58,350 --> 00:15:06,410
+OK, so we have removed this that the element using the pop from the stack.
+
+157
+00:15:06,680 --> 00:15:13,130
+OK, next videos we are will continue dealing with that stack with more.

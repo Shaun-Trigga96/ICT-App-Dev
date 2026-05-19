@@ -1,0 +1,355 @@
+1
+00:00:00,420 --> 00:00:04,680
+How to implement the breadth first search algorithm in see?
+
+2
+00:00:07,320 --> 00:00:10,920
+We will start by creating that queue structure queue.
+
+3
+00:00:11,790 --> 00:00:19,500
+It contains a array and items of size that we have created as 40, we defined it as 40.
+
+4
+00:00:19,800 --> 00:00:22,830
+We have an in front and rear.
+
+5
+00:00:23,140 --> 00:00:23,570
+OK.
+
+6
+00:00:24,030 --> 00:00:26,250
+These are for the queue.
+
+7
+00:00:26,940 --> 00:00:30,690
+If we have their size, we have.
+
+8
+00:00:33,360 --> 00:00:34,590
+There are a.
+
+9
+00:00:36,680 --> 00:00:39,740
+And items have the front, and we have that it.
+
+10
+00:00:40,460 --> 00:00:45,020
+OK, now we create the note.
+
+11
+00:00:45,140 --> 00:00:54,920
+This is the structure of the graph containing an end to vertex and struck note next.
+
+12
+00:00:55,010 --> 00:00:55,360
+OK.
+
+13
+00:00:56,090 --> 00:01:00,050
+This is the pointer and this is the vertex of the.
+
+14
+00:01:01,920 --> 00:01:05,100
+And this is their vertex and containing the data of it.
+
+15
+00:01:05,790 --> 00:01:07,920
+We create a graph here.
+
+16
+00:01:08,880 --> 00:01:16,140
+Extract node or struct graph and number of vertices, how many vertices that were going to create in
+
+17
+00:01:16,140 --> 00:01:21,980
+this graph and struct node, we create adjacent list and invest.
+
+18
+00:01:22,530 --> 00:01:23,070
+OK.
+
+19
+00:01:24,750 --> 00:01:32,070
+Now, the beef as the algorithm starts by telling us that.
+
+20
+00:01:33,550 --> 00:01:44,890
+We create a new method is this beefsteak in the perimeter of the graph and and start vertex as 30 meters.
+
+21
+00:01:45,100 --> 00:01:54,700
+We create the cue cue from the structure cue and this object or this pointer, we will use it later
+
+22
+00:01:54,700 --> 00:01:55,030
+on.
+
+23
+00:01:55,840 --> 00:02:03,260
+We start by graph to visit the visited array of the graph at Index Start Index equal to one.
+
+24
+00:02:03,910 --> 00:02:07,660
+And in queue, we are going to add.
+
+25
+00:02:09,380 --> 00:02:13,560
+Q, the two Q, we at the start first.
+
+26
+00:02:13,760 --> 00:02:14,170
+OK.
+
+27
+00:02:14,480 --> 00:02:19,630
+So for that, Q Q, we add the start index.
+
+28
+00:02:20,570 --> 00:02:26,420
+We start by making the while loop is checking if the Q is not empty.
+
+29
+00:02:26,840 --> 00:02:28,130
+We print the Q.
+
+30
+00:02:30,150 --> 00:02:40,020
+We initialize and add in variable called current Vertex, and we use the deck method here.
+
+31
+00:02:40,050 --> 00:02:48,420
+We have used their cue algorithm that queue data structure in order to help their breadth first search
+
+32
+00:02:48,420 --> 00:02:51,610
+algorithm to be implemented correctly and see.
+
+33
+00:02:52,200 --> 00:03:00,030
+Now, in the same way where I am going to use that while stamp is equal to true.
+
+34
+00:03:02,140 --> 00:03:12,100
+Now we make adjacent first text that at the vertex of the temp and we start by the visit that graph
+
+35
+00:03:12,880 --> 00:03:16,360
+and we ink you, we add them to that JSON vertex.
+
+36
+00:03:16,390 --> 00:03:20,020
+And later on, we move them to next.
+
+37
+00:03:20,560 --> 00:03:22,090
+Now let's create the node.
+
+38
+00:03:22,090 --> 00:03:27,850
+This method that we have seen at the very common in the previous videos create the node.
+
+39
+00:03:27,850 --> 00:03:29,890
+We initialize the node Malaak.
+
+40
+00:03:29,980 --> 00:03:33,730
+By creating either serving the memory, we created the Vertex V.
+
+41
+00:03:34,090 --> 00:03:37,450
+We get the data on it equal to V.
+
+42
+00:03:37,450 --> 00:03:46,270
+We initialize it and assign it to the past 30 meters fee and we point then next to equal to none.
+
+43
+00:03:46,630 --> 00:03:48,160
+OK, no.
+
+44
+00:03:50,730 --> 00:03:52,680
+We create a graph here.
+
+45
+00:03:53,980 --> 00:04:00,700
+In the same way as in the previous videos that we have used and how to do is to create the craft, so
+
+46
+00:04:00,700 --> 00:04:07,930
+I'm not going to go deeply inside it, just thinking and reserving the memory for the graph.
+
+47
+00:04:07,930 --> 00:04:14,260
+And we add the number, according to number of vertices is called Create the vertices as Andrea signed
+
+48
+00:04:14,260 --> 00:04:21,660
+them by using it for glue and we start adding them to adjacent list and the visit that list.
+
+49
+00:04:22,040 --> 00:04:22,470
+OK.
+
+50
+00:04:24,310 --> 00:04:27,610
+Also, that edge method add edge.
+
+51
+00:04:28,060 --> 00:04:36,340
+We have added them in the previous videos, so this will take in the perimeter of the graph that we
+
+52
+00:04:36,340 --> 00:04:45,670
+are going to to add to edges inside that the insource the vertex like this one and two, these are the
+
+53
+00:04:45,670 --> 00:04:50,590
+vertices is I am going to link them, so I will add edge between them.
+
+54
+00:04:50,950 --> 00:04:58,720
+I will add from one to two, so one will be passed as source and destination is two.
+
+55
+00:04:59,020 --> 00:04:59,470
+OK.
+
+56
+00:04:59,770 --> 00:05:03,580
+So the first one is the source and the second one is the destination.
+
+57
+00:05:03,940 --> 00:05:04,270
+OK.
+
+58
+00:05:05,560 --> 00:05:13,540
+We start by linking them here and the at the edge from the destination to source like this.
+
+59
+00:05:14,430 --> 00:05:23,320
+OK, now let's create the queue, create the queue by creating a new construct code struct node you
+
+60
+00:05:23,800 --> 00:05:25,750
+pointer and queue.
+
+61
+00:05:25,750 --> 00:05:32,050
+If Malak, we are reserving the memory and we initialize, it's four different if we're minus one and
+
+62
+00:05:32,050 --> 00:05:34,740
+three equal minus one.
+
+63
+00:05:35,450 --> 00:05:43,200
+Now we will continue by creating this is the queue, the structure of that queue, you can ask.
+
+64
+00:05:43,960 --> 00:05:50,410
+You can check it in the queue data structure lessons and learn more about the queue in the previous
+
+65
+00:05:50,410 --> 00:05:52,450
+pages and the previous sections.
+
+66
+00:05:52,540 --> 00:05:52,880
+OK.
+
+67
+00:05:53,350 --> 00:05:59,470
+No, I will create the queue here by using the Queue Create queue.
+
+68
+00:05:59,800 --> 00:06:01,870
+I will check it if it is empty.
+
+69
+00:06:02,380 --> 00:06:03,910
+I will end queue.
+
+70
+00:06:04,060 --> 00:06:12,730
+So in queue will add items to the to the queue and removing items from that queue.
+
+71
+00:06:13,090 --> 00:06:13,570
+OK.
+
+72
+00:06:13,930 --> 00:06:21,310
+So I want from you to go back to the queue section and learn more about these methods because they are
+
+73
+00:06:21,310 --> 00:06:25,870
+very important and they we have used them inside that before us.
+
+74
+00:06:26,480 --> 00:06:26,950
+OK.
+
+75
+00:06:29,040 --> 00:06:34,650
+Now printing the cure, it's very simple, going through all the elements of the queue while checking
+
+76
+00:06:34,650 --> 00:06:42,600
+if there's not empty by making a for loop, starting from the front and reaching the rear plus one.
+
+77
+00:06:44,490 --> 00:06:46,950
+For testing, I will create the main.
+
+78
+00:06:47,760 --> 00:06:50,850
+Create an instance of a pointer of a graph.
+
+79
+00:06:51,330 --> 00:06:53,760
+I will add the graph zero one zero two.
+
+80
+00:06:54,480 --> 00:06:55,590
+These are edges.
+
+81
+00:06:55,860 --> 00:07:03,300
+See, we are connecting zero to one zero two two one two two one two four one two three two, two four
+
+82
+00:07:03,300 --> 00:07:04,800
+and three to four.
+
+83
+00:07:05,160 --> 00:07:08,100
+OK, and I call this method BFA.
+
+84
+00:07:08,100 --> 00:07:16,260
+As I passed the previous created the graph and I started from zero to start making that DFS algorithm.
+
+85
+00:07:16,800 --> 00:07:25,380
+I want from you guys to write these codes into your compiler, into your C compiler, and that's the
+
+86
+00:07:25,380 --> 00:07:25,810
+code.
+
+87
+00:07:25,830 --> 00:07:28,860
+And tell me the results in the comments below.
+
+88
+00:07:29,820 --> 00:07:32,370
+So I'm getting your answers.
+
+89
+00:07:32,790 --> 00:07:35,620
+Now, let's now, let's implement that.

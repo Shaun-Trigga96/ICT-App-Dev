@@ -1,0 +1,375 @@
+1
+00:00:00,300 --> 00:00:05,250
+Hello, all my friends, and welcome again to the complete data structure and algorithms course in exercise
+
+2
+00:00:05,250 --> 00:00:10,620
+number seven seven, we are asked to sort this stack using temporary stack.
+
+3
+00:00:10,860 --> 00:00:15,330
+We have solved this problem in their previous video using their recursion.
+
+4
+00:00:15,750 --> 00:00:22,490
+But here we are, going to use a temporary stack and see how to sort a stack.
+
+5
+00:00:22,860 --> 00:00:29,160
+So this is the method that we have created before, and this is that.
+
+6
+00:00:31,300 --> 00:00:35,020
+The sort that stagnant the sort of insert stack.
+
+7
+00:00:35,410 --> 00:00:35,740
+OK.
+
+8
+00:00:36,160 --> 00:00:37,090
+And this to me.
+
+9
+00:00:37,500 --> 00:00:49,660
+No, I will create a method called probably public static or we can make FOI.
+
+10
+00:00:52,630 --> 00:01:02,380
+It's not return, it returns stack type stack, because we are going to assert the stack and return
+
+11
+00:01:02,380 --> 00:01:02,950
+it back.
+
+12
+00:01:03,670 --> 00:01:05,830
+Stack sort.
+
+13
+00:01:08,230 --> 00:01:08,980
+Stack.
+
+14
+00:01:12,310 --> 00:01:21,280
+Using them, so I need to pass a stack of time stack.
+
+15
+00:01:22,150 --> 00:01:25,110
+And it is called input.
+
+16
+00:01:25,420 --> 00:01:31,780
+This is the input of the fact that we need to pass and we need to.
+
+17
+00:01:33,120 --> 00:01:42,150
+Sought this input stack, so I will create a stack called TAM equal to new.
+
+18
+00:01:43,440 --> 00:01:44,640
+-- stack.
+
+19
+00:01:45,720 --> 00:01:46,340
+OK.
+
+20
+00:01:46,770 --> 00:01:47,250
+And.
+
+21
+00:01:48,530 --> 00:01:54,650
+This would be getting this size of the stack, how to get it.
+
+22
+00:01:54,860 --> 00:02:05,420
+We get that input size, we get the same input size, the same input stack size because we are going
+
+23
+00:02:05,420 --> 00:02:06,440
+to reverse it.
+
+24
+00:02:07,880 --> 00:02:08,360
+Wife
+
+25
+00:02:10,880 --> 00:02:15,200
+input input stack is empty.
+
+26
+00:02:15,860 --> 00:02:18,230
+This is the stopping condition of the while.
+
+27
+00:02:19,010 --> 00:02:27,530
+So we are going to make these steps, first of all, bob out.
+
+28
+00:02:27,760 --> 00:02:47,390
+The first element, the first element and equal to the MP, equal to input dot bob are popping up this
+
+29
+00:02:47,510 --> 00:02:48,170
+element.
+
+30
+00:02:48,980 --> 00:02:59,090
+And the second step, while temporary stack is not empty and top of the stack is greater than the stamp.
+
+31
+00:02:59,480 --> 00:03:06,600
+So we need to enter another nested loop and we are checking here.
+
+32
+00:03:06,770 --> 00:03:07,790
+Check for
+
+33
+00:03:11,300 --> 00:03:17,960
+not empty and less than 10.
+
+34
+00:03:20,750 --> 00:03:21,480
+And double
+
+35
+00:03:24,000 --> 00:03:24,990
+stacked up
+
+36
+00:03:29,640 --> 00:03:32,280
+less than 10 while
+
+37
+00:03:35,160 --> 00:03:38,070
+them per stack.
+
+38
+00:03:39,060 --> 00:03:41,860
+Which we have created them.
+
+39
+00:03:42,420 --> 00:03:51,390
+Stack, let me make it here, the temps back in order not to be confused with temp integer temp stack,
+
+40
+00:03:51,390 --> 00:03:58,050
+though, is empty and temp stack
+
+41
+00:04:01,140 --> 00:04:01,620
+dot.
+
+42
+00:04:02,850 --> 00:04:03,390
+Peak.
+
+43
+00:04:05,710 --> 00:04:17,290
+We are comparing it with them greater than them, then what we are going to do is popping off from that
+
+44
+00:04:17,290 --> 00:04:22,840
+temporary stack and pushing it into the input stack.
+
+45
+00:04:22,840 --> 00:04:40,090
+So input here, let me put that description popping from the temporary stack and at the end, pushing
+
+46
+00:04:42,730 --> 00:04:45,100
+it through the input
+
+47
+00:04:47,680 --> 00:04:48,250
+stack.
+
+48
+00:04:49,840 --> 00:04:52,420
+OK, so input
+
+49
+00:04:55,810 --> 00:05:01,560
+input dot push, we call it the method to push again.
+
+50
+00:05:03,460 --> 00:05:07,500
+Temporary stack the top OK.
+
+51
+00:05:08,690 --> 00:05:19,340
+So we have Bush popping again, popping from temporary stack and pushing it into the inputs that she
+
+52
+00:05:19,340 --> 00:05:21,710
+goes, how the algorithm works.
+
+53
+00:05:22,250 --> 00:05:28,200
+And we push that temporary into temporary of the stack.
+
+54
+00:05:28,220 --> 00:05:35,450
+So the first step is pushing the temp
+
+55
+00:05:38,210 --> 00:05:39,650
+and into
+
+56
+00:05:42,830 --> 00:05:45,890
+temporary of stacked
+
+57
+00:05:48,590 --> 00:06:03,020
+temp stack the bush and we insert temp inside and then we return them the stack.
+
+58
+00:06:03,710 --> 00:06:16,370
+OK, let's run and see this method sort that the stack and here I need to use her the stack.
+
+59
+00:06:18,340 --> 00:06:24,250
+Or stack the sort, the stack using temp and divests stack.
+
+60
+00:06:25,900 --> 00:06:29,620
+The same thing, but I'm using the different methods.
+
+61
+00:06:32,310 --> 00:06:41,100
+I need to print it again, sir, the stack setting for three, four, six, eight, six, seven, four
+
+62
+00:06:41,100 --> 00:06:43,050
+and eighty six.
+
+63
+00:06:43,620 --> 00:06:48,330
+OK, so we are inserting the stack.
+
+64
+00:06:48,360 --> 00:06:50,550
+We are searching the stack using them.
+
+65
+00:06:50,730 --> 00:06:53,070
+We didn't, but we didn't insert.
+
+66
+00:06:53,340 --> 00:06:55,970
+We didn't see that result correctly.
+
+67
+00:06:56,550 --> 00:07:03,800
+There is a method missing coding system for like sorting the stack.
+
+68
+00:07:03,810 --> 00:07:06,900
+I was meant for them because I need.
+
+69
+00:07:09,150 --> 00:07:20,880
+Do make is a temporary stack here, stack them them stack equal to.
+
+70
+00:07:22,260 --> 00:07:33,070
+Because I need to sort the stack first sort of thing that sort of caused it to return, distort the
+
+71
+00:07:33,120 --> 00:07:38,580
+stack and it took into the parking meter and important so.
+
+72
+00:07:38,700 --> 00:07:48,360
+Or is that I've put here this tag that they need to sort out, as we have learned here and now you can
+
+73
+00:07:48,360 --> 00:07:51,120
+make sorted numbers are.
+
+74
+00:07:52,520 --> 00:07:55,700
+System sorting wine
+
+75
+00:07:59,270 --> 00:08:07,070
+temp stack does not equal or empty, so it is not empty.
+
+76
+00:08:09,380 --> 00:08:22,400
+Then what we need to do, we need to system, get out the door and then stack the pot.
+
+77
+00:08:26,800 --> 00:08:30,580
+Plus space between them, let's run and see.
+
+78
+00:08:33,120 --> 00:08:34,140
+And here we go.
+
+79
+00:08:34,590 --> 00:08:35,370
+We have.
+
+80
+00:08:36,550 --> 00:08:42,070
+Sorted the stack in decreasing order.
+
+81
+00:08:42,670 --> 00:08:43,060
+OK.
+
+82
+00:08:44,050 --> 00:08:45,240
+This is the stack.
+
+83
+00:08:46,750 --> 00:08:54,790
+Seven, 74, 86 and 44 sorting the stack have 86, 74 and 44.
+
+84
+00:08:54,940 --> 00:08:57,910
+This is in in a decreasing order.
+
+85
+00:08:58,840 --> 00:08:59,300
+OK.
+
+86
+00:08:59,560 --> 00:09:06,400
+It's very simple, but and we have reversed it, so I will come and do this and run again.
+
+87
+00:09:09,950 --> 00:09:11,090
+And here we go.
+
+88
+00:09:11,660 --> 00:09:14,090
+86, 74 and 44.
+
+89
+00:09:14,840 --> 00:09:18,440
+OK, so this is how we sort there.
+
+90
+00:09:20,270 --> 00:09:29,690
+Stack, in a reversing order and decreasing order using the iteration, and we have learned in the previous
+
+91
+00:09:29,690 --> 00:09:34,680
+video how to sort it stack using their recursion.
+
+92
+00:09:35,180 --> 00:09:43,040
+OK, so sort of stack using temporary stack in decreasing order.
+
+93
+00:09:44,810 --> 00:09:45,170
+OK.
+
+94
+00:09:45,860 --> 00:09:48,700
+We have solved exercise number 70.

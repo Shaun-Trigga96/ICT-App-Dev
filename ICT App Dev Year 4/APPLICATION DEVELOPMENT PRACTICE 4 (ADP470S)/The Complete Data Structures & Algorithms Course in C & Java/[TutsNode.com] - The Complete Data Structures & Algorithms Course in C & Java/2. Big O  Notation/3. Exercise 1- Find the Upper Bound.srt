@@ -1,0 +1,475 @@
+1
+00:00:00,060 --> 00:00:01,080
+Hello, my friends.
+
+2
+00:00:01,320 --> 00:00:03,300
+And welcome to exercise number one.
+
+3
+00:00:04,640 --> 00:00:13,370
+We are going to deal with the big sell, so we need to find the upper bound for the function f of the
+
+4
+00:00:13,370 --> 00:00:15,530
+first function that we have is.
+
+5
+00:00:16,560 --> 00:00:23,760
+Three of n equal to three and plus eight.
+
+6
+00:00:24,460 --> 00:00:24,870
+Gay.
+
+7
+00:00:26,060 --> 00:00:31,730
+This is the first function we need to find the upper bound of this function.
+
+8
+00:00:33,650 --> 00:00:34,070
+OK.
+
+9
+00:00:36,150 --> 00:00:41,040
+If we look on this function, what is the highest order of this function?
+
+10
+00:00:41,220 --> 00:00:43,950
+We have two terms the three and.
+
+11
+00:00:45,380 --> 00:00:47,420
+And the eight, OK?
+
+12
+00:00:49,380 --> 00:01:00,210
+Three am and here at eight times and two powers here and here and the power one, so and to power one
+
+13
+00:01:00,510 --> 00:01:02,970
+is greater than and power to zero.
+
+14
+00:01:03,450 --> 00:01:12,960
+So we took and to power one as the biggest SIM and the three plus three and one.
+
+15
+00:01:13,350 --> 00:01:23,360
+This means we remove that constant and three and plus eight is less than four.
+
+16
+00:01:23,370 --> 00:01:33,810
+And because three and plus eight is less than four, and if we neglect eight three and is less than
+
+17
+00:01:33,810 --> 00:01:40,320
+or equal to four, and that's a true and and now we remove the constants.
+
+18
+00:01:40,830 --> 00:01:48,210
+And is that notation of and for the three and plus eight?
+
+19
+00:01:48,740 --> 00:01:51,950
+OK, we see is equal to four.
+
+20
+00:01:53,170 --> 00:01:57,760
+See, equal to four and and zero, equal to eight.
+
+21
+00:01:58,880 --> 00:01:59,320
+OK.
+
+22
+00:01:59,660 --> 00:02:03,350
+This is very important to understand.
+
+23
+00:02:03,890 --> 00:02:05,450
+This is the first example.
+
+24
+00:02:05,840 --> 00:02:09,170
+Don't worry, we will clarify in the next exercise.
+
+25
+00:02:10,910 --> 00:02:23,540
+If we have the second function, F, of an equal to any square plus one, what is the highest order
+
+26
+00:02:23,540 --> 00:02:24,530
+of this function?
+
+27
+00:02:25,040 --> 00:02:31,130
+We have two terms and squared and one which is multiplied by n0.
+
+28
+00:02:32,450 --> 00:02:43,460
+So we took and squared and square plus one is less than two to power and square because we neglect this
+
+29
+00:02:43,460 --> 00:02:45,530
+and we add one to the.
+
+30
+00:02:46,840 --> 00:02:47,950
+The same order.
+
+31
+00:02:48,340 --> 00:02:59,680
+OK, so and square +1 less than or equal to power and square to the power hour and power to look for
+
+32
+00:02:59,680 --> 00:03:01,720
+every and greater than one.
+
+33
+00:03:01,990 --> 00:03:07,390
+Therefore, the big old notation of this function is equal to and square.
+
+34
+00:03:08,020 --> 00:03:09,040
+It's very simple.
+
+35
+00:03:09,040 --> 00:03:16,210
+We are just getting the highest order of the function, the highest an order of the function.
+
+36
+00:03:17,590 --> 00:03:21,460
+And the C C is equal to here.
+
+37
+00:03:22,710 --> 00:03:26,780
+Two and that and zero is equal to one, this is the.
+
+38
+00:03:29,340 --> 00:03:30,660
+It's very simple.
+
+39
+00:03:31,020 --> 00:03:42,720
+OK, guys, we are going also to make an example three, so find the upper bound for the function and
+
+40
+00:03:42,840 --> 00:03:46,890
+two power four plus one hundred and.
+
+41
+00:03:50,600 --> 00:03:52,880
+One hundred and a square.
+
+42
+00:03:54,420 --> 00:03:55,020
+Plus.
+
+43
+00:03:56,030 --> 00:03:56,540
+Fifty.
+
+44
+00:03:58,760 --> 00:03:59,260
+OK.
+
+45
+00:03:59,750 --> 00:04:02,660
+So please, guys, think about it.
+
+46
+00:04:03,500 --> 00:04:12,020
+This function of and contains and power for plus one and squared plus 50.
+
+47
+00:04:12,500 --> 00:04:13,820
+How to solve this?
+
+48
+00:04:16,760 --> 00:04:19,040
+How to find the upward fund in the same way.
+
+49
+00:04:19,370 --> 00:04:25,220
+Look at this function we have for a three terms one, two and three.
+
+50
+00:04:25,640 --> 00:04:29,540
+What is the highest order of this function?
+
+51
+00:04:29,960 --> 00:04:35,600
+What is the highest end of this function that we have and to power for?
+
+52
+00:04:36,080 --> 00:04:41,390
+OK, so what is multiplied by and the power for it is one.
+
+53
+00:04:41,840 --> 00:04:47,270
+So this function f of an is less than or equal to.
+
+54
+00:04:47,630 --> 00:04:55,490
+We increase the multiple at the one that multiplied by and power four by one one plus one is equal to
+
+55
+00:04:55,490 --> 00:04:55,790
+two.
+
+56
+00:04:56,180 --> 00:04:58,490
+And the highest degree is and power.
+
+57
+00:04:58,490 --> 00:04:58,850
+Four.
+
+58
+00:04:59,300 --> 00:05:02,000
+OK, so this function is less than.
+
+59
+00:05:02,480 --> 00:05:04,490
+And two and power four.
+
+60
+00:05:04,640 --> 00:05:05,110
+OK.
+
+61
+00:05:07,150 --> 00:05:07,600
+And.
+
+62
+00:05:08,880 --> 00:05:18,990
+And Square here is the highest functioning so of and of this function is and to power for and the constants
+
+63
+00:05:18,990 --> 00:05:32,460
+that we have is that are see equal to do because we have multiplied or we have added one to them, the
+
+64
+00:05:32,460 --> 00:05:34,740
+one that multiplied by and four.
+
+65
+00:05:35,220 --> 00:05:44,940
+So this is equal to C or this will determine the sea and no zero is equal to anything.
+
+66
+00:05:45,720 --> 00:05:58,710
+No, we don't care about these constants and zeros because our old concentration about all of us.
+
+67
+00:05:59,340 --> 00:06:07,590
+OK, so I need from you to understand how to create a how to get of and for every function.
+
+68
+00:06:08,440 --> 00:06:08,970
+OK.
+
+69
+00:06:12,680 --> 00:06:14,090
+Oh, and here.
+
+70
+00:06:15,270 --> 00:06:18,990
+It is over and OK, this is the complex.
+
+71
+00:06:19,440 --> 00:06:21,450
+This is the big mutation.
+
+72
+00:06:21,900 --> 00:06:33,960
+Another examples consider the function f of an air equal to do and cube minus two and squared.
+
+73
+00:06:34,740 --> 00:06:41,850
+We have two and the cube minus two and the square because we have two terms here.
+
+74
+00:06:42,090 --> 00:06:47,340
+The highest term is and power cube since we have.
+
+75
+00:06:49,190 --> 00:06:55,310
+Tooth and cube minus two and a square, so and cube.
+
+76
+00:06:56,920 --> 00:07:04,830
+To two and Cube is being decreased, so this function do and the cube minus two and the square is less
+
+77
+00:07:04,830 --> 00:07:06,860
+than or equal to any cube.
+
+78
+00:07:06,870 --> 00:07:11,370
+We don't need to put here three and like here.
+
+79
+00:07:11,520 --> 00:07:14,130
+No, we don't need about to make this.
+
+80
+00:07:14,140 --> 00:07:17,700
+We need to put two and square two and cube.
+
+81
+00:07:18,090 --> 00:07:18,600
+OK.
+
+82
+00:07:19,590 --> 00:07:25,050
+Because to end, the cube is decreased by minus two and the square.
+
+83
+00:07:25,640 --> 00:07:37,860
+So remember four take an example and equal to one two minus two times one minus two times one is equal
+
+84
+00:07:37,860 --> 00:07:41,650
+to zero is equal less than or equal to do.
+
+85
+00:07:42,030 --> 00:07:47,760
+Yes, because zero less than two I substituted one inside this.
+
+86
+00:07:48,870 --> 00:07:51,450
+We don't care about this function.
+
+87
+00:07:51,450 --> 00:07:56,720
+We only get about the big own mutation of this function.
+
+88
+00:07:56,730 --> 00:08:01,230
+It is all of the three because it is the highest degree.
+
+89
+00:08:01,800 --> 00:08:02,330
+OK.
+
+90
+00:08:02,820 --> 00:08:10,470
+This is the big O notation of this function, where C is equal to do this, that constant and end zero
+
+91
+00:08:10,470 --> 00:08:11,820
+is equal to one.
+
+92
+00:08:13,260 --> 00:08:23,260
+OK, now another two examples that we are going to make in this exercise, find the upper bound of f
+
+93
+00:08:23,280 --> 00:08:25,110
+of an equal to N.
+
+94
+00:08:28,590 --> 00:08:31,830
+Here is the only term that we have in this function.
+
+95
+00:08:32,100 --> 00:08:40,050
+So and as less than or equal to N, so it is of big own rotation.
+
+96
+00:08:42,640 --> 00:08:51,040
+All of an OK was equal to one, the constant equal to one because he is and is multiplied by one here
+
+97
+00:08:51,970 --> 00:08:54,550
+and and zero equal to one.
+
+98
+00:08:55,720 --> 00:08:56,440
+It's various.
+
+99
+00:08:58,450 --> 00:09:07,150
+Let's choose another example f of an equal to 410
+
+100
+00:09:09,010 --> 00:09:13,900
+410 is less than or equal 410.
+
+101
+00:09:18,440 --> 00:09:18,900
+OK.
+
+102
+00:09:19,970 --> 00:09:21,110
+It's very simple.
+
+103
+00:09:22,400 --> 00:09:23,440
+410.
+
+104
+00:09:25,250 --> 00:09:37,700
+Now, this for all and greater than one, this means 410 is equal to all of one.
+
+105
+00:09:38,030 --> 00:09:41,060
+So this is the bit of one.
+
+106
+00:09:41,180 --> 00:09:45,830
+This is the notation of all of one.
+
+107
+00:09:46,400 --> 00:09:46,900
+OK.
+
+108
+00:09:47,270 --> 00:09:53,420
+We see equal to one and n0 equal to one.
+
+109
+00:09:55,160 --> 00:10:06,840
+So what we have done in this exercise is is understanding the big O notation calculation for this,
+
+110
+00:10:07,880 --> 00:10:08,990
+for these functions.
+
+111
+00:10:09,000 --> 00:10:15,280
+So how to calculate the fine that of and how to get the highest degree of of.
+
+112
+00:10:15,430 --> 00:10:17,900
+And in this exercise.
+
+113
+00:10:18,110 --> 00:10:29,510
+So we have solved these of annotations, and it's very important to understand this and to learn about
+
+114
+00:10:29,510 --> 00:10:31,280
+the role of annotation.
+
+115
+00:10:32,090 --> 00:10:40,930
+And in the next videos, we are going to learn more about these notations and work with more exercises.
+
+116
+00:10:40,940 --> 00:10:49,850
+So don't worry, we are going to make this very simple in the next videos when we deal with the complexity.
+
+117
+00:10:50,240 --> 00:10:57,920
+So what if what I need from you to understand that the big O notation for any function is the highest
+
+118
+00:10:57,920 --> 00:10:59,470
+degree that it contains?
+
+119
+00:10:59,720 --> 00:11:00,050
+And.

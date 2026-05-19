@@ -1,0 +1,219 @@
+1
+00:00:00,060 --> 00:00:03,060
+Now, let's see, inserting not at any position.
+
+2
+00:00:04,350 --> 00:00:06,810
+So we have in C.
+
+3
+00:00:07,810 --> 00:00:09,330
+We need to create our.
+
+4
+00:00:10,600 --> 00:00:19,210
+Method called Insert after it took in the parameters, this truck node reference bravest note and end
+
+5
+00:00:19,420 --> 00:00:20,530
+new date.
+
+6
+00:00:21,710 --> 00:00:22,070
+OK.
+
+7
+00:00:22,700 --> 00:00:31,580
+First of all, a check if the given previous nod is not afraid, not equal, equal to null, then print
+
+8
+00:00:31,580 --> 00:00:35,480
+after given previous not cannot be null director.
+
+9
+00:00:35,900 --> 00:00:41,900
+Because if we are returning, if we are checking, if they're not the link, at least.
+
+10
+00:00:43,410 --> 00:00:50,550
+Previously equal or equal to null and pointing to null, so we are inserting at the end so our empty
+
+11
+00:00:51,660 --> 00:00:58,650
+linked list or a linked list that it is a reference to previously not equal, equal to none.
+
+12
+00:00:58,920 --> 00:01:00,930
+And this is not acceptable.
+
+13
+00:01:02,750 --> 00:01:13,580
+Allocate new none, so we are going to insert after we specify in Ont. and we are going to insert after
+
+14
+00:01:13,580 --> 00:01:22,580
+this note, then you know, we create struck note reference, new note and Malloch size of struck.
+
+15
+00:01:22,820 --> 00:01:34,100
+No, we create this new not struct and put in the data new node data equal to new data.
+
+16
+00:01:34,340 --> 00:01:42,860
+I am just getting the new note data equal to new not binding and referencing the new not now make the
+
+17
+00:01:42,860 --> 00:01:46,340
+next of new note as next of previous.
+
+18
+00:01:46,400 --> 00:01:54,500
+Not by specifying Newton new node next equal to previous node of next reference.
+
+19
+00:01:54,710 --> 00:02:04,460
+So I am just copying the reference and splitting it and reversing the reference move their next of the
+
+20
+00:02:04,460 --> 00:02:05,840
+previous node as new.
+
+21
+00:02:05,840 --> 00:02:07,140
+Not so Priv.
+
+22
+00:02:07,160 --> 00:02:09,680
+Not next equal to new.
+
+23
+00:02:09,680 --> 00:02:10,070
+Not.
+
+24
+00:02:10,610 --> 00:02:11,120
+OK.
+
+25
+00:02:11,240 --> 00:02:13,390
+Let's see how this works.
+
+26
+00:02:13,400 --> 00:02:15,650
+We have three nodes.
+
+27
+00:02:16,370 --> 00:02:19,350
+The first 1866 and one one nine.
+
+28
+00:02:19,370 --> 00:02:24,890
+These are the data of the nodes, and the reference of the hat is to the middle, in the middle, to
+
+29
+00:02:24,890 --> 00:02:27,320
+the last and the last reference to the null.
+
+30
+00:02:28,920 --> 00:02:31,590
+Now we need to insert.
+
+31
+00:02:33,510 --> 00:02:45,500
+After the middle and you nod here, cold, it was two to 200 and this 200, this method or this note
+
+32
+00:02:45,750 --> 00:02:47,730
+were referenced to the last.
+
+33
+00:02:48,150 --> 00:02:54,920
+So please pay attention while we are copying and changing that reference.
+
+34
+00:02:54,930 --> 00:02:57,270
+So we have moved the last.
+
+35
+00:02:58,110 --> 00:03:01,440
+And we have inserted a new nod after the middle.
+
+36
+00:03:01,950 --> 00:03:06,870
+And then you nod now should the reference to the last.
+
+37
+00:03:07,280 --> 00:03:09,030
+Not OK, so.
+
+38
+00:03:10,900 --> 00:03:18,940
+The reference of the medal would be equal to four thousand twenty four and the reference of the new
+
+39
+00:03:18,940 --> 00:03:26,770
+not that there's insert that would be a reference to the thirty three thousand and forty.
+
+40
+00:03:26,980 --> 00:03:29,020
+This is very important to trick.
+
+41
+00:03:29,620 --> 00:03:30,400
+OK, guys.
+
+42
+00:03:30,910 --> 00:03:31,270
+So.
+
+43
+00:03:32,860 --> 00:03:40,900
+And certainly not at any position is done in Java by making the same concept of C, but I'm changing
+
+44
+00:03:40,900 --> 00:03:46,810
+some basic syntax, so check if they're given not as null.
+
+45
+00:03:47,890 --> 00:03:50,770
+Checking if previous, not equal to none.
+
+46
+00:03:51,130 --> 00:03:54,160
+Then print that given previous nod, it cannot be known.
+
+47
+00:03:54,820 --> 00:04:01,240
+And the second step is allocate the note and put that data inside it.
+
+48
+00:04:01,720 --> 00:04:03,480
+Not new, not equal.
+
+49
+00:04:03,490 --> 00:04:08,590
+New, not and past the new date and for make next.
+
+50
+00:04:08,590 --> 00:04:10,980
+Often new, not as next of previous.
+
+51
+00:04:10,990 --> 00:04:17,860
+Not that we have switched their address, the address and the references of the notes.
+
+52
+00:04:17,860 --> 00:04:21,280
+And last step is make next of previous.
+
+53
+00:04:21,280 --> 00:04:24,450
+Not as you know, this is time.
+
+54
+00:04:24,460 --> 00:04:33,460
+Complexity would be equal to all of one because I am directly executing this method to the.
+
+55
+00:04:35,160 --> 00:04:38,680
+At the known position, known not.

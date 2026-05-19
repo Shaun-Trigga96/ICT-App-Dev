@@ -1,0 +1,203 @@
+1
+00:00:00,430 --> 00:00:08,440
+In this story, we are going to learn about the binary tree and its different types, a binary tree
+
+2
+00:00:08,440 --> 00:00:15,460
+is a tree data structure in which each parent node can have, at most, two children.
+
+3
+00:00:16,300 --> 00:00:26,590
+Each node of a binary tree consists of three items that data item the address to the left child and
+
+4
+00:00:26,590 --> 00:00:31,030
+the address to the right child exactly like this.
+
+5
+00:00:31,240 --> 00:00:40,060
+So we have the data item one and the address of the left child, which is indicating that two and the
+
+6
+00:00:40,240 --> 00:00:43,900
+child, the three, which is the address of that child.
+
+7
+00:00:44,410 --> 00:00:54,280
+OK, so we have this data item we have left and we have tried chart types of binary tree.
+
+8
+00:00:54,610 --> 00:01:01,120
+There are many types of binary trees, and we are going to discuss everyone with the next videos.
+
+9
+00:01:01,480 --> 00:01:06,250
+And we are going to create them in C and Java, so.
+
+10
+00:01:07,720 --> 00:01:15,400
+First of all, we have the full binary tree, a full binary tree is a special type of binary tree in
+
+11
+00:01:15,400 --> 00:01:22,780
+which every parent node internal node has either two or no children.
+
+12
+00:01:23,080 --> 00:01:30,610
+So either the node the parent node has either two or no children.
+
+13
+00:01:31,010 --> 00:01:35,140
+OK, this is the full binary tree.
+
+14
+00:01:36,070 --> 00:01:38,770
+No children or do children.
+
+15
+00:01:40,470 --> 00:01:40,960
+OK.
+
+16
+00:01:41,760 --> 00:01:44,340
+This is the full binary tree in next video.
+
+17
+00:01:44,700 --> 00:01:50,700
+We are going to create the full binary tree and go and deeply inside.
+
+18
+00:01:52,270 --> 00:01:58,600
+The next type is called full binary, it is called perfect binary tree.
+
+19
+00:02:01,350 --> 00:02:11,400
+A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes
+
+20
+00:02:11,700 --> 00:02:15,900
+and all the leaves nodes are of the same level.
+
+21
+00:02:16,080 --> 00:02:18,450
+So this is the perfect binary tree.
+
+22
+00:02:19,340 --> 00:02:24,790
+Do child nodes and all the nodes are at the same level?
+
+23
+00:02:28,070 --> 00:02:37,700
+Complete binary tree, a complete binary tree is just like a full binary tree, but with two major differences
+
+24
+00:02:38,600 --> 00:02:49,850
+every level must be completely filled, filled and all the leaf elements must lean towards their left.
+
+25
+00:02:49,940 --> 00:02:51,770
+This is leaning to the left.
+
+26
+00:02:51,770 --> 00:02:56,540
+So you see, like at Element six, it's app.
+
+27
+00:02:58,190 --> 00:03:01,910
+Left, it's not the right, so it lean to the left.
+
+28
+00:03:03,790 --> 00:03:10,540
+While if we consider that fully binary three, we have one and the right element, which is three.
+
+29
+00:03:10,750 --> 00:03:17,050
+But it is leaning to the right, so we cannot make it a complete binary, the complete binary.
+
+30
+00:03:17,500 --> 00:03:21,130
+All the leaf elements must lean towards the left.
+
+31
+00:03:21,640 --> 00:03:26,590
+And also the last leaf element might not have a right sibling.
+
+32
+00:03:27,090 --> 00:03:33,280
+Example a complete binary tree does not have to be a full binary tree.
+
+33
+00:03:33,820 --> 00:03:40,870
+This is the very important topic, and we will discuss in details when we go to the complete binary
+
+34
+00:03:40,870 --> 00:03:44,230
+tree unless the force.
+
+35
+00:03:45,790 --> 00:03:48,580
+Type is called degenerated three.
+
+36
+00:03:50,180 --> 00:03:52,190
+Or pathological three.
+
+37
+00:03:52,520 --> 00:04:00,680
+A degenerated or pathological tree is a tree having a single child either left or right?
+
+38
+00:04:01,130 --> 00:04:01,570
+OK.
+
+39
+00:04:02,700 --> 00:04:11,310
+This is that degenerated generated three, this cute binary tree skewed binary tree is a pathological
+
+40
+00:04:11,310 --> 00:04:18,630
+or degenerated tree in which the tree is either dominated by left nodes or the right notes.
+
+41
+00:04:18,960 --> 00:04:27,540
+Thus, there are two types of skewed binary tree the left skewed binary tree and the right skewed binary
+
+42
+00:04:27,870 --> 00:04:28,230
+tree.
+
+43
+00:04:29,840 --> 00:04:34,070
+The last one is balanced three balanced binary tree.
+
+44
+00:04:34,760 --> 00:04:44,000
+It is a type of binary tree in which the difference between the height of the left and the right sub
+
+45
+00:04:44,000 --> 00:04:48,860
+tree for each node is either zero or one.
+
+46
+00:04:49,820 --> 00:04:50,350
+OK.
+
+47
+00:04:52,200 --> 00:04:59,070
+We are going to discuss everything later on in that and videos.
+
+48
+00:04:59,160 --> 00:05:04,110
+We are going to discuss all of these types and next videos, so don't worry.
+
+49
+00:05:04,650 --> 00:05:10,890
+We are going to discuss them and fully detailed manner.
+
+50
+00:05:11,190 --> 00:05:18,360
+And we are going to run examples and run and see the codes how to create, like all of these types,
+
+51
+00:05:18,630 --> 00:05:24,910
+full, perfect, complete, degenerated, skewed and balanced binary tree.

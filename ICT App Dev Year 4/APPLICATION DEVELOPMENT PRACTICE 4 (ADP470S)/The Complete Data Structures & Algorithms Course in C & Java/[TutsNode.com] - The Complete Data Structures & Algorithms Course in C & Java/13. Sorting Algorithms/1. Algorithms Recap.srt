@@ -1,0 +1,307 @@
+1
+00:00:00,420 --> 00:00:02,670
+Welcome to the algorithm section.
+
+2
+00:00:03,360 --> 00:00:08,730
+An algorithm is a set of instructions designed to perform a specific task.
+
+3
+00:00:09,270 --> 00:00:14,780
+Algorithms can be simple and complex depending on what you want to achieve.
+
+4
+00:00:16,370 --> 00:00:22,160
+We can use algorithms to describe ordinary activities in our everyday life.
+
+5
+00:00:22,340 --> 00:00:28,330
+For example, we can consider a recipe as an algorithm for cooking a particular food.
+
+6
+00:00:29,220 --> 00:00:35,010
+OK, so these are the steps, these are the algorithm, how to prepare a pit.
+
+7
+00:00:37,500 --> 00:00:46,230
+Algorithms and computers in computer systems and algorithm is a logic written by software developers
+
+8
+00:00:46,260 --> 00:00:49,140
+in any programming language of their choice.
+
+9
+00:00:49,740 --> 00:00:56,310
+But there are few sets of rules that we need to remember while designing algorithms.
+
+10
+00:00:57,300 --> 00:00:59,250
+They are the input.
+
+11
+00:00:59,730 --> 00:01:04,710
+There should be one or more values to be applied in the algorithm.
+
+12
+00:01:05,130 --> 00:01:10,830
+If there is no input given, what output would the algorithm produce?
+
+13
+00:01:11,070 --> 00:01:14,010
+So we need to specify and get the data from the input.
+
+14
+00:01:15,810 --> 00:01:20,160
+The outcome, at least one output should be produced.
+
+15
+00:01:20,280 --> 00:01:25,710
+There is no use of designing an algorithm, it does not produce any result.
+
+16
+00:01:27,230 --> 00:01:34,670
+The third thing that we need to take care about when designing algorithm is that efficiency, it should
+
+17
+00:01:34,670 --> 00:01:38,240
+be efficient in terms of compute and memory.
+
+18
+00:01:38,630 --> 00:01:42,320
+The output produced should be correct and fast.
+
+19
+00:01:42,860 --> 00:01:50,420
+So this is why we study that time complexity and space complexity simplicity.
+
+20
+00:01:50,720 --> 00:01:56,330
+The algorithm should be it should not be overly complex.
+
+21
+00:01:56,720 --> 00:02:00,470
+We need to make it simple as much as you can.
+
+22
+00:02:01,430 --> 00:02:02,420
+Scalability.
+
+23
+00:02:02,870 --> 00:02:09,050
+The algorithm must be able to scale without changing the core logic.
+
+24
+00:02:09,350 --> 00:02:16,070
+We can apply it to do like millions of device or hundreds of devices.
+
+25
+00:02:17,910 --> 00:02:20,730
+OK, so the algorithms in computer.
+
+26
+00:02:22,140 --> 00:02:29,970
+Let's now build a simple algorithm, which adds two numbers for fulfilling the above prerequisites.
+
+27
+00:02:30,600 --> 00:02:39,600
+OK, so we have seen this in the previous in the first first introduction of the course, but I will
+
+28
+00:02:39,600 --> 00:02:49,080
+make a simple introduction and overview now in order to move next to their sorting and searching algorithms.
+
+29
+00:02:49,200 --> 00:02:53,430
+So in order to add two numbers, we start.
+
+30
+00:02:53,760 --> 00:03:01,500
+We start the software or the algorithm step to declare variables number one and number two and.
+
+31
+00:03:02,570 --> 00:03:09,800
+Some variables we read that values a number one and number two entered by the user.
+
+32
+00:03:10,460 --> 00:03:19,070
+We add number one and number two and assign that value to some variable and we display some.
+
+33
+00:03:19,430 --> 00:03:21,200
+And then we stop the program.
+
+34
+00:03:21,650 --> 00:03:27,380
+This is very simple to make an algorithm that adds to no.
+
+35
+00:03:27,980 --> 00:03:31,700
+I choose to implement in it in Java language.
+
+36
+00:03:32,030 --> 00:03:35,690
+You can implement it in any programming language of your choice.
+
+37
+00:03:36,020 --> 00:03:36,380
+OK.
+
+38
+00:03:36,440 --> 00:03:40,910
+So I will implement this program that adds two numbers and Jeff.
+
+39
+00:03:42,820 --> 00:03:46,980
+OK, we have some two numbers.
+
+40
+00:03:47,640 --> 00:03:53,190
+We start by creating the number number one and number two.
+
+41
+00:03:53,490 --> 00:03:54,870
+Let me see.
+
+42
+00:03:57,970 --> 00:04:04,090
+So we define our main method and we create and no one.
+
+43
+00:04:05,120 --> 00:04:09,230
+And numb to variables and that some valuable.
+
+44
+00:04:09,470 --> 00:04:12,500
+OK, so we have created the three variables here.
+
+45
+00:04:13,130 --> 00:04:19,370
+Now we need to assign the values to them by using the scanner.
+
+46
+00:04:19,370 --> 00:04:27,950
+So I get the scanner and I display for the user and throw the first number and the user enters the first
+
+47
+00:04:27,950 --> 00:04:28,430
+number.
+
+48
+00:04:28,430 --> 00:04:37,550
+And I took the number that entered from the user from the scanner dock next and and I assign it to number
+
+49
+00:04:37,550 --> 00:04:38,030
+one.
+
+50
+00:04:41,430 --> 00:04:49,530
+Suppose that the user entered five at the first number, we need also to get the second number from
+
+51
+00:04:49,530 --> 00:04:50,130
+the user.
+
+52
+00:04:50,280 --> 00:04:55,380
+I will display system to print a message telling him to enter the second number.
+
+53
+00:04:56,760 --> 00:05:02,460
+Number two equal to the source or scanner dot next.
+
+54
+00:05:02,460 --> 00:05:10,920
+And so we have a signing and this and a signed getting the value from the user to assign it to that
+
+55
+00:05:10,920 --> 00:05:15,250
+number to value the user and 37 again.
+
+56
+00:05:15,780 --> 00:05:22,350
+Then scanner that close sum equal to number plus and number one plus number two.
+
+57
+00:05:22,350 --> 00:05:26,410
+So I am assigning that as I'm getting the value.
+
+58
+00:05:26,460 --> 00:05:34,920
+Number one, go to the memory and get the number one value and go to the box number two and get the
+
+59
+00:05:34,920 --> 00:05:35,950
+value of it.
+
+60
+00:05:36,000 --> 00:05:37,830
+Add it together.
+
+61
+00:05:38,250 --> 00:05:40,820
+Add them together five and seven.
+
+62
+00:05:40,830 --> 00:05:45,900
+It will give you 12 and assign it and stored it into there.
+
+63
+00:05:46,050 --> 00:05:55,260
+Some value system that added print the sum of two VAT in numbers is the variable sum, so go and get
+
+64
+00:05:55,260 --> 00:05:56,340
+the variable sum.
+
+65
+00:05:56,340 --> 00:06:00,450
+This will display for us some of the numbers.
+
+66
+00:06:00,660 --> 00:06:01,170
+12.
+
+67
+00:06:01,800 --> 00:06:02,310
+OK.
+
+68
+00:06:02,490 --> 00:06:08,310
+This is how we make an algorithm to add two numbers in computers.
+
+69
+00:06:08,980 --> 00:06:09,300
+OK.
+
+70
+00:06:11,230 --> 00:06:19,530
+I should remember you that we have talked about the algorithms and took many examples of algorithms
+
+71
+00:06:19,740 --> 00:06:22,880
+in there in the beginning of this course.
+
+72
+00:06:22,890 --> 00:06:29,460
+So please guys, go back to the beginning of the course and see these videos about the variables.
+
+73
+00:06:29,460 --> 00:06:35,310
+Data types algorithm one two three four and the examples and data structure.
+
+74
+00:06:35,310 --> 00:06:39,630
+Add definitions and the analysis of the algorithm.
+
+75
+00:06:39,870 --> 00:06:40,410
+OK.
+
+76
+00:06:40,560 --> 00:06:49,200
+They are very important, and I should consider you that you have learned them and you have mastered
+
+77
+00:06:49,200 --> 00:06:50,550
+them in order to continue.

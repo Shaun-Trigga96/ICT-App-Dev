@@ -1,0 +1,291 @@
+1
+00:00:00,480 --> 00:00:10,080
+Hip sort is one algorithm used to sort a sequence of numbers and features the use of the hip data structure
+
+2
+00:00:11,520 --> 00:00:20,970
+to begin all of these numbers five two, seven, three, six, one and four hour sorted in a heap.
+
+3
+00:00:23,160 --> 00:00:28,860
+These hips are constructed so that numbers in are in descending order.
+
+4
+00:00:29,280 --> 00:00:33,570
+A more detailed explanation of hip can be found in the hips.
+
+5
+00:00:33,930 --> 00:00:34,980
+Previous videos.
+
+6
+00:00:35,760 --> 00:00:36,150
+So.
+
+7
+00:00:38,920 --> 00:00:42,070
+To begin all of these numbers.
+
+8
+00:00:43,360 --> 00:00:45,070
+Are sorted in a heap.
+
+9
+00:00:46,050 --> 00:00:50,280
+As I told you, we start by the first one.
+
+10
+00:00:52,400 --> 00:01:00,620
+We start making it into a heap, so please go back to the previous pages about the heap data structure
+
+11
+00:01:00,980 --> 00:01:06,140
+and learn about the heap in order to continue understanding the heap.
+
+12
+00:01:07,520 --> 00:01:11,330
+And we put five and connected with two.
+
+13
+00:01:12,540 --> 00:01:19,110
+Five and seven seven is greater than five, so we put it in there as per.
+
+14
+00:01:21,070 --> 00:01:23,980
+We continue getting three.
+
+15
+00:01:24,100 --> 00:01:25,930
+Three is greater than two.
+
+16
+00:01:25,960 --> 00:01:31,120
+So we scrap them because we are hip defying six.
+
+17
+00:01:32,100 --> 00:01:34,470
+Is greater than three.
+
+18
+00:01:34,500 --> 00:01:37,440
+So we switch three by six.
+
+19
+00:01:38,730 --> 00:01:46,590
+Remember, these hips are constructed so that the numbers are in descending order because we learned
+
+20
+00:01:46,590 --> 00:01:47,530
+that the hips.
+
+21
+00:01:47,820 --> 00:01:55,230
+The president has the minimum number and the minimum and the lowest number, then the children.
+
+22
+00:01:55,680 --> 00:02:02,910
+OK, lower number and then the children, because this is an ascending order in descending order that
+
+23
+00:02:03,810 --> 00:02:10,890
+parents have their greatest elements, their greatest values and their children have the less.
+
+24
+00:02:11,070 --> 00:02:14,220
+OK, now we get one.
+
+25
+00:02:15,330 --> 00:02:17,190
+We add number four.
+
+26
+00:02:17,310 --> 00:02:25,290
+Four is less than five, so it will add it completely to that child as if children are five, so that
+
+27
+00:02:25,290 --> 00:02:34,050
+children is less than that permanence in all the levels of this heap because we are making and constructing
+
+28
+00:02:34,050 --> 00:02:39,480
+this hips constructed in a. descending order.
+
+29
+00:02:40,470 --> 00:02:46,980
+So we have we have succeeded in adding these elements into their descending order.
+
+30
+00:02:48,030 --> 00:02:51,870
+OK, so all the numbers have been sorted in a heap.
+
+31
+00:02:52,350 --> 00:02:57,210
+Next, the numbers stored in the heap are taken out one by one.
+
+32
+00:02:57,780 --> 00:03:05,100
+One property of descending hips is that the numbers are removed from the largest to smallest.
+
+33
+00:03:05,460 --> 00:03:14,970
+So if the if you line the numbers up in the opposite order right to left as they get remove sorting
+
+34
+00:03:14,970 --> 00:03:15,950
+is complete.
+
+35
+00:03:17,100 --> 00:03:18,540
+How that is done.
+
+36
+00:03:18,660 --> 00:03:21,540
+So seven is removed.
+
+37
+00:03:23,230 --> 00:03:27,160
+We swept the six with four and then.
+
+38
+00:03:28,310 --> 00:03:30,140
+We remove six.
+
+39
+00:03:31,400 --> 00:03:32,870
+Five is going up.
+
+40
+00:03:33,110 --> 00:03:41,850
+Five will be removed so that three would go up and four will be swept, the five if we move forward.
+
+41
+00:03:42,950 --> 00:03:45,680
+Two will go up and three will go up.
+
+42
+00:03:45,680 --> 00:03:48,740
+So three will be that president.
+
+43
+00:03:48,830 --> 00:03:57,950
+Three will be here and still having to end on right to left and one is at it.
+
+44
+00:03:58,070 --> 00:04:05,540
+So all the numbers were removed from the heap and the sorting is completed while we prepared an extra
+
+45
+00:04:05,810 --> 00:04:09,800
+data structure apart from the sequence number this time.
+
+46
+00:04:10,130 --> 00:04:18,380
+Normally, the heap is incorporated into the very array containing the sequence of numbers and sorting
+
+47
+00:04:18,380 --> 00:04:25,370
+is carried out by simply swapping the numbers around to give more concrete example.
+
+48
+00:04:25,370 --> 00:04:30,050
+The elements of the heap nodes and the array.
+
+49
+00:04:31,180 --> 00:04:42,730
+Have a corresponding relationship, as shown in the dig, a b, c, d, e f and G, F and G.
+
+50
+00:04:43,300 --> 00:04:43,720
+Okay.
+
+51
+00:04:43,720 --> 00:04:49,810
+Related to C so b related to the NDA and C it related to F and edgy.
+
+52
+00:04:50,800 --> 00:04:56,530
+As you can see, it could be said that the hip is just crammed into an attorney.
+
+53
+00:04:57,070 --> 00:05:00,940
+Now let's try sorting the array using this wrapping method.
+
+54
+00:05:01,630 --> 00:05:04,370
+The hip to make things easier to understand.
+
+55
+00:05:04,390 --> 00:05:07,150
+We will keep that three structure of the hip visible.
+
+56
+00:05:08,200 --> 00:05:08,860
+Five.
+
+57
+00:05:11,250 --> 00:05:15,210
+Two, seven, seven is changed.
+
+58
+00:05:17,250 --> 00:05:24,730
+Here we are swapping in three, swapping six, swapping four.
+
+59
+00:05:25,500 --> 00:05:28,020
+And till now, it is good.
+
+60
+00:05:28,500 --> 00:05:29,700
+No, let's start.
+
+61
+00:05:30,150 --> 00:05:32,610
+All numbers have been sorted in the heap.
+
+62
+00:05:32,610 --> 00:05:38,100
+At the same time, we are able to arrange that array in descending order at the hit.
+
+63
+00:05:39,950 --> 00:05:46,370
+Next, the numbers sorted in the heap are taken out one by one descending order hips have their data
+
+64
+00:05:46,370 --> 00:05:52,400
+removed in order starting from the largest values, the first number, and that is the largest number
+
+65
+00:05:52,400 --> 00:05:53,000
+in the heap.
+
+66
+00:05:53,450 --> 00:05:58,640
+The first number in the array gets swept with that number that corresponds to that last element is a
+
+67
+00:05:58,640 --> 00:06:01,400
+heap and completing the operation.
+
+68
+00:06:03,290 --> 00:06:08,750
+The hip is reorganized so that it has its data structure is maintained.
+
+69
+00:06:09,440 --> 00:06:14,630
+This operation repeats until of all numbers have been fully sorted.
+
+70
+00:06:19,430 --> 00:06:24,350
+Sorting is completed, and this is their conclusion of the absurd.
+
+71
+00:06:24,620 --> 00:06:28,360
+Now let's try to and let's move to that next.
+
+72
+00:06:28,470 --> 00:06:35,940
+Lessons to learn about its complexity and how this heap sort works.
+
+73
+00:06:35,960 --> 00:06:41,090
+Also in details and let's try to implement it and see and.

@@ -1,0 +1,95 @@
+1
+00:00:00,360 --> 00:00:09,030
+So how to print the circular link, at least consider the void print circular method that will not return
+
+2
+00:00:09,030 --> 00:00:12,540
+anything and does not contain any parameters.
+
+3
+00:00:13,470 --> 00:00:18,060
+It starts by checking if have equal equal to null, then return.
+
+4
+00:00:18,420 --> 00:00:26,430
+And the struct noted content and create a pointer called stamp is the same as H&amp;B and it do, while
+
+5
+00:00:26,430 --> 00:00:35,970
+loop that starts by printing that -- the data access every node and print out its its data.
+
+6
+00:00:36,390 --> 00:00:43,770
+And in order to move the cursor to the next one, we use them equal time, the next that we have used.
+
+7
+00:00:44,310 --> 00:00:53,010
+And while TAM does not equal to the head, it will be because the circular link, at least when near
+
+8
+00:00:53,520 --> 00:00:57,030
+the end of that list, it will go back to the first one.
+
+9
+00:00:57,150 --> 00:01:06,600
+So while TAM does not equal to none or in the in the single linked list, but here a circular link,
+
+10
+00:01:06,600 --> 00:01:08,940
+at least them does not equal to hat.
+
+11
+00:01:09,690 --> 00:01:10,740
+Let's see the animation.
+
+12
+00:01:12,890 --> 00:01:19,700
+Here we have a linked list that contains three notes, the first one contains data 100, the second
+
+13
+00:01:19,700 --> 00:01:25,580
+200 and third 300, and there is a linkage between the last one and the hat.
+
+14
+00:01:26,120 --> 00:01:30,830
+So we start by making have the hat and the stamp.
+
+15
+00:01:31,010 --> 00:01:39,410
+So TAM is created at the hat by using struck note at the second line struck note stamp equal to hat,
+
+16
+00:01:39,980 --> 00:01:44,240
+then do one by using Do we print that we have printed 100.
+
+17
+00:01:44,930 --> 00:01:53,970
+We have printed that 200 and now we need to print 300 when it reaches three on the last note.
+
+18
+00:01:53,990 --> 00:02:02,720
+It will go back to the first one and it will indicate that the stamp equal to hat and this is the end
+
+19
+00:02:02,720 --> 00:02:04,640
+of their linked list.
+
+20
+00:02:04,820 --> 00:02:11,930
+This is the circular link address that we have reached the end of it and we have printed all of them
+
+21
+00:02:11,930 --> 00:02:15,380
+using this glue and using this method.
+
+22
+00:02:15,650 --> 00:02:20,960
+So it's very simple how to print the circular link list and don't follow.
+
+23
+00:02:21,170 --> 00:02:29,150
+We are going to see all of these methods in action using that intelligent idea and the same way and
+
+24
+00:02:29,150 --> 00:02:30,170
+using Jeff.

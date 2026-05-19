@@ -1,0 +1,351 @@
+1
+00:00:00,330 --> 00:00:03,480
+How to search for, you know, encircle Lincoln List.
+
+2
+00:00:03,750 --> 00:00:07,650
+Consider this link list that contains four notes.
+
+3
+00:00:08,040 --> 00:00:13,890
+The first one is for containing note that have a value of 400.
+
+4
+00:00:14,220 --> 00:00:24,570
+The second 130 200 and third at the fourth is containing data for 300, and the other is four thousand
+
+5
+00:00:24,570 --> 00:00:29,760
+twenty four, 1024, two thousand twenty four and three thousand twenty four, respectively.
+
+6
+00:00:30,330 --> 00:00:37,680
+The last one since it is Circle Link, at least the last one points and the reference to the first note.
+
+7
+00:00:38,010 --> 00:00:43,530
+So this this is the head of the Circle linkage list.
+
+8
+00:00:43,800 --> 00:00:51,480
+And to search for a list, a circle linked list, we move the head and we read the value inside the
+
+9
+00:00:51,480 --> 00:00:51,870
+note.
+
+10
+00:00:52,380 --> 00:00:52,710
+OK?
+
+11
+00:00:53,190 --> 00:01:00,990
+Later on, we will see how to print and implement everything and the Java and how to print the values
+
+12
+00:01:00,990 --> 00:01:01,700
+of this note.
+
+13
+00:01:02,140 --> 00:01:04,440
+And while working in the real exercises.
+
+14
+00:01:04,650 --> 00:01:11,790
+So don't worry, we are going to make these and that real life and real programs.
+
+15
+00:01:13,180 --> 00:01:23,230
+We have have and we are searching for 200, so this example, we are searching for the value of hundred.
+
+16
+00:01:23,530 --> 00:01:30,450
+So the first one at the beginning, we create a temporary value and temporary difference that points.
+
+17
+00:01:30,460 --> 00:01:34,120
+That's exactly at that first point.
+
+18
+00:01:34,240 --> 00:01:43,360
+And the first note and how to get the first note by referring it as equal to had so stamp equal to two
+
+19
+00:01:43,660 --> 00:01:44,260
+hundred.
+
+20
+00:01:44,560 --> 00:01:46,330
+And it is equal to their head.
+
+21
+00:01:46,480 --> 00:01:53,110
+So this is the key that we are searching for, which is to hunt with search check two hundred equal
+
+22
+00:01:53,130 --> 00:01:54,400
+to two 400.
+
+23
+00:01:54,730 --> 00:01:55,100
+No.
+
+24
+00:01:55,390 --> 00:02:06,970
+So it will mark it as X and as it does not equal and moves to the next one, then this 200 compares.
+
+25
+00:02:07,330 --> 00:02:11,460
+This temporary value compares to 100 was 100.
+
+26
+00:02:11,470 --> 00:02:15,850
+If they are equal, then it will return the value.
+
+27
+00:02:15,970 --> 00:02:17,890
+But this is not the case.
+
+28
+00:02:18,040 --> 00:02:19,390
+It is not equal.
+
+29
+00:02:20,080 --> 00:02:21,580
+It moves to the next one.
+
+30
+00:02:21,940 --> 00:02:26,110
+So 200 equal to the 200 that is contained in the note.
+
+31
+00:02:26,200 --> 00:02:26,800
+Yes.
+
+32
+00:02:26,830 --> 00:02:35,410
+So this is the case, and it returns the the reference and returns that index of this note that it is
+
+33
+00:02:35,410 --> 00:02:44,140
+contained or it returns boolean like true or false if it is contained or not, according to the returning
+
+34
+00:02:44,140 --> 00:02:48,700
+type of the of the method that we have created.
+
+35
+00:02:48,940 --> 00:02:55,030
+So this is based on the returning type of the method that we have created.
+
+36
+00:02:55,630 --> 00:02:57,940
+Consider another example.
+
+37
+00:02:59,500 --> 00:03:05,470
+This is the linked list, the same Lincoln list, and we are searching for the value of 500.
+
+38
+00:03:05,980 --> 00:03:09,430
+The first one checked 500 equal to 400.
+
+39
+00:03:09,430 --> 00:03:09,730
+No.
+
+40
+00:03:10,540 --> 00:03:14,070
+It moves to the next 500 equal to 100.
+
+41
+00:03:14,080 --> 00:03:14,440
+No.
+
+42
+00:03:15,010 --> 00:03:15,730
+It's move.
+
+43
+00:03:16,240 --> 00:03:19,600
+It moves to their next 500 equal to 200.
+
+44
+00:03:19,600 --> 00:03:19,960
+No.
+
+45
+00:03:20,470 --> 00:03:24,730
+It moves to the next note and 500 equal to 300.
+
+46
+00:03:24,730 --> 00:03:25,180
+No.
+
+47
+00:03:25,630 --> 00:03:27,080
+But 300.
+
+48
+00:03:27,100 --> 00:03:29,310
+This note referred to the head.
+
+49
+00:03:29,560 --> 00:03:33,700
+Then we have reached the end of that link at last.
+
+50
+00:03:34,040 --> 00:03:37,060
+Therefore, we stopped searching and return false.
+
+51
+00:03:37,360 --> 00:03:45,940
+We didn't find the 500 and so along that notes inside this link at list how to implement the search
+
+52
+00:03:46,540 --> 00:03:58,630
+and search method inside the Circle Link unless we create any search and key that key as a perimeter
+
+53
+00:03:59,080 --> 00:04:00,580
+and start.
+
+54
+00:04:00,580 --> 00:04:04,180
+If had equal equal to null, then return minus one.
+
+55
+00:04:04,180 --> 00:04:11,800
+If it is referring to us as an empty list, then return minus one struct note stamp equal to had to
+
+56
+00:04:11,800 --> 00:04:19,510
+create a new temporary value and variable equal to the head, pointing to the same node as the had to
+
+57
+00:04:19,510 --> 00:04:19,990
+refer.
+
+58
+00:04:19,990 --> 00:04:26,170
+And this is referred for us as the start of the linked list do and do.
+
+59
+00:04:26,170 --> 00:04:33,070
+While this is the loop that we enter and start checking, if temp data equal equal to the key, then
+
+60
+00:04:33,070 --> 00:04:35,930
+return one stamp equal temp.
+
+61
+00:04:35,950 --> 00:04:38,110
+Not next, so move then time.
+
+62
+00:04:38,200 --> 00:04:46,030
+According to this loop, check in by checking if it is equal to their data or not.
+
+63
+00:04:46,900 --> 00:04:48,250
+Tempest, what if what the heck?
+
+64
+00:04:48,370 --> 00:04:55,240
+So move along that note until you reach them equal equal to the hat?
+
+65
+00:04:55,630 --> 00:04:55,960
+No.
+
+66
+00:04:56,680 --> 00:04:59,500
+Let's see another case if the.
+
+67
+00:05:00,850 --> 00:05:06,160
+That same, the same method, but we didn't have.
+
+68
+00:05:07,340 --> 00:05:16,520
+The key found inside the link, at least if we search for 500, we see this example 500 is not a contained
+
+69
+00:05:16,520 --> 00:05:20,490
+in the first, second, third note and the fourth note.
+
+70
+00:05:20,990 --> 00:05:23,560
+And we have reached the end.
+
+71
+00:05:23,570 --> 00:05:30,410
+This is the trick behind the circular link at least and searching investigating how to know that we
+
+72
+00:05:30,410 --> 00:05:31,700
+have reached the end.
+
+73
+00:05:32,030 --> 00:05:35,580
+If attempt, if this is equal to the head.
+
+74
+00:05:35,600 --> 00:05:37,680
+If we go back to the had sent.
+
+75
+00:05:37,700 --> 00:05:44,870
+So we have reached the end of the circle learning curve list and we didn't find anything that we are
+
+76
+00:05:44,990 --> 00:05:45,860
+searching for.
+
+77
+00:05:45,920 --> 00:05:55,220
+We didn't find the value inside the notes, so it were returned minus one, according to that, a returning
+
+78
+00:05:55,220 --> 00:05:59,120
+type, which is end of that search method.
+
+79
+00:05:59,930 --> 00:06:04,340
+Then complexity, time, complexity would be best cases of one.
+
+80
+00:06:04,490 --> 00:06:06,620
+So finding the note at the beginning.
+
+81
+00:06:06,890 --> 00:06:11,420
+So consider in for this example look at these notes for nuts.
+
+82
+00:06:11,750 --> 00:06:19,130
+The first note contains 400 if we are searching for 400, so it will find the 400 in the first note
+
+83
+00:06:19,130 --> 00:06:22,940
+and it contains and coast time complexity would be one.
+
+84
+00:06:23,330 --> 00:06:32,570
+While if we are searching along the list for like 500 and we didn't find it, so we go through all the
+
+85
+00:06:32,570 --> 00:06:34,090
+elements, all the notes.
+
+86
+00:06:34,350 --> 00:06:41,030
+Therefore, the time complexity would be of and depending on the number of the nodes that we have in
+
+87
+00:06:41,030 --> 00:06:41,840
+that list.
+
+88
+00:06:42,050 --> 00:06:48,260
+So this is the trick behind the circular learning could list and the searching.

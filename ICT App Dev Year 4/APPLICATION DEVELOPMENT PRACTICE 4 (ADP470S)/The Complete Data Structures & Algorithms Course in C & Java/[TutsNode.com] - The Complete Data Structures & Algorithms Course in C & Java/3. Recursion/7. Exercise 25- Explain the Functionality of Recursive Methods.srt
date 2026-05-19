@@ -1,0 +1,303 @@
+1
+00:00:00,060 --> 00:00:01,140
+Hello, my friends.
+
+2
+00:00:01,380 --> 00:00:03,990
+And welcome to exercise number 25.
+
+3
+00:00:05,080 --> 00:00:11,500
+We are going to explain the functionality of the following function this is function number two.
+
+4
+00:00:12,190 --> 00:00:18,820
+It took in the parameter int and and it returns integer it checks.
+
+5
+00:00:18,820 --> 00:00:22,180
+If an equal equal to one, it will return zero.
+
+6
+00:00:22,630 --> 00:00:31,540
+Otherwise, it will return one plus function to and passing the parameter and over to both the video.
+
+7
+00:00:31,690 --> 00:00:34,090
+And think about this question.
+
+8
+00:00:34,540 --> 00:00:37,210
+Please write it down on your copy.
+
+9
+00:00:37,210 --> 00:00:40,810
+Book and write the solution in the comments below.
+
+10
+00:00:41,320 --> 00:00:48,100
+In order to make a discussion and see what the points and what are the vulnerabilities in understanding
+
+11
+00:00:48,100 --> 00:00:50,710
+the data structure and algorithms, of course.
+
+12
+00:00:52,210 --> 00:01:03,670
+OK, so waiting your answers here we have the function I told you to take an example, always take an
+
+13
+00:01:03,670 --> 00:01:10,540
+example and or your interviews and in their exercises, so I will take an int.
+
+14
+00:01:12,290 --> 00:01:15,380
+And equal to four.
+
+15
+00:01:15,770 --> 00:01:19,610
+OK, so I will take take an equal to four.
+
+16
+00:01:20,000 --> 00:01:21,650
+OK, so.
+
+17
+00:01:23,950 --> 00:01:25,240
+I gather.
+
+18
+00:01:26,670 --> 00:01:30,450
+Execute function two of four.
+
+19
+00:01:31,320 --> 00:01:32,460
+What does this mean?
+
+20
+00:01:32,820 --> 00:01:34,030
+Function of four.
+
+21
+00:01:34,170 --> 00:01:35,280
+Any four to four?
+
+22
+00:01:35,520 --> 00:01:36,690
+Is it equal, equal to one?
+
+23
+00:01:36,690 --> 00:01:37,050
+No.
+
+24
+00:01:37,200 --> 00:01:39,500
+So that it will skip the the Alice comes.
+
+25
+00:01:40,160 --> 00:01:41,970
+Else it will return.
+
+26
+00:01:42,030 --> 00:01:46,950
+This will return one plus function to.
+
+27
+00:01:48,950 --> 00:01:59,360
+And mine and over two so and over two for over two is to this will called a recursive function to.
+
+28
+00:02:01,340 --> 00:02:05,900
+Do and function to of two.
+
+29
+00:02:07,440 --> 00:02:07,980
+This is.
+
+30
+00:02:09,070 --> 00:02:11,320
+Going to occur again.
+
+31
+00:02:12,260 --> 00:02:17,360
+To equal if an equal equal to one no and equal to two.
+
+32
+00:02:17,900 --> 00:02:19,670
+Else return one.
+
+33
+00:02:20,650 --> 00:02:31,240
+Plus function two off and equal to one SRT and equal to two two over two is equal to one.
+
+34
+00:02:32,080 --> 00:02:35,680
+Again, this will be function to.
+
+35
+00:02:37,350 --> 00:02:41,340
+Of one is equal to an equal, equal to one.
+
+36
+00:02:41,370 --> 00:02:43,090
+Yes, so return here.
+
+37
+00:02:43,290 --> 00:02:49,590
+So this zero will go up and being substituted with function two of one.
+
+38
+00:02:50,010 --> 00:03:01,350
+So this would be remote because it is if to two zero one plus zero is equal to one f of two is one.
+
+39
+00:03:01,380 --> 00:03:10,410
+So it is being replaced here and return one plus function of two, which is equal one plus one.
+
+40
+00:03:11,430 --> 00:03:16,710
+And this word return sorry, one plus one here.
+
+41
+00:03:17,340 --> 00:03:26,850
+So this function were returned one plus one, which is if was to do so, the final answer of this function
+
+42
+00:03:26,850 --> 00:03:29,010
+of four is equal to two.
+
+43
+00:03:29,820 --> 00:03:30,340
+OK.
+
+44
+00:03:31,080 --> 00:03:34,470
+This is how we solve that questions again.
+
+45
+00:03:34,980 --> 00:03:40,320
+I will take an example and show you how this works.
+
+46
+00:03:40,740 --> 00:03:41,190
+OK.
+
+47
+00:03:44,500 --> 00:03:48,950
+I will take an example of half of five, OK?
+
+48
+00:03:51,210 --> 00:03:52,410
+F of five.
+
+49
+00:03:54,150 --> 00:03:57,270
+And equal to five is not equal to one.
+
+50
+00:03:57,300 --> 00:03:59,340
+So this skipped the part F.
+
+51
+00:03:59,790 --> 00:04:04,620
+Else return, this will return one plus.
+
+52
+00:04:08,800 --> 00:04:09,820
+Function of.
+
+53
+00:04:11,120 --> 00:04:13,700
+Five over to function.
+
+54
+00:04:15,240 --> 00:04:25,500
+Off and over two and as being an end, so five over two were resolved and 2.5, but it is since it is
+
+55
+00:04:25,500 --> 00:04:33,210
+an integer and it was removed, I removed the decimal part and it well, it well.
+
+56
+00:04:34,330 --> 00:04:45,910
+Like return just to only the integer part, so f 2.5 and over two is five over two, which is two point
+
+57
+00:04:45,910 --> 00:04:51,010
+five, where we remove the 0.5 and we keep on two.
+
+58
+00:04:51,310 --> 00:04:51,760
+OK.
+
+59
+00:04:52,330 --> 00:05:02,170
+Function F of two is equal to return since and is not equal to one and is equal to two here, so it
+
+60
+00:05:02,170 --> 00:05:10,240
+will return one plus function off and which is two over two is equal to one.
+
+61
+00:05:10,540 --> 00:05:12,700
+So again, out of one.
+
+62
+00:05:14,200 --> 00:05:15,260
+And equal to one.
+
+63
+00:05:15,280 --> 00:05:23,260
+Yes, so it will return zero, so if one is equal to zero, it's going up and we replace it with a return
+
+64
+00:05:23,860 --> 00:05:25,690
+one plus zero.
+
+65
+00:05:25,840 --> 00:05:26,320
+OK.
+
+66
+00:05:26,650 --> 00:05:28,450
+This will return one.
+
+67
+00:05:28,900 --> 00:05:32,020
+So f of two is equal to one.
+
+68
+00:05:32,290 --> 00:05:37,630
+It's going out here and f of two as equal to one.
+
+69
+00:05:38,230 --> 00:05:46,150
+And if f of five is returning, one plus one is equal to two.
+
+70
+00:05:46,930 --> 00:05:47,390
+OK?
+
+71
+00:05:48,250 --> 00:05:57,070
+This is the same as f of this happens because we are dealing with integer and we have removed two point
+
+72
+00:05:57,070 --> 00:05:57,490
+five.
+
+73
+00:05:57,490 --> 00:06:04,810
+We have removed the zero point five from the decimal part and we keep on the integer part.
+
+74
+00:06:05,260 --> 00:06:12,760
+This is the way how recursion works, and you are asked how to explain the functionality, explaining
+
+75
+00:06:12,760 --> 00:06:14,860
+the functionality of the recursion.
+
+76
+00:06:15,130 --> 00:06:22,830
+And I need from you to take this example and try to solve like f of six, f of 10 and C.

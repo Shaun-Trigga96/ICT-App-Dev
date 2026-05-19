@@ -1,0 +1,691 @@
+1
+00:00:00,360 --> 00:00:06,060
+Hello, my friends, I'm looking of to the complete data structure and algorithms course in this video,
+
+2
+00:00:06,060 --> 00:00:13,830
+we are going to solve exercise number 80 and we are going to implement a circle queue in Java.
+
+3
+00:00:14,370 --> 00:00:22,410
+We have seen how the circular Q data structure work and the animation and in the video that we have
+
+4
+00:00:22,740 --> 00:00:33,900
+seen in the lectures and we implement circular Q and see the same as in Java, but with different syntax.
+
+5
+00:00:33,900 --> 00:00:36,310
+So please concentrate with me.
+
+6
+00:00:36,900 --> 00:00:41,550
+We are going to create a new Java class inside the series sources folder.
+
+7
+00:00:42,800 --> 00:00:49,220
+And by the way, you can get all this project source codes from the resources folder and they you do
+
+8
+00:00:49,220 --> 00:00:49,340
+me.
+
+9
+00:00:50,060 --> 00:00:56,960
+So I will create C Q Circle or Q and U Java class here called CQ.
+
+10
+00:00:59,330 --> 00:01:15,740
+Now let's create the same way that inside, because we need it to be performed as a as an array size
+
+11
+00:01:15,770 --> 00:01:16,700
+of circular Q.
+
+12
+00:01:16,940 --> 00:01:21,560
+This is the size of circular Q.
+
+13
+00:01:24,950 --> 00:01:33,950
+Now we need to create two could do 30 meters of front end of the year that we have seen in the lecture
+
+14
+00:01:34,430 --> 00:01:42,170
+that indicate which is different and which is the rear in order to get the wet when pushing and popping.
+
+15
+00:01:42,410 --> 00:01:50,470
+We need to or when we incubate a deck, we need to know where we need to insert.
+
+16
+00:01:50,480 --> 00:01:56,750
+Then, you know, or where is it to remove that last note?
+
+17
+00:01:57,170 --> 00:01:57,620
+OK.
+
+18
+00:01:57,950 --> 00:02:02,600
+So I will create an int items here.
+
+19
+00:02:04,390 --> 00:02:13,480
+It is for the valuable new insight, and it is of size, the size.
+
+20
+00:02:14,060 --> 00:02:24,400
+OK, you can define it like this, or if it is five, if you are defining it as five, OK, or you can
+
+21
+00:02:24,400 --> 00:02:33,820
+make it more general by making the constructor seek you here, you can make front at first equal to
+
+22
+00:02:33,820 --> 00:02:34,690
+minus one.
+
+23
+00:02:35,140 --> 00:02:46,630
+This is what we have agreed about it in there in the lecture, and despite using it here, we can specify
+
+24
+00:02:46,630 --> 00:02:50,030
+in size without specifying it.
+
+25
+00:02:50,410 --> 00:03:05,530
+And we can make end size when creating a new and size, then new items equal to this new items items
+
+26
+00:03:05,530 --> 00:03:15,180
+array equal to new item and a size that is passed by the perimeter.
+
+27
+00:03:15,490 --> 00:03:16,000
+OK.
+
+28
+00:03:17,020 --> 00:03:19,270
+OK, guys, it's very simple.
+
+29
+00:03:20,020 --> 00:03:20,380
+Now.
+
+30
+00:03:22,630 --> 00:03:31,060
+We can make it like this in that way, it's better now we have created a constructor that depends on
+
+31
+00:03:31,210 --> 00:03:38,320
+passing the size of the queue to create a new array called items, depending on the same size.
+
+32
+00:03:38,770 --> 00:03:45,460
+And we have int front and rear and we have the size of the circular queue.
+
+33
+00:03:46,030 --> 00:03:49,030
+No, let's start making the method here.
+
+34
+00:03:49,840 --> 00:03:50,650
+The methods
+
+35
+00:03:54,490 --> 00:03:56,290
+we start by the first one.
+
+36
+00:03:56,500 --> 00:04:00,040
+Public Boolean is full.
+
+37
+00:04:00,190 --> 00:04:14,470
+We start checking if the queue is full or not, if from equal equal to zero and rear equal equal to
+
+38
+00:04:14,470 --> 00:04:16,240
+size minus one
+
+39
+00:04:21,880 --> 00:04:23,350
+return and true.
+
+40
+00:04:23,740 --> 00:04:24,250
+OK.
+
+41
+00:04:24,730 --> 00:04:33,780
+This is checking for if there's the full, because if the front equal equal to zero and rear equal to
+
+42
+00:04:33,790 --> 00:04:42,250
+size minus one, then it is full because we need to check the two two pointers that are rear and the
+
+43
+00:04:42,250 --> 00:04:42,730
+front.
+
+44
+00:04:43,210 --> 00:04:53,350
+Or there is a new case if the front equal equal to the year plus one, because we said that the front
+
+45
+00:04:54,520 --> 00:05:04,480
+will be, it will indicate the element that it is when you call a pop or deck, it will select the element
+
+46
+00:05:04,480 --> 00:05:13,030
+that the front is indicating why that is when we need to include a new element within when we need to
+
+47
+00:05:13,030 --> 00:05:21,580
+insert a new element that will indicate the position where it is next to it will be inserting than you
+
+48
+00:05:21,670 --> 00:05:22,180
+note.
+
+49
+00:05:22,330 --> 00:05:24,790
+For that, we need to return.
+
+50
+00:05:24,790 --> 00:05:32,790
+And true because in this case, if front equal, equal to rear plus one, it is full Q.
+
+51
+00:05:33,340 --> 00:05:39,850
+Otherwise, if there is no condition like this, return false.
+
+52
+00:05:40,160 --> 00:05:40,630
+OK.
+
+53
+00:05:42,120 --> 00:05:53,030
+Now, let's see if it is empty the same way in the same concept, we are going to check if it is empty
+
+54
+00:05:53,040 --> 00:05:57,270
+by using the front because it's it's easier.
+
+55
+00:05:57,900 --> 00:06:05,040
+So Boolean public Boolean is empty.
+
+56
+00:06:07,920 --> 00:06:12,510
+If front equal equal to minus one.
+
+57
+00:06:14,070 --> 00:06:16,770
+Then return true.
+
+58
+00:06:18,300 --> 00:06:22,560
+Otherwise else return false.
+
+59
+00:06:23,610 --> 00:06:24,060
+OK.
+
+60
+00:06:24,330 --> 00:06:29,060
+This is how we check if the queue is empty by checking the front.
+
+61
+00:06:29,070 --> 00:06:31,320
+If it is equal minus one.
+
+62
+00:06:32,160 --> 00:06:32,480
+OK.
+
+63
+00:06:33,030 --> 00:06:36,420
+It's very simple because we initialized the front by minus one.
+
+64
+00:06:38,790 --> 00:06:41,250
+Now, let's add the elements.
+
+65
+00:06:41,340 --> 00:06:51,750
+This is in you or it is a more complex method than there is full or is empty.
+
+66
+00:06:52,200 --> 00:06:54,510
+So we start by making.
+
+67
+00:06:55,020 --> 00:06:55,920
+Thank you.
+
+68
+00:06:59,460 --> 00:07:00,180
+Thank you.
+
+69
+00:07:00,690 --> 00:07:07,410
+It took in the perimeter to the elements that we are going to insert it into the side of the queue and
+
+70
+00:07:07,410 --> 00:07:09,390
+we check if is full.
+
+71
+00:07:10,560 --> 00:07:13,000
+We cannot add anything.
+
+72
+00:07:13,020 --> 00:07:23,040
+So system thought out dot, print and queue is full.
+
+73
+00:07:26,310 --> 00:07:26,820
+OK.
+
+74
+00:07:29,210 --> 00:07:33,290
+If the queue is full, we cannot add anything else
+
+75
+00:07:37,340 --> 00:07:38,690
+else, what to do.
+
+76
+00:07:39,740 --> 00:07:47,030
+I need to open brackets if front equal, equal minus one, then return
+
+77
+00:07:50,030 --> 00:07:53,750
+front equal to zero.
+
+78
+00:07:56,070 --> 00:08:07,580
+And make their years be equal to a year plus one module size.
+
+79
+00:08:07,920 --> 00:08:10,140
+You remember this algorithm, guys.
+
+80
+00:08:10,620 --> 00:08:22,740
+It's very important because if you are making real +1 modules size and we make it, then you mean value
+
+81
+00:08:22,740 --> 00:08:23,370
+of 30.
+
+82
+00:08:23,880 --> 00:08:29,880
+This is the trick behind the Inca, and we will see it in the deck.
+
+83
+00:08:30,330 --> 00:08:30,900
+OK.
+
+84
+00:08:31,230 --> 00:08:43,440
+Because in cue and deck inside a circular queue is depending almost 99 percent on this modulo size.
+
+85
+00:08:43,920 --> 00:08:44,460
+OK.
+
+86
+00:08:44,640 --> 00:08:49,710
+So this is very important and we have seen it in C in the same concept.
+
+87
+00:08:49,830 --> 00:08:50,310
+OK.
+
+88
+00:08:52,950 --> 00:08:56,520
+30 year element.
+
+89
+00:08:58,020 --> 00:09:04,950
+And then we display a method, a message called the inserted
+
+90
+00:09:07,140 --> 00:09:09,270
+inserted plus element.
+
+91
+00:09:09,840 --> 00:09:10,260
+OK.
+
+92
+00:09:10,920 --> 00:09:14,790
+This is how we insert elements inside.
+
+93
+00:09:15,300 --> 00:09:20,010
+You know, let's remove an element from that.
+
+94
+00:09:20,010 --> 00:09:22,290
+Cue the same concept.
+
+95
+00:09:22,830 --> 00:09:32,820
+And we have seen in the previous video public int it returns int deck.
+
+96
+00:09:36,110 --> 00:09:45,560
+And it will not take any perimeter because we are just decking, we are just removing an element that
+
+97
+00:09:45,560 --> 00:09:51,880
+it is and the first or the oldest element that have been inserted into a circular queue.
+
+98
+00:09:51,890 --> 00:09:58,220
+So end element if it is empty.
+
+99
+00:09:59,010 --> 00:10:03,050
+We are not going to remove anything because there is nothing.
+
+100
+00:10:03,920 --> 00:10:04,380
+Okay.
+
+101
+00:10:06,740 --> 00:10:12,260
+So system that out, that print and end queue
+
+102
+00:10:14,960 --> 00:10:16,100
+is empty
+
+103
+00:10:19,580 --> 00:10:21,890
+returned minus one.
+
+104
+00:10:22,670 --> 00:10:23,020
+OK.
+
+105
+00:10:23,750 --> 00:10:27,260
+This is why we returned minus one because it is empty.
+
+106
+00:10:27,290 --> 00:10:35,860
+Otherwise, it would be start removing the element and now assigning the elements at index of.
+
+107
+00:10:36,270 --> 00:10:44,550
+So this and this affront will indicate the element at which we are getting that correct element.
+
+108
+00:10:44,570 --> 00:10:50,450
+So for that, we have used the front and for this, we have used that rear.
+
+109
+00:10:50,870 --> 00:10:54,140
+You see guys, when in queuing, insert certain you'd need.
+
+110
+00:10:54,350 --> 00:10:58,250
+That is when decking, where removing you need therefrom.
+
+111
+00:10:58,700 --> 00:11:00,510
+This is the algorithm.
+
+112
+00:11:00,590 --> 00:11:06,230
+This is the importance of the usage of the front and the rear
+
+113
+00:11:08,780 --> 00:11:09,920
+valuables game.
+
+114
+00:11:10,220 --> 00:11:14,540
+So front equal to rear, a front, equal to rear.
+
+115
+00:11:14,930 --> 00:11:17,840
+Then what happens?
+
+116
+00:11:18,110 --> 00:11:27,200
+We are going to create frankly minus one again every year, equal to minus one.
+
+117
+00:11:27,440 --> 00:11:35,600
+We are resetting their elements, their front and real rear if Q has only one element.
+
+118
+00:11:36,080 --> 00:11:39,440
+Otherwise, we use front.
+
+119
+00:11:39,650 --> 00:11:51,090
+We move front to the front plus +1 modulo size gain.
+
+120
+00:11:51,350 --> 00:11:53,900
+This is the trick behind using the model.
+
+121
+00:11:54,620 --> 00:12:06,840
+And that in queuing in deck inside air is like a circular Q or circular to a return that.
+
+122
+00:12:09,360 --> 00:12:12,090
+Now, let's test our program.
+
+123
+00:12:13,560 --> 00:12:24,330
+But before I need to make a new method, it called display that print the display, the status of the
+
+124
+00:12:24,330 --> 00:12:28,950
+circular Q so void display
+
+125
+00:12:31,590 --> 00:12:41,490
+function to display the status of the Q and I tell if or what can be created in the blue.
+
+126
+00:12:41,520 --> 00:12:49,440
+So if it is empty, then we print them that out.
+
+127
+00:12:49,650 --> 00:12:56,390
+Dot print and an empty Q OK.
+
+128
+00:12:56,700 --> 00:13:09,180
+Otherwise, if it is not empty, we are going to print system that out dot, print and end the front.
+
+129
+00:13:11,480 --> 00:13:11,840
+Is.
+
+130
+00:13:14,740 --> 00:13:15,880
+Plus, front
+
+131
+00:13:19,630 --> 00:13:26,020
+and sister out the sprint and the rear.
+
+132
+00:13:32,740 --> 00:13:37,600
+Real would be rear, OK?
+
+133
+00:13:38,770 --> 00:13:39,280
+And.
+
+134
+00:13:43,010 --> 00:13:46,550
+Let's see the elements inside them.
+
+135
+00:13:46,580 --> 00:13:54,050
+So system that out, that brand alarm items and items.
+
+136
+00:14:00,470 --> 00:14:16,910
+Bioprinting by using the falou four and I equal to feront eye does not equal to the eye, equal to eye
+
+137
+00:14:17,210 --> 00:14:21,920
+plus one because we are moving at modulo size.
+
+138
+00:14:22,520 --> 00:14:23,060
+OK.
+
+139
+00:14:23,330 --> 00:14:29,540
+This is the algorithm behind moving the cursor through the elements of
+
+140
+00:14:32,360 --> 00:14:34,160
+circular Q so brain.
+
+141
+00:14:36,030 --> 00:14:36,900
+Items.
+
+142
+00:14:38,090 --> 00:14:45,460
+At Index I plus the space gay.
+
+143
+00:14:49,450 --> 00:14:54,190
+And system that the brand, Ellen's items.
+
+144
+00:14:54,280 --> 00:15:00,400
+OK, now let's see what happens here.
+
+145
+00:15:01,960 --> 00:15:11,590
+If we call it in the main method of public, let's create the driver class public static void, main
+
+146
+00:15:13,240 --> 00:15:28,870
+string parts, we will create secure que equal to new secure and we pass the size of five.
+
+147
+00:15:29,740 --> 00:15:38,440
+Now let's start if we start thinking, removing the element that will display for us minus one because
+
+148
+00:15:38,440 --> 00:15:40,270
+there is no element so cute.
+
+149
+00:15:40,480 --> 00:15:42,240
+Thank you, Juan.
+
+150
+00:15:43,900 --> 00:15:44,490
+OK.
+
+151
+00:15:44,830 --> 00:15:46,270
+Let me copy this.
+
+152
+00:15:49,270 --> 00:15:50,910
+Right to.
+
+153
+00:15:53,230 --> 00:15:55,360
+Three, four and five.
+
+154
+00:15:55,910 --> 00:16:03,940
+Okay, if we call HQ six, it for return falls at beholds phase two in cubicles front equal equal to
+
+155
+00:16:03,940 --> 00:16:06,190
+zero and rear equal to size minus one.
+
+156
+00:16:06,880 --> 00:16:10,690
+And that's cue dot display.
+
+157
+00:16:11,680 --> 00:16:15,010
+Or we can display cue the display.
+
+158
+00:16:17,170 --> 00:16:18,220
+Let's run and see.
+
+159
+00:16:20,800 --> 00:16:22,030
+OK, let's run this.
+
+160
+00:16:24,280 --> 00:16:25,570
+That's it on this.
+
+161
+00:16:28,210 --> 00:16:28,570
+Oops!
+
+162
+00:16:30,220 --> 00:16:33,640
+Models size size is equal to zero.
+
+163
+00:16:34,300 --> 00:16:37,810
+Yes, because we didn't realize it here.
+
+164
+00:16:42,770 --> 00:16:43,730
+OK.
+
+165
+00:16:44,480 --> 00:16:46,160
+Size equal to see you.
+
+166
+00:16:49,030 --> 00:16:59,050
+We need to go to that constructor and put this size equal to size because we didn't initialize it and
+
+167
+00:16:59,050 --> 00:17:02,020
+dig the perimeter that we have passed.
+
+168
+00:17:02,320 --> 00:17:03,310
+Let's run, Nancy.
+
+169
+00:17:04,930 --> 00:17:08,590
+And here we go, inserting one two three four five.
+
+170
+00:17:08,890 --> 00:17:15,280
+The front is zero items one two three four five four and that is equal to four.
+
+171
+00:17:15,700 --> 00:17:16,670
+And here we go.
+
+172
+00:17:16,690 --> 00:17:23,110
+We have correctly make everything works in the C Q and the circular Q.
+
+173
+00:17:23,500 --> 00:17:32,260
+OK, so you can get all of these data structures from the resources folder and you.

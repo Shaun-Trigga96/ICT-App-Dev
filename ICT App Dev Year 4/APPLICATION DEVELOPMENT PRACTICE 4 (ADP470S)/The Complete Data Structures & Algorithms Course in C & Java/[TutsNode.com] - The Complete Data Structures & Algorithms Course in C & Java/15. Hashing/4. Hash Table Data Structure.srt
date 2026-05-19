@@ -1,0 +1,627 @@
+1
+00:00:00,150 --> 00:00:02,580
+And welcome to another data structure type.
+
+2
+00:00:03,000 --> 00:00:09,060
+In this video, we are going to learn about the hash tables and we will see its implementations in C
+
+3
+00:00:09,060 --> 00:00:09,780
+and Java.
+
+4
+00:00:10,320 --> 00:00:16,980
+And later on, we will solve the exercises related to these data structures that really be to that inside
+
+5
+00:00:16,980 --> 00:00:20,110
+the university and inside your interview.
+
+6
+00:00:20,970 --> 00:00:25,920
+So hash tables are one type of data structure.
+
+7
+00:00:26,550 --> 00:00:33,210
+They are good at storing data and sets made up of keys and values.
+
+8
+00:00:34,080 --> 00:00:43,920
+If you look at the Java hierarchy map hierarchy, you will see that hash tables implement that map.
+
+9
+00:00:44,740 --> 00:00:56,190
+OK, so the key value, key value, there is a key and they value you give me the key, I give you the
+
+10
+00:00:56,190 --> 00:00:56,670
+value.
+
+11
+00:00:56,880 --> 00:00:58,290
+This is how it works.
+
+12
+00:00:58,290 --> 00:01:01,140
+It's very similar to the map.
+
+13
+00:01:02,070 --> 00:01:06,990
+In this case, a name is a key and the sex is that value.
+
+14
+00:01:07,290 --> 00:01:13,200
+So if you gave me Joe, I will give you a hint that it is male.
+
+15
+00:01:14,240 --> 00:01:16,700
+OK, so I will give you the value.
+
+16
+00:01:16,850 --> 00:01:23,660
+This is how it works, so as an example, let's imagine the data in the diagram stored as an array.
+
+17
+00:01:24,410 --> 00:01:28,760
+This is an array zero, one, two, three, four and five.
+
+18
+00:01:29,660 --> 00:01:38,840
+And we have these names stored inside these these arrays and have its value.
+
+19
+00:01:38,930 --> 00:01:44,480
+So the key and the value are in form of an element inside an array.
+
+20
+00:01:45,860 --> 00:01:50,810
+Let's imagine looking up at an at the fourth.
+
+21
+00:01:51,830 --> 00:01:54,200
+Index, which is a Ali.
+
+22
+00:01:55,500 --> 00:01:56,670
+It is female.
+
+23
+00:01:58,080 --> 00:02:03,930
+So we don't know what number hours box is in the array.
+
+24
+00:02:05,710 --> 00:02:14,050
+Thus, we need to search in order to an order from the beginning in order to find the alley.
+
+25
+00:02:15,070 --> 00:02:22,960
+Now, this operation is called Genius Search in the next few days, we'll learn about the linear search
+
+26
+00:02:22,960 --> 00:02:31,990
+and the binary search, the key off for the data stored in box zero was Joe, which is not at.
+
+27
+00:02:33,780 --> 00:02:40,440
+The book's number one was not Ali, either books number two, was not Ali's or three.
+
+28
+00:02:40,530 --> 00:02:47,490
+Also the fourth the key for the data stored in books for matches Ali.
+
+29
+00:02:47,790 --> 00:02:56,670
+So we are searching for Ali and we have we have searched for it and we have found that the key for the
+
+30
+00:02:56,670 --> 00:02:58,850
+value add the fourth.
+
+31
+00:02:59,000 --> 00:03:06,140
+And by extracting its corresponding value, we learned that Ali's sex is female.
+
+32
+00:03:06,540 --> 00:03:12,780
+So we give you that key Ali and we get that value female f.
+
+33
+00:03:13,530 --> 00:03:19,920
+In this way, the linear search operation carries a cost proportional to the size of the date.
+
+34
+00:03:20,280 --> 00:03:23,610
+Because you are learning, we are searching for alien years.
+
+35
+00:03:23,940 --> 00:03:27,690
+We are making a linear search and going through all the elements.
+
+36
+00:03:29,040 --> 00:03:37,170
+It takes time to search through data when it is stored in an ashtray, making it unsuitable choice a
+
+37
+00:03:37,170 --> 00:03:40,350
+hash table, solve this problem.
+
+38
+00:03:41,360 --> 00:03:43,730
+So how to make a hash table?
+
+39
+00:03:44,150 --> 00:03:50,360
+We will prepare an array to store some data for convenience, and we will have five boxes in the array.
+
+40
+00:03:51,110 --> 00:03:55,970
+Now let's store some data when storing data, offered Joe.
+
+41
+00:03:56,480 --> 00:04:06,740
+We calculate a hash value for that key using the hash function that result obtained in this case is
+
+42
+00:04:06,740 --> 00:04:08,660
+four nine to eight.
+
+43
+00:04:09,110 --> 00:04:09,550
+OK.
+
+44
+00:04:10,010 --> 00:04:20,120
+So we need to make a function when we need to make like to add the function that will give a give for
+
+45
+00:04:20,120 --> 00:04:21,590
+us with Joe.
+
+46
+00:04:21,920 --> 00:04:23,810
+This number four two nine two eight.
+
+47
+00:04:24,200 --> 00:04:25,160
+We start it.
+
+48
+00:04:26,600 --> 00:04:32,240
+A more detailed explanation of hash table would be in the next video.
+
+49
+00:04:32,870 --> 00:04:36,160
+Hash function sorry in the next videos.
+
+50
+00:04:36,290 --> 00:04:41,330
+How to make the hash function and how to convert data into a value of fixed length.
+
+51
+00:04:41,330 --> 00:04:43,460
+And and so and vice versa.
+
+52
+00:04:43,640 --> 00:04:43,880
+So.
+
+53
+00:04:44,240 --> 00:04:44,530
+OK.
+
+54
+00:04:45,170 --> 00:04:49,490
+So don't worry, just understand this concept and follow me.
+
+55
+00:04:50,760 --> 00:04:55,800
+Joe, with hash function, well, give us a number for nine today.
+
+56
+00:04:56,370 --> 00:05:04,980
+This four nine two eight, if we if we look at our array, our table, we have five boxes.
+
+57
+00:05:05,220 --> 00:05:09,600
+So this in this case, it is modulus, it's mud.
+
+58
+00:05:10,380 --> 00:05:11,400
+It's mud.
+
+59
+00:05:11,820 --> 00:05:14,220
+Five, it is of mud.
+
+60
+00:05:14,220 --> 00:05:14,730
+Five.
+
+61
+00:05:15,790 --> 00:05:17,140
+Not murderous mode.
+
+62
+00:05:17,740 --> 00:05:18,250
+Five.
+
+63
+00:05:18,430 --> 00:05:18,790
+OK.
+
+64
+00:05:19,600 --> 00:05:24,970
+So five here, four nine two eight is mod.
+
+65
+00:05:24,970 --> 00:05:27,480
+Five would be equal to three.
+
+66
+00:05:28,480 --> 00:05:31,540
+Also referred as modulus sometimes.
+
+67
+00:05:31,720 --> 00:05:34,480
+So the hash value.
+
+68
+00:05:35,890 --> 00:05:41,020
+So it's divided by the number of boxes in that raid to find the remainder.
+
+69
+00:05:41,450 --> 00:05:42,700
+Okay, this is the modulus.
+
+70
+00:05:44,610 --> 00:05:51,270
+The operation that funds the remainder of the division is called the MoD's operation, the mother operation
+
+71
+00:05:51,270 --> 00:05:53,640
+resulted in a value of three.
+
+72
+00:05:54,060 --> 00:06:03,030
+So we have divided four thousand nine hundred twenty eight over five and it is it will give us nine
+
+73
+00:06:03,030 --> 00:06:05,010
+hundred twenty eight point six.
+
+74
+00:06:05,340 --> 00:06:07,680
+This 0.6 is a remainder.
+
+75
+00:06:07,680 --> 00:06:09,720
+We have multiplied it with five.
+
+76
+00:06:09,900 --> 00:06:11,970
+It will give me three.
+
+77
+00:06:12,930 --> 00:06:13,950
+The data are four.
+
+78
+00:06:13,950 --> 00:06:21,870
+Joe is stored in box number three because we have the result of four nine two eight more modern.
+
+79
+00:06:22,110 --> 00:06:32,670
+Five is equal to three and we have stored it at the box three of the array to match the result.
+
+80
+00:06:33,090 --> 00:06:42,990
+This operation will be repeated to store the other data, so we will follow all the steps in the next
+
+81
+00:06:42,990 --> 00:06:43,590
+elements.
+
+82
+00:06:44,040 --> 00:06:45,330
+Consider Sue.
+
+83
+00:06:47,190 --> 00:06:54,840
+Plus, the hash function, it will give us seven to nine one, we will learn how to get these numbers
+
+84
+00:06:54,840 --> 00:06:57,360
+seven two nine one later on in the next videos.
+
+85
+00:06:58,200 --> 00:07:05,030
+And after learning about the hashing function, we find the keys hash value and perform the mod operation
+
+86
+00:07:05,040 --> 00:07:07,230
+at using the number of boxes in that array.
+
+87
+00:07:07,230 --> 00:07:07,620
+Five.
+
+88
+00:07:07,890 --> 00:07:16,090
+The result was one, so we stored Sue and its value inside that box number one.
+
+89
+00:07:16,560 --> 00:07:21,290
+When storing the data of then, we find the key here is equal to four.
+
+90
+00:07:21,300 --> 00:07:29,790
+So start, we have stored it in the box number for Mel plus hash equal to this number equal to one by
+
+91
+00:07:30,300 --> 00:07:30,930
+one.
+
+92
+00:07:32,200 --> 00:07:33,950
+We will try to store it.
+
+93
+00:07:33,970 --> 00:07:36,020
+But now is starting now.
+
+94
+00:07:36,040 --> 00:07:39,670
+But Sue has been occupying the box number one.
+
+95
+00:07:39,970 --> 00:07:47,920
+So what we do, the data of two was already stored there when something like this happens.
+
+96
+00:07:48,430 --> 00:07:53,530
+Then it gets connected to existing data, as is at least.
+
+97
+00:07:53,770 --> 00:07:56,840
+So you see guys here we are connecting.
+
+98
+00:07:57,160 --> 00:08:06,250
+We use as an X-ray, we have used the key value as a map and we are storing that consecutive and that
+
+99
+00:08:06,250 --> 00:08:10,690
+link at that and linking elements as a list.
+
+100
+00:08:11,110 --> 00:08:15,310
+So see, guys, how it's complex hash table is complex.
+
+101
+00:08:15,310 --> 00:08:24,190
+But but but you see this this algorithm, how that algorithm of storing, then numbers that or the elements
+
+102
+00:08:24,190 --> 00:08:32,290
+that are the same hash, which is one two and now they are linked together.
+
+103
+00:08:33,470 --> 00:08:40,550
+There are several types of hash tables structured, but the method that used list is called chain method.
+
+104
+00:08:40,880 --> 00:08:47,870
+We will learn also in the next video about the chain method when storing the data of Ali.
+
+105
+00:08:49,190 --> 00:08:51,290
+Do we find the key is equal to three?
+
+106
+00:08:51,860 --> 00:08:55,890
+Joe is in the box three of our day.
+
+107
+00:08:56,060 --> 00:09:03,110
+So Ali get connected to a list of Joe Bob with hashing equal to three.
+
+108
+00:09:03,560 --> 00:09:07,880
+So we need to store Bob in the three, the third box.
+
+109
+00:09:08,000 --> 00:09:18,200
+But we have Joe and Ali, so we get Bob and we connect it to Joe and Ali link and list for this.
+
+110
+00:09:19,250 --> 00:09:23,300
+OK, let's imagine looking up to dance sex.
+
+111
+00:09:24,710 --> 00:09:33,950
+OK, so we have stored all the elements, and now we are going to find the value of the sex of that.
+
+112
+00:09:35,080 --> 00:09:43,120
+Dan is at the last box, which is box number five, three, four three, the next four.
+
+113
+00:09:45,060 --> 00:09:52,230
+Now we need to search for it in order to find out the books of our day, we are not going off that dance
+
+114
+00:09:52,280 --> 00:09:55,040
+at a rate that is in.
+
+115
+00:09:55,440 --> 00:10:04,680
+So we are going to find the element, then we are not going to search all the elements we make the hash
+
+116
+00:10:05,010 --> 00:10:05,820
+for then.
+
+117
+00:10:06,180 --> 00:10:13,860
+So then a plus hash is equal one five three nine Modell's five equal to four.
+
+118
+00:10:14,070 --> 00:10:24,420
+So Ford will give us the data and the key for the data stored in Box four of the array match that.
+
+119
+00:10:24,810 --> 00:10:30,930
+So therefore, by extracting the corresponding value, we learned that then six is me.
+
+120
+00:10:31,470 --> 00:10:36,720
+This is their usage and this is the power of hash table.
+
+121
+00:10:36,930 --> 00:10:43,680
+The hashing hashing will give you a number, this number when you search for it in this specific box
+
+122
+00:10:43,680 --> 00:10:45,990
+and you will find your data.
+
+123
+00:10:47,170 --> 00:10:51,430
+Now, let's consider another example if we are searching for Ali.
+
+124
+00:10:52,480 --> 00:11:01,030
+Ali, so what happens when we look up to Ali's six in order to find out the box of the array Ali is
+
+125
+00:11:01,030 --> 00:11:01,450
+in?
+
+126
+00:11:01,720 --> 00:11:08,950
+So we find the key hash keys, the hash value by performing game mode operation on it, using the number
+
+127
+00:11:08,950 --> 00:11:10,330
+of boxes in the array.
+
+128
+00:11:11,360 --> 00:11:11,640
+Five.
+
+129
+00:11:12,220 --> 00:11:14,410
+The result was three.
+
+130
+00:11:15,500 --> 00:11:21,170
+So Ali has nine one four three models, five is equal to three.
+
+131
+00:11:24,150 --> 00:11:30,030
+The key for the data stored in box three of the array was Joe, not that.
+
+132
+00:11:31,020 --> 00:11:40,080
+So what we will do since there is a list, so you see guys at the box number three where there is a
+
+133
+00:11:40,080 --> 00:11:44,440
+link unless it starts by Joe, but we are going to search for Ali.
+
+134
+00:11:44,460 --> 00:11:46,590
+So what we will do this.
+
+135
+00:11:46,680 --> 00:11:53,580
+So there is a linear search performed on the list, starting with the data, Joe, because there is
+
+136
+00:11:53,580 --> 00:12:00,450
+a link at least here or less, starting from Joe ending with Bob passing through Ali.
+
+137
+00:12:00,960 --> 00:12:05,230
+So we need to search all these elements to find Ali.
+
+138
+00:12:05,330 --> 00:12:08,640
+It is inside this link list or not.
+
+139
+00:12:09,120 --> 00:12:15,930
+We have found Ali at the at the second element of this linked list at box number three.
+
+140
+00:12:16,350 --> 00:12:21,930
+So only a linear search performed when we found a link.
+
+141
+00:12:21,930 --> 00:12:23,940
+Atlas data with G.
+
+142
+00:12:24,270 --> 00:12:28,680
+Ali was found, entities she made by extracting it.
+
+143
+00:12:29,430 --> 00:12:29,880
+OK.
+
+144
+00:12:30,630 --> 00:12:40,830
+So you can see by using the hash function, hash tables are able to quickly access data within everyday.
+
+145
+00:12:41,550 --> 00:12:51,420
+When hash values overlap, lists are used, making it possible to flexibly handle a certain amount of
+
+146
+00:12:51,630 --> 00:12:56,700
+data when the size of an array used by hash table is too small.
+
+147
+00:12:57,150 --> 00:13:02,880
+That overlaps increase, making linear searches more predictive.
+
+148
+00:13:04,640 --> 00:13:05,130
+Prevail.
+
+149
+00:13:06,230 --> 00:13:16,130
+Conversely, if the array size is too large, there will be many boxes with no data stored in them wasting
+
+150
+00:13:16,130 --> 00:13:16,640
+memory.
+
+151
+00:13:16,790 --> 00:13:19,850
+So discretion discretion is needed.
+
+152
+00:13:20,210 --> 00:13:28,670
+Hash tables with their flexible data storage and fast look up are used in associative arrays of programming
+
+153
+00:13:28,880 --> 00:13:29,570
+languages.
+
+154
+00:13:30,630 --> 00:13:38,430
+This was the hash tables and next videos we will learn about the hash tables, how to implement them
+
+155
+00:13:38,730 --> 00:13:47,940
+and how to create its data structure and how to use them and there and the problems, and we will solve
+
+156
+00:13:47,940 --> 00:13:50,250
+exercises later on in the exams.
+
+157
+00:13:50,430 --> 00:13:53,760
+And the real exams of universities and real interview.

@@ -1,0 +1,139 @@
+1
+00:00:00,710 --> 00:00:07,910
+Similar to the old discussion, this notation gives the title lower bound of that given algorithm.
+
+2
+00:00:08,330 --> 00:00:18,350
+And would it present it by f of an omega g of an so omega notation is giving the lower bound and the
+
+3
+00:00:18,350 --> 00:00:22,190
+oh notation, giving the upper bound a fine and creating more a function?
+
+4
+00:00:22,880 --> 00:00:32,420
+That means at larger values of and the tighter, lower bound of g of F of and G of and for example.
+
+5
+00:00:33,490 --> 00:00:36,520
+If we consider F of an.
+
+6
+00:00:38,220 --> 00:00:48,120
+Equal one hundred and square plus then and plus fifty.
+
+7
+00:00:50,050 --> 00:00:53,230
+If we need to consider the oh of an.
+
+8
+00:00:55,010 --> 00:01:00,200
+Oh, of and for this function is the highest and highest value is.
+
+9
+00:01:00,830 --> 00:01:05,450
+And square and the omega notation for this.
+
+10
+00:01:08,240 --> 00:01:09,440
+Sort of and square.
+
+11
+00:01:10,040 --> 00:01:15,050
+And it is of oh, and square, OK, Omega.
+
+12
+00:01:15,260 --> 00:01:24,440
+And the square, because it is the tighter, lower bound so that omega annotation can be defined as
+
+13
+00:01:24,860 --> 00:01:32,240
+omega notation of g of an equal to f of and there exists positive constancy and and and zero.
+
+14
+00:01:34,220 --> 00:01:41,870
+For that function, where zero between and the function of JioTV and between zero and F of fat, so
+
+15
+00:01:42,500 --> 00:01:52,890
+they're zero equal less than or equal g of ten times to less than half of.
+
+16
+00:01:55,610 --> 00:02:03,200
+Our objective is to give the largest rate of growth of JioTV and which is less than or equal to that
+
+17
+00:02:03,200 --> 00:02:05,390
+given and good at the rate of growth.
+
+18
+00:02:05,870 --> 00:02:17,420
+For example, if we have here a lower give, a lower bound of like f of and square OK, give.
+
+19
+00:02:20,500 --> 00:02:22,510
+Lower bound.
+
+20
+00:02:23,880 --> 00:02:24,300
+Of.
+
+21
+00:02:25,670 --> 00:02:34,190
+F of an equal to five and the square, OK, the upper bound here is and the square.
+
+22
+00:02:34,820 --> 00:02:35,330
+OK.
+
+23
+00:02:38,350 --> 00:02:41,080
+The lower power there exists, see?
+
+24
+00:02:43,280 --> 00:02:56,870
+And square and n0 such that zero less than or equal seat times and the square less than five and square.
+
+25
+00:02:57,410 --> 00:03:05,180
+So there exists and zero and sees such sexy times and square less than five and square less than half
+
+26
+00:03:05,180 --> 00:03:05,390
+of.
+
+27
+00:03:05,390 --> 00:03:07,490
+And this is the function that we.
+
+28
+00:03:07,940 --> 00:03:11,830
+And this is the formula that we are working to find the lower back.
+
+29
+00:03:12,090 --> 00:03:12,440
+OK.
+
+30
+00:03:14,300 --> 00:03:16,790
+See, and the square less than.
+
+31
+00:03:17,970 --> 00:03:25,440
+Five and square, so see equal to five and zero, equal to one.
+
+32
+00:03:25,770 --> 00:03:32,310
+So the thetan asserted that omega notation of this function is and squared.
+
+33
+00:03:32,940 --> 00:03:36,590
+This is the same for some examples.
+
+34
+00:03:36,600 --> 00:03:43,650
+It is the same as the old notation, but it's very simple.
+
+35
+00:03:43,950 --> 00:03:52,050
+We can consider this as a function and we are going to work with in many ways.

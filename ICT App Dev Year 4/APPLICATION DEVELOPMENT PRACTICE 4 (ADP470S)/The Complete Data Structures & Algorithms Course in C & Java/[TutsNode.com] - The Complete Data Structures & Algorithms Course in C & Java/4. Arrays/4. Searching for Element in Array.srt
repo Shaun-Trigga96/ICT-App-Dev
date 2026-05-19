@@ -1,0 +1,243 @@
+1
+00:00:00,900 --> 00:00:06,150
+Now, let's learn about searching for an element in array.
+
+2
+00:00:08,110 --> 00:00:16,930
+For example, if you are asked to find Element 40 in an array containing maybe it contains 40, maybe
+
+3
+00:00:16,930 --> 00:00:17,350
+not.
+
+4
+00:00:17,740 --> 00:00:19,030
+So the first case?
+
+5
+00:00:20,850 --> 00:00:28,320
+Wave is containing 40, so at index zero, we have 10 at Index one 20.
+
+6
+00:00:29,330 --> 00:00:34,400
+At the index to 30 attendees for a 30 40 Athens export is.
+
+7
+00:00:35,150 --> 00:00:39,160
+Now we need to search for Element 40.
+
+8
+00:00:39,980 --> 00:00:49,040
+We have this like iteration going through all the elements, and the check is the box inside the box,
+
+9
+00:00:49,040 --> 00:00:52,610
+which is for the equal to the element of the array.
+
+10
+00:00:53,380 --> 00:00:54,260
+It starts.
+
+11
+00:00:55,420 --> 00:01:06,250
+Yes, it's it finds that element 40 and save that the element in the box that it contains is equal to
+
+12
+00:01:06,250 --> 00:01:08,890
+the element of the array.
+
+13
+00:01:09,730 --> 00:01:14,320
+OK, so it returned one or the 10 true or whatever.
+
+14
+00:01:14,650 --> 00:01:22,270
+But basically this is returning one or returning true is is the returning type of the method that if
+
+15
+00:01:22,270 --> 00:01:30,030
+you ask it to right now, let's see the other scenario.
+
+16
+00:01:30,030 --> 00:01:40,510
+You find the Element 100 in this array, we have 10, 20, 30, 40 and 50 100 is not found.
+
+17
+00:01:42,050 --> 00:01:47,600
+It put one hundred inside the box that it contains and start searching the Adam.
+
+18
+00:01:48,740 --> 00:01:52,550
+It will return minus one or return false.
+
+19
+00:01:53,060 --> 00:01:53,510
+OK.
+
+20
+00:01:54,050 --> 00:02:00,710
+This is the algorithm of searching an element or searching searching for an element into an array.
+
+21
+00:02:01,340 --> 00:02:05,500
+OK, now let's go and implement this into coding.
+
+22
+00:02:06,280 --> 00:02:06,660
+OK.
+
+23
+00:02:08,750 --> 00:02:13,070
+For searching, we need to make an array.
+
+24
+00:02:14,380 --> 00:02:25,030
+Sorry, and a method called search that took into the Bernie meter and array and in size and in key,
+
+25
+00:02:25,810 --> 00:02:27,700
+we need to search for that key.
+
+26
+00:02:28,230 --> 00:02:28,560
+OK.
+
+27
+00:02:30,240 --> 00:02:40,680
+So we start by for a always when dealing with areas like accessing oil and preventing all elements like
+
+28
+00:02:40,680 --> 00:02:48,070
+searching, like adding, inserting at specific position, all the think about using the for loop.
+
+29
+00:02:48,090 --> 00:02:50,820
+This is the trick behind using addres.
+
+30
+00:02:51,040 --> 00:02:52,530
+OK, so.
+
+31
+00:02:54,250 --> 00:03:03,400
+This implementation of a box that and a arrow that starts and iterating through all elements and start
+
+32
+00:03:03,400 --> 00:03:09,810
+comparing what that in box and what is an element if they are equal, it will return.
+
+33
+00:03:09,820 --> 00:03:18,850
+One is implemented into an array that starts from zero and reach reaches a less than size and i plus
+
+34
+00:03:18,850 --> 00:03:25,270
+plus if the array of I equal equal to key.
+
+35
+00:03:25,510 --> 00:03:34,870
+So if we have an array at the array at specific index, equal equal to the key that it contains return
+
+36
+00:03:34,870 --> 00:03:35,380
+one.
+
+37
+00:03:35,470 --> 00:03:37,690
+So we start searching for the key.
+
+38
+00:03:39,250 --> 00:03:48,220
+If the key equal equal to or array at index are equal, equal to the key, then return one.
+
+39
+00:03:49,000 --> 00:03:52,630
+Let us start by using this iteration.
+
+40
+00:03:53,800 --> 00:04:03,160
+At Index I at first iteration at the start, if it I less then sighs, yes, through the key equal to
+
+41
+00:04:03,160 --> 00:04:04,570
+the array at index one.
+
+42
+00:04:04,570 --> 00:04:12,130
+No, I + + one at iteration one is the key is not equal to the array.
+
+43
+00:04:12,130 --> 00:04:16,570
+At Index, I won the second iteration.
+
+44
+00:04:17,380 --> 00:04:26,230
+The array at Index two is not equal to there is not equal to the key at the third iteration.
+
+45
+00:04:26,620 --> 00:04:31,890
+The key is is equal to the array at Index three.
+
+46
+00:04:31,930 --> 00:04:38,290
+So this will result in searching and returning true.
+
+47
+00:04:39,050 --> 00:04:42,970
+OK, so this is returning true or returning one?
+
+48
+00:04:44,140 --> 00:04:53,350
+If not, if this not happens, or if the 40 is not found, we would return minus one.
+
+49
+00:04:54,250 --> 00:04:54,730
+OK.
+
+50
+00:04:56,400 --> 00:05:00,600
+Best case scenario is finding the element at index zero.
+
+51
+00:05:01,290 --> 00:05:07,500
+Think about searching for this array inside this array of four element equal to 10.
+
+52
+00:05:08,190 --> 00:05:12,030
+It start from an index from index zero.
+
+53
+00:05:12,660 --> 00:05:15,210
+It found that element at index zero.
+
+54
+00:05:15,480 --> 00:05:18,900
+This is off one because it may one.
+
+55
+00:05:20,140 --> 00:05:26,620
+Iteration, the worst case scenario is often finding the element at last position.
+
+56
+00:05:27,010 --> 00:05:32,260
+Think about searching for this array inside this array for Element 50.
+
+57
+00:05:33,190 --> 00:05:38,440
+It will be founded and go through all the elements in order to find the element.
+
+58
+00:05:38,590 --> 00:05:39,130
+50.
+
+59
+00:05:39,480 --> 00:05:47,910
+OK, this is the algorithm behind searching for an array or searching for an element into array.
+
+60
+00:05:48,040 --> 00:05:50,260
+I need from you to write this down.
+
+61
+00:05:50,410 --> 00:05:53,260
+The coding and the complex and.

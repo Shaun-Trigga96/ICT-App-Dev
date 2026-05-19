@@ -1,0 +1,267 @@
+1
+00:00:01,350 --> 00:00:02,370
+Hello, my friends.
+
+2
+00:00:02,790 --> 00:00:04,980
+And welcome to the array's lesson.
+
+3
+00:00:05,460 --> 00:00:08,550
+This is the first data structure loss.
+
+4
+00:00:10,170 --> 00:00:15,090
+Think about mastering the name of this student in a class.
+
+5
+00:00:16,230 --> 00:00:27,360
+We basically create string as the one equal to Jack if we need to store the names of four students.
+
+6
+00:00:28,480 --> 00:00:35,140
+We are going to make four strings like a city, one city to city and four.
+
+7
+00:00:36,140 --> 00:00:45,740
+But if we have a group of students or students in of the school of a or a college in university, we
+
+8
+00:00:46,160 --> 00:00:48,230
+are going to make like this.
+
+9
+00:00:48,650 --> 00:00:52,950
+So we are going to make 400 student strength.
+
+10
+00:00:53,480 --> 00:00:53,790
+OK.
+
+11
+00:00:54,860 --> 00:01:00,200
+This is not acceptable in terms of coding and the professional code.
+
+12
+00:01:00,530 --> 00:01:07,010
+So if we have four hundred students, we are not going to make a 400 string.
+
+13
+00:01:07,430 --> 00:01:09,680
+This is as redundant.
+
+14
+00:01:10,130 --> 00:01:18,950
+This is not good programming and this is not good for the memory because you would allocate the memory
+
+15
+00:01:19,130 --> 00:01:21,560
+by the strings for that.
+
+16
+00:01:22,010 --> 00:01:32,000
+There is a basic solution for this problem, like storing the same data type inside an array.
+
+17
+00:01:32,640 --> 00:01:43,010
+So and despite making 400 strings to store the names of these, we make a one array and store these
+
+18
+00:01:43,460 --> 00:01:45,890
+into one, three and so on.
+
+19
+00:01:46,100 --> 00:01:51,200
+So all of these would be stored in and into an array.
+
+20
+00:01:51,560 --> 00:02:00,260
+Having my four hundred students, I took about 16 students and stored them into this.
+
+21
+00:02:00,410 --> 00:02:09,440
+Every so an array is a container which can hold a fixed number of items, and these items should be
+
+22
+00:02:09,440 --> 00:02:10,730
+of the same time.
+
+23
+00:02:11,150 --> 00:02:15,920
+Following are the important terms to understand the concept of array.
+
+24
+00:02:16,700 --> 00:02:19,760
+Do we have the element?
+
+25
+00:02:20,270 --> 00:02:30,260
+Each item stored in an array is called an element, so Jack is an element Sara as element adi is element,
+
+26
+00:02:30,770 --> 00:02:34,850
+mirror element, eve element and so on.
+
+27
+00:02:35,810 --> 00:02:46,010
+Index Each location of an element is an array has a numerical index, which is used to identify the
+
+28
+00:02:46,010 --> 00:02:46,460
+element.
+
+29
+00:02:46,670 --> 00:02:51,620
+So the element and index zero is Jack.
+
+30
+00:02:53,370 --> 00:03:01,410
+The element at index one is Sara, the in the element at Index 13 is Fathy.
+
+31
+00:03:01,860 --> 00:03:02,250
+So.
+
+32
+00:03:04,230 --> 00:03:10,530
+This is the area you should know the elements and you should know that.
+
+33
+00:03:12,510 --> 00:03:25,560
+The ethics now, how to declare a raise in C Java and Python in C, we we create an array and we inside
+
+34
+00:03:25,560 --> 00:03:26,790
+an angled bracket.
+
+35
+00:03:27,150 --> 00:03:36,670
+We put here how many elements it will contain and equal that parentheses, this sort of curve to you
+
+36
+00:03:36,720 --> 00:03:40,200
+if the girl braces.
+
+37
+00:03:42,410 --> 00:03:43,550
+These are.
+
+38
+00:03:45,210 --> 00:03:48,240
+Ten, four, five, eight and seven.
+
+39
+00:03:48,300 --> 00:03:58,710
+These are the elements of this array, so we are creating an entire array of five elements containing
+
+40
+00:03:58,710 --> 00:04:01,980
+the numbers 10, four, five, eight and seven.
+
+41
+00:04:02,220 --> 00:04:13,320
+Despite making five integers, we are going to declare a one as a that will store all of these valuable.
+
+42
+00:04:14,250 --> 00:04:14,690
+OK.
+
+43
+00:04:16,840 --> 00:04:21,670
+In Java, we create the same way and out of the.
+
+44
+00:04:21,970 --> 00:04:32,830
+But here we put that angle, the brackets here into end, and it is a small leather array that name
+
+45
+00:04:32,830 --> 00:04:39,160
+of the array and we declare the same numbers in Python.
+
+46
+00:04:39,190 --> 00:04:49,390
+It is very simple to make a in the name of a air equal angle, the brackets and the element of the FAA.
+
+47
+00:04:50,260 --> 00:04:50,770
+OK.
+
+48
+00:04:52,540 --> 00:04:55,210
+This are the these are the elements of this.
+
+49
+00:04:56,110 --> 00:05:06,090
+So this three declaration where result in the end creating this out of a having at index zero 10 and
+
+50
+00:05:06,110 --> 00:05:13,720
+index one for at index to five at index three is eight and index for seven.
+
+51
+00:05:14,650 --> 00:05:24,220
+As per the above, the this installation or illustration following are the important points to be considered.
+
+52
+00:05:25,280 --> 00:05:30,560
+Index starts with zero, always start with zero.
+
+53
+00:05:31,100 --> 00:05:31,610
+OK.
+
+54
+00:05:31,970 --> 00:05:33,230
+And Index.
+
+55
+00:05:34,790 --> 00:05:36,980
+And in Java or.
+
+56
+00:05:38,480 --> 00:05:43,850
+Or C or Python, the index starts with the zero.
+
+57
+00:05:44,060 --> 00:05:44,420
+OK?
+
+58
+00:05:44,810 --> 00:05:47,360
+The first element is at index zero.
+
+59
+00:05:47,990 --> 00:05:49,670
+This is very important point.
+
+60
+00:05:50,800 --> 00:05:51,140
+OK.
+
+61
+00:05:51,950 --> 00:05:58,020
+Array length is five I am talking about Java and A..
+
+62
+00:05:58,450 --> 00:06:05,350
+And also Python array length is five, which means it can store five elements.
+
+63
+00:06:05,530 --> 00:06:12,130
+And this is obvious and see so int array we have angled bracket five.
+
+64
+00:06:12,310 --> 00:06:17,830
+We are telling see that we are going to create an array that stores five animals.
+
+65
+00:06:19,170 --> 00:06:28,470
+Each element can be accessed via its anderx, so we can access this array by adding array, the name
+
+66
+00:06:28,470 --> 00:06:33,540
+of array and being side angle the bracket, that index of this array.
+
+67
+00:06:34,150 --> 00:06:34,650
+OK.

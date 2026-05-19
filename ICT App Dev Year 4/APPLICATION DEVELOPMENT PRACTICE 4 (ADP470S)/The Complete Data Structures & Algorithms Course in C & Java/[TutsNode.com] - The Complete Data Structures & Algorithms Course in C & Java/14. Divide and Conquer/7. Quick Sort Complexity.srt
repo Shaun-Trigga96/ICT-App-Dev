@@ -1,0 +1,383 @@
+1
+00:00:00,210 --> 00:00:04,000
+Dive into quick sort algorithm and its complexity.
+
+2
+00:00:04,600 --> 00:00:12,090
+Quickstart is a sorting algorithm based on the divide and conquer approach, where an array is divided
+
+3
+00:00:12,090 --> 00:00:17,410
+into submarines by selecting a pivot element element selected from there.
+
+4
+00:00:18,270 --> 00:00:26,280
+So while dividing the array, the first step or the second step, the pivot element should be positioned
+
+5
+00:00:26,280 --> 00:00:35,370
+in such a way that elements less than pivot are kept on the left side, and elements greater than the
+
+6
+00:00:35,370 --> 00:00:38,130
+pivot are kept on the right side of the pivot.
+
+7
+00:00:39,660 --> 00:00:45,180
+The left and right boroughs are also divided using the same approach.
+
+8
+00:00:46,530 --> 00:00:54,540
+The elements less than a pivot are kept to the left left side of their pivot, and the elements greater
+
+9
+00:00:54,540 --> 00:00:56,880
+than the pivot are kept on the right side of the.
+
+10
+00:00:59,250 --> 00:01:08,910
+This process continues until each submarine contains a single element at the point where containing
+
+11
+00:01:08,910 --> 00:01:14,330
+an element, only one single element elements are already sorted.
+
+12
+00:01:14,730 --> 00:01:25,710
+Finally, elements are combined to form a sorted array, so that quick search algorithm here is an example.
+
+13
+00:01:27,620 --> 00:01:28,340
+We have.
+
+14
+00:01:31,640 --> 00:01:35,210
+Here in this area, we took a pivot.
+
+15
+00:01:36,710 --> 00:01:42,710
+We make the pivot that that is greater than we start from here.
+
+16
+00:01:43,100 --> 00:01:53,210
+So we're selecting that pivot and the higher higher than the pivot is kept on the right and the low
+
+17
+00:01:53,330 --> 00:01:57,410
+would be making a pivot to the left.
+
+18
+00:01:57,560 --> 00:02:00,590
+So they are kept to the left for this.
+
+19
+00:02:00,710 --> 00:02:04,790
+We have made that 32 as a pivot.
+
+20
+00:02:05,420 --> 00:02:13,130
+The higher elements are on the right and the lower are on the left and we start dividing.
+
+21
+00:02:13,460 --> 00:02:17,720
+We divide it into a quick sort on the left side.
+
+22
+00:02:19,420 --> 00:02:25,780
+Divide it into two suburbs, the first one and the second one, and we applied the same algorithm,
+
+23
+00:02:26,320 --> 00:02:30,930
+the same concept by choosing a pivot here like 18.
+
+24
+00:02:31,660 --> 00:02:32,200
+The.
+
+25
+00:02:33,790 --> 00:02:43,090
+Elements of greater than 18 are kept on the right, while the elements having less value less than that
+
+26
+00:02:43,450 --> 00:02:52,870
+of what is kept on the left after reaching this and making this separate is fully fully following.
+
+27
+00:02:53,050 --> 00:02:59,200
+The concept of the left is less than the pivot and the right is greater than the pivot.
+
+28
+00:02:59,590 --> 00:03:07,860
+Then it is segmented into elements on into single elements, and here is the same.
+
+29
+00:03:07,870 --> 00:03:10,330
+So on the right side is followed the same.
+
+30
+00:03:10,750 --> 00:03:18,280
+We choose a pivot here 30 61 and 50 50 is a pivot.
+
+31
+00:03:20,220 --> 00:03:25,800
+High to the right and left, no elements, we divide it into two elements.
+
+32
+00:03:26,190 --> 00:03:34,080
+After reaching this step like this, the first element, the second element, the third, fourth and
+
+33
+00:03:34,080 --> 00:03:36,930
+fifth after reaching this.
+
+34
+00:03:38,980 --> 00:03:44,050
+Step by using a single elements or reaching the single elements.
+
+35
+00:03:44,740 --> 00:03:52,300
+We just combine them into one final sorted array, so we just put in nine here.
+
+36
+00:03:52,630 --> 00:04:02,740
+We put 18 after it, 23 after it, 50 after and 60 after to for this editing.
+
+37
+00:04:03,460 --> 00:04:12,040
+OK, so this is that quick sort algorithm, a quick thought algorithm start by taking an array and the
+
+38
+00:04:12,040 --> 00:04:12,580
+left.
+
+39
+00:04:13,800 --> 00:04:22,500
+This is the algorithm that we are going to implement it into in the next videos, in sea language and
+
+40
+00:04:22,500 --> 00:04:23,430
+in Java.
+
+41
+00:04:23,630 --> 00:04:24,000
+So.
+
+42
+00:04:26,630 --> 00:04:33,740
+We took an array that we are going to start with, but the left most index and the rightmost index.
+
+43
+00:04:34,070 --> 00:04:44,360
+OK, then we check if the left most index less than the rightmost index, then the pivot index part
+
+44
+00:04:44,360 --> 00:04:48,470
+the chart we call the method partition that we are going to create.
+
+45
+00:04:49,190 --> 00:04:57,050
+So we passed the array and the left most index and the right and most index we are segmenting here and
+
+46
+00:04:57,060 --> 00:04:57,890
+part the chin.
+
+47
+00:04:58,100 --> 00:05:01,740
+This is the partition like this and part of this?
+
+48
+00:05:02,930 --> 00:05:03,440
+OK.
+
+49
+00:05:04,470 --> 00:05:11,470
+And we call recursively that quick sword method again and gain by blessing.
+
+50
+00:05:11,490 --> 00:05:19,440
+And today we pass left most index and the pivot index minus then the quick sort.
+
+51
+00:05:19,740 --> 00:05:30,300
+Also being cold because the recursively is being applied and the pivot index is passed as a barometer
+
+52
+00:05:30,300 --> 00:05:39,780
+of the left most index and the rightmost index is what's also called and and passed as the parameter.
+
+53
+00:05:40,680 --> 00:05:50,340
+Remember, guys, there is one trick here we have called two times a recursively that quick sort.
+
+54
+00:05:50,610 --> 00:05:53,790
+But the first time is the left most index.
+
+55
+00:05:53,790 --> 00:06:02,550
+We passed this parameter and in the second step we passed the rightmost index as a sixth as the and
+
+56
+00:06:02,760 --> 00:06:05,070
+as a parameter for that right.
+
+57
+00:06:05,220 --> 00:06:17,250
+So this will allow us to make this recursively to sort fully supporting the left at the first after
+
+58
+00:06:17,250 --> 00:06:25,260
+we have reaches that segmentation and we have partitioned it into single elements.
+
+59
+00:06:25,560 --> 00:06:33,090
+We go back and we call a recursively the quick sort method and we pass that right.
+
+60
+00:06:33,100 --> 00:06:37,200
+Most index and we start partition the right.
+
+61
+00:06:38,980 --> 00:06:39,250
+SEC.
+
+62
+00:06:40,210 --> 00:06:41,440
+OK, so.
+
+63
+00:06:42,730 --> 00:06:49,360
+This is the algorithm that we are going to to implement and the next videos.
+
+64
+00:06:50,230 --> 00:06:54,760
+Let's talk about the partition method partition method took into IRA.
+
+65
+00:06:55,850 --> 00:07:05,030
+As and left most index and right index indexes, arguments and parameters, so set right, most indexes
+
+66
+00:07:05,030 --> 00:07:06,050
+pivot index.
+
+67
+00:07:06,350 --> 00:07:14,180
+This is the first step and store the index equal to the left most index minus one store it into their
+
+68
+00:07:14,180 --> 00:07:15,260
+store index.
+
+69
+00:07:16,240 --> 00:07:25,260
+And make a loop for all the elements from it to the left, not left most index to the right most index,
+
+70
+00:07:25,270 --> 00:07:30,090
+so we are going best through all the elements and the tried to swap them.
+
+71
+00:07:30,100 --> 00:07:38,470
+If the element at index I less than pivot, then swap the elements and store them to the left, otherwise
+
+72
+00:07:38,830 --> 00:07:40,690
+put them to the right.
+
+73
+00:07:40,840 --> 00:07:49,120
+This is the part, the method that follows and here and all that quick sort algorithm.
+
+74
+00:07:50,080 --> 00:07:50,440
+OK.
+
+75
+00:07:52,620 --> 00:07:59,760
+Let's talk about the complexity, the time complexity for the quick sort algorithm is in the best case
+
+76
+00:07:59,760 --> 00:08:10,020
+is end times luck and because we are making the best case occurs when the partition process always picked
+
+77
+00:08:10,020 --> 00:08:12,600
+the middle element as before.
+
+78
+00:08:12,840 --> 00:08:21,360
+So the best case is here, it's occurring while taking, always picking the middle element.
+
+79
+00:08:21,360 --> 00:08:31,620
+As before, the worst case scenario occurs when the partition process always pick the greatest or the
+
+80
+00:08:31,620 --> 00:08:36,060
+smallest element as if so on the square.
+
+81
+00:08:36,750 --> 00:08:38,790
+The average is end times.
+
+82
+00:08:38,790 --> 00:08:43,530
+Look at OK to do average case analysis.
+
+83
+00:08:43,530 --> 00:08:50,040
+We need to consider all possible permutation of array and calculate time taken by every permutation,
+
+84
+00:08:50,340 --> 00:08:52,140
+which does not look easy.
+
+85
+00:08:52,380 --> 00:08:58,320
+So this is like an average closer for the best.
+
+86
+00:08:59,880 --> 00:09:11,850
+The space complexity, the space complexity of of the quick sort is plug and OK and their stability,
+
+87
+00:09:11,850 --> 00:09:13,980
+it is not stable.
+
+88
+00:09:14,220 --> 00:09:17,440
+So is a quick stress or stable.
+
+89
+00:09:18,850 --> 00:09:21,450
+The default implementation is not stable.
+
+90
+00:09:21,540 --> 00:09:31,260
+However, any sorting algorithm can be made stable by considering the this that in this is as comparison,
+
+91
+00:09:31,620 --> 00:09:32,740
+but a meter.
+
+92
+00:09:33,440 --> 00:09:35,820
+Okay, this is the trick.
+
+93
+00:09:35,970 --> 00:09:40,980
+This is the trick by considering that in this is as comparison per meter.
+
+94
+00:09:41,340 --> 00:09:47,970
+This is the trick that makes that any sorting algorithm considered as a stable.
+
+95
+00:09:48,660 --> 00:09:58,470
+So after learning much more about the quick sort, let's implement it in C language and next videos
+
+96
+00:09:58,740 --> 00:10:00,990
+that we are going to solve the exercise.

@@ -1,0 +1,207 @@
+1
+00:00:00,090 --> 00:00:07,350
+It's talk about sorting algorithms, sorting is an algorithm that arranges the element of a list in
+
+2
+00:00:07,350 --> 00:00:16,590
+a certain order, either increasing or decreasing the output is a permutation or reordering of the input.
+
+3
+00:00:16,830 --> 00:00:19,800
+So this is the output of our Imp.
+
+4
+00:00:20,460 --> 00:00:27,630
+Sorting is one of the important categories of algorithms in computer science, and a lot of research
+
+5
+00:00:27,630 --> 00:00:29,820
+has gone into this category.
+
+6
+00:00:30,390 --> 00:00:39,750
+Sorting can significantly reduce the complexity of a problem and is often used for a database algorithm
+
+7
+00:00:39,750 --> 00:00:43,980
+and researchers consider and sort unsorted.
+
+8
+00:00:43,980 --> 00:00:53,100
+Array nine one three two seven four Using the sorting algorithms, we can sort that away by increasing
+
+9
+00:00:53,100 --> 00:00:58,590
+or decreasing order, but in this example, we have sorted it in increasing order.
+
+10
+00:00:58,680 --> 00:01:01,830
+So step by one, two, three four and seven nine.
+
+11
+00:01:04,260 --> 00:01:13,520
+Different sorting algorithms, so we have many different sorting algorithms, and we are going to have
+
+12
+00:01:13,560 --> 00:01:19,310
+make and practice on all of these different sorting algorithms and see.
+
+13
+00:01:19,590 --> 00:01:29,760
+And in Java, and we took an examples about how which one is more faster and which one is the best case
+
+14
+00:01:29,760 --> 00:01:32,130
+scenario to fit that problem.
+
+15
+00:01:32,430 --> 00:01:40,740
+So don't worry, we are going to express and explain every of every different sorting algorithms in
+
+16
+00:01:40,770 --> 00:01:41,700
+the next to it.
+
+17
+00:01:41,820 --> 00:01:42,240
+So.
+
+18
+00:01:43,210 --> 00:01:53,290
+We have sorting algorithms, bubble sort, selection, sort in search and sort merge, sort quick,
+
+19
+00:01:53,290 --> 00:02:03,310
+sort counting, sort Roddick's sort bucket, sort heaped sort and channel sort.
+
+20
+00:02:05,500 --> 00:02:14,620
+Classifications of sorting algorithms, we can classify the sorting algorithms by number of comparisons
+
+21
+00:02:14,620 --> 00:02:15,640
+in this method.
+
+22
+00:02:16,000 --> 00:02:21,040
+Sorting algorithms are classified based on the number of comparisons.
+
+23
+00:02:21,470 --> 00:02:21,810
+OK.
+
+24
+00:02:22,930 --> 00:02:30,880
+For comparison based sorting algorithms, best case behavior, behavior is all and look and and worst
+
+25
+00:02:30,880 --> 00:02:38,260
+case behavior is oh, and this quick comparison based sorting algorithms evaluate the element of the
+
+26
+00:02:38,270 --> 00:02:46,540
+list by key comparison operator and need at least all and look and comparisons for the most inputs.
+
+27
+00:02:46,930 --> 00:02:54,820
+We all see in every example how that complexity, how time, complexity and space complexity for every
+
+28
+00:02:55,420 --> 00:03:03,220
+sorting algorithm works, and what is the difference between all of other sorting algorithms?
+
+29
+00:03:04,580 --> 00:03:12,560
+Also, the second classification for four sorting algorithms is by number of swaps in the method in
+
+30
+00:03:12,560 --> 00:03:21,470
+this method, sorting algorithms that are characterized by categorized by the number of swaps also called
+
+31
+00:03:21,470 --> 00:03:22,430
+inversions.
+
+32
+00:03:22,880 --> 00:03:23,380
+OK.
+
+33
+00:03:23,930 --> 00:03:28,880
+We'll see how the swaps bear starts like in the bubbles, all sorts.
+
+34
+00:03:28,880 --> 00:03:39,020
+And so by memory usage, some sorting algorithms are in place and they need all of one or all log and
+
+35
+00:03:39,020 --> 00:03:46,670
+memory as space complexity to create axillary locations for sorting and data temperature.
+
+36
+00:03:47,450 --> 00:03:52,610
+OK, so this is that the space complex by my memory usage.
+
+37
+00:03:54,550 --> 00:04:02,920
+The fourth classification is by recursion sorting algorithms are either recursive like a quick sword
+
+38
+00:04:03,250 --> 00:04:06,820
+or non recursive like selection and insertions.
+
+39
+00:04:07,510 --> 00:04:15,070
+And there are some algorithms which are used that both verdict urgent and non-recurring.
+
+40
+00:04:15,250 --> 00:04:16,690
+Like Merge sort.
+
+41
+00:04:16,960 --> 00:04:23,890
+So don't worry, we are going to introduce all of these in the next videos and discuss all of these
+
+42
+00:04:23,890 --> 00:04:30,520
+classifications in every algorithm by adaptability.
+
+43
+00:04:31,060 --> 00:04:33,730
+With a few sorting algorithms.
+
+44
+00:04:33,880 --> 00:04:43,010
+The complexity changes based on the pre sorted ness like we saw and the British assertiveness of their
+
+45
+00:04:43,060 --> 00:04:45,920
+input affects the running time.
+
+46
+00:04:46,300 --> 00:04:51,710
+So algorithms that take into account are known to be adaptive.
+
+47
+00:04:52,660 --> 00:04:56,710
+OK, so these are the classifications of sorting algorithms.
+
+48
+00:04:56,950 --> 00:05:01,870
+We will introduce for every, every sorting algorithm.
+
+49
+00:05:02,990 --> 00:05:10,400
+That these classifications, that time complexity, the space complexity, how it's used a recursion
+
+50
+00:05:10,400 --> 00:05:17,150
+or not, and the number of swabs and also we will make a comparison between it and the other sorting
+
+51
+00:05:17,150 --> 00:05:22,580
+algorithms and why we use this and where is the situation and when we use it.
+
+52
+00:05:22,880 --> 00:05:26,810
+OK, so let's begin learning about.

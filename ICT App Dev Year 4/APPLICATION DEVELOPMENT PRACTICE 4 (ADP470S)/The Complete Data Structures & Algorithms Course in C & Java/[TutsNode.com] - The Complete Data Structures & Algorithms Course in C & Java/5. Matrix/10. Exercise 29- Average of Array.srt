@@ -1,0 +1,367 @@
+1
+00:00:00,090 --> 00:00:03,330
+Hello, all my friends, and welcome to exercise number 29.
+
+2
+00:00:04,020 --> 00:00:12,870
+We are asked to ride the program to calculate the average value of array elements, so both the video
+
+3
+00:00:12,870 --> 00:00:22,130
+and think about the algorithm, how to write the algorithm of this exercise that get the value of array
+
+4
+00:00:22,140 --> 00:00:28,500
+of elements and make the average based on their length or their number.
+
+5
+00:00:28,890 --> 00:00:37,740
+So I'm waiting your comments in the link below and the description below, so I need from you to make
+
+6
+00:00:37,740 --> 00:00:40,500
+this program and write them down.
+
+7
+00:00:41,250 --> 00:00:46,620
+So let's go to that idea and start making and thinking about this product.
+
+8
+00:00:48,070 --> 00:00:59,850
+So I will solve it in a Java, because it's fairly common with C and C++ and and also common with Python,
+
+9
+00:00:59,860 --> 00:01:06,400
+so I'm I'm learning and teaching you and this course, the algorithm, I'm not me and not teaching you
+
+10
+00:01:06,400 --> 00:01:07,120
+this syntax.
+
+11
+00:01:07,120 --> 00:01:14,050
+If you want the syntax, we have many courses that teaches you a Java, Kotlin, Android and so on.
+
+12
+00:01:14,290 --> 00:01:21,160
+So what we will do in order to calculate the average of an array.
+
+13
+00:01:21,460 --> 00:01:23,340
+Think about like 10 numbers.
+
+14
+00:01:23,350 --> 00:01:25,270
+This array contains 10 numbers.
+
+15
+00:01:25,600 --> 00:01:35,860
+I need to get all the values of these 10 numbers and divide them by 10 because they are the length or
+
+16
+00:01:35,860 --> 00:01:36,490
+the element.
+
+17
+00:01:36,540 --> 00:01:38,750
+Number of these elements is 10.
+
+18
+00:01:39,340 --> 00:01:40,630
+So how to do that?
+
+19
+00:01:41,320 --> 00:01:53,650
+Let's think about and array called numbers OK, equal to new end end array.
+
+20
+00:01:54,820 --> 00:01:58,690
+And this entry contains like.
+
+21
+00:02:02,150 --> 00:02:08,300
+The grades of mathematical, mathematical class, math class.
+
+22
+00:02:09,770 --> 00:02:20,990
+12, four, 13, 14, seven, 16, 13, 11.
+
+23
+00:02:22,510 --> 00:02:26,170
+This are six students, OK now.
+
+24
+00:02:28,550 --> 00:02:37,130
+The first step is to calculate the sum of all Adelaide elements.
+
+25
+00:02:39,370 --> 00:02:45,890
+I will create and sum equal to zero the start there was the song.
+
+26
+00:02:46,570 --> 00:02:48,520
+OK, so we need the first step.
+
+27
+00:02:49,000 --> 00:02:50,380
+I will mark them here.
+
+28
+00:02:51,700 --> 00:02:53,560
+First step.
+
+29
+00:02:54,340 --> 00:03:00,940
+I love comments because if you need that course, this that to ride the course or to read it, to write
+
+30
+00:03:01,330 --> 00:03:05,380
+the exercises or to solve exercises.
+
+31
+00:03:05,380 --> 00:03:11,730
+Also, you need to make and segment old and partition all the steps correctly.
+
+32
+00:03:12,010 --> 00:03:18,160
+And also, if you need to revise them for the exam or to interview, you know what we have done.
+
+33
+00:03:18,370 --> 00:03:18,790
+OK?
+
+34
+00:03:19,150 --> 00:03:27,010
+Despite spending many time and many hours like thinking what we have done, why we are using the summer,
+
+35
+00:03:27,220 --> 00:03:34,750
+because we need to make this sum and then divide them over that length of the array, it's very simple.
+
+36
+00:03:35,050 --> 00:03:35,410
+OK.
+
+37
+00:03:36,840 --> 00:03:44,400
+For I will start for I told you that when you see an array, think about using the loops because we
+
+38
+00:03:44,400 --> 00:03:55,920
+need to traverse through the array elements while PN numbers dot length and I plus plus OK, I need
+
+39
+00:03:55,920 --> 00:04:01,560
+to get the some the previous that a new sum equal to that old.
+
+40
+00:04:01,710 --> 00:04:05,370
+Some last numbers at I.
+
+41
+00:04:05,610 --> 00:04:05,970
+OK.
+
+42
+00:04:06,300 --> 00:04:15,480
+And this way I am getting the sum of all the elements right elements and stored it inside the sun.
+
+43
+00:04:15,540 --> 00:04:22,200
+So the first step here we are getting the summation of all of these elements.
+
+44
+00:04:22,770 --> 00:04:23,250
+OK.
+
+45
+00:04:23,430 --> 00:04:28,500
+So let me try to solve it with mathematics.
+
+46
+00:04:28,500 --> 00:04:36,090
+12 plus 13 plus 14 plus 16 plus 13 plus 11 equals 17.
+
+47
+00:04:36,870 --> 00:04:37,590
+79.
+
+48
+00:04:38,430 --> 00:04:42,780
+OK, now some is equal to 79.
+
+49
+00:04:44,340 --> 00:04:52,020
+The second step is calculating that average.
+
+50
+00:04:53,820 --> 00:05:04,200
+Then, you know, from mathematics, like the average of the sum, the sum of all elements is divided
+
+51
+00:05:04,200 --> 00:05:06,270
+by number of elements.
+
+52
+00:05:06,280 --> 00:05:11,310
+So we have one, two, three, four, five and six.
+
+53
+00:05:11,340 --> 00:05:13,260
+So if we divide seven nine.
+
+54
+00:05:14,570 --> 00:05:14,920
+Sorry.
+
+55
+00:05:15,730 --> 00:05:19,490
+79 divided by six.
+
+56
+00:05:19,700 --> 00:05:23,510
+This is the average, it's thirteen point sixteen.
+
+57
+00:05:23,690 --> 00:05:29,180
+OK, we are dividing them by the number of the elements.
+
+58
+00:05:29,750 --> 00:05:41,780
+So for that, we need to create a double because the average would be afloat some over.
+
+59
+00:05:42,530 --> 00:05:45,910
+What is the number of are number?
+
+60
+00:05:46,460 --> 00:05:48,290
+Are these numbers raise?
+
+61
+00:05:48,380 --> 00:05:49,100
+It's a six.
+
+62
+00:05:49,280 --> 00:05:52,450
+But this is this isn't the case.
+
+63
+00:05:52,460 --> 00:05:53,840
+We know the numbers.
+
+64
+00:05:55,440 --> 00:05:55,950
+Length.
+
+65
+00:05:56,040 --> 00:06:04,850
+OK, so these are the number six, but if I don't know their numbers, if I create an array like 100.
+
+66
+00:06:05,980 --> 00:06:16,590
+No, and I tell a the user to enter what he what he want from the numbers he entered like 10 numbers.
+
+67
+00:06:16,770 --> 00:06:20,880
+So the length it will not be 100, it would be 10.
+
+68
+00:06:20,890 --> 00:06:30,180
+So in this case, the dynamics of dynamic length of the array depends on the number of the elements.
+
+69
+00:06:30,180 --> 00:06:36,480
+So it would be solving the problem by using no dog length.
+
+70
+00:06:36,900 --> 00:06:43,050
+This is why we use the average the sum.
+
+71
+00:06:44,190 --> 00:06:47,040
+Over the numbers, though, at length.
+
+72
+00:06:47,940 --> 00:06:54,600
+Now let's a print system that's print on the screen there or in the console.
+
+73
+00:06:55,110 --> 00:06:57,210
+The result?
+
+74
+00:06:57,390 --> 00:07:03,480
+So since them got out that print average value of the array.
+
+75
+00:07:06,430 --> 00:07:11,350
+Is everything OK, let's run and see.
+
+76
+00:07:15,960 --> 00:07:21,270
+And the average value of the array is is thirteen point zero.
+
+77
+00:07:21,600 --> 00:07:23,580
+It's very good.
+
+78
+00:07:23,940 --> 00:07:24,290
+OK.
+
+79
+00:07:25,140 --> 00:07:28,890
+We are dividing the sum over the length of the.
+
+80
+00:07:31,330 --> 00:07:34,240
+Let me check again the some.
+
+81
+00:07:35,680 --> 00:07:38,500
+And here we go, it's about 30.
+
+82
+00:07:38,980 --> 00:07:39,340
+OK.
+
+83
+00:07:40,690 --> 00:07:42,430
+But there is a problem here.
+
+84
+00:07:42,430 --> 00:07:46,720
+If we run it again, we see that the average is 13 one zero.
+
+85
+00:07:46,720 --> 00:07:49,980
+It's not displaying the decimal part.
+
+86
+00:07:49,990 --> 00:07:58,780
+So we need to make light to cast it, to double here, just casting it and let's run again.
+
+87
+00:07:59,830 --> 00:08:00,930
+And here we go.
+
+88
+00:08:00,940 --> 00:08:04,900
+We have thirteen point sixty six nine six two six six six.
+
+89
+00:08:05,050 --> 00:08:05,410
+OK.
+
+90
+00:08:05,590 --> 00:08:07,300
+So it's very simple.
+
+91
+00:08:07,300 --> 00:08:15,370
+This is the algorithm of how to make a program that calculate the average value of element.
+
+92
+00:08:16,320 --> 00:08:16,830
+Of their.

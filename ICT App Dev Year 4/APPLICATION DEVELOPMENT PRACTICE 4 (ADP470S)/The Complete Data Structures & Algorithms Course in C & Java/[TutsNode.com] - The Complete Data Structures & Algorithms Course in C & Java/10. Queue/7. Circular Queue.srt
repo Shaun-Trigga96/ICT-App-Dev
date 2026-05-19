@@ -1,0 +1,275 @@
+1
+00:00:00,330 --> 00:00:04,410
+Hello, my friends, there are many types of the queue.
+
+2
+00:00:05,070 --> 00:00:07,590
+We have four different types of thank you.
+
+3
+00:00:07,740 --> 00:00:08,820
+A simple queue.
+
+4
+00:00:09,240 --> 00:00:10,460
+The circular queue.
+
+5
+00:00:10,680 --> 00:00:14,070
+The Priority queue and double and the queue.
+
+6
+00:00:14,760 --> 00:00:21,510
+We have seen in the previous videos how to implement the queue using the array and the link at less
+
+7
+00:00:21,990 --> 00:00:23,940
+so in a simple queue.
+
+8
+00:00:24,480 --> 00:00:29,730
+Insertion takes place at the rear and the removal occurs at the from.
+
+9
+00:00:30,180 --> 00:00:34,980
+It strictly follows the fee for first in, first out rule.
+
+10
+00:00:35,460 --> 00:00:38,760
+This is the insertion and this is that deletion.
+
+11
+00:00:40,370 --> 00:00:46,610
+And we have taken many example about this simple cue, and we have implemented it using arrays and linked
+
+12
+00:00:46,610 --> 00:00:47,060
+lists.
+
+13
+00:00:48,170 --> 00:00:58,490
+Now the circle of Q a circular Q is that extended version of a regular Q, where that last element in
+
+14
+00:00:58,490 --> 00:01:04,970
+the code is connected to the first element, thus forming a circle like structure.
+
+15
+00:01:05,700 --> 00:01:08,640
+Consider it Q Would that have eight elements here?
+
+16
+00:01:08,660 --> 00:01:11,720
+One two, three, four, five, six and seven.
+
+17
+00:01:12,200 --> 00:01:14,240
+And they are added together.
+
+18
+00:01:14,600 --> 00:01:16,280
+0.7 connected.
+
+19
+00:01:18,240 --> 00:01:21,910
+Let's take an example about the usage of the circular queue.
+
+20
+00:01:21,960 --> 00:01:29,370
+The circular queue solves the major limitation of the normal queue in a normal queue after a bit of
+
+21
+00:01:29,370 --> 00:01:31,090
+insertion and deletion.
+
+22
+00:01:31,110 --> 00:01:41,100
+There will be none usable, empty space here, and this is zero and one can only be used after resetting
+
+23
+00:01:41,100 --> 00:01:43,740
+the queue deleting of all elements.
+
+24
+00:01:44,070 --> 00:01:46,920
+This reduces the actual size of the queue.
+
+25
+00:01:48,560 --> 00:01:55,730
+Circle Q works by the process of circle or increment example, when we tried to increment the pointer
+
+26
+00:01:55,730 --> 00:02:00,530
+and we reached the end of the queue, we started from the beginning of the queue.
+
+27
+00:02:01,500 --> 00:02:10,080
+This is very important note that we are going to work with in the next couple of videos and we are going
+
+28
+00:02:10,080 --> 00:02:18,020
+to implement the circular Q and see and we are going to implement the circular queue in Java.
+
+29
+00:02:18,900 --> 00:02:22,680
+Now let's see how this circular queue works.
+
+30
+00:02:23,160 --> 00:02:24,660
+This is an empty queue.
+
+31
+00:02:25,050 --> 00:02:26,430
+Empty circular queue.
+
+32
+00:02:26,910 --> 00:02:30,990
+We have two and this is the front and the rear.
+
+33
+00:02:31,230 --> 00:02:36,180
+They are pointing to minus one in case of they are empty.
+
+34
+00:02:36,570 --> 00:02:46,950
+If I added five elements to their queue, then the front will be increased by by one and increasing
+
+35
+00:02:46,950 --> 00:02:54,540
+that to the first element that have been inserted and the rear will increase to the last element that
+
+36
+00:02:54,540 --> 00:02:56,190
+have been inserted.
+
+37
+00:02:56,490 --> 00:02:56,940
+OK.
+
+38
+00:02:58,020 --> 00:03:06,420
+So this queue contains only five elements and accepts only five elements because its size is five and
+
+39
+00:03:07,140 --> 00:03:09,280
+we have added five elements.
+
+40
+00:03:09,360 --> 00:03:17,640
+The front will indicate the first element is inserted and the rear will be inserting, indicating the
+
+41
+00:03:17,640 --> 00:03:20,220
+element that have been lastly insert.
+
+42
+00:03:20,910 --> 00:03:29,190
+We have inserted this queue by the by, by the way, by one, two, three, four and five.
+
+43
+00:03:29,520 --> 00:03:33,210
+So the first one is what the first element is.
+
+44
+00:03:33,220 --> 00:03:33,440
+One.
+
+45
+00:03:34,450 --> 00:03:34,810
+Now.
+
+46
+00:03:36,470 --> 00:03:43,400
+If we need to remove and deck from this circular queue, one and two.
+
+47
+00:03:44,000 --> 00:03:50,450
+Two elements, the first two elements, because that will remove the top elements, the first elements
+
+48
+00:03:50,450 --> 00:03:52,820
+that have been added.
+
+49
+00:03:53,390 --> 00:04:03,710
+So the front will be increased and points to the next of these removed elements that will indicate number
+
+50
+00:04:03,710 --> 00:04:04,040
+three.
+
+51
+00:04:04,820 --> 00:04:13,520
+Now, if I added a new element to this queue, this queue will not add it at the rear.
+
+52
+00:04:14,000 --> 00:04:22,910
+It will add it in there in in this queue, in a circular queue because it is working as a circle.
+
+53
+00:04:23,090 --> 00:04:26,570
+So where is there is an empty space?
+
+54
+00:04:26,840 --> 00:04:31,080
+It will add that elements to this empty space.
+
+55
+00:04:31,580 --> 00:04:40,760
+So the front will keep indicating that three is at the front and rear moves, the then newly created
+
+56
+00:04:41,060 --> 00:04:43,580
+and newly inserted element.
+
+57
+00:04:44,240 --> 00:04:54,260
+If I insert a new element call number seven, the front will still indicating number three and the rear
+
+58
+00:04:54,260 --> 00:04:57,200
+moves towards the newly added.
+
+59
+00:04:58,390 --> 00:05:00,070
+Element inside the circular circle.
+
+60
+00:05:01,820 --> 00:05:10,250
+You notice, guys, how the circular Q algorithm and how this data structure works, it's still indicating
+
+61
+00:05:10,250 --> 00:05:22,940
+two things the front which is added and the recent most recently added element and and sort most old
+
+62
+00:05:22,940 --> 00:05:31,100
+and the oldest element that have been added and they're here will indicate that last element have been
+
+63
+00:05:31,100 --> 00:05:32,510
+added to the queue.
+
+64
+00:05:32,780 --> 00:05:41,210
+So front indicate the first element that been added to this Q and the red indicates the last element
+
+65
+00:05:41,210 --> 00:05:42,800
+have been added to that Q.
+
+66
+00:05:43,890 --> 00:05:51,330
+Despite that order, like six, seven, three, four five, this is in a normal queue will indicate
+
+67
+00:05:51,330 --> 00:06:00,200
+that the front is six and remove if we deck from this since normal queue, it will remove six.
+
+68
+00:06:00,210 --> 00:06:08,730
+But since we are using a circular queue, if we now make execution of deck, it will remove number three
+
+69
+00:06:08,910 --> 00:06:12,420
+and give it space for another in queuing.

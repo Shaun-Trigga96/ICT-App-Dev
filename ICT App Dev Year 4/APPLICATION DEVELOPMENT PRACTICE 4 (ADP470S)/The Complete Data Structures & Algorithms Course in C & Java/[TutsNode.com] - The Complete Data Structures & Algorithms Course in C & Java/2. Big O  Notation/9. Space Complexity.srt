@@ -1,0 +1,167 @@
+1
+00:00:00,180 --> 00:00:03,960
+Complexity, this does not mean about only time.
+
+2
+00:00:04,590 --> 00:00:06,390
+It's also about the space.
+
+3
+00:00:06,510 --> 00:00:16,140
+So there is space complexity of an algorithm or a computer program that it is the amount of memory space
+
+4
+00:00:16,140 --> 00:00:24,250
+required to solve an instance of the computational problem as a function of characteristics of the end.
+
+5
+00:00:24,990 --> 00:00:32,610
+It is that memory required by an algorithm until it executes completely.
+
+6
+00:00:34,790 --> 00:00:41,870
+Exeter is space some time ancillary space is confused with space complexity, but the exhilarating space
+
+7
+00:00:41,870 --> 00:00:49,250
+is the extra space or the temporary space used by the algorithm during its execution.
+
+8
+00:00:49,850 --> 00:00:55,310
+So the space complexity in total is equal to the exhilarating space, plus the input space.
+
+9
+00:00:55,820 --> 00:00:56,780
+What does this mean?
+
+10
+00:00:58,400 --> 00:01:00,140
+Calculating this space complex.
+
+11
+00:01:01,440 --> 00:01:08,340
+For complete, for calculating the base complexity, we need to know the value of memory used by different
+
+12
+00:01:08,340 --> 00:01:11,310
+types of data types and variables.
+
+13
+00:01:12,240 --> 00:01:19,170
+Which generally varies for different operating system, but the method for calculating the space complexity
+
+14
+00:01:19,170 --> 00:01:20,250
+remains the same.
+
+15
+00:01:20,520 --> 00:01:28,950
+For example, if we look about the Boolean Boolean takes in the memory, one bite.
+
+16
+00:01:29,520 --> 00:01:32,010
+So one bite is equal to eight bits.
+
+17
+00:01:32,910 --> 00:01:41,160
+Also, the GAO, a car or any of these variables at the end Java, we see the Boolean and the character
+
+18
+00:01:41,370 --> 00:01:43,620
+C and Python.
+
+19
+00:01:43,800 --> 00:01:47,030
+These data structures are primitives.
+
+20
+00:01:47,850 --> 00:01:48,170
+OK.
+
+21
+00:01:48,840 --> 00:01:56,940
+Also, in databases like Serial B, the other things are being present.
+
+22
+00:01:58,790 --> 00:02:02,780
+If we took the short and unsigned short.
+
+23
+00:02:03,960 --> 00:02:15,090
+Or insisting in other languages, we have two bites and the float and and long it took four bites.
+
+24
+00:02:15,300 --> 00:02:25,260
+And sometimes they're long long, which is the long, double or double and Java Python and see the about
+
+25
+00:02:25,260 --> 00:02:26,400
+eight bites.
+
+26
+00:02:27,440 --> 00:02:35,210
+So what do we need to know here is calculating the space complexity by taking a few examples.
+
+27
+00:02:37,910 --> 00:02:51,380
+Let's see this method public and some it took imperative meter in A and B and return a plus B, so.
+
+28
+00:02:53,130 --> 00:02:56,580
+And a hair is a value.
+
+29
+00:02:56,880 --> 00:03:00,690
+And we said that the end has for.
+
+30
+00:03:01,800 --> 00:03:06,270
+Bites took about four bites in their memory.
+
+31
+00:03:06,930 --> 00:03:17,040
+So the variables A and B are integer types since they will take up to four bytes each.
+
+32
+00:03:19,290 --> 00:03:28,980
+We have also returned a statement, which is, in fact it is making a new variable for calculating A-plus
+
+33
+00:03:28,980 --> 00:03:37,140
+B, so consider a variable called sum or consider a variable called K.
+
+34
+00:03:38,290 --> 00:03:47,800
+Gay equal A-plus B, So we have created a variable K or a new variable for making the addition, and
+
+35
+00:03:47,800 --> 00:03:49,180
+we're returning this result.
+
+36
+00:03:49,600 --> 00:03:58,870
+This will make a new variable of type and and this means that we have four bytes for the return value.
+
+37
+00:03:59,410 --> 00:04:08,290
+OK, so the total memory requirement will be due for integer the above 30 meters plus four for the returning
+
+38
+00:04:08,290 --> 00:04:09,550
+value hence.
+
+39
+00:04:10,720 --> 00:04:19,450
+This algorithm always takes 12 bytes of memory to complete, which is constant, so it can be expressed
+
+40
+00:04:19,990 --> 00:04:22,330
+in Big O as of one.
+
+41
+00:04:22,720 --> 00:04:31,300
+So this algorithm in terms of space complexity, its complexity is of one because at this cost.
+
+42
+00:04:31,720 --> 00:04:39,850
+Now let's move to exercise number two in the complexity and find this space complexity of this function.

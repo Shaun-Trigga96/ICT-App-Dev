@@ -1,0 +1,515 @@
+1
+00:00:00,270 --> 00:00:05,490
+We have learned in the previous video about the binary search three operations.
+
+2
+00:00:05,970 --> 00:00:13,290
+Now let's try to implement the binary search tree and its operation in sea.
+
+3
+00:00:13,740 --> 00:00:14,130
+So.
+
+4
+00:00:15,760 --> 00:00:23,710
+In order to create the binary search tree and we started working with it, we asked Abstract Node and
+
+5
+00:00:23,710 --> 00:00:24,920
+then send this note.
+
+6
+00:00:24,940 --> 00:00:33,130
+We put the key, which is F-Type, and you can make it the type car that string or any object or any
+
+7
+00:00:33,130 --> 00:00:38,980
+primitive data and struck note to the left and right since we are dealing with it.
+
+8
+00:00:38,980 --> 00:00:39,390
+Three.
+
+9
+00:00:39,460 --> 00:00:49,360
+So we have this struct note this structure node structure of the note Typekit key that it is or a data
+
+10
+00:00:49,360 --> 00:00:58,030
+that we are going to insert it inside it and we need a left and right reference.
+
+11
+00:00:58,420 --> 00:00:58,770
+OK.
+
+12
+00:00:59,050 --> 00:01:01,000
+This is what we learned in the trees.
+
+13
+00:01:03,420 --> 00:01:13,950
+We create A. We create a new node method that took into the perimeter the same type of that key that
+
+14
+00:01:13,950 --> 00:01:18,640
+we have created in the node, and we start by creating a new temp.
+
+15
+00:01:18,720 --> 00:01:24,180
+We allocate the memory by creating the known reserve, the memory by a new node hole.
+
+16
+00:01:24,180 --> 00:01:24,630
+10.
+
+17
+00:01:26,100 --> 00:01:32,220
+And inside this dump, we put a key equal to the item first item in the arguments.
+
+18
+00:01:32,940 --> 00:01:38,820
+And we initialize them left equal to that price, equal to now.
+
+19
+00:01:38,880 --> 00:01:44,610
+We initialize the left and the right pointer to the left to null and return tap.
+
+20
+00:01:44,760 --> 00:01:52,470
+This is how we create a new node in three, and we have learned this before in many cities.
+
+21
+00:01:54,580 --> 00:02:04,420
+In order traversal, we have seen also this in or traversal in the in order post order and pre-order
+
+22
+00:02:04,570 --> 00:02:05,110
+video.
+
+23
+00:02:05,140 --> 00:02:12,460
+So please go back to that three traversal video and to learn more about this method.
+
+24
+00:02:13,630 --> 00:02:18,370
+Anyway, I am going to say that this an order method.
+
+25
+00:02:19,670 --> 00:02:25,430
+Took into the perimeter of the route that we had to go at the root node that we are going to work with,
+
+26
+00:02:25,940 --> 00:02:33,500
+and we start if the route does not equal to null, if route does not equal to null, then traverse left
+
+27
+00:02:34,490 --> 00:02:36,560
+in order the route to the left.
+
+28
+00:02:36,560 --> 00:02:45,740
+We are going to use the recursion here in order to pass the route to the left every time until reaching
+
+29
+00:02:45,740 --> 00:02:49,550
+the root does not the root equal equal to none.
+
+30
+00:02:50,300 --> 00:02:52,310
+Please go back to the previous video.
+
+31
+00:02:52,340 --> 00:02:57,530
+In previous videos about the three traversal in order to get deeply.
+
+32
+00:02:58,620 --> 00:03:03,390
+And digging into that in order to reverse and other order traversal.
+
+33
+00:03:04,950 --> 00:03:05,880
+Diverse fruit.
+
+34
+00:03:06,030 --> 00:03:12,450
+We print the and get the key drivers now to that are the same method.
+
+35
+00:03:12,450 --> 00:03:21,000
+We are going to the northern route to the right there in order traversal in general starts by left,
+
+36
+00:03:21,390 --> 00:03:31,260
+printing all the left nodes, then printing the route and then going through and printing all the route
+
+37
+00:03:31,260 --> 00:03:32,370
+to the right.
+
+38
+00:03:32,550 --> 00:03:33,810
+All the notes to the right.
+
+39
+00:03:33,810 --> 00:03:36,740
+So left road and right.
+
+40
+00:03:40,320 --> 00:03:41,430
+Insert A..
+
+41
+00:03:42,090 --> 00:03:52,230
+And this is the operation that we are going to to implement the sorry for my voice and sorry for coughing
+
+42
+00:03:52,230 --> 00:03:55,920
+because I am sick with corona.
+
+43
+00:03:56,310 --> 00:03:59,590
+So and I'm there, I love surgery.
+
+44
+00:03:59,610 --> 00:04:06,750
+It's like keep, keep learning and keep recording new videos for my lovely students and lovely people
+
+45
+00:04:06,750 --> 00:04:07,170
+like you.
+
+46
+00:04:08,010 --> 00:04:18,240
+So insert note we insert we make a new method called insert and we pass into the perimeter.
+
+47
+00:04:18,240 --> 00:04:26,190
+Two things then note that we are going to insert and into this note return in, you know, if the tree
+
+48
+00:04:26,190 --> 00:04:32,670
+is empty, OK, if the note equal equal to null, then return, you note.
+
+49
+00:04:34,050 --> 00:04:35,490
+And we passed the part of me.
+
+50
+00:04:35,820 --> 00:04:42,180
+We create it, OK, we create it by using than, you know, math here.
+
+51
+00:04:48,350 --> 00:04:55,220
+Traverse to the right place and insert the note, if key less than the note that we are going to insert
+
+52
+00:04:55,220 --> 00:04:59,480
+and note key, then go to the left.
+
+53
+00:05:00,020 --> 00:05:02,510
+Otherwise go to the right.
+
+54
+00:05:03,020 --> 00:05:08,360
+This is how we insert in the algorithm of inserting because.
+
+55
+00:05:10,800 --> 00:05:20,940
+Because we are inserting a note that in a binary search, a tree that follows the left sub three values
+
+56
+00:05:21,420 --> 00:05:28,900
+is less than the root and the rights of values or sub three values is greater than the root.
+
+57
+00:05:29,550 --> 00:05:29,940
+OK.
+
+58
+00:05:30,240 --> 00:05:35,200
+For this, we have followed this order.
+
+59
+00:05:35,280 --> 00:05:39,450
+Like, if that no is the key less than the note that we are going to insert.
+
+60
+00:05:39,780 --> 00:05:42,900
+So go to the left, otherwise go to the right.
+
+61
+00:05:43,770 --> 00:05:44,220
+OK.
+
+62
+00:05:45,600 --> 00:05:48,410
+Now, let's find the in order successor.
+
+63
+00:05:48,970 --> 00:05:57,990
+Let's find that we have learned in the in the searching operation we need to or when we delete.
+
+64
+00:05:58,970 --> 00:06:06,050
+In the lead in deletion operation, we need to find the next successor to ensure the success of any
+
+65
+00:06:06,050 --> 00:06:09,470
+note that we are going to delete.
+
+66
+00:06:09,740 --> 00:06:17,840
+So I will divide the deletion into two things there in order finding the in order successor minimal
+
+67
+00:06:17,840 --> 00:06:18,560
+value known.
+
+68
+00:06:20,140 --> 00:06:25,330
+And we are going to start executing that deletion by replacing this.
+
+69
+00:06:26,470 --> 00:06:33,400
+Please go back to the deletion operation into the previous video in order to learn more about the three
+
+70
+00:06:33,400 --> 00:06:34,720
+cases of deletion.
+
+71
+00:06:35,230 --> 00:06:35,770
+OK.
+
+72
+00:06:36,340 --> 00:06:45,760
+We create a note current note, and we start finding that left most left leaf and we start jumping the
+
+73
+00:06:45,760 --> 00:06:51,120
+current cursor to the current left while finding the left mostly.
+
+74
+00:06:52,660 --> 00:06:59,230
+Now, let's consider that deleting operation, deleting, you know, we create a new method called delete
+
+75
+00:06:59,230 --> 00:07:05,590
+note, it took into the perimeter of the road and the key that we are going to delete return if the
+
+76
+00:07:05,590 --> 00:07:07,060
+tree is empty or changing.
+
+77
+00:07:07,060 --> 00:07:12,010
+If the tree is empty, you can delete anything if I find the note to be deleted.
+
+78
+00:07:12,190 --> 00:07:19,960
+We need to search for the key so key less than the root key, then go to the left and delete note.
+
+79
+00:07:20,350 --> 00:07:27,910
+Keep making and keep making this and calling this function in Iraq urgent while maintaining root equal
+
+80
+00:07:27,910 --> 00:07:28,950
+equal to none.
+
+81
+00:07:29,140 --> 00:07:37,470
+This is the stopping condition now that a delete note here, because the key less than the root, the
+
+82
+00:07:37,770 --> 00:07:39,310
+the value of the key of the root.
+
+83
+00:07:39,670 --> 00:07:42,250
+So we need to go to the left.
+
+84
+00:07:43,230 --> 00:07:51,810
+As I told you, binary search tree is very important to understand that the concept of it is the left
+
+85
+00:07:51,810 --> 00:07:53,460
+values of sub.
+
+86
+00:07:53,460 --> 00:08:01,920
+Three of the last three values is less than the at the root, and that eats up tree values is less than
+
+87
+00:08:02,250 --> 00:08:05,530
+is greater than everyone else.
+
+88
+00:08:05,550 --> 00:08:11,850
+Go to the right and delete a note until until reaching the note entirely.
+
+89
+00:08:11,850 --> 00:08:12,180
+Nope.
+
+90
+00:08:12,390 --> 00:08:12,750
+No.
+
+91
+00:08:12,990 --> 00:08:21,030
+If that note is with only one child or no child, a fruit left equal equal to none, then the struck
+
+92
+00:08:21,030 --> 00:08:25,380
+note them before to root the right and the three to the fruit.
+
+93
+00:08:25,500 --> 00:08:26,460
+Delete the fruit.
+
+94
+00:08:27,000 --> 00:08:27,540
+OK.
+
+95
+00:08:29,140 --> 00:08:38,680
+And return them if route right equal to null, then create a new temp root left and free the root,
+
+96
+00:08:38,920 --> 00:08:39,730
+delete the root.
+
+97
+00:08:40,730 --> 00:08:49,760
+If the note has two children, then struck note them minimum value note route to the right and place
+
+98
+00:08:49,760 --> 00:08:57,500
+the inorder successor in position of the note to be delayed the route give them equal turkey.
+
+99
+00:08:58,100 --> 00:09:03,800
+So the reference of the route key in the value equal to the stamp a key.
+
+100
+00:09:04,220 --> 00:09:09,320
+This this is placing the in order successor and we have seen this in the previous video.
+
+101
+00:09:09,320 --> 00:09:14,240
+So please go back in order to learn about that in order successor.
+
+102
+00:09:14,360 --> 00:09:18,170
+How to substitute, then order successor with deleted note.
+
+103
+00:09:18,530 --> 00:09:21,740
+OK, and delete that in order successor.
+
+104
+00:09:24,990 --> 00:09:25,860
+Deleting the No.
+
+105
+00:09:26,400 --> 00:09:34,020
+OK, in this delete note, we have a method we have covered the three cases while deleting the note
+
+106
+00:09:34,020 --> 00:09:42,270
+that it has no children, deleting a note that it is a one child and deleting the note that has two
+
+107
+00:09:42,270 --> 00:09:51,420
+children by the making attempt note, starting it the minimum value and placing the insert in order
+
+108
+00:09:51,420 --> 00:09:57,150
+a successor in the position to the note to be deleted and then deleting the in order a successor and
+
+109
+00:09:57,150 --> 00:09:58,020
+placing it.
+
+110
+00:09:58,350 --> 00:09:58,700
+OK.
+
+111
+00:09:59,430 --> 00:10:01,660
+This is how we delete the note.
+
+112
+00:10:01,680 --> 00:10:04,600
+I told you it is more complex.
+
+113
+00:10:04,860 --> 00:10:12,220
+It's the most complex operation in binary secretary, which is deletion, and it has three cases.
+
+114
+00:10:12,330 --> 00:10:18,780
+Please go back and then the previous video in order to learn more, and we need to create a driver code
+
+115
+00:10:19,320 --> 00:10:28,680
+that test our code in the main so struct nodes wrote the root equal to insert root equal eight value
+
+116
+00:10:28,680 --> 00:10:28,980
+eight.
+
+117
+00:10:28,980 --> 00:10:40,470
+So creating the root and eight and inserting root three, one, six, seven, 10 and 14 and four.
+
+118
+00:10:40,650 --> 00:10:44,190
+OK, we are inserting them now in order traversal.
+
+119
+00:10:44,190 --> 00:10:48,690
+We are printing that in order to the reversal after after deleting the ten.
+
+120
+00:10:49,170 --> 00:10:52,130
+So go and execute delete through.
+
+121
+00:10:52,260 --> 00:10:58,800
+Then in order traversal here is in order root.
+
+122
+00:10:59,010 --> 00:11:00,900
+So we are printing this.
+
+123
+00:11:00,900 --> 00:11:11,550
+I want from you to put this code into your C compiler and I want from you to give me the result and
+
+124
+00:11:11,550 --> 00:11:15,720
+give me the solution of this exercise and the output of this exercise.
+
+125
+00:11:17,010 --> 00:11:18,210
+Enter comments below.
+
+126
+00:11:18,360 --> 00:11:25,950
+In order to discuss more and more, and I want from you also to play with this code and add your numbers,
+
+127
+00:11:25,950 --> 00:11:30,630
+nodes and delete operation or their operation and inserting operation.
+
+128
+00:11:31,020 --> 00:11:33,690
+And please give me the results in the comments below.
+
+129
+00:11:34,710 --> 00:11:40,250
+Let's go to the implementation and if a binary search tree and a.

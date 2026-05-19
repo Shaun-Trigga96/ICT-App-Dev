@@ -1,0 +1,455 @@
+1
+00:00:00,330 --> 00:00:05,070
+Hello, my friends, are welcome to exercise number 123 in this exercise.
+
+2
+00:00:05,400 --> 00:00:14,280
+We are going to implement and create the binary search class in Java, and we will see how the algorithm
+
+3
+00:00:14,280 --> 00:00:21,980
+binary search algorithm works in Java by creating it in a recursive way and an iterative way.
+
+4
+00:00:21,990 --> 00:00:25,260
+So I would create a new class here called binary
+
+5
+00:00:27,900 --> 00:00:29,190
+binary search.
+
+6
+00:00:30,000 --> 00:00:41,220
+And this class will contain the recursive waited for the there and the iteratively so imperative
+
+7
+00:00:43,320 --> 00:00:51,590
+derivative way and the recursive way.
+
+8
+00:00:55,260 --> 00:01:00,900
+So how to do that, we start by making an input.
+
+9
+00:01:01,980 --> 00:01:09,300
+This is public and the returning type of this function public end.
+
+10
+00:01:10,890 --> 00:01:14,100
+And I will call it binary
+
+11
+00:01:16,620 --> 00:01:17,580
+searching.
+
+12
+00:01:19,920 --> 00:01:20,600
+Iterative.
+
+13
+00:01:21,810 --> 00:01:31,050
+OK took into the parameter, the array that we have going to search for inside it and index that it
+
+14
+00:01:31,110 --> 00:01:39,720
+is presenting the variable that we are going to search for and in-flow that lower index of the array
+
+15
+00:01:39,720 --> 00:01:44,580
+and end hide the higher index of only.
+
+16
+00:01:47,030 --> 00:02:04,640
+So here we will repeat, repeat here, repeat until that point was low and high, met each other because
+
+17
+00:02:05,120 --> 00:02:16,220
+we need to do segment and partition that array into two pieces or worse until we have only one piece
+
+18
+00:02:16,580 --> 00:02:19,040
+that's representing the low and the high.
+
+19
+00:02:19,430 --> 00:02:21,890
+And this is are met each other.
+
+20
+00:02:22,010 --> 00:02:31,160
+So while Lou, because you are using the iterative and low less than or equal to high, then what to
+
+21
+00:02:31,160 --> 00:02:31,550
+do?
+
+22
+00:02:32,090 --> 00:02:38,760
+We will create an end made here equal to no.
+
+23
+00:02:38,810 --> 00:02:44,390
+Plus high minus low here and
+
+24
+00:02:47,070 --> 00:02:48,080
+over two.
+
+25
+00:02:49,610 --> 00:03:02,060
+And then I will create if array at index mid here, equal equal to X, then return it.
+
+26
+00:03:03,270 --> 00:03:15,620
+OK, if this is a case of we have segmented the array and in a four is for like a lucky one, we have
+
+27
+00:03:15,620 --> 00:03:27,590
+the array at index middle equal to the X that the outgoing search for otherwise if array at index mid
+
+28
+00:03:29,930 --> 00:03:32,720
+less than X, then.
+
+29
+00:03:38,280 --> 00:03:43,110
+No equal to net plus one as
+
+30
+00:03:47,100 --> 00:03:51,210
+high as equal to men, minus one.
+
+31
+00:03:54,140 --> 00:03:56,780
+OK, then here.
+
+32
+00:03:58,030 --> 00:04:07,270
+This is the wide loop we need to get the first element, which the first condition, which is the middle
+
+33
+00:04:07,270 --> 00:04:08,110
+of the era.
+
+34
+00:04:08,590 --> 00:04:15,070
+If that rate at middle, then X then get the left, otherwise get the right path.
+
+35
+00:04:15,490 --> 00:04:27,160
+If we have met the X over the low and the high and this is together and we don't return anything, then
+
+36
+00:04:27,160 --> 00:04:36,910
+we need to return minus one that indicates that there is no element in such case, so no element.
+
+37
+00:04:37,210 --> 00:04:39,430
+So the element is not found inside.
+
+38
+00:04:39,430 --> 00:04:47,770
+Their Element X is not found in the array array, which is returning the minus one case.
+
+39
+00:04:48,370 --> 00:04:53,560
+OK, let's test this program and test its possible ways.
+
+40
+00:04:53,740 --> 00:05:04,180
+So I will create here public static void main and I will make here string
+
+41
+00:05:07,390 --> 00:05:07,960
+args.
+
+42
+00:05:09,100 --> 00:05:24,020
+I will create an object of this Class B as I search equal to new binary search and we start by entering
+
+43
+00:05:25,750 --> 00:05:28,060
+every year equal to
+
+44
+00:05:35,200 --> 00:05:42,390
+these other variables and equal to a dot length.
+
+45
+00:05:46,090 --> 00:05:47,410
+And we start here.
+
+46
+00:05:47,650 --> 00:06:02,260
+So Int X equal to four int the result equal to binary search dot binary searching, iterative way past
+
+47
+00:06:02,920 --> 00:06:12,550
+with past X with past the lower bound of the array index, which is zero and then minus one, which
+
+48
+00:06:12,550 --> 00:06:13,150
+is the high.
+
+49
+00:06:13,650 --> 00:06:19,720
+So if a result equal equal to minus one,
+
+50
+00:06:24,880 --> 00:06:29,140
+then system out the trend
+
+51
+00:06:32,350 --> 00:06:33,430
+not found.
+
+52
+00:06:33,970 --> 00:06:34,840
+It's very simple.
+
+53
+00:06:35,980 --> 00:06:40,660
+Otherwise, we will present out
+
+54
+00:06:43,960 --> 00:06:44,740
+element
+
+55
+00:06:47,140 --> 00:06:51,510
+found at index clusters.
+
+56
+00:06:53,350 --> 00:06:55,720
+OK, let's run and see.
+
+57
+00:06:57,040 --> 00:07:00,250
+We are searching for a number for inside this Saturday.
+
+58
+00:07:00,580 --> 00:07:08,320
+So the result would be not found if we are searching for here like three.
+
+59
+00:07:09,310 --> 00:07:10,390
+Let's run and see.
+
+60
+00:07:16,930 --> 00:07:17,290
+Oops!
+
+61
+00:07:17,980 --> 00:07:20,770
+So there is some error.
+
+62
+00:07:21,160 --> 00:07:23,530
+OK, we are here.
+
+63
+00:07:24,770 --> 00:07:26,060
+From binary search.
+
+64
+00:07:26,240 --> 00:07:27,260
+OK, so.
+
+65
+00:07:28,040 --> 00:07:35,690
+And this result not found is very logic because we don't pass and assorted array.
+
+66
+00:07:36,170 --> 00:07:43,900
+So this would be confusing for a non sorted thing.
+
+67
+00:07:44,660 --> 00:07:47,840
+Let's search again for this and let's run.
+
+68
+00:07:49,070 --> 00:07:56,870
+And the element is found at Index three, so we start from here no less than or equal to high.
+
+69
+00:07:57,170 --> 00:08:05,900
+And we made all of this condition checking this because we need a sorted array in order to start segmenting
+
+70
+00:08:05,900 --> 00:08:07,050
+like we have segmented.
+
+71
+00:08:07,070 --> 00:08:08,540
+Here are the five.
+
+72
+00:08:08,540 --> 00:08:14,720
+So these elements, these elements are not useful.
+
+73
+00:08:15,080 --> 00:08:16,760
+We segment it here.
+
+74
+00:08:18,440 --> 00:08:20,270
+We are searching for four.
+
+75
+00:08:20,570 --> 00:08:23,960
+So we segment it four to remove them.
+
+76
+00:08:24,320 --> 00:08:33,500
+And now three, which is not used and having one element which is presented and returning value of its
+
+77
+00:08:33,500 --> 00:08:34,040
+ethics.
+
+78
+00:08:34,550 --> 00:08:41,390
+So in this way, we have created that binary search inside interactive way.
+
+79
+00:08:41,750 --> 00:08:45,170
+OK, now let's see if the recursive way
+
+80
+00:08:48,470 --> 00:09:03,800
+we start by making public static void or ends in the same way we start by finally searching for recursive.
+
+81
+00:09:13,820 --> 00:09:20,450
+They're going to of the array if they're going to search inside it and exit that, you can't go and
+
+82
+00:09:20,450 --> 00:09:23,450
+search for enclosed and compact.
+
+83
+00:09:24,320 --> 00:09:31,160
+But this time is very different because we need we are passing the elements low and the high index and
+
+84
+00:09:31,160 --> 00:09:33,950
+y and a recursive way.
+
+85
+00:09:33,950 --> 00:09:46,430
+So the function call itself LA high, equal or greater than equal to low that we make the text the integer
+
+86
+00:09:46,880 --> 00:09:57,140
+made variable, which is equal to low plus high minus low over two.
+
+87
+00:09:58,670 --> 00:10:00,820
+We calculate it and now we're.
+
+88
+00:10:01,430 --> 00:10:08,120
+But if found at MIT, then returned it.
+
+89
+00:10:08,720 --> 00:10:17,150
+If they at Index Med equals equal to X, then what to do?
+
+90
+00:10:17,330 --> 00:10:18,760
+We were at MIT.
+
+91
+00:10:20,900 --> 00:10:26,210
+Otherwise we will search the left path.
+
+92
+00:10:26,960 --> 00:10:31,460
+So if array at index net
+
+93
+00:10:34,610 --> 00:10:41,600
+greater than X, then we will return binary searching recursive method.
+
+94
+00:10:41,930 --> 00:10:48,930
+And we pass the array here that x low and mid minus one.
+
+95
+00:10:48,950 --> 00:10:52,040
+This is the trick the first string, which is made minus one.
+
+96
+00:10:52,550 --> 00:10:56,570
+Now we will search the right half
+
+97
+00:11:02,840 --> 00:11:07,640
+if or we can make a return.
+
+98
+00:11:16,300 --> 00:11:20,800
+Made the plus one now the low and high is the same.
+
+99
+00:11:21,160 --> 00:11:22,720
+So here is the trick.
+
+100
+00:11:23,320 --> 00:11:30,700
+The first time we passed for when we have searched the left half the high as middle minus swan and when
+
+101
+00:11:30,700 --> 00:11:33,100
+we search for the right half, we return.
+
+102
+00:11:33,460 --> 00:11:38,260
+We are past them low as mitt plus one and the high equal to high.
+
+103
+00:11:38,550 --> 00:11:44,980
+OK, otherwise we will return minus one in case we don't found that.
+
+104
+00:11:48,220 --> 00:11:58,690
+Let's go up and test the this in the main function that we have created before, but in this time we
+
+105
+00:11:58,690 --> 00:12:01,420
+need to store here.
+
+106
+00:12:02,860 --> 00:12:06,560
+Binary searching, not iterative.
+
+107
+00:12:06,580 --> 00:12:14,110
+We've passed the recursive Arc zero array x zero and minus one.
+
+108
+00:12:14,620 --> 00:12:16,180
+Let's run and see.
+
+109
+00:12:19,140 --> 00:12:20,340
+And here we go.
+
+110
+00:12:20,730 --> 00:12:29,370
+We have the element found that in this story, which is here, there we are searching for, for and
+
+111
+00:12:29,370 --> 00:12:30,570
+everything is working fine.
+
+112
+00:12:30,840 --> 00:12:39,330
+So in this exercise, we have learned about the binary search search in a recursive way and in iterative
+
+113
+00:12:39,330 --> 00:12:39,600
+way.
+
+114
+00:12:39,600 --> 00:12:48,040
+And we have learned about this example and we have learned that it's very important to pass sorted.

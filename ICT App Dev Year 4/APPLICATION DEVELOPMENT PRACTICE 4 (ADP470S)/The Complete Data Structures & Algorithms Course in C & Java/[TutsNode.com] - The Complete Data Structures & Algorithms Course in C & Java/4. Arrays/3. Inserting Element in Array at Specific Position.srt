@@ -1,0 +1,239 @@
+1
+00:00:00,060 --> 00:00:04,200
+How to insert an element into artillery at specific position.
+
+2
+00:00:04,830 --> 00:00:12,280
+This is very important and common a question that may be asked in the interview or in exam.
+
+3
+00:00:13,510 --> 00:00:23,110
+We need to insert element of value 60 at index, do we have an array and array of five elements?
+
+4
+00:00:25,080 --> 00:00:37,590
+Array of zero equal to an array of one equals 20 at index to 30 at index, three for the index for IS
+
+5
+00:00:37,600 --> 00:00:40,860
+50 and position equal to two.
+
+6
+00:00:41,250 --> 00:00:49,830
+We need at the position of two to make the change, so we need to insert.
+
+7
+00:00:50,070 --> 00:00:54,000
+We not we don't need to update.
+
+8
+00:00:54,150 --> 00:00:59,460
+We need to insert 60 at an index to.
+
+9
+00:01:00,940 --> 00:01:10,060
+And make this out of a bigger plus one than that, any show at me.
+
+10
+00:01:10,300 --> 00:01:10,720
+So.
+
+11
+00:01:12,580 --> 00:01:20,440
+We have initially created an array and realized the value of values of it, 10, 20, 30, 40 and 50,
+
+12
+00:01:20,440 --> 00:01:25,390
+we need to insert at Index two, which is at 30.
+
+13
+00:01:25,390 --> 00:01:28,120
+Before 30 we need between 20 and 30.
+
+14
+00:01:28,120 --> 00:01:29,920
+We need to insert 60.
+
+15
+00:01:30,250 --> 00:01:37,790
+So we create these variables position if what the two sides equal to five elements equal to 60.
+
+16
+00:01:37,930 --> 00:01:41,710
+And till now we have created this array.
+
+17
+00:01:42,160 --> 00:01:45,880
+We have initialized 10, 20, 30, 40 and 50.
+
+18
+00:01:46,150 --> 00:01:47,500
+This is our array.
+
+19
+00:01:47,980 --> 00:01:53,310
+We need to insert at index to the 6th.
+
+20
+00:01:53,470 --> 00:01:57,160
+So between 20 and 30, we need to insert 60.
+
+21
+00:01:57,850 --> 00:02:00,550
+Let's see how our example looks.
+
+22
+00:02:01,210 --> 00:02:02,410
+This is very important.
+
+23
+00:02:02,590 --> 00:02:11,830
+I need from you to understand and concentrate with me and write these down to memorize them later.
+
+24
+00:02:12,220 --> 00:02:12,610
+OK.
+
+25
+00:02:14,230 --> 00:02:22,600
+For doing that, I can't make like a rate at index to equal to 60, because at this time I can I am
+
+26
+00:02:22,600 --> 00:02:25,900
+updating, so I have removed 30 and put six.
+
+27
+00:02:26,050 --> 00:02:27,550
+I don't need like this.
+
+28
+00:02:27,550 --> 00:02:30,940
+I need to insert 60 between 20 and 30.
+
+29
+00:02:32,910 --> 00:02:44,220
+We need for this purpose to make the use of forward loop that starts inversely from IE equal to size,
+
+30
+00:02:44,220 --> 00:02:49,710
+so it will start from size a greater than position.
+
+31
+00:02:50,100 --> 00:03:00,390
+So I will stop at the position that we need to insert and I minus minus so it will go backward from
+
+32
+00:03:00,660 --> 00:03:08,910
+the last element of the array and backward till reaching that element and index position equal to two.
+
+33
+00:03:09,330 --> 00:03:09,870
+OK.
+
+34
+00:03:10,500 --> 00:03:10,890
+So.
+
+35
+00:03:14,550 --> 00:03:17,520
+It would start by creating a new.
+
+36
+00:03:18,570 --> 00:03:27,480
+Array element, an empty one array of eye equal array of five minus one.
+
+37
+00:03:27,750 --> 00:03:32,760
+This is the key of the solution for this question.
+
+38
+00:03:33,450 --> 00:03:35,520
+We need to shift that.
+
+39
+00:03:36,060 --> 00:03:37,530
+So how it works.
+
+40
+00:03:38,370 --> 00:03:48,420
+It will start shifting the elements into a new position, so I array of equal array of five minus one.
+
+41
+00:03:49,440 --> 00:03:51,540
+It will shift the elements.
+
+42
+00:03:52,680 --> 00:03:53,770
+Shift 30.
+
+43
+00:03:54,330 --> 00:04:07,050
+That now I reach his position, so I the iteration of this array reaches that element at index to.
+
+44
+00:04:08,520 --> 00:04:18,090
+Our position equal to two and at the start shifting array of equal array I minus one.
+
+45
+00:04:18,900 --> 00:04:22,470
+The last step when this started, this array stops.
+
+46
+00:04:22,890 --> 00:04:30,300
+We put array at position, which we need and we need to make, which is equal to to equal the element
+
+47
+00:04:30,300 --> 00:04:32,370
+which is equal to sixth.
+
+48
+00:04:32,880 --> 00:04:36,410
+At this time, we have created this.
+
+49
+00:04:36,420 --> 00:04:42,060
+We have inserted an element into and as a specific position.
+
+50
+00:04:43,310 --> 00:04:53,150
+The complexity of this operation and the best case scenario is of one, because if we need to insert
+
+51
+00:04:53,150 --> 00:04:54,950
+an element at index zero.
+
+52
+00:04:56,600 --> 00:05:04,920
+At index, sorry, at index, the last index, it's very simple now inserting element and index five.
+
+53
+00:05:06,170 --> 00:05:13,340
+Sorry, inserting element and element at least index because the last index will create and open a new
+
+54
+00:05:13,340 --> 00:05:15,830
+tab and insert it directly.
+
+55
+00:05:15,980 --> 00:05:17,570
+Best case is a one.
+
+56
+00:05:17,870 --> 00:05:24,020
+But if we need to insert, the worst case is inserting element at the first position.
+
+57
+00:05:24,470 --> 00:05:30,940
+We have seen that this shifting, this is shifting the elements to that.
+
+58
+00:05:31,220 --> 00:05:41,330
+It will make this complexity, this the functionality and this algorithm works more to shift the elements
+
+59
+00:05:41,450 --> 00:05:44,930
+when we are going to lessen the.
+
+60
+00:05:45,970 --> 00:05:54,100
+And so as the index decreased, this algorithm need more time to be.

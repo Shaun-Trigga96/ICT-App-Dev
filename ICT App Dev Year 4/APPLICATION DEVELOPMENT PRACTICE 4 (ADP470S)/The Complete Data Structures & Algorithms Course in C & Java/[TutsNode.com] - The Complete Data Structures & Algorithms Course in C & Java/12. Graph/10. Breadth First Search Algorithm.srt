@@ -1,0 +1,231 @@
+1
+00:00:00,430 --> 00:00:04,180
+Now, let's learn about the breadth first search algorithm.
+
+2
+00:00:04,750 --> 00:00:09,070
+Consider the graph of five vertices is here.
+
+3
+00:00:09,490 --> 00:00:11,860
+Zero, one, two, three and four.
+
+4
+00:00:12,460 --> 00:00:14,890
+So we have the five vertices here.
+
+5
+00:00:15,730 --> 00:00:23,830
+That river also mean visiting all nodes of graph breadth, first traversal or breadth.
+
+6
+00:00:23,830 --> 00:00:31,750
+First search is a recursive algorithm for searching all the vertices of a graph or the tree data structure.
+
+7
+00:00:32,310 --> 00:00:42,820
+This it's the same mission, the same goal of all of the previously career of the previous search algorithm
+
+8
+00:00:42,820 --> 00:00:45,600
+that we have learned about that DFS.
+
+9
+00:00:46,480 --> 00:00:51,850
+It is visiting all the node, but here we have the different concept.
+
+10
+00:00:51,920 --> 00:00:53,050
+OK, so.
+
+11
+00:00:54,450 --> 00:01:03,570
+We have the visited notes, the standard VFX breadth first algorithm search algorithm implementation
+
+12
+00:01:03,570 --> 00:01:09,870
+put each vertex of the graph into one of the two categories they're visited and none visited.
+
+13
+00:01:09,870 --> 00:01:16,680
+The purpose of algorithm is to mark each vertex as visited while avoiding the cycles, and the algorithm
+
+14
+00:01:16,920 --> 00:01:24,090
+works as follows Start by putting anyone on the on off the graphs vertices at the back of the queue
+
+15
+00:01:24,600 --> 00:01:31,590
+and then take the front item of the queue and add it to their visited list, then create a list of that
+
+16
+00:01:31,590 --> 00:01:32,250
+vertex.
+
+17
+00:01:32,910 --> 00:01:41,490
+Adjacent nodes add the ones which are not in the visited list to the back of the queue and keep repeating
+
+18
+00:01:41,490 --> 00:01:43,860
+these steps until the queue is empty.
+
+19
+00:01:44,370 --> 00:01:52,250
+The graph must or might have two different disconnected parts, so make sure that we cover every vertex.
+
+20
+00:01:52,290 --> 00:01:56,310
+We can also run the BFC algorithm on every note.
+
+21
+00:01:56,550 --> 00:01:59,100
+OK, so let's take an example here.
+
+22
+00:02:00,260 --> 00:02:02,030
+We have zero.
+
+23
+00:02:02,480 --> 00:02:06,560
+We start from zero if we are following the numerical value zero.
+
+24
+00:02:08,810 --> 00:02:11,630
+The note is a visited note is the vertex.
+
+25
+00:02:11,690 --> 00:02:19,570
+OK, so the vertex or the starting point is always added directly and automatically to the visited notes.
+
+26
+00:02:19,880 --> 00:02:29,060
+Then from zero, we can go to one at the same level, we can go to two and in the same level we can
+
+27
+00:02:29,060 --> 00:02:30,510
+go to three.
+
+28
+00:02:30,530 --> 00:02:36,200
+So this is that this is the breadth first search algorithm.
+
+29
+00:02:36,530 --> 00:02:40,670
+We moved to that to zero, the first vertex.
+
+30
+00:02:40,670 --> 00:02:49,910
+And from this vertex, what are the possibilities to the jaw a to go and make one step forward, not
+
+31
+00:02:50,150 --> 00:02:54,050
+moving like too forward or do any other elements?
+
+32
+00:02:54,200 --> 00:03:02,870
+So we go, we are going or we can go to zero if you are standing on zero so we can go to one, two and
+
+33
+00:03:02,870 --> 00:03:03,230
+three.
+
+34
+00:03:03,740 --> 00:03:13,670
+These are plotted directly in a numerical order or in the chronological order or in the alphabetical
+
+35
+00:03:13,670 --> 00:03:14,780
+order if you had.
+
+36
+00:03:14,780 --> 00:03:18,950
+This depends on the data types that you are dealing with.
+
+37
+00:03:19,430 --> 00:03:19,820
+OK.
+
+38
+00:03:21,530 --> 00:03:31,160
+Since we have finished zero, we move now to one, then one, we cannot go to any where from it.
+
+39
+00:03:31,820 --> 00:03:39,710
+We can also go to two just on the one step two to two US-VISIT, so we can put it from two.
+
+40
+00:03:39,710 --> 00:03:47,780
+We go two, from one, we go to do it, we can go to any nodes, we can go to zero, we can go to one
+
+41
+00:03:48,020 --> 00:03:49,400
+and we can go to four.
+
+42
+00:03:49,640 --> 00:03:53,150
+Zero and one have been added previously and visited.
+
+43
+00:03:53,390 --> 00:04:01,070
+So we are going to add four to that, to this example and this visit the notes.
+
+44
+00:04:01,250 --> 00:04:01,620
+OK.
+
+45
+00:04:02,030 --> 00:04:08,630
+So this is the breadth first search algorithm that we are going to implement it in to see.
+
+46
+00:04:09,110 --> 00:04:10,160
+Let's take an example.
+
+47
+00:04:10,160 --> 00:04:11,390
+Another example?
+
+48
+00:04:12,710 --> 00:04:13,820
+In the next video.
+
+49
+00:04:13,860 --> 00:04:22,400
+So let me show you the codes later on, and we are going to implement it into the exercise number 90
+
+50
+00:04:22,700 --> 00:04:23,630
+in Java.
+
+51
+00:04:23,690 --> 00:04:28,550
+So this is the breadth first search algorithm BFC.
+
+52
+00:04:28,850 --> 00:04:30,500
+I hope you understand it.
+
+53
+00:04:30,590 --> 00:04:31,760
+It's very simple.
+
+54
+00:04:32,210 --> 00:04:34,610
+Just going from the note that you are.
+
+55
+00:04:34,880 --> 00:04:37,700
+And we make one step one visit.
+
+56
+00:04:38,060 --> 00:04:47,690
+OK, so we can make here one visit, one visit, not two visits like zero, two and two or four.
+
+57
+00:04:47,930 --> 00:04:52,580
+We just go one one visit one link.
+
+58
+00:04:53,000 --> 00:04:53,570
+OK.

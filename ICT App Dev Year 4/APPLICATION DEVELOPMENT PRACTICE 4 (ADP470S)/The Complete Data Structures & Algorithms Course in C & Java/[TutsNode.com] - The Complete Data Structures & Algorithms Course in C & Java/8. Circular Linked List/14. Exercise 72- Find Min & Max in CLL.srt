@@ -1,0 +1,223 @@
+1
+00:00:00,060 --> 00:00:03,670
+Hello and welcome to exercise number 72.
+
+2
+00:00:03,690 --> 00:00:12,060
+So we are asked to print the minimum and maximum nodes of the Circle Link and list both the video and
+
+3
+00:00:12,060 --> 00:00:19,740
+think about this algorithm, how we can implement a method that print the minimum, find the minimum
+
+4
+00:00:19,740 --> 00:00:23,160
+and print it and find the maximum and print it.
+
+5
+00:00:23,490 --> 00:00:24,270
+We need.
+
+6
+00:00:26,010 --> 00:00:28,950
+To concentrate on two things.
+
+7
+00:00:29,430 --> 00:00:37,830
+Searching for the link list and how we find the end of their circle of this and we have so many sources
+
+8
+00:00:37,830 --> 00:00:46,260
+about this topic and how to find the maximum, so we need to compare these elements with other elements.
+
+9
+00:00:46,890 --> 00:00:59,520
+So for that, I will go here and I will create a public static and it will return and void because just
+
+10
+00:00:59,520 --> 00:01:05,370
+a printing their printing friend Max.
+
+11
+00:01:07,930 --> 00:01:17,840
+And many minimum, it took Interferometer, the head node had its object of node.
+
+12
+00:01:18,850 --> 00:01:22,420
+And let's start making our algorithm.
+
+13
+00:01:24,040 --> 00:01:41,350
+First of all, check if the list list as empty as empty if had equal clocks and then return otherwise
+
+14
+00:01:41,800 --> 00:01:44,080
+pointer for traversing.
+
+15
+00:01:44,380 --> 00:01:50,770
+So we need a pointer to traverse, start searching, traversing
+
+16
+00:01:53,080 --> 00:01:54,790
+nodes, current
+
+17
+00:01:57,640 --> 00:02:07,840
+equal to had we put it, and point to the point that current to the hat we specify or we create in node
+
+18
+00:02:07,850 --> 00:02:10,300
+that is the same as had now.
+
+19
+00:02:12,040 --> 00:02:14,440
+Three Initialize
+
+20
+00:02:17,200 --> 00:02:29,380
+minimum and max values and minimum equal to integer the max value.
+
+21
+00:02:32,150 --> 00:02:35,330
+Max value and.
+
+22
+00:02:35,600 --> 00:02:41,000
+And Max, and we have seen this in the Matrix.
+
+23
+00:02:41,210 --> 00:02:55,300
+So in the arrays integer, the minimal right now, let's create a wide loop while loop currents.
+
+24
+00:02:57,890 --> 00:03:00,770
+This is the carrot that I have created as Geppetto.
+
+25
+00:03:00,890 --> 00:03:01,880
+So current.
+
+26
+00:03:04,390 --> 00:03:16,220
+The up next does not equal to have then this, while we're last note, is not reached.
+
+27
+00:03:16,370 --> 00:03:23,300
+So while note is not reached, last note is not reached, so we are traversing through all the notes.
+
+28
+00:03:23,630 --> 00:03:28,040
+If the current note is letters for them anymore, then replace it.
+
+29
+00:03:28,970 --> 00:03:34,220
+If current note is less than.
+
+30
+00:03:37,510 --> 00:03:41,530
+The minimum, then replace it.
+
+31
+00:03:41,920 --> 00:03:52,510
+How to do that, if current to date that less than minimum, then we can create minimum equal to care
+
+32
+00:03:52,510 --> 00:03:55,000
+and the date.
+
+33
+00:03:55,900 --> 00:04:00,370
+OK, now let's check for the maximum.
+
+34
+00:04:03,230 --> 00:04:07,850
+If current node is.
+
+35
+00:04:09,860 --> 00:04:14,120
+Greater than greater than.
+
+36
+00:04:16,600 --> 00:04:24,550
+Greater than them there, Max, replace it.
+
+37
+00:04:25,630 --> 00:04:38,860
+So if Gert and the data were greater than maximal, then replace it Max Max be equal to the current
+
+38
+00:04:39,100 --> 00:04:40,020
+DOT data.
+
+39
+00:04:42,760 --> 00:04:46,570
+Otherwise current equal to current dot.
+
+40
+00:04:46,570 --> 00:04:50,890
+Next, we need to move that current cursor to then next.
+
+41
+00:04:51,130 --> 00:04:59,200
+So while we and next does not equal to now, we need to move the cursor to the next one.
+
+42
+00:04:59,710 --> 00:05:00,150
+OK.
+
+43
+00:05:03,440 --> 00:05:08,420
+Now we need to print out the minimum and the max.
+
+44
+00:05:08,570 --> 00:05:10,790
+So print the minimum
+
+45
+00:05:14,270 --> 00:05:19,820
+minimum is equal to here.
+
+46
+00:05:19,820 --> 00:05:24,080
+It is equal to the minimum and maximum
+
+47
+00:05:27,380 --> 00:05:28,100
+maximum
+
+48
+00:05:31,100 --> 00:05:34,340
+equal to their max.
+
+49
+00:05:34,970 --> 00:05:42,620
+OK, let's test it by going to the main method and we call here.
+
+50
+00:05:44,780 --> 00:05:52,730
+Prince, maximum and minimum, we specified the head of this assault, and let's run.
+
+51
+00:05:54,710 --> 00:06:04,100
+And here we go, guys, we have two, three, one, six and five, the minimum between these numbers
+
+52
+00:06:04,100 --> 00:06:07,790
+and these notes is one, and the maximum is six.
+
+53
+00:06:08,150 --> 00:06:15,920
+So our algorithm is working fine and we have done this method that finds and prints out the minimum
+
+54
+00:06:15,920 --> 00:06:24,740
+and the maximum throughout searching the whole list for checking if it is the minimum and the maximum.
+
+55
+00:06:25,310 --> 00:06:33,230
+By the way, the time complexity of this method is oh of and because we are traversing through all the
+
+56
+00:06:33,230 --> 00:06:36,650
+the list to find the minimum and the max.

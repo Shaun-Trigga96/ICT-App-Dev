@@ -1,0 +1,519 @@
+1
+00:00:00,060 --> 00:00:06,480
+My friends and welcome to exercise number 89 in this exercise, we are going to implement that depth
+
+2
+00:00:06,480 --> 00:00:12,300
+first search algorithm in Najaf, so I will create a.
+
+3
+00:00:13,390 --> 00:00:24,170
+Graph containing four vertices diseases, zero one two and three zero connected to one zero, connected
+
+4
+00:00:24,200 --> 00:00:28,270
+to two one connected to two and two connected to three.
+
+5
+00:00:29,260 --> 00:00:39,460
+And we will start making the algorithm and executing the algorithm DFS in order to understand this and
+
+6
+00:00:39,460 --> 00:00:39,960
+Java.
+
+7
+00:00:39,970 --> 00:00:49,480
+So we are going to pass through all the elements and through all that know the vertices is in the graph.
+
+8
+00:00:50,140 --> 00:00:57,520
+But we are going also to start to specify to allow our algorithm to start from any position, not from
+
+9
+00:00:57,520 --> 00:01:00,460
+the default one, which is the numerical following.
+
+10
+00:01:00,460 --> 00:01:02,110
+The numerical order is zero.
+
+11
+00:01:02,410 --> 00:01:11,110
+So we are going to allow the DFS to start from like two, and we will see that the FC order algorithm
+
+12
+00:01:11,110 --> 00:01:16,400
+inside this algorithm in this inside this graph.
+
+13
+00:01:16,480 --> 00:01:21,520
+So let's start making and implementing the DFS in Java.
+
+14
+00:01:22,000 --> 00:01:28,030
+We start by creating a new Java class inside the resources folder.
+
+15
+00:01:28,540 --> 00:01:32,410
+I will create it as DFS graph.
+
+16
+00:01:33,790 --> 00:01:41,380
+So if you want to get all of the source codes, you can download them from the Resources folder in the
+
+17
+00:01:41,380 --> 00:01:45,910
+comments below and on our Udemy course.
+
+18
+00:01:45,940 --> 00:02:01,300
+So we start by creating an array of lengthiest called list specifying to think at least private link,
+
+19
+00:02:01,310 --> 00:02:01,900
+at least
+
+20
+00:02:05,410 --> 00:02:06,310
+link at list.
+
+21
+00:02:08,010 --> 00:02:14,240
+We can specify if there's an integer or we are not.
+
+22
+00:02:14,460 --> 00:02:24,160
+OK, so I will create it as informal program adjacent class of diaper right now.
+
+23
+00:02:24,180 --> 00:02:26,100
+Private Boolean
+
+24
+00:02:28,710 --> 00:02:31,620
+visit the array.
+
+25
+00:02:32,150 --> 00:02:41,850
+OK, so I will create an array of Boolean called visited and adjacent list.
+
+26
+00:02:42,480 --> 00:02:43,000
+OK.
+
+27
+00:02:43,680 --> 00:02:45,120
+This is very important.
+
+28
+00:02:45,150 --> 00:02:51,240
+Now let's initialize our our variables, our two lists.
+
+29
+00:02:51,390 --> 00:02:56,130
+These are that variables, the adjacent list and they're visited.
+
+30
+00:02:56,130 --> 00:03:03,020
+And remember when following the DFS, we are searching for the four.
+
+31
+00:03:03,120 --> 00:03:05,400
+We are visiting all the nodes.
+
+32
+00:03:06,120 --> 00:03:07,710
+All the vertices is.
+
+33
+00:03:09,140 --> 00:03:12,860
+We are not going to revisit them for that.
+
+34
+00:03:13,160 --> 00:03:20,430
+I have created a visited array to check if we have visited the vertices, so we are not going to add
+
+35
+00:03:20,660 --> 00:03:24,020
+to write it or add it to the adjacent list.
+
+36
+00:03:24,170 --> 00:03:24,470
+OK.
+
+37
+00:03:25,190 --> 00:03:27,980
+And the application in the next videos.
+
+38
+00:03:28,340 --> 00:03:32,360
+In the next couple of minutes, we are going to clarify everything.
+
+39
+00:03:32,660 --> 00:03:39,770
+So I will create a constructor graph and vertices this
+
+40
+00:03:42,920 --> 00:03:53,950
+weekend when we create a new and the first graph, the FSC graph object of this class in order to build
+
+41
+00:03:53,960 --> 00:03:54,170
+on.
+
+42
+00:03:54,170 --> 00:04:06,080
+And we need to specify here the vertices OK, equal here, creating, you know, list and visited equal
+
+43
+00:04:06,080 --> 00:04:07,430
+to a new Boolean.
+
+44
+00:04:09,020 --> 00:04:26,390
+And we start at index vertices four and five equal to zero by PI less than vertices is a plus plus.
+
+45
+00:04:26,540 --> 00:04:34,160
+We are going to add adjacent lists at the index ie equal to new link and this.
+
+46
+00:04:35,050 --> 00:04:36,010
+Look at this.
+
+47
+00:04:36,550 --> 00:04:39,130
+And here we go.
+
+48
+00:04:39,520 --> 00:04:39,850
+OK.
+
+49
+00:04:40,240 --> 00:04:41,260
+It's very simple.
+
+50
+00:04:42,400 --> 00:04:48,970
+We are going to create at everything a list, at every index adjacent list.
+
+51
+00:04:48,970 --> 00:04:51,970
+We are going to create a new index.
+
+52
+00:04:52,240 --> 00:05:03,190
+And for every vertex, we are going to get the adjacent list and to create it and apply at I vertex
+
+53
+00:05:04,150 --> 00:05:05,920
+and the application next.
+
+54
+00:05:06,280 --> 00:05:12,430
+In next couple of minutes, we are going to see how this and clarify this algorithm.
+
+55
+00:05:12,970 --> 00:05:18,340
+So let's create and method that add to add that had just so.
+
+56
+00:05:20,390 --> 00:05:41,590
+Edges here and edges here, let me go outside as well and the edges of voids and edges.
+
+57
+00:05:42,380 --> 00:05:53,470
+We took him to the perimeter and source and destination, and we specify adjacent layers and these are
+
+58
+00:05:53,480 --> 00:05:59,030
+sea see dot and the destination.
+
+59
+00:05:59,420 --> 00:05:59,860
+OK.
+
+60
+00:06:00,680 --> 00:06:01,070
+So.
+
+61
+00:06:04,120 --> 00:06:14,110
+At this finish, we are going to make this there is one problem here that interest me.
+
+62
+00:06:14,860 --> 00:06:22,570
+I have created the link at least here, but we didn't import anything in the Java framework.
+
+63
+00:06:22,960 --> 00:06:30,190
+But since we are creating this source code and I have a link at least five, so I have created an object
+
+64
+00:06:30,190 --> 00:06:31,720
+from this link at least.
+
+65
+00:06:32,350 --> 00:06:34,930
+So for that, please pay attention.
+
+66
+00:06:34,930 --> 00:06:43,330
+I have renamed this refractor link to listing and I need to import it again.
+
+67
+00:06:43,370 --> 00:06:44,890
+Import class here.
+
+68
+00:06:44,950 --> 00:06:49,210
+So here we are importing the linked list of Java.
+
+69
+00:06:49,240 --> 00:06:56,950
+Not that link at that we have created in the previous print because the add method we didn't create
+
+70
+00:06:56,950 --> 00:06:57,730
+it into.
+
+71
+00:07:00,210 --> 00:07:01,940
+I think at least a video.
+
+72
+00:07:02,110 --> 00:07:06,560
+OK, here I am, just making everything ever changes.
+
+73
+00:07:06,860 --> 00:07:07,220
+OK.
+
+74
+00:07:07,860 --> 00:07:12,620
+No, at this finish, we will continue.
+
+75
+00:07:12,770 --> 00:07:17,600
+So I will create now that DFS the algorithm.
+
+76
+00:07:19,600 --> 00:07:25,570
+Function, so I was pretty clear as I'll go.
+
+77
+00:07:26,500 --> 00:07:31,000
+I will create a method that it's done in time for it.
+
+78
+00:07:31,630 --> 00:07:35,380
+We start by creating pricing that never sticks.
+
+79
+00:07:39,040 --> 00:07:40,480
+We start by visited.
+
+80
+00:07:40,960 --> 00:07:46,450
+We start by birth and next tax equal to true, OK.
+
+81
+00:07:47,290 --> 00:07:51,160
+We put it as an remark at the vertex by true.
+
+82
+00:07:51,250 --> 00:08:01,540
+So it's very logical to do make and mark the vertex as true, because if I were told told you that,
+
+83
+00:08:01,540 --> 00:08:11,470
+hey, start from Vertex 10, so you will visit Vertex, then this line is telling us this and translating
+
+84
+00:08:11,470 --> 00:08:11,980
+it to doctor.
+
+85
+00:08:12,190 --> 00:08:30,670
+So system that out the brand end and the vertex, plus the space and I will create iterator iterator
+
+86
+00:08:31,750 --> 00:08:32,890
+of integer.
+
+87
+00:08:36,220 --> 00:08:37,300
+I will I.
+
+88
+00:08:40,300 --> 00:08:50,730
+Iterator adjacent list of at Fairfax, Vertex at the index vertex, so at least iterate.
+
+89
+00:08:51,190 --> 00:08:53,710
+We are iterating through this list.
+
+90
+00:08:54,460 --> 00:09:02,350
+So please, if you want to learn more about integrators and data or that Java framework, please go
+
+91
+00:09:02,680 --> 00:09:09,790
+to our course to complete Java Developer course on Udemy and you contact us.
+
+92
+00:09:09,790 --> 00:09:16,420
+We can send you that free component to Andrell free next.
+
+93
+00:09:16,630 --> 00:09:17,080
+If
+
+94
+00:09:20,650 --> 00:09:25,180
+we test, if we have, we didn't visit that code.
+
+95
+00:09:25,180 --> 00:09:34,840
+So if it is not at the visit, that if we are not, which is not contained in the visit that array,
+
+96
+00:09:34,990 --> 00:09:49,030
+then we called their method again the F s the F s method again, and we passed that Jason 30 metre as
+
+97
+00:09:49,030 --> 00:09:49,870
+the first.
+
+98
+00:09:50,020 --> 00:09:57,420
+So what we what we have done, we market have visited, the vertex has visited and we have added it
+
+99
+00:09:57,430 --> 00:09:58,090
+to the visit.
+
+100
+00:09:58,720 --> 00:10:06,400
+Now we present the vertex and iterate to recreate the iterator that we are going to search for, and
+
+101
+00:10:06,400 --> 00:10:08,650
+we looked through that Jason's list.
+
+102
+00:10:09,100 --> 00:10:12,730
+We start iterating through the all list.
+
+103
+00:10:13,120 --> 00:10:16,570
+We start by iterator and iterating to the next.
+
+104
+00:10:16,570 --> 00:10:19,630
+Moving the cursor to the next, next, next.
+
+105
+00:10:20,050 --> 00:10:23,640
+Every time, check if it is contained in the visitor.
+
+106
+00:10:23,650 --> 00:10:25,870
+Don't add that OK.
+
+107
+00:10:26,920 --> 00:10:31,350
+If it is not contained in visit that, so go and call the method again.
+
+108
+00:10:31,870 --> 00:10:34,870
+Otherwise, add it to the visit.
+
+109
+00:10:34,970 --> 00:10:38,380
+OK, so this is the algorithm.
+
+110
+00:10:39,130 --> 00:10:43,400
+Let's test it into the main class.
+
+111
+00:10:43,420 --> 00:10:58,900
+So public static void main with string args and we start by creating DFS graph and stance equal to the
+
+112
+00:10:58,900 --> 00:11:01,050
+new graph new.
+
+113
+00:11:02,020 --> 00:11:05,800
+The first graph and we passed the vertices.
+
+114
+00:11:05,800 --> 00:11:06,150
+Four.
+
+115
+00:11:06,460 --> 00:11:09,720
+OK, now let's make the connection.
+
+116
+00:11:09,730 --> 00:11:10,720
+Let's make the add.
+
+117
+00:11:10,720 --> 00:11:15,130
+Just so g that we have learned about the edges.
+
+118
+00:11:15,760 --> 00:11:25,060
+A previous video so that this finish, the source is zero and the destination is one g dot + add just
+
+119
+00:11:25,060 --> 00:11:27,580
+between zero and two.
+
+120
+00:11:31,750 --> 00:11:44,140
++ +, +, + just between one and two, and at G dot edges between two and three.
+
+121
+00:11:44,810 --> 00:12:01,570
+OK, now system that out, that brand alarm following is there was the first traversal
+
+122
+00:12:04,120 --> 00:12:06,350
+or the or search.
+
+123
+00:12:08,020 --> 00:12:08,400
+OK.
+
+124
+00:12:11,260 --> 00:12:15,370
+G Dot we call DFS method and we start.
+
+125
+00:12:15,370 --> 00:12:20,380
+We specify here where what is the vertex that we are going to follow?
+
+126
+00:12:20,650 --> 00:12:25,990
+We are start from zero and let's run and see our program.
+
+127
+00:12:26,000 --> 00:12:28,390
+So run the FC program.
+
+128
+00:12:32,130 --> 00:12:38,760
+The first graph following as divert the depth for that depth first search.
+
+129
+00:12:39,240 --> 00:12:39,690
+OK.
+
+130
+00:12:39,780 --> 00:12:41,970
+Zero, one, two and three.

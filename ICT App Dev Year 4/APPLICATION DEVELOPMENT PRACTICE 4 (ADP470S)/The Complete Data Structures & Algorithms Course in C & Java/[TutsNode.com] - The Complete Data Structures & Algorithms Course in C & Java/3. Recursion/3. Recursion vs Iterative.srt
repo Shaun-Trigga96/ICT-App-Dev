@@ -1,0 +1,171 @@
+1
+00:00:00,660 --> 00:00:04,530
+So what is the difference between a recursive and iterative?
+
+2
+00:00:05,830 --> 00:00:09,910
+Recursive algorithms can be very space and efficient.
+
+3
+00:00:10,830 --> 00:00:18,780
+Each recursive call adds a new layer to the stack, which means that if you are, if your algorithm
+
+4
+00:00:19,380 --> 00:00:25,530
+recurs to a depth of end, it uses at least of and memory.
+
+5
+00:00:26,160 --> 00:00:31,140
+For this reason, it's often better to implement a recursive algorithm.
+
+6
+00:00:31,470 --> 00:00:39,630
+Iteratively, all recursive algorithms can be implemented iteratively, although.
+
+7
+00:00:40,960 --> 00:00:45,490
+Sometimes the code to do so is much more complex.
+
+8
+00:00:45,860 --> 00:00:46,240
+OK.
+
+9
+00:00:48,100 --> 00:00:48,520
+So.
+
+10
+00:00:49,590 --> 00:00:52,230
+In the left, on the left, we have.
+
+11
+00:00:53,230 --> 00:00:59,350
+Via a vile X equal to F1, F2, F3 and return F3.
+
+12
+00:00:59,740 --> 00:01:11,710
+So this is that a recursive F1 well will depend on F2 f3 and then the returning of F3 will result in
+
+13
+00:01:11,720 --> 00:01:19,240
+a calculation of F2 and F2 will result in calculation of EF one while iterative on the right.
+
+14
+00:01:19,540 --> 00:01:25,180
+We have a variable X and this variable was through the iteration.
+
+15
+00:01:25,190 --> 00:01:26,080
+It's a changing.
+
+16
+00:01:26,140 --> 00:01:29,640
+It would change it from one to two to three.
+
+17
+00:01:29,680 --> 00:01:38,350
+So this is the iteration we we have a space one space for a VAR X while on the left.
+
+18
+00:01:38,590 --> 00:01:46,900
+When we use recursion or recursive algorithms, we we have to make a lot of space.
+
+19
+00:01:46,900 --> 00:01:54,730
+So every time we are calling a function or need anything or need and new calculation, we are reserving
+
+20
+00:01:54,730 --> 00:01:56,560
+a new space in memory.
+
+21
+00:01:57,700 --> 00:01:58,120
+So.
+
+22
+00:01:59,810 --> 00:02:08,630
+You can structure your program to be tail recursive to make the compiler optimize and treat it as an
+
+23
+00:02:08,630 --> 00:02:09,720
+iterative call.
+
+24
+00:02:10,580 --> 00:02:10,940
+OK.
+
+25
+00:02:11,270 --> 00:02:12,840
+We have three functions.
+
+26
+00:02:12,860 --> 00:02:22,730
+Imagine that we have three functions A, B and C function A. Calls Function B and Function B calls function
+
+27
+00:02:22,730 --> 00:02:24,440
+C a function.
+
+28
+00:02:24,440 --> 00:02:31,430
+A return is the value of function B and Function B returns the value of function C.
+
+29
+00:02:31,640 --> 00:02:42,650
+The instructions can be classified as tail recursive call as the first and the top of of this picture
+
+30
+00:02:42,830 --> 00:02:43,580
+indicates.
+
+31
+00:02:43,610 --> 00:02:45,110
+So this is the thing.
+
+32
+00:02:50,570 --> 00:02:56,660
+If you don't need any valuable to store function and function, sorry.
+
+33
+00:02:57,830 --> 00:03:04,790
+If you don't have or you don't need any variable to store function A and function B.
+
+34
+00:03:05,730 --> 00:03:13,650
+Function C does not need to return to Function B. So this is the case in blow, so.
+
+35
+00:03:16,880 --> 00:03:27,110
+When you have a fight, you don't need any variable to store function a this function and function B.
+
+36
+00:03:28,510 --> 00:03:34,570
+Calling f b f of B calls F of C and F C returns.
+
+37
+00:03:34,810 --> 00:03:39,760
+C and the return when returning C do something.
+
+38
+00:03:39,970 --> 00:03:41,900
+When doing something, it will return.
+
+39
+00:03:41,900 --> 00:03:54,040
+And B So you just skip Function B and function A. And reduce the variable that A and have B and B.
+
+40
+00:03:54,490 --> 00:04:00,870
+OK, so this is a bit about a recursive versus iterative.
+
+41
+00:04:01,180 --> 00:04:02,830
+OK, don't worry.
+
+42
+00:04:02,830 --> 00:04:11,170
+If you don't understand these concepts in the next exercises, we are going to demonstrate that complexity
+
+43
+00:04:11,170 --> 00:04:13,280
+of a recursive and it.

@@ -1,0 +1,351 @@
+1
+00:00:00,360 --> 00:00:08,130
+After we have learned about the Ford Focus and algorithm in animation, and we have to get deeply into
+
+2
+00:00:08,460 --> 00:00:18,330
+the Ford Focus, and now let's go to C compiler and please guys write these codes down in order to save
+
+3
+00:00:18,330 --> 00:00:23,460
+them for later review for the exam and the interview.
+
+4
+00:00:23,670 --> 00:00:34,770
+So we start by including the studio and defining these variables into an entire capacity.
+
+5
+00:00:35,280 --> 00:00:37,650
+The flow, color and spread.
+
+6
+00:00:38,680 --> 00:00:42,250
+These are their areas, and this is.
+
+7
+00:00:43,390 --> 00:00:51,970
+To the IRA, this is also to the IRA, the capacity in the flow, to the IRA and the color is here and
+
+8
+00:00:51,970 --> 00:00:55,840
+the bread is as an IRA.
+
+9
+00:00:56,170 --> 00:01:05,650
+So we start by creating an inert variable into the method called men of returning type is end.
+
+10
+00:01:06,100 --> 00:01:10,200
+And it took parameter two variables in X and into Y.
+
+11
+00:01:10,750 --> 00:01:15,850
+We start comparing if x less than Y, then return X.
+
+12
+00:01:15,970 --> 00:01:20,980
+Otherwise, it will return y return the biggest.
+
+13
+00:01:22,400 --> 00:01:23,630
+The smallest, OK.
+
+14
+00:01:26,130 --> 00:01:26,490
+No.
+
+15
+00:01:27,500 --> 00:01:34,760
+We create also had and pain, and we start by making here that new method called in.
+
+16
+00:01:35,480 --> 00:01:37,750
+You remember the interview and deck?
+
+17
+00:01:38,160 --> 00:01:39,380
+These are for the queue.
+
+18
+00:01:39,830 --> 00:01:45,800
+So here in the four Fulkerson, we are going to use something like queue.
+
+19
+00:01:46,340 --> 00:01:56,240
+So and like the methods of the queue, the NQ and the deck in queue will add at the tail equal to X
+
+20
+00:01:56,240 --> 00:01:57,160
+Ink X.
+
+21
+00:01:57,170 --> 00:02:06,800
+So we are going to add at the tail, the queue and tail + + and color at Index X equal to be if we are
+
+22
+00:02:06,800 --> 00:02:07,910
+going to remove.
+
+23
+00:02:09,050 --> 00:02:12,590
+Data are going to use that fact method.
+
+24
+00:02:12,740 --> 00:02:21,800
+So we start by creating an index equal to you at index had and had increased it by one and then assigned
+
+25
+00:02:21,800 --> 00:02:26,350
+the Color Index X equipped to see and return x.
+
+26
+00:02:26,930 --> 00:02:33,260
+So this is for the first one for the by dealing with that Q.
+
+27
+00:02:35,800 --> 00:02:36,160
+No.
+
+28
+00:02:38,300 --> 00:02:45,050
+Using the BFC as a searching algorithm.
+
+29
+00:02:45,500 --> 00:02:45,970
+OK.
+
+30
+00:02:46,310 --> 00:02:51,650
+So the breadth first search as a searching algorithm.
+
+31
+00:02:53,480 --> 00:03:00,650
+Please go back to the BFC in the previous videos to learn about the breadth first search if you missed
+
+32
+00:03:00,650 --> 00:03:01,040
+it.
+
+33
+00:03:01,580 --> 00:03:05,480
+So we took in the perimeter meter to start and the target.
+
+34
+00:03:06,730 --> 00:03:16,150
+And we assign you envy, and we make a for loop for you equals here and ula's then and you plus plus
+
+35
+00:03:16,450 --> 00:03:26,470
+the sequence and color at index you equal to so had equal to tail equal to zero.
+
+36
+00:03:26,770 --> 00:03:28,780
+Now, ink, you start here.
+
+37
+00:03:28,780 --> 00:03:34,540
+We have added a start and prayed at the start equal minus one.
+
+38
+00:03:35,290 --> 00:03:43,360
+Here is the binary search concept, while had does not equal to tail.
+
+39
+00:03:43,690 --> 00:03:46,640
+So we are moving the cursors.
+
+40
+00:03:48,380 --> 00:03:52,100
+Start, Dick, like you equal Dick.
+
+41
+00:03:53,050 --> 00:04:02,180
+OK, so we have removed Dec now for the equal to zero Vilas then and V Plus plus we are going.
+
+42
+00:04:03,280 --> 00:04:13,420
+To check if this condition and this condition is true here and here is true, then ink you VE and it
+
+43
+00:04:13,420 --> 00:04:20,440
+at index fee equal to you, then return color at Target Equal Equal to see.
+
+44
+00:04:20,860 --> 00:04:29,770
+So we have assigned valuable a and the Vardi will see no applying the Ford Focus on algorithm.
+
+45
+00:04:29,980 --> 00:04:37,300
+This is the concept of our algorithm by creating a method that returns.
+
+46
+00:04:37,450 --> 00:04:45,610
+The return type is integer and took into parameters the insource and in sync.
+
+47
+00:04:46,510 --> 00:04:51,730
+We start I.J and you and inthe max flow equal to zero.
+
+48
+00:04:53,090 --> 00:04:59,180
+We start since we have to the arrays, so we are going to make a and you make use of nested editing
+
+49
+00:05:00,560 --> 00:05:01,610
+nested loops or.
+
+50
+00:05:03,250 --> 00:05:08,650
+Four are equal to zero, and J, what the zero, so we are going to loop through all the AI and through
+
+51
+00:05:08,650 --> 00:05:19,060
+all the G for less and jaitley's then and assign every time here flow at index are equal and index equal
+
+52
+00:05:19,060 --> 00:05:19,720
+to zero.
+
+53
+00:05:19,720 --> 00:05:23,440
+So we are zeroing and enclosing this array to zero.
+
+54
+00:05:24,310 --> 00:05:35,650
+The flow now updating the residual values of edges while belman and by the y la by a breadth first search.
+
+55
+00:05:35,650 --> 00:05:41,650
+With this, the method that we have created, we passed the source and the sink.
+
+56
+00:05:42,070 --> 00:05:46,420
+So and increment equal to zero for the increment.
+
+57
+00:05:46,960 --> 00:05:49,330
+This is for the increment
+
+58
+00:05:52,810 --> 00:05:54,580
+increment equal to minimum.
+
+59
+00:05:55,590 --> 00:06:05,400
+And we passed the increment and capacity and this and it may be confusing, and it's very hard case
+
+60
+00:06:05,730 --> 00:06:15,750
+because it's consist of many calculations, so I need from you to write them down and solve them and
+
+61
+00:06:15,750 --> 00:06:26,550
+add to it to like, understand them very well and to practice fairly good practice about these algorithms.
+
+62
+00:06:27,390 --> 00:06:35,580
+Now we use a for loop, another full loop start from and minus one for at index you greater than or
+
+63
+00:06:35,580 --> 00:06:38,610
+equal to zero and you equal to that index.
+
+64
+00:06:38,610 --> 00:06:48,600
+You know, we start by flow, increased flow by flow that all the flow plus increment and then we reverse
+
+65
+00:06:48,600 --> 00:06:49,410
+the indices.
+
+66
+00:06:49,410 --> 00:06:50,130
+So you.
+
+67
+00:06:50,160 --> 00:06:52,740
+Here comes at Index I.
+
+68
+00:06:52,920 --> 00:07:00,720
+It was at Index J becomes at the index and the max flow equals the old maximum flow plus increment and
+
+69
+00:07:00,720 --> 00:07:03,030
+we return to maximum flow.
+
+70
+00:07:03,450 --> 00:07:03,840
+OK.
+
+71
+00:07:05,520 --> 00:07:12,990
+In order to test our program, we start by creating a foreign invested for a loop because we have the
+
+72
+00:07:12,990 --> 00:07:14,610
+capacity to do that.
+
+73
+00:07:15,420 --> 00:07:17,100
+We initialize them to zero.
+
+74
+00:07:17,550 --> 00:07:18,780
+This is the first step.
+
+75
+00:07:19,050 --> 00:07:24,270
+Putting all the elements at this matrix is equal to zero.
+
+76
+00:07:24,750 --> 00:07:26,160
+OK, so.
+
+77
+00:07:28,070 --> 00:07:30,530
+And equal to sex and equal to seven.
+
+78
+00:07:30,980 --> 00:07:42,740
+We start by capacity at index zero one is eight zero four three and so index equal to zero and equal
+
+79
+00:07:42,740 --> 00:07:43,280
+to five.
+
+80
+00:07:43,850 --> 00:07:51,020
+Now we need to print maximum flow, which is the maximum flow of the Ford Focus on records and how to
+
+81
+00:07:51,020 --> 00:08:01,340
+find the path between these points and how, which is that this capacity with with corresponding capacity.
+
+82
+00:08:01,350 --> 00:08:04,850
+So these are the capacity between the two edges.
+
+83
+00:08:06,860 --> 00:08:14,420
+We apply the Ford Focus, an algorithm we pass as equal to zero and to equal to five.
+
+84
+00:08:15,200 --> 00:08:15,560
+OK.
+
+85
+00:08:15,860 --> 00:08:24,230
+So for this, we have created the Ford Focus algorithm and C, and this is tested in all compilers of
+
+86
+00:08:24,230 --> 00:08:24,590
+C.
+
+87
+00:08:25,250 --> 00:08:30,740
+And I want from you to write this down and try to make it.
+
+88
+00:08:31,430 --> 00:08:41,990
+And like any copybook or API files that you can review and revise before that into.

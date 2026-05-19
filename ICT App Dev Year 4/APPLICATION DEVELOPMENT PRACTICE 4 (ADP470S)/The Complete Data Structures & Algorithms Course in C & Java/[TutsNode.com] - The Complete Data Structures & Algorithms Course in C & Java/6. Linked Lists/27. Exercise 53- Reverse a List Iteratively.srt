@@ -1,0 +1,307 @@
+1
+00:00:00,510 --> 00:00:06,900
+Welcome to exercise number 53, we are asked to write a function to reverse the link of least.
+
+2
+00:00:07,590 --> 00:00:13,890
+It's very important and common question that you may see in the university or interview.
+
+3
+00:00:14,520 --> 00:00:21,720
+We will make it as if they are actively and and recursive.
+
+4
+00:00:24,030 --> 00:00:27,570
+OK, so OK, let's start.
+
+5
+00:00:29,100 --> 00:00:30,870
+We will create public
+
+6
+00:00:33,690 --> 00:00:39,600
+void for iterative return, not reverse.
+
+7
+00:00:42,230 --> 00:00:42,740
+Last.
+
+8
+00:00:44,870 --> 00:00:45,910
+And it took.
+
+9
+00:00:46,190 --> 00:00:47,800
+No, no.
+
+10
+00:00:48,410 --> 00:00:48,790
+OK.
+
+11
+00:00:49,970 --> 00:00:56,420
+Both the video and think about how we could make a method that would reverse the link at lest
+
+12
+00:00:59,450 --> 00:01:04,740
+we start by not brave equal to none.
+
+13
+00:01:06,060 --> 00:01:13,640
+No current equal to know that we have passed.
+
+14
+00:01:13,880 --> 00:01:20,870
+So we are referring the current known as the not that it's best and not next equal to nothing.
+
+15
+00:01:22,310 --> 00:01:23,570
+Now let's see.
+
+16
+00:01:24,140 --> 00:01:31,760
+We need to pass through all that that list and reach the end and start from the end to tell him.
+
+17
+00:01:32,270 --> 00:01:37,160
+So while Grant does not equal to null,
+
+18
+00:01:40,940 --> 00:01:56,540
+then next equal to Karen thought next year on moving and cursor by next equals current the next current
+
+19
+00:01:57,860 --> 00:02:02,150
+dot next equal to previous.
+
+20
+00:02:03,960 --> 00:02:10,670
+Moving the carrier now prev equal to current and current.
+
+21
+00:02:11,030 --> 00:02:12,920
+Equal to next.
+
+22
+00:02:13,400 --> 00:02:15,080
+OK, it's very simple.
+
+23
+00:02:15,440 --> 00:02:23,510
+Now we have and that from making that while loop this word, refer to the next year with regard to next
+
+24
+00:02:23,960 --> 00:02:27,500
+and move the current to the previous and the previous.
+
+25
+00:02:27,500 --> 00:02:29,540
+Equal to guarantee guarantee equal to next.
+
+26
+00:02:29,690 --> 00:02:40,910
+I'm just making this happen to return previous and return now.
+
+27
+00:02:41,090 --> 00:02:46,370
+They're not actually making the previous return in the previous act.
+
+28
+00:02:46,670 --> 00:02:52,110
+OK, now let's see how to reverse this link.
+
+29
+00:02:52,130 --> 00:02:59,510
+At least this is that while loop that we have created, we have created three objects of nonce and the
+
+30
+00:02:59,510 --> 00:03:00,620
+pointers to them.
+
+31
+00:03:00,620 --> 00:03:02,300
+Previous, current and next.
+
+32
+00:03:02,660 --> 00:03:10,790
+And we have moved this cursor to become at the end and the start from the end to return there.
+
+33
+00:03:11,060 --> 00:03:13,210
+Not note.
+
+34
+00:03:13,650 --> 00:03:14,140
+OK.
+
+35
+00:03:15,480 --> 00:03:15,810
+No.
+
+36
+00:03:17,650 --> 00:03:23,830
+In order to use this, I will make less the reverse.
+
+37
+00:03:23,890 --> 00:03:31,060
+We will reverse this list and pass the hand, and then we will print it again.
+
+38
+00:03:31,780 --> 00:03:34,840
+Let's see, we go to the main.
+
+39
+00:03:38,440 --> 00:03:41,630
+If we will exercise number
+
+40
+00:03:45,800 --> 00:03:53,450
+fifty three, we will reverse reverse the last
+
+41
+00:03:56,540 --> 00:04:06,380
+link, at least Doug reversed list and we passed that link and placed the tab and then linked list that
+
+42
+00:04:06,500 --> 00:04:08,300
+print a list.
+
+43
+00:04:09,620 --> 00:04:12,110
+OK, let me see.
+
+44
+00:04:18,260 --> 00:04:21,320
+And here we go.
+
+45
+00:04:22,730 --> 00:04:26,150
+We didn't pass anything from here.
+
+46
+00:04:27,050 --> 00:04:38,300
+I think we have removed this, removing the duplicates that we see four one five three five.
+
+47
+00:04:42,270 --> 00:04:43,780
+I check it again.
+
+48
+00:04:45,030 --> 00:04:49,770
+OK, I think the problem is in the print list, so we go to the print list.
+
+49
+00:04:50,520 --> 00:04:53,850
+I will change it to become more professional.
+
+50
+00:04:54,400 --> 00:05:00,750
+It does not, as the first wave not, does not.
+
+51
+00:05:00,840 --> 00:05:08,830
+I will remove this while not node does not equal to no node here and node.
+
+52
+00:05:10,650 --> 00:05:16,650
+This will be more, more specific so we can print from the head.
+
+53
+00:05:16,650 --> 00:05:17,970
+And from that they.
+
+54
+00:05:19,900 --> 00:05:24,890
+We need to pass that at to TED here in order to print it.
+
+55
+00:05:25,240 --> 00:05:33,990
+And here I think at least from the head and now linked list also with the head.
+
+56
+00:05:34,450 --> 00:05:38,480
+OK, so linked list not had this.
+
+57
+00:05:38,480 --> 00:05:39,490
+Is that reversed?
+
+58
+00:05:42,250 --> 00:05:49,120
+System that allowed the brand to reverse this.
+
+59
+00:05:50,850 --> 00:05:51,180
+Let's.
+
+60
+00:05:55,930 --> 00:05:56,520
+OK.
+
+61
+00:05:56,680 --> 00:06:05,410
+We have four one five three five we have removed the duplicates, four one, five three and the reversed
+
+62
+00:06:05,410 --> 00:06:05,860
+list.
+
+63
+00:06:06,590 --> 00:06:11,620
+We didn't make anything from the listing, at least at that.
+
+64
+00:06:14,130 --> 00:06:17,880
+We are going to print the list of the reverse.
+
+65
+00:06:19,990 --> 00:06:22,650
+OK, I will change this card.
+
+66
+00:06:24,580 --> 00:06:25,420
+And based.
+
+67
+00:06:28,410 --> 00:06:32,130
+That reverse link, at least with the head, let me see.
+
+68
+00:06:33,360 --> 00:06:38,150
+And here we go, guys, we have reversed it.
+
+69
+00:06:38,220 --> 00:06:41,790
+This is the linked list that we have for one 540.
+
+70
+00:06:42,090 --> 00:06:43,860
+We have reversed it correctly.
+
+71
+00:06:43,860 --> 00:06:45,390
+Three five one four.
+
+72
+00:06:45,720 --> 00:06:53,460
+OK, so this is the way that we make our reversing for that link at list.
+
+73
+00:06:53,720 --> 00:06:54,060
+OK.
+
+74
+00:06:55,550 --> 00:07:02,900
+And iterative, we will see in the next video how to make it at like a recursively.
+
+75
+00:07:03,440 --> 00:07:06,490
+And it's very important to understand how it works.
+
+76
+00:07:06,500 --> 00:07:07,130
+Recursive.
+
+77
+00:07:07,490 --> 00:07:07,850
+OK.

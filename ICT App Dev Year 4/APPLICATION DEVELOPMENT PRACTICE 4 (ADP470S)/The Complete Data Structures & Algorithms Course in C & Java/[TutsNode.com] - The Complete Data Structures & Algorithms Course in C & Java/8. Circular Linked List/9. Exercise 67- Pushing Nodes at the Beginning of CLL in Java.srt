@@ -1,0 +1,511 @@
+1
+00:00:00,060 --> 00:00:06,510
+All my friends and welcome to exercise number 67, we are asked to insert notes in circular link at
+
+2
+00:00:06,510 --> 00:00:15,180
+lest we, by the way, we are going to push then notes, so we are going to insert notes at the beginning
+
+3
+00:00:15,180 --> 00:00:16,260
+of the list.
+
+4
+00:00:16,440 --> 00:00:19,320
+OK, so how to do that?
+
+5
+00:00:19,500 --> 00:00:26,790
+We have solved and we have seen this in their lectures before with animation and we have it with about
+
+6
+00:00:27,840 --> 00:00:32,450
+this topic and we have solved this exercise in see?
+
+7
+00:00:32,520 --> 00:00:35,730
+Now let's create a method here public.
+
+8
+00:00:36,330 --> 00:00:47,210
+No public static and note that you don't know because we are going to insert it as no and at have a
+
+9
+00:00:47,220 --> 00:00:56,010
+reference we need to to get the head of the list because we are going to insert the note before this
+
+10
+00:00:56,010 --> 00:00:57,450
+verdict for us before to the head.
+
+11
+00:00:57,750 --> 00:01:06,420
+OK, now what are the what is the data that we are going to put it is of type empty and cold data?
+
+12
+00:01:06,900 --> 00:01:10,110
+OK, now
+
+13
+00:01:12,660 --> 00:01:21,390
+node node one equal to new node, we are creating the node.
+
+14
+00:01:22,710 --> 00:01:33,840
+We are creating another 10 party nodes that they refer to the headdress and we start by putting the
+
+15
+00:01:33,850 --> 00:01:34,200
+data.
+
+16
+00:01:34,200 --> 00:01:41,820
+So creating the nodes here, one first step creating creating nodes.
+
+17
+00:01:42,510 --> 00:01:45,090
+The second step is.
+
+18
+00:01:50,110 --> 00:01:54,310
+Creating data or creating.
+
+19
+00:01:55,570 --> 00:01:59,140
+Let me insert inserting data.
+
+20
+00:02:00,370 --> 00:02:08,650
+We can make them because it is connected with and that therefore that creating nodes step, it's the
+
+21
+00:02:08,650 --> 00:02:09,040
+same.
+
+22
+00:02:09,220 --> 00:02:16,600
+So it's not the big difference because we are creating the nodes, we have created the reference and
+
+23
+00:02:16,600 --> 00:02:19,570
+we are inserting the data inside it.
+
+24
+00:02:19,870 --> 00:02:25,570
+OK, now node one dot next equal to reference.
+
+25
+00:02:25,720 --> 00:02:30,340
+You see, guys, what we have done, what we have done here.
+
+26
+00:02:30,340 --> 00:02:35,530
+Consider a circle link, at least here a b.
+
+27
+00:02:36,520 --> 00:02:42,040
+A. We are referencing them, and C refers to that to the first.
+
+28
+00:02:42,940 --> 00:02:45,940
+We are going to insert a new note here.
+
+29
+00:02:46,060 --> 00:02:51,910
+It is called containing the ETA e but goes there.
+
+30
+00:02:52,240 --> 00:03:00,510
+We have it created there that the data of type and I am talking about linked list of type car.
+
+31
+00:03:00,520 --> 00:03:01,630
+It's the same concept.
+
+32
+00:03:02,290 --> 00:03:02,530
+What?
+
+33
+00:03:02,530 --> 00:03:12,550
+I can change them here in order not to be confused, just to talk about me, that I am creating integers
+
+34
+00:03:12,550 --> 00:03:15,610
+and I am putting car.
+
+35
+00:03:15,760 --> 00:03:16,390
+No guys.
+
+36
+00:03:16,840 --> 00:03:23,890
+So I am going to insert in your note and the first here at the beginning.
+
+37
+00:03:25,350 --> 00:03:34,080
+So what I need to do, I need to remove this link and point it to here.
+
+38
+00:03:34,860 --> 00:03:44,910
+So three now points to Ford, OK, guys, and I need to create this link that points Ford to the one
+
+39
+00:03:45,270 --> 00:03:51,750
+but one there is a pointer here called had that point, it was pointing to the head of one.
+
+40
+00:03:51,930 --> 00:03:55,080
+So for that, I have created a note one.
+
+41
+00:03:55,320 --> 00:03:56,190
+This is the note.
+
+42
+00:03:56,430 --> 00:04:04,650
+I have put the data inside it I have asked for and I pressed the head reference, which is the head,
+
+43
+00:04:04,980 --> 00:04:06,240
+which was one.
+
+44
+00:04:06,810 --> 00:04:10,890
+So I have created it temp here.
+
+45
+00:04:11,160 --> 00:04:13,470
+So temp refers to one.
+
+46
+00:04:13,830 --> 00:04:19,850
+Now we need to move node one the next equal to had the ref.
+
+47
+00:04:19,860 --> 00:04:23,340
+So we have created by this step this reference.
+
+48
+00:04:23,670 --> 00:04:32,820
+So Ford now refers to one as its next and that data we have created for and everything.
+
+49
+00:04:33,860 --> 00:04:34,730
+Works fine.
+
+50
+00:04:35,000 --> 00:04:45,500
+Now we need to find and to make this link that is from the end to the first how to do it.
+
+51
+00:04:45,900 --> 00:04:49,580
+OK, we need to link three by the four.
+
+52
+00:04:49,990 --> 00:04:51,830
+OK, let's see how to make.
+
+53
+00:04:52,190 --> 00:05:00,560
+Now we need to make that reference from the last note to that first flight because it is a circular
+
+54
+00:05:00,560 --> 00:05:02,650
+list, OK?
+
+55
+00:05:02,720 --> 00:05:05,840
+Creating the links.
+
+56
+00:05:07,910 --> 00:05:17,690
+If you had reference that's not equal to null, then make a while loop that goes through and check if
+
+57
+00:05:17,690 --> 00:05:21,530
+the link is not null, then set the next of the last.
+
+58
+00:05:21,740 --> 00:05:22,100
+No.
+
+59
+00:05:22,680 --> 00:05:32,720
+OK, because we are going to make the move, we need to set the last note to become the first go to
+
+60
+00:05:32,720 --> 00:05:33,740
+point to the first.
+
+61
+00:05:33,980 --> 00:05:34,310
+OK.
+
+62
+00:05:34,760 --> 00:05:35,810
+It's very simple.
+
+63
+00:05:36,020 --> 00:05:45,650
+So how to do that had the reference does not equal to and then the next we use them equal to them to
+
+64
+00:05:46,250 --> 00:05:47,570
+the next.
+
+65
+00:05:48,500 --> 00:06:00,350
+And that we exist from them that next week while no one else, we point the.
+
+66
+00:06:02,040 --> 00:06:04,500
+Here we point health
+
+67
+00:06:07,860 --> 00:06:14,310
+nodes one the next equal to note that, OK.
+
+68
+00:06:15,000 --> 00:06:16,410
+It's very simple.
+
+69
+00:06:18,510 --> 00:06:18,820
+No.
+
+70
+00:06:19,470 --> 00:06:30,600
+Had the reference equal to no one and the return note and no reference which is better goes we have
+
+71
+00:06:30,600 --> 00:06:38,070
+inserted the node one at the beginning and now it becomes the hat.
+
+72
+00:06:38,340 --> 00:06:44,790
+So what we have done, creating the nodes, inserting the data inside, and we have created a temporary
+
+73
+00:06:44,790 --> 00:06:53,160
+variable that is pointing to the head and we have moved that cursor until the temp until reaching the
+
+74
+00:06:53,160 --> 00:06:53,550
+end.
+
+75
+00:06:53,850 --> 00:07:00,600
+So at the end, when reaching the end, the last node make the temp the next, which is the last node
+
+76
+00:07:01,050 --> 00:07:06,330
+equal to node one that we have created and newly created.
+
+77
+00:07:08,950 --> 00:07:10,840
+And we return that defense.
+
+78
+00:07:11,260 --> 00:07:11,710
+OK.
+
+79
+00:07:12,040 --> 00:07:13,510
+It's very simple.
+
+80
+00:07:13,870 --> 00:07:23,800
+Let's try to see this test this method, by the way, this method will cost us all of and because we
+
+81
+00:07:23,800 --> 00:07:27,670
+are traversing all the elements inside the list.
+
+82
+00:07:28,120 --> 00:07:32,800
+So this would cost us time complexity.
+
+83
+00:07:39,170 --> 00:07:40,070
+Oh, can.
+
+84
+00:07:46,170 --> 00:07:46,650
+OK.
+
+85
+00:07:49,610 --> 00:07:49,940
+No.
+
+86
+00:07:52,940 --> 00:07:53,980
+Go to the main
+
+87
+00:07:57,740 --> 00:07:59,450
+we insert, we start by.
+
+88
+00:08:02,790 --> 00:08:04,710
+We have great static.
+
+89
+00:08:05,100 --> 00:08:05,670
+Yes.
+
+90
+00:08:05,810 --> 00:08:08,400
+So push method.
+
+91
+00:08:09,000 --> 00:08:10,710
+I need to push one.
+
+92
+00:08:14,990 --> 00:08:18,200
+Which is to have had the reference had
+
+93
+00:08:21,350 --> 00:08:23,780
+I need to make a reference above.
+
+94
+00:08:24,590 --> 00:08:28,990
+And they create a note here called had.
+
+95
+00:08:29,410 --> 00:08:33,550
+Okay, so I need to make a hand.
+
+96
+00:08:33,800 --> 00:08:39,140
+You can make it above or you can make it into initialized list as empty so
+
+97
+00:08:43,730 --> 00:08:44,540
+as and
+
+98
+00:08:47,420 --> 00:08:53,000
+how to do that by making a note have equal to no.
+
+99
+00:08:55,910 --> 00:08:56,390
+OK.
+
+100
+00:08:56,960 --> 00:09:05,000
+It's very simple now we are going to create to create a link, at least circle a link at least would
+
+101
+00:09:05,000 --> 00:09:08,360
+be like one two three four.
+
+102
+00:09:08,750 --> 00:09:09,740
+How to do that?
+
+103
+00:09:09,950 --> 00:09:21,650
+We start by making had equal to bush because Bush, where it took him to perimeter note and the data
+
+104
+00:09:21,650 --> 00:09:22,910
+and returns note.
+
+105
+00:09:22,910 --> 00:09:27,620
+So I need to store it inside a variable of type.
+
+106
+00:09:27,630 --> 00:09:30,070
+No had.
+
+107
+00:09:32,060 --> 00:09:33,260
+And I put one.
+
+108
+00:09:34,740 --> 00:09:58,350
+For sure, had the bush of had and City again have equal to Bush had and two had equal Bush had and
+
+109
+00:09:58,350 --> 00:10:16,200
+one system ducked out the rent and contents of circular link and less how to make it.
+
+110
+00:10:16,230 --> 00:10:23,600
+We have created in the previous exercise a method called print list, so I will use it to print the
+
+111
+00:10:23,620 --> 00:10:23,940
+list.
+
+112
+00:10:24,360 --> 00:10:25,290
+How to do it?
+
+113
+00:10:25,440 --> 00:10:27,240
+I will call.
+
+114
+00:10:28,430 --> 00:10:36,830
+It directly, and I passed the first note as it's the head of it and start printing from starting from
+
+115
+00:10:36,830 --> 00:10:37,940
+this one.
+
+116
+00:10:38,480 --> 00:10:38,960
+OK.
+
+117
+00:10:39,830 --> 00:10:45,890
+I have done this, so I need to run circulars and get this.
+
+118
+00:10:46,370 --> 00:10:50,060
+And the content of circular link at least one, two, three and four.
+
+119
+00:10:50,390 --> 00:10:53,180
+You see guys one using push.
+
+120
+00:10:53,180 --> 00:10:59,320
+We are pushing elements after that or before their hat.
+
+121
+00:10:59,330 --> 00:11:07,460
+So if I push here had and ninety nine, so it would be before no one.
+
+122
+00:11:07,840 --> 00:11:08,600
+OK, I'm not.
+
+123
+00:11:09,110 --> 00:11:11,390
+I'm not adding the elements at the end.
+
+124
+00:11:11,690 --> 00:11:13,760
+We will see it in later exercises.
+
+125
+00:11:14,060 --> 00:11:20,420
+We are pushing the new new nodes at the beginning of the list.
+
+126
+00:11:20,870 --> 00:11:23,480
+So this is our list.
+
+127
+00:11:23,870 --> 00:11:34,520
+This is how we create and push elements at the end at the first of that list and how we print that list.
+
+128
+00:11:35,040 --> 00:11:35,300
+OK.

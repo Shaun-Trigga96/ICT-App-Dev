@@ -1,0 +1,147 @@
+1
+00:00:00,180 --> 00:00:06,720
+We have talked in the previous video about printing the link, at least in reverse order, and we see
+
+2
+00:00:06,720 --> 00:00:15,060
+that we have used that recursion now in order to make this very simple.
+
+3
+00:00:15,090 --> 00:00:18,450
+I will demonstrate the recursion in a different way.
+
+4
+00:00:18,900 --> 00:00:27,630
+So you see guys that in the method here we print reversely and we are making use of recursion and print,
+
+5
+00:00:27,630 --> 00:00:28,920
+reversely and passing.
+
+6
+00:00:28,950 --> 00:00:30,030
+And then next.
+
+7
+00:00:30,060 --> 00:00:32,420
+How does this means of words?
+
+8
+00:00:32,790 --> 00:00:38,670
+We have this this link unless we start by.
+
+9
+00:00:39,780 --> 00:00:43,590
+Brent, reversely, this is the method that we are going to execute.
+
+10
+00:00:44,760 --> 00:00:53,070
+And that if had equal equal to none, no, it is not equal to now, so we are not going to secure the
+
+11
+00:00:53,070 --> 00:00:53,580
+return.
+
+12
+00:00:54,060 --> 00:00:56,150
+We will print recursively.
+
+13
+00:00:56,160 --> 00:01:03,750
+We are going to bear a call the next one, which at the head, the next the head, the next we are putting
+
+14
+00:01:03,750 --> 00:01:06,690
+the reference, which is 2024.
+
+15
+00:01:06,840 --> 00:01:15,030
+So we are calling the method again, print recursively and we are passing the address 2024.
+
+16
+00:01:15,540 --> 00:01:17,220
+OK, now.
+
+17
+00:01:19,280 --> 00:01:25,520
+This method, Brent, recursively, we'll start executing if had equal equal to no, no, it will not
+
+18
+00:01:25,520 --> 00:01:33,170
+return, it will execute Brent recursively head dot next and it will not execute print.
+
+19
+00:01:33,470 --> 00:01:35,420
+This is the basics of recursion.
+
+20
+00:01:35,420 --> 00:01:41,420
+So please, guys, if you don't understand the the recursion, how it works, please go to the Karajan
+
+21
+00:01:41,420 --> 00:01:46,440
+section and watch the videos now.
+
+22
+00:01:46,820 --> 00:01:56,210
+Print Richter reversely it will be executed and we are calling print recursively, reversely the method
+
+23
+00:01:56,210 --> 00:01:58,160
+and passing three thousand twenty four.
+
+24
+00:01:58,160 --> 00:02:01,880
+This is the end of that, or three thousand forty.
+
+25
+00:02:02,270 --> 00:02:03,950
+It's not a big deal.
+
+26
+00:02:05,140 --> 00:02:10,130
+I'm giving you that the basics of and the content.
+
+27
+00:02:11,920 --> 00:02:19,000
+Void, Brent, recursively, I'm calling this method, I'm passing, passing through their arguments.
+
+28
+00:02:19,150 --> 00:02:29,710
+The index and the reference of the last known, which is 38, 24 or 40 if had equal equal to null return
+
+29
+00:02:29,710 --> 00:02:34,210
+and then print recursively the next note?
+
+30
+00:02:34,540 --> 00:02:44,170
+OK, so this had equal equal to null the because the next node print recursively had had equal to next.
+
+31
+00:02:44,380 --> 00:02:51,670
+And recall the print recursive reversely method and it were returned because had now equal to null.
+
+32
+00:02:52,720 --> 00:03:01,840
+Again, now this now would be a return and printing their one one nine, so it will execute the last
+
+33
+00:03:01,990 --> 00:03:04,510
+print f had of date.
+
+34
+00:03:04,870 --> 00:03:12,500
+And then this will be executing reversely by printing after the head of state.
+
+35
+00:03:12,520 --> 00:03:22,900
+So it starts from the last by printing that last as executing the Leicester statement and then going
+
+36
+00:03:22,900 --> 00:03:31,860
+backward to continue executing the print f of had the data or the data of they're not.
+
+37
+00:03:32,710 --> 00:03:33,140
+OK.

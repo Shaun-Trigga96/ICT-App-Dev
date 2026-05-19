@@ -1,0 +1,211 @@
+1
+00:00:00,120 --> 00:00:01,110
+Hello, my friends.
+
+2
+00:00:01,590 --> 00:00:03,180
+And welcome to exercise number.
+
+3
+00:00:04,260 --> 00:00:14,490
+In this exercise, we are asked to find the time complexity of this algorithm, so find the time complexity
+
+4
+00:00:14,490 --> 00:00:26,220
+of this for loop starting from I equal to one I less than or equal math, the power to of and and and
+
+5
+00:00:26,220 --> 00:00:31,140
+I plus plus and system the doubt that print this message.
+
+6
+00:00:32,150 --> 00:00:41,240
+Both the video and think about this exercise, and I hope you write your answer in the comments below
+
+7
+00:00:41,510 --> 00:00:51,860
+to see how the activity and how their their participation in this course will affect your progress.
+
+8
+00:00:52,920 --> 00:00:53,280
+Now.
+
+9
+00:00:54,830 --> 00:00:59,330
+Solving this exercises are very important to understand all the concerns.
+
+10
+00:00:59,750 --> 00:01:08,240
+So please write them down and try to solve them and write these these exercises in your copy book in
+
+11
+00:01:08,240 --> 00:01:13,640
+order to review them later when you have an exam or an interview.
+
+12
+00:01:16,150 --> 00:01:25,420
+As every loop, we have to start with the conditions, with that initial condition, with the stop condition
+
+13
+00:01:25,960 --> 00:01:32,320
+and the increment then crunch this Lou is equal to one.
+
+14
+00:01:33,260 --> 00:01:37,730
+So we will start with one here.
+
+15
+00:01:41,730 --> 00:01:54,380
+We will stop at I less than or equal math, the power of two and and this library math, we used the
+
+16
+00:01:54,410 --> 00:01:57,090
+power method from it.
+
+17
+00:01:57,420 --> 00:02:04,190
+And we have best do and power and this will result into power.
+
+18
+00:02:04,270 --> 00:02:14,010
+And so if we enter any number and here or we pass any number and to this law, it will go through from
+
+19
+00:02:14,010 --> 00:02:16,400
+one till two to power.
+
+20
+00:02:16,410 --> 00:02:22,470
+And if we pass like four, if an equal to four.
+
+21
+00:02:28,010 --> 00:02:30,140
+There is also a condition here.
+
+22
+00:02:30,170 --> 00:02:40,160
+I told you I increment is A-plus plus, so all the elements from one to tell to power and are going
+
+23
+00:02:40,160 --> 00:02:42,140
+to be passed through this loop.
+
+24
+00:02:42,880 --> 00:02:46,640
+OK, we have here all of one.
+
+25
+00:02:46,760 --> 00:02:48,980
+So we have it is very simple.
+
+26
+00:02:49,550 --> 00:02:53,300
+So this is a constant oh of what?
+
+27
+00:02:55,100 --> 00:03:03,650
+And as as I told you, this loop will go through from one til two to power and and acting and moving
+
+28
+00:03:03,650 --> 00:03:09,590
+from one to two and an all through all these elements.
+
+29
+00:03:09,620 --> 00:03:10,160
+OK.
+
+30
+00:03:10,970 --> 00:03:12,590
+Let's take an example.
+
+31
+00:03:12,780 --> 00:03:16,700
+An equal and equal to four.
+
+32
+00:03:17,060 --> 00:03:24,200
+OK, so what are the elements if an equal to four at it is, these are from one.
+
+33
+00:03:25,340 --> 00:03:34,390
+Due to the power for which is due to power for two to.
+
+34
+00:03:35,540 --> 00:03:40,910
+Three, four, five, six seven.
+
+35
+00:03:42,060 --> 00:03:42,660
+Eight.
+
+36
+00:03:43,050 --> 00:03:48,810
+Two times to four times to eight times to 16.
+
+37
+00:03:49,050 --> 00:03:51,990
+So two to power four is 16.
+
+38
+00:03:52,650 --> 00:03:54,150
+OK, so nine.
+
+39
+00:03:57,740 --> 00:03:58,280
+Then.
+
+40
+00:04:00,060 --> 00:04:05,250
+11, 12, 13, 14, 15 and 16.
+
+41
+00:04:06,060 --> 00:04:06,480
+So.
+
+42
+00:04:08,360 --> 00:04:14,060
+This loop will go through all of these elements 16.
+
+43
+00:04:15,360 --> 00:04:24,900
+Times 16 iteration and printing this system print as 16 times.
+
+44
+00:04:26,190 --> 00:04:39,230
+If we go and took and an equal to five, this will execute this statement as to two power five OK.
+
+45
+00:04:39,990 --> 00:04:41,550
+It is 16 times.
+
+46
+00:04:41,550 --> 00:04:46,110
+Two is equal to 32 times.
+
+47
+00:04:46,950 --> 00:04:51,990
+OK, if we took an equal to six, it will give us two to power.
+
+48
+00:04:51,990 --> 00:04:52,410
+Six.
+
+49
+00:04:52,770 --> 00:04:58,260
+So it would result in 64 times.
+
+50
+00:04:59,190 --> 00:05:07,740
+Therefore, that time complexity of this exercise is, oh of two, an OK.
+
+51
+00:05:10,880 --> 00:05:18,020
+It's due to power eight, for example, it will execute at two hundred fifty six times.
+
+52
+00:05:18,330 --> 00:05:26,910
+OK, so therefore all equal to two and power and OK, this is the time complexity.
+
+53
+00:05:26,930 --> 00:05:27,860
+It is the power.

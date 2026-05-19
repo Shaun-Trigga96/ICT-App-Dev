@@ -1,0 +1,171 @@
+1
+00:00:01,060 --> 00:00:11,660
+Arrays can contain primitives and cart or et cetera, as well as object Norden on the primitive references
+
+2
+00:00:11,710 --> 00:00:14,380
+of a class, depending on the definition of that.
+
+3
+00:00:15,340 --> 00:00:17,470
+Think about every.
+
+4
+00:00:18,500 --> 00:00:28,400
+Like a building and building, the first floor is then this building called House in order to access
+
+5
+00:00:28,400 --> 00:00:28,940
+the house.
+
+6
+00:00:29,240 --> 00:00:37,550
+We are going to see the House of Index zero, House of Index one, House of Index two and House of Index
+
+7
+00:00:37,550 --> 00:00:37,910
+three.
+
+8
+00:00:38,630 --> 00:00:42,680
+Each element in the array is accessed via its index.
+
+9
+00:00:43,130 --> 00:00:49,520
+The index begins with zero and at and total array size minus one.
+
+10
+00:00:49,970 --> 00:00:56,810
+Okay, so this building is four four floors or four levels.
+
+11
+00:00:57,200 --> 00:01:04,430
+The last level is that the elements minus one or two, the total right size minus one.
+
+12
+00:01:04,880 --> 00:01:13,820
+All the elements of array can be accessed using Java for a loop or C loop or python.
+
+13
+00:01:14,190 --> 00:01:14,600
+OK.
+
+14
+00:01:16,250 --> 00:01:26,420
+In order to access this, a building like house number two in House two to access the third floor,
+
+15
+00:01:26,570 --> 00:01:30,020
+we write house and inside the house.
+
+16
+00:01:30,260 --> 00:01:36,200
+This is the name of ultracold house inside angled brackets following the name of the array.
+
+17
+00:01:36,380 --> 00:01:41,720
+We put the index of this array that we are going to access.
+
+18
+00:01:42,290 --> 00:01:51,830
+So in order to access the third floor, we put House and inside of the bracket we put the index of the
+
+19
+00:01:52,970 --> 00:01:53,390
+floor.
+
+20
+00:01:54,530 --> 00:01:57,560
+Now how to do this inside?
+
+21
+00:01:59,570 --> 00:02:00,760
+Got inside building.
+
+22
+00:02:02,180 --> 00:02:09,920
+We have public main, we are declaring an array of integer and allocating memory for five integers,
+
+23
+00:02:09,920 --> 00:02:20,450
+so at this level, Java will create or the system will create a reservation for inside memory, for
+
+24
+00:02:20,450 --> 00:02:22,520
+the array with five elements.
+
+25
+00:02:22,700 --> 00:02:27,050
+OK, see the code on the left and see the execution of it.
+
+26
+00:02:27,230 --> 00:02:30,230
+We need and realize the first element of the array.
+
+27
+00:02:30,590 --> 00:02:34,580
+So we've put array of zero equal to or equal to 10.
+
+28
+00:02:35,180 --> 00:02:45,470
+This means it will stores inside array of zero equal to 10 at index zero go and in and stolen it or
+
+29
+00:02:46,100 --> 00:02:48,560
+put inside that number that.
+
+30
+00:02:50,160 --> 00:02:54,800
+And is the second element or the rest of the elements?
+
+31
+00:02:56,470 --> 00:02:59,470
+Array of one equal to 20.
+
+32
+00:02:59,590 --> 00:03:06,160
+So go at index one in this array and put it inside at 20.
+
+33
+00:03:08,120 --> 00:03:16,520
+And so on, go to a rate at Index two and put 30, go at index three of this array and put forth the
+
+34
+00:03:16,850 --> 00:03:20,540
+go at Index four and put 15.
+
+35
+00:03:20,750 --> 00:03:21,290
+OK.
+
+36
+00:03:22,160 --> 00:03:32,540
+This is how we insert and how to initialize the elements now in order to access the elements of specific
+
+37
+00:03:32,540 --> 00:03:33,140
+array.
+
+38
+00:03:33,410 --> 00:03:39,890
+We have to make for a loop and this starts from zero.
+
+39
+00:03:41,230 --> 00:03:46,360
+The trade at length and the mod is A-plus Plus.
+
+40
+00:03:47,320 --> 00:03:53,380
+So the system that added print will print a arae at I.
+
+41
+00:03:53,590 --> 00:03:56,110
+This is the angle the brackets of I.
+
+42
+00:03:58,020 --> 00:04:07,500
+Angled to break every angle, the brackets, and I this is the key to make a loop through these elements.
+
+43
+00:04:07,740 --> 00:04:12,640
+So we are going to read all these animals, OK?

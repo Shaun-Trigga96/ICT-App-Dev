@@ -1,0 +1,663 @@
+1
+00:00:00,330 --> 00:00:04,410
+Hello, my friends, and welcome to exercise number 104.
+
+2
+00:00:04,920 --> 00:00:11,640
+So in this exercise, we are going to implement the Belmont Ford algorithm and job, so we will create
+
+3
+00:00:11,640 --> 00:00:18,090
+a new algorithm class here and decide their algorithms class packages.
+
+4
+00:00:18,390 --> 00:00:27,840
+So I will create it under the name Bowman, Bowman, Ford, the class.
+
+5
+00:00:27,850 --> 00:00:31,560
+So this is the class corresponding to Belmont Ford algorithm.
+
+6
+00:00:32,220 --> 00:00:38,420
+By the way, you can get all of the source codes that we have created in the previous exercise under
+
+7
+00:00:38,430 --> 00:00:41,910
+the resources folder on each exercise.
+
+8
+00:00:42,400 --> 00:00:52,930
+So the Belmont Ford here, OK, we will start by creating the Class Create graph.
+
+9
+00:00:52,950 --> 00:00:56,910
+It consists of edges create edge.
+
+10
+00:00:59,280 --> 00:01:03,570
+This is the class it contains as W and weight.
+
+11
+00:01:03,690 --> 00:01:06,330
+So the source, the destination and that way.
+
+12
+00:01:06,540 --> 00:01:09,280
+So and as the.
+
+13
+00:01:11,430 --> 00:01:15,840
+This is the constructor to it.
+
+14
+00:01:17,400 --> 00:01:24,990
+As equal to the equal to a W, equal to Z.
+
+15
+00:01:28,540 --> 00:01:29,650
+OK, so
+
+16
+00:01:32,350 --> 00:01:35,080
+this is a class called create ATCH.
+
+17
+00:01:36,080 --> 00:01:42,850
+No, we have done using this class or creating this class.
+
+18
+00:01:42,940 --> 00:01:51,460
+No, I will create empathy into the vertices and the edges and create edge.
+
+19
+00:01:51,520 --> 00:01:56,190
+This is an an object from create edge called edge.
+
+20
+00:01:56,450 --> 00:01:56,800
+Okay.
+
+21
+00:01:57,220 --> 00:02:05,470
+So I am creating an array of edges and I will create a total value of vertices and total edges.
+
+22
+00:02:05,770 --> 00:02:07,750
+No, no.
+
+23
+00:02:08,020 --> 00:02:12,400
+I will create a graph with three vertices and the edges.
+
+24
+00:02:12,550 --> 00:02:13,020
+OK.
+
+25
+00:02:13,510 --> 00:02:16,960
+So how to create this, I will make.
+
+26
+00:02:19,110 --> 00:02:23,490
+That I will call the Create graph here.
+
+27
+00:02:25,520 --> 00:02:32,600
+And the constructor with passing that entry, and Anthony, so creates
+
+28
+00:02:43,640 --> 00:02:45,650
+and in looks.
+
+29
+00:02:51,400 --> 00:03:00,850
+So for me, please, guys, create a package before you create graph, sorry, it took it their entropy
+
+30
+00:03:01,150 --> 00:03:02,180
+and entropy.
+
+31
+00:03:11,950 --> 00:03:12,430
+So
+
+32
+00:03:15,820 --> 00:03:17,110
+I will make here.
+
+33
+00:03:21,270 --> 00:03:22,380
+The equal
+
+34
+00:03:25,440 --> 00:03:31,440
+yes time victory we assign here is we.
+
+35
+00:03:33,280 --> 00:03:42,490
+Which is here, the fear and the tank are the same, so be it capital.
+
+36
+00:03:42,540 --> 00:03:56,560
+Egypt now adds and is equal to new create at index with with no e.
+
+37
+00:03:56,890 --> 00:04:04,270
+So how many and how many elements that we are going to create at this array?
+
+38
+00:04:04,300 --> 00:04:12,690
+We are creating an array called create edge with E elements, so it depends on the number of matches.
+
+39
+00:04:13,540 --> 00:04:26,440
+And this is a very logic because we are creating an array of edges forward into equal to zero by and
+
+40
+00:04:26,440 --> 00:04:43,000
+as then E and I plus plus we start by making sure that each at index I equal to one you create match.
+
+41
+00:04:43,810 --> 00:04:47,290
+OK, so this is very
+
+42
+00:04:51,040 --> 00:04:53,620
+this is the Foyt method.
+
+43
+00:04:53,660 --> 00:04:56,290
+OK, this is very simple.
+
+44
+00:04:56,290 --> 00:05:00,790
+We have created this method to create that graph and.
+
+45
+00:05:02,310 --> 00:05:05,210
+With corresponding V and no.
+
+46
+00:05:06,000 --> 00:05:10,890
+Let's create another method called in mind for this is our algorithm.
+
+47
+00:05:10,980 --> 00:05:11,820
+So avoid
+
+48
+00:05:14,490 --> 00:05:16,470
+Velma for
+
+49
+00:05:19,290 --> 00:05:26,370
+development for algo cause not to look as a constructor.
+
+50
+00:05:27,420 --> 00:05:28,230
+Create.
+
+51
+00:05:30,670 --> 00:05:31,360
+Graph
+
+52
+00:05:36,310 --> 00:05:40,630
+objects, there's a class here, it's a class story.
+
+53
+00:05:44,860 --> 00:05:53,620
+It took anthropometric create a graph graph and s so.
+
+54
+00:05:58,330 --> 00:05:59,840
+This is a creative graph.
+
+55
+00:05:59,860 --> 00:06:01,570
+It would be constructive.
+
+56
+00:06:02,800 --> 00:06:12,190
+I have missed that term before we have named it as punishment for it not to create a graph which says
+
+57
+00:06:12,190 --> 00:06:13,980
+that construct, sir.
+
+58
+00:06:14,210 --> 00:06:17,410
+So public settlement for it.
+
+59
+00:06:18,460 --> 00:06:26,860
+Now I took an oath the perimeter here, the variable of type Berman for it
+
+60
+00:06:30,310 --> 00:06:31,120
+called craft.
+
+61
+00:06:34,360 --> 00:06:36,790
+We start by creating and we
+
+62
+00:06:39,640 --> 00:06:41,110
+have got to be.
+
+63
+00:06:42,490 --> 00:06:47,910
+And we need to be equal to
+
+64
+00:06:51,190 --> 00:07:01,900
+people in this nation and they equal to new and at and be because we have many possibilities.
+
+65
+00:07:04,230 --> 00:07:05,400
+Step number one.
+
+66
+00:07:07,500 --> 00:07:15,900
+Fill that distance, say and predecessor
+
+67
+00:07:21,900 --> 00:07:40,560
+over four and equal to zero I less than three and less because I just finished the appendix I equal
+
+68
+00:07:41,100 --> 00:07:44,070
+to integer at maximum value.
+
+69
+00:07:44,350 --> 00:07:46,860
+OK, we get maximum value now.
+
+70
+00:07:50,490 --> 00:07:51,090
+Mark,
+
+71
+00:07:54,840 --> 00:08:03,510
+the source verdicts by making destination at index s equal to zero.
+
+72
+00:08:05,560 --> 00:08:15,570
+OK, so the second step here, step number two,
+
+73
+00:08:19,140 --> 00:08:29,330
+we are relaxed the edges at the model minus one times.
+
+74
+00:08:30,210 --> 00:08:32,070
+OK, so we need to repeat this.
+
+75
+00:08:32,940 --> 00:08:46,410
+How many times it's model ft that the the absolute value of we see guys getting sort of four and equal
+
+76
+00:08:46,410 --> 00:09:01,350
+to one I less than the plus plus I, we make four and this because we are using add to the array.
+
+77
+00:09:02,670 --> 00:09:11,790
+So we need to nested loop and we need to get all the elements because there is possibility of using
+
+78
+00:09:11,920 --> 00:09:18,630
+many times that graph and looping through all of the elements through Vertex and that edges.
+
+79
+00:09:19,260 --> 00:09:19,650
+OK.
+
+80
+00:09:20,340 --> 00:09:30,450
+So there is two cases using for a nested loop while using that to the array or when you are going to
+
+81
+00:09:30,450 --> 00:09:38,310
+have a multiple multiple options that you have many vertices and in the side inside the vertex, we
+
+82
+00:09:38,310 --> 00:09:44,730
+have many at just so we are going to look through all of these elements by using this method.
+
+83
+00:09:45,270 --> 00:09:48,560
+So, G.
+
+84
+00:09:50,130 --> 00:09:51,750
+And thus we must change
+
+85
+00:09:56,130 --> 00:09:56,820
+what to do.
+
+86
+00:09:57,780 --> 00:10:12,060
+We get get the edge data and you equal to graph dot edge at Index J, the S
+
+87
+00:10:14,850 --> 00:10:33,550
+and the equal to graph dot at at Index G, the the and W equal to grab the Edge Index J.
+
+88
+00:10:35,010 --> 00:10:39,660
+W we get the W the way f here we are.
+
+89
+00:10:39,780 --> 00:10:43,410
+Start getting the edge data and comparing it.
+
+90
+00:10:43,500 --> 00:10:54,270
+So if this Dinesh at Index U does not equal to the integer dot maximum value and.
+
+91
+00:10:58,300 --> 00:11:03,790
+This Danish at Index U plus W.
+
+92
+00:11:05,210 --> 00:11:11,330
+Less than distillation at Index B, then what to do?
+
+93
+00:11:11,330 --> 00:11:14,540
+So we are having a Boolean expression.
+
+94
+00:11:15,530 --> 00:11:21,080
+We need to do it and to check if this through this and through this.
+
+95
+00:11:21,170 --> 00:11:28,670
+So this is a true expression and this is true expression we will get because there is an end between
+
+96
+00:11:28,670 --> 00:11:28,940
+them.
+
+97
+00:11:28,940 --> 00:11:37,610
+So it is between them and and so we have this as true and this as true to get through and execute this
+
+98
+00:11:37,610 --> 00:11:38,450
+code of block.
+
+99
+00:11:38,460 --> 00:11:42,590
+So make destination at the index fee.
+
+100
+00:11:42,590 --> 00:11:44,870
+Equal destination at index U.
+
+101
+00:11:45,770 --> 00:11:47,300
+Plus W.
+
+102
+00:11:49,850 --> 00:11:58,670
+OK, so this is how we make the Bowman Ford now the step at number three.
+
+103
+00:11:58,760 --> 00:12:01,400
+We need to detect the negative cycle.
+
+104
+00:12:02,150 --> 00:12:02,490
+OK.
+
+105
+00:12:02,930 --> 00:12:07,220
+So this is for that out there.
+
+106
+00:12:10,680 --> 00:12:12,540
+Step number three.
+
+107
+00:12:12,810 --> 00:12:28,170
+So step here three, you detect a negative cycle, if value changes, then we have a negative cycle
+
+108
+00:12:28,170 --> 00:12:31,290
+in the graph and we cannot find the shortest distance.
+
+109
+00:12:31,770 --> 00:12:48,240
+So for Int J equal to zero, we tested by ELO so j less than B and a plus plus j int you equal to Kraft
+
+110
+00:12:48,520 --> 00:13:05,230
+Edge at Index J Dot as in the equal to graph dot edge at Index J the the.
+
+111
+00:13:08,250 --> 00:13:17,050
+And Int W equal to graph at the edge at index j the W OK.
+
+112
+00:13:19,410 --> 00:13:35,070
+We start by f destination at Index U does not equal to integer the maximum value and destination at
+
+113
+00:13:35,070 --> 00:13:35,700
+Index
+
+114
+00:13:38,250 --> 00:13:39,930
+Destination Index U.
+
+115
+00:13:41,190 --> 00:13:53,700
+Plus I'm checking here plus w less than destination at Index V then what we need to do.
+
+116
+00:13:54,180 --> 00:14:08,790
+System that out of footprint and create or or on forward for graph.
+
+117
+00:14:12,400 --> 00:14:16,270
+Or Burma for it, for this graph.
+
+118
+00:14:16,510 --> 00:14:18,430
+Sorry, this graph
+
+119
+00:14:20,740 --> 00:14:23,810
+contains negative
+
+120
+00:14:26,420 --> 00:14:35,500
+three U.S. and and we deter because we cannot apply this algorithm.
+
+121
+00:14:36,670 --> 00:14:37,090
+OK.
+
+122
+00:14:37,600 --> 00:14:40,380
+This is how Burma for works.
+
+123
+00:14:40,870 --> 00:14:42,550
+No negative cycle.
+
+124
+00:14:42,610 --> 00:14:45,010
+Then we need to print that solution.
+
+125
+00:14:46,030 --> 00:14:49,510
+So grand solution.
+
+126
+00:14:49,750 --> 00:14:53,860
+This methods, we will create it past this and
+
+127
+00:14:57,040 --> 00:14:57,950
+create method.
+
+128
+00:14:58,780 --> 00:14:59,120
+OK.
+
+129
+00:15:01,970 --> 00:15:09,360
+In order to bring the solution is very simple, but system out there.
+
+130
+00:15:09,670 --> 00:15:13,310
+Brent Allen Vertex.
+
+131
+00:15:16,000 --> 00:15:20,460
+This stance from source.
+
+132
+00:15:24,160 --> 00:15:33,610
+Ford and I equal to zero, I less than 50 plus plus.
+
+133
+00:15:35,260 --> 00:15:54,760
+And we start by a system that that print and and and we print on and we print here T T and plus establish
+
+134
+00:15:56,350 --> 00:15:57,340
+an index.
+
+135
+00:15:57,850 --> 00:15:59,270
+Oh, OK.
+
+136
+00:15:59,770 --> 00:16:07,570
+This way we have printing a graph, but there's a short test, this direction from vertex distance to
+
+137
+00:16:07,600 --> 00:16:08,080
+source.
+
+138
+00:16:13,000 --> 00:16:20,620
+Now we have finished that brain thing, we need to test this method.
+
+139
+00:16:22,460 --> 00:16:31,400
+Or this algorithm, public static void, main stream.
+
+140
+00:16:33,830 --> 00:16:34,140
+All right.
+
+141
+00:16:37,850 --> 00:16:46,880
+We start by the end of the year equal to five and E equal to eight.
+
+142
+00:16:47,120 --> 00:16:50,690
+These are the total edges and total vertices.
+
+143
+00:16:51,260 --> 00:17:09,920
+I will create an instance of Burma four called graph equal to you by for it best be and and I will copy
+
+144
+00:17:09,920 --> 00:17:11,690
+and paste directly.
+
+145
+00:17:12,110 --> 00:17:17,930
+I post the video and I would create the edges and it does in order to save the time.
+
+146
+00:17:19,700 --> 00:17:29,300
+So here we have the edges between zero and one, the source, the destination and the weight from zero
+
+147
+00:17:29,300 --> 00:17:36,800
+to two, from one to three, from two to one and from three to two at the end.
+
+148
+00:17:37,040 --> 00:17:47,230
+We start by calling Graph Dot Beaumont for London, for Al Gore and the best graph and we pass here
+
+149
+00:17:48,170 --> 00:17:49,400
+start from zero.
+
+150
+00:17:51,520 --> 00:17:51,970
+OK.
+
+151
+00:17:53,660 --> 00:17:56,600
+Let's run our algorithm and see if there's.
+
+152
+00:17:58,250 --> 00:18:02,060
+And here we go, the vertex and the distance from the source.
+
+153
+00:18:03,160 --> 00:18:11,470
+Zero zero one five two four, three, eight four and this is the path.
+
+154
+00:18:11,770 --> 00:18:16,150
+OK, so our algorithm is working fine.
+
+155
+00:18:16,180 --> 00:18:24,970
+We have calculated at very correct and we hope you write them down because they are very important and
+
+156
+00:18:25,810 --> 00:18:33,580
+and they will be asked in every question in the university and in that interview, by the way, the
+
+157
+00:18:33,580 --> 00:18:38,470
+government for the year, the bill Mumford here.
+
+158
+00:18:39,140 --> 00:18:49,000
+Complexity, complexity, as I told you in that in the lecture before we have.
+
+159
+00:18:52,340 --> 00:19:07,310
+Best case, best case complexity, this oh to Anne or to you, because at the edges, the average is
+
+160
+00:19:07,310 --> 00:19:12,170
+oh e times v
+
+161
+00:19:15,170 --> 00:19:15,690
+OK.
+
+162
+00:19:17,960 --> 00:19:26,450
+And the worst is the same as average this of two times.
+
+163
+00:19:27,480 --> 00:19:30,500
+OK, so we have best all that.
+
+164
+00:19:30,500 --> 00:19:34,310
+Just the space complexity,
+
+165
+00:19:37,610 --> 00:19:49,250
+space complexity of V because we are creating vertices in the memory and reserved the memory according
+
+166
+00:19:49,250 --> 00:19:52,010
+to their V sizes and.

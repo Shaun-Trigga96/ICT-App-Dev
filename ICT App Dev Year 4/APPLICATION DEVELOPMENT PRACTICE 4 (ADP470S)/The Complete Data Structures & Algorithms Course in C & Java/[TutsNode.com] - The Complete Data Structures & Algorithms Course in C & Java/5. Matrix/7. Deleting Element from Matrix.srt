@@ -1,0 +1,207 @@
+1
+00:00:01,120 --> 00:00:04,270
+Let's talk about the leading elements from to the array.
+
+2
+00:00:05,560 --> 00:00:09,100
+Consider this array, this matrix.
+
+3
+00:00:11,160 --> 00:00:21,090
+And we have these elements, and we need to remove that first, that the one arrived at index one and
+
+4
+00:00:21,090 --> 00:00:29,670
+two, which means that the second row and the third column, so I need to remove number seven and put
+
+5
+00:00:29,760 --> 00:00:32,350
+it to integer the minimum value.
+
+6
+00:00:32,370 --> 00:00:41,910
+There is no direct manipulation of a code that removes the code that element and shifts the element
+
+7
+00:00:41,910 --> 00:00:46,710
+position of the other elements inside an array.
+
+8
+00:00:47,160 --> 00:00:52,230
+So think about it if I removed seven from this.
+
+9
+00:00:53,660 --> 00:01:05,660
+From this 2D array, then eight would not become or would not contain remains in the same position.
+
+10
+00:01:05,870 --> 00:01:07,700
+It will be shifted to the left.
+
+11
+00:01:08,020 --> 00:01:10,820
+So think about it.
+
+12
+00:01:11,780 --> 00:01:20,660
+If I changed it into a rip and replace it seven, so I need 41 to replace eight now.
+
+13
+00:01:20,990 --> 00:01:27,620
+Forty eight, forty one is not is not remaining in the third row.
+
+14
+00:01:27,920 --> 00:01:29,750
+It will become in the second row.
+
+15
+00:01:30,110 --> 00:01:31,310
+So it goes up.
+
+16
+00:01:31,610 --> 00:01:39,170
+And this is a this is a very bad because I don't need to shift all the elements.
+
+17
+00:01:40,360 --> 00:01:45,850
+This is not like the deleting an array, an element from array of single dimension.
+
+18
+00:01:46,480 --> 00:01:52,690
+It is not the same counts like deleting that element and shifting the elements, the other animals to
+
+19
+00:01:52,690 --> 00:01:53,330
+its position.
+
+20
+00:01:53,350 --> 00:01:55,950
+No, it's not the same at this.
+
+21
+00:01:56,980 --> 00:02:00,880
+It's just replacing the code.
+
+22
+00:02:00,880 --> 00:02:02,260
+They're replacing the No.
+
+23
+00:02:02,350 --> 00:02:09,700
+What we have, what we are going to delete with the integer, the minimum value, or there is another
+
+24
+00:02:09,700 --> 00:02:16,970
+way to put it with minus one, but we prefer putting an integer that many more value.
+
+25
+00:02:16,990 --> 00:02:26,320
+So if I need to remove these two elements at the third that position the fourth row and the second or
+
+26
+00:02:26,320 --> 00:02:32,880
+the third column, I need to put an integer that minimum value and this is what we prefer.
+
+27
+00:02:33,140 --> 00:02:34,720
+Now let's go to the code.
+
+28
+00:02:34,960 --> 00:02:42,580
+So in order to delete element from two the array, we need to surround it with triet catch and system
+
+29
+00:02:42,580 --> 00:02:49,600
+that print deleted successfully if we have put the integer dot minimum value.
+
+30
+00:02:49,610 --> 00:03:00,640
+So I'm assigning Arrow, a specific cell at index row and index column that we specify to an integer
+
+31
+00:03:00,640 --> 00:03:07,120
+that minimum value, which is in the inside, which is included inside that Java JDK.
+
+32
+00:03:07,480 --> 00:03:07,900
+OK.
+
+33
+00:03:08,320 --> 00:03:11,620
+Or at the other systems like C or Python.
+
+34
+00:03:12,340 --> 00:03:12,700
+OK.
+
+35
+00:03:12,940 --> 00:03:14,160
+This is very simple.
+
+36
+00:03:14,170 --> 00:03:19,270
+I am just like updating the elements.
+
+37
+00:03:19,270 --> 00:03:23,290
+It's about updating the elements to integer the minimum value.
+
+38
+00:03:23,800 --> 00:03:24,130
+OK.
+
+39
+00:03:24,220 --> 00:03:30,310
+There is no deletion by by removing the elements and shifting the others to its place.
+
+40
+00:03:30,670 --> 00:03:34,750
+It's not like the first one to one the array.
+
+41
+00:03:34,870 --> 00:03:35,230
+OK.
+
+42
+00:03:36,130 --> 00:03:37,600
+This is very simple.
+
+43
+00:03:40,670 --> 00:03:46,040
+No, it's at this time complexity is all of one.
+
+44
+00:03:46,760 --> 00:03:47,840
+This is very simple.
+
+45
+00:03:48,680 --> 00:03:55,250
+I need from you to understand that there is no dilution by means of the listing element, but it is
+
+46
+00:03:55,250 --> 00:04:02,180
+updating the elements to a minimum value or other value that you may consider it if you are storing
+
+47
+00:04:02,180 --> 00:04:04,430
+positive values inside a matrix.
+
+48
+00:04:04,820 --> 00:04:11,540
+If you see minus one or minus 10 or minus fifty five, then you know that this element has been removed.
+
+49
+00:04:11,840 --> 00:04:15,540
+So it will not be red inside.
+
+50
+00:04:15,980 --> 00:04:20,210
+Therefore, look that you are rating just positive values.
+
+51
+00:04:20,310 --> 00:04:20,630
+OK.
+
+52
+00:04:21,260 --> 00:04:24,350
+This is the algorithm behind the leading.

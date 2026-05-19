@@ -1,0 +1,335 @@
+1
+00:00:00,030 --> 00:00:00,760
+Welcome, guys.
+
+2
+00:00:00,800 --> 00:00:06,390
+The exercise number sixty one, you are asked to write a function that deletes a given note from the
+
+3
+00:00:06,600 --> 00:00:11,730
+link at list when you insert or delete a note.
+
+4
+00:00:12,090 --> 00:00:20,550
+You should take care about the linkage about the references between the newly inserted or the deleted
+
+5
+00:00:20,580 --> 00:00:21,030
+note.
+
+6
+00:00:22,020 --> 00:00:24,750
+Consider a link to the list here.
+
+7
+00:00:29,170 --> 00:00:30,040
+It is of.
+
+8
+00:00:31,090 --> 00:00:32,710
+Three nodes.
+
+9
+00:00:33,460 --> 00:00:41,740
+And we have this as this as next and this is as previous, this is as next and this is previous and
+
+10
+00:00:41,740 --> 00:00:42,820
+here is none.
+
+11
+00:00:43,240 --> 00:00:45,270
+And here is not OK.
+
+12
+00:00:46,540 --> 00:00:54,550
+If we need to delete this, what what, what will happen with this linkage?
+
+13
+00:00:54,760 --> 00:00:56,320
+They should be go.
+
+14
+00:00:57,230 --> 00:01:02,020
+And should the went with, it should be removed.
+
+15
+00:01:02,170 --> 00:01:04,840
+So this linkage should be removed.
+
+16
+00:01:05,620 --> 00:01:06,250
+OK.
+
+17
+00:01:06,520 --> 00:01:12,070
+And we should create new nodes that links the other nodes.
+
+18
+00:01:12,070 --> 00:01:15,850
+So this node should be linked with this note.
+
+19
+00:01:16,150 --> 00:01:19,330
+So I should reference this to the next.
+
+20
+00:01:19,840 --> 00:01:21,550
+This as the previous.
+
+21
+00:01:21,730 --> 00:01:22,120
+OK.
+
+22
+00:01:22,630 --> 00:01:27,290
+So when deleting, pay attention to the linkage.
+
+23
+00:01:29,680 --> 00:01:33,610
+So let's begin making our method.
+
+24
+00:01:34,600 --> 00:01:35,140
+Delete.
+
+25
+00:01:36,160 --> 00:01:36,550
+OK.
+
+26
+00:01:39,460 --> 00:01:40,480
+Think about it.
+
+27
+00:01:40,630 --> 00:01:41,320
+Host the video.
+
+28
+00:01:41,330 --> 00:01:42,330
+I think about that.
+
+29
+00:01:42,340 --> 00:01:51,040
+How should we delete and note how the linkage, how the links will be updated?
+
+30
+00:01:53,310 --> 00:01:55,700
+I am waiting your solution in the comments below.
+
+31
+00:01:55,880 --> 00:01:59,870
+So public void delete nodes.
+
+32
+00:02:03,820 --> 00:02:10,160
+Nodes fill and we start.
+
+33
+00:02:12,470 --> 00:02:21,650
+This is the base case we start with the first we check if it is had equal equal to null or delete.
+
+34
+00:02:21,650 --> 00:02:23,450
+Equal equal to none.
+
+35
+00:02:24,080 --> 00:02:28,520
+Check for not liability.
+
+36
+00:02:31,460 --> 00:02:37,280
+Always check for it in the liability if had to be equal or equal to none.
+
+37
+00:02:38,010 --> 00:02:38,600
+Or
+
+38
+00:02:42,470 --> 00:02:43,210
+deleted.
+
+39
+00:02:43,940 --> 00:02:47,870
+This is the equal or equal to none.
+
+40
+00:02:50,630 --> 00:02:53,780
+What we should do, we should return from this message.
+
+41
+00:02:55,520 --> 00:03:00,770
+The second step is, if not to be deleted, is the head note.
+
+42
+00:03:01,010 --> 00:03:05,270
+If we delete it, if
+
+43
+00:03:08,420 --> 00:03:22,040
+the given node is happy, so if had equal equal to deleted, then we move ahead to the next.
+
+44
+00:03:22,490 --> 00:03:22,970
+OK.
+
+45
+00:03:25,650 --> 00:03:26,080
+OK.
+
+46
+00:03:27,410 --> 00:03:28,430
+It's very simple.
+
+47
+00:03:30,540 --> 00:03:36,180
+Guys, we should take care about two possible things.
+
+48
+00:03:37,380 --> 00:03:42,090
+The first one or three or three?
+
+49
+00:03:43,080 --> 00:03:45,950
+The first one is deleting the head.
+
+50
+00:03:49,130 --> 00:04:00,050
+Or deleting a middle note that we have seen in the demonstration before, or we are deleting the last
+
+51
+00:04:00,410 --> 00:04:00,770
+one.
+
+52
+00:04:01,400 --> 00:04:06,650
+OK, so these are the cases that we should take care of about it.
+
+53
+00:04:06,920 --> 00:04:09,230
+So how to make this?
+
+54
+00:04:13,050 --> 00:04:13,470
+If
+
+55
+00:04:16,770 --> 00:04:17,540
+they're delayed.
+
+56
+00:04:21,120 --> 00:04:26,700
+No note is not the first note, then.
+
+57
+00:04:28,460 --> 00:04:29,870
+If it's not the last.
+
+58
+00:04:32,570 --> 00:04:38,820
+If they leave, the next does not equal to none.
+
+59
+00:04:40,150 --> 00:04:48,540
+Then they leave the next door pretty equal to the dog forever.
+
+60
+00:04:48,920 --> 00:04:49,310
+OK.
+
+61
+00:04:50,060 --> 00:04:51,500
+It's very simple.
+
+62
+00:04:51,800 --> 00:05:00,980
+Now, the first step that we should order the first case that we should cover changed, prove only if
+
+63
+00:05:00,980 --> 00:05:09,020
+known to be be deleted is not the first.
+
+64
+00:05:10,880 --> 00:05:11,260
+OK.
+
+65
+00:05:13,640 --> 00:05:25,610
+This is the step behind the check, though the grave does not equal to none other than make down that
+
+66
+00:05:25,620 --> 00:05:29,930
+grave again next year, called to tell the next.
+
+67
+00:05:29,930 --> 00:05:35,650
+It's very important this linkage and the return.
+
+68
+00:05:37,140 --> 00:05:37,560
+It's.
+
+69
+00:05:39,470 --> 00:05:46,580
+About making their references that should they care about deletion?
+
+70
+00:05:47,240 --> 00:05:48,320
+That's Ron, Nancy.
+
+71
+00:05:50,000 --> 00:05:55,360
+We have inserted before that 99 after a ham.
+
+72
+00:05:56,450 --> 00:05:59,090
+I need to delete it.
+
+73
+00:05:59,480 --> 00:06:05,660
+So the delete the note before let me run and show you again.
+
+74
+00:06:06,110 --> 00:06:11,870
+If we run the program without delete node, we have one, nine, nine, two, three and four.
+
+75
+00:06:12,710 --> 00:06:21,920
+OK, if we delete the note that contains 99 or certainly, here it is the head, we should specify that
+
+76
+00:06:21,950 --> 00:06:27,740
+al or have let me remove the hat.
+
+77
+00:06:28,100 --> 00:06:28,570
+OK.
+
+78
+00:06:28,700 --> 00:06:33,890
+You see the head now it removed one.
+
+79
+00:06:34,250 --> 00:06:39,230
+So 99 becomes the head two, three and four arteries.
+
+80
+00:06:39,620 --> 00:06:40,730
+No, it's OK.
+
+81
+00:06:41,030 --> 00:06:43,910
+You see, guys, how you can delete the note.
+
+82
+00:06:44,150 --> 00:06:45,620
+You specify here the note.
+
+83
+00:06:46,160 --> 00:06:46,540
+OK?
+
+84
+00:06:47,240 --> 00:06:48,410
+It's very important.

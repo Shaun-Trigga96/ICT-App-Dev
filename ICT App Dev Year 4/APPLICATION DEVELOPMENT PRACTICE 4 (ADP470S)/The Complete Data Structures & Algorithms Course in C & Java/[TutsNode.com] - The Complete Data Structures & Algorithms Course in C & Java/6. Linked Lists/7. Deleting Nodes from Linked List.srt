@@ -1,0 +1,255 @@
+1
+00:00:00,270 --> 00:00:02,860
+Deleting an odd and linked list.
+
+2
+00:00:03,420 --> 00:00:09,760
+We need to create a new method called of delete known.
+
+3
+00:00:09,780 --> 00:00:14,910
+It took struct known, had reference and that and key.
+
+4
+00:00:15,330 --> 00:00:18,960
+So we have think about this.
+
+5
+00:00:21,430 --> 00:00:25,520
+This link at last we have three nods.
+
+6
+00:00:26,380 --> 00:00:28,230
+100, 200 and 300.
+
+7
+00:00:28,570 --> 00:00:31,240
+The data so struck note.
+
+8
+00:00:31,990 --> 00:00:39,040
+We are creating a temporary node if had a different data, equal, equal to key.
+
+9
+00:00:39,190 --> 00:00:41,090
+So we are searching for the key.
+
+10
+00:00:41,680 --> 00:00:45,220
+We need to detect if the key exists.
+
+11
+00:00:45,370 --> 00:00:55,540
+OK, so if it were to key, then dump equal to had and had equal to the next and free, then what does
+
+12
+00:00:55,540 --> 00:00:56,020
+this mean?
+
+13
+00:00:56,560 --> 00:01:04,540
+This would execute by creating the key equal to 100 because we are passing day equal to 100.
+
+14
+00:01:04,750 --> 00:01:13,840
+Think about we are going to delete the node that contains the key equal to 100 or the data equal to
+
+15
+00:01:13,840 --> 00:01:14,080
+one.
+
+16
+00:01:14,700 --> 00:01:18,250
+OK, we start by searching for this.
+
+17
+00:01:19,280 --> 00:01:19,770
+OK.
+
+18
+00:01:19,820 --> 00:01:21,440
+It's on the head.
+
+19
+00:01:21,650 --> 00:01:22,070
+So.
+
+20
+00:01:23,580 --> 00:01:31,620
+This had this is the had so if had data equal, equal to key, then it is the first element.
+
+21
+00:01:31,980 --> 00:01:32,490
+OK.
+
+22
+00:01:33,720 --> 00:01:34,400
+OK, guys.
+
+23
+00:01:34,700 --> 00:01:44,570
+And these are the references of the next not so create them equal equal to had had equal to the reference
+
+24
+00:01:44,570 --> 00:01:50,300
+than the next and then the free time freed them means they lead the.
+
+25
+00:01:51,540 --> 00:01:53,970
+Elements, OK, they lead, they're not.
+
+26
+00:01:54,950 --> 00:01:56,900
+You see, guys, I will repeat it.
+
+27
+00:01:57,200 --> 00:01:58,880
+OK, so.
+
+28
+00:02:00,070 --> 00:02:04,020
+We have detected that a key equal to the head.
+
+29
+00:02:04,290 --> 00:02:07,090
+Now, but it changed at the time.
+
+30
+00:02:07,150 --> 00:02:12,970
+You see, guys, how we changed the temp and temp remove free the temp.
+
+31
+00:02:13,240 --> 00:02:13,510
+OK.
+
+32
+00:02:13,900 --> 00:02:15,130
+This is very simple.
+
+33
+00:02:15,130 --> 00:02:16,690
+We are deleting it.
+
+34
+00:02:16,690 --> 00:02:21,340
+And now the had the references to the 2024.
+
+35
+00:02:21,610 --> 00:02:25,300
+And it is the starting and the beginning of the link, at least.
+
+36
+00:02:25,300 --> 00:02:27,470
+So we have deleted that.
+
+37
+00:02:27,490 --> 00:02:29,020
+Not at the beginning.
+
+38
+00:02:29,440 --> 00:02:29,770
+No.
+
+39
+00:02:30,070 --> 00:02:32,200
+Let's see another example.
+
+40
+00:02:32,530 --> 00:02:41,260
+If had the data that what took, we know the key now equal to 200, we are searching for it, then that
+
+41
+00:02:41,260 --> 00:02:45,790
+contains the head that contains the data equal to 200.
+
+42
+00:02:46,150 --> 00:02:49,900
+So we start the first one is not the case.
+
+43
+00:02:49,900 --> 00:02:53,200
+So if had the equity took, no.
+
+44
+00:02:53,710 --> 00:03:01,360
+So we will create a not thecurrent, we change it to the head and the curtain.
+
+45
+00:03:01,960 --> 00:03:10,180
+And while current next does not equal to null, we start by searching for the link for the key.
+
+46
+00:03:10,420 --> 00:03:20,980
+So if we find it like here, then data equal, equal to key, then temp equal to the current and next.
+
+47
+00:03:20,990 --> 00:03:23,530
+So now it is the temp.
+
+48
+00:03:25,440 --> 00:03:25,950
+Then.
+
+49
+00:03:27,230 --> 00:03:31,760
+Current next equal current next and next next.
+
+50
+00:03:32,090 --> 00:03:36,480
+I am making getting the reference of that stamp.
+
+51
+00:03:36,770 --> 00:03:41,480
+The next of the stamp and put it putting it inside the current.
+
+52
+00:03:41,750 --> 00:03:43,610
+So she goes, it's very important.
+
+53
+00:03:43,640 --> 00:03:44,480
+See the animation.
+
+54
+00:03:45,880 --> 00:03:53,290
+And follow me, I am putting that not that it is next to that stamp, which is three thousand twenty
+
+55
+00:03:53,290 --> 00:03:53,710
+four.
+
+56
+00:03:54,430 --> 00:03:58,660
+I'm copying the index and putting it inside that current.
+
+57
+00:03:58,660 --> 00:03:59,560
+I'm changing.
+
+58
+00:03:59,780 --> 00:04:05,080
+You see, guys, what we have changed, we are getting that reference of there.
+
+59
+00:04:05,080 --> 00:04:07,000
+Not that that is next to that.
+
+60
+00:04:07,870 --> 00:04:15,700
+It is three thousand twenty four and replacing it with the index of that car, OK, after this three
+
+61
+00:04:15,700 --> 00:04:16,420
+the stamp.
+
+62
+00:04:16,720 --> 00:04:24,250
+So I'm freeing that term by removing the stamp and making now directly and braking.
+
+63
+00:04:24,370 --> 00:04:35,530
+So the question now is detecting and referencing the the next not that it was the next note of the stamp.
+
+64
+00:04:35,650 --> 00:04:39,460
+You see, guys, it's very important don their stamp this.

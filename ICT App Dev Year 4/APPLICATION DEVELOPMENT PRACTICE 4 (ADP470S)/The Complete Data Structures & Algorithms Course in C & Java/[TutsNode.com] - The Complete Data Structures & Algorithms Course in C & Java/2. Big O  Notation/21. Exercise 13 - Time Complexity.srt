@@ -1,0 +1,363 @@
+1
+00:00:00,120 --> 00:00:01,140
+Hello, my friends.
+
+2
+00:00:01,350 --> 00:00:03,450
+And welcome to exercise number 13.
+
+3
+00:00:03,780 --> 00:00:13,560
+We are asked to find the complexity of as prime method it is of bullion returning type and it took in
+
+4
+00:00:13,860 --> 00:00:25,290
+meters and and so we have a for loop and the starting condition from X equal to two.
+
+5
+00:00:25,860 --> 00:00:36,240
+And the stopping condition at X less than or equal to square root of N and X plus plus post the video
+
+6
+00:00:36,690 --> 00:00:39,390
+and think about this algorithm.
+
+7
+00:00:41,050 --> 00:00:52,270
+I hope you write down and solve this question and more exercises as you solve as you practice more.
+
+8
+00:00:52,420 --> 00:01:01,090
+You will get a master, you will be a master in data structure and algorithms because solving more exercises
+
+9
+00:01:01,090 --> 00:01:06,640
+will be making you better thinking better thinker better.
+
+10
+00:01:07,150 --> 00:01:08,860
+Problem solved, OK?
+
+11
+00:01:09,370 --> 00:01:15,190
+And these questions are, by the way, from interviews and real interviews.
+
+12
+00:01:15,220 --> 00:01:17,590
+OK, I want from you.
+
+13
+00:01:18,970 --> 00:01:28,270
+To recall that if we have X Plus Plus here, so we have all elements, we are going to go all through
+
+14
+00:01:28,270 --> 00:01:32,500
+all elements from to to less than square root of.
+
+15
+00:01:32,920 --> 00:01:35,030
+So these elements.
+
+16
+00:01:35,050 --> 00:01:39,730
+This loop will go through all the elements from.
+
+17
+00:01:40,890 --> 00:01:49,050
+Do tell square root of and so the square root of and is radical.
+
+18
+00:01:50,280 --> 00:01:54,690
+This is a function that get that calculated the square root of.
+
+19
+00:01:55,440 --> 00:01:55,830
+OK.
+
+20
+00:01:58,010 --> 00:02:05,690
+If M modulo X this is X equal, equal to zero, then return false.
+
+21
+00:02:06,230 --> 00:02:07,670
+This is of one.
+
+22
+00:02:08,890 --> 00:02:15,130
+Returning and this one is of one, and the return true is of one.
+
+23
+00:02:15,550 --> 00:02:16,000
+So.
+
+24
+00:02:17,480 --> 00:02:26,240
+That that determined the algorithm is on the initial condition and the stopping condition and the way
+
+25
+00:02:26,240 --> 00:02:34,420
+of increment of a loop, so the loop here will determine the algorithm that algorithm time complexity.
+
+26
+00:02:35,900 --> 00:02:45,830
+Let's take an example of taking an equal and equal to like.
+
+27
+00:02:46,280 --> 00:02:46,850
+16.
+
+28
+00:02:51,510 --> 00:02:51,980
+OK.
+
+29
+00:02:56,370 --> 00:02:58,740
+Now, let's solve this exercise.
+
+30
+00:02:59,220 --> 00:03:01,190
+We start from X equal to two.
+
+31
+00:03:02,390 --> 00:03:08,900
+X equal to do and X and X less than square root of N.
+
+32
+00:03:09,740 --> 00:03:12,170
+Square root of and radical and.
+
+33
+00:03:14,930 --> 00:03:16,280
+Let me make this.
+
+34
+00:03:18,860 --> 00:03:20,240
+I put X here.
+
+35
+00:03:21,740 --> 00:03:23,450
+And here.
+
+36
+00:03:25,310 --> 00:03:27,540
+And let's try to solve this today.
+
+37
+00:03:29,000 --> 00:03:37,190
+Always, when you want to solve like these exercises and get the pattern set, take an example.
+
+38
+00:03:37,580 --> 00:03:37,910
+OK?
+
+39
+00:03:38,420 --> 00:03:41,210
+We took an example and equal to 60.
+
+40
+00:03:42,020 --> 00:03:48,860
+We start the iteration of the first iteration X equal to two x less than square root of N.
+
+41
+00:03:49,220 --> 00:03:52,490
+Square root of and would be equal to four.
+
+42
+00:03:52,910 --> 00:03:56,240
+OK, so the square root of an is four.
+
+43
+00:03:56,930 --> 00:03:57,410
+OK.
+
+44
+00:03:58,970 --> 00:04:00,380
+Do less than four.
+
+45
+00:04:00,710 --> 00:04:03,830
+Yes, so go and execute this method.
+
+46
+00:04:04,250 --> 00:04:08,150
+It would be like making the calculations.
+
+47
+00:04:08,280 --> 00:04:20,810
+OK, now it will finish here, increase x by one going up three is X now, and the square root of 16
+
+48
+00:04:20,810 --> 00:04:21,380
+is four.
+
+49
+00:04:21,740 --> 00:04:25,470
+So three less than four yet or equal to four?
+
+50
+00:04:25,490 --> 00:04:26,780
+Yes, go and execute.
+
+51
+00:04:27,320 --> 00:04:38,300
+It goes here and going up above two will go up to here and start making the conditions for comparing
+
+52
+00:04:38,300 --> 00:04:47,530
+the conditions for now x equal to four and X for less than or equal four.
+
+53
+00:04:47,870 --> 00:04:55,740
+Yes, because square root of 16 is four and for less than or equal to four.
+
+54
+00:04:55,760 --> 00:04:56,240
+Yes.
+
+55
+00:04:56,240 --> 00:04:57,710
+So go and execute this.
+
+56
+00:04:58,370 --> 00:04:59,540
+Now it is.
+
+57
+00:04:59,540 --> 00:05:04,370
+It goes here and going up X is is increased by one.
+
+58
+00:05:04,850 --> 00:05:07,280
+So X is now five.
+
+59
+00:05:07,340 --> 00:05:09,800
+Five is less than or equal to four.
+
+60
+00:05:09,800 --> 00:05:10,130
+No.
+
+61
+00:05:10,130 --> 00:05:18,200
+So it will be stopped now when putting like this table, we see the pattern.
+
+62
+00:05:18,200 --> 00:05:24,080
+How many times it would be executed, it being executed like three times.
+
+63
+00:05:24,320 --> 00:05:24,650
+OK.
+
+64
+00:05:25,070 --> 00:05:25,460
+So.
+
+65
+00:05:26,730 --> 00:05:27,570
+Three times.
+
+66
+00:05:27,930 --> 00:05:37,050
+But the limiting behavior we are going to go through from two, three and four, so all the elements
+
+67
+00:05:37,050 --> 00:05:44,070
+are being executed from X, this is the range from X to radical and.
+
+68
+00:05:45,080 --> 00:05:45,620
+OK.
+
+69
+00:05:48,700 --> 00:05:52,030
+And X would be from two to radical.
+
+70
+00:05:53,050 --> 00:05:53,520
+OK.
+
+71
+00:05:53,800 --> 00:06:00,340
+This is the range, if an equal to twenty five, it would be executed.
+
+72
+00:06:00,550 --> 00:06:05,560
+How many times it would be executed five times or forty five times?
+
+73
+00:06:05,560 --> 00:06:05,830
+Yes.
+
+74
+00:06:06,130 --> 00:06:06,910
+Goes radical.
+
+75
+00:06:06,910 --> 00:06:09,160
+Twenty five is equal to five.
+
+76
+00:06:09,670 --> 00:06:12,760
+It would be two, three, four and five.
+
+77
+00:06:14,120 --> 00:06:14,630
+OK.
+
+78
+00:06:14,780 --> 00:06:15,830
+Sorry, four times.
+
+79
+00:06:16,640 --> 00:06:21,080
+So it is increasing according to the radical end.
+
+80
+00:06:21,980 --> 00:06:22,340
+OK.
+
+81
+00:06:23,550 --> 00:06:25,860
+And it starts from two, so.
+
+82
+00:06:27,010 --> 00:06:28,290
+The radical and.
+
+83
+00:06:29,700 --> 00:06:40,350
+Is this thumping behavior and it is the limiting and all this since we are going to throw and loop through
+
+84
+00:06:40,350 --> 00:06:48,510
+all the elements still finding the radical end that called time complexity of executing this algorithm
+
+85
+00:06:48,510 --> 00:06:50,520
+is of radical and.
+
+86
+00:06:51,560 --> 00:06:52,110
+OK.
+
+87
+00:06:52,520 --> 00:06:55,040
+This is the limiting behavior.
+
+88
+00:06:55,250 --> 00:06:57,380
+This is the time complexity.
+
+89
+00:06:57,680 --> 00:07:02,270
+This is the stopping condition of this algorithm and the radical end.
+
+90
+00:07:02,720 --> 00:07:12,980
+So always take two examples in order to get the pattern in order to get their mathematical sequence
+
+91
+00:07:12,980 --> 00:07:14,120
+that the algorithm.

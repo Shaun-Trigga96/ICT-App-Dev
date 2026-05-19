@@ -1,0 +1,455 @@
+1
+00:00:00,270 --> 00:00:04,680
+Hello, all my friends, and welcome again to the complete data structure and algorithms and scores
+
+2
+00:00:04,680 --> 00:00:10,890
+in this video, we are going to exercise seven is six and we start solving it.
+
+3
+00:00:11,190 --> 00:00:17,070
+So this exercise is telling us to sort a stack using recursion.
+
+4
+00:00:17,430 --> 00:00:22,740
+We need to create a method that sorts a stack using recursion.
+
+5
+00:00:23,190 --> 00:00:23,550
+OK.
+
+6
+00:00:25,430 --> 00:00:30,350
+Post the video and think about that, how we can sort it stack.
+
+7
+00:00:32,370 --> 00:00:38,010
+Using their cash, we need to pop all the elements and start.
+
+8
+00:00:39,050 --> 00:00:46,910
+Searching for the minimum between among these elements, and we start inserting and pushing them into
+
+9
+00:00:46,910 --> 00:00:50,120
+the stack and gain by increasing order.
+
+10
+00:00:50,630 --> 00:00:56,220
+This is our algorithm how we are going to sort this stack.
+
+11
+00:00:56,600 --> 00:00:59,690
+But we are going to use that recursion.
+
+12
+00:01:00,140 --> 00:01:00,500
+OK.
+
+13
+00:01:02,180 --> 00:01:11,810
+So I will create a method here called list of Typekit static void called sort the stack.
+
+14
+00:01:13,910 --> 00:01:14,300
+OK.
+
+15
+00:01:16,820 --> 00:01:18,590
+It's very important.
+
+16
+00:01:18,890 --> 00:01:22,730
+And it took into perimeter a stack.
+
+17
+00:01:24,150 --> 00:01:26,220
+Valuable of Typekit.
+
+18
+00:01:28,560 --> 00:01:35,700
+We didn't specify any genetics because we are not going to make it complex now till now, later on in
+
+19
+00:01:35,700 --> 00:01:44,940
+the next exercise, we are going to implement a genetics and we can make it as stack of integers here.
+
+20
+00:01:45,290 --> 00:01:53,430
+OK, but then now we are going to implement a stack and we are dealing with a stack of integers.
+
+21
+00:01:53,940 --> 00:01:54,300
+OK.
+
+22
+00:01:54,990 --> 00:02:03,390
+So let's start checking if the stack is not empty and if it is empty, if there's empty, we are not
+
+23
+00:02:03,390 --> 00:02:04,870
+going to insert anything.
+
+24
+00:02:04,890 --> 00:02:12,420
+If it is not our sort, anything, if there's not empty, if it's is not empty.
+
+25
+00:02:13,380 --> 00:02:18,290
+OK, we are going to start with these steps.
+
+26
+00:02:18,300 --> 00:02:22,710
+First of all, remove the top item.
+
+27
+00:02:24,570 --> 00:02:25,140
+OK.
+
+28
+00:02:31,510 --> 00:02:35,200
+By making Intex equal to as thought part.
+
+29
+00:02:38,720 --> 00:02:45,650
+Method and the second step is sorting
+
+30
+00:02:48,500 --> 00:02:49,700
+the remaining
+
+31
+00:02:53,210 --> 00:03:02,060
+stack by executing their short stack method again using recursion.
+
+32
+00:03:02,570 --> 00:03:02,930
+OK.
+
+33
+00:03:04,460 --> 00:03:06,560
+You see, guys, here is the recursion.
+
+34
+00:03:06,840 --> 00:03:09,350
+See this last by using their recursion.
+
+35
+00:03:10,620 --> 00:03:22,290
+Now we are going to make a new method that will insert the sorted items into the stack, so we have
+
+36
+00:03:22,290 --> 00:03:27,450
+pulled the items from the stack popping.
+
+37
+00:03:28,660 --> 00:03:38,200
+The top of the top item from the stack, and we are going till we have reached that as is empty, if
+
+38
+00:03:38,200 --> 00:03:46,690
+as is empty, we are not we are not going to execute anything and we will get rolled back by executing
+
+39
+00:03:46,690 --> 00:03:48,520
+the remaining concept.
+
+40
+00:03:48,910 --> 00:03:52,540
+But the remaining concept is not sorting the stack.
+
+41
+00:03:52,690 --> 00:03:58,020
+We need to push the top item back into this sorted.
+
+42
+00:04:01,000 --> 00:04:11,160
+Stack, so push their top item back in sorted stack.
+
+43
+00:04:12,820 --> 00:04:15,850
+Guys, it's very important we start popping.
+
+44
+00:04:16,840 --> 00:04:27,070
+The items we execute this until reaching the end of the stack and after reaching the end of the stack
+
+45
+00:04:27,070 --> 00:04:37,800
+will start rolling back and pushing them in and insert them into their stack using the sort that insert.
+
+46
+00:04:37,810 --> 00:04:49,990
+So I will make a method called sorted insert that they'll care about they're inserting, but this time
+
+47
+00:04:50,140 --> 00:04:55,420
+by inserting them into increasing order into a sorted manner.
+
+48
+00:04:55,780 --> 00:04:56,320
+OK.
+
+49
+00:04:56,740 --> 00:05:02,080
+So I work past Stack and X, OK?
+
+50
+00:05:02,140 --> 00:05:08,710
+It took into 30 meters of the stack and it took into the perimeter that they're removed.
+
+51
+00:05:09,430 --> 00:05:09,790
+Right?
+
+52
+00:05:10,300 --> 00:05:10,750
+OK.
+
+53
+00:05:12,440 --> 00:05:14,870
+So let's go and insert.
+
+54
+00:05:15,870 --> 00:05:24,120
+And so create the method sorted in the insert I will create as plus enter create the method here.
+
+55
+00:05:24,870 --> 00:05:25,320
+So.
+
+56
+00:05:27,890 --> 00:05:36,530
+It took into the burden meter stack, and it took into the meter and index that we are going to make
+
+57
+00:05:37,490 --> 00:05:39,630
+the and insert it again.
+
+58
+00:05:40,010 --> 00:05:50,210
+So the base case, either the stack is empty or new, newly inserted item is greater than the top.
+
+59
+00:05:50,690 --> 00:05:57,080
+More than an existing, we start by checking if SE is empty.
+
+60
+00:05:58,680 --> 00:06:08,700
+OK, remember, guys, we are going to insert the elements back, but here and this time we are going
+
+61
+00:06:08,700 --> 00:06:11,160
+to insert them in a sorted manner.
+
+62
+00:06:11,700 --> 00:06:17,340
+We have seen this in the reverse, the same concept of the reverse.
+
+63
+00:06:17,580 --> 00:06:22,800
+But in this way, we are going to insert them in a sorted man.
+
+64
+00:06:23,910 --> 00:06:38,580
+If a stack is empty or x greater, then ask Dot B is greater than the first element, then don't do
+
+65
+00:06:38,580 --> 00:06:39,240
+anything.
+
+66
+00:06:39,690 --> 00:06:40,050
+OK.
+
+67
+00:06:40,440 --> 00:06:46,750
+If it stack is empty, sorry or s great, the X greater than the stack that peak.
+
+68
+00:06:47,070 --> 00:06:51,450
+If this met, these conditions are not the true don't make anything.
+
+69
+00:06:51,840 --> 00:07:01,560
+But if they are true, either we are creating a new and we are inserting data inside a new stack or
+
+70
+00:07:01,770 --> 00:07:10,710
+empty stack, or we are inserting item that that is greater than that thought, which is good because
+
+71
+00:07:11,250 --> 00:07:13,530
+consider if we have at the top
+
+72
+00:07:17,280 --> 00:07:20,720
+seven and we are going to insert eight.
+
+73
+00:07:20,730 --> 00:07:31,860
+Yes, it took because it's very it's very obvious that eight is greater than seven and it will apply
+
+74
+00:07:32,160 --> 00:07:35,510
+and obeys the rule of increasing order.
+
+75
+00:07:35,520 --> 00:07:44,160
+But we if we are trying to insert the three, if three stack that peak, if X, which is three greater
+
+76
+00:07:44,160 --> 00:07:46,620
+than seven, no, it's less then.
+
+77
+00:07:46,620 --> 00:07:48,510
+So we are not going to the certainty.
+
+78
+00:07:49,140 --> 00:07:49,470
+OK.
+
+79
+00:07:50,340 --> 00:07:52,230
+It's very important.
+
+80
+00:07:52,380 --> 00:08:02,100
+Stack OK, so stack dot, push x and serve it and return.
+
+81
+00:08:03,150 --> 00:08:11,690
+This return is very important because we are dealing with recursion and recursion.
+
+82
+00:08:11,700 --> 00:08:13,610
+This is the base concept.
+
+83
+00:08:13,650 --> 00:08:24,990
+This is called the base case and always used the base case and recursion in order to indicate the end
+
+84
+00:08:24,990 --> 00:08:33,180
+of recursion and prevent entering into an infinite, looping and infinite recursion.
+
+85
+00:08:34,350 --> 00:08:39,300
+Now, if the work is great or.
+
+86
+00:08:43,270 --> 00:08:58,360
+Remove that off the top right and clamp equal as that followed and sort that sort that stack.
+
+87
+00:08:59,720 --> 00:09:08,540
+Certain inserts or that insert, and I will try to sort it and pass acts.
+
+88
+00:09:09,830 --> 00:09:15,780
+The third thing that I need to make that stack the push their stamp.
+
+89
+00:09:16,380 --> 00:09:16,700
+OK.
+
+90
+00:09:17,680 --> 00:09:17,990
+OK.
+
+91
+00:09:20,010 --> 00:09:26,100
+This is how we make a sword that is stark and sadistic.
+
+92
+00:09:26,670 --> 00:09:28,620
+Now let's add
+
+93
+00:09:32,640 --> 00:09:37,980
+items here and try to sort them.
+
+94
+00:09:45,180 --> 00:09:45,840
+Can't be.
+
+95
+00:09:51,340 --> 00:09:54,340
+Saw the stack.
+
+96
+00:09:54,730 --> 00:09:56,950
+So we called Stack the.
+
+97
+00:10:00,440 --> 00:10:01,040
+Saw.
+
+98
+00:10:03,570 --> 00:10:04,720
+They are sort.
+
+99
+00:10:08,010 --> 00:10:12,380
+Sort of stacked the press deck and stacked it.
+
+100
+00:10:14,240 --> 00:10:14,840
+Brent.
+
+101
+00:10:17,150 --> 00:10:17,590
+Thank.
+
+102
+00:10:18,410 --> 00:10:19,640
+That's Ron Nancy.
+
+103
+00:10:22,300 --> 00:10:23,180
+Here we go.
+
+104
+00:10:23,200 --> 00:10:27,880
+We have four, four, 44, 86, 74 and nine.
+
+105
+00:10:29,110 --> 00:10:29,500
+OK.
+
+106
+00:10:29,530 --> 00:10:31,960
+After pumping, we have removed our name.
+
+107
+00:10:32,620 --> 00:10:34,810
+We have 74.
+
+108
+00:10:37,200 --> 00:10:42,510
+We are reversing it 74, 86, 44, and.
+
+109
+00:10:44,140 --> 00:10:45,270
+The stack.
+
+110
+00:10:45,780 --> 00:10:50,220
+We are sorting the stack 44, 74 and 86.
+
+111
+00:10:50,670 --> 00:10:55,950
+So we have this stack four, four, eight, six and seven four.
+
+112
+00:10:56,370 --> 00:11:03,570
+We have sorted this stack and we get the four, four, seven four and eight six.
+
+113
+00:11:04,630 --> 00:11:05,010
+OK.
+
+114
+00:11:05,470 --> 00:11:11,040
+This is the algorithm behind sorting their stack using reCAPTCHA.

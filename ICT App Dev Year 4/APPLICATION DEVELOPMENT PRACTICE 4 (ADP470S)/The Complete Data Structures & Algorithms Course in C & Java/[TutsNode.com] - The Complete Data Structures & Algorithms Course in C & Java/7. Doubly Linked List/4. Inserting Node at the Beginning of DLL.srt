@@ -1,0 +1,235 @@
+1
+00:00:00,690 --> 00:00:01,680
+Hello, my friends.
+
+2
+00:00:02,160 --> 00:00:06,090
+How to insert a note in a link, at least at the beginning.
+
+3
+00:00:06,270 --> 00:00:09,970
+Consider this link at least that contains two notes.
+
+4
+00:00:09,990 --> 00:00:15,450
+The first one at the address 1000 and the second is at 2000.
+
+5
+00:00:16,110 --> 00:00:21,750
+The first contains the data one one hundredth and the second contains the data 200.
+
+6
+00:00:22,350 --> 00:00:30,930
+If I need to insert in, you know, at the beginning by making and switching the addresses, so you
+
+7
+00:00:30,930 --> 00:00:36,030
+see guys that 1000 have a previous note contains none.
+
+8
+00:00:36,570 --> 00:00:45,900
+We switched the note null to 3000 that indicates their memory address of their newly inserted note.
+
+9
+00:00:46,410 --> 00:00:56,160
+OK, so this is the very important thing that we should take care that addresses switching the addresses
+
+10
+00:00:56,160 --> 00:01:05,310
+and linking the newly created note with the previous and the next note because they are doubly linked
+
+11
+00:01:05,310 --> 00:01:05,640
+lists.
+
+12
+00:01:05,640 --> 00:01:13,080
+So we need to take care about the previous and the next note to the newly created notes.
+
+13
+00:01:13,180 --> 00:01:13,470
+OK.
+
+14
+00:01:14,880 --> 00:01:22,740
+In order to do that, to do that in programming and see we create structured had equal to hack.
+
+15
+00:01:23,190 --> 00:01:32,100
+Don't worry, we will see everything in later on in coding and real in real program in Java.
+
+16
+00:01:32,400 --> 00:01:36,420
+And we are going to learn everything now in lectures and see.
+
+17
+00:01:36,490 --> 00:01:43,710
+So I hope you understand everything and write them down because they are very important.
+
+18
+00:01:44,040 --> 00:01:49,770
+So struck note had this is equal to hat, we are creating the reference to the hat.
+
+19
+00:01:50,280 --> 00:01:53,860
+Now I will create a method called at beginning.
+
+20
+00:01:54,420 --> 00:02:00,150
+It took into pretty meater and called Val and return void.
+
+21
+00:02:00,750 --> 00:02:02,700
+Now the struck note.
+
+22
+00:02:03,770 --> 00:02:07,460
+New note, Malak, size of anthrax.
+
+23
+00:02:07,790 --> 00:02:13,550
+We are reserving the memory and we are creating and you note this in your note.
+
+24
+00:02:14,180 --> 00:02:15,620
+Data equal to that.
+
+25
+00:02:15,740 --> 00:02:24,440
+So adding to the beginning we took, we pass into perimeter the van and this van, we are inserting
+
+26
+00:02:24,440 --> 00:02:25,070
+the new node.
+
+27
+00:02:25,160 --> 00:02:32,810
+So in our case, in the previous animation we have inserted in node that contains 300 as date.
+
+28
+00:02:33,110 --> 00:02:37,250
+So consider Val is equal to 300 in this example.
+
+29
+00:02:38,240 --> 00:02:45,830
+Now we need to check if this had equal equal to null, then insert the new node next, equal to null
+
+30
+00:02:46,130 --> 00:02:48,200
+and the new node, the previous equal to none.
+
+31
+00:02:48,410 --> 00:02:53,150
+Therefore, the head is equal to then you note that we have inserted.
+
+32
+00:02:54,530 --> 00:02:55,520
+Good recently.
+
+33
+00:02:55,820 --> 00:02:56,290
+OK.
+
+34
+00:02:56,450 --> 00:03:05,240
+So if we have a link, at least a double link at least that that is empty, then the newly created node
+
+35
+00:03:05,570 --> 00:03:12,260
+would be the had that referred to the next null equal to null and the previous to it equal to null.
+
+36
+00:03:12,500 --> 00:03:13,490
+It's very simple.
+
+37
+00:03:14,240 --> 00:03:14,690
+OK.
+
+38
+00:03:14,870 --> 00:03:20,420
+This is the case if there is an empty link, at least.
+
+39
+00:03:21,160 --> 00:03:25,910
+Now let's see if else, if we have another note.
+
+40
+00:03:26,090 --> 00:03:31,840
+If we have one node or more, so new node the previous equal to none.
+
+41
+00:03:31,850 --> 00:03:40,400
+So the previous two, then you node equal to none, make it equal to none because we are inserting then
+
+42
+00:03:40,400 --> 00:03:43,650
+you node into at the beginning.
+
+43
+00:03:43,670 --> 00:03:47,540
+So the previous of this newly created node would be null.
+
+44
+00:03:47,690 --> 00:03:48,710
+It's very simple.
+
+45
+00:03:48,920 --> 00:03:57,530
+Look up at the 3000, the newly created node that contains 300 as data.
+
+46
+00:03:57,860 --> 00:04:01,700
+The This is not it because we are inserting it at the beginning.
+
+47
+00:04:01,970 --> 00:04:02,990
+This is the logic.
+
+48
+00:04:03,260 --> 00:04:05,170
+This is the very important trick.
+
+49
+00:04:06,500 --> 00:04:09,530
+New node next equal to had.
+
+50
+00:04:09,770 --> 00:04:18,140
+So we have moved the head from one thousand and make it to the new node, the next equal to the head.
+
+51
+00:04:18,350 --> 00:04:27,770
+So, no, the beginning of the previous link at least, is equal to the next of the node that it is
+
+52
+00:04:28,160 --> 00:04:29,360
+newly inserted.
+
+53
+00:04:29,840 --> 00:04:40,010
+Then make had the previous equal to you note OK, then change the previous of the node equal of the
+
+54
+00:04:40,010 --> 00:04:42,380
+head that it was was in that link.
+
+55
+00:04:42,380 --> 00:04:49,070
+At least change it to the new node the previous game, and had equal to new node.
+
+56
+00:04:49,370 --> 00:04:56,180
+Now move the head cursor to the first note that we have insert.
+
+57
+00:04:56,840 --> 00:05:06,230
+Don't worry if you have any conflict, we will clarify everything and more animation and more details
+
+58
+00:05:06,230 --> 00:05:07,520
+in the next videos.
+
+59
+00:05:07,970 --> 00:05:15,770
+So how to insert a node in the link, at least at the end, we will see it.

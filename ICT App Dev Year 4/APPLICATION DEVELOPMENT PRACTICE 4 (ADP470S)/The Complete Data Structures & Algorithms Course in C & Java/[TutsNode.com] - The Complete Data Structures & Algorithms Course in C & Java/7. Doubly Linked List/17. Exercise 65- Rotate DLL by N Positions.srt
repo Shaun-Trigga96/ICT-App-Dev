@@ -1,0 +1,647 @@
+1
+00:00:00,480 --> 00:00:03,660
+Hello, my friends, and welcome to exercise number 65.
+
+2
+00:00:04,110 --> 00:00:08,800
+We are asked to write a function to rotate the injured list counterclockwise.
+
+3
+00:00:09,360 --> 00:00:18,060
+So, for example, consider a linked list that contains data a b.
+
+4
+00:00:18,690 --> 00:00:21,210
+This is in kidneys and kidneys.
+
+5
+00:00:22,080 --> 00:00:26,730
+OK, and we have solved this exercise in singly linked list.
+
+6
+00:00:27,060 --> 00:00:37,590
+So in the kidneys, we should take care about that extra pointer, which is the previous OK, and we
+
+7
+00:00:38,400 --> 00:00:40,530
+should think about the linkage.
+
+8
+00:00:40,560 --> 00:00:46,640
+So this points, we have concentrate on them over the next in the previous exercises.
+
+9
+00:00:46,680 --> 00:00:48,060
+So pay attention, guys.
+
+10
+00:00:48,060 --> 00:00:50,310
+This is the array.
+
+11
+00:00:50,400 --> 00:00:51,360
+This is sorted there.
+
+12
+00:00:51,360 --> 00:00:53,070
+Linked list before rotation.
+
+13
+00:00:53,460 --> 00:01:00,210
+Now we need to rotate this array by four, K four and equal to three.
+
+14
+00:01:00,630 --> 00:01:11,520
+So I need to rotate these these elements by like an equal by and equal to two.
+
+15
+00:01:11,880 --> 00:01:12,420
+OK.
+
+16
+00:01:12,840 --> 00:01:15,530
+So but here there is a trick.
+
+17
+00:01:15,540 --> 00:01:17,490
+It is counterclockwise.
+
+18
+00:01:17,610 --> 00:01:21,330
+OK, you got a guys counter-clockwise.
+
+19
+00:01:22,980 --> 00:01:24,150
+So what does this mean?
+
+20
+00:01:24,900 --> 00:01:32,650
+I need not to put from this element, but this element at last I put it in the first.
+
+21
+00:01:32,670 --> 00:01:34,740
+So this is clockwise.
+
+22
+00:01:35,040 --> 00:01:35,590
+OK?
+
+23
+00:01:36,120 --> 00:01:40,000
+Putting elements from the end to that to the beginning.
+
+24
+00:01:40,020 --> 00:01:41,520
+This is clockwise.
+
+25
+00:01:41,850 --> 00:01:47,730
+I need to remove the elements from the first and put it on the left.
+
+26
+00:01:47,880 --> 00:01:50,790
+So this is counter-clockwise.
+
+27
+00:01:50,800 --> 00:01:52,770
+So this is that counterclockwise?
+
+28
+00:01:52,830 --> 00:01:53,310
+OK.
+
+29
+00:01:54,000 --> 00:01:54,990
+You get guys.
+
+30
+00:01:55,200 --> 00:01:59,220
+So if I need to get.
+
+31
+00:02:00,760 --> 00:02:09,670
+Rotate and rotate this link, at least by two by and equal to do an equal to do so, I need to remove
+
+32
+00:02:09,670 --> 00:02:14,250
+two elements from the first and put it at the end.
+
+33
+00:02:14,740 --> 00:02:17,260
+So I will remove one.
+
+34
+00:02:17,440 --> 00:02:22,600
+Put it here and then I will remove B and put it here.
+
+35
+00:02:22,840 --> 00:02:24,430
+So the final?
+
+36
+00:02:25,590 --> 00:02:32,160
+The result would be if A and B have been removed, C would be the first one.
+
+37
+00:02:32,400 --> 00:02:32,970
+Okay.
+
+38
+00:02:34,720 --> 00:02:35,140
+Now.
+
+39
+00:02:37,110 --> 00:02:39,360
+The second one is following the.
+
+40
+00:02:39,960 --> 00:02:42,510
+You see, guys, this is their rotation.
+
+41
+00:02:43,450 --> 00:02:45,850
+He here now.
+
+42
+00:02:46,150 --> 00:02:50,150
+What is the first element that I have retained rotated?
+
+43
+00:02:50,410 --> 00:02:51,580
+It is a.
+
+44
+00:02:52,000 --> 00:02:55,750
+So I will link it with a.
+
+45
+00:02:57,300 --> 00:03:02,340
+Now, what is the next phase of this will be?
+
+46
+00:03:02,610 --> 00:03:05,790
+It is the note be.
+
+47
+00:03:06,300 --> 00:03:07,500
+OK, guys.
+
+48
+00:03:07,860 --> 00:03:11,310
+This is B so b now refers to now.
+
+49
+00:03:11,430 --> 00:03:13,950
+And C refers to the previous note.
+
+50
+00:03:14,250 --> 00:03:14,750
+OK.
+
+51
+00:03:15,330 --> 00:03:18,240
+This is the trick behind rotation.
+
+52
+00:03:18,780 --> 00:03:28,320
+So how to do that in coding, how to do that in Java and in terms of coding, we pay attention for that
+
+53
+00:03:28,650 --> 00:03:29,280
+links.
+
+54
+00:03:29,730 --> 00:03:30,220
+OK.
+
+55
+00:03:30,750 --> 00:03:33,510
+This is what we are going to make.
+
+56
+00:03:33,870 --> 00:03:44,760
+But before we continue, I should mention that this this rotation will cost us time, complexity of
+
+57
+00:03:44,820 --> 00:03:45,270
+of.
+
+58
+00:03:45,480 --> 00:03:54,180
+And you can see the complexity of all the exercises that we have made and the source code in the up
+
+59
+00:03:54,260 --> 00:03:56,790
+and the resource folder on our Udemy course.
+
+60
+00:03:57,180 --> 00:04:01,770
+So you can get them all by doing like this.
+
+61
+00:04:01,920 --> 00:04:09,930
+We scroll down till like if I need to get the complexity of this, I click on it and I see that that
+
+62
+00:04:09,930 --> 00:04:16,610
+is off and we have solved this in our exit exercise number 64 in the previous slides.
+
+63
+00:04:16,890 --> 00:04:22,110
+So let's make a method called.
+
+64
+00:04:23,490 --> 00:04:33,800
+Rotate and this rotate method, which took a perimeter, and so how many and will define that?
+
+65
+00:04:33,870 --> 00:04:42,870
+How many and nodes or how many rotation you you should make for this for this link at least.
+
+66
+00:04:42,880 --> 00:04:44,490
+So public
+
+67
+00:04:46,890 --> 00:04:51,720
+static void rotate.
+
+68
+00:04:52,740 --> 00:05:01,170
+How many times or how many degrees I should make it and will define it?
+
+69
+00:05:01,650 --> 00:05:02,130
+OK.
+
+70
+00:05:04,820 --> 00:05:06,070
+Smaller, yeah.
+
+71
+00:05:06,590 --> 00:05:19,790
+OK, now if I would check if the user enters and as a as an equal to zero, I should not make anything,
+
+72
+00:05:20,150 --> 00:05:21,980
+so I'm not rotating anything.
+
+73
+00:05:22,250 --> 00:05:30,560
+If an equal equal to zero, then return.
+
+74
+00:05:32,160 --> 00:05:42,390
+Let us understand that they're not care and equal to have that we should refer in, you know, that
+
+75
+00:05:42,600 --> 00:05:46,800
+indicates the position of the head.
+
+76
+00:05:47,160 --> 00:05:47,660
+OK.
+
+77
+00:05:48,270 --> 00:06:00,810
+So in order to do that, I will create if a node called node current equal to had.
+
+78
+00:06:03,190 --> 00:06:03,670
+OK.
+
+79
+00:06:05,200 --> 00:06:09,670
+What is head head will indicate for us here?
+
+80
+00:06:10,680 --> 00:06:15,420
+So I should not make static in order to get.
+
+81
+00:06:17,210 --> 00:06:20,540
+And get the reference and get the.
+
+82
+00:06:22,340 --> 00:06:23,630
+Instance from above.
+
+83
+00:06:24,080 --> 00:06:27,890
+OK, let me first step.
+
+84
+00:06:28,520 --> 00:06:37,460
+Make it making or indicating the indicating the first part of the beginning.
+
+85
+00:06:43,160 --> 00:06:52,820
+No current will either point to end or now after this loop, current will point to the Node B in the
+
+86
+00:06:53,300 --> 00:06:58,790
+order point, like B or C in the above example.
+
+87
+00:06:59,360 --> 00:07:05,270
+So it will return B or point to be equal to one.
+
+88
+00:07:08,210 --> 00:07:11,150
+Now we are creating a wild blue.
+
+89
+00:07:13,810 --> 00:07:14,410
+While.
+
+90
+00:07:18,010 --> 00:07:18,730
+Count.
+
+91
+00:07:20,420 --> 00:07:29,690
+Less than an and and current does not equal to none.
+
+92
+00:07:30,200 --> 00:07:37,940
+Then go and put the current equal to current dot next.
+
+93
+00:07:38,210 --> 00:07:38,630
+OK.
+
+94
+00:07:39,380 --> 00:07:43,520
+Count increased count by one.
+
+95
+00:07:43,970 --> 00:07:44,330
+OK.
+
+96
+00:07:45,170 --> 00:07:49,190
+This is the count, and this is how we indicate the first.
+
+97
+00:07:50,270 --> 00:07:59,630
+And the structure of that link, at least if current equal, equal to null then and is greater than
+
+98
+00:07:59,900 --> 00:08:02,630
+or equal to the count of nodes and link at least.
+
+99
+00:08:03,110 --> 00:08:06,920
+So that's a check for check for.
+
+100
+00:08:08,530 --> 00:08:23,350
+And if government equal equal to none, then editor OK, now the third step is Carolyn now points to
+
+101
+00:08:23,350 --> 00:08:24,850
+the end note.
+
+102
+00:08:26,490 --> 00:08:27,150
+Current
+
+103
+00:08:30,990 --> 00:08:41,340
+points to and note, OK, this is good now stored it in a valuable starting.
+
+104
+00:08:44,840 --> 00:08:54,980
+Starting current in that, what is this variable of type note called and no equal to?
+
+105
+00:08:55,310 --> 00:08:55,600
+Correct.
+
+106
+00:08:55,910 --> 00:08:56,210
+OK.
+
+107
+00:08:56,600 --> 00:08:59,630
+We have found the best.
+
+108
+00:09:00,880 --> 00:09:03,040
+No, it's best, no.
+
+109
+00:09:03,460 --> 00:09:07,480
+And we need to start our rotation.
+
+110
+00:09:08,600 --> 00:09:20,900
+Kernot will point to the last note after this loop, so I will make a loop pointing, pointing to last
+
+111
+00:09:21,350 --> 00:09:21,800
+note.
+
+112
+00:09:22,810 --> 00:09:30,280
+Okay, so this loop current will point to Note E in in the above example.
+
+113
+00:09:30,290 --> 00:09:38,750
+So it is the last known line current and the next does not equal to null.
+
+114
+00:09:39,260 --> 00:09:47,670
+Then current will be equal to current dog.
+
+115
+00:09:48,200 --> 00:09:58,130
+Next, we have stored there beginning and if we are going to rotate by two, so current now equal to
+
+116
+00:09:58,490 --> 00:10:08,090
+two ends note we have stored it and we have found that second note or byte by K. equal to or an equal
+
+117
+00:10:08,090 --> 00:10:13,270
+to and current now move to the last known why?
+
+118
+00:10:13,520 --> 00:10:15,320
+Because change.
+
+119
+00:10:15,320 --> 00:10:23,030
+Then changing the next of the last note the previous had because we are updating here in step number
+
+120
+00:10:23,030 --> 00:10:26,090
+five, updating the links.
+
+121
+00:10:26,570 --> 00:10:27,230
+The linkage.
+
+122
+00:10:27,770 --> 00:10:30,430
+Okay, so next of E!
+
+123
+00:10:30,440 --> 00:10:32,660
+Is now change to Node A.
+
+124
+00:10:33,290 --> 00:10:44,720
+This is how we have how to make it next equal to had because HAB is now next to the last one because
+
+125
+00:10:44,720 --> 00:10:53,300
+we have removed a from the beginning and put it in the and after eight now.
+
+126
+00:10:55,190 --> 00:11:04,160
+Number six, step number six, I know that it may be confused sometimes, but if you keep practicing
+
+127
+00:11:04,160 --> 00:11:10,940
+and you understand what I am doing step by step, it would be very easy.
+
+128
+00:11:11,630 --> 00:11:18,590
+Now change the previous of head no to curtain previous of a is now changed to no.
+
+129
+00:11:18,740 --> 00:11:21,100
+Keep updating the linkage.
+
+130
+00:11:21,110 --> 00:11:28,730
+This has occurred because the next and the previous we should take care about it.
+
+131
+00:11:28,820 --> 00:11:39,890
+So had the previous equal to occurred, OK, I have guessed it now.
+
+132
+00:11:39,990 --> 00:11:47,690
+Change the head to end plus one at the f node and head is now changed.
+
+133
+00:11:47,690 --> 00:11:51,080
+Do not see changing the other set.
+
+134
+00:11:51,350 --> 00:12:09,680
+Six Changing the other pointers had equal to any snow dot next and had thought the previous.
+
+135
+00:12:14,200 --> 00:12:16,930
+That's true equal to none.
+
+136
+00:12:18,250 --> 00:12:18,910
+OK.
+
+137
+00:12:23,300 --> 00:12:26,570
+Change of venue had No.
+
+138
+00:12:26,780 --> 00:12:33,060
+Two now because of previous head note in a linked list and has none.
+
+139
+00:12:33,650 --> 00:12:33,980
+OK.
+
+140
+00:12:34,700 --> 00:12:35,720
+It's very simple.
+
+141
+00:12:36,370 --> 00:12:50,180
+Now the last step is changing the next of no to none change the next of last note to a.
+
+142
+00:12:52,130 --> 00:12:57,410
+And snowed dot next equal to none.
+
+143
+00:12:58,610 --> 00:13:00,170
+OK, now.
+
+144
+00:13:03,400 --> 00:13:05,920
+Let's see our example here.
+
+145
+00:13:07,730 --> 00:13:11,030
+I have the list is.
+
+146
+00:13:12,570 --> 00:13:14,730
+99, two and four.
+
+147
+00:13:14,760 --> 00:13:16,980
+I need to rotate it by one.
+
+148
+00:13:17,400 --> 00:13:23,700
+So 99 should be here at the end and two becomes the first.
+
+149
+00:13:23,880 --> 00:13:29,460
+This is their algorithm behind this example.
+
+150
+00:13:29,700 --> 00:13:44,080
+So let's call the AL and don't rotate by one system that or we call the and dark breadth the last list.
+
+151
+00:13:44,700 --> 00:13:51,330
+The other hand, had system that allowed the sprint.
+
+152
+00:13:55,570 --> 00:13:58,570
+After rotation.
+
+153
+00:14:01,540 --> 00:14:02,740
+That's around, Nancy.
+
+154
+00:14:04,530 --> 00:14:05,850
+And here we go, guys.
+
+155
+00:14:07,100 --> 00:14:10,040
+After rotation, we are printing in forward way.
+
+156
+00:14:10,940 --> 00:14:16,870
+It was nine nine in nineteen, ninety nine, two and four.
+
+157
+00:14:16,880 --> 00:14:25,850
+It becomes ninety nine goes through here to the end, so do becomes the first, four becomes the second
+
+158
+00:14:25,850 --> 00:14:27,760
+and 99 becomes the last.
+
+159
+00:14:27,770 --> 00:14:31,340
+And this is the trick behind this.
+
+160
+00:14:32,690 --> 00:14:42,530
+This third rotation method and its complexity, it's of course, all of and because we are going through
+
+161
+00:14:42,530 --> 00:14:54,200
+all of these notes of the double link, at least in this way, we have learned about rotation and rotating
+
+162
+00:14:54,410 --> 00:14:58,490
+the double link at list elements by and position.

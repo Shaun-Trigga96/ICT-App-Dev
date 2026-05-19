@@ -1,0 +1,279 @@
+1
+00:00:00,060 --> 00:00:07,020
+Though, my friends and welcome to exercise number 35 in this exercise, we are asked to find the common
+
+2
+00:00:07,020 --> 00:00:08,840
+elements between the two, right?
+
+3
+00:00:08,870 --> 00:00:15,600
+So we need to make any program or algorithm that find the common elements between two areas.
+
+4
+00:00:15,600 --> 00:00:17,970
+We have to erase entries.
+
+5
+00:00:18,270 --> 00:00:24,000
+So we are taking an interest in order to make the coding simple.
+
+6
+00:00:24,300 --> 00:00:32,970
+And we need that the algorithm, that concept to be understand, OK, understood correctly.
+
+7
+00:00:33,660 --> 00:00:33,990
+So.
+
+8
+00:00:35,210 --> 00:00:42,650
+Both the video and think about it, how to find that come in that common between that and other they
+
+9
+00:00:42,650 --> 00:00:44,930
+want and as they do.
+
+10
+00:00:45,080 --> 00:00:46,910
+So I am waiting.
+
+11
+00:00:47,010 --> 00:00:49,430
+Your solution, guys.
+
+12
+00:00:50,030 --> 00:01:02,660
+So in order to may maybe discuss anything, maybe maybe I could help you in understanding ways better
+
+13
+00:01:02,660 --> 00:01:03,860
+if I see your code.
+
+14
+00:01:04,640 --> 00:01:11,510
+So please comment below in order to see your way of thinking your algorithm, your.
+
+15
+00:01:14,970 --> 00:01:17,310
+Your way of driving records, OK?
+
+16
+00:01:20,820 --> 00:01:28,500
+These are the elements of element of the array to and this element elements of array one.
+
+17
+00:01:28,800 --> 00:01:29,100
+So.
+
+18
+00:01:33,470 --> 00:01:45,440
+We start by comparing this element, we took an element here, I'm I'm showing you how we make that
+
+19
+00:01:45,440 --> 00:01:46,880
+algorithm work.
+
+20
+00:01:47,080 --> 00:01:55,790
+OK, so we start to compare the first element with elements of the second array.
+
+21
+00:01:56,120 --> 00:01:56,680
+OK.
+
+22
+00:01:57,110 --> 00:01:59,480
+So comparing this?
+
+23
+00:02:02,250 --> 00:02:11,340
+Would result in an array, so if we took no one and we need to compare it with these numbers when we
+
+24
+00:02:11,340 --> 00:02:17,220
+need to put it inside an array and it looks pretty to compare these elements.
+
+25
+00:02:17,670 --> 00:02:24,060
+Now, if I need one element to compare with these elements, I need one look.
+
+26
+00:02:24,240 --> 00:02:27,690
+But if I need at loop.
+
+27
+00:02:28,970 --> 00:02:36,180
+Or that goes through all the elements and compare these elements to that to these elements.
+
+28
+00:02:36,200 --> 00:02:44,420
+Also, I need to make a another loop, so I need a loop to compare the elements and I need an outer
+
+29
+00:02:44,420 --> 00:02:48,110
+loop that go through the elements and compare them.
+
+30
+00:02:48,530 --> 00:02:49,160
+Correct.
+
+31
+00:02:49,500 --> 00:02:50,000
+OK.
+
+32
+00:02:50,840 --> 00:02:51,380
+OK.
+
+33
+00:02:51,530 --> 00:02:54,200
+So one for movie one.
+
+34
+00:02:54,620 --> 00:02:59,480
+One loop to move from one element to another.
+
+35
+00:02:59,810 --> 00:03:08,630
+And I need a nested loop that goes through the elements and compared them with the elements of Array
+
+36
+00:03:09,110 --> 00:03:09,410
+two.
+
+37
+00:03:10,520 --> 00:03:10,880
+OK.
+
+38
+00:03:10,940 --> 00:03:13,250
+You understand the concept, guys.
+
+39
+00:03:13,520 --> 00:03:15,020
+This is very important.
+
+40
+00:03:15,200 --> 00:03:25,370
+So this loop outer loop will go through these elements and the inner loop will go through these elements.
+
+41
+00:03:26,210 --> 00:03:29,120
+So how to make this happens?
+
+42
+00:03:29,690 --> 00:03:33,770
+We start by making an outer Lou Ford
+
+43
+00:03:36,230 --> 00:03:44,230
+and I equal to zero I less than our way one goes.
+
+44
+00:03:44,960 --> 00:03:50,660
+This outer loop will go through this element, so I need to go through the elements of array one.
+
+45
+00:03:51,380 --> 00:04:03,110
+OK, so that length five plus plus and I need to go inside this loop, another loop that contains this
+
+46
+00:04:03,110 --> 00:04:07,280
+number that took an element and compared it with the whole numbers.
+
+47
+00:04:07,310 --> 00:04:07,640
+OK.
+
+48
+00:04:07,940 --> 00:04:15,530
+So the algorithms tell us to do can element from here and compare it with all the elements, then move
+
+49
+00:04:15,540 --> 00:04:19,010
+to the next element and compare it with all the elements.
+
+50
+00:04:19,640 --> 00:04:24,930
+The third, compare it with the all elements five and so on.
+
+51
+00:04:25,100 --> 00:04:25,440
+OK.
+
+52
+00:04:25,460 --> 00:04:31,310
+In order to do that, I told you in the previous video and to make an institute.
+
+53
+00:04:31,400 --> 00:04:43,370
+And in this video also the same concept, but different syntax came out of the two dot length.
+
+54
+00:04:43,550 --> 00:04:48,080
+I'm comparing all elements of of the second array.
+
+55
+00:04:52,550 --> 00:05:00,560
+And start to compare if Array one Appendix II equal
+
+56
+00:05:03,500 --> 00:05:08,110
+that they do at Index J.
+
+57
+00:05:13,100 --> 00:05:13,610
+Then.
+
+58
+00:05:16,920 --> 00:05:19,410
+If then, sorry.
+
+59
+00:05:19,810 --> 00:05:22,380
+Yes, I need to remove the spaces.
+
+60
+00:05:26,730 --> 00:05:39,190
+Then tell me that system that the print, that this common elements are current and
+
+61
+00:05:41,700 --> 00:05:44,160
+common element.
+
+62
+00:05:50,860 --> 00:05:51,460
+Plus.
+
+63
+00:05:53,000 --> 00:05:55,680
+Every one at index.
+
+64
+00:05:56,550 --> 00:05:58,110
+Oh, okay.
+
+65
+00:05:58,760 --> 00:06:00,230
+It's very simple.
+
+66
+00:06:01,570 --> 00:06:10,780
+OK, now let's run and see the common elements, the common element is four, yes, four and four.
+
+67
+00:06:11,230 --> 00:06:12,010
+Five.
+
+68
+00:06:12,190 --> 00:06:15,410
+Here five and here five and seven.
+
+69
+00:06:15,460 --> 00:06:18,760
+Here seven and a to contain seven.
+
+70
+00:06:19,150 --> 00:06:23,830
+OK, so this is the algorithm in order to find the common elements between.

@@ -1,0 +1,367 @@
+1
+00:00:00,120 --> 00:00:02,790
+Hello, my friends, and welcome to exercise number 69.
+
+2
+00:00:03,270 --> 00:00:10,470
+And this exercise, we are adding nodes after a specific node in Circle Link at last, so we need to
+
+3
+00:00:10,470 --> 00:00:17,940
+write a function that it is called and after and it took into meters then node.
+
+4
+00:00:18,030 --> 00:00:26,610
+That is the last note that we are going to insert a node after it, the data of the newly created item,
+
+5
+00:00:27,060 --> 00:00:31,650
+newly created node and and right now.
+
+6
+00:00:33,410 --> 00:00:36,620
+I need from you to post a video and think about it.
+
+7
+00:00:36,920 --> 00:00:44,810
+What is the logic behind making this method, by the way I have and that time complexity of these methods
+
+8
+00:00:44,810 --> 00:00:52,760
+that we have created before, they are all of or of end because we are traversing all the nodes in that
+
+9
+00:00:52,760 --> 00:00:57,770
+link at list public static.
+
+10
+00:00:59,390 --> 00:01:16,160
+Note and a return note and add after it took about a meter, then note last that the or a. like I would
+
+11
+00:01:16,160 --> 00:01:23,780
+call it, last this good, the last note that I need to make additions after it and and item.
+
+12
+00:01:25,010 --> 00:01:29,180
+We will see the usage of this barometer.
+
+13
+00:01:29,660 --> 00:01:29,990
+I.
+
+14
+00:01:31,920 --> 00:01:32,250
+If.
+
+15
+00:01:32,880 --> 00:01:37,470
+Let me check if last the equal equal to none.
+
+16
+00:01:38,500 --> 00:01:40,770
+Then it will return none.
+
+17
+00:01:42,930 --> 00:01:54,180
+I know them, but I will create it, A. B so B would refer to us as last the next.
+
+18
+00:01:54,630 --> 00:02:05,070
+You'd give me the note that I am going to insert the new notes after it and I will refer B as the this
+
+19
+00:02:05,070 --> 00:02:05,340
+note.
+
+20
+00:02:05,760 --> 00:02:15,330
+So Note B or B is the index of the last note that you give me and I will get it, get the next to it.
+
+21
+00:02:15,570 --> 00:02:19,260
+So P now becomes the reference that we are going to use.
+
+22
+00:02:19,560 --> 00:02:33,900
+So do if that b thought data equal equal to the item that I am going to to see insert them to equal
+
+23
+00:02:33,900 --> 00:02:42,510
+to, you know, then create A. Then stamp the date to assign the data to it.
+
+24
+00:02:43,200 --> 00:02:44,070
+I'm here.
+
+25
+00:02:44,070 --> 00:02:50,490
+I'm going to create the note and 10 the next because you are specifying P-Dog.
+
+26
+00:02:51,060 --> 00:02:51,420
+OK.
+
+27
+00:02:51,780 --> 00:02:59,250
+So if we reached the item that we are looking for, this is the last note.
+
+28
+00:02:59,970 --> 00:03:05,100
+And this is the item that we are going to add the note after.
+
+29
+00:03:05,520 --> 00:03:14,700
+And this is the data that the contained in that newly inserted note, then we need to make this creation
+
+30
+00:03:14,700 --> 00:03:15,510
+of the note.
+
+31
+00:03:16,080 --> 00:03:22,020
+This is a creation creating the note while creating the note.
+
+32
+00:03:22,020 --> 00:03:24,120
+You specify the data and the next.
+
+33
+00:03:24,540 --> 00:03:24,940
+OK.
+
+34
+00:03:25,470 --> 00:03:34,560
+Then Peter, next equal to the ten, always use them notes as your reference while inserting deleting.
+
+35
+00:03:34,560 --> 00:03:42,150
+And because you need to get and assign the newly created links and that data links.
+
+36
+00:03:42,510 --> 00:03:42,900
+OK.
+
+37
+00:03:43,590 --> 00:03:43,860
+If!
+
+38
+00:03:43,860 --> 00:03:45,840
+B equal.
+
+39
+00:03:47,180 --> 00:03:48,170
+For the last.
+
+40
+00:03:48,940 --> 00:03:58,700
+Last equal to 10 and then returned last because we are returning a.
+
+41
+00:04:00,120 --> 00:04:00,630
+Value.
+
+42
+00:04:01,530 --> 00:04:01,830
+OK.
+
+43
+00:04:04,920 --> 00:04:13,350
+Increase be equal to pay the next move, the cursor and then forward here the while.
+
+44
+00:04:13,500 --> 00:04:23,160
+So while this would be repeated every time, while Bill does not equal the last, though, it's next.
+
+45
+00:04:24,030 --> 00:04:24,540
+Okay.
+
+46
+00:04:25,080 --> 00:04:33,210
+Please go back to the to the lectures and you see this in animated way.
+
+47
+00:04:33,220 --> 00:04:38,700
+What is that algorithm behind adding notes after something?
+
+48
+00:04:38,880 --> 00:04:44,010
+OK, print l, m and I need to print the item.
+
+49
+00:04:44,490 --> 00:04:53,360
+Plus not here is the message not present in that list.
+
+50
+00:04:53,460 --> 00:04:56,340
+So here we are covering that.
+
+51
+00:04:56,340 --> 00:04:56,880
+It is.
+
+52
+00:04:58,320 --> 00:05:06,900
+If we are trying to insert a note after a note that does not exist in the list, then it will.
+
+53
+00:05:07,440 --> 00:05:15,610
+But for us, a detail that this note or this item is not presented in the list return last.
+
+54
+00:05:16,920 --> 00:05:17,430
+OK.
+
+55
+00:05:17,790 --> 00:05:26,730
+So what we have done in this method, we create a method no ad after it returns in node.
+
+56
+00:05:26,730 --> 00:05:34,050
+And it took note last, referring to the last of the index of the offending card list and to date that
+
+57
+00:05:34,060 --> 00:05:42,570
+the data of the newly created note that you are going to create and insert and the items that the index
+
+58
+00:05:42,570 --> 00:05:53,310
+of the item or that contained item data, the item be equal to the item that data of the note that we
+
+59
+00:05:53,310 --> 00:05:55,970
+are going to insert note after it.
+
+60
+00:05:56,100 --> 00:05:56,630
+OK.
+
+61
+00:05:57,420 --> 00:06:07,410
+And we start comparing getting searching for this while we found if we found this item, if we found
+
+62
+00:06:07,410 --> 00:06:14,670
+this node, then go and create a new node, get the date that created it and make the reference next
+
+63
+00:06:14,670 --> 00:06:16,380
+to be the next.
+
+64
+00:06:16,620 --> 00:06:17,120
+OK.
+
+65
+00:06:17,790 --> 00:06:18,520
+Get it.
+
+66
+00:06:18,540 --> 00:06:21,950
+And next the from the previously created No.
+
+67
+00:06:22,440 --> 00:06:22,800
+OK.
+
+68
+00:06:23,070 --> 00:06:24,690
+And then return last.
+
+69
+00:06:24,810 --> 00:06:31,050
+And here we check if systems that are not presented again.
+
+70
+00:06:32,120 --> 00:06:33,650
+Let's see.
+
+71
+00:06:34,010 --> 00:06:35,000
+And after.
+
+72
+00:06:36,300 --> 00:06:46,410
+Let's see our current and a link at least two five zero four one five, I need to add that six after
+
+73
+00:06:46,410 --> 00:06:46,680
+one.
+
+74
+00:06:46,950 --> 00:06:50,790
+OK, so in the main I will create
+
+75
+00:06:54,570 --> 00:06:57,900
+here, I need to create a new note.
+
+76
+00:06:59,970 --> 00:07:00,700
+Note.
+
+77
+00:07:02,310 --> 00:07:03,660
+No, No.
+
+78
+00:07:03,660 --> 00:07:07,740
+Six equal to, you know.
+
+79
+00:07:08,760 --> 00:07:10,740
+And we pass here.
+
+80
+00:07:11,850 --> 00:07:13,020
+You can pass.
+
+81
+00:07:14,340 --> 00:07:27,420
+You've kind of created as empty now, Node six equal to and after we pass here, the last index.
+
+82
+00:07:28,650 --> 00:07:29,760
+The last note.
+
+83
+00:07:30,710 --> 00:07:38,210
+And we put here that data that we are going to insert, which is number six and what is the item that
+
+84
+00:07:38,210 --> 00:07:42,950
+we are going to add than this note after it contains one.
+
+85
+00:07:43,190 --> 00:07:46,730
+OK, let's run and see.
+
+86
+00:07:48,370 --> 00:07:49,480
+And here we go.
+
+87
+00:07:49,540 --> 00:07:55,510
+Two, three, four, one, six and five, we had specified five as the last.
+
+88
+00:07:55,780 --> 00:08:03,700
+We have specified one as item that that data that it is contained in the note that we are going to insert
+
+89
+00:08:03,990 --> 00:08:07,630
+data six as a note after one.
+
+90
+00:08:07,900 --> 00:08:08,370
+OK.
+
+91
+00:08:08,770 --> 00:08:16,180
+You see the algorithm you you understand, extend this algorithm how it is complex, but it is very
+
+92
+00:08:16,180 --> 00:08:18,970
+simple if you understand and.

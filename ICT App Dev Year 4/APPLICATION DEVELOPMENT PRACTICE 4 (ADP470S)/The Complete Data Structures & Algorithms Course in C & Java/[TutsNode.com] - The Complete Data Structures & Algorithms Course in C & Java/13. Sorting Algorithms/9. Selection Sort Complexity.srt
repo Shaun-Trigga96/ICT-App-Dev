@@ -1,0 +1,283 @@
+1
+00:00:00,360 --> 00:00:07,230
+Let's learn about selection sort algorithm deeply and then move to implement its code in C language
+
+2
+00:00:07,230 --> 00:00:15,150
+and Java selection Sort is a sorting algorithm that selects the smallest element from unsorted list
+
+3
+00:00:15,420 --> 00:00:21,000
+in each iteration, and the place is that element at the beginning of the unsorted list.
+
+4
+00:00:21,870 --> 00:00:30,570
+The selection sort algorithm sought an array by repeatedly finding the minimum element considering ascending
+
+5
+00:00:30,570 --> 00:00:34,410
+order from unsorted part and putting it at the beginning.
+
+6
+00:00:34,830 --> 00:00:42,720
+So the algorithm maintains do sub arrays in a given array, the summary, which is already sorted,
+
+7
+00:00:42,720 --> 00:00:46,490
+and the remaining sub array which is on sorted.
+
+8
+00:00:47,790 --> 00:00:49,800
+Consider the example array.
+
+9
+00:00:49,800 --> 00:00:55,140
+We have six, 64, 25, 12, 22 and 11.
+
+10
+00:00:55,770 --> 00:01:03,930
+The first thing that we need is to find the minimum element in the array from zero to four and from
+
+11
+00:01:03,930 --> 00:01:09,570
+the index zero two and export because we have five elements and place it at the beginning.
+
+12
+00:01:09,720 --> 00:01:15,330
+So we have find that the minimum which is 11 and replace it at the minimum.
+
+13
+00:01:16,270 --> 00:01:17,850
+Have the first, OK?
+
+14
+00:01:19,420 --> 00:01:23,710
+The second way finding them minimum element in array.
+
+15
+00:01:23,740 --> 00:01:31,510
+But here we need to go through the index from one to four, not from zero to four, because we have
+
+16
+00:01:31,510 --> 00:01:38,080
+already sorted 11, we have find them minimum and now we are going to go through one.
+
+17
+00:01:38,440 --> 00:01:44,920
+And from the first and the there are index number one to the index number four.
+
+18
+00:01:44,950 --> 00:01:49,660
+So 11 is not included in this game.
+
+19
+00:01:50,230 --> 00:01:55,090
+Now we have index one, two, three and four.
+
+20
+00:01:55,810 --> 00:01:56,340
+OK.
+
+21
+00:01:57,190 --> 00:02:02,530
+We need to get that a minimum between them minimum is 12.
+
+22
+00:02:02,650 --> 00:02:08,040
+So we place it at the beginning of the essay from index one to four.
+
+23
+00:02:08,050 --> 00:02:10,800
+So we swap it with not the 12.
+
+24
+00:02:10,810 --> 00:02:13,260
+We swap it with twenty fi.
+
+25
+00:02:13,300 --> 00:02:23,740
+So now 11, 12, 25, 22 and 64, the third sink or the third step that we need to make is to find the
+
+26
+00:02:23,740 --> 00:02:26,980
+minimum element in array from index.
+
+27
+00:02:27,190 --> 00:02:33,100
+Now we considered that index zero and one is fully and fully fully sorted.
+
+28
+00:02:33,370 --> 00:02:38,680
+Now we need to sort the others one to do three and four.
+
+29
+00:02:40,340 --> 00:02:47,840
+We start from two till four and place it at the beginning of that to for what what is the minimum value
+
+30
+00:02:47,840 --> 00:02:53,270
+is 22, so we place it at the beginning of index two to four.
+
+31
+00:02:54,650 --> 00:03:00,650
+Which is replacing 25 and 25 goes to the placing of 22.
+
+32
+00:03:01,190 --> 00:03:07,190
+Now we considered that all of these three elements have been considered fully sorted.
+
+33
+00:03:07,790 --> 00:03:12,920
+Now we need to find the last step at the minimum between the Element three and four.
+
+34
+00:03:13,070 --> 00:03:15,050
+From Index three and four.
+
+35
+00:03:15,470 --> 00:03:19,280
+So this is three and this is four from index at three.
+
+36
+00:03:19,280 --> 00:03:20,540
+Retail Index four.
+
+37
+00:03:20,780 --> 00:03:23,570
+And place it at the beginning of three and four.
+
+38
+00:03:23,840 --> 00:03:30,680
+So what is the minimum, which is twenty five at this place, the already placed in the same position
+
+39
+00:03:30,680 --> 00:03:35,210
+and now we have our array is fully sorted.
+
+40
+00:03:35,570 --> 00:03:43,400
+This is the selection sort finding and selecting the minimum and every iteration and placing it at the
+
+41
+00:03:43,400 --> 00:03:45,700
+beginning of the array.
+
+42
+00:03:47,060 --> 00:03:49,820
+Let's see the algorithm in terms of coding.
+
+43
+00:03:50,990 --> 00:03:59,420
+This is the selection thought algorithm that we are going to make it in C language and write it in C
+
+44
+00:03:59,420 --> 00:04:06,470
+language in the next video and later on, we will make it an exercise and write it in Java language
+
+45
+00:04:06,800 --> 00:04:08,960
+and later exercises.
+
+46
+00:04:10,000 --> 00:04:15,880
+And later, so the selection sort array and size, the array and size.
+
+47
+00:04:17,380 --> 00:04:20,980
+30 meters or we can make the size.
+
+48
+00:04:21,220 --> 00:04:24,760
+We can't get the size outpacing the perimeter as you want.
+
+49
+00:04:24,910 --> 00:04:27,310
+So we're repeat until.
+
+50
+00:04:28,700 --> 00:04:34,790
+Size minus one times we repeat this size minus one times.
+
+51
+00:04:34,970 --> 00:04:39,380
+So said the first answer that element as the minimum.
+
+52
+00:04:39,830 --> 00:04:44,320
+This is the set of the first unsorted element as minimum.
+
+53
+00:04:44,990 --> 00:04:49,160
+We move the minimum at the beginning of the first.
+
+54
+00:04:50,560 --> 00:04:58,750
+Position for each of the unsorted element, this is the for each element, for each loop, which check
+
+55
+00:04:58,750 --> 00:05:04,900
+if the element less than the current minimum, we set the element as the new minimum.
+
+56
+00:05:05,740 --> 00:05:13,960
+This is every time that we need to find the minimum and we move it to the first position by swapping
+
+57
+00:05:13,960 --> 00:05:16,750
+the minimum, the first unsorted position.
+
+58
+00:05:18,140 --> 00:05:25,580
+This is the algorithm, if you are asked, right, that let's move to that complexity.
+
+59
+00:05:27,590 --> 00:05:35,810
+Time complexity of this selection sort is of and square, because every time we need to go through all
+
+60
+00:05:35,810 --> 00:05:45,470
+the elements and we loop through the elements and we test every time we move that iteration to another
+
+61
+00:05:45,590 --> 00:05:51,910
+new element, we move it by looping through nested loops.
+
+62
+00:05:51,920 --> 00:05:59,480
+So the nested loops will give us a time complexity or the square in this election sort auxiliary space
+
+63
+00:05:59,960 --> 00:06:06,530
+space complexities of what the good thing about the selection, sort it is.
+
+64
+00:06:06,530 --> 00:06:15,440
+It never makes more than all of and swaps and can be useful when memory right is a costly operation.
+
+65
+00:06:15,740 --> 00:06:19,790
+OK, so this is a good algorithm.
+
+66
+00:06:19,820 --> 00:06:30,770
+If you have a shortage in memory or because there is no auxiliary space needed and we need to make a
+
+67
+00:06:30,770 --> 00:06:38,030
+selection sort more, not more than often because every time we select the minimum, we know the minimum
+
+68
+00:06:38,030 --> 00:06:39,340
+and we move it.
+
+69
+00:06:39,470 --> 00:06:43,330
+That left out and that outer left most.
+
+70
+00:06:43,940 --> 00:06:44,260
+OK.
+
+71
+00:06:45,500 --> 00:06:52,280
+This is this election, so let's move and implement it in the sea language and learn about the.

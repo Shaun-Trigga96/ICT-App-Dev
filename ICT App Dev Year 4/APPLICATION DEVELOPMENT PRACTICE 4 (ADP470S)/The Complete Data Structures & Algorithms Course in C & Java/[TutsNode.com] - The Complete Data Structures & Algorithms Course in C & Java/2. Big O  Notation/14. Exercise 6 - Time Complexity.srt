@@ -1,0 +1,187 @@
+1
+00:00:00,120 --> 00:00:01,110
+Hello, my friends.
+
+2
+00:00:01,470 --> 00:00:08,580
+And welcome to exercise number six and this exercise, we are asked to find the time complexity of this
+
+3
+00:00:08,850 --> 00:00:09,390
+method.
+
+4
+00:00:11,060 --> 00:00:13,850
+Both the video and think about this mess.
+
+5
+00:00:15,800 --> 00:00:18,590
+Remember when you see a raise?
+
+6
+00:00:18,830 --> 00:00:27,110
+Think about and but not all time and all the times we have sold the exercise number five and we have
+
+7
+00:00:27,110 --> 00:00:34,910
+seen that a for loop and ordinary for loop, but with a different increment plus plus and that is equal
+
+8
+00:00:35,210 --> 00:00:36,050
+times due.
+
+9
+00:00:36,380 --> 00:00:39,680
+It will become log n as complexity.
+
+10
+00:00:41,160 --> 00:00:43,530
+And not linear, it is logarithmic.
+
+11
+00:00:44,370 --> 00:00:48,660
+So please pay attention when you see a for loop.
+
+12
+00:00:50,140 --> 00:00:52,390
+Now, let's solve this exercise.
+
+13
+00:00:54,260 --> 00:01:01,220
+We start from here, we have this is the body of the method.
+
+14
+00:01:03,520 --> 00:01:10,510
+And we have here, let me make it different, the color in green.
+
+15
+00:01:10,810 --> 00:01:13,390
+We have this.
+
+16
+00:01:16,470 --> 00:01:17,610
+This is.
+
+17
+00:01:19,340 --> 00:01:26,870
+The body of the fur, the outer loop, so the outer loop.
+
+18
+00:01:28,710 --> 00:01:33,300
+The outer loop here will be resulting in.
+
+19
+00:01:36,040 --> 00:01:38,530
+I equal to zero, which is the initial.
+
+20
+00:01:39,830 --> 00:01:44,750
+And I less than a rate at length, remember every.
+
+21
+00:01:46,240 --> 00:01:51,490
+Array dot length is the referred as an.
+
+22
+00:01:52,610 --> 00:01:53,930
+Think about it as an.
+
+23
+00:01:54,960 --> 00:01:59,290
+OK, so and the increment is a plus plus.
+
+24
+00:01:59,340 --> 00:02:09,720
+So this array is going through all the elements of a from zero to N, this complexity of this loop is
+
+25
+00:02:09,720 --> 00:02:11,620
+o of an OK.
+
+26
+00:02:12,030 --> 00:02:17,880
+So this would result in all of an.
+
+27
+00:02:20,120 --> 00:02:32,240
+Now inside this hour, this story, this loop, we have another loop nested loop and it the start from
+
+28
+00:02:32,240 --> 00:02:39,140
+Jay Equal to zero two Jay less than NW and its increment in J Plus Plus.
+
+29
+00:02:39,140 --> 00:02:47,030
+So it moves it from and goes through all elements from zero to N and is printing.
+
+30
+00:02:47,060 --> 00:02:47,930
+Is this.
+
+31
+00:02:49,390 --> 00:02:49,950
+OK.
+
+32
+00:02:51,450 --> 00:02:51,840
+So.
+
+33
+00:02:54,480 --> 00:03:00,480
+This complexity of this array is an.
+
+34
+00:03:01,580 --> 00:03:06,410
+But the complexity of this is all of an.
+
+35
+00:03:07,410 --> 00:03:07,900
+OK.
+
+36
+00:03:08,760 --> 00:03:11,190
+And the outer loop is of.
+
+37
+00:03:13,590 --> 00:03:23,010
+This is oh of an as we have said, that the outer loop, this is that loop and the green is the inner
+
+38
+00:03:23,010 --> 00:03:29,880
+loop and in blue is sort of in yellow is sort of one.
+
+39
+00:03:31,000 --> 00:03:36,010
+OK, so we have the outer loop is moving through.
+
+40
+00:03:37,390 --> 00:03:46,180
+All the elements from zero to N and the inner loop is executing the code from zero to end, and the
+
+41
+00:03:46,180 --> 00:03:48,840
+code is a system that are to print.
+
+42
+00:03:48,880 --> 00:03:54,560
+This is often times and times and so one.
+
+43
+00:03:55,630 --> 00:04:04,510
+This is the inner times, how many time it it is executing time and it is executed and times.
+
+44
+00:04:04,870 --> 00:04:13,450
+And this loop, the inner loop in green is executed and times because with this nested loop inside a
+
+45
+00:04:13,450 --> 00:04:19,720
+bigger loop and an outer loop that it is going from zero to end elements.
+
+46
+00:04:20,080 --> 00:04:26,320
+So one times and bounds and this result in and squares.
+
+47
+00:04:26,980 --> 00:04:35,110
+So the time complexity of this exercise and this method and this algorithm is of.

@@ -1,0 +1,455 @@
+1
+00:00:00,630 --> 00:00:03,570
+Hello, all my friends, and welcome to exercise number 60.
+
+2
+00:00:04,260 --> 00:00:10,020
+We are asked to write a function that insert notes after a given note in W Link at list.
+
+3
+00:00:10,300 --> 00:00:16,190
+So how to make a function that inserts notes before giving them note?
+
+4
+00:00:16,530 --> 00:00:24,990
+The user give us a note and we need to insert this note after a specific note he gives us.
+
+5
+00:00:25,890 --> 00:00:29,370
+So we issued the two parameter.
+
+6
+00:00:30,500 --> 00:00:38,330
+Their previous note that we are going to insert a new note after it and the data of the newly created
+
+7
+00:00:38,450 --> 00:00:45,050
+note we have seen in the previous videos that we have created the note of the double anchored list.
+
+8
+00:00:45,650 --> 00:00:54,140
+And here is the section of the lists and methods that we have created and every section and every method
+
+9
+00:00:54,140 --> 00:01:00,900
+contains its own exercise they know in exercise.
+
+10
+00:01:00,920 --> 00:01:04,180
+No, this is exercise no.16.
+
+11
+00:01:04,190 --> 00:01:18,500
+I will create public void insert insert after after this took into parameter the the previous note that
+
+12
+00:01:18,500 --> 00:01:26,480
+we are going to insert the data or the newly created note after it and end new date.
+
+13
+00:01:26,870 --> 00:01:32,180
+This is the new and note or the data of the new note check.
+
+14
+00:01:32,180 --> 00:01:36,140
+If they're given a previous note is not the first step.
+
+15
+00:01:37,280 --> 00:01:43,730
+Check if I am inserting like into an empty list.
+
+16
+00:01:45,010 --> 00:01:53,720
+Or any link in the list empty, no notes or I am inserting into are none found.
+
+17
+00:01:55,300 --> 00:01:55,720
+Note.
+
+18
+00:01:56,340 --> 00:01:56,710
+OK.
+
+19
+00:01:57,130 --> 00:02:05,180
+So I should be accurate by this, by providing a check if they're given proof.
+
+20
+00:02:05,560 --> 00:02:07,990
+No, there's not.
+
+21
+00:02:09,520 --> 00:02:10,660
+How to check that?
+
+22
+00:02:13,960 --> 00:02:23,770
+If previous note equal equal to none, then this is none.
+
+23
+00:02:24,700 --> 00:02:36,880
+And the system ducked out dirt print and that given that given
+
+24
+00:02:40,150 --> 00:02:40,760
+previous.
+
+25
+00:02:41,230 --> 00:02:43,620
+No, it is not.
+
+26
+00:02:44,890 --> 00:02:46,450
+And what to do?
+
+27
+00:02:46,780 --> 00:02:48,310
+We need to repair.
+
+28
+00:02:48,580 --> 00:02:56,590
+This is how we protect our algorithm from making anything unusual and making errors and exceptions.
+
+29
+00:02:56,710 --> 00:03:07,200
+OK, so second step is creating their note if it is found the previous note.
+
+30
+00:03:07,320 --> 00:03:14,180
+If we found it and it is not null, then we need to create this note after it.
+
+31
+00:03:14,200 --> 00:03:21,250
+How to do that the same way that we have done it before we create a new node band using the constructor
+
+32
+00:03:21,250 --> 00:03:30,310
+and you know, and we pass the new data that perimeter that we have inserted, the perimeter that we
+
+33
+00:03:30,310 --> 00:03:38,350
+have passed into the insert after method and we directly use it here in order to create a node with
+
+34
+00:03:38,350 --> 00:03:39,400
+this date.
+
+35
+00:03:40,510 --> 00:03:40,810
+OK.
+
+36
+00:03:41,020 --> 00:03:41,850
+It's very simple.
+
+37
+00:03:41,860 --> 00:03:54,610
+Till now, we are just creating the nodes now making the reference to the linking linked linkage so
+
+38
+00:03:54,640 --> 00:03:57,730
+that it's very important.
+
+39
+00:03:58,120 --> 00:04:04,960
+And this is the trick behind inserting after and inserting before methods.
+
+40
+00:04:05,290 --> 00:04:14,770
+You are asked these questions in order to see your and your ability to link the newly created nodes.
+
+41
+00:04:15,220 --> 00:04:21,280
+So in order to link any node we start in, we get the new node dot.
+
+42
+00:04:21,460 --> 00:04:25,720
+We are not interested in the date that we have done it.
+
+43
+00:04:26,050 --> 00:04:29,770
+We need to link it with the next and the previous.
+
+44
+00:04:30,160 --> 00:04:30,600
+OK.
+
+45
+00:04:31,090 --> 00:04:36,100
+We will start by the next equal brave node dot next.
+
+46
+00:04:36,430 --> 00:04:36,790
+OK.
+
+47
+00:04:37,210 --> 00:04:42,260
+The previous node equal dot next make at the new node.
+
+48
+00:04:42,280 --> 00:04:49,420
+Up next, we are just copying the code and the link of the previously created.
+
+49
+00:04:50,260 --> 00:04:56,770
+Let me let me demonstrate it very clearly.
+
+50
+00:04:56,940 --> 00:04:58,840
+You may be may get confused.
+
+51
+00:04:59,110 --> 00:05:00,310
+So don't worry.
+
+52
+00:05:01,450 --> 00:05:05,830
+So what we are doing here, we have this link, double link at least.
+
+53
+00:05:06,980 --> 00:05:08,480
+And these are the notes.
+
+54
+00:05:09,480 --> 00:05:09,950
+OK.
+
+55
+00:05:13,460 --> 00:05:16,910
+We are inserting a new note here.
+
+56
+00:05:17,840 --> 00:05:19,070
+This is new note.
+
+57
+00:05:20,790 --> 00:05:24,030
+We are inserting it after this.
+
+58
+00:05:25,210 --> 00:05:27,380
+This is called what it's called.
+
+59
+00:05:28,090 --> 00:05:32,530
+I'm inserting than you note between them after the one.
+
+60
+00:05:32,860 --> 00:05:41,740
+So what we need to do is to delete the linkage and make here.
+
+61
+00:05:43,190 --> 00:05:44,230
+Then next.
+
+62
+00:05:45,690 --> 00:05:55,200
+The next of this would be referring to the previous of this newly created note and then next of the
+
+63
+00:05:55,200 --> 00:05:57,450
+new note next of the new No.
+
+64
+00:05:57,600 --> 00:06:01,460
+So this would be the previous note, the next.
+
+65
+00:06:01,470 --> 00:06:05,190
+So it was then the previous note like this.
+
+66
+00:06:05,580 --> 00:06:09,270
+We need to copy this reference and put it here.
+
+67
+00:06:09,360 --> 00:06:17,010
+So this would be the newly created node would be a reference to the previous node next.
+
+68
+00:06:17,220 --> 00:06:23,400
+And we need to link this with the previous of it.
+
+69
+00:06:23,640 --> 00:06:32,580
+OK, so we are just copying the addresses, the references of the linkage and we are putting here,
+
+70
+00:06:32,880 --> 00:06:36,270
+where is the new node that we are creating?
+
+71
+00:06:36,900 --> 00:06:43,440
+So new node here Dot or the previous node?
+
+72
+00:06:43,980 --> 00:06:53,060
+Previous node now dot next equal to new nodes, we are referencing it to then, you know, OK?
+
+73
+00:06:54,720 --> 00:07:10,900
+And we need also to make new note that previous, not previous, equal to previous note, so the previous
+
+74
+00:07:10,950 --> 00:07:19,200
+of the new note, equal to the previous note that we are going to insert this data or the new note after
+
+75
+00:07:19,290 --> 00:07:19,710
+it.
+
+76
+00:07:19,800 --> 00:07:23,760
+So this is very simple and logical.
+
+77
+00:07:24,540 --> 00:07:29,500
+The first step is changing the previous of the new nodes.
+
+78
+00:07:29,520 --> 00:07:33,240
+Next note change the previous.
+
+79
+00:07:33,390 --> 00:07:41,940
+I will make it the same as here because we are making the linkage step linkage step we make for links.
+
+80
+00:07:42,480 --> 00:07:42,990
+Okay.
+
+81
+00:07:43,470 --> 00:07:50,570
+One for the previous and one for the next for each of the and newly created.
+
+82
+00:07:50,580 --> 00:07:50,850
+Yeah.
+
+83
+00:07:51,030 --> 00:07:59,340
+So if new node don't stop next does not equal to now if it is not the last one.
+
+84
+00:07:59,760 --> 00:08:09,120
+Then new note new node dot next door to pretty equal to new No.
+
+85
+00:08:09,660 --> 00:08:15,960
+OK, this is how we access and how we make the linkage step.
+
+86
+00:08:16,380 --> 00:08:16,940
+OK.
+
+87
+00:08:17,580 --> 00:08:25,950
+It's very important that we have covered these steps by creating a check.
+
+88
+00:08:25,950 --> 00:08:32,100
+If a given note is known, then creating the nodes and linking the linkage step.
+
+89
+00:08:32,160 --> 00:08:35,360
+This is a very important step and this is that context.
+
+90
+00:08:35,370 --> 00:08:42,990
+This is the important step of the this algorithm inserting after method.
+
+91
+00:08:43,350 --> 00:08:43,730
+OK.
+
+92
+00:08:47,580 --> 00:08:55,210
+No, since the linked list is typically represented by the head of it, we have to traverse the list
+
+93
+00:08:55,210 --> 00:09:03,420
+to end and then choose the next of the last note that new not OK if we are going to make a.
+
+94
+00:09:04,830 --> 00:09:15,120
+But if it is like the same step and this is inserting before or inserting after may be just the same
+
+95
+00:09:15,120 --> 00:09:17,220
+context, the same complexity.
+
+96
+00:09:17,520 --> 00:09:22,340
+But we will see how we can change this.
+
+97
+00:09:22,800 --> 00:09:23,300
+OK?
+
+98
+00:09:23,790 --> 00:09:25,880
+The linkage is that OK?
+
+99
+00:09:26,340 --> 00:09:26,640
+No.
+
+100
+00:09:27,730 --> 00:09:43,870
+You can test it, we can insert here the L L, the insert after I will make the doctor had I will create
+
+101
+00:09:43,880 --> 00:09:49,120
+the her and the after the hat, so I will insert 99.
+
+102
+00:09:49,700 --> 00:09:53,890
+Okay, let's see if I have inserted after the head.
+
+103
+00:09:54,580 --> 00:09:55,780
+Ninety nine.
+
+104
+00:09:57,970 --> 00:10:01,840
+OK, let me check this this here.
+
+105
+00:10:02,230 --> 00:10:03,370
+W. Link at best.
+
+106
+00:10:05,430 --> 00:10:10,980
+It is doubly linked to this.
+
+107
+00:10:16,060 --> 00:10:17,920
+This is for the Lincoln best.
+
+108
+00:10:20,770 --> 00:10:21,190
+OK.
+
+109
+00:10:21,620 --> 00:10:22,840
+That's Iran, and see.
+
+110
+00:10:29,020 --> 00:10:30,310
+Let's see.
+
+111
+00:10:31,630 --> 00:10:32,620
+And there we go.
+
+112
+00:10:33,580 --> 00:10:41,890
+Adding the new note printing in forward way one, this is the head and 99 has been inserted directly
+
+113
+00:10:41,890 --> 00:10:43,650
+after the hat.
+
+114
+00:10:43,900 --> 00:10:47,140
+So our method is working fine.

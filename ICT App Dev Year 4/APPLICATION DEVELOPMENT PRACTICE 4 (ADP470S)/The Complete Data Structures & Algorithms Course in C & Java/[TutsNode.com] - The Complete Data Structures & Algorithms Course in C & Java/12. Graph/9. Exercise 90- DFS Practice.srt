@@ -1,0 +1,307 @@
+1
+00:00:00,060 --> 00:00:07,200
+Let's see how the depth first search algorithms work with an example of undirected graph.
+
+2
+00:00:07,380 --> 00:00:12,600
+We have solved the exercise the previous exercises about the verdict to the crash.
+
+3
+00:00:12,630 --> 00:00:17,880
+Let's see how the depth first, the DFS works in another example.
+
+4
+00:00:18,000 --> 00:00:21,990
+We have used an own direct to the graph with five vertices.
+
+5
+00:00:22,110 --> 00:00:25,860
+So we are going to create further.
+
+6
+00:00:26,610 --> 00:00:28,040
+Vertices is here.
+
+7
+00:00:28,980 --> 00:00:29,400
+You're.
+
+8
+00:00:34,310 --> 00:00:47,630
+Zero, one, two, three and four zero is connected with two zero is connected to three zeros, connected
+
+9
+00:00:47,630 --> 00:00:48,260
+to one.
+
+10
+00:00:49,190 --> 00:00:53,400
+One connected to two and two connected to four.
+
+11
+00:00:54,200 --> 00:00:54,560
+No.
+
+12
+00:00:56,290 --> 00:01:01,420
+We have, as I told you, we have the visited.
+
+13
+00:01:03,620 --> 00:01:05,930
+And their stack.
+
+14
+00:01:07,850 --> 00:01:08,330
+OK.
+
+15
+00:01:10,400 --> 00:01:16,880
+If we start from the following the numerical order, we should start from zero.
+
+16
+00:01:17,450 --> 00:01:22,280
+Otherwise, you can start from any vertex if there is no condition.
+
+17
+00:01:22,430 --> 00:01:31,160
+If you said to you in the interview or that university exams that you have to follow the numerical order,
+
+18
+00:01:31,610 --> 00:01:33,980
+you should start from zero.
+
+19
+00:01:34,280 --> 00:01:34,810
+OK.
+
+20
+00:01:35,270 --> 00:01:38,000
+So in this case, we start from zero.
+
+21
+00:01:38,380 --> 00:01:38,750
+Now.
+
+22
+00:01:42,080 --> 00:01:42,550
+Zero.
+
+23
+00:01:43,680 --> 00:01:47,820
+What if we were all standing at zero?
+
+24
+00:01:48,150 --> 00:01:57,720
+What are the possible, what are the adjacent vertices is what are the possibility to move from zero?
+
+25
+00:01:58,230 --> 00:02:00,900
+We can visit one.
+
+26
+00:02:01,200 --> 00:02:05,020
+We can visit two and we can visit City.
+
+27
+00:02:05,520 --> 00:02:06,050
+OK.
+
+28
+00:02:06,540 --> 00:02:16,980
+But since we are using and following their depth first algorithm, so we are and the numerical order
+
+29
+00:02:17,640 --> 00:02:25,260
+dominates, so we are going to go through zero del one.
+
+30
+00:02:25,380 --> 00:02:32,670
+So we are passing to one since it is and then numerical order, so the visited ones.
+
+31
+00:02:33,120 --> 00:02:35,910
+So till now, we have visited the vertex.
+
+32
+00:02:36,720 --> 00:02:45,300
+Logically, we have visited zero because we started from it and one two three we have visited only one.
+
+33
+00:02:46,250 --> 00:02:46,750
+OK.
+
+34
+00:02:47,330 --> 00:02:56,380
+No one since zero has already visited, so we visit that number one instead.
+
+35
+00:02:57,110 --> 00:02:59,420
+No, we are on one.
+
+36
+00:03:00,560 --> 00:03:09,560
+The Stack Zero is connected to one zero, is connected to two and zero connected to three, but two
+
+37
+00:03:09,560 --> 00:03:11,360
+and the three are not visited.
+
+38
+00:03:11,450 --> 00:03:14,360
+So we've put them into the stack.
+
+39
+00:03:14,660 --> 00:03:17,400
+So here we have the stack.
+
+40
+00:03:18,170 --> 00:03:19,760
+See you at two and the three.
+
+41
+00:03:20,390 --> 00:03:28,420
+OK, Vertex two has that is has an unvisited adjacent vertex in is four.
+
+42
+00:03:28,700 --> 00:03:29,090
+OK.
+
+43
+00:03:29,510 --> 00:03:38,570
+So we add that to the top of the stack and visit it, since it is the visit, that one is due.
+
+44
+00:03:39,380 --> 00:03:46,910
+So we in the stack, we add it, we move from one to two.
+
+45
+00:03:47,240 --> 00:03:55,410
+Do we visit ED and we add it to the visitor numbers and the visited vertices?
+
+46
+00:03:55,910 --> 00:03:56,450
+OK.
+
+47
+00:03:56,810 --> 00:03:59,420
+We remove it from the stack.
+
+48
+00:04:00,020 --> 00:04:00,540
+OK.
+
+49
+00:04:00,920 --> 00:04:04,850
+Vertex two has the arm visited adjacent Vertex four.
+
+50
+00:04:05,120 --> 00:04:09,590
+So we add that to the top of the stack.
+
+51
+00:04:09,590 --> 00:04:12,140
+So at least two by four.
+
+52
+00:04:13,070 --> 00:04:13,600
+OK.
+
+53
+00:04:14,180 --> 00:04:16,880
+This is how we move like this?
+
+54
+00:04:17,670 --> 00:04:18,050
+No.
+
+55
+00:04:19,360 --> 00:04:28,100
+Vertex two has the unvisited adjacent Vertex four, so we add that to the top of the stack and visit
+
+56
+00:04:28,120 --> 00:04:28,540
+it.
+
+57
+00:04:28,900 --> 00:04:34,090
+OK, so we visit it, we go from two to four.
+
+58
+00:04:34,660 --> 00:04:35,260
+OK.
+
+59
+00:04:36,670 --> 00:04:45,580
+This is at the top of the stack, and we remove it from four for has any connection.
+
+60
+00:04:45,580 --> 00:04:45,900
+No.
+
+61
+00:04:46,370 --> 00:04:48,860
+So we remove it from the stack.
+
+62
+00:04:49,450 --> 00:04:59,280
+Till now, we still have in the Stack City, so we visit number three after we visit the last element
+
+63
+00:04:59,290 --> 00:04:59,710
+city.
+
+64
+00:05:00,100 --> 00:05:01,780
+It does not have.
+
+65
+00:05:02,380 --> 00:05:03,990
+Here is the three cell.
+
+66
+00:05:04,000 --> 00:05:10,360
+We visit it and we remove it from that stack after we visit the Element City.
+
+67
+00:05:10,660 --> 00:05:14,140
+It does not have any unvisited adjacent no cell.
+
+68
+00:05:14,140 --> 00:05:18,190
+We have completed their depth first search algorithm.
+
+69
+00:05:19,750 --> 00:05:28,600
+In terms of complexity, that depth first algorithm has a space, complexity and time complexity.
+
+70
+00:05:28,900 --> 00:05:33,070
+So that time complexity here, time complexity.
+
+71
+00:05:36,330 --> 00:05:48,210
+For the US is represented in forum of all two V plus e, where V is the number of nodes or vertices
+
+72
+00:05:48,210 --> 00:05:49,950
+is vertices is.
+
+73
+00:05:51,000 --> 00:05:58,860
+No, and he is the number of at just number of edges.
+
+74
+00:06:00,260 --> 00:06:00,720
+OK.
+
+75
+00:06:01,400 --> 00:06:05,990
+The space complexities, space complexity.
+
+76
+00:06:07,120 --> 00:06:17,650
+Is all due to fee where we as the number of number of vertices.
+
+77
+00:06:19,300 --> 00:06:25,830
+OK, so this is the time complexity and this is the space complexity for the.

@@ -1,0 +1,195 @@
+1
+00:00:00,120 --> 00:00:03,480
+Learn about removing an element in entity.
+
+2
+00:00:05,160 --> 00:00:07,800
+To remove the element 40 from an array.
+
+3
+00:00:08,780 --> 00:00:10,760
+First step, find 40.
+
+4
+00:00:11,090 --> 00:00:13,670
+The second step removed 40 from Andrei.
+
+5
+00:00:14,000 --> 00:00:16,790
+And the third step shift the rest of elements.
+
+6
+00:00:17,240 --> 00:00:20,330
+This is how we remove Element 40 from Andrei.
+
+7
+00:00:20,360 --> 00:00:28,790
+So the first step, if you if you're going to remove an element, we find the element.
+
+8
+00:00:28,820 --> 00:00:33,110
+Maybe the array is not containing this element, so we can't remove this.
+
+9
+00:00:33,530 --> 00:00:41,750
+The second step is removing the element, and the third step is shifting the rest of element because
+
+10
+00:00:41,750 --> 00:00:43,410
+we have an empty space.
+
+11
+00:00:44,000 --> 00:00:46,940
+Consider this array.
+
+12
+00:00:46,940 --> 00:00:52,580
+We have 10, 20, 30 and 40 and 50 at index.
+
+13
+00:00:53,420 --> 00:01:02,540
+First step is finding 40, so we are looking at 40 we have in the box for the iterator and searching
+
+14
+00:01:02,560 --> 00:01:04,850
+at 40 and we are searching for this.
+
+15
+00:01:04,850 --> 00:01:07,830
+Have a like an element 40.
+
+16
+00:01:08,220 --> 00:01:15,080
+OK, so we start comparing the elements, still finding the element at Index three.
+
+17
+00:01:15,500 --> 00:01:20,070
+So it's the fourth element at Index three containing 40.
+
+18
+00:01:20,090 --> 00:01:23,570
+So this is the element that we are going to remove.
+
+19
+00:01:24,110 --> 00:01:27,440
+This is the first step finding element 40.
+
+20
+00:01:28,280 --> 00:01:31,850
+The second step is removing 40.
+
+21
+00:01:32,450 --> 00:01:34,250
+We have removed 40.
+
+22
+00:01:35,140 --> 00:01:43,240
+The third step is shifting the rest of elements and removing the empty spaces.
+
+23
+00:01:43,570 --> 00:01:47,920
+This is the way how to remove an element from array.
+
+24
+00:01:49,090 --> 00:01:52,660
+Now consider removing an element in array.
+
+25
+00:01:52,720 --> 00:01:53,710
+This is the.
+
+26
+00:01:54,820 --> 00:02:01,960
+This is the ad that that the index and the algorithm, how it works.
+
+27
+00:02:02,110 --> 00:02:09,850
+This is the array and the coding from it to the left is how we remove an element in array.
+
+28
+00:02:11,330 --> 00:02:19,580
+So we have a for loop starting from equal to index at the index, where I need to remove that element.
+
+29
+00:02:19,940 --> 00:02:30,260
+And I less than size minus one and I plus plus so array at index I equal array index i +1.
+
+30
+00:02:30,290 --> 00:02:36,350
+This means that it will replace that for the next.
+
+31
+00:02:36,530 --> 00:02:42,500
+And that preceding and then next element with the current state.
+
+32
+00:02:42,590 --> 00:02:44,030
+This is how it works.
+
+33
+00:02:44,570 --> 00:02:47,960
+It will start and search for 40.
+
+34
+00:02:48,560 --> 00:02:49,160
+OK.
+
+35
+00:02:49,580 --> 00:02:54,140
+This is the iteration I three, I less than 40.
+
+36
+00:02:54,150 --> 00:02:54,600
+Yes.
+
+37
+00:02:54,620 --> 00:02:56,450
+So array at the three.
+
+38
+00:02:56,630 --> 00:02:58,430
+Equal array at four.
+
+39
+00:02:58,850 --> 00:03:07,940
+So if this were replaced, the Element Array Index, the three, this is the removing and switching
+
+40
+00:03:07,940 --> 00:03:14,150
+like replacing the element and index three with the element of index four.
+
+41
+00:03:14,640 --> 00:03:15,130
+OK.
+
+42
+00:03:15,680 --> 00:03:19,300
+And we remove that index by size.
+
+43
+00:03:19,310 --> 00:03:21,230
+My the last element.
+
+44
+00:03:21,230 --> 00:03:24,830
+The empty element with size minus minus.
+
+45
+00:03:25,430 --> 00:03:30,320
+And this is how we shrink that element in arrays.
+
+46
+00:03:31,480 --> 00:03:34,990
+The best case scenario is removing element at index.
+
+47
+00:03:36,510 --> 00:03:37,140
+Zero.
+
+48
+00:03:37,410 --> 00:03:41,010
+And the worst case is of an removing element at last.
+
+49
+00:03:41,860 --> 00:03:42,120
+And.

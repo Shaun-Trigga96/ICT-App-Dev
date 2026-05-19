@@ -1,0 +1,283 @@
+1
+00:00:00,210 --> 00:00:03,870
+Well, hello, my friends, and welcome to exercise number 12.
+
+2
+00:00:04,350 --> 00:00:09,030
+We are going to solve the time complexity of the function print high.
+
+3
+00:00:09,840 --> 00:00:22,950
+So in this function, we have print high taking into a parking meter that entré A and a B, and we have
+
+4
+00:00:23,010 --> 00:00:31,920
+three loops and they are nested and we are going to print high in that key loop.
+
+5
+00:00:32,730 --> 00:00:37,230
+I need from you to think about this algorithm.
+
+6
+00:00:39,490 --> 00:00:47,080
+Please post the video and write down the solution, try to solve this question because solving exercises
+
+7
+00:00:47,080 --> 00:00:48,130
+is very important.
+
+8
+00:00:50,670 --> 00:00:57,450
+So I think and I hope you get the correct questions answer.
+
+9
+00:00:59,040 --> 00:00:59,600
+We start.
+
+10
+00:01:01,930 --> 00:01:07,850
+The print high, so we don't care about the Hatter.
+
+11
+00:01:08,500 --> 00:01:10,690
+We take care about the loop here.
+
+12
+00:01:11,440 --> 00:01:14,380
+We have the first loop starting.
+
+13
+00:01:14,380 --> 00:01:24,160
+As I told you, we get the initial conditions that stopping condition and their behavior and how the
+
+14
+00:01:24,170 --> 00:01:27,610
+increment of that iteration works.
+
+15
+00:01:28,000 --> 00:01:35,740
+It is A-plus plus, so we are going to go through all the elements from zero to array a length.
+
+16
+00:01:35,900 --> 00:01:48,820
+OK, so the first loop, the outer loop will go through from all elements from zero to a I denote a
+
+17
+00:01:48,850 --> 00:01:50,920
+by the array a length.
+
+18
+00:01:51,180 --> 00:01:51,670
+OK.
+
+19
+00:01:53,000 --> 00:01:58,400
+And we are going to go through all the elements, so it is of a.
+
+20
+00:02:00,180 --> 00:02:04,620
+No, in the inner loop, inner loop.
+
+21
+00:02:05,900 --> 00:02:06,890
+It is here.
+
+22
+00:02:12,310 --> 00:02:21,550
+This will go through all elements from Jay Equal to zero to Jay to Jay less than be the length.
+
+23
+00:02:22,480 --> 00:02:29,950
+And the way of increment is G Plus Plus, okay, so B is the array, b the length.
+
+24
+00:02:30,340 --> 00:02:33,190
+We have solved this in the previous exercise.
+
+25
+00:02:33,940 --> 00:02:34,380
+OK.
+
+26
+00:02:34,540 --> 00:02:43,630
+And I told you the trick in that question and exercise number 11 is is understanding that array a that
+
+27
+00:02:43,630 --> 00:02:46,660
+length is different than array B, the length.
+
+28
+00:02:47,350 --> 00:02:47,800
+OK.
+
+29
+00:02:48,130 --> 00:02:52,300
+If they are equal, they would be of a square.
+
+30
+00:02:53,140 --> 00:02:53,470
+OK.
+
+31
+00:02:55,050 --> 00:02:58,770
+And we have here another loop.
+
+32
+00:03:00,130 --> 00:03:01,460
+Cold, OK.
+
+33
+00:03:01,780 --> 00:03:03,880
+This is the the loop.
+
+34
+00:03:04,160 --> 00:03:04,600
+OK.
+
+35
+00:03:06,580 --> 00:03:09,760
+It starts from K equal to zero.
+
+36
+00:03:11,840 --> 00:03:17,630
+To OK, less than 100, 100 thousand.
+
+37
+00:03:18,880 --> 00:03:21,520
+And the way of increment of gay is plus plus.
+
+38
+00:03:21,850 --> 00:03:35,500
+So it's going to loop through all the all the elements from zero to 1000 to 100000 loop or iteration.
+
+39
+00:03:36,930 --> 00:03:47,370
+And we are going to print it as of one, if we calculate how many times this high or this statement
+
+40
+00:03:47,370 --> 00:03:52,740
+would be executed and displaying high when we result in.
+
+41
+00:03:56,270 --> 00:03:58,610
+We start from one.
+
+42
+00:04:00,040 --> 00:04:07,240
+Times how many times this statement would be executed if we executed the 4K loop?
+
+43
+00:04:08,620 --> 00:04:09,910
+The 4K.
+
+44
+00:04:11,270 --> 00:04:13,920
+Times 100 times.
+
+45
+00:04:14,300 --> 00:04:14,690
+OK.
+
+46
+00:04:16,180 --> 00:04:24,910
+Times how many times the globe would be executed, it depends on the array, be length.
+
+47
+00:04:25,270 --> 00:04:35,590
+OK, so times b times how many times this J loop would be executed according to the eye condition,
+
+48
+00:04:35,920 --> 00:04:38,990
+and I will stop at a rate a good length.
+
+49
+00:04:39,190 --> 00:04:47,110
+So array edit length, it will go through from zero to a and it would be executed eight times.
+
+50
+00:04:47,350 --> 00:04:54,130
+OK, so the final result would be one thousand one hundred thousand.
+
+51
+00:04:55,700 --> 00:04:57,080
+B times A.
+
+52
+00:04:58,390 --> 00:04:59,650
+A high message.
+
+53
+00:05:00,580 --> 00:05:01,150
+OK.
+
+54
+00:05:02,460 --> 00:05:04,780
+Or displaying her, OK?
+
+55
+00:05:05,490 --> 00:05:06,150
+Therefore.
+
+56
+00:05:07,970 --> 00:05:19,550
+We have 100000 B times A if B equal to one and equal to one, it would be executed 100000 if be equal
+
+57
+00:05:19,970 --> 00:05:22,370
+to 10 and equal to one.
+
+58
+00:05:22,610 --> 00:05:24,950
+It would be executed one millionth time.
+
+59
+00:05:25,520 --> 00:05:40,440
+So we depend on executing this on the value of B and A but but this is a war on terror and in big own
+
+60
+00:05:40,450 --> 00:05:41,240
+notation.
+
+61
+00:05:41,450 --> 00:05:44,270
+We don't care about the constant.
+
+62
+00:05:44,930 --> 00:05:52,880
+We don't care about the constant that is is multiplied by the by the input, by the variable input.
+
+63
+00:05:53,390 --> 00:06:01,590
+The variable input here is the array, the length and array b the length, but 100000 is a constant.
+
+64
+00:06:02,390 --> 00:06:10,670
+And we know every time that it would be executed 100000 we could, since it is a high number, but it
+
+65
+00:06:10,670 --> 00:06:11,770
+is a constant.
+
+66
+00:06:11,780 --> 00:06:13,190
+We don't care about it.
+
+67
+00:06:14,090 --> 00:06:23,120
+We care about only studying B times a because this is the variable this is depends on the at.
+
+68
+00:06:23,310 --> 00:06:27,230
+They are a length and array b length.
+
+69
+00:06:27,720 --> 00:06:28,190
+OK.
+
+70
+00:06:28,520 --> 00:06:36,320
+Therefore, the final result and the solution would be all of a times B.
+
+71
+00:06:36,710 --> 00:06:37,930
+This is the time.

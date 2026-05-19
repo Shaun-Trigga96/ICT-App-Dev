@@ -1,0 +1,487 @@
+1
+00:00:00,210 --> 00:00:09,720
+After we have seen the hash table data structure, how it works and how it stores data, let's implement
+
+2
+00:00:09,720 --> 00:00:19,360
+the hash table and see, first of all, we will start by include SD, i o and include that SD.
+
+3
+00:00:19,800 --> 00:00:22,710
+Is the deal the edge?
+
+4
+00:00:24,450 --> 00:00:34,230
+We start by creating the structure called set it took into it have in the very variables, the key and
+
+5
+00:00:34,230 --> 00:00:39,930
+the date we have set that the key and the data are linked together.
+
+6
+00:00:41,630 --> 00:00:45,950
+We create an array capacity and size integers.
+
+7
+00:00:48,140 --> 00:00:53,360
+Know we will create a function called hash function.
+
+8
+00:00:53,990 --> 00:01:00,550
+It took into the parameter in key and returns a and end this end.
+
+9
+00:01:01,160 --> 00:01:05,330
+Well, this is the returning type of this function.
+
+10
+00:01:06,410 --> 00:01:09,470
+How what, what will return?
+
+11
+00:01:09,470 --> 00:01:13,610
+It will return the key modulo capacity.
+
+12
+00:01:13,910 --> 00:01:14,340
+OK.
+
+13
+00:01:14,510 --> 00:01:16,670
+This is the hash function.
+
+14
+00:01:16,680 --> 00:01:21,020
+This is the algorithm that we have created in this function.
+
+15
+00:01:21,390 --> 00:01:22,760
+OK, it's very simple.
+
+16
+00:01:24,260 --> 00:01:31,760
+We are just getting that key that is best in the perimeter, and we made that modular operation and
+
+17
+00:01:31,760 --> 00:01:40,670
+therefore that capacity now would create another function called Check Prime.
+
+18
+00:01:41,810 --> 00:01:42,380
+It is.
+
+19
+00:01:43,070 --> 00:01:45,350
+It is containing an integer.
+
+20
+00:01:47,050 --> 00:01:50,140
+As a part of me, they're called RN and.
+
+21
+00:01:51,190 --> 00:02:00,070
+We start by creating and I it's returning type is in the show, so we need to return an integer if an
+
+22
+00:02:00,070 --> 00:02:05,110
+equal equal to one or an equal equal to zero, then return zero.
+
+23
+00:02:05,920 --> 00:02:06,480
+OK.
+
+24
+00:02:07,000 --> 00:02:08,920
+We are checking if it is appropriate.
+
+25
+00:02:08,930 --> 00:02:12,960
+So we pass an integer here and we check if there's a problem.
+
+26
+00:02:14,270 --> 00:02:17,260
+Now if we need to make.
+
+27
+00:02:19,430 --> 00:02:29,750
+A loop that starts by from equal to do and I less than and over to which start dividing this number
+
+28
+00:02:29,750 --> 00:02:38,810
+in order to find its if it is a prime or not, if and module you are equal equal to zero, then returns
+
+29
+00:02:38,810 --> 00:02:39,110
+zero.
+
+30
+00:02:39,110 --> 00:02:40,460
+So it is visible.
+
+31
+00:02:40,550 --> 00:02:42,770
+So it is not an upright.
+
+32
+00:02:43,490 --> 00:02:52,760
+Therefore, if this this loop is not returning anything, and if this condition is not returning anything,
+
+33
+00:02:52,760 --> 00:02:53,860
+then return one.
+
+34
+00:02:53,930 --> 00:02:56,330
+So it is a prior number.
+
+35
+00:02:59,800 --> 00:03:09,460
+We need to create another function called Get Prime Passing and Model two and Model two, equal equal
+
+36
+00:03:09,460 --> 00:03:17,680
+to two equals equal to zero then and plus plus so increase and by one white check prime.
+
+37
+00:03:18,580 --> 00:03:19,800
+This is that the.
+
+38
+00:03:21,080 --> 00:03:23,480
+The function that we have created before.
+
+39
+00:03:25,730 --> 00:03:27,080
+And we check the prime.
+
+40
+00:03:28,220 --> 00:03:36,710
+If it is, while it does not equal a prime then and equal and that old and plus two and then return
+
+41
+00:03:36,710 --> 00:03:37,130
+and.
+
+42
+00:03:39,100 --> 00:03:46,120
+We create another function called initialize array initialized in each array.
+
+43
+00:03:47,850 --> 00:03:51,760
+Capacity equal to get prime capacity.
+
+44
+00:03:52,260 --> 00:03:59,700
+And this is the function that we have created before and to create an array equal, the structure set
+
+45
+00:04:00,480 --> 00:04:03,560
+that we also we have created the structure set.
+
+46
+00:04:04,200 --> 00:04:10,020
+We are creating an object from it, but in sea there is no object.
+
+47
+00:04:10,530 --> 00:04:13,770
+Remember, like thinking about it as an object.
+
+48
+00:04:14,370 --> 00:04:22,380
+So we are reserving them melodic memory allocation, creating a structure like the set up and we make
+
+49
+00:04:22,380 --> 00:04:27,840
+a loop for it into equal to zero I less than capacity.
+
+50
+00:04:28,110 --> 00:04:32,940
+I + + then initialized the array array.
+
+51
+00:04:32,940 --> 00:04:42,570
+At index, I took key equal to zero and array and equal data equal to zero, then make this array equal.
+
+52
+00:04:42,810 --> 00:04:48,780
+All the numbers inside equal, all the values are equal to zero.
+
+53
+00:04:50,850 --> 00:05:02,670
+Create another method called Insert Insert will give the key and and data as parking meters and we start
+
+54
+00:05:03,420 --> 00:05:12,110
+and index, we create a number or sorry if valuable of type and called index hash function.
+
+55
+00:05:12,120 --> 00:05:14,340
+We make hashing for that key.
+
+56
+00:05:14,760 --> 00:05:18,090
+So we have created a hash function.
+
+57
+00:05:18,270 --> 00:05:25,020
+We have we have created a hash value since the hash function that we have created before.
+
+58
+00:05:26,970 --> 00:05:30,300
+It will return a key modular capacity.
+
+59
+00:05:30,300 --> 00:05:34,710
+So we are returning an integer.
+
+60
+00:05:35,250 --> 00:05:35,770
+OK.
+
+61
+00:05:36,330 --> 00:05:36,720
+So.
+
+62
+00:05:38,370 --> 00:05:41,250
+This will return and index.
+
+63
+00:05:43,650 --> 00:05:45,150
+After hashing key.
+
+64
+00:05:47,240 --> 00:05:55,700
+If array appendix, the data equal equal to zero, then it is an empty, so stored that information.
+
+65
+00:05:57,080 --> 00:06:09,230
+Bypassing that array at index index, the key equal to equal to key and array at index index, the data
+
+66
+00:06:09,230 --> 00:06:18,800
+equal to data, we are inserting the data and the key and increased size by one, therefore print f
+
+67
+00:06:18,980 --> 00:06:22,850
+key it has been inserted successfully.
+
+68
+00:06:23,390 --> 00:06:23,740
+OK.
+
+69
+00:06:25,740 --> 00:06:35,120
+Otherwise else, if at index index, that key equal, equal to key, there exist another data then as
+
+70
+00:06:35,130 --> 00:06:38,600
+the index index does data equal to data.
+
+71
+00:06:38,610 --> 00:06:50,460
+So this is empty slot, this is occupied the slot and this will make a collision occurred when we have
+
+72
+00:06:51,030 --> 00:06:53,220
+that data equal to date.
+
+73
+00:06:54,690 --> 00:07:03,480
+Now the remove element, this is the method that we will make in order to remove the elements from that
+
+74
+00:07:03,570 --> 00:07:04,260
+hash table.
+
+75
+00:07:05,310 --> 00:07:13,380
+We will start by making the hashing for that and the key that that is best and we start it inside the
+
+76
+00:07:13,390 --> 00:07:14,850
+variable called index.
+
+77
+00:07:15,240 --> 00:07:16,710
+We start checking by.
+
+78
+00:07:17,010 --> 00:07:22,440
+If early at index index, the data are equal equal to zero, then the key does not exist.
+
+79
+00:07:22,830 --> 00:07:23,310
+OK.
+
+80
+00:07:25,020 --> 00:07:30,090
+Else are they at index index 30 equal to zero?
+
+81
+00:07:30,240 --> 00:07:32,280
+Make it as zero.
+
+82
+00:07:32,520 --> 00:07:35,280
+And make that data and the key equal to zero.
+
+83
+00:07:35,550 --> 00:07:37,560
+And decrease the size by one.
+
+84
+00:07:38,280 --> 00:07:40,950
+Therefore, the key has been removed.
+
+85
+00:07:42,980 --> 00:07:46,850
+We will continue by making another display function.
+
+86
+00:07:49,570 --> 00:07:57,880
+Start from I, I equal to zero I less than capacity if array index I, the data are equal, equal to
+
+87
+00:07:57,880 --> 00:08:03,430
+zero, then print as vague this so print all the elements.
+
+88
+00:08:03,880 --> 00:08:09,010
+Otherwise we put the key and the value date, OK?
+
+89
+00:08:11,140 --> 00:08:20,230
+No, another that another method of type, returning type and size of hash table it for the target would
+
+90
+00:08:20,250 --> 00:08:21,760
+return their size.
+
+91
+00:08:22,750 --> 00:08:23,250
+OK.
+
+92
+00:08:23,440 --> 00:08:24,820
+It's very simple.
+
+93
+00:08:25,210 --> 00:08:30,550
+Now let's go to the main function and see the algorithm.
+
+94
+00:08:32,710 --> 00:08:41,090
+We will create and measures the choice that key data and and and see equal to zero.
+
+95
+00:08:41,680 --> 00:08:46,450
+And we call the function in shade the say that we have created here.
+
+96
+00:08:48,310 --> 00:08:52,900
+We start by making a do while loop, so this is that do.
+
+97
+00:08:53,080 --> 00:08:54,930
+And this is the wide loop.
+
+98
+00:08:56,080 --> 00:08:59,190
+This would be executed that the first day.
+
+99
+00:08:59,680 --> 00:09:01,630
+Then we check the condition.
+
+100
+00:09:01,630 --> 00:09:05,080
+If it is true, then we are going to.
+
+101
+00:09:06,390 --> 00:09:09,870
+Go back and execute that, do what?
+
+102
+00:09:13,080 --> 00:09:15,900
+Print of this is printing, just printing.
+
+103
+00:09:17,600 --> 00:09:21,190
+Switch there is a switch if we have a choice, he.
+
+104
+00:09:22,430 --> 00:09:25,460
+If the choice variable here is one.
+
+105
+00:09:29,320 --> 00:09:33,490
+We get the key from the user, we get the data from the user.
+
+106
+00:09:33,550 --> 00:09:41,170
+We call the method insert that we have created here and we have inserted it successfully.
+
+107
+00:09:41,410 --> 00:09:45,400
+If it is not, we have seen this in many cases.
+
+108
+00:09:46,460 --> 00:09:54,470
+Discussed that if there's equal equal to zero, then we can insert it into correctly, and if array
+
+109
+00:09:54,470 --> 00:09:59,640
+at index index the equal equal to the key, then insert it.
+
+110
+00:10:00,230 --> 00:10:05,450
+Otherwise, it will make and collision occurred and does not insert anything.
+
+111
+00:10:07,760 --> 00:10:11,000
+Case number two Enter the key two to delete.
+
+112
+00:10:11,210 --> 00:10:16,430
+We can make deleting, so scan f we can delete the function.
+
+113
+00:10:16,430 --> 00:10:22,940
+So we called that remove element function so we can delete the key and the vector.
+
+114
+00:10:23,900 --> 00:10:32,330
+The third case is an equal to size of hash table, so we are getting the hash table size and the printing
+
+115
+00:10:32,330 --> 00:10:36,410
+at the fourth case as this play.
+
+116
+00:10:39,350 --> 00:10:47,870
+Display, we are just displaying the hash table and default print at invalid input, so the user will
+
+117
+00:10:48,230 --> 00:10:51,770
+build enter that number of their choice.
+
+118
+00:10:51,790 --> 00:10:55,070
+If it one, then it will execute the insertion.
+
+119
+00:10:56,050 --> 00:10:59,090
+If it is, do, it will remove that element.
+
+120
+00:10:59,390 --> 00:11:03,730
+Three, it will return the size and if it's four, it will display that.
+
+121
+00:11:05,570 --> 00:11:16,610
+The tape was sequel equal to what I want from you to write this code inside your C compiler and the
+
+122
+00:11:16,610 --> 00:11:20,300
+check and play with the codes and order to understand.

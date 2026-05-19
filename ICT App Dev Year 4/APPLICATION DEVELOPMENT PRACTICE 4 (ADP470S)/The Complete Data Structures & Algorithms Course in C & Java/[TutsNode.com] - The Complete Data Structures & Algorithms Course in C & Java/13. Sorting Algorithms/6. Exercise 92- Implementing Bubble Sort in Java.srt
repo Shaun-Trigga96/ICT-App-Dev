@@ -1,0 +1,499 @@
+1
+00:00:00,060 --> 00:00:07,230
+My friends and welcome to exercise number ninety two in this exercise, we are going to implement and
+
+2
+00:00:07,230 --> 00:00:10,380
+create the bubble sort algorithm and Jeff.
+
+3
+00:00:10,740 --> 00:00:18,630
+So let's create here in the source folder a new Java class I will call as bubble.
+
+4
+00:00:19,320 --> 00:00:23,430
+Sort it and I will click Enter.
+
+5
+00:00:24,360 --> 00:00:32,280
+I will create a new package here in order to define the algorithms inside it.
+
+6
+00:00:32,760 --> 00:00:37,920
+I will move the bubbles sort to this algorithm.
+
+7
+00:00:39,040 --> 00:00:45,620
+OK, so all the algorithms is here and the data structures are here that we have created in the previous
+
+8
+00:00:45,620 --> 00:00:46,110
+space.
+
+9
+00:00:46,890 --> 00:00:54,480
+By the way, you can get all the source codes from the from every exercise on the resources folder underneath
+
+10
+00:00:54,930 --> 00:00:59,960
+every exercise or every less so in an hour to get them there.
+
+11
+00:01:00,630 --> 00:01:01,140
+Of course.
+
+12
+00:01:01,350 --> 00:01:01,710
+OK.
+
+13
+00:01:03,150 --> 00:01:04,830
+This is the class.
+
+14
+00:01:05,100 --> 00:01:08,830
+This is the Java program for implementation of the of bubbles.
+
+15
+00:01:09,840 --> 00:01:14,130
+We start by creating a new method public
+
+16
+00:01:16,590 --> 00:01:17,220
+public
+
+17
+00:01:19,770 --> 00:01:25,830
+void, and that is called bubble sorting.
+
+18
+00:01:26,880 --> 00:01:29,100
+This method bubbles sorting.
+
+19
+00:01:29,610 --> 00:01:33,510
+It took into the parameters, the array that we are going to sort.
+
+20
+00:01:33,830 --> 00:01:34,920
+OK, it's very simple.
+
+21
+00:01:35,980 --> 00:01:44,970
+Now, as we see in the previous pages and the animation and animation video that we need to start detecting
+
+22
+00:01:45,480 --> 00:01:54,330
+and start comparing the two numbers that the a number that index, I enter a number at the index I +1
+
+23
+00:01:54,690 --> 00:02:04,200
+and we see if it is greater than we will swi or less, then we will swab or or the definition of anything.
+
+24
+00:02:04,620 --> 00:02:10,980
+This will be depending on whether we start from the left or started from the right.
+
+25
+00:02:11,370 --> 00:02:11,850
+OK.
+
+26
+00:02:12,840 --> 00:02:19,980
+In this example, we will start from the right and start comparing the two numbers and then we start
+
+27
+00:02:19,980 --> 00:02:27,960
+reserving that and consider the last one is as fully arranged, fully sorted.
+
+28
+00:02:28,470 --> 00:02:28,830
+OK.
+
+29
+00:02:29,130 --> 00:02:38,160
+So we will start and an equal in size, equal
+
+30
+00:02:41,040 --> 00:02:43,260
+at the thought length.
+
+31
+00:02:44,280 --> 00:02:58,470
+Let's define the length of their four and I are equal to zero I less than the size of the array minus
+
+32
+00:02:58,470 --> 00:02:58,780
+one.
+
+33
+00:02:58,800 --> 00:03:01,980
+This is the algorithm that tells us to do that.
+
+34
+00:03:02,430 --> 00:03:04,860
+And I thus plus.
+
+35
+00:03:05,680 --> 00:03:06,120
+OK.
+
+36
+00:03:08,310 --> 00:03:11,130
+We need to go through all the elements of the array.
+
+37
+00:03:11,940 --> 00:03:23,370
+Also, we need to create a new nested loop that goes through all the elements of the array until and
+
+38
+00:03:23,370 --> 00:03:32,040
+not all the elements, except that elements that they are on the left that we have fully sorted them
+
+39
+00:03:32,430 --> 00:03:33,140
+in order to.
+
+40
+00:03:33,420 --> 00:03:51,240
+To do that, we need to create four in J equal to zero g less than and minus one or size minus one minus
+
+41
+00:03:51,600 --> 00:03:52,110
+I.
+
+42
+00:03:52,380 --> 00:04:02,480
+So I is that elements, the number of elements at this index at element number of elements that they
+
+43
+00:04:02,490 --> 00:04:04,110
+are fully sorted.
+
+44
+00:04:04,860 --> 00:04:12,180
+They are considered, according to I, the same because every, every iteration in the outer loop,
+
+45
+00:04:12,180 --> 00:04:18,210
+we are going to reserve two fully sorted a number of I.
+
+46
+00:04:18,510 --> 00:04:20,790
+So consider the first iteration.
+
+47
+00:04:20,790 --> 00:04:23,940
+There have no at zero iteration.
+
+48
+00:04:23,940 --> 00:04:29,550
+We don't have any reserve, so are equal to zeros and the same size equal to zero.
+
+49
+00:04:29,560 --> 00:04:31,830
+So J will go through all the elements.
+
+50
+00:04:32,310 --> 00:04:36,900
+The after the first iteration, we have reserved one element.
+
+51
+00:04:37,080 --> 00:04:40,410
+We have kept one element as fully sorted.
+
+52
+00:04:40,740 --> 00:04:43,800
+So I would be one and so on.
+
+53
+00:04:44,280 --> 00:04:44,820
+OK.
+
+54
+00:04:45,150 --> 00:04:52,020
+So this is why we are being menacing and decrement this size by minus one minus.
+
+55
+00:04:52,620 --> 00:04:59,100
+This is the trick behind that, the bubble sort of algorithm.
+
+56
+00:04:59,430 --> 00:04:59,790
+OK.
+
+57
+00:04:59,970 --> 00:05:01,230
+Pay attention for this.
+
+58
+00:05:03,530 --> 00:05:03,840
+No.
+
+59
+00:05:04,930 --> 00:05:19,910
+If we need to check if the array at index is greater than at the Appendix J.
+
+60
+00:05:19,970 --> 00:05:23,340
++1, so we need to swear at them.
+
+61
+00:05:24,490 --> 00:05:34,090
+OK, so the right is greater than the left that the right and the J.
+
+62
+00:05:35,610 --> 00:05:41,190
+Or the left is greater than the right, so we need to swear to them, swear.
+
+63
+00:05:42,810 --> 00:05:50,640
+We are starting from the end, from the right and we are moving, OK, swab.
+
+64
+00:05:51,710 --> 00:05:52,530
+That's Natalie.
+
+65
+00:05:55,340 --> 00:06:02,150
+If they attend the jail plus one and.
+
+66
+00:06:05,770 --> 00:06:08,550
+And that's the Appendix J.
+
+67
+00:06:09,080 --> 00:06:16,150
+OK, so ain't them equal to every at index chain
+
+68
+00:06:19,750 --> 00:06:33,830
+array at Index J Equal FDA at Index J Plus one array at Index J +1.
+
+69
+00:06:33,850 --> 00:06:43,660
+This is the algorithm of behind behind the swapping and we have seen this in previous videos like we
+
+70
+00:06:43,660 --> 00:06:51,640
+have swept them into a temporary variable and X consideration is X and G plus.
+
+71
+00:06:51,640 --> 00:07:00,100
+One knows why we store X equal to Y and Y equal to that them dump that was equal to that X.
+
+72
+00:07:00,130 --> 00:07:02,170
+This is the swapping algorithm, OK?
+
+73
+00:07:02,770 --> 00:07:07,960
+And we have swept them if J is greater than J plus one.
+
+74
+00:07:10,160 --> 00:07:11,950
+No, let's make.
+
+75
+00:07:13,130 --> 00:07:19,890
+A print at a print method that prints stirring so public void.
+
+76
+00:07:20,900 --> 00:07:32,580
+Print Saturday, it took Saturday, so we need to sort it first and then we pass it as.
+
+77
+00:07:37,950 --> 00:07:39,180
+Keys says.
+
+78
+00:07:43,140 --> 00:07:46,740
+For Loop Sport, if.
+
+79
+00:07:47,560 --> 00:07:48,730
+This is for this.
+
+80
+00:07:49,120 --> 00:07:53,020
+This is what of bad and I mean, only one part.
+
+81
+00:07:54,070 --> 00:07:59,740
+OK, so I need to print today that is best for me.
+
+82
+00:08:00,070 --> 00:08:04,930
+So in size, equal in length.
+
+83
+00:08:04,930 --> 00:08:10,930
+We have seen this in the previous figures many times, though, so I will make it fast.
+
+84
+00:08:13,000 --> 00:08:16,300
+I less than I
+
+85
+00:08:18,880 --> 00:08:19,350
+suppose.
+
+86
+00:08:21,040 --> 00:08:30,280
+Plus plus I would print system of the print everyday.
+
+87
+00:08:30,520 --> 00:08:34,090
+Appendix I NASA's Space
+
+88
+00:08:39,280 --> 00:08:41,440
+System, sort of
+
+89
+00:08:44,230 --> 00:08:46,300
+the current plan.
+
+90
+00:08:47,650 --> 00:08:50,380
+Everything OK, this is.
+
+91
+00:08:51,530 --> 00:08:58,130
+For the printing that we know, let's make the driver method to test the above code.
+
+92
+00:08:58,700 --> 00:09:00,200
+We start by making the
+
+93
+00:09:02,810 --> 00:09:05,690
+static void main method.
+
+94
+00:09:06,250 --> 00:09:09,050
+It starts drink args.
+
+95
+00:09:13,310 --> 00:09:26,900
+We start by creating a an instance of bubbles, sort of a support vehicle to new bubbles or object.
+
+96
+00:09:26,900 --> 00:09:29,090
+And we start by creating Int
+
+97
+00:09:31,880 --> 00:09:32,570
+Array
+
+98
+00:09:35,420 --> 00:09:36,080
+equal.
+
+99
+00:09:36,680 --> 00:09:37,960
+I will start making
+
+100
+00:09:40,760 --> 00:09:42,680
+the first.
+
+101
+00:09:47,730 --> 00:09:49,410
+OK, this is good.
+
+102
+00:09:50,070 --> 00:09:56,940
+Now, in order to sort them restart my bubbles, sort, we have two methods printer ray and Salt that
+
+103
+00:09:56,940 --> 00:10:02,760
+Ray I will start by bubble sorting and I reverse that Ray.
+
+104
+00:10:03,960 --> 00:10:14,640
+And after sorting, I will print system to print and after sorting,
+
+105
+00:10:19,170 --> 00:10:24,280
+we make bubbles or the print array that's print that.
+
+106
+00:10:26,010 --> 00:10:30,720
+OK, so this is our program that we have created.
+
+107
+00:10:30,960 --> 00:10:39,210
+This is the algorithm that I need to use from you to write it down and consider it as very important
+
+108
+00:10:39,540 --> 00:10:50,430
+to understand two tricks inside the nested loops that starts from high to size minus one and the outer
+
+109
+00:10:50,430 --> 00:10:55,980
+glue, and the second one is less than size minus one minus.
+
+110
+00:10:56,430 --> 00:10:57,510
+This is the trick.
+
+111
+00:10:57,840 --> 00:10:58,230
+OK.
+
+112
+00:10:59,760 --> 00:11:07,890
+And the second trip is swapping the swapping algorithm if a rate at index is greater than that index
+
+113
+00:11:08,190 --> 00:11:08,790
++1.
+
+114
+00:11:09,060 --> 00:11:09,380
+OK.
+
+115
+00:11:09,870 --> 00:11:12,300
+This is starting from left to right.
+
+116
+00:11:12,540 --> 00:11:13,710
+Let's run and see.
+
+117
+00:11:14,850 --> 00:11:18,120
+Bubbles sort of start making it.
+
+118
+00:11:19,470 --> 00:11:24,340
+This is the array that we have 99.
+
+119
+00:11:24,960 --> 00:11:29,900
+And this is the sort that after using a bubble sort.
+
+120
+00:11:30,570 --> 00:11:34,550
+OK, so this is very important.
+
+121
+00:11:34,560 --> 00:11:43,590
+We have implemented their bubbles, sort you correctly, and the above functions always run to end to
+
+122
+00:11:43,590 --> 00:11:47,940
+power too, because we have nested loops.
+
+123
+00:11:48,120 --> 00:11:48,530
+OK?
+
+124
+00:11:49,410 --> 00:11:55,650
+It can be optimized by stopping the algorithm if inner loop didn't cause any swap.
+
+125
+00:11:55,950 --> 00:12:01,950
+So how to make an optimized version of the bubbles sort.

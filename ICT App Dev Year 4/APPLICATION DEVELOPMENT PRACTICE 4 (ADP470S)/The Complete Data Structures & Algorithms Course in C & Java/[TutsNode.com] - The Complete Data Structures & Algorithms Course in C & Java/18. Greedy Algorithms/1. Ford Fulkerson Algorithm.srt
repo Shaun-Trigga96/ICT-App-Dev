@@ -1,0 +1,291 @@
+1
+00:00:00,690 --> 00:00:02,940
+Ford Focus on algorithm.
+
+2
+00:00:04,080 --> 00:00:10,410
+For Ferguson, algorithm is a gritty approach for calculating the maximum possible flow in a network
+
+3
+00:00:10,410 --> 00:00:11,140
+choreograph.
+
+4
+00:00:11,880 --> 00:00:20,110
+A term flow network is used to describe a network of vertices and edges with a source s and seemed to
+
+5
+00:00:20,750 --> 00:00:31,340
+each vertex except s and T can receive and send an equal amount of stuff through it, as can only send
+
+6
+00:00:31,340 --> 00:00:33,770
+and they can only receive stuff.
+
+7
+00:00:34,970 --> 00:00:42,380
+We can visualize their understanding of the algorithm using a flow of liquid inside the network of pipes
+
+8
+00:00:42,680 --> 00:00:44,060
+of different capacities.
+
+9
+00:00:46,390 --> 00:00:49,780
+Each pipe has a certain capacity of liquid.
+
+10
+00:00:50,020 --> 00:00:52,390
+It can transfer at an instance.
+
+11
+00:00:53,020 --> 00:01:00,850
+So for this algorithm, we are going to find how much liquid can be flowed from source to the sink at
+
+12
+00:01:00,850 --> 00:01:03,100
+an instance using the network.
+
+13
+00:01:03,970 --> 00:01:06,940
+Consider the following exercise.
+
+14
+00:01:09,880 --> 00:01:19,200
+Says the following exercise that we can understand it, so the Flow Network Graph asks to t.
+
+15
+00:01:19,480 --> 00:01:21,290
+So the source and death sink.
+
+16
+00:01:23,800 --> 00:01:25,420
+A, B, C and D.
+
+17
+00:01:26,840 --> 00:01:28,940
+The flow is a zero.
+
+18
+00:01:30,910 --> 00:01:36,640
+From B to D is that flow is zero and the total capacity is two.
+
+19
+00:01:37,090 --> 00:01:46,340
+So here presenting the capacity as to and slash and the flow here is at the zero.
+
+20
+00:01:46,360 --> 00:01:56,230
+So from B to T till now there is no flow and the total flow capacity from B to T is two and otherwise.
+
+21
+00:01:56,620 --> 00:02:09,070
+And other other sources like A to B, B to D to be in the same or the same thing that flow and the capacity
+
+22
+00:02:09,070 --> 00:02:11,980
+flow and the capacity flow and the capacity so.
+
+23
+00:02:13,690 --> 00:02:15,490
+The algorithm follows.
+
+24
+00:02:16,530 --> 00:02:25,140
+The initial initialized the flow in all the edges to zero, this is what we have learned in this picture.
+
+25
+00:02:25,920 --> 00:02:33,480
+We enclose the flow in all edges is zero why there is an augmenting path between the source and the
+
+26
+00:02:33,480 --> 00:02:36,810
+sink at the path to the flow and update.
+
+27
+00:02:36,810 --> 00:02:37,270
+That is it.
+
+28
+00:02:37,550 --> 00:02:39,290
+That is the jewel graph.
+
+29
+00:02:39,990 --> 00:02:46,050
+We will learn in the following example how to update and how to add the path to the flow.
+
+30
+00:02:46,660 --> 00:02:55,290
+OK, we can also consider a reverse path if required, because if we want, if we don't consider them,
+
+31
+00:02:55,290 --> 00:02:58,590
+we may never find a maximum flow.
+
+32
+00:02:59,340 --> 00:03:06,510
+Note that if the kapatid capacity for any edge is full, then that path cannot be used.
+
+33
+00:03:07,440 --> 00:03:11,370
+The above concepts can be understood to be there following exercise.
+
+34
+00:03:11,670 --> 00:03:15,960
+So let's learn about the Ford Focus and algorithm in a good example.
+
+35
+00:03:16,410 --> 00:03:17,910
+Please write these down.
+
+36
+00:03:17,940 --> 00:03:24,240
+These examples are very important, and we will try to implement them in C and in Java.
+
+37
+00:03:24,510 --> 00:03:24,900
+So.
+
+38
+00:03:26,790 --> 00:03:30,570
+The flow for of all edges is zero at the beginning.
+
+39
+00:03:30,690 --> 00:03:33,420
+This is the first step initialize them to zero.
+
+40
+00:03:34,230 --> 00:03:41,730
+We need to go from as to T and to see them in the maximum flow that we can pass from as to.
+
+41
+00:03:43,140 --> 00:03:53,880
+Select any arbitrary path from S30 in this step, we have selected to pass as a B and C, the minimum
+
+42
+00:03:53,880 --> 00:04:02,520
+capacity among the three edges is to do so because the minimum, the minimum flow here between eight.
+
+43
+00:04:03,830 --> 00:04:13,010
+Minimum get eight, nine and two, which is two, so we add, do we update the graph here?
+
+44
+00:04:13,370 --> 00:04:17,560
+We update the floor with two two overnight and two over.
+
+45
+00:04:18,650 --> 00:04:19,040
+So.
+
+46
+00:04:20,240 --> 00:04:21,230
+Two over two.
+
+47
+00:04:21,380 --> 00:04:31,400
+As for the minimum capacity, among the three edges is to be to T based on this update, the flow capacity
+
+48
+00:04:31,400 --> 00:04:32,810
+for each breath.
+
+49
+00:04:33,830 --> 00:04:45,440
+Now select another pass from S to T, so we could pass through as B C D, the minimum capacity among
+
+50
+00:04:45,440 --> 00:04:50,660
+these edges is three, three, four and five.
+
+51
+00:04:50,900 --> 00:04:52,700
+So we select three.
+
+52
+00:04:53,300 --> 00:05:00,060
+We update their capacities of S, the C and the path with three.
+
+53
+00:05:00,080 --> 00:05:02,720
+So three over three, three over four.
+
+54
+00:05:02,960 --> 00:05:03,920
+Three over five.
+
+55
+00:05:05,680 --> 00:05:06,460
+This is full.
+
+56
+00:05:08,260 --> 00:05:09,790
+And this is full.
+
+57
+00:05:11,080 --> 00:05:11,440
+Now.
+
+58
+00:05:13,700 --> 00:05:17,930
+Let's consider the reverse reverse path.
+
+59
+00:05:18,410 --> 00:05:19,550
+B D.
+
+60
+00:05:19,790 --> 00:05:30,920
+This is the reverse path we can go reverse selecting the path as a b, the C D, the minimum residual
+
+61
+00:05:31,550 --> 00:05:40,130
+capacity among them is the C, which is why because three four minus three is one.
+
+62
+00:05:40,370 --> 00:05:44,410
+So we add one to all of these data.
+
+63
+00:05:44,450 --> 00:05:49,910
+So three over eight, three over nine, we have one over seven.
+
+64
+00:05:49,910 --> 00:05:54,140
+This is the dotted line and four over four becomes four.
+
+65
+00:05:54,200 --> 00:05:55,490
+So this fall?
+
+66
+00:05:55,880 --> 00:05:57,750
+This is four and this is four.
+
+67
+00:05:59,740 --> 00:06:06,370
+The capacity, the capacity for forward and reverse passes are considered separately.
+
+68
+00:06:06,820 --> 00:06:11,470
+So adding all the flows that we have at the first, which is to.
+
+69
+00:06:12,710 --> 00:06:14,840
+And the second one is three.
+
+70
+00:06:16,170 --> 00:06:22,080
+And the last one, which is one, it becomes six.
+
+71
+00:06:22,200 --> 00:06:28,340
+So the maximum possible flow on the flow network is six.
+
+72
+00:06:28,920 --> 00:06:36,510
+This is Ford Focus, an algorithm that we have created now that we have learned.
+
+73
+00:06:36,540 --> 00:06:42,120
+Now let's move to Ford Focus on implementation in C compiler and next.

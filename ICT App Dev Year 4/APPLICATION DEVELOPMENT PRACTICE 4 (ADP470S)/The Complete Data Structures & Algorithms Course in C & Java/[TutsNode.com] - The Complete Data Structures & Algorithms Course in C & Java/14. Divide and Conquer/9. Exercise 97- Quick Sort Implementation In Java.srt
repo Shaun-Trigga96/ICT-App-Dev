@@ -1,0 +1,543 @@
+1
+00:00:00,300 --> 00:00:05,160
+Well, hello, my friends, and welcome to exercise number ninety seven in this exercise, we are going
+
+2
+00:00:05,160 --> 00:00:11,040
+to implement and create that algorithm quick sort and Jeff.
+
+3
+00:00:11,340 --> 00:00:19,230
+So for that, we go to this our secret folder in our project and algorithms.
+
+4
+00:00:19,350 --> 00:00:25,560
+I will create Java class, so-called quick sort.
+
+5
+00:00:26,490 --> 00:00:33,630
+By the way, you can download all of these source codes that we have created before in the previous
+
+6
+00:00:33,630 --> 00:00:40,080
+exercises under the Resources folder and that every exercise.
+
+7
+00:00:40,280 --> 00:00:41,250
+OK, whatever.
+
+8
+00:00:41,730 --> 00:00:47,460
+So this is that quick sort of class that we are going to work with.
+
+9
+00:00:47,760 --> 00:00:57,240
+So first of all, we need to create a function for swapping the elements, so swapping their elements.
+
+10
+00:00:57,570 --> 00:01:03,840
+I will create public static void swap function.
+
+11
+00:01:04,290 --> 00:01:10,360
+It took into the parameter, the array that we are going to switch its elements.
+
+12
+00:01:10,400 --> 00:01:17,700
+So the first index is I and the first the second element is Jason, where are we going to swap that
+
+13
+00:01:17,700 --> 00:01:25,060
+elements at index with the elements of the with the element of that index?
+
+14
+00:01:25,860 --> 00:01:35,220
+We are getting this and this phases of the array elements and we are going to swap these values.
+
+15
+00:01:35,490 --> 00:01:37,380
+So in them.
+
+16
+00:01:37,860 --> 00:01:41,760
+Afraid that we have created many times in the previous videos.
+
+17
+00:01:42,810 --> 00:01:45,660
+It stores a temporary variable.
+
+18
+00:01:46,050 --> 00:01:56,560
+That value of that index eye and array at index and now becomes equal to array took the value of that.
+
+19
+00:01:57,000 --> 00:02:04,290
+And next J and the Array and Index J now becomes equal to that.
+
+20
+00:02:05,010 --> 00:02:08,670
+This way, we have swept that to add ons.
+
+21
+00:02:10,530 --> 00:02:20,970
+The second step is here, the second step is a function that takes last element as pivot place is the
+
+22
+00:02:20,980 --> 00:02:29,550
+pivot element at its correct position in sort of a and the place is all smaller, smaller than the pivot
+
+23
+00:02:29,910 --> 00:02:34,800
+to the left of the pivot and all greater elements to the right of the pivot.
+
+24
+00:02:34,830 --> 00:02:42,220
+This is that this is a part of of this algorithm that we saw.
+
+25
+00:02:42,270 --> 00:02:48,600
+So we need to make two functions the part the chin and that a quick sword method.
+
+26
+00:02:49,020 --> 00:02:57,120
+This part, the chin will help us to divide the smaller elements from the pivot to the left and the
+
+27
+00:02:57,120 --> 00:03:00,960
+greater elements of the pivot to the right.
+
+28
+00:03:01,050 --> 00:03:01,550
+OK.
+
+29
+00:03:02,190 --> 00:03:03,360
+To the right of the pivot.
+
+30
+00:03:03,630 --> 00:03:04,140
+OK.
+
+31
+00:03:04,170 --> 00:03:07,800
+So this is the function called Partridge.
+
+32
+00:03:08,400 --> 00:03:12,570
+So as I told you, this function will text element aspect.
+
+33
+00:03:13,380 --> 00:03:23,880
+For that, I will create a public static int it returns a variable of type and called part.
+
+34
+00:03:23,880 --> 00:03:33,280
+The chin and a A are the end, low and end.
+
+35
+00:03:34,170 --> 00:03:36,000
+OK, now.
+
+36
+00:03:37,520 --> 00:03:47,420
+We will create the element, pivot and pivot equal to array at index high.
+
+37
+00:03:47,990 --> 00:03:57,650
+We have learned in the previous videos that we took that most dried element of the array as a pivot.
+
+38
+00:03:58,010 --> 00:04:09,410
+OK, you can take a random pivot, the random element, OK, but for for for like standardizing our
+
+39
+00:04:09,410 --> 00:04:17,240
+algorithm and making it very, very simple, we took that pivot as the most tried element of that.
+
+40
+00:04:17,300 --> 00:04:17,770
+Every.
+
+41
+00:04:18,470 --> 00:04:19,000
+OK.
+
+42
+00:04:19,490 --> 00:04:31,670
+We start by making a falou start from age equal to low and less, then stops at less than or equal to
+
+43
+00:04:31,670 --> 00:04:38,920
+high, reaching the end minus one because the last element is the pivot that we have to get.
+
+44
+00:04:39,200 --> 00:04:48,110
+And the J Plus, plus what we need to do to check if the current element is smaller than that pivot.
+
+45
+00:04:48,110 --> 00:04:58,610
+If current element is smaller than the pivot, that pivot, OK?
+
+46
+00:04:59,030 --> 00:05:07,700
+So if are they at Index J less, then a pivot pivot.
+
+47
+00:05:08,000 --> 00:05:18,710
+So make and increment index of the smaller element ie plus plus and then call the method here, which
+
+48
+00:05:18,710 --> 00:05:34,100
+is here we have best int i equal to low minus one low minus one, the index of the smaller element and
+
+49
+00:05:34,100 --> 00:05:38,840
+indicates the right position of the pivot sound so far.
+
+50
+00:05:39,380 --> 00:05:44,210
+OK, so i plus plus then swap call the method swap.
+
+51
+00:05:44,680 --> 00:05:48,410
+We passed the error a r and I and J.
+
+52
+00:05:48,620 --> 00:05:49,040
+OK.
+
+53
+00:05:49,550 --> 00:05:50,150
+This is.
+
+54
+00:05:53,520 --> 00:06:02,770
+This is their index of small, smaller element.
+
+55
+00:06:05,310 --> 00:06:13,680
+OK, and indicates the right position of the pivot found so far, and we have called this method sweeping
+
+56
+00:06:13,680 --> 00:06:14,000
+it.
+
+57
+00:06:15,030 --> 00:06:26,130
+OK, now we need to call the method swab again in order to swab the elements of my last one and with
+
+58
+00:06:26,280 --> 00:06:27,180
+the high.
+
+59
+00:06:27,730 --> 00:06:34,810
+OK, and then returning that I +1 I plus one.
+
+60
+00:06:37,200 --> 00:06:37,740
+OK.
+
+61
+00:06:38,010 --> 00:06:39,510
+This is very simple.
+
+62
+00:06:39,510 --> 00:06:50,280
+We have created and a method that they use the last element as the pivot and places the pivot element
+
+63
+00:06:50,280 --> 00:06:58,380
+to its correct position inserted the array and the place is all the smaller and all the smaller smaller.
+
+64
+00:06:58,380 --> 00:07:06,870
+Then they pivot to the left of the pivot and all the grades or the greater of then their pivot to the
+
+65
+00:07:07,260 --> 00:07:08,400
+right of it.
+
+66
+00:07:08,670 --> 00:07:16,020
+OK, now the main function that will implement the quick sort is here.
+
+67
+00:07:16,170 --> 00:07:29,010
+So the public static void, quick sorting I was quoted something to to differentiate it from the class
+
+68
+00:07:29,010 --> 00:07:39,060
+name and a a r and low and high.
+
+69
+00:07:42,120 --> 00:07:42,740
+OK.
+
+70
+00:07:43,800 --> 00:07:57,540
+If they are checking if low, low, less than high, then make a by IS partitioning index.
+
+71
+00:07:58,140 --> 00:08:02,220
+And are they index B is now at the right place?
+
+72
+00:08:02,400 --> 00:08:11,670
+I will create an integer B by a partition called the method a R and low and high.
+
+73
+00:08:11,700 --> 00:08:14,700
+These are their indices.
+
+74
+00:08:16,410 --> 00:08:18,390
+This will partition the pie.
+
+75
+00:08:19,050 --> 00:08:21,900
+Why is the partitioning index OK?
+
+76
+00:08:21,990 --> 00:08:31,380
+So I will make a comment here by is there for the tuning index?
+
+77
+00:08:32,230 --> 00:08:43,680
+OK, now separately, sort elements before the partitioning and after partitioning I set to you quick
+
+78
+00:08:43,680 --> 00:08:48,630
+sort algorithm is one of the divide and conquer algorithms.
+
+79
+00:08:48,690 --> 00:08:55,170
+So following that, divide and conquer algorithms use recursion to make this sort.
+
+80
+00:08:55,800 --> 00:09:03,760
+But here there is a trick that we need to do sort of the left substrate and the right summary.
+
+81
+00:09:03,900 --> 00:09:08,700
+For that, I will call that quick sorting algorithm.
+
+82
+00:09:09,690 --> 00:09:10,890
+This is the recursion
+
+83
+00:09:14,220 --> 00:09:24,720
+quick sorting algorithm will be a method will be called the first time at low and five minus one.
+
+84
+00:09:27,750 --> 00:09:33,050
+And the second time quick sorting algorithm will be called again.
+
+85
+00:09:33,060 --> 00:09:37,410
+And but this time is by +1 and high.
+
+86
+00:09:37,800 --> 00:09:38,400
+OK.
+
+87
+00:09:38,970 --> 00:09:44,760
+This is the low and the first time we make it quick sorting for the left.
+
+88
+00:09:44,760 --> 00:09:51,320
+SUMMARY And this time we will make a quick sorting for that right somebody.
+
+89
+00:09:51,900 --> 00:09:59,040
+And we will add them later on by joining them because they have reached the single app.
+
+90
+00:09:59,400 --> 00:10:09,630
+Now, in order to print at bay, I will call the method three four, but then think of that very public
+
+91
+00:10:10,290 --> 00:10:10,920
+void.
+
+92
+00:10:12,390 --> 00:10:18,300
+Brent, then they it will start in here.
+
+93
+00:10:19,320 --> 00:10:22,080
+They are on and size.
+
+94
+00:10:23,870 --> 00:10:30,860
+We can make it like this for and equal to zero I
+
+95
+00:10:34,080 --> 00:10:37,560
+I look that we can make.
+
+96
+00:10:38,220 --> 00:10:41,010
+This is in C we can in Java.
+
+97
+00:10:41,010 --> 00:10:50,310
+We can get the addresses directly by making this array and order size length.
+
+98
+00:10:52,120 --> 00:10:55,390
+And I plus plus,
+
+99
+00:10:58,540 --> 00:11:01,180
+we look through all the elements to print them.
+
+100
+00:11:07,860 --> 00:11:19,950
+They are and I last space system out that prime alarm.
+
+101
+00:11:22,090 --> 00:11:29,500
+This is for printing, they're not the driver code in Java will be a method of public static void main
+
+102
+00:11:30,130 --> 00:11:31,750
+static game.
+
+103
+00:11:39,150 --> 00:11:40,980
+Strange, they called
+
+104
+00:11:44,370 --> 00:11:56,190
+and after a year are equal to that we are going to sort of let me.
+
+105
+00:12:03,470 --> 00:12:04,170
+OK.
+
+106
+00:12:08,660 --> 00:12:11,270
+We call the method quick sorting.
+
+107
+00:12:11,660 --> 00:12:20,360
+We passed that, Ray, the First Amendment, but then the zero, the low and the high is an oversized
+
+108
+00:12:20,360 --> 00:12:27,650
+minus one, which is a are the length minus one
+
+109
+00:12:30,890 --> 00:12:39,440
+system that allowed the brain alarm so that every.
+
+110
+00:12:43,530 --> 00:12:45,850
+But in the Adam brand.
+
+111
+00:12:46,890 --> 00:12:48,810
+This is the method called print.
+
+112
+00:12:57,130 --> 00:12:59,500
+Public static, I would make static.
+
+113
+00:13:03,620 --> 00:13:07,580
+I didn't think print out a
+
+114
+00:13:11,210 --> 00:13:15,680
+print of a hopes that's happening.
+
+115
+00:13:15,740 --> 00:13:17,660
+This is static.
+
+116
+00:13:18,080 --> 00:13:18,430
+Sorry.
+
+117
+00:13:20,250 --> 00:13:20,690
+Static.
+
+118
+00:13:21,640 --> 00:13:23,740
+Print out they we passed.
+
+119
+00:13:23,920 --> 00:13:26,350
+They are right.
+
+120
+00:13:27,550 --> 00:13:33,100
+OK, now let's around and see our quick sort algorithm in chief.
+
+121
+00:13:34,720 --> 00:13:39,010
+And there we go, this is the sorted array, and this is the past.
+
+122
+00:13:39,730 --> 00:13:43,870
+So we have sorted this correctly and in quick.
+
+123
+00:13:43,870 --> 00:13:53,800
+So by the way, the algorithm complexity of that time complexity of it is in the best case.
+
+124
+00:13:54,460 --> 00:14:14,200
+Worst case would be analog and also to analog and and in the worst case would be oh to and squish.
+
+125
+00:14:14,740 --> 00:14:15,310
+OK.
+
+126
+00:14:15,850 --> 00:14:18,600
+And power too.
+
+127
+00:14:19,090 --> 00:14:19,390
+OK.
+
+128
+00:14:19,840 --> 00:14:23,740
+This is that time complexity for this quick sorting.
+
+129
+00:14:26,350 --> 00:14:29,460
+By the way, you can practice this.
+
+130
+00:14:29,470 --> 00:14:32,170
+I want from you to practice this code.
+
+131
+00:14:32,630 --> 00:14:41,500
+Dude, I did just start testing it to make it changed the way that it is making like ascending, descending,
+
+132
+00:14:41,500 --> 00:14:45,400
+starting from high to low, low, from to high and so on.
+
+133
+00:14:45,400 --> 00:14:52,300
+So play with this code in order to understand it and read write them down in your copy book.
+
+134
+00:14:52,600 --> 00:14:55,330
+And I want from you to practice them.
+
+135
+00:14:55,330 --> 00:15:04,050
+Well, because quick sort is one of them most and the frequently asked questions in the universe at
+
+136
+00:15:04,090 --> 00:15:05,680
+the exams and that.

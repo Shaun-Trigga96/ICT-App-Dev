@@ -1,0 +1,347 @@
+1
+00:00:00,120 --> 00:00:05,610
+After we have learned about the kestrels algorithm, now let's implement it and see.
+
+2
+00:00:07,790 --> 00:00:14,060
+We start by defining that void, this Castro's method that took into the two meter.
+
+3
+00:00:17,180 --> 00:00:18,050
+Two there a.
+
+4
+00:00:19,240 --> 00:00:25,130
+And crash type and gold, the graph maximum and maximum.
+
+5
+00:00:25,150 --> 00:00:27,310
+These are the length.
+
+6
+00:00:28,980 --> 00:00:42,600
+Of the of the dimensions and and and start, we start by making the cost and the distance the cost is
+
+7
+00:00:42,600 --> 00:00:51,720
+to the at a distance is one the FDA and predecessor with the same maximum maximum maximum value, which
+
+8
+00:00:51,720 --> 00:00:53,580
+is defined as than before.
+
+9
+00:00:53,820 --> 00:00:55,740
+OK, so.
+
+10
+00:00:58,090 --> 00:01:09,640
+Creating a and we create the visited man at rig count a valuable met them men minimum distance and then
+
+11
+00:01:09,640 --> 00:01:12,250
+next, not I and variables.
+
+12
+00:01:13,060 --> 00:01:19,690
+We start recreating the coast metrics since we are dealing with to the hourly, we need to use that
+
+13
+00:01:19,930 --> 00:01:21,370
+nested loop.
+
+14
+00:01:21,820 --> 00:01:29,650
+I and J, and we start checking for graph equal to zero, then cost equal to infinity.
+
+15
+00:01:29,660 --> 00:01:33,070
+We start updating all the values equal to infinite.
+
+16
+00:01:33,550 --> 00:01:38,890
+Otherwise we make the cost index in the graph index.
+
+17
+00:01:38,890 --> 00:01:41,320
+I and G No.
+
+18
+00:01:43,580 --> 00:01:50,630
+Four, I equal to zero I less than an hour plus plus we start by making this and updating the distance
+
+19
+00:01:50,630 --> 00:01:54,440
+and index are equal to cost at start at the index.
+
+20
+00:01:54,980 --> 00:01:56,390
+So this is the cost.
+
+21
+00:01:57,050 --> 00:02:03,590
+This is the cost of ad start, which is the start that we have and need to pass.
+
+22
+00:02:03,920 --> 00:02:13,730
+So if the first element that we have seen it in the first animation that a is the first and the element
+
+23
+00:02:13,730 --> 00:02:16,610
+and its cost to reach A is zero.
+
+24
+00:02:16,760 --> 00:02:19,130
+So the initial start is zero.
+
+25
+00:02:19,130 --> 00:02:26,060
+So we we pass here zero, which is the variable value of the stock.
+
+26
+00:02:26,780 --> 00:02:28,430
+If it is, do we best do?
+
+27
+00:02:29,180 --> 00:02:31,670
+So the start is being used here.
+
+28
+00:02:33,560 --> 00:02:33,940
+No.
+
+29
+00:02:34,280 --> 00:02:41,390
+And we use the predecessor at index equal to start and visit index equal to zero.
+
+30
+00:02:41,930 --> 00:02:46,610
+The distance at the start is equal to zero, then visit the start.
+
+31
+00:02:46,610 --> 00:02:51,320
+At then the start is equal to one and the count equal to one.
+
+32
+00:02:51,920 --> 00:02:52,340
+So
+
+33
+00:02:55,400 --> 00:02:59,510
+we start by checking while countless then and minus one.
+
+34
+00:02:59,510 --> 00:03:07,280
+The minimum distance is equal to Infinity says for checking the minimum distance if the minimum distance
+
+35
+00:03:07,760 --> 00:03:12,920
+at index is less than the minimum distance and it's not visited.
+
+36
+00:03:12,930 --> 00:03:20,870
+So this is the very important usage of a visit that I would check if we have visited this method, this
+
+37
+00:03:21,230 --> 00:03:22,340
+element or not.
+
+38
+00:03:22,360 --> 00:03:30,830
+So if we go from A to B and B and we have C here and see it connected to B.
+
+39
+00:03:32,620 --> 00:03:43,090
+If we have moved from A to B and now moved from A to C and C has C connected with B and connected with
+
+40
+00:03:43,090 --> 00:03:53,770
+the in order to not allow that graph to flow from sea to B again, we put B and mark it as a visit.
+
+41
+00:03:53,950 --> 00:03:55,750
+So this is the usage of physics.
+
+42
+00:03:57,610 --> 00:04:03,700
+In this case, we are collecting and we are comparing that to expressions.
+
+43
+00:04:03,730 --> 00:04:10,900
+If they are true here and true here, then when we continue otherwise it is not applicable.
+
+44
+00:04:11,620 --> 00:04:20,770
+We are checking if the distance is the minimum and we it does not the visit that the previous the hour
+
+45
+00:04:20,770 --> 00:04:22,390
+this element previously.
+
+46
+00:04:22,960 --> 00:04:29,170
+No, the minimum distance is updated to distance Appendix II and the next node equal to high.
+
+47
+00:04:31,740 --> 00:04:40,890
+Andrew TCEQ visited that index next, or no is equal to one no thought, oh equal to zero I less than
+
+48
+00:04:40,890 --> 00:04:50,280
+an and I plus plus a visit that is not if it is not visited, we use that checking here.
+
+49
+00:04:50,580 --> 00:04:59,040
+So please concentrate with me now we check for the visit that that then next note next note equal to
+
+50
+00:04:59,040 --> 00:05:08,490
+one, we check for eye equal to zero eyelids then and eye plus plus we start by checking if it does
+
+51
+00:05:08,490 --> 00:05:16,500
+not visit and if it is the minimum distance plus cost at the next note.
+
+52
+00:05:16,650 --> 00:05:19,290
+At Index I, this is the cost to the array.
+
+53
+00:05:19,470 --> 00:05:26,520
+Having the first and exact next note and the second index is I less than the distance at index I.
+
+54
+00:05:26,610 --> 00:05:31,470
+So you see guys, this is the trick behind the Dish Orchestra's algorithm.
+
+55
+00:05:32,970 --> 00:05:38,430
+Then said the distance equal to at the next, equal to the minimum distance, plus the cost.
+
+56
+00:05:38,790 --> 00:05:40,110
+This is the addition here.
+
+57
+00:05:40,110 --> 00:05:47,730
+We can add the addition to the cost with the minimum distance and predecessor at the next equal to the
+
+58
+00:05:47,730 --> 00:05:53,280
+next note and count plus plus now printing the distance.
+
+59
+00:05:53,310 --> 00:05:54,180
+It's very simple.
+
+60
+00:05:54,180 --> 00:05:59,850
+We are printing that Appendix II and we have made that look no.
+
+61
+00:06:02,190 --> 00:06:11,880
+Let's start by making this program works by making Intergraph at maximum maximum I and you and equal
+
+62
+00:06:11,880 --> 00:06:12,390
+to seven.
+
+63
+00:06:12,690 --> 00:06:19,560
+We start by filling that graph and creating the elements from zero to zero is equal to zero from zero
+
+64
+00:06:19,560 --> 00:06:21,120
+to one is equal to zero.
+
+65
+00:06:21,780 --> 00:06:23,880
+There is no connection between zero and zero.
+
+66
+00:06:23,880 --> 00:06:25,800
+There is no connection between zero and one.
+
+67
+00:06:26,130 --> 00:06:33,390
+Connection between zero and two is presented because one and the discourse is one, and the cost to
+
+68
+00:06:33,480 --> 00:06:35,310
+reach zero is zero.
+
+69
+00:06:35,820 --> 00:06:37,620
+OK, and so on.
+
+70
+00:06:37,950 --> 00:06:42,570
+This is that I want from you to try to draw this graph.
+
+71
+00:06:42,720 --> 00:06:44,820
+How it would be.
+
+72
+00:06:46,200 --> 00:06:47,430
+In the final result.
+
+73
+00:06:47,730 --> 00:06:48,240
+OK.
+
+74
+00:06:48,270 --> 00:06:55,860
+So please post the video and think about how, what, how we can draw this graph and what these represent.
+
+75
+00:06:56,940 --> 00:06:59,370
+OK, I'm waiting for your solutions.
+
+76
+00:06:59,880 --> 00:07:03,310
+We put you equal to zero and we called that method.
+
+77
+00:07:03,760 --> 00:07:12,570
+The Shastra, we passed the graph and you this would be finding them at shortest distance in the graph.
+
+78
+00:07:13,490 --> 00:07:23,690
+So this is the kestrels algorithm, and see, I want from you to draw the graph and put the way the
+
+79
+00:07:24,530 --> 00:07:31,390
+cost you're like from moving from here to here, from A to B or from one to two.
+
+80
+00:07:31,640 --> 00:07:35,750
+How what is the cost and what is the initial state of that element?
+
+81
+00:07:36,300 --> 00:07:36,770
+Okay.
+
+82
+00:07:37,070 --> 00:07:41,120
+So I'm I think your solution in the comments below.
+
+83
+00:07:41,420 --> 00:07:43,790
+If you need any help, I am ready.
+
+84
+00:07:43,820 --> 00:07:46,450
+So please don't hesitate.
+
+85
+00:07:46,460 --> 00:07:47,910
+Please don't be shy.
+
+86
+00:07:47,930 --> 00:07:50,780
+Ask your questions in the comments below, and I'm ready.
+
+87
+00:07:51,230 --> 00:07:54,440
+So let's move to that Java.

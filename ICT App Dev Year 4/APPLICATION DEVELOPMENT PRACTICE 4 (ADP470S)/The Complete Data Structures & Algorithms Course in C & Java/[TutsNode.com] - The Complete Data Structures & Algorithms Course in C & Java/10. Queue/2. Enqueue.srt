@@ -1,0 +1,263 @@
+1
+00:00:00,510 --> 00:00:04,740
+Adding items in queue is known as in queue.
+
+2
+00:00:05,040 --> 00:00:14,250
+So consider this queue, this empty Q and these elements one, two and three in order to add element
+
+3
+00:00:14,250 --> 00:00:16,980
+one inside the HQ inside the queue.
+
+4
+00:00:17,010 --> 00:00:25,470
+We call the method in queue and pass that data number one, so we pass the value of the element that
+
+5
+00:00:25,470 --> 00:00:27,750
+we are going to insert inside the queue.
+
+6
+00:00:28,140 --> 00:00:33,690
+So in Q1, it will insert element one inside the queue.
+
+7
+00:00:34,650 --> 00:00:44,100
+In Q2, it will add the queue number two and in Q3 it will add to the queue number three.
+
+8
+00:00:44,700 --> 00:00:50,030
+Let's see that code in C the fine size three.
+
+9
+00:00:50,040 --> 00:00:54,450
+We are going to create a queue, an array.
+
+10
+00:00:54,510 --> 00:00:57,680
+So remember you is an array also.
+
+11
+00:00:59,200 --> 00:01:07,390
+And size array it size the same size and into four aren't equal to zero, and in three are equal to
+
+12
+00:01:07,390 --> 00:01:07,660
+zero.
+
+13
+00:01:07,840 --> 00:01:10,090
+We have created two variables.
+
+14
+00:01:13,530 --> 00:01:19,350
+Front and rear, and they are at indexer, void in queue.
+
+15
+00:01:19,800 --> 00:01:29,630
+It took into meter that value of the data that we are going to insert inside a free or equal equal to
+
+16
+00:01:29,640 --> 00:01:31,980
+size, then the queue is full.
+
+17
+00:01:32,900 --> 00:01:41,180
+OK, if we have moved that ear into their size and we have checked that, that is equal to size, then
+
+18
+00:01:41,180 --> 00:01:42,000
+that's useful.
+
+19
+00:01:42,770 --> 00:01:53,660
+Otherwise, it will create a new element at a rate of index three here equal to Vall, and we increase
+
+20
+00:01:53,660 --> 00:01:54,860
+it here by one.
+
+21
+00:01:54,950 --> 00:01:58,580
+So how to do how this works?
+
+22
+00:01:59,980 --> 00:02:12,550
+Consider we have a queue, this queue is about, and it is formed of an array of size defined as three.
+
+23
+00:02:14,140 --> 00:02:14,690
+OK.
+
+24
+00:02:15,340 --> 00:02:19,870
+And now we are going to insert data inside it.
+
+25
+00:02:20,320 --> 00:02:20,690
+OK.
+
+26
+00:02:20,710 --> 00:02:22,150
+This is an empty array.
+
+27
+00:02:22,150 --> 00:02:23,590
+It's an empty queue.
+
+28
+00:02:24,130 --> 00:02:28,600
+Remember a queue and the stack based on a an array?
+
+29
+00:02:29,180 --> 00:02:29,610
+OK.
+
+30
+00:02:30,550 --> 00:02:33,100
+You can make a stack with link, at least.
+
+31
+00:02:34,130 --> 00:02:36,380
+And you can make a cue with it and list.
+
+32
+00:02:36,860 --> 00:02:42,620
+But till now, we we we need to make this using that array.
+
+33
+00:02:43,670 --> 00:02:47,360
+So this queue formed of three cells.
+
+34
+00:02:48,110 --> 00:02:52,400
+Size equal to three have eight in the zero array index.
+
+35
+00:02:52,400 --> 00:02:54,470
+One in the array at index two.
+
+36
+00:02:55,070 --> 00:02:59,090
+We have created two integers the front and rear.
+
+37
+00:02:59,600 --> 00:03:03,050
+They are pointing at index zero.
+
+38
+00:03:03,680 --> 00:03:11,930
+If I called them method in queue and passed 100, it will check if they're equal equal to size.
+
+39
+00:03:12,290 --> 00:03:13,850
+Rear is equal to zero.
+
+40
+00:03:14,180 --> 00:03:16,070
+And the size is equal to three.
+
+41
+00:03:16,460 --> 00:03:19,760
+So this will not be the first.
+
+42
+00:03:20,030 --> 00:03:26,000
+If condition is not execute, it will execute the else part.
+
+43
+00:03:26,120 --> 00:03:31,700
+So array at index three or make it equal to that.
+
+44
+00:03:32,060 --> 00:03:36,950
+So array at index zero make it equal to 100.
+
+45
+00:03:37,190 --> 00:03:38,600
+This is the.
+
+46
+00:03:40,070 --> 00:03:46,440
+The code and the real plus plus increase the rear by one.
+
+47
+00:03:47,190 --> 00:03:47,730
+OK.
+
+48
+00:03:48,270 --> 00:03:55,920
+This is their algorithm that is behind the NQ method inside the queue.
+
+49
+00:03:56,700 --> 00:03:59,700
+If I call the method in queue to 200.
+
+50
+00:04:01,080 --> 00:04:05,550
+Again, it will check a freer, equal equal to size.
+
+51
+00:04:06,030 --> 00:04:11,460
+No rear is equal to one and size is equal to three.
+
+52
+00:04:11,700 --> 00:04:22,110
+So we are not we are not going to execute the if part we are going to execute the as part as part tell
+
+53
+00:04:22,110 --> 00:04:28,710
+us to make their array at index three, which is one now is equal to van.
+
+54
+00:04:29,130 --> 00:04:37,260
+So put 200 inside this index and increase the rear plus a glass.
+
+55
+00:04:37,530 --> 00:04:40,770
+So move the rear to one plus one.
+
+56
+00:04:41,730 --> 00:04:48,090
+If I call the method in queue 300, I will check if they're equal to size.
+
+57
+00:04:48,120 --> 00:04:50,580
+No two is not equal to three.
+
+58
+00:04:51,030 --> 00:04:58,950
+Then put array at Index three or at index two is equal to 300.
+
+59
+00:04:59,460 --> 00:05:02,550
+Then move rear plus one.
+
+60
+00:05:03,270 --> 00:05:06,030
+Now, rear indicates an empty.
+
+61
+00:05:07,280 --> 00:05:09,590
+Position or equal to size?
+
+62
+00:05:09,980 --> 00:05:16,040
+If I call now in Q400, it will check if rear equal to size.
+
+63
+00:05:16,220 --> 00:05:16,850
+Yes.
+
+64
+00:05:17,270 --> 00:05:20,810
+So rear is three and the size is three.
+
+65
+00:05:21,020 --> 00:05:27,960
+Then if I call the Inc you after this, it will put into print for us.
+
+66
+00:05:27,980 --> 00:05:29,090
+Q. Is.

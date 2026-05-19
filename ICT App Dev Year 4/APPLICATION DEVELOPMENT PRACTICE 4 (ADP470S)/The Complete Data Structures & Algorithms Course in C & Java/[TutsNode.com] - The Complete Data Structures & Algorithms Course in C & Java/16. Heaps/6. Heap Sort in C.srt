@@ -1,0 +1,179 @@
+1
+00:00:00,450 --> 00:00:03,210
+We have talked about the hip sort enough.
+
+2
+00:00:03,810 --> 00:00:08,340
+So let's try to implement it and see.
+
+3
+00:00:10,280 --> 00:00:18,230
+We start by include a studio and we need to create the first function to swept the position of two elements,
+
+4
+00:00:18,230 --> 00:00:22,400
+which is sweat, as we have seen it in the previous algorithms.
+
+5
+00:00:22,790 --> 00:00:30,230
+It took into parameters A and B and swabs the value of A to B and the value of B to A.
+
+6
+00:00:30,950 --> 00:00:38,690
+By creating a temporary variable and assigning it to a A equal to B and be able to tap.
+
+7
+00:00:41,580 --> 00:00:41,970
+Now.
+
+8
+00:00:43,270 --> 00:00:49,420
+This method called hippy fi, it's returning type is void, and it took in the perimeter parameter,
+
+9
+00:00:49,630 --> 00:00:59,200
+the array of type, integer an end, and we find the largest among the route that left the child and
+
+10
+00:00:59,200 --> 00:01:00,100
+the live child.
+
+11
+00:01:00,430 --> 00:01:11,590
+So int largest equal to I and int left equals two times I +1 and into right, equal to two times I plus
+
+12
+00:01:11,830 --> 00:01:12,160
+two.
+
+13
+00:01:12,820 --> 00:01:14,680
+This is the algorithm.
+
+14
+00:01:14,680 --> 00:01:16,270
+I find the left and right.
+
+15
+00:01:16,660 --> 00:01:25,630
+So if left less than an and out of the left, a greater then array at an index largest.
+
+16
+00:01:27,240 --> 00:01:30,810
+Then largest equal to the left, so move the largest left.
+
+17
+00:01:31,540 --> 00:01:38,490
+Now if the right less than an and array at index rate greater than the rate at the indexed largest,
+
+18
+00:01:38,880 --> 00:01:45,750
+then the largest equal to the right now, suab and continue had typifying.
+
+19
+00:01:45,990 --> 00:01:47,940
+If the route is not the largest.
+
+20
+00:01:48,390 --> 00:01:55,770
+So if largest does not equal to, I just not that would then swipe right at Index II with the rate at
+
+21
+00:01:55,980 --> 00:02:02,550
+the largest and typify it again by passing grey and and dollars.
+
+22
+00:02:03,060 --> 00:02:04,410
+These are the parameters.
+
+23
+00:02:05,220 --> 00:02:07,410
+Now the main function to deep sort.
+
+24
+00:02:08,540 --> 00:02:13,550
+Two hips to those hips or we make a hip salt method.
+
+25
+00:02:14,030 --> 00:02:20,960
+It took it to the perimeter as a entry and in the end, now building the max hip.
+
+26
+00:02:21,350 --> 00:02:29,600
+We start by making a for loop starting from I and my over to minus one to I greater than or equal to
+
+27
+00:02:29,600 --> 00:02:30,050
+zero.
+
+28
+00:02:30,320 --> 00:02:31,700
+And I'm minus minus.
+
+29
+00:02:32,180 --> 00:02:34,280
+And we fight all the three.
+
+30
+00:02:35,290 --> 00:02:40,150
+No, we need to make a hip sought for I equals to end minus one.
+
+31
+00:02:40,600 --> 00:02:42,850
+I greater than or equal to zero.
+
+32
+00:02:43,060 --> 00:02:51,040
+And I am minus minus which what if we start the sweeping array at index zero and array at the index?
+
+33
+00:02:52,180 --> 00:02:59,590
+Which of change it now hip ify the root element to get the highest element at a root again?
+
+34
+00:03:00,100 --> 00:03:08,890
+We start by calling the hip fi method to get the highest element at that one or passing the array I
+
+35
+00:03:09,160 --> 00:03:10,690
+and Z.
+
+36
+00:03:14,040 --> 00:03:21,210
+Now, let's bring the array print array to the barometer of the era and that we are going to print at
+
+37
+00:03:21,210 --> 00:03:25,710
+the end and which is the size we print it at indexed by.
+
+38
+00:03:26,750 --> 00:03:33,560
+No driver code, we in the main we create an array, we calculate its size by making the size of array
+
+39
+00:03:33,560 --> 00:03:41,330
+over the size of a tree at the next year, and we call the hip sort and passing array and its size and
+
+40
+00:03:41,330 --> 00:03:43,360
+we print sort that out.
+
+41
+00:03:44,120 --> 00:03:53,090
+I want from you to try this code in your C compiler and try to to play with the codes to see the left
+
+42
+00:03:53,090 --> 00:03:53,590
+or right.
+
+43
+00:03:53,600 --> 00:03:59,690
+If you change the numbers and write this code in your copy book because it's very important and it's
+
+44
+00:03:59,690 --> 00:04:04,610
+ask many universities and many, many coding interviews.
+
+45
+00:04:04,880 --> 00:04:09,550
+Now let's move to the exercise and let's amplamente the hip.

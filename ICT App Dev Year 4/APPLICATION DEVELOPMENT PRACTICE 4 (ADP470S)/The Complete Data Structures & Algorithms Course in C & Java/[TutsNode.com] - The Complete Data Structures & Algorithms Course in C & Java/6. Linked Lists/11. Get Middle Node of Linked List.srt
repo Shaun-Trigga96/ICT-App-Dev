@@ -1,0 +1,283 @@
+1
+00:00:00,150 --> 00:00:08,670
+Many interviews asked to get the medal nod off link it lists, I will show you in two ways how to do
+
+2
+00:00:08,670 --> 00:00:17,340
+this algorithm and in many universities have been asked in final exams, so pay attention for this very
+
+3
+00:00:17,340 --> 00:00:18,990
+important exam.
+
+4
+00:00:20,490 --> 00:00:24,860
+I will create for that, I will create get middle A. Method.
+
+5
+00:00:25,050 --> 00:00:34,110
+It took and through the perimeter, the structure node had pointer and its returning type would be integer,
+
+6
+00:00:34,350 --> 00:00:35,830
+so it will return and.
+
+7
+00:00:37,280 --> 00:00:37,760
+OK.
+
+8
+00:00:38,510 --> 00:00:46,820
+We create struck note, slow and fast, these are the pointers and assign this low, equal to fast,
+
+9
+00:00:46,820 --> 00:00:47,720
+equal to had.
+
+10
+00:00:47,870 --> 00:00:50,330
+So this is that linkage list.
+
+11
+00:00:50,330 --> 00:01:00,260
+We have five elements the middle note it's obvious that it is at Index two, which is the third element
+
+12
+00:01:00,410 --> 00:01:07,880
+containing 300 and the memory reference to it, or memory address is three thousand twenty four.
+
+13
+00:01:09,590 --> 00:01:13,370
+We start checking if head does not equal to none.
+
+14
+00:01:14,000 --> 00:01:18,470
+Then, while fast, we create two pointers.
+
+15
+00:01:20,140 --> 00:01:27,100
+While Fast does not equal to null and fast, that next does not equal to now, I am referring, it's
+
+16
+00:01:27,100 --> 00:01:29,800
+very important to check because fast.
+
+17
+00:01:30,070 --> 00:01:38,800
+We will see that it is going faster than this little by jumping two by two two knots.
+
+18
+00:01:39,160 --> 00:01:45,370
+OK, so don't worry, we are going to clarify everything in the while loop.
+
+19
+00:01:45,760 --> 00:01:53,680
+So while the past does not equal to null and fast for referencing to now, next does not equal to null,
+
+20
+00:01:53,980 --> 00:01:54,940
+then slow.
+
+21
+00:01:56,280 --> 00:02:06,070
+Slow your forensic into the next and fast go and reference it to do next to element and nuts.
+
+22
+00:02:06,090 --> 00:02:06,600
+OK.
+
+23
+00:02:08,170 --> 00:02:14,110
+This is the fast it moves by do and slow moves by one.
+
+24
+00:02:14,470 --> 00:02:14,920
+OK.
+
+25
+00:02:15,100 --> 00:02:17,720
+This is the algorithm behind this.
+
+26
+00:02:17,740 --> 00:02:18,670
+This is the trick.
+
+27
+00:02:19,300 --> 00:02:22,570
+OK, now again fast.
+
+28
+00:02:23,710 --> 00:02:34,660
+Does not equal to null and fast dot next does not equal to null, then move again, so fast will move
+
+29
+00:02:35,440 --> 00:02:39,100
+to and slow moves by one.
+
+30
+00:02:39,920 --> 00:02:48,010
+OK, now, while fast does not equal to null and fast, the next does not equal to null.
+
+31
+00:02:49,390 --> 00:02:56,050
+This is equal to not because they're the last one is sort of forensic and pointing to the null.
+
+32
+00:02:56,470 --> 00:02:57,880
+OK, so fast.
+
+33
+00:02:57,880 --> 00:03:00,250
+Now what the now referencing there now.
+
+34
+00:03:00,280 --> 00:03:06,640
+So this will be break and broke and this loop will be exited.
+
+35
+00:03:07,000 --> 00:03:08,410
+And there.
+
+36
+00:03:10,130 --> 00:03:20,330
+This is this is the condition, and now it will return slow and not date, so we took the data of that
+
+37
+00:03:20,330 --> 00:03:20,650
+point.
+
+38
+00:03:21,380 --> 00:03:21,710
+OK.
+
+39
+00:03:22,220 --> 00:03:28,790
+This is that how we get the middle not off link list.
+
+40
+00:03:29,150 --> 00:03:30,830
+This is the reference.
+
+41
+00:03:31,040 --> 00:03:37,250
+This is the algorithm how to get the medal of Link, at least by making two pointers.
+
+42
+00:03:37,400 --> 00:03:42,590
+The first, the first will be fast and jumping two knots.
+
+43
+00:03:42,860 --> 00:03:47,210
+And the second will jump by one known and.
+
+44
+00:03:48,230 --> 00:03:55,640
+Still reaching fast equal to now, the next equal to none, Richard, to end it, we will return that
+
+45
+00:03:55,640 --> 00:03:57,610
+data after that slow.
+
+46
+00:03:58,190 --> 00:04:00,710
+Let's move to the second way.
+
+47
+00:04:02,760 --> 00:04:09,660
+By the way, we have created this in C, and this code would be the same in job.
+
+48
+00:04:09,810 --> 00:04:13,320
+So this is the code in Java by making do.
+
+49
+00:04:15,030 --> 00:04:22,020
+Two things by fast and slow to knots and start jumping them.
+
+50
+00:04:22,440 --> 00:04:22,920
+OK.
+
+51
+00:04:24,650 --> 00:04:32,480
+Again, get middle of Lingard list in the second, we would create and get middle note the same way.
+
+52
+00:04:32,900 --> 00:04:35,030
+Struck note stamp equal to hat.
+
+53
+00:04:35,030 --> 00:04:38,830
+We create the hat and get length.
+
+54
+00:04:38,840 --> 00:04:40,730
+We have created this method.
+
+55
+00:04:41,300 --> 00:04:42,170
+Get length.
+
+56
+00:04:42,570 --> 00:04:45,890
+OK, we have created it in the previous video.
+
+57
+00:04:45,890 --> 00:04:52,400
+So please go back and search for it as I get method, get length method and see how we have created.
+
+58
+00:04:52,880 --> 00:05:01,250
+I will not go deeply now and get the length I need from you to understand that get length returns,
+
+59
+00:05:01,250 --> 00:05:03,200
+the length of the list.
+
+60
+00:05:03,860 --> 00:05:05,360
+So I stored.
+
+61
+00:05:05,750 --> 00:05:15,650
+Get length inside a length variable and I created equal to zero and I will start making this for loop.
+
+62
+00:05:17,230 --> 00:05:22,480
+And equal to zero, I less than length over two.
+
+63
+00:05:22,780 --> 00:05:23,680
+So it's middle.
+
+64
+00:05:24,790 --> 00:05:34,750
+I plus plus it will go through all the elements from zero to length over to make them equal time and
+
+65
+00:05:34,750 --> 00:05:39,100
+pointing to that next return stamp of date.
+
+66
+00:05:39,460 --> 00:05:39,940
+OK.
+
+67
+00:05:40,300 --> 00:05:42,850
+Otherwise, it will return minus one.
+
+68
+00:05:44,290 --> 00:05:44,730
+OK.
+
+69
+00:05:45,070 --> 00:05:51,730
+This is very simple by create the getting that length by using the length gate length method.
+
+70
+00:05:52,270 --> 00:06:00,700
+And we passed the stamp and then referencing to this and make a stamp that goes through the loop and
+
+71
+00:06:00,700 --> 00:06:01,840
+returning again.

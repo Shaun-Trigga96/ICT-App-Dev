@@ -1,0 +1,607 @@
+1
+00:00:00,600 --> 00:00:04,470
+Hello, my friends, and welcome to exercise number 23.
+
+2
+00:00:05,310 --> 00:00:08,940
+We are going to solve the Fibonacci series and recursion.
+
+3
+00:00:09,150 --> 00:00:14,520
+So how Fibonacci method in recursion works, this is the function we have.
+
+4
+00:00:14,880 --> 00:00:17,080
+The main method here in Java.
+
+5
+00:00:17,100 --> 00:00:25,280
+So we are going to execute it in the main by passing an equal to five to Fibonacci of an OK.
+
+6
+00:00:25,470 --> 00:00:28,440
+So we are going to find the Fibonacci of five.
+
+7
+00:00:28,740 --> 00:00:31,070
+But first, what is Fibonacci?
+
+8
+00:00:31,080 --> 00:00:35,220
+The Fibonacci numbers are the numbers in the following integer sequence.
+
+9
+00:00:35,670 --> 00:00:37,020
+We have zero.
+
+10
+00:00:37,260 --> 00:00:44,950
+This is the first elementary branch of one is zero for the Fibonacci story of the first element.
+
+11
+00:00:45,000 --> 00:00:46,980
+This is the first element in this series.
+
+12
+00:00:47,370 --> 00:00:51,420
+And the second element, third and fourth, fifth and so on.
+
+13
+00:00:51,630 --> 00:00:51,990
+OK.
+
+14
+00:00:52,320 --> 00:01:01,890
+So Fibonacci of n any numbers equals Fibonacci of and minus one plus and minus two is the sum of the
+
+15
+00:01:01,890 --> 00:01:04,920
+last two elements before that element.
+
+16
+00:01:05,220 --> 00:01:13,650
+So if we have f of five here, equal f of four plus f of three with seed values, f of zero, equal
+
+17
+00:01:13,650 --> 00:01:18,960
+to zero and f of one equal to one, we start f of zero is zero here.
+
+18
+00:01:19,620 --> 00:01:20,670
+This is that zero.
+
+19
+00:01:21,210 --> 00:01:22,530
+This is the one.
+
+20
+00:01:23,040 --> 00:01:25,500
+This is then next two and three.
+
+21
+00:01:26,750 --> 00:01:27,470
+For.
+
+22
+00:01:29,480 --> 00:01:41,840
+And a 5:00 a.m. game Fibonacci method, and we have a Fibonacci number and integer methods returning
+
+23
+00:01:41,840 --> 00:01:50,000
+integer, and we have an integer passed into the parameter, so we are checking if an equal or less
+
+24
+00:01:50,000 --> 00:02:01,880
+than one retired and retired and an OK otherwise return Fibonacci and minus one plus Fibonacci of and
+
+25
+00:02:01,880 --> 00:02:03,170
+minus two.
+
+26
+00:02:03,800 --> 00:02:05,090
+OK, so.
+
+27
+00:02:06,270 --> 00:02:13,390
+If here and equal to zero, it were return zero F and equal to one, it will return one.
+
+28
+00:02:13,410 --> 00:02:18,210
+Otherwise, it will return for both negative and minus one loss from a negative and minus.
+
+29
+00:02:19,660 --> 00:02:25,630
+OK, so let's go and see how it works and.
+
+30
+00:02:26,690 --> 00:02:28,400
+A real life and recursion.
+
+31
+00:02:29,120 --> 00:02:38,900
+You ask it in an interview and this question have been asked in an interview to a big company, OK,
+
+32
+00:02:39,260 --> 00:02:43,750
+so please pay attention how this works.
+
+33
+00:02:43,820 --> 00:02:52,520
+We have seen that the general formula that we are going to follow is f of an equal f of and minus one
+
+34
+00:02:52,520 --> 00:03:00,410
+plus f of and minus two and the seat values here f of zero equal to zero and f of one equal to one.
+
+35
+00:03:01,130 --> 00:03:01,590
+OK.
+
+36
+00:03:02,150 --> 00:03:08,900
+So we are going to solve f of Fibonacci of five.
+
+37
+00:03:09,260 --> 00:03:18,410
+We are asked to solve f Fibonacci of five, which is equal to Fibonacci of and minus one and equal to
+
+38
+00:03:18,410 --> 00:03:18,770
+five.
+
+39
+00:03:18,800 --> 00:03:23,240
+So there's four and Fibonacci of.
+
+40
+00:03:25,890 --> 00:03:28,370
+And minus two, which is three.
+
+41
+00:03:28,740 --> 00:03:29,970
+OK, so.
+
+42
+00:03:31,270 --> 00:03:37,990
+There is a very big track, and you are asking here many times because it is.
+
+43
+00:03:39,580 --> 00:03:43,530
+About understanding your understanding that encouraging.
+
+44
+00:03:43,620 --> 00:03:55,750
+OK, so here we are going to start solving the Fibonacci of four and we get the result like a number.
+
+45
+00:03:55,960 --> 00:03:59,050
+For example, five or three or whatever.
+
+46
+00:03:59,470 --> 00:04:02,120
+And then we move to Fibonacci of three.
+
+47
+00:04:02,140 --> 00:04:05,680
+We are not going to solve this simultaneously.
+
+48
+00:04:06,040 --> 00:04:14,590
+This is going to be solved and then getting the result and then moving to Fibonacci of three and then
+
+49
+00:04:14,590 --> 00:04:17,140
+getting the result to be added together.
+
+50
+00:04:17,170 --> 00:04:18,760
+This is very important.
+
+51
+00:04:19,150 --> 00:04:26,800
+I need from you to pay attention for with me because it's very important the trick here and it is about
+
+52
+00:04:27,010 --> 00:04:30,850
+understanding the recursion algorithms and how it works.
+
+53
+00:04:30,860 --> 00:04:33,580
+So we start with Fibonacci of three.
+
+54
+00:04:33,970 --> 00:04:34,310
+OK.
+
+55
+00:04:34,660 --> 00:04:35,980
+With Fibonacci, of course.
+
+56
+00:04:35,990 --> 00:04:36,220
+So.
+
+57
+00:04:37,950 --> 00:04:40,770
+This is the Fibonacci offer.
+
+58
+00:04:41,370 --> 00:04:41,730
+OK?
+
+59
+00:04:42,240 --> 00:04:52,540
+We start calculating Fibonacci of four is equal to Fibonacci of three plus Fibonacci off two.
+
+60
+00:04:53,100 --> 00:05:00,360
+OK, I need it from you to understand that this will follow the same rule that we have mentioned before
+
+61
+00:05:00,930 --> 00:05:04,260
+Fibonacci of three as being calculated first.
+
+62
+00:05:04,260 --> 00:05:12,540
+And then when we have a result here, it will be executing the Fibonacci of two and finding that Fibonacci
+
+63
+00:05:12,540 --> 00:05:14,400
+of two, self Fibonacci of three.
+
+64
+00:05:14,400 --> 00:05:23,190
+Here, Fibonacci of three is equal to Fibonacci of two plus Fibonacci of one.
+
+65
+00:05:23,700 --> 00:05:27,930
+OK, now again Fibonacci of two.
+
+66
+00:05:28,970 --> 00:05:34,700
+Equal to Fibonacci of one plus Fibonacci of zero.
+
+67
+00:05:35,030 --> 00:05:45,380
+OK, now we need to calculate Fibonacci of one, Fibonacci of one is one because we have seen that Fibonacci
+
+68
+00:05:45,380 --> 00:05:49,460
+of one equal to one and Banerjee of zero is equal to zero.
+
+69
+00:05:49,850 --> 00:05:51,530
+And Fibonacci of zero.
+
+70
+00:05:52,530 --> 00:05:53,610
+Equal to zero.
+
+71
+00:05:54,040 --> 00:05:55,260
+OK, now.
+
+72
+00:05:58,990 --> 00:06:03,440
+We are going to substitute these values because we have ended here.
+
+73
+00:06:03,850 --> 00:06:05,830
+OK, one plus zero.
+
+74
+00:06:08,720 --> 00:06:10,700
+Is equal to zero.
+
+75
+00:06:11,330 --> 00:06:13,100
+Sorry, one, oops.
+
+76
+00:06:13,220 --> 00:06:16,010
+This is a very basic mathematic.
+
+77
+00:06:16,740 --> 00:06:20,030
+OK, so one.
+
+78
+00:06:21,900 --> 00:06:27,720
+So the result of a Fibonacci tool is equal to one.
+
+79
+00:06:27,990 --> 00:06:28,550
+OK.
+
+80
+00:06:29,550 --> 00:06:30,300
+OK, guys.
+
+81
+00:06:30,510 --> 00:06:33,090
+This is the Fibonacci of two.
+
+82
+00:06:33,870 --> 00:06:38,640
+Now we get one and we substitute it here.
+
+83
+00:06:38,760 --> 00:06:44,340
+Sell Fibonacci of three is equal Fibonacci of two, plus Fibonacci of one.
+
+84
+00:06:44,910 --> 00:06:47,730
+Fibonacci of two is equal to one.
+
+85
+00:06:48,030 --> 00:06:54,780
+And we are going to calculate the Wenatchee of one now, but since Fibonacci of one is one.
+
+86
+00:06:55,050 --> 00:06:58,110
+So we are going to get it back.
+
+87
+00:06:58,400 --> 00:07:05,640
+Therefore, Fibonacci of three is equal to one plus one, which is equal to two.
+
+88
+00:07:06,060 --> 00:07:10,260
+So this is the Fibonacci of the three.
+
+89
+00:07:11,010 --> 00:07:19,280
+Now we substitute Fibonacci of three and Fibonacci of three, and we put it two.
+
+90
+00:07:20,130 --> 00:07:26,010
+Now we need to start with another part, which is Fibonacci of two.
+
+91
+00:07:26,580 --> 00:07:26,910
+OK.
+
+92
+00:07:27,240 --> 00:07:27,630
+So.
+
+93
+00:07:29,720 --> 00:07:31,520
+Let me choose another.
+
+94
+00:07:32,640 --> 00:07:34,830
+Color self-reported that you have to.
+
+95
+00:07:38,220 --> 00:07:40,080
+Is being calculated here.
+
+96
+00:07:40,200 --> 00:07:47,310
+So it is equal to Fibonacci of one less Fibonacci of the zero Fibonacci of one.
+
+97
+00:07:49,380 --> 00:07:53,850
+As one and Fibonacci of zero equal to zero.
+
+98
+00:07:54,390 --> 00:08:00,960
+So one is being replaced and zero is re being replaced, one plus zero equal to one.
+
+99
+00:08:01,320 --> 00:08:04,650
+So this is the Fibonacci of two.
+
+100
+00:08:05,190 --> 00:08:05,690
+OK.
+
+101
+00:08:06,600 --> 00:08:16,260
+Therefore, we have here Fibonacci of three is equal to two, plus Fibonacci of two is equal to one.
+
+102
+00:08:16,500 --> 00:08:22,170
+Therefore, we have calculated f2.2 of three, which is three.
+
+103
+00:08:22,170 --> 00:08:28,260
+So we are going to replace Fibonacci of three or sorry from a network of four with three.
+
+104
+00:08:28,590 --> 00:08:28,950
+OK.
+
+105
+00:08:29,430 --> 00:08:32,370
+This is the first segment.
+
+106
+00:08:35,090 --> 00:08:36,650
+This is the first part.
+
+107
+00:08:36,750 --> 00:08:37,310
+OK.
+
+108
+00:08:37,610 --> 00:08:42,650
+This is the first part that we have solved.
+
+109
+00:08:43,430 --> 00:08:45,900
+We move now since we have three.
+
+110
+00:08:46,460 --> 00:08:52,970
+We move now to the Fibonacci of three and the second part of the Fibonacci of four a five.
+
+111
+00:08:53,270 --> 00:08:53,600
+OK.
+
+112
+00:08:54,290 --> 00:08:54,740
+So.
+
+113
+00:08:57,480 --> 00:09:06,030
+Fibonacci of three, this is being calculated again and again, it will not depend on the previous calculation,
+
+114
+00:09:06,030 --> 00:09:09,990
+it go and start calculating it from the beginning.
+
+115
+00:09:10,080 --> 00:09:13,470
+OK, so Fibonacci offer three is.
+
+116
+00:09:14,850 --> 00:09:20,520
+Fibonacci of three signature of two, plus Fibonacci of one.
+
+117
+00:09:21,580 --> 00:09:31,840
+Fibonacci of Do as Fibonacci of one plus through nature of zero and Fibonacci of one is one, and Fibonacci
+
+118
+00:09:31,840 --> 00:09:33,880
+of zero is equal to zero.
+
+119
+00:09:34,240 --> 00:09:41,380
+Being replaced here one is replaced by signature with one and zero by zero.
+
+120
+00:09:41,770 --> 00:09:44,530
+This is one plus zero equal to one.
+
+121
+00:09:44,710 --> 00:09:48,550
+So Fibonacci of two is equal to one.
+
+122
+00:09:49,060 --> 00:09:49,410
+OK.
+
+123
+00:09:50,660 --> 00:09:51,050
+Sorry.
+
+124
+00:09:53,060 --> 00:09:58,820
+Now, Fibonacci of one is equal to one because.
+
+125
+00:10:00,000 --> 00:10:04,470
+Components of one is equal to one.
+
+126
+00:10:04,770 --> 00:10:05,070
+OK.
+
+127
+00:10:05,790 --> 00:10:08,370
+This one will be replaced here.
+
+128
+00:10:08,880 --> 00:10:15,810
+So one is here and one is here, so Fibonacci of three is equal to two.
+
+129
+00:10:16,320 --> 00:10:18,360
+One plus one is equal to two.
+
+130
+00:10:19,240 --> 00:10:23,410
+Therefore, this is being replaced here.
+
+131
+00:10:25,510 --> 00:10:25,900
+So.
+
+132
+00:10:27,810 --> 00:10:30,300
+Fibonacci of five.
+
+133
+00:10:30,720 --> 00:10:36,930
+Going back to our main function from one that year of four is equal to three.
+
+134
+00:10:38,000 --> 00:10:38,570
+Plus.
+
+135
+00:10:39,600 --> 00:10:41,170
+Two, three, four.
+
+136
+00:10:41,550 --> 00:10:48,510
+Not your four and one of three is being replaced by two, which is equal to five.
+
+137
+00:10:49,260 --> 00:10:49,840
+OK.
+
+138
+00:10:50,790 --> 00:10:57,960
+This is how we solve their Fibonacci recursion questions.
+
+139
+00:10:58,410 --> 00:10:58,950
+OK.
+
+140
+00:10:59,310 --> 00:11:00,680
+It's very simple.
+
+141
+00:11:00,690 --> 00:11:03,900
+I need from you to practice more.
+
+142
+00:11:04,410 --> 00:11:07,050
+Go ahead and take an example.
+
+143
+00:11:07,050 --> 00:11:14,880
+Like Fibonacci of six nuts, you have seven, eight and so on, and try to find the series in the same
+
+144
+00:11:14,880 --> 00:11:16,830
+way I need from you.
+
+145
+00:11:16,830 --> 00:11:25,020
+Also to write these notes on your copy book in order to review for that interviews and the exams.
+
+146
+00:11:26,040 --> 00:11:33,870
+One last thing I need also from you is to understand how recursion works.
+
+147
+00:11:34,050 --> 00:11:43,350
+It starts by like calculating that, for example, Fibonacci of five equals four plus three Fibonacci
+
+148
+00:11:43,350 --> 00:11:44,430
+of four plus four minutes.
+
+149
+00:11:44,430 --> 00:11:44,990
+You have three.
+
+150
+00:11:45,270 --> 00:11:48,600
+It starts calculating that Fibonacci of four.
+
+151
+00:11:49,110 --> 00:11:55,290
+And then when it get the result, it starts again with Fibonacci of three.
+
+152
+00:11:55,440 --> 00:11:57,180
+This is the point.

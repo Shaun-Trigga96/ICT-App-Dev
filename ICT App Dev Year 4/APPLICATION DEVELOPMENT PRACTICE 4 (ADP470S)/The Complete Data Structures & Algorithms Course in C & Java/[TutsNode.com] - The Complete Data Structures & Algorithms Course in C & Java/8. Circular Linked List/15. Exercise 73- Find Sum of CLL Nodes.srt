@@ -1,0 +1,167 @@
+1
+00:00:00,330 --> 00:00:03,570
+Hello, all my friends, and welcome to exercise number 73.
+
+2
+00:00:03,840 --> 00:00:10,800
+We are asked to write a function that finds the sum of nodes in a circle of link, at least.
+
+3
+00:00:11,280 --> 00:00:12,400
+So how to do that?
+
+4
+00:00:12,420 --> 00:00:17,790
+I want from you to post the video and start thinking about it and write this solution in the comments
+
+5
+00:00:17,790 --> 00:00:18,120
+below.
+
+6
+00:00:19,440 --> 00:00:26,710
+So how to find it a function to find some of the given circle and kid list we need to return.
+
+7
+00:00:26,730 --> 00:00:30,270
+Its returning type would be integer, and that's called some.
+
+8
+00:00:32,330 --> 00:00:33,110
+Find some.
+
+9
+00:00:39,460 --> 00:00:41,030
+In fact, there's no the.
+
+10
+00:00:41,780 --> 00:00:44,780
+We start from the have to start making this up.
+
+11
+00:00:45,110 --> 00:00:48,320
+So first of all, I will create A..
+
+12
+00:00:48,770 --> 00:00:57,170
+That it is them that we are going to traverse it because we need to make them equal to have and and
+
+13
+00:00:57,440 --> 00:00:59,840
+some equal to zero.
+
+14
+00:01:00,650 --> 00:01:11,610
+Then if had the does not equal to null, then we are going to make a do.
+
+15
+00:01:11,630 --> 00:01:17,570
+I loop that traverse throughout the elements and add them so damp.
+
+16
+00:01:17,570 --> 00:01:21,530
+The next we are going to move the cursor temp.
+
+17
+00:01:21,800 --> 00:01:30,170
+So our jumping this cursor, we are moving it to that next one and update the some by making at some,
+
+18
+00:01:30,170 --> 00:01:42,370
+the old sum is equal to then use some here, then use some is equal to the old sum plus that damp that
+
+19
+00:01:42,560 --> 00:01:42,910
+date.
+
+20
+00:01:43,370 --> 00:01:43,850
+OK.
+
+21
+00:01:45,850 --> 00:01:54,910
+And we specify while Tampa does not equal content and this is the stumbling, stumbling condition of
+
+22
+00:01:56,440 --> 00:02:01,870
+the circular link, at least that indicates that we have reached the end of their list.
+
+23
+00:02:02,270 --> 00:02:04,300
+OK, then return.
+
+24
+00:02:04,960 --> 00:02:10,390
+So let's run and see bioprinting here.
+
+25
+00:02:11,500 --> 00:02:23,320
+System that out, dot, print and just some of this off nodes would be.
+
+26
+00:02:23,950 --> 00:02:26,210
+We are calling find some.
+
+27
+00:02:26,690 --> 00:02:27,040
+Okay.
+
+28
+00:02:27,040 --> 00:02:41,070
+We specify the head as it's let's let's run at the sum of nodes is 17 to five, six, 12 and plus five.
+
+29
+00:02:41,080 --> 00:02:42,220
+It would be seven.
+
+30
+00:02:42,580 --> 00:02:43,330
+And there we go.
+
+31
+00:02:43,330 --> 00:02:44,560
+We have find it.
+
+32
+00:02:45,040 --> 00:02:53,380
+And since we are traversing through all the elements of this of this link, at least Circle Link Atlas,
+
+33
+00:02:53,380 --> 00:02:55,060
+so we need to find the out.
+
+34
+00:02:55,450 --> 00:03:04,270
+It's time complexity would be all off of all of what all of and because we are traversing through all
+
+35
+00:03:04,270 --> 00:03:04,870
+the news.
+
+36
+00:03:05,020 --> 00:03:05,390
+OK.
+
+37
+00:03:06,010 --> 00:03:09,310
+Its worst case scenario, its best case scenario is of one.
+
+38
+00:03:09,340 --> 00:03:17,530
+If we have only one note and the worst case scenario is oh fine, one million one thousand one hundred
+
+39
+00:03:17,890 --> 00:03:19,450
+or whatever notes.
+
+40
+00:03:20,200 --> 00:03:21,670
+And we are going to find this.
+
+41
+00:03:22,180 --> 00:03:25,360
+So in this way, we have to find some.
+
+42
+00:03:26,340 --> 00:03:31,860
+I need from you a favor to rate us five stars and use them to keep us making and uploading.

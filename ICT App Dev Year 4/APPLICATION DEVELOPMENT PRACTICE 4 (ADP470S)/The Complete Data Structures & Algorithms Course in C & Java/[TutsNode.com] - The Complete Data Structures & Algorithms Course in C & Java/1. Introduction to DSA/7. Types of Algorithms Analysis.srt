@@ -1,0 +1,215 @@
+1
+00:00:00,990 --> 00:00:09,990
+To analyze that given algorithm, we need to know with which inputs and the algorithm takes less time,
+
+2
+00:00:10,170 --> 00:00:16,800
+like performing well for the less time and which input the algorithms take a long time.
+
+3
+00:00:17,370 --> 00:00:24,480
+We have already seen that the algorithm can be represented in the form of an expression.
+
+4
+00:00:25,080 --> 00:00:33,090
+That means that we present the algorithm with multiple expression one for the case where it takes less
+
+5
+00:00:33,090 --> 00:00:37,950
+time and the other for the case where it takes more time.
+
+6
+00:00:38,280 --> 00:00:42,680
+In general, the first case is called the best case.
+
+7
+00:00:43,230 --> 00:00:47,130
+So the best case, that algorithm takes the least time.
+
+8
+00:00:48,440 --> 00:00:48,990
+OK.
+
+9
+00:00:49,640 --> 00:00:55,910
+And the second case is called the worst case for the algorithm to analyze an algorithm.
+
+10
+00:00:56,180 --> 00:01:05,720
+We need some kind of syntax that forms the base of for asymptotic as some static analysis or annotation.
+
+11
+00:01:05,930 --> 00:01:11,870
+There are three types of analysis the worst case, the best case and the average case.
+
+12
+00:01:12,170 --> 00:01:12,500
+OK.
+
+13
+00:01:13,860 --> 00:01:20,190
+So the worst case defines the input for which the algorithm takes a long time.
+
+14
+00:01:20,340 --> 00:01:22,290
+This is the slowest time to complete.
+
+15
+00:01:22,290 --> 00:01:23,950
+This is the worst case scenario.
+
+16
+00:01:25,050 --> 00:01:31,290
+Input is one of where one for which the algorithm runs the slowest.
+
+17
+00:01:31,320 --> 00:01:37,170
+OK, so worst case where the computer or the algorithm need many time.
+
+18
+00:01:37,170 --> 00:01:43,500
+I need the longest time or the slowest time and to be completed.
+
+19
+00:01:43,860 --> 00:01:50,970
+The best case defines the input for which the algorithm takes the least time.
+
+20
+00:01:51,270 --> 00:01:53,430
+This is the fastest time to complete.
+
+21
+00:01:53,970 --> 00:01:58,910
+So the best case algorithm that takes the least time to be accomplished?
+
+22
+00:01:59,020 --> 00:01:59,330
+OK.
+
+23
+00:02:01,270 --> 00:02:10,360
+Average case provides a prediction about the running time of the algorithm run algorithm, many times
+
+24
+00:02:10,540 --> 00:02:19,360
+using many different inputs that came out come from some distribution that generates generates these
+
+25
+00:02:19,510 --> 00:02:21,460
+AMP compute.
+
+26
+00:02:21,460 --> 00:02:29,560
+The total running time and divide by the number of trials assume that the input is random.
+
+27
+00:02:29,800 --> 00:02:40,660
+So this well, that is according to the input and that generated thanks and the average time the average
+
+28
+00:02:40,660 --> 00:02:48,190
+case is is or the average time is varying between the lower bound and the upper bound.
+
+29
+00:02:48,700 --> 00:02:55,720
+So the upper bound correspond to the worst case and the lower bound represents the best case.
+
+30
+00:02:56,620 --> 00:03:04,210
+For example, if you have an algorithm that can, you write it to be accomplished in one second.
+
+31
+00:03:04,450 --> 00:03:06,700
+So the lower bound would be one second.
+
+32
+00:03:07,210 --> 00:03:12,930
+And you can make another algorithm that perform the same action in 10 seconds.
+
+33
+00:03:12,940 --> 00:03:17,380
+So the lowest the least time is one second.
+
+34
+00:03:17,410 --> 00:03:24,790
+So it is the lower bound and the upper bound, which is the worst case is 10 seconds.
+
+35
+00:03:25,360 --> 00:03:29,210
+The average time is between one and ten seconds.
+
+36
+00:03:29,230 --> 00:03:29,600
+OK.
+
+37
+00:03:29,770 --> 00:03:31,330
+For other algorithms.
+
+38
+00:03:31,360 --> 00:03:38,200
+So the worst case is in seconds and the the best case is one second.
+
+39
+00:03:38,740 --> 00:03:39,190
+OK.
+
+40
+00:03:39,430 --> 00:03:47,560
+In the same way, 40 a given algorithm, we can represent the best, worst and the average cases in
+
+41
+00:03:47,560 --> 00:03:50,650
+form of expression as an example.
+
+42
+00:03:50,650 --> 00:03:54,730
+Let f of and be that a function which represent the given algorithm.
+
+43
+00:03:55,480 --> 00:04:07,000
+So f that have and the squared plus 500 is the worst case compared with the F and that have an plus
+
+44
+00:04:07,690 --> 00:04:09,340
+and plus five hundred.
+
+45
+00:04:10,210 --> 00:04:16,330
+Similarly, for the average case, the expression defines the input in which the algorithm takes the
+
+46
+00:04:16,330 --> 00:04:27,760
+average running time or memory you remember as an order, the end or the order of N in the function
+
+47
+00:04:27,970 --> 00:04:33,970
+increase that we're seeing or the or the like.
+
+48
+00:04:33,970 --> 00:04:38,620
+The algorithm speed to be executed will be decreased.
+
+49
+00:04:38,860 --> 00:04:48,130
+So as we move in the order of N and when we increase the order of N like and power one and power two
+
+50
+00:04:48,130 --> 00:04:53,170
+and three the worst, the algorithm is going to be OK.
+
+51
+00:04:54,310 --> 00:04:58,180
+As an order decreased their algorithm.
+
+52
+00:04:59,470 --> 00:05:03,700
+The algorithm performance and execution is increased.
+
+53
+00:05:04,090 --> 00:05:04,480
+OK.
+
+54
+00:05:05,200 --> 00:05:10,810
+So the least an order that best algorithm you.

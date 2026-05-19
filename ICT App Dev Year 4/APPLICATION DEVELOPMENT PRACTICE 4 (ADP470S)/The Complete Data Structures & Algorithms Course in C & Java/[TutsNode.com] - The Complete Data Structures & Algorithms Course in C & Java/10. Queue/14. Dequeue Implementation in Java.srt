@@ -1,0 +1,651 @@
+1
+00:00:00,240 --> 00:00:01,290
+Hello, my friends.
+
+2
+00:00:01,410 --> 00:00:03,570
+And welcome to exercise number 81.
+
+3
+00:00:03,990 --> 00:00:11,340
+And this exercise, we are going to implement the deck and Java, so how to create a deck data structure
+
+4
+00:00:11,340 --> 00:00:15,840
+in Java, we will create a new Java class called DAC.
+
+5
+00:00:16,170 --> 00:00:26,730
+So consider yourself and suppose that you are a new Java developer at Oracle and Dec is not being invented
+
+6
+00:00:27,030 --> 00:00:29,910
+and you are reinventing the wheel.
+
+7
+00:00:30,030 --> 00:00:39,240
+So how to make the class deck, how to make that these things, this data structure works together.
+
+8
+00:00:40,110 --> 00:00:49,200
+I want from you to go back to the lectures and where and understand that concepts and see and work with
+
+9
+00:00:49,200 --> 00:00:49,650
+me.
+
+10
+00:00:49,830 --> 00:00:56,160
+Step by step, like inserting after a year, inserting add from the it from the air and build it from
+
+11
+00:00:56,160 --> 00:00:56,610
+front.
+
+12
+00:00:56,970 --> 00:01:01,650
+And we check if it is empty, is full and so on, and we will test it later.
+
+13
+00:01:01,650 --> 00:01:01,920
+OK?
+
+14
+00:01:02,160 --> 00:01:11,490
+So I want from you to understand and wait and go with me like a professional coder.
+
+15
+00:01:13,080 --> 00:01:20,310
+So I will make a static start static final or I don't make static.
+
+16
+00:01:20,310 --> 00:01:24,960
+I make it in the constructor, so I end Max.
+
+17
+00:01:25,620 --> 00:01:34,320
+I will make it as max equal to or 100 I was size equal to.
+
+18
+00:01:36,510 --> 00:01:43,980
+And we will define it to their in their constructor entry into front.
+
+19
+00:01:44,250 --> 00:01:54,030
+Since we need since we are applying the deck and the deck is a cue double ended the cue and we use their
+
+20
+00:01:54,030 --> 00:02:02,960
+array in order as a base structure for this data structure and we used the M2 front and in rear.
+
+21
+00:02:03,030 --> 00:02:03,580
+OK.
+
+22
+00:02:03,810 --> 00:02:12,720
+So these are the data that we have used and this is that we are going to use in this data structure.
+
+23
+00:02:12,720 --> 00:02:19,540
+I will make this data structure constructor and I will pass the size.
+
+24
+00:02:19,560 --> 00:02:29,340
+So when we create a deck, I will use the array and the past 30 meters size as the array into the maximum
+
+25
+00:02:30,090 --> 00:02:30,600
+size.
+
+26
+00:02:30,720 --> 00:02:40,500
+OK, now I will assign the front equal to minus one and the rear equal to minus one.
+
+27
+00:02:41,700 --> 00:02:46,050
+And this size equal to size.
+
+28
+00:02:46,080 --> 00:02:46,570
+OK.
+
+29
+00:02:46,920 --> 00:02:48,540
+We are assigning it.
+
+30
+00:02:48,780 --> 00:02:52,290
+Now let's start making that methods.
+
+31
+00:02:52,740 --> 00:02:57,930
+So first of all, we will start by checking if it is rear, as is full.
+
+32
+00:02:58,140 --> 00:03:11,490
+OK, so Boolean Boolean is a full method and we start by checking return the result of checking this
+
+33
+00:03:11,490 --> 00:03:15,840
+Boolean expression in front, front, equal, front, equal to zero.
+
+34
+00:03:17,220 --> 00:03:24,270
+And then remember, here I use the three year equal equal to size minus one.
+
+35
+00:03:24,810 --> 00:03:39,840
+Then that then return the result of this comparison with different equal equal to rear rear plus one.
+
+36
+00:03:39,960 --> 00:03:40,590
+OK.
+
+37
+00:03:41,520 --> 00:03:47,520
+So this is how we check for that a full or not.
+
+38
+00:03:47,520 --> 00:03:51,750
+So this is a Boolean expression and this is a Boolean expression.
+
+39
+00:03:52,050 --> 00:03:59,790
+The result between them, if a true or true, it will return true, true or false, false and true,
+
+40
+00:03:59,790 --> 00:04:00,660
+false and false.
+
+41
+00:04:00,660 --> 00:04:02,760
+These are their possibilities.
+
+42
+00:04:02,760 --> 00:04:04,700
+So this would be return.
+
+43
+00:04:04,740 --> 00:04:11,820
+The returning value of these Boolean expression would be the result and the checking if it is full or
+
+44
+00:04:11,880 --> 00:04:12,300
+not.
+
+45
+00:04:12,720 --> 00:04:15,810
+Again, I will make is empty.
+
+46
+00:04:16,170 --> 00:04:24,840
+Boolean is empty and the method we will check into the front equal to one.
+
+47
+00:04:24,880 --> 00:04:33,780
+So from I told you in the lecture that we always check if this empty or not by checking and and seeing
+
+48
+00:04:33,780 --> 00:04:36,150
+the position of that front.
+
+49
+00:04:36,360 --> 00:04:47,610
+OK, now I will create a method called Insert Front, OK, Insert France, and it took into the perimeter
+
+50
+00:04:47,630 --> 00:04:51,090
+the key that we are going to insert at the beginning of the queue.
+
+51
+00:04:51,270 --> 00:04:57,030
+So if it is full, then don't make don't make anything.
+
+52
+00:04:57,900 --> 00:04:59,040
+So system.
+
+53
+00:05:00,090 --> 00:05:03,210
+It is full and just print for me.
+
+54
+00:05:03,420 --> 00:05:14,510
+System that out that the print and the overflow overflow there is an overflow here in the queue.
+
+55
+00:05:14,850 --> 00:05:19,490
+OK, and I need from the system to deter, OK?
+
+56
+00:05:20,220 --> 00:05:29,830
+Otherwise, we will start checking if we are adding at the front equal equal minus one, then the to
+
+57
+00:05:30,720 --> 00:05:36,420
+equal to zero and rear equal to zero.
+
+58
+00:05:36,690 --> 00:05:45,140
+OK, so here we are, reassigning them and we are we enclosing them at zero.
+
+59
+00:05:45,820 --> 00:05:59,430
+Else if there is another case, if the front here, the front equal equal to zero, then what we do,
+
+60
+00:05:59,850 --> 00:06:04,350
+we are going to make front equal to size minus one.
+
+61
+00:06:04,710 --> 00:06:05,260
+OK.
+
+62
+00:06:05,820 --> 00:06:10,650
+Otherwise, the else would make that front equal.
+
+63
+00:06:10,650 --> 00:06:15,120
+Two front front minus one.
+
+64
+00:06:15,240 --> 00:06:15,810
+OK.
+
+65
+00:06:17,850 --> 00:06:25,900
+Last thing I need to make is to assign them as they at index aren't equal to that key again.
+
+66
+00:06:26,340 --> 00:06:30,330
+What I have done here in searching at the front we are checking for this fall.
+
+67
+00:06:30,420 --> 00:06:32,070
+Don't make anything return.
+
+68
+00:06:32,670 --> 00:06:36,780
+If it is the front equal minus one, it is the first element.
+
+69
+00:06:36,780 --> 00:06:40,050
+Then at the front equal to zero and rear equal to zero.
+
+70
+00:06:40,350 --> 00:06:45,060
+If front equal, equal to zero, then front equal to size minus one.
+
+71
+00:06:45,110 --> 00:06:47,750
+Reset the front is a size minus one.
+
+72
+00:06:47,760 --> 00:06:55,500
+Put it to the last index and otherwise, if there is the front, just move it to minus one.
+
+73
+00:06:56,190 --> 00:07:02,280
+And all of these cases just put Array F of the index front equal to that key.
+
+74
+00:07:02,310 --> 00:07:07,110
+Just get the key and answer it at the right index front.
+
+75
+00:07:07,440 --> 00:07:07,920
+OK.
+
+76
+00:07:08,790 --> 00:07:15,390
+And starting at three, here it is the same thing, but we are using that array at index the front so
+
+77
+00:07:15,780 --> 00:07:18,600
+void insert every year.
+
+78
+00:07:19,650 --> 00:07:25,620
+This year it took into the perimeter that key that we are going to insert and we started checking it
+
+79
+00:07:25,620 --> 00:07:26,450
+the same way.
+
+80
+00:07:26,460 --> 00:07:33,960
+If it is full, then we are going to print overflow if it is equal to minus one.
+
+81
+00:07:34,140 --> 00:07:43,460
+If wrong, here we need also to check the front because the front is the indication, if it is, if
+
+82
+00:07:43,470 --> 00:07:46,140
+it has elements or not.
+
+83
+00:07:46,600 --> 00:07:51,750
+Now that thing that will make that difference else.
+
+84
+00:07:51,750 --> 00:07:59,280
+If this condition really equal equal size minus one, then not we.
+
+85
+00:07:59,510 --> 00:08:13,630
+We will do every year equal to zero and else what we are going to make it here equal the equal to the
+
+86
+00:08:13,630 --> 00:08:15,330
+year plus one.
+
+87
+00:08:16,140 --> 00:08:16,770
+OK.
+
+88
+00:08:17,220 --> 00:08:23,650
+This is the truth about making that essay at inserting at.
+
+89
+00:08:24,030 --> 00:08:33,240
+So at the end, we need in all of this previous cases, if conditions just we are moving that higher
+
+90
+00:08:33,240 --> 00:08:38,330
+index by assigning a rate at Index three equal to their case.
+
+91
+00:08:38,340 --> 00:08:47,790
+So here we use that key and move the key that hierarchy and we assign it later on that index.
+
+92
+00:08:48,120 --> 00:08:48,480
+OK.
+
+93
+00:08:48,930 --> 00:08:51,950
+So we are moving that here.
+
+94
+00:08:52,060 --> 00:08:55,110
+Here we are checking if it is full, don't make anything.
+
+95
+00:08:55,110 --> 00:08:57,780
+We move that year, according to the situation.
+
+96
+00:08:58,140 --> 00:09:02,760
+And then we assign that rate at index rate to the a key.
+
+97
+00:09:03,090 --> 00:09:08,310
+No, we need to make a method that deletes it from the front.
+
+98
+00:09:08,520 --> 00:09:12,590
+So again, void delete front.
+
+99
+00:09:13,260 --> 00:09:21,630
+This method we are going to make if it is empty, we check if it is empty.
+
+100
+00:09:21,840 --> 00:09:34,110
+So we are not going to delete anything against them that out, that print l n du is.
+
+101
+00:09:35,480 --> 00:09:36,010
+Empty.
+
+102
+00:09:37,590 --> 00:09:38,120
+OK.
+
+103
+00:09:40,170 --> 00:09:46,370
+Return otherwise, the deck has only one element.
+
+104
+00:09:46,400 --> 00:09:52,680
+So deck has only one element.
+
+105
+00:09:52,880 --> 00:10:05,570
+So what to do if grant equal equal to three years, then what to do front equal to minus one and rear
+
+106
+00:10:07,290 --> 00:10:14,690
+rear equal minus one else if the year ends if.
+
+107
+00:10:17,280 --> 00:10:22,020
+The front equal equal to the size minus one.
+
+108
+00:10:22,470 --> 00:10:23,790
+Then what to do?
+
+109
+00:10:23,940 --> 00:10:27,840
+We make grant equal to zero.
+
+110
+00:10:28,770 --> 00:10:29,270
+OK.
+
+111
+00:10:29,550 --> 00:10:31,290
+This is how we check.
+
+112
+00:10:31,700 --> 00:10:32,000
+No.
+
+113
+00:10:32,550 --> 00:10:44,190
+The last thing otherwise else, if it contains more than one, then franked equal to front plus one.
+
+114
+00:10:44,570 --> 00:10:51,630
+OK, this is how we check how we delete it from an element from the front.
+
+115
+00:10:51,870 --> 00:10:56,850
+Now let's check and delete an element from that area.
+
+116
+00:10:57,420 --> 00:10:58,800
+So the same way?
+
+117
+00:10:59,160 --> 00:11:07,430
+Void delete earlier at any and at an index because we are not good.
+
+118
+00:11:08,310 --> 00:11:10,050
+They care about the index.
+
+119
+00:11:10,470 --> 00:11:12,400
+We make it without 30 meters.
+
+120
+00:11:12,400 --> 00:11:18,480
+So we are going to f f is empty.
+
+121
+00:11:18,930 --> 00:11:31,470
+Checking the game system the out door to print l an empty deck, OK and return.
+
+122
+00:11:33,090 --> 00:11:40,650
+Otherwise, if front equal, equal to the rear, then what to do?
+
+123
+00:11:40,980 --> 00:11:53,190
+We are going to make France equal to minus one and as rere re initialized that here also by minus one.
+
+124
+00:11:53,470 --> 00:11:54,010
+OK.
+
+125
+00:11:54,760 --> 00:12:02,880
+Else, if we are going to make the air equal equal to zero and
+
+126
+00:12:05,550 --> 00:12:08,880
+three year equal to size minus one?
+
+127
+00:12:09,930 --> 00:12:10,370
+OK.
+
+128
+00:12:10,980 --> 00:12:15,770
+As the last situation is checking that the LS.
+
+129
+00:12:16,500 --> 00:12:17,640
+We are going.
+
+130
+00:12:17,640 --> 00:12:23,280
+We have many elements and we are going to initialize the rear equal minus one.
+
+131
+00:12:23,280 --> 00:12:29,070
+We are removing one from the rear and to delete it.
+
+132
+00:12:29,310 --> 00:12:29,790
+OK.
+
+133
+00:12:29,880 --> 00:12:37,020
+We are just making that here and moving the rear here because we are deleting from the area.
+
+134
+00:12:37,860 --> 00:12:47,370
+There is another methods that we are going to make like get to front, get the front end, get from
+
+135
+00:12:47,850 --> 00:12:48,180
+this.
+
+136
+00:12:48,420 --> 00:12:57,840
+If it is empty, if it is empty, then return minus one return minus one.
+
+137
+00:12:58,560 --> 00:13:06,350
+Otherwise, it will return the array at index slot and next front.
+
+138
+00:13:06,510 --> 00:13:13,890
+Because very simple, we are getting that element at the front and the index from now the same way we
+
+139
+00:13:13,890 --> 00:13:16,380
+are going to make get rear.
+
+140
+00:13:16,890 --> 00:13:18,870
+So here we have.
+
+141
+00:13:19,470 --> 00:13:31,950
+If it is empty or rear less than zero, then return minus one.
+
+142
+00:13:32,490 --> 00:13:38,190
+Otherwise, it will return at the at index every year.
+
+143
+00:13:38,730 --> 00:13:39,290
+OK.
+
+144
+00:13:39,870 --> 00:13:44,970
+This is how we make that implementation of the deck.
+
+145
+00:13:45,240 --> 00:13:47,040
+Now let's test this.
+
+146
+00:13:48,700 --> 00:13:52,660
+This program and this implementation.
+
+147
+00:13:53,260 --> 00:14:07,090
+So public static void, main string args and we start by creating an instance from the deck that we
+
+148
+00:14:07,090 --> 00:14:08,440
+have created here.
+
+149
+00:14:08,890 --> 00:14:11,980
+So deck deck
+
+150
+00:14:14,560 --> 00:14:21,730
+equal to new deck and image four elements inside at a size equal to four.
+
+151
+00:14:22,150 --> 00:14:39,160
+So deck dart insert Rudy year I will insert the 12 deck duct insert rear 12 14.
+
+152
+00:14:41,350 --> 00:14:41,890
+No.
+
+153
+00:14:43,700 --> 00:14:52,500
+Get we can get the elements we can get like that, the insert feront 13.
+
+154
+00:14:53,480 --> 00:15:04,130
+We can like deck, the delete front can delete from it or delete earlier and so on.
+
+155
+00:15:04,580 --> 00:15:09,860
+OK, so this is how we make the deck.
+
+156
+00:15:10,340 --> 00:15:14,420
+This is this is not where I would run this.
+
+157
+00:15:15,560 --> 00:15:22,280
+OK, nothing will happen because we didn't make anything to print out that dick insertion, deletion
+
+158
+00:15:22,280 --> 00:15:23,260
+or anything.
+
+159
+00:15:23,270 --> 00:15:34,190
+So this is the deck implementation you can continue making, making this like printing all of these
+
+160
+00:15:34,670 --> 00:15:38,420
+elements by making the print method and so on.
+
+161
+00:15:38,520 --> 00:15:48,590
+So I am waiting for your uploads, your source codes and your comments below for printing or playing
+
+162
+00:15:48,590 --> 00:15:50,690
+with this, these codes.
+
+163
+00:15:50,930 --> 00:15:58,400
+So we have finished the queue data structure, and let's move to that three.

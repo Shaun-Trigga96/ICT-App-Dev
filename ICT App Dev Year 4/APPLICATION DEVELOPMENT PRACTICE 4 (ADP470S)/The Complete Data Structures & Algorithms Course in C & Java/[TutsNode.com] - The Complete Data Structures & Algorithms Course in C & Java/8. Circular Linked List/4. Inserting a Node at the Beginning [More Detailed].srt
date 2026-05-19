@@ -1,0 +1,163 @@
+1
+00:00:00,060 --> 00:00:08,790
+So let's take the previously created method and take the situations and the condition at a low.
+
+2
+00:00:09,510 --> 00:00:19,330
+We start by this the atfirst method that we have seen and we have to create if had the equal.
+
+3
+00:00:19,500 --> 00:00:26,730
+What to know this condition new node dot next equal to new note node and they have refers to then you
+
+4
+00:00:26,730 --> 00:00:27,030
+note.
+
+5
+00:00:27,150 --> 00:00:31,290
+What does this mean if there is an empty list?
+
+6
+00:00:31,770 --> 00:00:40,140
+There is an empty link, a circle at list and we need to insert the first note inside it.
+
+7
+00:00:40,860 --> 00:00:45,780
+We create new note equaled next in the end of next, equal to a new node.
+
+8
+00:00:46,290 --> 00:00:47,160
+This is the note.
+
+9
+00:00:48,770 --> 00:00:58,610
+And it refers to itself because it is a circle circling it, blessed and the had equal to, then you
+
+10
+00:00:58,610 --> 00:00:59,060
+know it.
+
+11
+00:00:59,660 --> 00:01:09,700
+This is how we insert a first note and the circular link and let us do things that you should take heard
+
+12
+00:01:09,710 --> 00:01:17,000
+about it that if it is the only one that it contains inside that linked at least.
+
+13
+00:01:18,700 --> 00:01:22,600
+Inside the circle of Lincoln, this it should refer to itself.
+
+14
+00:01:23,170 --> 00:01:26,830
+And we should put the hat on a.
+
+15
+00:01:27,780 --> 00:01:34,860
+Had equal to then, you know, now let's see the other example, the other case if we have.
+
+16
+00:01:36,340 --> 00:01:44,770
+A link, at least, that contain one or more notes, then we should take that as a statement of this
+
+17
+00:01:44,770 --> 00:01:46,450
+method called at first.
+
+18
+00:01:47,080 --> 00:01:47,450
+OK.
+
+19
+00:01:48,190 --> 00:01:54,070
+We should take care about making a struct known equals temp equal to have.
+
+20
+00:01:54,700 --> 00:02:06,370
+And while temp next does not equal to, had we are searching about it, then it created temp temp equals
+
+21
+00:02:06,370 --> 00:02:08,050
+to that temp the next.
+
+22
+00:02:08,440 --> 00:02:17,050
+Then this would be removed and equal the temp next equal to the newly created node.
+
+23
+00:02:17,860 --> 00:02:23,320
+And new node next equal to the had and therefore it had equal to that.
+
+24
+00:02:23,500 --> 00:02:34,480
+You note, refer this copy the reference of the newly created node to the next node, which is 1024,
+
+25
+00:02:34,750 --> 00:02:44,860
+and change their 1024, the then the old node inside the linked list and change it to the newly created
+
+26
+00:02:44,860 --> 00:02:45,250
+one.
+
+27
+00:02:45,670 --> 00:02:52,990
+So therefore, we have inserted in, you know, at the beginning by making everything works fine and
+
+28
+00:02:52,990 --> 00:02:56,170
+ensure that all the references are working fine.
+
+29
+00:02:57,220 --> 00:03:05,650
+Time complexity of doing this insertion is best case is of one inserting the first note if there is
+
+30
+00:03:05,650 --> 00:03:11,830
+a link to the list, empty linked list and we are inserting the first note its best case because we
+
+31
+00:03:11,830 --> 00:03:16,540
+are doing a constant work inserting one note at the beginning of this list.
+
+32
+00:03:18,250 --> 00:03:26,350
+Worst case scenario is of often because we are inserting note in none empty list, because here we have
+
+33
+00:03:26,350 --> 00:03:27,130
+inserted.
+
+34
+00:03:28,330 --> 00:03:29,080
+Exactly.
+
+35
+00:03:29,080 --> 00:03:35,860
+We are inserting the note at the first position and that's making it constant war.
+
+36
+00:03:35,980 --> 00:03:44,830
+But the reference of the last note since it's circular list link, at least, that points to the first
+
+37
+00:03:44,830 --> 00:03:45,300
+one.
+
+38
+00:03:45,310 --> 00:03:53,380
+We should go to there through all the elements, through all the notes inside the circle or linked list
+
+39
+00:03:53,380 --> 00:03:59,830
+to get the last one and this last one, which should point to the first one.
+
+40
+00:03:59,950 --> 00:04:07,510
+This operation will give us a complexity of and depending on the number of nodes that it is contained
+
+41
+00:04:07,780 --> 00:04:10,960
+inside this circle or linked list.

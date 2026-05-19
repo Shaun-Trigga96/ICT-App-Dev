@@ -1,0 +1,371 @@
+1
+00:00:00,360 --> 00:00:05,340
+Hello, my friends, and welcome again to the complete data structure and algorithms course.
+
+2
+00:00:05,790 --> 00:00:13,200
+So an exercise number of 52, we are asked to write a function to remove duplicates from the link,
+
+3
+00:00:13,200 --> 00:00:17,120
+at least consider a linked list that contains nodes.
+
+4
+00:00:17,160 --> 00:00:26,940
+And inside this note, there are a value that may be they are kids like five and five, or if we have
+
+5
+00:00:26,940 --> 00:00:32,490
+a link, at least if we run our current linked list that we have created before.
+
+6
+00:00:32,730 --> 00:00:37,460
+In the previous exercises, we have four, one, five and three.
+
+7
+00:00:37,470 --> 00:00:41,610
+I will add in you not that will contain number five.
+
+8
+00:00:41,640 --> 00:00:44,040
+So for that, I will go to the main.
+
+9
+00:00:44,040 --> 00:00:51,810
+I would create a new node here or already we can like call at Append.
+
+10
+00:00:52,410 --> 00:00:53,280
+Then you not.
+
+11
+00:00:54,730 --> 00:01:00,240
+I will copy and paste this append no equal to five.
+
+12
+00:01:00,350 --> 00:01:01,480
+That's right, and same.
+
+13
+00:01:03,220 --> 00:01:07,840
+And here we go, we have four, one, five, three and five.
+
+14
+00:01:08,230 --> 00:01:12,490
+Our mission to remove the duplicates from the link at last.
+
+15
+00:01:12,880 --> 00:01:13,210
+OK.
+
+16
+00:01:13,480 --> 00:01:20,920
+So please go back to the lecture in order to understand what is the concept of this by using an animation?
+
+17
+00:01:21,430 --> 00:01:26,740
+And if you are ready, so let's go and make our new method.
+
+18
+00:01:26,980 --> 00:01:34,960
+So I will create public void and remove duplicates.
+
+19
+00:01:35,620 --> 00:01:36,190
+Method.
+
+20
+00:01:37,720 --> 00:01:41,170
+It will not take any perimeter and it will not return.
+
+21
+00:01:41,170 --> 00:01:51,250
+Anything goes its mission to remove the duplicates and go through their elements and depart it in one,
+
+22
+00:01:51,820 --> 00:01:55,930
+not one, equal to none.
+
+23
+00:01:57,220 --> 00:01:59,590
+I will create also another nod.
+
+24
+00:02:02,310 --> 00:02:05,210
+Note No.
+
+25
+00:02:05,250 --> 00:02:07,980
+Two equal to no.
+
+26
+00:02:10,110 --> 00:02:11,610
+Another No.
+
+27
+00:02:13,120 --> 00:02:18,670
+Not the equal to none,
+
+28
+00:02:21,370 --> 00:02:25,030
+and I will refer to not.
+
+29
+00:02:26,910 --> 00:02:29,950
+The one equal to the hat.
+
+30
+00:02:30,160 --> 00:02:31,810
+OK, so not one will be.
+
+31
+00:02:32,440 --> 00:02:34,540
+No one will be referring to the hat.
+
+32
+00:02:34,810 --> 00:02:46,240
+No, I will create a loop that will go through every element and pick one elements one by one silk bag.
+
+33
+00:02:46,570 --> 00:02:48,010
+This is the first step.
+
+34
+00:02:50,530 --> 00:02:56,350
+One big elements, one by one.
+
+35
+00:02:57,910 --> 00:03:11,710
+So while not one does not equal to none and not to the next does not equal to none.
+
+36
+00:03:12,670 --> 00:03:17,520
+So I am comparing the current state, the current not and the next not.
+
+37
+00:03:17,530 --> 00:03:23,320
+If it does not equal to none, then not to equal to not one.
+
+38
+00:03:23,920 --> 00:03:34,840
+OK, now inside this loop, I will create a nested loop that will compare to the pick element with the
+
+39
+00:03:34,840 --> 00:03:36,480
+rest of that element.
+
+40
+00:03:36,700 --> 00:03:39,430
+So this is the trick behind this question.
+
+41
+00:03:39,850 --> 00:03:50,680
+So comparing the big cat element with that rest, with the rest of the animals
+
+42
+00:03:55,120 --> 00:03:56,260
+elements, OK?
+
+43
+00:03:57,670 --> 00:03:58,330
+While
+
+44
+00:04:01,630 --> 00:04:11,920
+they're not to, the next does not equal to null if there is no stop between and then reach the end
+
+45
+00:04:11,920 --> 00:04:17,800
+of the list, check the third step.
+
+46
+00:04:17,950 --> 00:04:24,040
+Check if duplicates and delete it.
+
+47
+00:04:26,090 --> 00:04:37,870
+OK, if not one dog data equal equal to not to the next.
+
+48
+00:04:38,130 --> 00:04:41,230
+The data, then
+
+49
+00:04:45,940 --> 00:04:46,420
+then.
+
+50
+00:04:48,210 --> 00:04:50,790
+This sequence of step is very important.
+
+51
+00:04:50,910 --> 00:04:59,160
+So not to the next equal to nod to the next door.
+
+52
+00:04:59,250 --> 00:05:05,520
+Next, we are referring to the next system
+
+53
+00:05:08,370 --> 00:05:09,810
+the G.
+
+54
+00:05:10,020 --> 00:05:10,380
+C.
+
+55
+00:05:10,980 --> 00:05:11,340
+OK.
+
+56
+00:05:12,720 --> 00:05:18,690
+Now, let's again make an else statement.
+
+57
+00:05:19,560 --> 00:05:31,290
+This is tricky because part the chin or the not to not to the equal, not to equal
+
+58
+00:05:37,470 --> 00:05:40,050
+now to the next.
+
+59
+00:05:41,010 --> 00:05:41,510
+OK.
+
+60
+00:05:41,700 --> 00:05:44,580
+It's very simple now.
+
+61
+00:05:45,910 --> 00:05:57,430
+Here we need to move the cursor to make not to not one sort of equals to not one dot the next, I'm
+
+62
+00:05:57,430 --> 00:05:58,600
+moving the node one.
+
+63
+00:05:58,810 --> 00:06:06,070
+This is for the outer look so that the outer loop will go through every time and make not to equal to
+
+64
+00:06:06,070 --> 00:06:06,760
+not one.
+
+65
+00:06:07,060 --> 00:06:09,130
+And go through this loop.
+
+66
+00:06:10,340 --> 00:06:17,960
+And then it will not one it will increase the pointer and move the pointer from it, from the current
+
+67
+00:06:17,960 --> 00:06:20,600
+state and move it to the next and.
+
+68
+00:06:21,260 --> 00:06:30,560
+OK, so not one becomes the next, not every time this loop will go a direction and the while loop that's
+
+69
+00:06:30,560 --> 00:06:37,340
+nested there, while loop, it will works with every element and compare it with the rest of that.
+
+70
+00:06:38,240 --> 00:06:38,630
+OK.
+
+71
+00:06:38,960 --> 00:06:44,630
+So let's go and test this by making.
+
+72
+00:06:45,610 --> 00:06:46,180
+Calling.
+
+73
+00:06:47,740 --> 00:06:53,720
+But first of all, let me again check the list, we have four one five three five.
+
+74
+00:06:53,740 --> 00:07:00,880
+We expect remove to remove the fact this is exercise.
+
+75
+00:07:02,500 --> 00:07:08,920
+Fifty two in more than double the rate gates.
+
+76
+00:07:11,470 --> 00:07:24,820
+Then make list the remove the public airwaves and then system that print the power with print we call
+
+77
+00:07:25,090 --> 00:07:29,680
+linked list print again, the list print the list.
+
+78
+00:07:29,680 --> 00:07:35,260
+We have created this method in that first exercise and I think at least that's redundancy.
+
+79
+00:07:37,150 --> 00:07:39,460
+We have four one five three five.
+
+80
+00:07:39,820 --> 00:07:45,190
+Then after that inspection, exception failed to read next.
+
+81
+00:07:45,190 --> 00:07:47,070
+Not is not next.
+
+82
+00:07:47,080 --> 00:07:47,530
+Not.
+
+83
+00:07:48,910 --> 00:07:53,410
+Is at two hundred not two, OK?
+
+84
+00:07:53,950 --> 00:07:58,270
+It would be dot dot, not one.
+
+85
+00:07:59,870 --> 00:08:00,900
+And here we go.
+
+86
+00:08:00,920 --> 00:08:06,860
+This is the list before removing the duplicates for one five three five.
+
+87
+00:08:06,890 --> 00:08:12,590
+And this is the list after removing duplicates for one, five and three.
+
+88
+00:08:12,620 --> 00:08:18,260
+We have removed the last one, which is five, which is the duplicate of five.
+
+89
+00:08:18,590 --> 00:08:18,920
+OK.
+
+90
+00:08:19,190 --> 00:08:19,920
+And there we go.
+
+91
+00:08:19,940 --> 00:08:26,940
+We have created these exercises and we have created these methods throughout this exercise.
+
+92
+00:08:26,960 --> 00:08:34,340
+We will continue with the reverse and link list and rotate and link at and by that week we can or we
+
+93
+00:08:34,340 --> 00:08:37,070
+covered the all link.

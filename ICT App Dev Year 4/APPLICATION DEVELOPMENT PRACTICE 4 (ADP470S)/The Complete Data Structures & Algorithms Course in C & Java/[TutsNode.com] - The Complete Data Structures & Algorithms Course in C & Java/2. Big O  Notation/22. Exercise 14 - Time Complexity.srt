@@ -1,0 +1,291 @@
+1
+00:00:00,450 --> 00:00:03,510
+Hello, my friends, and welcome to exercise number 14.
+
+2
+00:00:03,990 --> 00:00:11,760
+We are asked to find the time and complexity of the method Factorial Victoria is returning, type is
+
+3
+00:00:11,760 --> 00:00:24,360
+integer and it has a perimeter end and so holds the video and think about this for 10 seconds and write
+
+4
+00:00:24,360 --> 00:00:26,850
+down the solution on paper.
+
+5
+00:00:29,090 --> 00:00:31,970
+Or and comment in the comments below.
+
+6
+00:00:32,150 --> 00:00:40,910
+So I am waiting your comments, and I hope you like solve it and you understand the algorithm and how
+
+7
+00:00:40,910 --> 00:00:43,790
+to solve this time of complexity questions.
+
+8
+00:00:45,180 --> 00:00:46,530
+So let's begin.
+
+9
+00:00:48,320 --> 00:00:59,930
+And above we have if and if and deaths, as we said in the in the general rules of the big own notation,
+
+10
+00:01:00,410 --> 00:01:05,750
+we took the worst one in the F conditions.
+
+11
+00:01:06,050 --> 00:01:07,880
+So if else?
+
+12
+00:01:08,860 --> 00:01:21,160
+If else, if and else, we are having three three like possibilities or three switches, if else if
+
+13
+00:01:21,160 --> 00:01:21,550
+and.
+
+14
+00:01:22,030 --> 00:01:23,050
+Three cases.
+
+15
+00:01:23,440 --> 00:01:25,750
+So we took the worst one.
+
+16
+00:01:25,990 --> 00:01:28,180
+We start studying with the first one.
+
+17
+00:01:28,600 --> 00:01:32,930
+If and less than zero, it's comparing return minus one.
+
+18
+00:01:32,950 --> 00:01:41,770
+It was all of one because nothing is doing and nothing is done here with a complex hour, depending
+
+19
+00:01:41,770 --> 00:01:46,810
+on their impact here else, if an equal equal to one return one.
+
+20
+00:01:47,440 --> 00:01:54,760
+Also, it is of one because there is no interference or dependence on their input that we have.
+
+21
+00:01:56,520 --> 00:02:05,750
+As her return and times factorial and minus one, this is a straight, it is straight research.
+
+22
+00:02:06,090 --> 00:02:10,050
+We will learn about recursion in their next videos, so don't worry.
+
+23
+00:02:10,710 --> 00:02:12,630
+This is dedication.
+
+24
+00:02:12,660 --> 00:02:19,890
+This is the calling of the function again, going up here and call the function again and again.
+
+25
+00:02:19,890 --> 00:02:24,150
+But here we are passing and minus one.
+
+26
+00:02:24,720 --> 00:02:28,590
+OK, so every time it is increased, decreased by one.
+
+27
+00:02:29,250 --> 00:02:34,380
+And here it is, and times factorial one minus one.
+
+28
+00:02:34,920 --> 00:02:40,680
+This is the this is depending on there and value.
+
+29
+00:02:41,010 --> 00:02:47,220
+So if we pass factor of five return five times factorial of four.
+
+30
+00:02:47,580 --> 00:02:51,060
+So this will depend on the and value.
+
+31
+00:02:51,770 --> 00:02:57,120
+OK, let's take an example if we pass and equal to five, so.
+
+32
+00:02:58,140 --> 00:03:00,030
+And equal to five.
+
+33
+00:03:02,280 --> 00:03:11,910
+This will result if analysts and zero no, as if an equal equal to one no else return and return, this
+
+34
+00:03:11,910 --> 00:03:12,890
+is their return.
+
+35
+00:03:12,990 --> 00:03:22,170
+The first statement five, which is n times factorial go and call factorial.
+
+36
+00:03:23,400 --> 00:03:24,030
+Off for.
+
+37
+00:03:25,120 --> 00:03:35,380
+So again, it go and execute this factorial offer would be and less than zero no equal to one no else
+
+38
+00:03:35,380 --> 00:03:40,060
+and equal to return and times factorial.
+
+39
+00:03:40,480 --> 00:03:46,420
+So it returns for time factorial of three.
+
+40
+00:03:48,320 --> 00:03:49,550
+Factorial of three.
+
+41
+00:03:51,130 --> 00:03:53,560
+It will go up again.
+
+42
+00:03:54,010 --> 00:03:57,250
+Make check with less than zero equal to zero to one.
+
+43
+00:03:59,370 --> 00:04:05,570
+Or less there or else return and times factorial of two.
+
+44
+00:04:05,610 --> 00:04:09,300
+So three times factorial of two.
+
+45
+00:04:10,280 --> 00:04:19,490
+Again, three times factor of two to a factor of two less than zero, no LCF equal equal to one, no
+
+46
+00:04:19,940 --> 00:04:22,250
+return in two times.
+
+47
+00:04:24,000 --> 00:04:25,500
+Factorial of one.
+
+48
+00:04:26,110 --> 00:04:26,820
+It is.
+
+49
+00:04:28,650 --> 00:04:36,130
+Here it is two times a factor of one factor of one going up less than zero, no equal equal to one.
+
+50
+00:04:36,150 --> 00:04:40,290
+Yes, so return one, so factor of one is one.
+
+51
+00:04:40,680 --> 00:04:42,510
+And this is the.
+
+52
+00:04:43,500 --> 00:04:48,450
+We will see this in the next videos in more and more details.
+
+53
+00:04:48,930 --> 00:04:49,920
+So don't worry.
+
+54
+00:04:50,820 --> 00:04:53,640
+Just understand this exercise.
+
+55
+00:04:55,440 --> 00:04:58,410
+No one is substituted, but here.
+
+56
+00:04:59,560 --> 00:05:00,100
+One.
+
+57
+00:05:00,310 --> 00:05:08,050
+So two times the one is equal to do now, do is again executed and substituted here.
+
+58
+00:05:08,080 --> 00:05:11,020
+So three times two is equal to six.
+
+59
+00:05:12,220 --> 00:05:14,690
+Factorial of three is equal to six.
+
+60
+00:05:14,710 --> 00:05:18,760
+So six is executed, substituted here six times.
+
+61
+00:05:18,760 --> 00:05:23,740
+Four is equal to 24.
+
+62
+00:05:25,700 --> 00:05:26,250
+OK.
+
+63
+00:05:26,850 --> 00:05:33,500
+Two factorial of four, this is the factor of four factorial four is executed here, self returned five
+
+64
+00:05:33,500 --> 00:05:38,720
+times factorial of four, which is one 20, I think.
+
+65
+00:05:39,960 --> 00:05:42,210
+Yes, there's one 20.
+
+66
+00:05:43,850 --> 00:05:44,380
+OK.
+
+67
+00:05:44,870 --> 00:05:46,280
+It's very simple.
+
+68
+00:05:46,550 --> 00:05:56,480
+So we return one 20 if we pass and equal to five, the value of this function or the returning value,
+
+69
+00:05:56,480 --> 00:05:58,500
+it returned one 20.
+
+70
+00:05:58,730 --> 00:06:07,430
+So it depends on the factory, but since it is a straightforward recursion, it is depending on the
+
+71
+00:06:07,850 --> 00:06:08,710
+the end.
+
+72
+00:06:12,270 --> 00:06:12,790
+OK.
+
+73
+00:06:14,140 --> 00:06:15,970
+So it will result in.

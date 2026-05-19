@@ -1,0 +1,351 @@
+1
+00:00:00,090 --> 00:00:01,140
+Hello, my friends.
+
+2
+00:00:01,530 --> 00:00:03,600
+And welcome to exercise number 57.
+
+3
+00:00:04,110 --> 00:00:08,190
+We are asked to add a node at the front of the list.
+
+4
+00:00:08,520 --> 00:00:12,990
+So in the previous video, we have created a class called node.
+
+5
+00:00:13,200 --> 00:00:21,810
+It contains few pointers that previous and next and contains data that it is of type and OK, and we
+
+6
+00:00:21,810 --> 00:00:25,820
+have created an object of its type called ahead.
+
+7
+00:00:26,130 --> 00:00:35,160
+Now we are going to create a method that allow pushing and adding a node at the front of the list.
+
+8
+00:00:35,520 --> 00:00:36,000
+OK.
+
+9
+00:00:36,540 --> 00:00:39,000
+What I mean, adding at the front of the list?
+
+10
+00:00:39,390 --> 00:00:42,960
+It means at the beginning of the list.
+
+11
+00:00:43,060 --> 00:00:52,380
+OK, so beginning of the list and we have learned about this in the lecture.
+
+12
+00:00:52,500 --> 00:01:01,110
+So please go back and forth the previous previous lectures and see how to add the what is the algorithm
+
+13
+00:01:01,110 --> 00:01:04,050
+of adding nodes at the beginning of the list?
+
+14
+00:01:04,320 --> 00:01:10,200
+And then we are going to apply this directly by codes in Java.
+
+15
+00:01:10,680 --> 00:01:12,780
+So let's start.
+
+16
+00:01:13,200 --> 00:01:14,100
+First of all.
+
+17
+00:01:14,130 --> 00:01:21,000
+First step, we start by making the units making one making.
+
+18
+00:01:22,260 --> 00:01:36,360
+And you note, so node new nodes equal to new nodes and took into meter the new date.
+
+19
+00:01:36,780 --> 00:01:41,450
+So how to create how to get the new date in order to create a node?
+
+20
+00:01:41,460 --> 00:01:45,390
+I need the data in order to create its own date.
+
+21
+00:01:45,870 --> 00:01:51,330
+So for that, I need to pass into the perimeter of this method.
+
+22
+00:01:51,800 --> 00:01:54,360
+The end new date?
+
+23
+00:01:55,300 --> 00:01:55,700
+OK.
+
+24
+00:01:57,300 --> 00:02:04,110
+I passed into their perimeter new data, and then I will create a new node that contains this date.
+
+25
+00:02:05,160 --> 00:02:09,540
+Now, the second step is making the next.
+
+26
+00:02:09,540 --> 00:02:12,330
+Often you node as the head and the previous.
+
+27
+00:02:13,350 --> 00:02:13,910
+As not.
+
+28
+00:02:14,260 --> 00:02:22,920
+OK, so linking linkage, this is the big step I prefer, like naming it as linking or linkage.
+
+29
+00:02:23,310 --> 00:02:26,370
+So we have created the data of the node.
+
+30
+00:02:26,460 --> 00:02:30,420
+Now I will create the next and the previous of the node.
+
+31
+00:02:30,420 --> 00:02:31,410
+So new node
+
+32
+00:02:34,110 --> 00:02:35,980
+next equal.
+
+33
+00:02:36,780 --> 00:02:38,060
+What is the next?
+
+34
+00:02:38,160 --> 00:02:45,510
+When you put anything in the front of the list or at the beginning of the list, it would be the head
+
+35
+00:02:45,750 --> 00:02:49,380
+of the previous before add the addition.
+
+36
+00:02:49,560 --> 00:02:52,530
+So consider that you have three nodes.
+
+37
+00:02:53,490 --> 00:02:57,570
+The head of the first no, the had of this list is the first node.
+
+38
+00:02:57,990 --> 00:03:06,120
+So if I need to insert a node before the first one, I should refer the next to this.
+
+39
+00:03:06,270 --> 00:03:16,890
+Had that, that is currently being that start of the list now new node here that the previous equal
+
+40
+00:03:16,890 --> 00:03:24,540
+to now because there is nothing that there's previous of the first node in a double endangered list,
+
+41
+00:03:25,080 --> 00:03:33,220
+and we are making this method in order to allow the user to insert a node at the beginning of the list.
+
+42
+00:03:33,240 --> 00:03:38,040
+So before this newly created node, there is nothing.
+
+43
+00:03:38,340 --> 00:03:40,860
+So its reference would be not.
+
+44
+00:03:41,190 --> 00:03:42,000
+It's very simple.
+
+45
+00:03:42,960 --> 00:03:45,750
+Now let's move to the third method.
+
+46
+00:03:46,870 --> 00:03:47,590
+Or state?
+
+47
+00:03:50,900 --> 00:04:00,470
+If we need to change the previous pre preview of our previous of had no to new note, so we need to
+
+48
+00:04:00,470 --> 00:04:10,190
+make it conditional stay, so change previous of had no to New York.
+
+49
+00:04:10,790 --> 00:04:13,550
+This is the trick behind additions.
+
+50
+00:04:14,960 --> 00:04:21,260
+We need to check if have does not equal to no.
+
+51
+00:04:21,890 --> 00:04:32,290
+Then had that the previous pirates, but it had that previous equal to new note.
+
+52
+00:04:32,630 --> 00:04:33,080
+OK?
+
+53
+00:04:33,890 --> 00:04:35,360
+This is very simple.
+
+54
+00:04:37,980 --> 00:04:50,490
+And the fourth estate or first step move that had to point to that and, you know, it had equal to,
+
+55
+00:04:50,500 --> 00:04:51,330
+you know.
+
+56
+00:04:51,630 --> 00:04:59,670
+OK, so now head, which is here, which is the object that we have created as global head equal to,
+
+57
+00:04:59,670 --> 00:05:00,440
+then, you know?
+
+58
+00:05:00,870 --> 00:05:01,400
+OK.
+
+59
+00:05:02,760 --> 00:05:04,080
+It's very simple.
+
+60
+00:05:04,410 --> 00:05:08,120
+Now let's create the main method to test it.
+
+61
+00:05:08,490 --> 00:05:12,930
+Testing public static
+
+62
+00:05:15,780 --> 00:05:17,460
+void main.
+
+63
+00:05:18,420 --> 00:05:21,210
+By the way, you can get free coupons.
+
+64
+00:05:21,930 --> 00:05:28,110
+Do you enroll in our The Complete Java Developer course?
+
+65
+00:05:28,230 --> 00:05:28,650
+OK.
+
+66
+00:05:29,280 --> 00:05:38,580
+So in order to Master Chef to become professional and Java developed system that allowed the print and
+
+67
+00:05:40,590 --> 00:05:48,120
+I will put here adding new date, new notes
+
+68
+00:05:52,500 --> 00:05:54,510
+I will push.
+
+69
+00:05:58,240 --> 00:06:07,660
+So I will put here I will make it public static in order to allow with its access.
+
+70
+00:06:10,160 --> 00:06:10,730
+Bush.
+
+71
+00:06:13,150 --> 00:06:14,020
+I need.
+
+72
+00:06:15,610 --> 00:06:16,300
+What is there?
+
+73
+00:06:16,990 --> 00:06:17,890
+You know it.
+
+74
+00:06:20,500 --> 00:06:26,560
+Aesthetic, so make no static, OK, public, less static, less known.
+
+75
+00:06:27,050 --> 00:06:27,550
+OK.
+
+76
+00:06:28,540 --> 00:06:29,590
+And had.
+
+77
+00:06:34,400 --> 00:06:37,850
+I will make it this high risk.
+
+78
+00:06:39,500 --> 00:06:42,830
+I will make undo.
+
+79
+00:06:44,230 --> 00:06:46,600
+For making it a static, so.
+
+80
+00:06:49,670 --> 00:07:00,980
+I will do it now, I can access this by putting doubling at least the bush.
+
+81
+00:07:01,670 --> 00:07:17,530
+No, you can make it by this bush by making an instance of double link at last the an equal to new Dublin
+
+82
+00:07:17,540 --> 00:07:18,230
+and could last.
+
+83
+00:07:19,550 --> 00:07:23,990
+And I start by calling the elder bush.
+
+84
+00:07:24,140 --> 00:07:29,930
+I need to push here the newly created data I will push number one.
+
+85
+00:07:30,410 --> 00:07:36,500
+OK, so the first note inside this deal would be equal to one.
+
+86
+00:07:36,860 --> 00:07:47,000
+In the next video, we are going to write a method that prints all components of this doubly linked
+
+87
+00:07:47,000 --> 00:07:50,750
+list, and we will see how this works.
+
+88
+00:07:51,080 --> 00:07:51,390
+OK.

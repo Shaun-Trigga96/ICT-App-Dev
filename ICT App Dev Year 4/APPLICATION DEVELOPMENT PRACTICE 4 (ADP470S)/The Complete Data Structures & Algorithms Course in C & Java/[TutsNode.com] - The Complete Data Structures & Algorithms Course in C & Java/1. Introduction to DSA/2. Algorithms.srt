@@ -1,0 +1,403 @@
+1
+00:00:01,070 --> 00:00:09,740
+What is algorithm in computer programming terms, an algorithm is a set of well-defined instructions
+
+2
+00:00:09,740 --> 00:00:12,170
+to solve a particular problem.
+
+3
+00:00:12,920 --> 00:00:17,660
+It takes a set of input and produces a desired output.
+
+4
+00:00:18,110 --> 00:00:25,850
+So an algorithm is the step by step unambiguous instructions to solve a given problem.
+
+5
+00:00:27,430 --> 00:00:36,700
+An example for an algorithm like adding two numbers in order to add two numbers, you should take two
+
+6
+00:00:36,700 --> 00:00:37,420
+numbers.
+
+7
+00:00:37,750 --> 00:00:38,410
+Input.
+
+8
+00:00:38,810 --> 00:00:47,530
+Okay, so we have number one, we have a valuable call, number one and we have entered the user entered
+
+9
+00:00:47,530 --> 00:00:48,340
+number four.
+
+10
+00:00:48,550 --> 00:00:50,500
+So Ford is stored inside.
+
+11
+00:00:50,920 --> 00:01:00,040
+One variable and other variable is listening for that user input, and the user input is 70.
+
+12
+00:01:00,580 --> 00:01:07,870
+So 70 is and is like stored inside numb to variable.
+
+13
+00:01:09,180 --> 00:01:19,110
+Ad numbers using the plus operator and memory and the spew and do this in their arithmetic and logical
+
+14
+00:01:19,110 --> 00:01:30,450
+unit so that this would result in giving us in the resolved a new valuable code sample, which is 74.
+
+15
+00:01:30,660 --> 00:01:34,710
+So we have stored 74 inside the some value.
+
+16
+00:01:39,000 --> 00:01:41,130
+Another example of algorithms.
+
+17
+00:01:42,640 --> 00:01:50,530
+To find the largest number among three numbers, the first step in computer engineering or computer
+
+18
+00:01:50,530 --> 00:01:52,620
+science and programming.
+
+19
+00:01:53,080 --> 00:01:54,850
+You need to start the program.
+
+20
+00:01:56,690 --> 00:02:03,650
+Non net declare variables A B and three and C, so we have three variables.
+
+21
+00:02:04,550 --> 00:02:06,470
+Number one, two and three.
+
+22
+00:02:06,890 --> 00:02:11,750
+Read the variables ABC or number one to number three.
+
+23
+00:02:12,590 --> 00:02:22,460
+So a would be result in one four to one, which the user input B or numb to would be the input of the
+
+24
+00:02:22,460 --> 00:02:28,490
+user, which is seventy and three number three, or C is 12.
+
+25
+00:02:28,970 --> 00:02:38,210
+These are the reading of the BI, so we have created declared variables we have instantiate in sheet
+
+26
+00:02:38,570 --> 00:02:45,770
+and instantiate the data inside them and stored the data that entered by the user inside them.
+
+27
+00:02:46,890 --> 00:02:50,550
+Now we need to make that comparison, so.
+
+28
+00:02:51,860 --> 00:03:03,710
+If no one greater than NUM do and this is the case here, so no one is greater than do we took no one
+
+29
+00:03:03,710 --> 00:03:08,770
+as the biggest and the bigger between number one and two.
+
+30
+00:03:09,320 --> 00:03:19,980
+OK, then we are going to compare number one with number three, since no one is greater number.
+
+31
+00:03:20,000 --> 00:03:20,690
+Number two.
+
+32
+00:03:20,870 --> 00:03:24,470
+So no need to compare number two with the number three.
+
+33
+00:03:25,660 --> 00:03:30,550
+We take number one and compare it with three.
+
+34
+00:03:31,460 --> 00:03:40,340
+And since no one is greater than number three, so number one is the greatest among the three given
+
+35
+00:03:40,340 --> 00:03:44,180
+inputs A, B, C or none one, two and three.
+
+36
+00:03:44,930 --> 00:03:45,290
+OK.
+
+37
+00:03:46,130 --> 00:03:47,780
+There is another way.
+
+38
+00:03:48,860 --> 00:03:57,560
+And another thing that we should consider maybe the first number or number one is not greater than two.
+
+39
+00:03:57,890 --> 00:04:00,740
+So there is an L condition.
+
+40
+00:04:00,950 --> 00:04:05,720
+So if a greater, then B and this is our case.
+
+41
+00:04:06,020 --> 00:04:15,770
+So it works fine and we need and we should consider all the cases we need to cover all the cases inside
+
+42
+00:04:15,770 --> 00:04:21,860
+a good algorithm in order not to have bugs or errors during running the product.
+
+43
+00:04:22,340 --> 00:04:34,820
+So if B greater than C or sorry, if b greater than A, then proceed b greater than C, then display
+
+44
+00:04:34,820 --> 00:04:43,100
+B is the largest otherwise c it the greatest number and step number five step stop the program.
+
+45
+00:04:46,200 --> 00:04:55,590
+Let's take an algorithm three, find the root of the quadratic equation a x squared plus b x plus C
+
+46
+00:04:55,890 --> 00:04:56,820
+equal to zero.
+
+47
+00:04:57,420 --> 00:05:07,470
+In order to solve like this example, we should make declared three variables A, B and C. We store
+
+48
+00:05:07,470 --> 00:05:10,440
+a as one because it's multiplied by one.
+
+49
+00:05:10,470 --> 00:05:18,870
+For example, the user enter one B storing it inside inside it to the user.
+
+50
+00:05:18,870 --> 00:05:24,110
+Enter to and c the user entered one and stored inside c.
+
+51
+00:05:24,900 --> 00:05:30,420
+Now we need to declare another variable called determinant.
+
+52
+00:05:30,630 --> 00:05:35,970
+This determinant is calculated by b squared minus four AC.
+
+53
+00:05:36,120 --> 00:05:38,910
+This is the delta or the determinant.
+
+54
+00:05:39,270 --> 00:05:47,700
+So the determinant of these is if this equation, the user entered a as one, B S2 and C as one.
+
+55
+00:05:48,150 --> 00:05:51,780
+The determinant of this would be equal to zero.
+
+56
+00:05:52,350 --> 00:05:53,280
+This result?
+
+57
+00:05:54,930 --> 00:06:01,650
+Or that determinant will determine the roots of our quadratic equation.
+
+58
+00:06:02,280 --> 00:06:06,480
+Either they are real or they are imaginary.
+
+59
+00:06:06,750 --> 00:06:14,430
+So if the greater than or equal to zero, there are two worlds two real roots.
+
+60
+00:06:16,320 --> 00:06:21,100
+Or if the less than zero, we will see the complex rules.
+
+61
+00:06:21,390 --> 00:06:31,680
+So if they're greater than zero or or equal to zero, then create two other variables are one and or
+
+62
+00:06:31,680 --> 00:06:32,010
+two.
+
+63
+00:06:33,040 --> 00:06:45,970
+OK, we have a B and C D capital and R1 and R2 till now R1 and Arta are representing the roots of this
+
+64
+00:06:45,970 --> 00:06:46,660
+equation.
+
+65
+00:06:47,080 --> 00:06:55,900
+So R1 is calculated by minus B plus radical B squared minus four AC over to A.
+
+66
+00:06:56,320 --> 00:07:04,630
+And in this case is equal to minus one, and R2 is calculated by minus B minus radical B squared minus
+
+67
+00:07:04,630 --> 00:07:07,150
+40 c over to a.
+
+68
+00:07:07,660 --> 00:07:15,530
+And this this example would result in R1 equal R2, which is the double routes.
+
+69
+00:07:15,540 --> 00:07:17,560
+One determinant is equal to zero.
+
+70
+00:07:18,490 --> 00:07:23,290
+If decorators and zero, then we have two distinct routes.
+
+71
+00:07:24,040 --> 00:07:33,610
+Now, if they're less than zero, there is a real part which is calculated by minus B over to a an imaginary
+
+72
+00:07:33,610 --> 00:07:34,130
+part.
+
+73
+00:07:34,480 --> 00:07:38,320
+Radical B squared minus four AC over to a.
+
+74
+00:07:39,310 --> 00:07:45,970
+OK, so we need now to calculate the routes by putting the real part.
+
+75
+00:07:45,970 --> 00:07:54,010
+Plus, J Times IP and R2 is our real part, minus J Times IP.
+
+76
+00:07:54,550 --> 00:07:59,290
+In this case, we need to create two variables R1 and R2.
+
+77
+00:07:59,890 --> 00:08:06,460
+And we calculate the real part and the imaginary part and multiply them by Jane.
+
+78
+00:08:06,880 --> 00:08:11,800
+So this complexity in a small quadratic equation.
+
+79
+00:08:12,490 --> 00:08:15,520
+So how to solve this equation?
+
+80
+00:08:15,670 --> 00:08:23,860
+Learned later on how to write the codes responsible for making this algorithm working on many coding
+
+81
+00:08:23,860 --> 00:08:24,550
+languages.
+
+82
+00:08:26,260 --> 00:08:29,680
+Now to see the algorithms in our daily lives.
+
+83
+00:08:30,970 --> 00:08:40,480
+Consider a teacher, so consider a teacher need to sort the papers of and for the students in alphabetical
+
+84
+00:08:40,480 --> 00:08:40,930
+order.
+
+85
+00:08:41,440 --> 00:08:47,500
+This type of desk is similar to the function of a sorting algorithm like a bucket sort.
+
+86
+00:08:48,330 --> 00:08:53,490
+And we will learn about this sorting algorithms later on through a discourse.
+
+87
+00:08:54,600 --> 00:09:01,710
+By looking at only the first letter of the first name, you can remove a lot of unnecessary information
+
+88
+00:09:02,130 --> 00:09:03,150
+like this.
+
+89
+00:09:03,390 --> 00:09:13,320
+The student last name, the student name and the student age or the student class or what and the date
+
+90
+00:09:13,470 --> 00:09:15,360
+of the of the exam.
+
+91
+00:09:15,780 --> 00:09:21,750
+So we need the first letter of the first name in order to sort them alphabetically.
+
+92
+00:09:27,040 --> 00:09:29,920
+Algorithms in our daily life also.
+
+93
+00:09:31,140 --> 00:09:34,380
+So think about arrangement of leader board game.
+
+94
+00:09:36,670 --> 00:09:44,380
+And you need an algorithm like helping you to find the smaller, all or largest number in a list of
+
+95
+00:09:44,380 --> 00:09:45,640
+thousands of number.
+
+96
+00:09:45,850 --> 00:09:54,880
+So you need an algorithm to find the correct number and the correct score, or you need to keep track
+
+97
+00:09:54,880 --> 00:09:57,460
+of the highest score in the video game.
+
+98
+00:09:59,150 --> 00:10:06,050
+Or you need to find out which seats on a train or plane are occupied.
+
+99
+00:10:08,560 --> 00:10:14,260
+Or finding or listing results from search engines like Google.
+
+100
+00:10:15,340 --> 00:10:23,170
+And providing the instructions that tell you how to get from one location to another with the shortest
+
+101
+00:10:23,170 --> 00:10:32,680
+way using Google Maps, these algorithms also we are going to learn more about them through this course.

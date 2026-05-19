@@ -1,0 +1,715 @@
+1
+00:00:00,360 --> 00:00:04,200
+Hello, all my friends, and welcome to exercise number 78.
+
+2
+00:00:04,650 --> 00:00:14,430
+And this exercise, we are going to implement the QS data structure inside Java, so we open our intelligent
+
+3
+00:00:14,460 --> 00:00:19,740
+idea and we create a new Java class called Q.
+
+4
+00:00:21,000 --> 00:00:30,960
+OK, and this Q would be containing that data as a form of array.
+
+5
+00:00:31,440 --> 00:00:41,010
+So we have agreed that that the queue contains items insert, insert that inside and array.
+
+6
+00:00:41,760 --> 00:00:52,500
+For that I need to create in the same as the stack algorithm that we have created.
+
+7
+00:00:54,300 --> 00:01:01,110
+And before the same structure, I need to create a private intégré.
+
+8
+00:01:02,190 --> 00:01:07,100
+Here private and have a.
+
+9
+00:01:13,090 --> 00:01:13,320
+OK.
+
+10
+00:01:14,640 --> 00:01:26,610
+And it contains a fixed size that we are going to to insert it in the queue constructor and we we have
+
+11
+00:01:26,610 --> 00:01:32,280
+to make an event called front and end every year.
+
+12
+00:01:33,210 --> 00:01:33,780
+Okay.
+
+13
+00:01:34,410 --> 00:01:40,140
+And the same as the stack we have, you can use the capacity.
+
+14
+00:01:41,210 --> 00:01:50,480
+So if we are using that, if you need to get this tag capacity directly or we need to make a size function
+
+15
+00:01:50,480 --> 00:01:51,140
+later on.
+
+16
+00:01:51,800 --> 00:01:56,900
+So I will create that constructor here.
+
+17
+00:01:57,320 --> 00:02:09,980
+So the queue it took into the perimeter and size that we are going to see how how it will create a new
+
+18
+00:02:09,980 --> 00:02:12,080
+element in you array.
+
+19
+00:02:12,530 --> 00:02:21,940
+So here are our big wall to new array new into array of size size.
+
+20
+00:02:22,490 --> 00:02:22,790
+OK.
+
+21
+00:02:23,450 --> 00:02:31,760
+We are creating the new array exactly that we have created in the stack capacity equal to size if I
+
+22
+00:02:31,760 --> 00:02:33,560
+will not make it in the vacuum.
+
+23
+00:02:34,130 --> 00:02:42,170
+And you can remove it from the stack because we have a method called size, it will return the 2+1 for
+
+24
+00:02:42,290 --> 00:02:42,740
+this.
+
+25
+00:02:43,190 --> 00:02:43,620
+OK.
+
+26
+00:02:45,240 --> 00:02:55,290
+And we assigned the front equal to minus one and rear equal to minus one.
+
+27
+00:02:56,190 --> 00:03:03,000
+You see the difference between the queue structure and the stack, the stack it curves about the top.
+
+28
+00:03:03,420 --> 00:03:07,950
+But in the queue, it occurs about the front and the rear.
+
+29
+00:03:08,100 --> 00:03:09,400
+The front male.
+
+30
+00:03:09,780 --> 00:03:16,140
+OK, so let's start making the functions here.
+
+31
+00:03:18,320 --> 00:03:19,730
+I close the stack.
+
+32
+00:03:20,790 --> 00:03:29,070
+And start making their methods, you know, the first one.
+
+33
+00:03:29,100 --> 00:03:38,760
+It is often out of returning time, bullion is full and it took into the perimeter, nothing because
+
+34
+00:03:38,760 --> 00:03:40,470
+we are checking if there's a fall.
+
+35
+00:03:40,860 --> 00:03:49,830
+So if front, as we have said in the lectures before, their front equal equal to zero.
+
+36
+00:03:50,050 --> 00:03:50,760
+And.
+
+37
+00:03:53,530 --> 00:03:55,840
+Of time, I am printing dollar sign.
+
+38
+00:03:56,610 --> 00:03:57,040
+Yes.
+
+39
+00:03:57,700 --> 00:04:06,970
+If it is equal to size minus one, so I will create a variable called size here.
+
+40
+00:04:10,000 --> 00:04:11,050
+In size.
+
+41
+00:04:15,170 --> 00:04:22,250
+It's a global variable, and I will make this size equal to size.
+
+42
+00:04:22,810 --> 00:04:23,120
+OK.
+
+43
+00:04:25,570 --> 00:04:32,870
+In order to make it very simple here, it is equal to minus one than return true.
+
+44
+00:04:33,520 --> 00:04:36,370
+Otherwise, it will return false.
+
+45
+00:04:37,600 --> 00:04:38,050
+OK.
+
+46
+00:04:39,130 --> 00:04:43,840
+This is the first function to check if it is full or not.
+
+47
+00:04:44,260 --> 00:04:49,000
+Now let's create a method called is empty.
+
+48
+00:04:49,780 --> 00:04:57,610
+Also of type Boolean is empty it and checks.
+
+49
+00:04:57,610 --> 00:05:07,060
+If feront equal equal to minus one, then return true.
+
+50
+00:05:07,780 --> 00:05:10,780
+Otherwise else return false.
+
+51
+00:05:12,460 --> 00:05:12,940
+OK.
+
+52
+00:05:13,480 --> 00:05:17,680
+This is their method to check if there's empty or not.
+
+53
+00:05:18,160 --> 00:05:25,870
+Now I need from you to concentrate here with more complex methods by using that ink you.
+
+54
+00:05:26,350 --> 00:05:30,160
+So here the ink items.
+
+55
+00:05:31,010 --> 00:05:31,740
+Thank you.
+
+56
+00:05:33,820 --> 00:05:35,590
+It's called Ink Q.
+
+57
+00:05:40,480 --> 00:05:46,670
+Avoid in queue, it took to perimeter and element.
+
+58
+00:05:47,380 --> 00:05:49,510
+And it checks if.
+
+59
+00:05:54,700 --> 00:05:55,060
+If.
+
+60
+00:05:58,900 --> 00:05:59,860
+Is full
+
+61
+00:06:03,010 --> 00:06:08,650
+if full, so we will create this method later on.
+
+62
+00:06:09,340 --> 00:06:24,510
+OK, now it will print system that out the print and on the screen at the queue is false.
+
+63
+00:06:25,540 --> 00:06:25,930
+OK.
+
+64
+00:06:26,530 --> 00:06:33,610
+Otherwise, it will be adding the item successfully so else.
+
+65
+00:06:35,410 --> 00:06:43,600
+If from equal, equal to minus one, then make the front equal to zero.
+
+66
+00:06:44,620 --> 00:06:59,350
+Okay, we add it by then make the rear, increase it by one + + and I tend.
+
+67
+00:07:01,620 --> 00:07:08,010
+At the rear, so this is a rate that we are going to make, so I tunes.
+
+68
+00:07:09,550 --> 00:07:18,220
+Is the array that we have created called out the OK so array
+
+69
+00:07:20,650 --> 00:07:28,440
+array at three years at index, three year equal to element.
+
+70
+00:07:29,150 --> 00:07:40,060
+So you guys how the algorithms and how that logic behind adding items into the Q Works print and an
+
+71
+00:07:40,780 --> 00:07:48,000
+inserted inserted and we display the element value.
+
+72
+00:07:48,400 --> 00:07:48,790
+OK.
+
+73
+00:07:50,460 --> 00:07:55,440
+This is how we in Q, how we add elements that they're cute.
+
+74
+00:07:56,040 --> 00:08:07,840
+Now let's remove items from the Q, removing items from the Q how to do that?
+
+75
+00:08:08,310 --> 00:08:20,970
+It is as Dec, so it would be a returning type of this method of type and and we put the deck.
+
+76
+00:08:21,030 --> 00:08:24,170
+It is known as Dec, OK.
+
+77
+00:08:24,780 --> 00:08:32,250
+It's not the Q, and they're meant to create a variable element.
+
+78
+00:08:32,250 --> 00:08:35,580
+And we check if is empty.
+
+79
+00:08:35,760 --> 00:08:47,670
+If the queue is empty, then don't do anything because it is an empty, so suspended print and Q queue
+
+80
+00:08:48,210 --> 00:08:49,350
+is empty.
+
+81
+00:08:51,630 --> 00:08:54,180
+Return minus one.
+
+82
+00:08:54,990 --> 00:08:55,300
+OK.
+
+83
+00:08:57,510 --> 00:09:04,560
+Because and anything else, it will create element equal to that.
+
+84
+00:09:04,980 --> 00:09:07,730
+Are they at index feront?
+
+85
+00:09:07,890 --> 00:09:19,170
+Because we need to remove and we deck from the queue at the index front, OK, and not the index rate,
+
+86
+00:09:19,320 --> 00:09:24,270
+because we need the first element that enters the queue.
+
+87
+00:09:24,300 --> 00:09:38,220
+We need to remove it from greater than or equal to the rear, then from equal to minus one.
+
+88
+00:09:38,940 --> 00:09:48,930
+This is if it is from to greater than or equal to rear and rear, equal to minus one setting the values
+
+89
+00:09:48,990 --> 00:09:49,380
+that
+
+90
+00:09:51,990 --> 00:09:56,490
+the queue has only one element, so set the queue after deletion.
+
+91
+00:09:56,670 --> 00:09:57,080
+OK.
+
+92
+00:09:57,840 --> 00:10:10,570
+Else we have many elements of system thought out that could end, and we are removing and deleting deleted,
+
+93
+00:10:11,370 --> 00:10:12,180
+deleted.
+
+94
+00:10:12,840 --> 00:10:14,070
+What is the index?
+
+95
+00:10:14,310 --> 00:10:14,610
+This
+
+96
+00:10:17,940 --> 00:10:22,080
+plus plus element?
+
+97
+00:10:23,250 --> 00:10:23,910
+OK.
+
+98
+00:10:24,960 --> 00:10:28,830
+And return the alignment.
+
+99
+00:10:33,390 --> 00:10:33,840
+OK.
+
+100
+00:10:34,320 --> 00:10:37,920
+This is how we remove elements from the queue.
+
+101
+00:10:38,630 --> 00:10:41,760
+You see, guys, it's very important.
+
+102
+00:10:42,330 --> 00:10:44,100
+Now this is.
+
+103
+00:10:45,150 --> 00:10:47,460
+The ALS for ALS.
+
+104
+00:10:49,370 --> 00:11:00,050
+And if and else front, I need to cut this and paste them here, and I will increase the front by one.
+
+105
+00:11:01,070 --> 00:11:01,450
+OK.
+
+106
+00:11:02,720 --> 00:11:03,860
+This is what we have.
+
+107
+00:11:05,290 --> 00:11:12,360
+Right then, because it will need a return vet statement, and this is that returning statement or responding
+
+108
+00:11:12,360 --> 00:11:12,810
+to it.
+
+109
+00:11:13,060 --> 00:11:13,410
+OK.
+
+110
+00:11:16,540 --> 00:11:20,860
+So this is for the here.
+
+111
+00:11:22,290 --> 00:11:29,760
+And in that now let's create a method called display that display elements of that cue.
+
+112
+00:11:30,630 --> 00:11:35,460
+So because of time before this play,
+
+113
+00:11:40,230 --> 00:11:53,880
+and we start by creating a counter fly that will be used for that loop, or I can not to create that,
+
+114
+00:11:53,880 --> 00:12:05,570
+I can create it directly in the loop if it empty so that there is the cue and the system to doubt the
+
+115
+00:12:05,670 --> 00:12:08,190
+print and empty,
+
+116
+00:12:11,400 --> 00:12:12,150
+empty cue
+
+117
+00:12:14,670 --> 00:12:23,610
+health system that out the print and front.
+
+118
+00:12:27,420 --> 00:12:29,280
+Strong index,
+
+119
+00:12:34,650 --> 00:12:47,700
+the strength of going system odds are just making adjustment for the for the printing, current and
+
+120
+00:12:48,570 --> 00:12:49,440
+items,
+
+121
+00:12:56,640 --> 00:13:13,290
+and we start by for it and I equal to front, I think less than or equal to research I plus plus then
+
+122
+00:13:13,800 --> 00:13:17,640
+what we do is we print out I thin.
+
+123
+00:13:21,540 --> 00:13:46,340
+Everyday at index, a class space, and since then that the brand and it it through the year index,
+
+124
+00:13:47,320 --> 00:13:51,000
+it's good notation that it can make
+
+125
+00:13:53,760 --> 00:13:57,900
+the 30 years different and the whole right.
+
+126
+00:13:58,570 --> 00:14:04,230
+OK, now let's test our our program that we have created.
+
+127
+00:14:04,500 --> 00:14:07,380
+This is is full, OK?
+
+128
+00:14:07,410 --> 00:14:10,110
+We have created is full.
+
+129
+00:14:10,290 --> 00:14:11,030
+Not everyone.
+
+130
+00:14:13,200 --> 00:14:13,590
+OK,
+
+131
+00:14:17,730 --> 00:14:19,770
+that's that's our program.
+
+132
+00:14:19,980 --> 00:14:29,130
+So public static void main and string args.
+
+133
+00:14:31,560 --> 00:14:32,490
+We create.
+
+134
+00:14:34,250 --> 00:14:34,880
+Q.
+
+135
+00:14:36,590 --> 00:14:46,130
+Q equal to New Q, this is the constructor of the Q, and we should specify.
+
+136
+00:14:47,070 --> 00:14:52,380
+How many, how many items we should make in the queue?
+
+137
+00:14:52,530 --> 00:15:01,170
+Of course, if we go to the queue to enter the perimeter and size, I will create a queue of five elements.
+
+138
+00:15:02,610 --> 00:15:04,020
+OK, so.
+
+139
+00:15:07,100 --> 00:15:14,180
+Q dirt in Q one Q dirt in Q
+
+140
+00:15:17,270 --> 00:15:18,430
+in Q two.
+
+141
+00:15:21,610 --> 00:15:23,020
+Q, thank you.
+
+142
+00:15:25,690 --> 00:15:26,290
+Three.
+
+143
+00:15:27,670 --> 00:15:34,060
+Q Do it in Q four and Q talked HQ
+
+144
+00:15:37,990 --> 00:15:46,600
+Q five, OK, if we end up displaying here error.
+
+145
+00:15:50,210 --> 00:16:00,680
+Of full queue, so if we try to add queue in queue six, we have created a queue of five elements and
+
+146
+00:16:00,680 --> 00:16:06,140
+we have added them, so we try to add one another queue.
+
+147
+00:16:06,470 --> 00:16:14,880
+We need to get we we will get that error message now queued back.
+
+148
+00:16:17,300 --> 00:16:22,160
+So queue, let me display first.
+
+149
+00:16:22,160 --> 00:16:26,600
+The queue cured the display or display
+
+150
+00:16:30,620 --> 00:16:31,670
+queue thought.
+
+151
+00:16:33,150 --> 00:16:34,050
+This plane
+
+152
+00:16:36,720 --> 00:16:47,830
+and here after the cue or deck, cue the deck, we remove the first one and then we will display the
+
+153
+00:16:48,450 --> 00:16:55,980
+list, so we'll display the list before removing and the list after removing.
+
+154
+00:16:56,130 --> 00:16:57,300
+Let's run and see.
+
+155
+00:16:59,700 --> 00:17:00,270
+Here we go.
+
+156
+00:17:02,210 --> 00:17:05,820
+We start, OK, this is that for the stack, sorry.
+
+157
+00:17:07,230 --> 00:17:09,610
+Let me around this you.
+
+158
+00:17:12,400 --> 00:17:13,750
+OK, here we go.
+
+159
+00:17:14,380 --> 00:17:23,020
+We have inserted one, two, three, four and five when we tried to insert six, it will display for
+
+160
+00:17:23,020 --> 00:17:23,890
+us an error.
+
+161
+00:17:24,220 --> 00:17:31,810
+Cue is for now when we try to print this stack, that is sort of the cue.
+
+162
+00:17:32,320 --> 00:17:35,230
+The front index would be zero items.
+
+163
+00:17:35,350 --> 00:17:41,690
+One, two, three, four and five rear end is four and delete.
+
+164
+00:17:41,690 --> 00:17:42,970
+That is one.
+
+165
+00:17:43,450 --> 00:17:43,810
+OK.
+
+166
+00:17:44,320 --> 00:17:52,210
+So when we delete it, when we deck, we display that here and this now becomes four.
+
+167
+00:17:52,510 --> 00:18:03,660
+And that deleted is one because it is the first element that it is insert front element index one item
+
+168
+00:18:03,730 --> 00:18:06,080
+two, three, four and five rear.
+
+169
+00:18:06,130 --> 00:18:07,720
+And this is four.
+
+170
+00:18:08,200 --> 00:18:08,560
+OK.
+
+171
+00:18:08,950 --> 00:18:09,340
+So.
+
+172
+00:18:11,110 --> 00:18:17,880
+This is how we can make how we display that deck.
+
+173
+00:18:19,440 --> 00:18:26,010
+And the interview and how we work with that, Q, It's very simple.
+
+174
+00:18:26,580 --> 00:18:35,490
+And we are going to increase the complexity of these programs and make them more complex.
+
+175
+00:18:35,580 --> 00:18:35,910
+OK.
+
+176
+00:18:36,300 --> 00:18:52,770
+By the way, all of these methods are like in Cuba and there are of all of one gay, all of one complex,
+
+177
+00:18:54,600 --> 00:19:02,400
+except that display because the display is using a loop that go through all the elements.
+
+178
+00:19:02,700 --> 00:19:16,530
+So it is of depending on the number of the data that it is inserted into Q and Q here is of one.
+
+179
+00:19:18,280 --> 00:19:21,070
+OK, except the display.

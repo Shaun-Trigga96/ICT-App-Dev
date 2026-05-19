@@ -1,0 +1,967 @@
+1
+00:00:00,060 --> 00:00:04,050
+Oh, my friends and welcome again to the complete data structure and algorithms course.
+
+2
+00:00:04,410 --> 00:00:06,610
+And this video we are going to solve.
+
+3
+00:00:06,630 --> 00:00:08,370
+Exercise number eighty six.
+
+4
+00:00:08,730 --> 00:00:17,180
+So in this exercise, we are asked to create binary search tree and implement its operation in Java.
+
+5
+00:00:17,190 --> 00:00:26,250
+So I will create a new Java class called Binary Search Tree.
+
+6
+00:00:28,650 --> 00:00:34,380
+By the way, you can download all of the source code of the previous exercises from the Resources folder
+
+7
+00:00:34,710 --> 00:00:39,780
+inside Udemy course underneath every exercise.
+
+8
+00:00:40,740 --> 00:00:48,900
+We start as every class and every tree that we have created by creating the class.
+
+9
+00:00:48,930 --> 00:00:53,760
+Note that no structure for that tree.
+
+10
+00:00:54,330 --> 00:01:04,290
+It contained this new and key, and it contains the reference for the left and the right.
+
+11
+00:01:06,150 --> 00:01:16,560
+Now I will create a constructor for this so node and item, and we specify the key.
+
+12
+00:01:17,520 --> 00:01:20,610
+You can make it put the item.
+
+13
+00:01:22,440 --> 00:01:25,230
+Or I can put here the.
+
+14
+00:01:26,730 --> 00:01:29,820
+This thought gave equal to
+
+15
+00:01:32,610 --> 00:01:38,610
+the past key and left, equal to right, equal to none.
+
+16
+00:01:39,060 --> 00:01:43,560
+This is what we do when you see a tree.
+
+17
+00:01:44,130 --> 00:01:54,270
+We create the note that start by creating the key and in shallows the left and right pointers to not
+
+18
+00:01:55,290 --> 00:01:55,650
+know.
+
+19
+00:01:57,930 --> 00:02:03,480
+Note it's create the note through it for this, so I would create notes and a.
+
+20
+00:02:04,350 --> 00:02:15,060
+This is the object from class note and let's create to this constructor or binary search tree in the
+
+21
+00:02:15,060 --> 00:02:15,900
+constructor.
+
+22
+00:02:17,530 --> 00:02:22,560
+And when we created mining a search tree, just make the root equal to none.
+
+23
+00:02:23,370 --> 00:02:33,780
+OK, this is how we make the binary search a tree like that basic structure, their coding structure
+
+24
+00:02:33,780 --> 00:02:36,120
+and building block of our codes.
+
+25
+00:02:36,660 --> 00:02:42,990
+Let's try to make their methods for operation.
+
+26
+00:02:43,710 --> 00:02:48,690
+The first operation is the insert, so void insert.
+
+27
+00:02:48,990 --> 00:02:50,760
+I will insert the key.
+
+28
+00:02:51,690 --> 00:02:56,970
+Then we put root equal to insert.
+
+29
+00:02:56,970 --> 00:03:02,980
+I will call the method insert key in the root and the key.
+
+30
+00:03:03,060 --> 00:03:10,360
+This is just a like encapsulation or like wrapping for the function.
+
+31
+00:03:10,380 --> 00:03:18,790
+I can make directly insert key, but I preferred using this method in order to simplify without like
+
+32
+00:03:18,810 --> 00:03:20,490
+pressing the root and the key.
+
+33
+00:03:20,610 --> 00:03:24,420
+Every time, every time I pass, only the key.
+
+34
+00:03:24,600 --> 00:03:32,820
+So when I need to insert a new key, I directly call, insert and pass the key and insert key it directly.
+
+35
+00:03:33,690 --> 00:03:36,900
+Call this method insert key and pass that route again.
+
+36
+00:03:37,230 --> 00:03:38,550
+Now let's create this.
+
+37
+00:03:40,180 --> 00:03:44,180
+It will return and note it's returning Typekit the note.
+
+38
+00:03:44,700 --> 00:03:57,120
+So I will create node insert key stake into the perimeter of the node root and end key the return in
+
+39
+00:03:57,120 --> 00:03:59,310
+you node if the tree is empty.
+
+40
+00:04:00,510 --> 00:04:04,890
+So the first case creating new node
+
+41
+00:04:07,560 --> 00:04:07,950
+if.
+
+42
+00:04:12,250 --> 00:04:22,240
+If that tree is empty, if we are inserting the first note, if it would be equally cool to know as
+
+43
+00:04:22,240 --> 00:04:30,820
+a professional coder and data structure, an algorithm master, you should you should cover all the
+
+44
+00:04:32,050 --> 00:04:43,300
+possible ways possible the possibilities, all the possible and cover all the possibilities, all the
+
+45
+00:04:43,300 --> 00:04:50,290
+different cases, all the the like, the opportunities of the code.
+
+46
+00:04:50,650 --> 00:04:53,650
+So here we are returning the note.
+
+47
+00:04:53,680 --> 00:05:05,680
+If in, you know, if the tree is empty, so do it equal to new nodes and I've passed the key and the
+
+48
+00:05:05,680 --> 00:05:06,940
+return route.
+
+49
+00:05:07,660 --> 00:05:12,370
+This is when we have to cover that new node creation.
+
+50
+00:05:13,000 --> 00:05:16,510
+If there is nodes.
+
+51
+00:05:17,970 --> 00:05:18,330
+If.
+
+52
+00:05:20,540 --> 00:05:25,850
+That really is not and what we do.
+
+53
+00:05:25,970 --> 00:05:27,170
+We check if key.
+
+54
+00:05:29,370 --> 00:05:30,330
+Less than a.
+
+55
+00:05:30,870 --> 00:05:34,680
+The key what we do.
+
+56
+00:05:35,250 --> 00:05:44,550
+We go to the route to the left in order to insert it and we insert the key again, we called the method
+
+57
+00:05:45,150 --> 00:05:56,610
+to the route that left and key the or the very important note that we should always think about it and
+
+58
+00:05:56,610 --> 00:06:07,770
+remember N.B. as these, that the left is to the left notes is less than that route and the right up
+
+59
+00:06:07,830 --> 00:06:15,030
+three and the right notes values are greater than the Route four that we have used that encourage it.
+
+60
+00:06:15,780 --> 00:06:24,660
+And we see that the insert key has been called again, and that's the left again and again until we
+
+61
+00:06:24,660 --> 00:06:29,550
+have root equal to none and we make that execution.
+
+62
+00:06:29,610 --> 00:06:31,110
+So else
+
+63
+00:06:33,930 --> 00:06:43,920
+else, if the key greater than the key route, the key or comparing it with that, it would make the
+
+64
+00:06:43,930 --> 00:06:44,850
+same thing.
+
+65
+00:06:44,940 --> 00:06:59,570
+But now at the right side, equal uncertainty and in the road, the road, the tried and they're OK.
+
+66
+00:07:01,400 --> 00:07:05,120
+OK, now we return route.
+
+67
+00:07:06,090 --> 00:07:07,920
+This is very simple.
+
+68
+00:07:09,240 --> 00:07:11,670
+We check if it is less than the route.
+
+69
+00:07:11,790 --> 00:07:16,080
+We start comparing it, comparing it until we find the key.
+
+70
+00:07:16,590 --> 00:07:23,730
+And if we the key is greater than the route, a greater than the route, then it will go to that until
+
+71
+00:07:23,730 --> 00:07:26,670
+we find the route equal, equal to null.
+
+72
+00:07:27,000 --> 00:07:29,360
+And then we insert the note, OK?
+
+73
+00:07:29,580 --> 00:07:33,860
+This is how we insert that nodes in B Estes.
+
+74
+00:07:34,450 --> 00:07:45,150
+No, let's make that in order in order traversal because I need to use it in the Delete B. And we have
+
+75
+00:07:45,150 --> 00:07:47,760
+seen this in their previous videos.
+
+76
+00:07:47,760 --> 00:08:01,050
+How to delete the key from Dan from the BSD in order traversal because it's fairly simple.
+
+77
+00:08:01,530 --> 00:08:02,130
+And.
+
+78
+00:08:04,610 --> 00:08:12,920
+We we ensure that when we when we need to delete anything, we have three cases.
+
+79
+00:08:13,040 --> 00:08:18,500
+The first case is deleting the note with no children on it.
+
+80
+00:08:19,100 --> 00:08:23,720
+And the second case deleting the note that it has only one note.
+
+81
+00:08:24,110 --> 00:08:29,660
+And the third case is deleting a note from having children.
+
+82
+00:08:30,620 --> 00:08:36,710
+And we just need to make that reversal in the next successor.
+
+83
+00:08:36,740 --> 00:08:41,540
+So we are going to replace it with the successor to the next successor.
+
+84
+00:08:41,990 --> 00:08:45,830
+For that, we are going to use the in order traversal.
+
+85
+00:08:45,830 --> 00:08:52,480
+So in order method, also, this method will call in order.
+
+86
+00:08:53,930 --> 00:08:54,510
+Correct.
+
+87
+00:08:55,070 --> 00:08:57,680
+And that's the truth.
+
+88
+00:08:58,070 --> 00:09:08,640
+And I am going to create this method again, and it type void, extending type, void and best through
+
+89
+00:09:08,710 --> 00:09:08,920
+it.
+
+90
+00:09:11,630 --> 00:09:16,100
+And we check if Root does not equal to null.
+
+91
+00:09:16,810 --> 00:09:31,820
+Then in order in order to wreck again, we passed through the left system that allowed the Brent Allen
+
+92
+00:09:32,780 --> 00:09:40,670
+Brent Root the key, and we pass this
+
+93
+00:09:43,400 --> 00:09:47,210
+in order to print it in order again.
+
+94
+00:09:50,360 --> 00:09:59,000
+And we passed the rule thought, right, OK, this is how we in order traversal for their records,
+
+95
+00:09:59,270 --> 00:10:00,530
+why do we do this?
+
+96
+00:10:00,530 --> 00:10:04,550
+Because we are going to use it in the delete key?
+
+97
+00:10:04,700 --> 00:10:10,430
+So I will use Void Delete key.
+
+98
+00:10:10,610 --> 00:10:14,350
+I will get the key and key and key.
+
+99
+00:10:14,630 --> 00:10:19,440
+And again, I need the power to create a proper function.
+
+100
+00:10:19,440 --> 00:10:29,170
+A. Equal to delete key, I pass through it and the key I will create, delete, delete, wreck.
+
+101
+00:10:31,770 --> 00:10:35,900
+OK, I will create this function, no
+
+102
+00:10:38,900 --> 00:10:40,830
+route and key.
+
+103
+00:10:41,880 --> 00:10:47,160
+No, let's check for their for their deletion.
+
+104
+00:10:47,490 --> 00:10:48,930
+Please concentrate with me.
+
+105
+00:10:49,260 --> 00:10:54,750
+It's very, very simple if you understand it, and it's very complex if you don't understand.
+
+106
+00:10:55,290 --> 00:10:57,120
+We said that we have three cases.
+
+107
+00:10:57,120 --> 00:11:03,930
+The first case, if the three, if they're three at that node that we are going to delete, don't have
+
+108
+00:11:03,930 --> 00:11:04,860
+any children.
+
+109
+00:11:05,400 --> 00:11:14,580
+OK, so we start by checking if their route is equal to another empty, no return route.
+
+110
+00:11:16,050 --> 00:11:16,540
+OK.
+
+111
+00:11:17,250 --> 00:11:23,940
+We are deleting an empty three or a note that content does not contain any children.
+
+112
+00:11:24,940 --> 00:11:32,190
+Now, in order to delete anything and you know, we need to start finding the note first.
+
+113
+00:11:33,540 --> 00:11:34,120
+OK?
+
+114
+00:11:34,410 --> 00:11:41,970
+And then executing the deletion if key less than a rule turkey.
+
+115
+00:11:42,990 --> 00:11:51,510
+Then we use Route Dot left equal to delete the rack and we put route that left.
+
+116
+00:11:52,170 --> 00:11:52,980
+There's the key.
+
+117
+00:11:53,460 --> 00:11:59,820
+This is what we do if the key is less than the route key, the key of the route.
+
+118
+00:11:59,980 --> 00:12:08,730
+OK, so the key is on the left side because the left side, the left side of three is always less than
+
+119
+00:12:08,730 --> 00:12:09,870
+the root of the key.
+
+120
+00:12:10,260 --> 00:12:10,590
+OK.
+
+121
+00:12:11,010 --> 00:12:13,670
+No else.
+
+122
+00:12:13,800 --> 00:12:25,740
+If if you are checking if key greater than the route through Turkey, and we start by assigning the
+
+123
+00:12:25,740 --> 00:12:32,940
+route that right equal to delete Iraq, you wrote the right.
+
+124
+00:12:33,630 --> 00:12:38,010
+And we passed the key K else
+
+125
+00:12:41,520 --> 00:12:42,050
+else.
+
+126
+00:12:42,060 --> 00:12:52,560
+If the node is with only one child or no children, one child or no child.
+
+127
+00:12:52,800 --> 00:12:55,080
+This is the first and the second case.
+
+128
+00:12:55,080 --> 00:13:06,540
+So if the route that left equal equal to now, then I will return route or try because we are getting
+
+129
+00:13:06,870 --> 00:13:09,600
+the route to the right.
+
+130
+00:13:10,080 --> 00:13:13,800
+If it is to the left equals null, then we return the routes.
+
+131
+00:13:13,800 --> 00:13:16,170
+Not, but I as if.
+
+132
+00:13:19,190 --> 00:13:21,930
+Wrote Dot, right?
+
+133
+00:13:22,470 --> 00:13:23,970
+Equal equal to none.
+
+134
+00:13:24,240 --> 00:13:29,510
+Then we return, brought the left, OK.
+
+135
+00:13:30,060 --> 00:13:36,150
+This is the first is the first case and the second case in the deletion operation.
+
+136
+00:13:36,530 --> 00:13:45,150
+OK, so I want from you to go back to the video about the deletion operation.
+
+137
+00:13:45,690 --> 00:13:52,860
+And and in the beasties and try to understand the three cases because I am talking about the first case
+
+138
+00:13:52,860 --> 00:13:54,930
+and the second case is covered by this.
+
+139
+00:13:55,470 --> 00:14:01,110
+And now I'm going to solve the third case where if it is, then Node has two children.
+
+140
+00:14:01,570 --> 00:14:16,650
+OK, if Node has two children placed in order, I will put it again or to it or to save time for you.
+
+141
+00:14:17,970 --> 00:14:21,390
+That in honor, their successor
+
+142
+00:14:24,210 --> 00:14:29,770
+in position of node could be deleted.
+
+143
+00:14:32,130 --> 00:14:37,020
+So root, don't you get the key from the root and minimum value this is?
+
+144
+00:14:37,140 --> 00:14:39,900
+Then we get the minimum value.
+
+145
+00:14:40,650 --> 00:14:52,890
+I will create this method in next couple of minutes and delete now they're in order the successor from
+
+146
+00:14:52,890 --> 00:14:53,580
+its position.
+
+147
+00:14:55,930 --> 00:15:01,170
+Or try it be equal to delete key delete.
+
+148
+00:15:02,220 --> 00:15:04,320
+Correct Root.
+
+149
+00:15:05,070 --> 00:15:05,730
+Right.
+
+150
+00:15:06,090 --> 00:15:11,520
+And who thought, OK, OK,
+
+151
+00:15:15,120 --> 00:15:21,000
+now let's go back and return.
+
+152
+00:15:21,240 --> 00:15:23,580
+We need to return the root.
+
+153
+00:15:23,790 --> 00:15:30,420
+So this is what we need to make from this function is to return a return, the node that we are going
+
+154
+00:15:30,720 --> 00:15:37,860
+to still now find find in order successor.
+
+155
+00:15:40,710 --> 00:15:44,010
+We need to create that int minimum value.
+
+156
+00:15:44,430 --> 00:15:56,250
+It took it to the perimeter that nodes root and we start to make Int minimum value equal to all the
+
+157
+00:15:56,250 --> 00:15:56,610
+key.
+
+158
+00:15:57,420 --> 00:16:05,880
+And while we are going to look through the root, that left does not equal to none.
+
+159
+00:16:06,120 --> 00:16:14,790
+If we have, we are going to get the most left node in order to get minimum value.
+
+160
+00:16:14,880 --> 00:16:15,390
+OK.
+
+161
+00:16:16,410 --> 00:16:21,900
+And when the when we have when their root left does not equal to null.
+
+162
+00:16:21,900 --> 00:16:31,050
+So we have a new nodes, then minimum value equal to the root, the left the key.
+
+163
+00:16:33,890 --> 00:16:44,620
+And the root beer called to root the left, we return the minimum value.
+
+164
+00:16:45,410 --> 00:16:45,910
+OK.
+
+165
+00:16:47,780 --> 00:16:50,900
+This is how we find that in order success.
+
+166
+00:16:51,560 --> 00:16:54,650
+Now let's try to test our program.
+
+167
+00:16:55,010 --> 00:17:06,800
+And I for that, I will create the main method public static void, main string args.
+
+168
+00:17:09,080 --> 00:17:20,900
+I will create binary search tree to be equal to new binary search tree, and I will start inserting
+
+169
+00:17:21,020 --> 00:17:23,240
+the numbers insert
+
+170
+00:17:25,640 --> 00:17:26,180
+eight.
+
+171
+00:17:30,250 --> 00:17:31,720
+You copy and paste that.
+
+172
+00:17:36,640 --> 00:17:37,660
+Many times.
+
+173
+00:17:39,640 --> 00:17:47,200
+So eight, three, one six seven.
+
+174
+00:17:49,300 --> 00:17:49,870
+Then.
+
+175
+00:17:51,930 --> 00:17:55,140
+Fourteen and.
+
+176
+00:17:57,070 --> 00:17:59,310
+14 good.
+
+177
+00:18:01,430 --> 00:18:02,290
+Have three.
+
+178
+00:18:04,470 --> 00:18:07,260
+I need to insert Rs seven.
+
+179
+00:18:08,400 --> 00:18:11,520
+And for because I need to insert tape numbers.
+
+180
+00:18:15,540 --> 00:18:17,040
+In order to check that.
+
+181
+00:18:22,430 --> 00:18:29,630
+Time complexity that we are going to talk about in the next video in order traversal
+
+182
+00:18:36,320 --> 00:18:38,300
+three, though in order
+
+183
+00:18:41,030 --> 00:18:47,210
+and system that out, that Prince Allen.
+
+184
+00:18:51,840 --> 00:18:56,490
+After deleting them.
+
+185
+00:18:59,430 --> 00:19:09,240
+Three, The Delete Key 10 and system that allowed that print again,
+
+186
+00:19:14,400 --> 00:19:19,320
+the end or that traversal
+
+187
+00:19:23,670 --> 00:19:28,800
+three door in or that OK, no.
+
+188
+00:19:29,490 --> 00:19:34,200
+What we have in this three before running this program, I will lecture for you.
+
+189
+00:19:35,340 --> 00:19:36,750
+We have created.
+
+190
+00:19:38,380 --> 00:19:40,000
+There would hate.
+
+191
+00:19:41,210 --> 00:19:46,430
+We insert the cities, so three is less than eight, so I insert it to the left.
+
+192
+00:19:47,120 --> 00:19:53,060
+Insert one one is less than earpiece eight less than I was.
+
+193
+00:19:53,060 --> 00:19:54,840
+Sorry, one less than three.
+
+194
+00:19:54,860 --> 00:19:55,280
+Yes.
+
+195
+00:19:55,280 --> 00:19:58,850
+So I will insert it to the left of three.
+
+196
+00:20:00,350 --> 00:20:01,610
+I will insert six.
+
+197
+00:20:01,610 --> 00:20:06,050
+Six is greater than three, but less than eight.
+
+198
+00:20:06,060 --> 00:20:10,640
+So eight is less than eight or greater than six.
+
+199
+00:20:10,640 --> 00:20:15,860
+So I will put it here in this section and six is greater density.
+
+200
+00:20:15,860 --> 00:20:18,140
+So it will be like this.
+
+201
+00:20:18,690 --> 00:20:20,190
+OK, No.
+
+202
+00:20:20,390 --> 00:20:22,160
+Seven is less than eight.
+
+203
+00:20:22,160 --> 00:20:24,710
+So it would be in this section.
+
+204
+00:20:25,160 --> 00:20:32,510
+I will insert it to the right of three and to the right of six because if there's greater than.
+
+205
+00:20:33,500 --> 00:20:33,950
+Six.
+
+206
+00:20:35,420 --> 00:20:44,730
+Insert 10, 10 is greater than eight, so I will insert it here 14, insert 14 14 is greater than eight.
+
+207
+00:20:44,750 --> 00:20:45,650
+Yes, to the right.
+
+208
+00:20:46,100 --> 00:20:47,400
+14 greater than 10.
+
+209
+00:20:47,420 --> 00:20:49,970
+Yes, I would insert it also to that eight.
+
+210
+00:20:49,970 --> 00:20:52,450
+So I put it also 14.
+
+211
+00:20:52,850 --> 00:20:57,260
+And I will insert number four so far less than athiest to the left.
+
+212
+00:20:57,710 --> 00:21:00,650
+Three is four is greater than three.
+
+213
+00:21:01,010 --> 00:21:01,520
+Yes.
+
+214
+00:21:01,520 --> 00:21:04,520
+So I will insert that I six.
+
+215
+00:21:05,450 --> 00:21:06,200
+We have six.
+
+216
+00:21:06,470 --> 00:21:09,150
+Four is less than six or greater than six.
+
+217
+00:21:09,170 --> 00:21:10,130
+It's less than six.
+
+218
+00:21:10,130 --> 00:21:12,860
+So I will insert it right here.
+
+219
+00:21:13,490 --> 00:21:13,850
+OK.
+
+220
+00:21:14,450 --> 00:21:20,990
+This is what we have done in this section when we delete that key.
+
+221
+00:21:20,990 --> 00:21:21,430
+10.
+
+222
+00:21:21,440 --> 00:21:31,640
+So I will delete 10 14 were replaced this this deletion and 14 is the next successor of the 10.
+
+223
+00:21:31,760 --> 00:21:39,860
+So 14 would be the minimum value with the returning value of the mean value function that we have created
+
+224
+00:21:39,860 --> 00:21:42,120
+and 14 were replace that.
+
+225
+00:21:42,680 --> 00:21:45,530
+Now let's run and see our program.
+
+226
+00:21:47,480 --> 00:21:51,860
+We the three is that this is for the previous one.
+
+227
+00:21:51,890 --> 00:21:53,330
+I will run it again.
+
+228
+00:21:53,900 --> 00:21:54,680
+And there we go.
+
+229
+00:21:54,830 --> 00:22:03,350
+In order traversal of this tree, this is for that left arrow and right in order traversal.
+
+230
+00:22:03,590 --> 00:22:04,700
+This is for the left.
+
+231
+00:22:04,910 --> 00:22:06,860
+This is for the root.
+
+232
+00:22:06,860 --> 00:22:08,690
+And this is for that section.
+
+233
+00:22:09,170 --> 00:22:14,320
+After deleting then it would be one, three, four, six and seven.
+
+234
+00:22:14,330 --> 00:22:16,360
+This is the left section.
+
+235
+00:22:16,370 --> 00:22:19,400
+This is the root and this is the right.
+
+236
+00:22:19,400 --> 00:22:27,290
+Section 14 have been replaced then, and this is the algorithm behind making the binary search tree
+
+237
+00:22:27,620 --> 00:22:32,960
+and its operations deletion, insertion and search.
+
+238
+00:22:33,380 --> 00:22:33,770
+OK.
+
+239
+00:22:34,140 --> 00:22:35,290
+So thank you, guys.
+
+240
+00:22:35,300 --> 00:22:38,690
+I'm I'm waiting your comments.
+
+241
+00:22:38,690 --> 00:22:44,900
+I'm waiting your reviews and they help you rate great us five stars on Udemy to support us making new
+
+242
+00:22:44,900 --> 00:22:46,510
+videos and new exercises.

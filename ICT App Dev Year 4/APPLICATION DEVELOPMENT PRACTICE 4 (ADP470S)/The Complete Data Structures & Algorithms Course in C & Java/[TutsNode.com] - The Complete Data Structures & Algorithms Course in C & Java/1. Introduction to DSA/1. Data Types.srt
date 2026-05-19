@@ -1,0 +1,179 @@
+1
+00:00:00,460 --> 00:00:07,960
+Before getting into the definition of valuables, let us relate them to an old mathematical equation.
+
+2
+00:00:08,560 --> 00:00:13,630
+Many of us would have solved many mathematical equations since childhood.
+
+3
+00:00:14,200 --> 00:00:22,420
+As an example, consider the function here and that equation x squared plus y minus two equal to one.
+
+4
+00:00:23,170 --> 00:00:33,100
+The important thing that we need to understand that the equation has names X and Y, which hold values
+
+5
+00:00:33,460 --> 00:00:34,030
+or date.
+
+6
+00:00:34,360 --> 00:00:41,080
+So X would hold data or value and Y in the same way.
+
+7
+00:00:41,560 --> 00:00:48,280
+That means names X and Y are place holders for representing the date.
+
+8
+00:00:48,880 --> 00:00:56,950
+Similarly, in computer science programming, we need something for all linked data and variables in
+
+9
+00:00:56,950 --> 00:00:57,340
+there.
+
+10
+00:00:57,400 --> 00:01:06,550
+The way to do that, we have to create a valuable X and we have to create a variable Y in order to hold
+
+11
+00:01:06,700 --> 00:01:07,540
+the deck.
+
+12
+00:01:13,320 --> 00:01:24,990
+In this equation, the variable X and Y can take any values, such as integral numbers 10 or 20 real
+
+13
+00:01:24,990 --> 00:01:34,950
+numbers as high as zero point four, thirty six point three or just zero or one in the same way.
+
+14
+00:01:35,400 --> 00:01:46,260
+Why could take the 53 or nine or zero point two one one or eight point seven or zero or one?
+
+15
+00:01:46,710 --> 00:01:47,010
+OK.
+
+16
+00:01:48,140 --> 00:01:52,430
+To solve the equation, we need to relate them to kind of values.
+
+17
+00:01:52,760 --> 00:02:00,530
+They can take and data type is the name used in computer science programming for this purpose.
+
+18
+00:02:00,980 --> 00:02:07,700
+That data type in the programming language is a set of data with predefined values.
+
+19
+00:02:08,060 --> 00:02:14,540
+Examples of data types are integer like then 20.
+
+20
+00:02:15,840 --> 00:02:20,700
+Float as zero point four, three or six point three.
+
+21
+00:02:21,150 --> 00:02:24,160
+And Boolean zero or one.
+
+22
+00:02:25,080 --> 00:02:30,420
+OK, computer memory is all filled with zeros and ones.
+
+23
+00:02:30,990 --> 00:02:37,680
+If we have a problem and we want to code it, it's very difficult to provide the solution in terms of
+
+24
+00:02:37,680 --> 00:02:40,350
+zeros and one to help users.
+
+25
+00:02:40,590 --> 00:02:44,700
+Programming languages and compilers provide us with data types.
+
+26
+00:02:45,120 --> 00:02:49,850
+So, for example, we have integer, we have float integer stake.
+
+27
+00:02:49,860 --> 00:02:51,090
+It takes two bytes.
+
+28
+00:02:51,090 --> 00:02:57,420
+Actually, actual value depends on compiler and float takes four bytes and etc..
+
+29
+00:02:57,960 --> 00:03:09,030
+This says that in memory, we are combining two bytes or 16 bits and calling it an integer OK for that
+
+30
+00:03:09,030 --> 00:03:09,690
+purpose.
+
+31
+00:03:09,870 --> 00:03:15,160
+We have a data type reduces decoding effort at the top level.
+
+32
+00:03:15,180 --> 00:03:25,980
+There are two types of data types that primitive data, which are integer float or Boolean and another
+
+33
+00:03:25,980 --> 00:03:31,650
+type is called user defined data types such as objects.
+
+34
+00:03:32,040 --> 00:03:41,700
+OK, so data types are primitive data like integer float or Boolean, and the user defined that we are
+
+35
+00:03:41,700 --> 00:03:43,800
+going to see later on.
+
+36
+00:03:44,640 --> 00:03:54,630
+OK, so the perimeter of the system data, our system defined data types like primitive data are like
+
+37
+00:03:54,750 --> 00:04:02,100
+int float ga double Boolean in like in Java A. and Python.
+
+38
+00:04:02,730 --> 00:04:09,900
+The number of bit allocated for each primitive data depends on the programming language and the compiler
+
+39
+00:04:09,900 --> 00:04:11,610
+and the operating system.
+
+40
+00:04:12,540 --> 00:04:12,870
+OK.
+
+41
+00:04:13,440 --> 00:04:20,370
+And it may differ for the dangers, for every type, why of the user defined data types.
+
+42
+00:04:20,640 --> 00:04:29,160
+If the system defined data types are not enough, then most programming languages allow the user to
+
+43
+00:04:29,160 --> 00:04:36,510
+define their own data types called user defined data types such as object.
+
+44
+00:04:37,450 --> 00:04:44,590
+Good example of user defined data types are structured in C or C++ and classes in Java.
+
+45
+00:04:45,790 --> 00:04:49,360
+We will see them later on in there through the.

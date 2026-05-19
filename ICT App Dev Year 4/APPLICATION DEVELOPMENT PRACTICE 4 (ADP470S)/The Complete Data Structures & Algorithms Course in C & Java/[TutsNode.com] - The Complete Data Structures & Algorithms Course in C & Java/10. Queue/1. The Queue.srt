@@ -1,0 +1,139 @@
+1
+00:00:00,060 --> 00:00:03,720
+Let's learn about a new data structure called Q.
+
+2
+00:00:04,780 --> 00:00:09,220
+AQ is a useful data structure in programming.
+
+3
+00:00:09,580 --> 00:00:17,680
+It's similar to this ticket queue outside a cinema hall where the first person entering the queue is
+
+4
+00:00:17,680 --> 00:00:20,470
+the first person who gets the ticket.
+
+5
+00:00:21,040 --> 00:00:28,450
+Hugh falls the first and first tore through the fee for the item that goes in.
+
+6
+00:00:28,450 --> 00:00:32,590
+The first is the item that comes out first.
+
+7
+00:00:34,010 --> 00:00:34,430
+OK.
+
+8
+00:00:35,580 --> 00:00:35,970
+So.
+
+9
+00:00:37,770 --> 00:00:45,750
+How to add elements, we are going to see that basic the ink and deck adding and removing elements in
+
+10
+00:00:45,750 --> 00:00:53,730
+the queue as the presentation and animation and next video, we are going to go deep and inside this
+
+11
+00:00:53,730 --> 00:00:55,460
+operation and see the current.
+
+12
+00:00:57,520 --> 00:01:01,210
+We have three elements, and this is their cue.
+
+13
+00:01:03,000 --> 00:01:05,310
+We need to add that cue.
+
+14
+00:01:06,210 --> 00:01:13,170
+We need to 8q the elements one, two and three inside the queue, so.
+
+15
+00:01:14,450 --> 00:01:23,570
+By calling in Q1, this is the method that will add the element one inside the queue would be called.
+
+16
+00:01:24,380 --> 00:01:30,890
+Then if we call in Q2, we are going to add that element to inside the queue.
+
+17
+00:01:31,520 --> 00:01:36,710
+If we in Q3, it will add the Element three inside this queue.
+
+18
+00:01:37,870 --> 00:01:42,460
+OK, now let's remove the items from that queue.
+
+19
+00:01:42,910 --> 00:01:46,590
+It called Dec, not the queue.
+
+20
+00:01:46,660 --> 00:01:51,630
+It is called Dec, so we consider this queue.
+
+21
+00:01:51,790 --> 00:01:54,100
+We have three, two and one.
+
+22
+00:01:54,490 --> 00:02:00,930
+Their first element that we have inserted is one and we need to dec.
+
+23
+00:02:01,090 --> 00:02:07,990
+So if we called the the method DEC, we will remove the first element that have been entered inside
+
+24
+00:02:07,990 --> 00:02:08,650
+this queue.
+
+25
+00:02:09,100 --> 00:02:11,500
+So we're going to remove number one.
+
+26
+00:02:13,620 --> 00:02:20,670
+If we call the method their game deck, so number two would be removed because it will.
+
+27
+00:02:20,760 --> 00:02:22,080
+It is on the top.
+
+28
+00:02:22,560 --> 00:02:27,000
+If we call deck again, it will remove number three.
+
+29
+00:02:27,840 --> 00:02:36,410
+So these are their basic operations and a queue is an object or an absolute data structure.
+
+30
+00:02:36,420 --> 00:02:38,940
+ADT that allows the following operation.
+
+31
+00:02:39,240 --> 00:02:45,360
+We have learned about in queue deck and we have also is empty.
+
+32
+00:02:45,360 --> 00:02:53,220
+We check if the queue is empty is full to check is that queue is full and peak to get the value of the
+
+33
+00:02:53,220 --> 00:02:56,450
+front of the queue without removing it.
+
+34
+00:02:57,150 --> 00:03:06,270
+We will learn how to create these methods in the next videos and see and we go, we are going to see
+
+35
+00:03:06,270 --> 00:03:13,170
+in the Java language how these methods and how to implement a queue.

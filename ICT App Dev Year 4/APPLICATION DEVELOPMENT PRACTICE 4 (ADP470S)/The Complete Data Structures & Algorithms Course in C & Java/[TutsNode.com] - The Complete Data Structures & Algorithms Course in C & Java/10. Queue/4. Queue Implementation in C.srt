@@ -1,0 +1,183 @@
+1
+00:00:00,420 --> 00:00:09,240
+Let's see if full implementation of that cue and see in order to add the elements we use, the AQ method
+
+2
+00:00:10,170 --> 00:00:13,770
+of it took into parameter and value and the check.
+
+3
+00:00:13,770 --> 00:00:17,460
+If there is equal size minus one, then the queue is full.
+
+4
+00:00:17,700 --> 00:00:24,150
+Otherwise, if the front equal one minus one inch were returned, the front equal to zero and increase
+
+5
+00:00:24,150 --> 00:00:33,660
+their rear by one and add the items at the rear equal to value and we display a math message called
+
+6
+00:00:33,660 --> 00:00:37,500
+inserted and we put the element that we have inserted.
+
+7
+00:00:38,100 --> 00:00:41,880
+Let's see that deck method at the checks.
+
+8
+00:00:42,480 --> 00:00:44,850
+If front equality fall to minus one.
+
+9
+00:00:45,150 --> 00:00:46,560
+Then the queue is empty.
+
+10
+00:00:46,830 --> 00:00:50,640
+We can't remove any element from this queue.
+
+11
+00:00:52,140 --> 00:00:58,770
+Otherwise, if it is not empty, we are deleting the item we print the deleted.
+
+12
+00:01:00,790 --> 00:01:08,350
+We display a message called deleted and displayed on that item that we have that in the front and we
+
+13
+00:01:08,350 --> 00:01:15,730
+increase front by one if front to greater than earlier than front, equal to zero and equal to minus
+
+14
+00:01:16,000 --> 00:01:16,360
+one.
+
+15
+00:01:16,600 --> 00:01:18,280
+This is that back function.
+
+16
+00:01:19,820 --> 00:01:29,750
+In order to display and print the cue elements, we use a method called display and a freer if what
+
+17
+00:01:29,750 --> 00:01:34,760
+we call minus one at the checks that print f q is empty.
+
+18
+00:01:35,300 --> 00:01:44,660
+Otherwise, it will create and I print RFQ elements are and throw for that element.
+
+19
+00:01:44,990 --> 00:01:49,340
+It starts from front and then reaching rear.
+
+20
+00:01:49,490 --> 00:01:57,860
+We pass through all the elements and print them by using print percentage and we specify items at position.
+
+21
+00:01:58,130 --> 00:02:01,820
+Hi, this is how we print the queue.
+
+22
+00:02:02,330 --> 00:02:10,700
+Now let's make in a main method that starts making and inserting elements, removing the elements and
+
+23
+00:02:10,700 --> 00:02:11,810
+displaying the elements.
+
+24
+00:02:11,810 --> 00:02:17,030
+So in order to check if it is not possible, an empty queue to remove the elements.
+
+25
+00:02:17,660 --> 00:02:25,580
+So if you execute this program and try it in your C compiler, you will get the first method execution
+
+26
+00:02:25,760 --> 00:02:28,040
+deck that we have.
+
+27
+00:02:28,040 --> 00:02:30,020
+The queue is empty.
+
+28
+00:02:30,650 --> 00:02:35,360
+If we include five elements, we add one two three four five.
+
+29
+00:02:35,960 --> 00:02:38,810
+Now the Q have the these five elements.
+
+30
+00:02:39,260 --> 00:02:44,750
+Remember, we are creating an array of size five.
+
+31
+00:02:44,930 --> 00:02:51,170
+So the six element cannot be added to be two because there.
+
+32
+00:02:52,170 --> 00:02:59,670
+Q is Paul, because five is the size of the array and the size of the Q and the Q only accepts five
+
+33
+00:02:59,670 --> 00:03:08,130
+element, if we insert the sixth element, it will display for us that Q is full now.
+
+34
+00:03:08,640 --> 00:03:17,190
+We called the Method Boy Method display of type void and that removes the element entered the first
+
+35
+00:03:17,550 --> 00:03:18,630
+example one.
+
+36
+00:03:19,020 --> 00:03:22,400
+So remember one two three four five?
+
+37
+00:03:22,440 --> 00:03:26,430
+We are removing the elements from the first in.
+
+38
+00:03:27,890 --> 00:03:32,120
+For a first out, OK, so it will remove one.
+
+39
+00:03:32,990 --> 00:03:35,090
+Now we have just four elements.
+
+40
+00:03:35,210 --> 00:03:37,970
+If we start by splitting it.
+
+41
+00:03:38,960 --> 00:03:39,350
+OK.
+
+42
+00:03:39,950 --> 00:03:41,390
+It's very simple.
+
+43
+00:03:41,630 --> 00:03:51,500
+We are creating and we have implemented these these methods and see you can test them into your C compiler.
+
+44
+00:03:51,710 --> 00:03:55,190
+Now let's move and see the Q implementation in Java.
+
+45
+00:03:55,640 --> 00:03:56,840
+The same concept.
+
+46
+00:03:57,080 --> 00:03:57,740
+The same.

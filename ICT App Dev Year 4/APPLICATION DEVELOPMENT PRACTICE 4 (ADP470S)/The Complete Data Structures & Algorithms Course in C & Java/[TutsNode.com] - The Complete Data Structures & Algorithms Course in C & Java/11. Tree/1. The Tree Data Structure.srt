@@ -1,0 +1,243 @@
+1
+00:00:00,450 --> 00:00:01,530
+Hello, my friends.
+
+2
+00:00:02,010 --> 00:00:08,760
+And welcome to the complete data structure and algorithms course in this video will start learning on
+
+3
+00:00:08,850 --> 00:00:20,550
+new data structure on the tree based data structures so that tree a tree is a non-linear hierarchical
+
+4
+00:00:21,120 --> 00:00:26,670
+data structure that consists of nodes connected by edges.
+
+5
+00:00:27,850 --> 00:00:29,940
+This is then the tree.
+
+6
+00:00:30,640 --> 00:00:35,380
+And this is the nodes connected by each other, by the edges.
+
+7
+00:00:36,160 --> 00:00:44,200
+Other data structures, such as arrays link, it lists Stack and the Q are linear data structures that
+
+8
+00:00:44,200 --> 00:00:46,480
+stored data sequentially.
+
+9
+00:00:47,350 --> 00:00:56,380
+While in tree, we will see that it is different in order to perform any operation in a linear data
+
+10
+00:00:56,380 --> 00:00:57,000
+structure.
+
+11
+00:00:57,020 --> 00:01:04,570
+That time complexity increase with the increase of data size, but it is not acceptable in today's computational
+
+12
+00:01:04,570 --> 00:01:05,050
+world.
+
+13
+00:01:06,620 --> 00:01:15,230
+Different to three data structures allow quicker and easier access of the data as it is non-linear data
+
+14
+00:01:15,230 --> 00:01:15,740
+structure.
+
+15
+00:01:15,770 --> 00:01:25,610
+So the three differs from the queue and arrays and linkage lists and arrays and stack with nonlinear
+
+16
+00:01:25,610 --> 00:01:31,910
+data structure access to that data as it is not a linear data structure.
+
+17
+00:01:32,310 --> 00:01:35,530
+OK, so this is the ad.
+
+18
+00:01:36,050 --> 00:01:46,850
+It is the link between any two node and then node is an entity that contains a key or value and pointers
+
+19
+00:01:46,850 --> 00:01:48,680
+to its child nodes.
+
+20
+00:01:49,250 --> 00:01:57,540
+So the ball is called nodes, and the link between the nodes is known as edges.
+
+21
+00:01:58,040 --> 00:01:58,510
+OK.
+
+22
+00:02:01,990 --> 00:02:05,200
+Now, let's talk about some terminologies.
+
+23
+00:02:06,340 --> 00:02:07,150
+The Leave.
+
+24
+00:02:08,190 --> 00:02:19,140
+The last node of each path are called live nodes or external notes that don't contain a pointer or link
+
+25
+00:02:19,140 --> 00:02:20,640
+to child notes.
+
+26
+00:02:21,720 --> 00:02:30,180
+So the leaves are that ending notes in turn, the notes that note that have at least a child note is
+
+27
+00:02:30,180 --> 00:02:31,530
+called internal notes.
+
+28
+00:02:32,160 --> 00:02:41,220
+So any note that contained and other notes it is known as internal note that it is the topmost note
+
+29
+00:02:41,310 --> 00:02:42,180
+of a tree.
+
+30
+00:02:42,330 --> 00:02:48,330
+It's the top of the tree height of a tree.
+
+31
+00:02:48,330 --> 00:02:55,710
+The height of a tree is the height of the root node or the depths of the deepest note.
+
+32
+00:02:56,040 --> 00:03:03,720
+So the difference between that note, the upper node, the root and the Leafs, the last leaves.
+
+33
+00:03:05,550 --> 00:03:14,930
+Depth of A. The depths of inode is the number of edges from the road to the known forest.
+
+34
+00:03:15,150 --> 00:03:18,750
+A collection of these giant trees is called a forest.
+
+35
+00:03:19,080 --> 00:03:22,650
+You can create a forest by cutting the root of a tree.
+
+36
+00:03:23,100 --> 00:03:30,480
+Don't worry, we will see all of these terminologies in the days in next videos and exercises.
+
+37
+00:03:32,730 --> 00:03:38,820
+Consider this three edge equals to do height equal to do, and that's equal to zero deaths means the
+
+38
+00:03:38,820 --> 00:03:39,360
+level.
+
+39
+00:03:39,810 --> 00:03:42,240
+So that took a top route.
+
+40
+00:03:42,450 --> 00:03:49,950
+The top note is at level zero, the second level is the equal to one depth, equal to one.
+
+41
+00:03:50,190 --> 00:03:53,010
+And the last note is that's equal to two.
+
+42
+00:03:53,740 --> 00:03:54,270
+OK.
+
+43
+00:03:56,890 --> 00:04:05,770
+Creating a tree if I like to create like this tree, but encoding, we need to write some codes.
+
+44
+00:04:06,070 --> 00:04:07,650
+So how to do that?
+
+45
+00:04:07,660 --> 00:04:09,940
+What is the algorithm?
+
+46
+00:04:09,940 --> 00:04:14,860
+What is the syntax behind creating the note?
+
+47
+00:04:15,930 --> 00:04:16,770
+Or three?
+
+48
+00:04:18,070 --> 00:04:25,510
+We start by creating nodes exactly like a circular or blanket list.
+
+49
+00:04:26,110 --> 00:04:29,950
+But here we use left and right.
+
+50
+00:04:30,460 --> 00:04:32,740
+Despite using next and previous.
+
+51
+00:04:33,070 --> 00:04:36,270
+OK, so we need to specify the left.
+
+52
+00:04:36,310 --> 00:04:41,410
+We need to specify the right, and we need to specify the data that is contained.
+
+53
+00:04:41,980 --> 00:04:50,890
+So if I need to create like the top route node one, then I need to insert the data inside it.
+
+54
+00:04:50,890 --> 00:05:01,060
+One If I have nodes to the left, I should refer fraud to the left pointer to indicate that that 12
+
+55
+00:05:01,060 --> 00:05:06,340
+is on the left and nine is to the right and so on.
+
+56
+00:05:06,460 --> 00:05:16,180
+If I need to have siblings or or children node inside 12, I need to point the left four five.
+
+57
+00:05:16,330 --> 00:05:18,070
+And there are two there.
+
+58
+00:05:18,370 --> 00:05:18,910
+Six.
+
+59
+00:05:19,360 --> 00:05:25,360
+And here we have creating a tree and we know what is that tree?
+
+60
+00:05:25,870 --> 00:05:34,450
+Now let's move in more complex things like that traversal of the tree, the orders and later on, we
+
+61
+00:05:34,450 --> 00:05:39,070
+will start creating the codes that responsible for responsible for making and.

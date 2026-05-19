@@ -1,0 +1,375 @@
+1
+00:00:00,390 --> 00:00:06,240
+Hello, my friends, and welcome to exercise number 45 in this exercise, we are asked to write a function
+
+2
+00:00:06,240 --> 00:00:13,470
+to delete a nod from blank bless since every note therefore linked list is dynamically allocated using
+
+3
+00:00:13,670 --> 00:00:21,180
+look in see we need to call free method for freeing memory allocated for that not to be deleted.
+
+4
+00:00:21,210 --> 00:00:22,950
+This has happened in C.
+
+5
+00:00:23,190 --> 00:00:28,410
+Now let's see how in Java this would be implemented.
+
+6
+00:00:28,950 --> 00:00:35,850
+We have created the non before and the aesthetic class not that contains the data and the next.
+
+7
+00:00:36,240 --> 00:00:42,840
+And we have created the methods like print last, push at, beginning, insert after and append not.
+
+8
+00:00:43,170 --> 00:00:45,650
+These are that insertion.
+
+9
+00:00:45,660 --> 00:00:47,340
+These are the insertion methods.
+
+10
+00:00:47,580 --> 00:00:49,860
+This is the print list.
+
+11
+00:00:50,100 --> 00:00:55,380
+And now let's see that deleting operations and link list.
+
+12
+00:00:55,560 --> 00:00:55,970
+OK.
+
+13
+00:00:57,460 --> 00:01:04,030
+Before we start, please go back and review their lecture about deleting their nodes and in order to
+
+14
+00:01:04,060 --> 00:01:10,890
+continue with us with this lecture and be familiar with everything, OK?
+
+15
+00:01:11,350 --> 00:01:15,820
+So for that, I will create public.
+
+16
+00:01:17,110 --> 00:01:22,830
+Void, delete, delete, not OK.
+
+17
+00:01:23,200 --> 00:01:33,040
+It took into the perimeter there, and so I need the key from the not given a key delete the first appearance
+
+18
+00:01:33,040 --> 00:01:34,990
+of the key and link it less.
+
+19
+00:01:35,170 --> 00:01:42,080
+So first of all, the first method store had not.
+
+20
+00:01:42,130 --> 00:01:50,710
+OK, so we start by not -- equal to hand and not.
+
+21
+00:01:52,390 --> 00:01:55,420
+Pretty equal to none.
+
+22
+00:01:55,870 --> 00:01:56,340
+OK.
+
+23
+00:01:56,680 --> 00:01:59,650
+This is how do we incent instantiate that them?
+
+24
+00:02:00,040 --> 00:02:01,360
+And they're a proof.
+
+25
+00:02:02,050 --> 00:02:08,830
+If the head itself holds the key to be deleted, then we check
+
+26
+00:02:11,770 --> 00:02:28,770
+if key or if and if had is the key is equal to the key, then delete their hand.
+
+27
+00:02:28,780 --> 00:02:38,860
+So if that does not equal to null, does not equal to null and then the data equal, equal to key.
+
+28
+00:02:39,820 --> 00:02:51,730
+This is happens so them or have had equal to hand equal to 10 dot next.
+
+29
+00:02:51,940 --> 00:02:52,470
+OK.
+
+30
+00:02:52,900 --> 00:03:04,270
+This will change their hand to return and break out from this if statement.
+
+31
+00:03:04,540 --> 00:03:12,070
+This is the case if habit is equal to the key so we can delete the head and move it to the next.
+
+32
+00:03:12,470 --> 00:03:17,980
+OK, now let's see that third case or the third step.
+
+33
+00:03:19,600 --> 00:03:19,990
+If.
+
+34
+00:03:20,890 --> 00:03:25,570
+The key is not the first, the first, not.
+
+35
+00:03:25,750 --> 00:03:27,730
+We need to search for that key.
+
+36
+00:03:27,760 --> 00:03:36,490
+So searching the third step is searching for that key to be deleted.
+
+37
+00:03:38,470 --> 00:03:39,880
+Keep the previous note.
+
+38
+00:03:39,880 --> 00:03:46,950
+I will put all this note in order to put it to write them down and not in New York.
+
+39
+00:03:47,140 --> 00:03:50,500
+Copy book into your notebook, please, guys.
+
+40
+00:03:50,500 --> 00:03:56,980
+These four are very important details, and you may ask it about them in the university or in there
+
+41
+00:03:57,280 --> 00:03:58,780
+at the interview.
+
+42
+00:03:59,080 --> 00:04:06,250
+OK, so why are they doing this if if it is the first not, we are deleting the head and move it to
+
+43
+00:04:06,250 --> 00:04:12,750
+the next of the head, and then we are going to search for the key to be deleted.
+
+44
+00:04:12,760 --> 00:04:20,350
+So keep their previous not as we need to change.
+
+45
+00:04:20,540 --> 00:04:20,890
+OK.
+
+46
+00:04:21,970 --> 00:04:35,950
+While them does not equal to none and then the data does not equal to key then.
+
+47
+00:04:39,040 --> 00:04:39,490
+Then.
+
+48
+00:04:41,730 --> 00:04:48,800
+Produce equal to 10 and stamp equal to attempt next.
+
+49
+00:04:49,020 --> 00:04:51,660
+OK, this is very important.
+
+50
+00:04:53,910 --> 00:04:54,270
+Now.
+
+51
+00:04:56,740 --> 00:05:05,290
+If key, if key was not present in the link at this.
+
+52
+00:05:08,730 --> 00:05:16,350
+As a programmer or a professional coder, you need to go and gather all that.
+
+53
+00:05:17,690 --> 00:05:22,820
+Possibilities lay the first one if the head is equal to the key that we are searching for.
+
+54
+00:05:22,970 --> 00:05:28,970
+To be deleted or if it is in any position, may be last, may be middle.
+
+55
+00:05:29,510 --> 00:05:36,260
+And here, if it is not the present itself, we are going to delete a key or ignored that it is not
+
+56
+00:05:36,260 --> 00:05:38,180
+the presented in the linked list.
+
+57
+00:05:38,180 --> 00:05:45,140
+So consider if we have 10 nods from one to 10 and have the data from one to 10, and we are searching
+
+58
+00:05:45,140 --> 00:05:52,550
+for a 12 key, a key equal to 12 for in this link list to be deleted.
+
+59
+00:05:52,790 --> 00:06:01,010
+It's very obvious that we will not delete anything because 12 is not presented inside this linked list,
+
+60
+00:06:01,010 --> 00:06:12,050
+so ask them equal if what to know if I'm sorry equally for two null, then return.
+
+61
+00:06:12,530 --> 00:06:13,120
+OK.
+
+62
+00:06:14,890 --> 00:06:25,060
+Now, after deleting this is a very important step, very important, very important.
+
+63
+00:06:27,490 --> 00:06:31,660
+After deleting after deletion.
+
+64
+00:06:31,750 --> 00:06:43,060
+Don't miss to unlink, then not only then not from the link, at least length and on
+
+65
+00:06:46,870 --> 00:06:49,930
+from the link list.
+
+66
+00:06:50,140 --> 00:06:58,420
+OK, how to do that by making brave dot lame or next equal to Camp Dot next.
+
+67
+00:06:58,600 --> 00:07:03,110
+OK, this is very important to break there.
+
+68
+00:07:04,060 --> 00:07:08,560
+And don't miss the link.
+
+69
+00:07:09,620 --> 00:07:10,010
+OK.
+
+70
+00:07:12,660 --> 00:07:21,030
+This is very important because we have deleted the note, but the reference and the the linking, the
+
+71
+00:07:21,030 --> 00:07:30,840
+then on inside the inside the link, at least to the next note, it would be not clear because we have
+
+72
+00:07:30,840 --> 00:07:40,170
+deleted not so we need to unlink, then nod from the link at least and move it to them the next.
+
+73
+00:07:40,330 --> 00:07:42,120
+So previous equals attempt.
+
+74
+00:07:42,120 --> 00:07:42,630
+OK, next.
+
+75
+00:07:42,630 --> 00:07:50,220
+This one will cover the problem and allow you to delete whatever you want from the list.
+
+76
+00:07:50,430 --> 00:07:53,310
+OK, so let's test this.
+
+77
+00:07:54,700 --> 00:07:59,980
+Method before we we call it, I would show you our current link list.
+
+78
+00:08:00,310 --> 00:08:04,000
+It's four, one, two, five, three and six.
+
+79
+00:08:04,420 --> 00:08:07,420
+I'm going to delete number two.
+
+80
+00:08:07,640 --> 00:08:11,560
+OK, so I will search inside the linked list.
+
+81
+00:08:12,070 --> 00:08:13,930
+Four g equals to do.
+
+82
+00:08:15,860 --> 00:08:22,370
+And then deleted, so the link and the new link at least, would be the same as this, but without too.
+
+83
+00:08:22,670 --> 00:08:23,240
+Let's see.
+
+84
+00:08:24,080 --> 00:08:28,250
+Let's go to the main and I will put here
+
+85
+00:08:31,220 --> 00:08:34,290
+exercise number 45
+
+86
+00:08:36,440 --> 00:08:41,390
+deleting and not linked list.
+
+87
+00:08:41,600 --> 00:08:42,890
+Don't delete.
+
+88
+00:08:43,580 --> 00:08:45,990
+No, and I passed the key.
+
+89
+00:08:46,040 --> 00:08:50,120
+It will search for two and will delete that sentence.
+
+90
+00:08:50,720 --> 00:08:52,010
+And here we go, guys.
+
+91
+00:08:52,370 --> 00:09:00,920
+Number two data or key does not exist, so the note that contains number two has been successfully deleted.
+
+92
+00:09:01,310 --> 00:09:10,340
+And this is what we need from you to understand that these things, these methods are being asked in
+
+93
+00:09:10,340 --> 00:09:17,720
+every interview, in every universe, the exams and data structures and algorithms subjects.
+
+94
+00:09:17,870 --> 00:09:22,280
+So pay attention for this and write them down because they are.

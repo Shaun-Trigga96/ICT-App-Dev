@@ -1,0 +1,167 @@
+1
+00:00:00,240 --> 00:00:08,430
+How to get the ends note of their link, at least consider an example if we have this linked list,
+
+2
+00:00:08,730 --> 00:00:14,520
+the first element is 18, second is 66 and the third is one one nine.
+
+3
+00:00:15,240 --> 00:00:15,700
+OK.
+
+4
+00:00:15,990 --> 00:00:19,050
+We have three elements inside this link and not.
+
+5
+00:00:20,230 --> 00:00:20,860
+Think of this.
+
+6
+00:00:21,780 --> 00:00:29,280
+We are going to search for the second or two that get that and not which is do.
+
+7
+00:00:29,460 --> 00:00:37,710
+So we are searching and we need to get the second nod inside this link.
+
+8
+00:00:37,710 --> 00:00:42,270
+At least for that, I need to search for the first one.
+
+9
+00:00:43,320 --> 00:00:51,900
+If it is there and the swan and search for the second, which is at second, at the second and decks,
+
+10
+00:00:52,260 --> 00:00:59,730
+and we get it by making this happen, by creating a damp variable.
+
+11
+00:00:59,850 --> 00:01:01,920
+So what does this means?
+
+12
+00:01:02,640 --> 00:01:05,230
+I will create get an A..
+
+13
+00:01:05,340 --> 00:01:16,830
+It is a method that takes in the perimeter a structure structure no reference had referencing to the
+
+14
+00:01:16,830 --> 00:01:19,440
+head and end index.
+
+15
+00:01:19,800 --> 00:01:20,190
+OK.
+
+16
+00:01:20,340 --> 00:01:25,800
+So what we are searching for, we are searching for their fourth due to the right.
+
+17
+00:01:25,830 --> 00:01:32,170
+I have called this method get and note, and I passed the hat and do this number two.
+
+18
+00:01:32,190 --> 00:01:37,520
+We are telling that we need the second, the second index.
+
+19
+00:01:37,530 --> 00:01:40,920
+We we need the not at index number two.
+
+20
+00:01:42,000 --> 00:01:42,290
+No.
+
+21
+00:01:42,660 --> 00:01:49,620
+We created structure, not them equal to had we start by temp equal to their difference to the head.
+
+22
+00:01:49,650 --> 00:01:53,060
+So what is the head of the of this linkage list?
+
+23
+00:01:53,070 --> 00:01:58,050
+It's the first position and we reference this stamp to it.
+
+24
+00:01:58,560 --> 00:02:01,680
+We create and count equal to zero.
+
+25
+00:02:02,280 --> 00:02:04,680
+And we create a while loop.
+
+26
+00:02:04,710 --> 00:02:12,960
+So while loop if count equal equal to end x, then return stamp and with the date, OK, the return
+
+27
+00:02:13,320 --> 00:02:15,120
+that -- of that data.
+
+28
+00:02:15,450 --> 00:02:21,840
+So and count increased by one stamp equal to them the next.
+
+29
+00:02:21,960 --> 00:02:29,730
+So reference that temp stamp move the cursor of the temp by using temp equals temp there to financing
+
+30
+00:02:29,730 --> 00:02:30,870
+for that next.
+
+31
+00:02:31,290 --> 00:02:31,580
+OK.
+
+32
+00:02:32,310 --> 00:02:42,090
+Otherwise, if you don't, if we have like five elements inside the linked list and I need that 10th
+
+33
+00:02:42,450 --> 00:02:51,210
+index, the 10th index is not included because that linkage list contains only five elements.
+
+34
+00:02:51,450 --> 00:02:51,970
+OK.
+
+35
+00:02:51,990 --> 00:02:54,030
+It's maximum index is four.
+
+36
+00:02:55,280 --> 00:03:00,040
+The numbers start from zero one two three four five elements.
+
+37
+00:03:00,210 --> 00:03:03,550
+OK, so it will return minus one.
+
+38
+00:03:03,880 --> 00:03:12,460
+Otherwise, if we get the index and everything is correct, then returned the data of at the index equal
+
+39
+00:03:12,460 --> 00:03:14,230
+to two or the past index.
+
+40
+00:03:14,320 --> 00:03:14,650
+OK.
+
+41
+00:03:15,040 --> 00:03:23,680
+This is how we get the arms not of the link, at least by moving the temporary cursor or the temporary
+
+42
+00:03:23,680 --> 00:03:28,000
+pointer through the nodes and searching for the specific and.

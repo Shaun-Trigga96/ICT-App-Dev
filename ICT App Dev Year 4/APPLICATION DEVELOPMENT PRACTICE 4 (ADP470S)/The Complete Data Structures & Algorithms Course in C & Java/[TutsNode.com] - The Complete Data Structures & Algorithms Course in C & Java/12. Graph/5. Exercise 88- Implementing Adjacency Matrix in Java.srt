@@ -1,0 +1,679 @@
+1
+00:00:00,060 --> 00:00:05,850
+All my friends and I come to exercise number 88 in this exercise, we are going to implement the adjacency
+
+2
+00:00:05,850 --> 00:00:10,440
+metrics and job we have learned enough about adjacency metrics.
+
+3
+00:00:10,650 --> 00:00:21,360
+Now let's implement this theory into the codes, so I need to like to simplify that.
+
+4
+00:00:21,360 --> 00:00:24,500
+We are what we are going to do in this exercise.
+
+5
+00:00:24,510 --> 00:00:33,030
+We are going to create a four arrows matrix and four columns metrics, and we are going to specify the
+
+6
+00:00:33,030 --> 00:00:36,630
+elements and the connection between these edges.
+
+7
+00:00:36,840 --> 00:00:43,470
+So here we need to create four four times four metrics.
+
+8
+00:00:43,740 --> 00:00:48,570
+Start from zero one two and three zero one two and three.
+
+9
+00:00:49,020 --> 00:00:55,350
+And then we need to create a connection between zero and one and one and zero.
+
+10
+00:00:56,130 --> 00:01:00,390
+So whenever you put one here, you need zero one.
+
+11
+00:01:00,390 --> 00:01:02,790
+You inverse it one zero.
+
+12
+00:01:02,790 --> 00:01:03,840
+There is a connection.
+
+13
+00:01:04,050 --> 00:01:04,380
+OK.
+
+14
+00:01:05,410 --> 00:01:11,010
+So this is presenting a graph of four four.
+
+15
+00:01:11,010 --> 00:01:12,900
+Vertices is here.
+
+16
+00:01:15,060 --> 00:01:16,650
+Zero one.
+
+17
+00:01:17,770 --> 00:01:18,250
+Sorry.
+
+18
+00:01:20,010 --> 00:01:21,270
+Zero one.
+
+19
+00:01:22,900 --> 00:01:24,100
+Two and three.
+
+20
+00:01:24,130 --> 00:01:32,110
+There is a connection between zero and one and one and zero because it is undirected graph, so zero
+
+21
+00:01:32,110 --> 00:01:33,820
+one one zero.
+
+22
+00:01:33,880 --> 00:01:35,560
+So we put one zero here.
+
+23
+00:01:36,160 --> 00:01:39,580
+I need to create a connection between zero and two.
+
+24
+00:01:39,620 --> 00:01:45,760
+So zero two, there is a connection and do zero.
+
+25
+00:01:45,790 --> 00:01:47,140
+There is a connection.
+
+26
+00:01:47,290 --> 00:01:47,780
+OK.
+
+27
+00:01:48,430 --> 00:01:51,940
+I need to create a connection between one and two.
+
+28
+00:01:52,510 --> 00:01:56,080
+So one is connected to two and two is connected to one.
+
+29
+00:01:56,260 --> 00:02:01,510
+So one two is connected and two one is connected
+
+30
+00:02:04,030 --> 00:02:06,220
+to zero connected.
+
+31
+00:02:06,640 --> 00:02:07,190
+OK.
+
+32
+00:02:07,780 --> 00:02:12,220
+And the connection between two and the three is connect.
+
+33
+00:02:12,550 --> 00:02:13,060
+OK.
+
+34
+00:02:14,340 --> 00:02:21,720
+Do and the city do is connected to three and the three connected to two.
+
+35
+00:02:22,200 --> 00:02:22,670
+OK.
+
+36
+00:02:23,190 --> 00:02:24,960
+And the rest is zero.
+
+37
+00:02:25,530 --> 00:02:35,460
+OK, I need to create an algorithm to create a program that allows for me to represent this matrix.
+
+38
+00:02:36,060 --> 00:02:44,250
+This graph into a matrix and this matrix should be works fine in this project.
+
+39
+00:02:44,460 --> 00:02:48,810
+OK, so let's just start implementing this exercise.
+
+40
+00:02:48,960 --> 00:02:55,200
+I want from you to post the video and start thinking about how to solve like this exercise.
+
+41
+00:02:55,500 --> 00:02:57,930
+I'm waiting for a solution in the comments below.
+
+42
+00:02:59,070 --> 00:03:11,760
+So let's create a new Java class here inside the source folder, and I will name it as adjacency
+
+43
+00:03:14,700 --> 00:03:15,540
+matrix.
+
+44
+00:03:17,520 --> 00:03:23,340
+And by the way, you can get all of these source codes that we have created before underneath every,
+
+45
+00:03:23,850 --> 00:03:31,650
+every lecture, every exercise that we it's specific to at our you can download it from the resource
+
+46
+00:03:31,650 --> 00:03:34,380
+folder from that link below that to me.
+
+47
+00:03:35,010 --> 00:03:39,600
+OK, so this is the adjacency matrix.
+
+48
+00:03:40,230 --> 00:03:45,390
+We start by creating it because it is depending on a matrix.
+
+49
+00:03:45,840 --> 00:03:48,920
+So we are going to create a two dimensional array.
+
+50
+00:03:48,940 --> 00:03:50,700
+So private Boolean.
+
+51
+00:03:53,170 --> 00:03:54,550
+I will call it as.
+
+52
+00:03:57,610 --> 00:03:58,900
+Because it is a Boolean.
+
+53
+00:04:00,410 --> 00:04:07,630
+Boolean metrics adjacency matrix that that accepts only one and two.
+
+54
+00:04:07,780 --> 00:04:08,240
+OK.
+
+55
+00:04:09,010 --> 00:04:15,160
+And it is two dimensional that there is a bully and a private bent.
+
+56
+00:04:17,080 --> 00:04:21,240
+Numbers of their diseases.
+
+57
+00:04:22,200 --> 00:04:27,610
+OK, now let's initialize the metrics at the first step, initialize
+
+58
+00:04:30,250 --> 00:04:31,150
+the metrics.
+
+59
+00:04:31,990 --> 00:04:37,300
+This is the first step I like to make comments in order to understand when you revised the code.
+
+60
+00:04:37,780 --> 00:04:38,920
+Understand everything.
+
+61
+00:04:39,070 --> 00:04:43,060
+So public adjacency matrix this constructor.
+
+62
+00:04:43,060 --> 00:04:48,730
+So when we create an adjacency matrix, we should specify in its parameter the number of vertices is
+
+63
+00:04:49,150 --> 00:04:51,960
+and the number of vertices is this number over.
+
+64
+00:04:52,300 --> 00:05:01,930
+This number of vertices is equal to number of vertices, and we specify adjacency matrix equal to new
+
+65
+00:05:01,930 --> 00:05:08,340
+Boolean Boolean matrix number of vertices and here number of places.
+
+66
+00:05:08,650 --> 00:05:21,670
+I make it exactly the same because there is an implied that by their logic, in adjacency matrix, it's
+
+67
+00:05:21,700 --> 00:05:22,810
+a squared matrix.
+
+68
+00:05:22,810 --> 00:05:29,200
+So if you create five Quiroz, you should create five columns because we have the same count the connection
+
+69
+00:05:29,200 --> 00:05:29,560
+we need.
+
+70
+00:05:29,830 --> 00:05:36,310
+If we have five or eight vertices, we are understanding the relation between five the five edges and
+
+71
+00:05:36,310 --> 00:05:38,800
+the five vertices is OK.
+
+72
+00:05:39,220 --> 00:05:43,120
+So five edges, we have possibility of twenty five.
+
+73
+00:05:45,130 --> 00:05:53,620
+If we have five vertices, we have possibility of 25 edges at MAX, so we create it at a square matrix.
+
+74
+00:05:53,620 --> 00:06:01,480
+This is a very important trick and may be asked in interviews and the examples now at the edges.
+
+75
+00:06:01,810 --> 00:06:18,430
+Public void and edge I will put and I and in j because the edge would contain STO, the destination
+
+76
+00:06:18,820 --> 00:06:19,710
+and the source.
+
+77
+00:06:19,720 --> 00:06:25,930
+So let me put it source or see that we have created in the previous video and this destination when
+
+78
+00:06:25,930 --> 00:06:27,250
+implementing that graph.
+
+79
+00:06:27,460 --> 00:06:41,980
+So adjacent metrics at index as C and destination equal to the rule and make the same connection between
+
+80
+00:06:42,130 --> 00:06:45,190
+the destination and the source.
+
+81
+00:06:46,100 --> 00:06:46,600
+OK,
+
+82
+00:06:50,260 --> 00:06:50,540
+true.
+
+83
+00:06:52,720 --> 00:06:58,540
+As I said to you, if there is a connection between zero and two, there is a connection between two
+
+84
+00:06:58,540 --> 00:06:59,110
+and zero.
+
+85
+00:06:59,800 --> 00:07:00,290
+OK.
+
+86
+00:07:00,640 --> 00:07:04,940
+This is very important in undirected graph.
+
+87
+00:07:04,960 --> 00:07:11,950
+I repeat to you in undirected graph in in direct to the graph, this is not applicable.
+
+88
+00:07:13,570 --> 00:07:14,140
+OK.
+
+89
+00:07:14,290 --> 00:07:15,820
+Maybe or maybe not.
+
+90
+00:07:15,820 --> 00:07:19,690
+There is a connection between source and destination and destination and source.
+
+91
+00:07:19,930 --> 00:07:20,260
+OK.
+
+92
+00:07:20,740 --> 00:07:30,460
+No third step is to remove edges if we need to remove the edges, so we specify the remove edge destination
+
+93
+00:07:30,460 --> 00:07:32,230
+and source again.
+
+94
+00:07:32,620 --> 00:07:34,300
+And I.
+
+95
+00:07:35,580 --> 00:07:38,820
+Or source and destination.
+
+96
+00:07:39,210 --> 00:07:43,710
+I need to remove the adjacency matrix source.
+
+97
+00:07:44,070 --> 00:07:53,760
+I would copy them from here and place them here and just put it false, and it will indicate zero for
+
+98
+00:07:53,760 --> 00:07:54,120
+it.
+
+99
+00:07:54,450 --> 00:07:55,590
+OK, no.
+
+100
+00:07:55,980 --> 00:08:02,790
+In order to print The Matrix, I need to get all of this Boolean adjacent metrics.
+
+101
+00:08:03,420 --> 00:08:10,260
+And since that this boolean so true, I need to put it and remove through and put it one and everything
+
+102
+00:08:10,260 --> 00:08:12,390
+else we have inside this matrix.
+
+103
+00:08:12,390 --> 00:08:15,870
+We should replace it with the zero.
+
+104
+00:08:16,740 --> 00:08:24,870
+So printing that graph or that to The Matrix is done by making a nested loop.
+
+105
+00:08:24,900 --> 00:08:32,700
+So I will create this structure and the metrics I will overload the public
+
+106
+00:08:35,490 --> 00:08:37,770
+string to string.
+
+107
+00:08:41,070 --> 00:08:42,360
+To string method
+
+108
+00:08:44,850 --> 00:08:48,750
+and this will be printing it.
+
+109
+00:08:48,990 --> 00:08:52,050
+So for that, I will create a string builder
+
+110
+00:08:54,660 --> 00:08:56,680
+as continuous string bowler.
+
+111
+00:08:56,710 --> 00:09:04,950
+So if you want to learn more about Java, please, you can enroll with into that into the complete Java
+
+112
+00:09:04,950 --> 00:09:09,840
+developer course for our on the same Udemy platform.
+
+113
+00:09:10,020 --> 00:09:10,430
+OK.
+
+114
+00:09:10,890 --> 00:09:12,870
+So there is a contact us.
+
+115
+00:09:12,870 --> 00:09:22,170
+We can send you a free Capote funeral with this Jeff, of course, equal to zero idol as the number
+
+116
+00:09:22,170 --> 00:09:23,280
+of diseases.
+
+117
+00:09:23,280 --> 00:09:35,520
+And I say plus then as a friend, we need to add and append addition at the end.
+
+118
+00:09:38,130 --> 00:09:54,810
+And here for this is the nested loop boolean j j of metrics a decent metrics for every element inside
+
+119
+00:09:54,810 --> 00:09:55,620
+this matrix.
+
+120
+00:09:55,830 --> 00:10:00,390
+Adjacent metrics make a Boolean case such that we need to print this.
+
+121
+00:10:00,390 --> 00:10:03,390
+Okay, so append this key.
+
+122
+00:10:03,920 --> 00:10:05,130
+This is J.
+
+123
+00:10:11,950 --> 00:10:12,540
+J.
+
+124
+00:10:14,350 --> 00:10:15,400
+If it is.
+
+125
+00:10:16,920 --> 00:10:19,620
+Drew then make it one.
+
+126
+00:10:19,860 --> 00:10:23,160
+Otherwise, it will be zero.
+
+127
+00:10:23,550 --> 00:10:23,930
+OK.
+
+128
+00:10:25,860 --> 00:10:27,510
+This is the meaning of this.
+
+129
+00:10:27,610 --> 00:10:27,780
+No.
+
+130
+00:10:27,790 --> 00:10:29,070
+Take shortcuts.
+
+131
+00:10:29,750 --> 00:10:30,170
+OK.
+
+132
+00:10:30,990 --> 00:10:33,510
+Plus space between them.
+
+133
+00:10:34,320 --> 00:10:41,510
+And here we go as the abend and
+
+134
+00:10:45,450 --> 00:10:46,110
+OK.
+
+135
+00:10:46,110 --> 00:10:53,570
+And here return and start to strike again.
+
+136
+00:10:53,970 --> 00:10:57,960
+So we are printing it now.
+
+137
+00:10:57,990 --> 00:11:05,550
+Let's test our test thing here and creating the code so public.
+
+138
+00:11:06,450 --> 00:11:09,150
+Static void main.
+
+139
+00:11:09,780 --> 00:11:12,420
+This is this game asks
+
+140
+00:11:18,690 --> 00:11:19,830
+so Graph
+
+141
+00:11:22,290 --> 00:11:27,240
+G equals the new graph of From the X.
+
+142
+00:11:27,870 --> 00:11:29,700
+So we have vertices for.
+
+143
+00:11:32,100 --> 00:11:34,210
+Number of vertices is equal to four.
+
+144
+00:11:34,260 --> 00:11:36,270
+So I will create a constructor.
+
+145
+00:11:39,080 --> 00:11:46,940
+OK, adjacency matrix, I would create adjacency adjacency matrix, sorry, I have missed that, we
+
+146
+00:11:46,940 --> 00:11:49,050
+have named it as adjacency matrix.
+
+147
+00:11:49,580 --> 00:11:55,460
+Now G Dot + + between zero and one.
+
+148
+00:11:55,610 --> 00:11:57,770
+This is the source, and this is the destination.
+
+149
+00:11:58,340 --> 00:11:58,850
+OK.
+
+150
+00:12:00,530 --> 00:12:01,730
+I was complicated.
+
+151
+00:12:04,430 --> 00:12:08,600
+I will create between zero and two.
+
+152
+00:12:09,900 --> 00:12:17,800
+Between one and two, between two and zero, it is the same here.
+
+153
+00:12:17,820 --> 00:12:20,730
+I know zero and two it will create two end zero.
+
+154
+00:12:21,120 --> 00:12:25,410
+But in order to check our program if it is working fine, OK?
+
+155
+00:12:25,920 --> 00:12:27,480
+And this is a city.
+
+156
+00:12:28,990 --> 00:12:32,200
+System that out to prevent
+
+157
+00:12:34,720 --> 00:12:35,710
+due to history.
+
+158
+00:12:36,160 --> 00:12:40,270
+OK, let's learn how.
+
+159
+00:12:40,450 --> 00:12:42,580
+Let's test our program here.
+
+160
+00:12:42,610 --> 00:12:46,300
+Sorry, I need to run this program.
+
+161
+00:12:50,170 --> 00:12:53,290
+Ron, and this is our metrics.
+
+162
+00:12:53,500 --> 00:12:57,990
+Let's see if it is true, this is our matrix.
+
+163
+00:12:58,000 --> 00:13:02,530
+This is our graph that we have created in the beginning of this video.
+
+164
+00:13:03,010 --> 00:13:04,450
+Zero, one, two and three.
+
+165
+00:13:04,510 --> 00:13:08,470
+We have transformed it to the adjacency matrix.
+
+166
+00:13:08,830 --> 00:13:11,170
+And this is the adjacency matrix.
+
+167
+00:13:11,170 --> 00:13:19,280
+So zero one one zero one zero one zero one one zero one and zero zero one zero.
+
+168
+00:13:19,300 --> 00:13:20,890
+Congratulations, guys.
+
+169
+00:13:20,890 --> 00:13:27,070
+We have implemented correctly the adjacency matrix in a graph in Java and C.
+
+170
+00:13:27,140 --> 00:13:29,910
+Now let's move to the adjacency less.

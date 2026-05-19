@@ -1,0 +1,99 @@
+1
+00:00:00,700 --> 00:00:08,230
+Welcome our friends, the exercise number three complexity, we are asked to find the time complexity
+
+2
+00:00:08,590 --> 00:00:09,760
+of this program.
+
+3
+00:00:10,330 --> 00:00:19,480
+So I want from you to post the video, get your paper and pen and write down this and find try to find
+
+4
+00:00:19,480 --> 00:00:21,880
+the complexity of these exercises.
+
+5
+00:00:22,450 --> 00:00:24,380
+Guys, it's very important.
+
+6
+00:00:24,400 --> 00:00:27,910
+Do work with your own to solve, to try.
+
+7
+00:00:28,390 --> 00:00:35,530
+But if you if you are just listening, you will not get a master, will not be a master and you all
+
+8
+00:00:35,530 --> 00:00:38,140
+know you will not understand every concept.
+
+9
+00:00:38,500 --> 00:00:47,320
+Please try to solve these exercises because they are very important and that trying you are making is
+
+10
+00:00:47,650 --> 00:00:48,820
+very important.
+
+11
+00:00:51,130 --> 00:01:00,780
+So after you're thinking and trying to solve them, I help you find that the complexity, time, complexity
+
+12
+00:01:00,790 --> 00:01:01,360
+correct.
+
+13
+00:01:01,900 --> 00:01:02,890
+We will start.
+
+14
+00:01:05,860 --> 00:01:12,910
+So if we took and an equal to 1000, so this thousand.
+
+15
+00:01:14,850 --> 00:01:21,980
+As a constant and and and we are just declaring a constant.
+
+16
+00:01:22,380 --> 00:01:33,330
+So it is all of one, if we go to the next line, we are just the printing.
+
+17
+00:01:33,480 --> 00:01:39,000
+Hey, your input is and we just need to print the end.
+
+18
+00:01:40,980 --> 00:01:51,060
+OK, so here in this line, just printing will result in all of one on.
+
+19
+00:01:53,710 --> 00:02:05,320
+System that to print, I'm doing more stuff with less, and we are again making the same concept by
+
+20
+00:02:05,320 --> 00:02:15,460
+printing and which is oh of one, so printing or initializing and clearing variables are all of one
+
+21
+00:02:16,090 --> 00:02:24,910
+system, the other print and more printing and also and printing this message where the result and of
+
+22
+00:02:24,940 --> 00:02:26,350
+of one.
+
+23
+00:02:26,830 --> 00:02:32,080
+So one, two, three and four oh four.
+
+24
+00:02:32,080 --> 00:02:35,800
+And which is resulting in oh of one.
+
+25
+00:02:35,830 --> 00:02:41,830
+So this time complexity for this algorithm is just.

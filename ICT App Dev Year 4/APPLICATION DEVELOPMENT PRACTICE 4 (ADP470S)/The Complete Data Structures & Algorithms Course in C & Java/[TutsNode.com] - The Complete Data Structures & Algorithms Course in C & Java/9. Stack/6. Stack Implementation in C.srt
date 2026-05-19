@@ -1,0 +1,207 @@
+1
+00:00:00,090 --> 00:00:09,330
+Now, let's revise that implementation and see before moving and do that exercises and see how to implement
+
+2
+00:00:09,330 --> 00:00:12,510
+and how to create a stack and chart.
+
+3
+00:00:12,990 --> 00:00:22,980
+So the stack implementation included, as did the IO and acidity level that etch and define MAX 10 and
+
+4
+00:00:23,250 --> 00:00:24,480
+count equal to zero.
+
+5
+00:00:24,960 --> 00:00:31,200
+Now, to create this stack, we have to create a struct called stack.
+
+6
+00:00:31,440 --> 00:00:42,330
+It contains two things the item array and having a maximum element as max and we have an event called
+
+7
+00:00:42,490 --> 00:00:48,400
+top end with typedef struct stack SD.
+
+8
+00:00:48,930 --> 00:00:59,010
+We have created now to create empty stack as the contains SD and stack that that is defined as throughout
+
+9
+00:00:59,010 --> 00:01:01,650
+this application as SD.
+
+10
+00:01:01,920 --> 00:01:11,010
+And we will create as to the top equal minus one because we are creating an empty stack.
+
+11
+00:01:11,220 --> 00:01:20,880
+Now the third thing is creating jack of the stack is full and is full.
+
+12
+00:01:21,000 --> 00:01:24,600
+It is a method that returns and.
+
+13
+00:01:25,840 --> 00:01:34,210
+And it took into perimeter is tracked note gold struct there, a structure of type S3, which is a stack
+
+14
+00:01:34,840 --> 00:01:42,100
+and check if the top as the equal max minus one, it will return one, otherwise it will return zero.
+
+15
+00:01:42,310 --> 00:01:50,470
+So this is how would check if their stack is full now to check if the stack is empty, we create a method
+
+16
+00:01:50,470 --> 00:01:51,550
+in the same way.
+
+17
+00:01:51,940 --> 00:02:02,050
+It's called is empty asthe took into perimeter is structured fast and as equal equal to minus one,
+
+18
+00:02:02,050 --> 00:02:04,210
+it will return one.
+
+19
+00:02:04,240 --> 00:02:06,430
+Otherwise, it will return zero.
+
+20
+00:02:06,430 --> 00:02:16,000
+So if that top equal equal to minus one, then the top integer it refers there is no elements inside
+
+21
+00:02:16,000 --> 00:02:16,780
+the stack.
+
+22
+00:02:17,450 --> 00:02:17,850
+OK.
+
+23
+00:02:21,200 --> 00:02:30,740
+Adding elements interest stack, if this has this operation is called pushing void push, we have seen
+
+24
+00:02:30,740 --> 00:02:39,650
+this, but it is more a general method here took into parameter to the that you are going to push elements
+
+25
+00:02:39,650 --> 00:02:44,540
+inside it and then you add them as and that you are going to be pushed.
+
+26
+00:02:45,170 --> 00:02:46,910
+So it is full recheck.
+
+27
+00:02:46,910 --> 00:02:57,800
+If there's a stack of full Brent F. stack fully else, it will remove that will move that up to their
+
+28
+00:02:57,800 --> 00:03:00,350
+necks and increase it by one.
+
+29
+00:03:00,680 --> 00:03:11,330
+And as items as at top end stop it equal to then you might remember we are creating the stack using
+
+30
+00:03:11,330 --> 00:03:17,060
+the AC and increased count by one removing element from the stack.
+
+31
+00:03:17,690 --> 00:03:27,230
+We take into perimeter the stack that we are going to be it to be performing and removing elements from
+
+32
+00:03:27,230 --> 00:03:32,360
+it and the check if it is empty, we can't remove anything.
+
+33
+00:03:32,360 --> 00:03:34,970
+So print stack as empty.
+
+34
+00:03:35,060 --> 00:03:44,180
+Otherwise, it will print the item that that this popped and decrease the top element by one and decrease
+
+35
+00:03:44,180 --> 00:03:46,550
+the count and print f.
+
+36
+00:03:47,450 --> 00:03:55,580
+Then, Brent, elements of the stack really have seen it in the previous video, how to move the cursor
+
+37
+00:03:55,970 --> 00:04:03,770
+and how to create also a loop that loops all through all the elements of the array and print items.
+
+38
+00:04:04,010 --> 00:04:04,350
+OK.
+
+39
+00:04:05,770 --> 00:04:14,860
+And we see how to test this implementation, the stack and boom implementation in a main method using
+
+40
+00:04:14,860 --> 00:04:15,880
+the stack here.
+
+41
+00:04:15,910 --> 00:04:25,390
+So we are creating the empty stack, reserving the memory and pushing S1 as as do, so we are pushing.
+
+42
+00:04:26,620 --> 00:04:34,600
+So first of all, we have named the stack as s and we are inserting inside this as number one, number
+
+43
+00:04:34,600 --> 00:04:36,670
+two, number three and four.
+
+44
+00:04:38,030 --> 00:04:44,600
+No printing the stack, you can print the stack and you check it on the C compiler and pop.
+
+45
+00:04:45,260 --> 00:04:49,280
+So we are popping the elements and the printing.
+
+46
+00:04:49,400 --> 00:04:53,480
+After popping out, we print the stack again.
+
+47
+00:04:53,720 --> 00:04:56,630
+We will take into that into consideration.
+
+48
+00:04:56,630 --> 00:05:02,540
+That one is inserted at the first two, up three after and four at the top.
+
+49
+00:05:02,810 --> 00:05:07,640
+So if we are popping, we are removing no fault from it.
+
+50
+00:05:07,790 --> 00:05:13,910
+Please try to implement this code in your C compiler and in the next videos.
+
+51
+00:05:13,910 --> 00:05:18,530
+We are going to solve the exercises using the Java in the same way.
+
+52
+00:05:18,560 --> 00:05:22,730
+How to implement the stack in Java using the array.

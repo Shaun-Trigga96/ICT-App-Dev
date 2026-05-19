@@ -1,0 +1,243 @@
+1
+00:00:01,050 --> 00:00:08,550
+One of the most frequently asked questions in the interviews and in universities is the binary search
+
+2
+00:00:08,550 --> 00:00:08,940
+tree.
+
+3
+00:00:09,510 --> 00:00:18,630
+So we are going to concentrate on this data structure and we are going to practice in C and Java, how
+
+4
+00:00:18,630 --> 00:00:23,430
+to create the binary search tree and how to implement its operations.
+
+5
+00:00:23,920 --> 00:00:31,350
+A binary search tree is a data structure that quickly allows us to maintain is sort that the list of
+
+6
+00:00:31,350 --> 00:00:42,090
+number it is called a binary tree because each Node three node has a maximum of two children, also
+
+7
+00:00:42,090 --> 00:00:50,220
+called a search tree because it can be used to search or the presence of a number in all the log of
+
+8
+00:00:50,220 --> 00:00:51,240
+and time.
+
+9
+00:00:51,360 --> 00:00:59,490
+This is the time complexity for searching numbers and the presence of no log, and it's led then and
+
+10
+00:01:00,150 --> 00:01:01,770
+and and square.
+
+11
+00:01:02,580 --> 00:01:02,970
+So.
+
+12
+00:01:04,390 --> 00:01:12,760
+The properties that separate the binary search tree from regular binary is all nodes of the left sub
+
+13
+00:01:12,760 --> 00:01:15,610
+tree are less than that would no.
+
+14
+00:01:17,210 --> 00:01:18,800
+This is very important.
+
+15
+00:01:19,310 --> 00:01:28,970
+This is the key and the basics of binary search three BSD that all node of the left sub tree are less
+
+16
+00:01:28,970 --> 00:01:30,770
+than the root note.
+
+17
+00:01:31,490 --> 00:01:39,050
+All nodes of the rights up tree are more than the root note, so the left is then less than the root
+
+18
+00:01:39,380 --> 00:01:42,020
+and the right is greater than the root.
+
+19
+00:01:42,620 --> 00:01:49,700
+Both sap trees of each node are also BSD burner binary search tree.
+
+20
+00:01:50,300 --> 00:01:53,720
+They have the above two properties.
+
+21
+00:01:55,160 --> 00:02:02,180
+If we have left and right, some trees, also these sub trees comply comply.
+
+22
+00:02:02,450 --> 00:02:09,710
+The rules that the left is less than the root and the root is less than the right values.
+
+23
+00:02:09,930 --> 00:02:13,760
+OK, consider this to binary trees.
+
+24
+00:02:13,910 --> 00:02:23,030
+The binary on the right is not a binary search tree, because the rights of Tree of the Node three contains
+
+25
+00:02:23,030 --> 00:02:26,900
+a value is smaller than it.
+
+26
+00:02:28,320 --> 00:02:36,410
+OK, so if we have the the sub three three says that the two contains.
+
+27
+00:02:38,030 --> 00:02:45,030
+Let me show you this city is less than eight, okay, then less than greater than eight.
+
+28
+00:02:45,110 --> 00:02:45,530
+Yes.
+
+29
+00:02:46,510 --> 00:02:51,600
+City, this is the road one and six contains six.
+
+30
+00:02:51,620 --> 00:02:54,770
+Yes, there are six is greater than three.
+
+31
+00:02:54,800 --> 00:02:55,160
+Yes.
+
+32
+00:02:55,430 --> 00:02:57,000
+One is less than three.
+
+33
+00:02:57,020 --> 00:02:57,460
+Yes.
+
+34
+00:02:57,530 --> 00:02:58,700
+Till now, it's good.
+
+35
+00:02:59,600 --> 00:03:01,550
+Two is less than six.
+
+36
+00:03:01,580 --> 00:03:02,030
+Yes.
+
+37
+00:03:02,270 --> 00:03:10,820
+But it is great that less than the road and it should contain all the elements of six of the route.
+
+38
+00:03:10,830 --> 00:03:12,770
+Six should be greater than three.
+
+39
+00:03:13,220 --> 00:03:15,880
+And this is why this right?
+
+40
+00:03:16,100 --> 00:03:20,630
+No, the road three is not binary circuitry.
+
+41
+00:03:21,170 --> 00:03:22,400
+Consider this example.
+
+42
+00:03:23,950 --> 00:03:25,180
+We have eight.
+
+43
+00:03:25,840 --> 00:03:26,780
+This is the top.
+
+44
+00:03:26,800 --> 00:03:29,500
+So if we divide this three.
+
+45
+00:03:30,220 --> 00:03:36,250
+Personally, I prefer making like this in order to check if there's a binary search tree or not.
+
+46
+00:03:36,760 --> 00:03:40,300
+I have divided this into left and right.
+
+47
+00:03:41,260 --> 00:03:43,150
+All the components here.
+
+48
+00:03:44,110 --> 00:03:50,840
+If I have one million component, one million note, they should be less than eight.
+
+49
+00:03:50,860 --> 00:03:59,200
+If there is any of these thoughts greater than a, then directly it is not a binary search three, one,
+
+50
+00:03:59,200 --> 00:04:00,370
+three, six and four.
+
+51
+00:04:00,370 --> 00:04:01,420
+They are less than eight.
+
+52
+00:04:01,420 --> 00:04:02,350
+So it's OK.
+
+53
+00:04:02,890 --> 00:04:07,990
+No, I divide also this into two main components.
+
+54
+00:04:10,000 --> 00:04:14,870
+The left and the right one is less than three.
+
+55
+00:04:14,890 --> 00:04:21,070
+Yes, all of these component nodes should be greater than three and less than eight.
+
+56
+00:04:21,340 --> 00:04:28,130
+So if there's four and six, so therefore we have left left.
+
+57
+00:04:28,510 --> 00:04:33,400
+Sub three is applying the binary search to the three rules.
+
+58
+00:04:34,000 --> 00:04:41,690
+If we look to the right, if there's greater than eight, yes, if any node on it greater than eight.
+
+59
+00:04:41,740 --> 00:04:47,920
+Yes, if any node on it less than eight, then this is not a binary surgery.
+
+60
+00:04:48,100 --> 00:04:51,790
+So therefore it applies all the rules.
+
+61
+00:04:52,750 --> 00:04:59,620
+This part is true and this part is true, and therefore this is a binary.

@@ -1,0 +1,643 @@
+1
+00:00:00,540 --> 00:00:07,790
+After we have learned about the binary search tree, let's see its importance and its time, complexity
+
+2
+00:00:08,280 --> 00:00:09,540
+and dealing with that.
+
+3
+00:00:10,500 --> 00:00:14,550
+So consider we have an array, these numbers of array.
+
+4
+00:00:15,570 --> 00:00:19,380
+And these are the end of this era.
+
+5
+00:00:19,440 --> 00:00:26,760
+So if we are going to search for a specific number inside this array that contains six elements, I'm
+
+6
+00:00:26,760 --> 00:00:34,570
+going to search for like four ninety two, so I'm going to go through all the elements all through all
+
+7
+00:00:34,590 --> 00:00:36,330
+the six elements.
+
+8
+00:00:38,350 --> 00:00:45,790
+Also, if I'm going to search for like no one, if it is not, it's not included inside the array,
+
+9
+00:00:45,940 --> 00:00:50,320
+so I'm going to search all the elements in the array.
+
+10
+00:00:51,190 --> 00:00:59,200
+Also, there is one disadvantage of using array because fixed size, fixed size, when you create the
+
+11
+00:00:59,200 --> 00:01:07,180
+array in your clothing, you create it with your fixed size like 110, five, one million or whatever
+
+12
+00:01:07,180 --> 00:01:07,450
+you want.
+
+13
+00:01:08,320 --> 00:01:17,500
+But if you are going to add the new elements to a fixed size to a fully sized array, you are not able
+
+14
+00:01:17,500 --> 00:01:20,590
+to do that because we have a fixed size array.
+
+15
+00:01:20,920 --> 00:01:26,260
+And when it is empty, then when it is full, the array is full.
+
+16
+00:01:26,260 --> 00:01:28,720
+We can add new elements to it.
+
+17
+00:01:29,050 --> 00:01:29,490
+OK.
+
+18
+00:01:30,910 --> 00:01:37,900
+Is just the solution games with the link, at least link at least allow us to add the new elements and
+
+19
+00:01:37,900 --> 00:01:45,010
+the dynamic addition of new elements without specifying the size of their array or this linkage list.
+
+20
+00:01:46,080 --> 00:01:50,910
+So for that, we need to to add new notes every time.
+
+21
+00:01:51,420 --> 00:01:51,880
+OK.
+
+22
+00:01:52,530 --> 00:02:00,780
+And this will cost us of and because time complex complexity for any insertion or deletion operation,
+
+23
+00:02:00,930 --> 00:02:03,720
+if we add we are going to add the new node.
+
+24
+00:02:03,930 --> 00:02:12,360
+We are going to go through all the nodes and we insert it at the end if we are going to delete any of
+
+25
+00:02:12,630 --> 00:02:13,320
+any node.
+
+26
+00:02:13,440 --> 00:02:19,710
+We are going to, especially in the worst case that we are going to delete a node that that is at the
+
+27
+00:02:19,710 --> 00:02:20,130
+end.
+
+28
+00:02:21,360 --> 00:02:26,290
+So we are going to go through all the elements of this linkage list.
+
+29
+00:02:27,120 --> 00:02:32,130
+So all of and is the term complexity of any insertion deletion operation.
+
+30
+00:02:32,490 --> 00:02:43,080
+We didn't find the ideal solution here claims that try to solve all of that previously created problems.
+
+31
+00:02:44,390 --> 00:02:52,970
+We consider that three, the binary such a tree to the left, we have the minimums and the minimum between
+
+32
+00:02:53,540 --> 00:02:55,400
+three and then is a three.
+
+33
+00:02:56,870 --> 00:02:58,920
+And to the left we go.
+
+34
+00:02:58,940 --> 00:03:04,340
+Minimum one is the minimum element inside the street.
+
+35
+00:03:04,370 --> 00:03:12,950
+So the most left note inside that binary search three will indicate the menu and the most.
+
+36
+00:03:13,920 --> 00:03:16,460
+Right would give us the Max.
+
+37
+00:03:17,000 --> 00:03:17,390
+OK.
+
+38
+00:03:19,540 --> 00:03:27,640
+In the left, the tree, the lifts up tree, we have six as a maximum because it is the element that
+
+39
+00:03:27,640 --> 00:03:27,910
+I.
+
+40
+00:03:28,390 --> 00:03:35,470
+It is the maximum inside the left three and we have maximum inside.
+
+41
+00:03:35,470 --> 00:03:43,690
+All the whole tree is the most dry element, so the most left element indicates the minimum and the
+
+42
+00:03:44,140 --> 00:03:49,690
+left and right, and most the right elements will indicate max.
+
+43
+00:03:52,160 --> 00:04:00,230
+For that, if we are going to search for sex, it's very easy to start by and numbers because we have
+
+44
+00:04:00,230 --> 00:04:05,410
+A. We divide it to do because we have left or right.
+
+45
+00:04:05,420 --> 00:04:10,820
+So six is less than eight or greater than eight, it is less than eight.
+
+46
+00:04:10,820 --> 00:04:12,200
+So we go to the left.
+
+47
+00:04:13,690 --> 00:04:17,140
+Six is greater than three or less than three.
+
+48
+00:04:18,210 --> 00:04:19,530
+It is greater than three.
+
+49
+00:04:19,710 --> 00:04:23,550
+So we go to the right and here we find the solution.
+
+50
+00:04:25,210 --> 00:04:31,240
+The first step we start by end notes, we go, we are going to search and nodes.
+
+51
+00:04:31,660 --> 00:04:38,200
+Then when we go to the left, we are going to search for that left some tree.
+
+52
+00:04:38,470 --> 00:04:46,540
+So that tree we have removed this tree moving will indicate that for us that we are going to search
+
+53
+00:04:46,540 --> 00:04:48,640
+and over two elements.
+
+54
+00:04:50,780 --> 00:04:59,420
+And then when we make the next step, when we indicate that six is greater than three, we have removed
+
+55
+00:04:59,420 --> 00:05:01,340
+the right left sub three.
+
+56
+00:05:01,670 --> 00:05:03,170
+I will repeat it, guys.
+
+57
+00:05:05,900 --> 00:05:14,180
+When we go to with the search for all the elements we have and numbers when we go to the left, we have
+
+58
+00:05:14,690 --> 00:05:17,900
+deleted the right elements.
+
+59
+00:05:17,900 --> 00:05:24,830
+So we have an over two elements when we reach here.
+
+60
+00:05:25,370 --> 00:05:27,450
+Six is greater than three.
+
+61
+00:05:27,470 --> 00:05:32,180
+So we go to the right, so this sub three will be removed.
+
+62
+00:05:32,570 --> 00:05:36,200
+This for like an ideal solution.
+
+63
+00:05:36,200 --> 00:05:42,740
+It will indicate for us and over four and this and over four.
+
+64
+00:05:43,250 --> 00:05:51,860
+And this to that right will indicate for us and over to this left and right will indicate for us and
+
+65
+00:05:51,860 --> 00:05:52,520
+over two.
+
+66
+00:05:52,700 --> 00:06:03,080
+So we have eliminated the half of the tree at the first step and we have eliminated that quarter of
+
+67
+00:06:03,080 --> 00:06:08,120
+the tree at the second step until we find the solution.
+
+68
+00:06:08,150 --> 00:06:20,660
+So m and over two and over four, let's go and see what is this importance and the time complexity for
+
+69
+00:06:20,660 --> 00:06:24,000
+finding this solution and searching for specific.
+
+70
+00:06:26,080 --> 00:06:35,380
+Again, we consider this story if we are going to search for the fort, we go eight city, we go to
+
+71
+00:06:35,380 --> 00:06:39,040
+the right because four is greater than three.
+
+72
+00:06:39,520 --> 00:06:42,010
+And we go then to the left because.
+
+73
+00:06:43,810 --> 00:06:45,700
+Ford is less than six.
+
+74
+00:06:46,160 --> 00:06:47,770
+This will remain.
+
+75
+00:06:48,160 --> 00:06:53,290
+And over and over do we have eliminated the half of elements?
+
+76
+00:06:53,710 --> 00:07:00,700
+We have eliminated a quarter of the elements and we have intimidated that and over eight elements to
+
+77
+00:07:00,700 --> 00:07:01,530
+find the four.
+
+78
+00:07:02,080 --> 00:07:02,440
+No.
+
+79
+00:07:03,400 --> 00:07:08,200
+In order to search for any number, we follow the path that it is.
+
+80
+00:07:08,230 --> 00:07:12,370
+Start by M. We eliminate going to the left or right.
+
+81
+00:07:12,370 --> 00:07:14,020
+So and over two.
+
+82
+00:07:14,590 --> 00:07:16,780
+Then we go to the left or right.
+
+83
+00:07:18,160 --> 00:07:26,110
+So it will indicate and over four, it will eliminate and over four of the elements then and over eight
+
+84
+00:07:26,110 --> 00:07:34,360
+and over 16 and so on, until reaching the desired and the correct note that we are going to search
+
+85
+00:07:34,360 --> 00:07:34,700
+for.
+
+86
+00:07:35,080 --> 00:07:35,440
+OK.
+
+87
+00:07:37,680 --> 00:07:37,990
+No.
+
+88
+00:07:39,090 --> 00:07:46,690
+And and then over to I will put them inside this shape like a fraction.
+
+89
+00:07:47,140 --> 00:07:54,190
+Now this fraction indicates for me that one, two, four and eight, it's multiple of two.
+
+90
+00:07:54,610 --> 00:08:05,170
+So it will transform it to and to power one and power zero and the power to and to power city and so
+
+91
+00:08:05,170 --> 00:08:05,530
+on.
+
+92
+00:08:05,920 --> 00:08:16,390
+These elements will give us an equation and over 2K Gay is zero, one, two, three and four and so
+
+93
+00:08:16,390 --> 00:08:16,720
+on.
+
+94
+00:08:17,260 --> 00:08:17,740
+OK.
+
+95
+00:08:19,970 --> 00:08:29,750
+And over City or and over two and over 2K will give me one because I will find the solution later on.
+
+96
+00:08:30,320 --> 00:08:42,320
+So the solution of this mathematical equation and equal to K I multiplied 2K by one and an equal two
+
+97
+00:08:42,670 --> 00:08:45,250
+to power k no.
+
+98
+00:08:45,680 --> 00:08:57,080
+Let's log both sides to base two logging look due to power to power K equal to log to end.
+
+99
+00:08:57,620 --> 00:09:00,560
+OK, log to the base to find.
+
+100
+00:09:02,850 --> 00:09:08,580
+Look to power Kate at the base to way to give us two.
+
+101
+00:09:09,660 --> 00:09:17,100
+Sorry, Kate, because two and two will go and eliminate each other when logging in the same base.
+
+102
+00:09:17,430 --> 00:09:26,370
+And we have power of the same base where they eliminate each other like equal log and two bass.
+
+103
+00:09:26,630 --> 00:09:26,980
+Two.
+
+104
+00:09:27,600 --> 00:09:28,110
+OK.
+
+105
+00:09:29,030 --> 00:09:29,370
+No.
+
+106
+00:09:30,360 --> 00:09:32,490
+Came to power a lot.
+
+107
+00:09:33,180 --> 00:09:36,060
+This is the equal look to the power.
+
+108
+00:09:37,050 --> 00:09:40,010
+Our look and the base to OK.
+
+109
+00:09:40,740 --> 00:09:42,210
+Please save this.
+
+110
+00:09:44,220 --> 00:09:52,590
+When we have an array here, we are going, we have eight elements going through six elements to find
+
+111
+00:09:52,590 --> 00:09:53,310
+the result.
+
+112
+00:09:53,730 --> 00:10:03,720
+So if I'm going to search for any number, we are going to search through all the elements to find the
+
+113
+00:10:03,880 --> 00:10:04,410
+result.
+
+114
+00:10:05,370 --> 00:10:08,220
+So consider you are searching for number one.
+
+115
+00:10:08,250 --> 00:10:11,760
+You will go through all the elements and you will not find no one.
+
+116
+00:10:11,850 --> 00:10:13,990
+So you go through eight elements.
+
+117
+00:10:14,020 --> 00:10:20,270
+This going through elements and searching through all the elements will give us the complexity of of
+
+118
+00:10:20,580 --> 00:10:20,770
+that.
+
+119
+00:10:21,690 --> 00:10:30,150
+Now, in binary, such a theory going through if we are going to search for six, so we are going through
+
+120
+00:10:30,270 --> 00:10:32,760
+three elements to find the result.
+
+121
+00:10:33,270 --> 00:10:34,650
+We start by one.
+
+122
+00:10:35,130 --> 00:10:37,790
+We are six is less than eight.
+
+123
+00:10:37,800 --> 00:10:41,270
+Yes, so go to the left six greater than three.
+
+124
+00:10:41,280 --> 00:10:41,670
+Yes.
+
+125
+00:10:41,670 --> 00:10:42,880
+So go to the right.
+
+126
+00:10:42,900 --> 00:10:53,610
+And then we find six going three through all the elements will give us like an array while in the binary
+
+127
+00:10:53,610 --> 00:10:54,360
+such a tree.
+
+128
+00:10:54,360 --> 00:11:03,030
+Going through three elements to find the result will give us a more and faster way to find the elements.
+
+129
+00:11:03,210 --> 00:11:11,010
+So we have in total in any binary search tree, get the elements, how many number of elements we have
+
+130
+00:11:11,010 --> 00:11:12,870
+in this tree we have eight.
+
+131
+00:11:13,050 --> 00:11:23,550
+So OK, equal to log to log eight to base two, log two, a log eight base two will give us three.
+
+132
+00:11:23,730 --> 00:11:29,340
+So we have gay equal to three iteration to find the result.
+
+133
+00:11:29,670 --> 00:11:41,910
+Therefore, the the binary search tree has a complexity of log and log and is faster than an ancestor
+
+134
+00:11:41,920 --> 00:11:47,690
+than square ancestors than any think other than before.
+
+135
+00:11:48,030 --> 00:11:48,390
+OK.
+
+136
+00:11:48,600 --> 00:11:49,050
+This is.
+
+137
+00:11:50,260 --> 00:11:55,090
+The importance and this is the time complexity of binary search a tree.
+
+138
+00:11:55,390 --> 00:11:56,880
+It is luck.
+
+139
+00:11:57,400 --> 00:12:00,610
+And in the worst case scenario.
+
+140
+00:12:02,430 --> 00:12:13,260
+Let's see at table the binary statutory complexities when we deal with the best case scenario and the
+
+141
+00:12:13,260 --> 00:12:22,320
+average case scenario and worst case scenario or complexity in searching the binary, the binary tree
+
+142
+00:12:22,770 --> 00:12:25,900
+in searching will give us luck.
+
+143
+00:12:26,000 --> 00:12:37,550
+And in the best case, the worst case will give us all of and in the worst, worst case game in searching
+
+144
+00:12:37,980 --> 00:12:46,110
+look log and one of the worst cases of and deletion will give us look and hear.
+
+145
+00:12:46,110 --> 00:12:48,600
+The worst case will give us off.
+
+146
+00:12:49,530 --> 00:12:59,820
+But the average case complexity is more applicable in binary search tree because you have logjam and
+
+147
+00:12:59,820 --> 00:13:03,890
+this is more logical than the worst case complexity.
+
+148
+00:13:04,770 --> 00:13:05,130
+OK.
+
+149
+00:13:06,530 --> 00:13:13,460
+Worst case complexity, like having a tree that contains only one note, so you are going to go through
+
+150
+00:13:13,460 --> 00:13:14,330
+this node.
+
+151
+00:13:14,570 --> 00:13:16,640
+So we have and not log.
+
+152
+00:13:17,210 --> 00:13:17,750
+OK.
+
+153
+00:13:20,100 --> 00:13:27,390
+Here is the number of notes into three legs, a space complexity, the space complexity for all the
+
+154
+00:13:27,390 --> 00:13:38,240
+operation is of and this is about the binding of such three and how it is very important to make.
+
+155
+00:13:39,340 --> 00:13:42,790
+The time complexity of it and how to use it.
+
+156
+00:13:44,060 --> 00:13:52,220
+And why it is important, and we have seen many example about that, so when dealing with numbers or
+
+157
+00:13:52,220 --> 00:14:00,470
+any order thing, please use the binary search tree because it is the fastest way, the fastest data
+
+158
+00:14:00,470 --> 00:14:07,250
+structure to be or there to be to be dealing with and so on.
+
+159
+00:14:07,460 --> 00:14:10,340
+So this is all about the binary search.
+
+160
+00:14:10,340 --> 00:14:19,820
+Three will see beasties in their exercises, in their exams that we are going to solve in the exercises
+
+161
+00:14:19,910 --> 00:14:20,360
+section.

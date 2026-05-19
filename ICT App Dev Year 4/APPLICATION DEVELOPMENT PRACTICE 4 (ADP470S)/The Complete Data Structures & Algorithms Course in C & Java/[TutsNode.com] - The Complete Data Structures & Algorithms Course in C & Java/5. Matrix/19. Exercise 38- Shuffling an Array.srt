@@ -1,0 +1,263 @@
+1
+00:00:00,360 --> 00:00:01,390
+Hello, my friends.
+
+2
+00:00:01,560 --> 00:00:03,630
+And welcome to exercise number 38.
+
+3
+00:00:03,780 --> 00:00:12,120
+And this exercise, we are asked to write a program to shuffle and thereI, and this exercise have been
+
+4
+00:00:12,120 --> 00:00:17,940
+asked in one of the interviews, like in Facebook, gay and big companies like Facebook.
+
+5
+00:00:17,950 --> 00:00:21,000
+So how to shuffle an array?
+
+6
+00:00:21,210 --> 00:00:22,300
+What is shuffling?
+
+7
+00:00:22,350 --> 00:00:32,310
+We have the original array here one four five nine 10 shuffling make it make random random ordering
+
+8
+00:00:32,310 --> 00:00:36,630
+of their elements like four 10 one five nine.
+
+9
+00:00:36,630 --> 00:00:44,010
+If we call and if we shuffle again, we we get another random shuffling and ordering of the elements,
+
+10
+00:00:44,010 --> 00:00:48,870
+so we need to randomly order that elements.
+
+11
+00:00:48,940 --> 00:00:58,500
+OK, so post the video and think about it how to make such an algorithm or program that works well to
+
+12
+00:00:58,500 --> 00:01:00,930
+maintain this algorithm?
+
+13
+00:01:03,310 --> 00:01:09,180
+Okay, we start by making public static void shuffle.
+
+14
+00:01:09,180 --> 00:01:09,840
+I'm waiting.
+
+15
+00:01:09,870 --> 00:01:12,360
+Your solution in the comments below.
+
+16
+00:01:12,660 --> 00:01:17,160
+In order to discuss if there is any problem.
+
+17
+00:01:17,280 --> 00:01:25,710
+So this method will start by taking in an array called NUM's.
+
+18
+00:01:25,710 --> 00:01:38,700
+And I need from this noun to start by A.I. equal to NUM's thought length minus one I greater than or
+
+19
+00:01:38,700 --> 00:01:44,380
+equal to one and a minus minus gain.
+
+20
+00:01:46,140 --> 00:01:54,120
+We are shuffling by using the random random package as inside the Java, the two tiered the trap.
+
+21
+00:01:54,750 --> 00:02:00,600
+OK, so random brand equals two new random.
+
+22
+00:02:04,400 --> 00:02:05,030
+OK.
+
+23
+00:02:06,740 --> 00:02:20,390
+Int J, equal to random, I'm making random the next and I need that range of random between I plus
+
+24
+00:02:20,390 --> 00:02:35,860
+one, and I need to create a method called swab swab elements, and I passed the nuns by and cheer.
+
+25
+00:02:36,950 --> 00:02:39,110
+Let's make this method.
+
+26
+00:02:39,260 --> 00:02:40,790
+Swab elements.
+
+27
+00:02:41,150 --> 00:02:43,880
+OK, so this.
+
+28
+00:02:45,670 --> 00:02:48,730
+This method is private.
+
+29
+00:02:50,020 --> 00:02:59,980
+Avoid swab elements, it took an integrity that make swab the elements it.
+
+30
+00:03:01,030 --> 00:03:06,580
+It's changed the order of I and J
+
+31
+00:03:09,160 --> 00:03:12,930
+and start by creating an anthem.
+
+32
+00:03:13,030 --> 00:03:29,230
+We need a temporary variable called 10 norms at Index AI and NUM's at Index AI equal to announce at
+
+33
+00:03:29,230 --> 00:03:30,100
+Index J.
+
+34
+00:03:31,270 --> 00:03:38,830
+OK, I'm switching the elements and nuns at Index J equal to 10.
+
+35
+00:03:39,370 --> 00:03:45,670
+OK, I'm randomly making this so every time we start by swapping the elements.
+
+36
+00:03:47,530 --> 00:03:53,200
+Static here, sweeping the elements, I am making a random.
+
+37
+00:03:53,560 --> 00:04:03,040
+I am making it as random next and I +1 and passing the elements like the entry that I and J, and here
+
+38
+00:04:03,040 --> 00:04:04,600
+we start sweating.
+
+39
+00:04:04,630 --> 00:04:09,550
+So the temporary equal I are equal to JJ, equal to temp.
+
+40
+00:04:09,550 --> 00:04:13,840
+So I'm switching between the elements of I, equal to J and J, equal to.
+
+41
+00:04:13,840 --> 00:04:18,700
+I am swiping to be swapping the elements between I and G.
+
+42
+00:04:18,730 --> 00:04:27,070
+Now let's test the program and the main method I will start recreating and NUM's be equal to
+
+43
+00:04:30,520 --> 00:04:31,450
+the numbers.
+
+44
+00:04:33,400 --> 00:04:34,090
+Let me.
+
+45
+00:04:36,070 --> 00:04:42,010
+One, four, five, nine and 10.
+
+46
+00:04:43,930 --> 00:04:44,140
+OK.
+
+47
+00:04:45,370 --> 00:05:00,070
+System that allows the brand and original essay we use of these dogs to string.
+
+48
+00:05:01,270 --> 00:05:15,110
+Nuns now, after shoveling, I will start by shuffle their shuffle past nuns.
+
+49
+00:05:15,130 --> 00:05:21,610
+I called this method, so after the shuffling, I need to display, shuffle,
+
+50
+00:05:24,670 --> 00:05:28,030
+shuffled array or shuffle.
+
+51
+00:05:28,030 --> 00:05:28,660
+30.
+
+52
+00:05:38,430 --> 00:05:43,470
+OK, I have created Ray, I displayed that.
+
+53
+00:05:44,480 --> 00:05:52,010
+The original array, I called the method shuffle and then I will display that shuffle or let's run and
+
+54
+00:05:52,010 --> 00:05:52,310
+see.
+
+55
+00:05:53,180 --> 00:05:54,470
+And here we go.
+
+56
+00:05:54,710 --> 00:05:58,550
+We have one four five nine 10.
+
+57
+00:05:59,300 --> 00:06:01,460
+It's shuffling just one element.
+
+58
+00:06:01,820 --> 00:06:04,400
+OK, now let's run and see again.
+
+59
+00:06:07,460 --> 00:06:09,340
+One four.
+
+60
+00:06:09,470 --> 00:06:18,200
+It's shuffling 10, nine, five, four and maybe all the elements, all of these elements for us, if
+
+61
+00:06:18,200 --> 00:06:22,910
+we run again, we have another combination.
+
+62
+00:06:23,180 --> 00:06:26,030
+Here we are, shuffling all the elements.
+
+63
+00:06:26,360 --> 00:06:28,210
+It's shuffling all that, OK.
+
+64
+00:06:28,580 --> 00:06:36,710
+This is for making the games because if you are making card game and you are shuffling the cards.
+
+65
+00:06:37,070 --> 00:06:41,240
+So this is the algorithm behind shuffling that phrase.
+
+66
+00:06:41,600 --> 00:06:46,240
+And this is very important and it is used in many games by the.

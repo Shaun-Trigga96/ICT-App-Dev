@@ -1,0 +1,187 @@
+1
+00:00:00,060 --> 00:00:06,210
+Oh, my friends, and welcome to exercise number 42 in this exercise, we are asked to write a function
+
+2
+00:00:06,210 --> 00:00:09,090
+to add in, you know, at the beginning of the list.
+
+3
+00:00:09,690 --> 00:00:10,080
+So.
+
+4
+00:00:10,530 --> 00:00:13,500
+So consider we have a link list here.
+
+5
+00:00:18,010 --> 00:00:20,410
+That we have created in the previous video.
+
+6
+00:00:21,510 --> 00:00:25,740
+The first note contains one small to.
+
+7
+00:00:27,110 --> 00:00:27,680
+And three.
+
+8
+00:00:29,090 --> 00:00:30,950
+And they are it like this?
+
+9
+00:00:31,580 --> 00:00:31,940
+OK?
+
+10
+00:00:33,610 --> 00:00:34,690
+This is for not.
+
+11
+00:00:37,180 --> 00:00:40,840
+In this exercise, our mission to add in you.
+
+12
+00:00:43,000 --> 00:00:43,570
+Not.
+
+13
+00:00:46,190 --> 00:00:46,580
+Sorry.
+
+14
+00:00:47,150 --> 00:00:49,370
+At the beginning here.
+
+15
+00:00:50,150 --> 00:00:50,490
+OK.
+
+16
+00:00:51,320 --> 00:01:03,050
+So we will move the head from here to here, and we insert number four inside it, and we will reference
+
+17
+00:01:03,320 --> 00:01:08,750
+this not as the beginning of the think it was the video.
+
+18
+00:01:08,990 --> 00:01:11,570
+And think about that, how we can do this.
+
+19
+00:01:12,980 --> 00:01:20,500
+For that, I will create a new method called Bush.
+
+20
+00:01:20,870 --> 00:01:29,360
+So public void bush at.
+
+21
+00:01:30,860 --> 00:01:31,850
+At the beginning.
+
+22
+00:01:37,650 --> 00:01:39,480
+It took that data.
+
+23
+00:01:39,900 --> 00:01:52,230
+New data is picking the data of the new note that it will be inserted and the first step is creating
+
+24
+00:01:52,230 --> 00:02:06,660
+or creating one creating the not not, you know, not equal to new knowledge.
+
+25
+00:02:07,290 --> 00:02:11,130
+I'm creating the note using the constructor view data.
+
+26
+00:02:11,400 --> 00:02:19,260
+OK, then the second step is make next.
+
+27
+00:02:22,800 --> 00:02:30,060
+Often, you know, as had so it were referred us to their old head.
+
+28
+00:02:30,810 --> 00:02:38,670
+You know, on the next equal to hand referencing it as they.
+
+29
+00:02:39,810 --> 00:02:56,130
+And now I need to make more souls that more the had to point that, you know, OK, so I am equal to,
+
+30
+00:02:56,310 --> 00:03:06,510
+you know, we are referencing it as in, you know, now in order to test it, I will create it before
+
+31
+00:03:06,510 --> 00:03:12,270
+the printing list and we will use this method that we have created before in the exercise number 40
+
+32
+00:03:12,270 --> 00:03:13,440
+to 41.
+
+33
+00:03:13,920 --> 00:03:16,230
+And we will see that result.
+
+34
+00:03:16,830 --> 00:03:28,700
+So my kid continue to come here to learn data structure, so I will create here exercise for it to be
+
+35
+00:03:29,190 --> 00:03:35,250
+adding New York at the beginning.
+
+36
+00:03:38,010 --> 00:03:38,630
+I will.
+
+37
+00:03:38,640 --> 00:03:46,320
+I'm making this because they would be and one source code in order to understand for what?
+
+38
+00:03:47,190 --> 00:03:52,680
+What is the method that correspond to exercise for a while, for it to answer?
+
+39
+00:03:53,040 --> 00:04:02,640
+OK, so Lincoln last thought we need to push at the beginning, I need to insert number for a link at
+
+40
+00:04:02,640 --> 00:04:07,710
+list that contains data for let's run and see that print print terrorism.
+
+41
+00:04:08,850 --> 00:04:14,850
+And here we go, guys for one, two and three successfully and that.
+
+42
+00:04:16,310 --> 00:04:17,180
+At the beginning.
+
+43
+00:04:17,450 --> 00:04:26,990
+OK, so this is the algorithm, and this is the trick behind adding and pushing link or not at the beginning.
+
+44
+00:04:27,270 --> 00:04:27,620
+OK.
+
+45
+00:04:28,260 --> 00:04:35,990
+I'm filling at least, so I'm waiting for a solution in the comments below and any question or any doubt
+
+46
+00:04:35,990 --> 00:04:37,580
+or any recommendation.
+
+47
+00:04:37,730 --> 00:04:41,300
+We are happy to see and.

@@ -1,0 +1,199 @@
+1
+00:00:00,240 --> 00:00:05,880
+Merged salt is one algorithm used to sort the sequence of numbers.
+
+2
+00:00:06,360 --> 00:00:09,480
+It's part of divide and conquer algorithms.
+
+3
+00:00:09,870 --> 00:00:16,320
+So first, the sequence is divided further and further into halves.
+
+4
+00:00:16,680 --> 00:00:23,880
+Consider we have seven numbers that we need to sort inside an array or analyzed or whatever you want.
+
+5
+00:00:24,090 --> 00:00:28,620
+So we need to divide further the sequence into halves.
+
+6
+00:00:28,620 --> 00:00:29,640
+So we have this.
+
+7
+00:00:29,640 --> 00:00:32,430
+Have we divide them into halves?
+
+8
+00:00:33,360 --> 00:00:36,390
+The first four and the second third.
+
+9
+00:00:36,870 --> 00:00:44,670
+Three elements six four three seven in the first and five one two and the second.
+
+10
+00:00:45,540 --> 00:00:56,820
+Then we divide the sequence further and further into halves six four is in a half, three seven is another
+
+11
+00:00:56,820 --> 00:00:58,560
+half five one.
+
+12
+00:00:59,040 --> 00:01:01,700
+And another half and to another half.
+
+13
+00:01:02,970 --> 00:01:06,990
+We divide them into further and further into halves.
+
+14
+00:01:07,290 --> 00:01:11,310
+This is the division of the problem and to solve the problems.
+
+15
+00:01:11,610 --> 00:01:22,440
+So we have divided the big array into two halves into the smallest possible cells, and now we need
+
+16
+00:01:22,440 --> 00:01:23,760
+that division are complete.
+
+17
+00:01:23,760 --> 00:01:31,390
+After the division is completed, we start solving the sub problems and then we combine the solution.
+
+18
+00:01:31,410 --> 00:01:35,700
+This is what we have learned in the divide and conquer algorithms.
+
+19
+00:01:36,000 --> 00:01:39,300
+So next, the divided groups are combined.
+
+20
+00:01:39,420 --> 00:01:44,110
+So these are the divided groups we need to combine them.
+
+21
+00:01:44,130 --> 00:01:52,620
+So when being confined combined, each group's number are arranged so that they are ordered from the
+
+22
+00:01:52,620 --> 00:01:56,040
+smallest to the largest after combination.
+
+23
+00:01:56,430 --> 00:02:02,070
+So we combine that we compared these small elements and we.
+
+24
+00:02:03,470 --> 00:02:09,380
+Order them from the smallest to the largest of the combination in each sub have.
+
+25
+00:02:10,710 --> 00:02:18,060
+Three and seven as auditor, five and one, we we divide the five, one and five, then the groups with
+
+26
+00:02:18,060 --> 00:02:22,590
+multiple numbers are combined and the first numbers are confirmed.
+
+27
+00:02:22,740 --> 00:02:26,310
+So we compare three and four.
+
+28
+00:02:26,430 --> 00:02:29,980
+The first numbers, three and four will be compared.
+
+29
+00:02:30,000 --> 00:02:32,690
+So three is less than four.
+
+30
+00:02:33,880 --> 00:02:38,950
+The remaining girls have their first no compared in the same number, so.
+
+31
+00:02:39,920 --> 00:02:41,420
+We compare three and four.
+
+32
+00:02:42,440 --> 00:02:48,020
+We have six and seven, six is less than seven, so we put six and seven.
+
+33
+00:02:48,350 --> 00:02:51,050
+Here we have sought in the first half of that.
+
+34
+00:02:52,100 --> 00:03:00,430
+Then the remaining seven is move and the combining of the groups is repeated the recursively until all
+
+35
+00:03:00,440 --> 00:03:02,420
+numbers from one group.
+
+36
+00:03:02,960 --> 00:03:07,490
+We have one five here and we have two from here.
+
+37
+00:03:07,820 --> 00:03:10,490
+We can combine and start.
+
+38
+00:03:12,120 --> 00:03:15,900
+One and two, and then we add five.
+
+39
+00:03:16,020 --> 00:03:19,770
+So we compare one and two, and then we add five.
+
+40
+00:03:20,400 --> 00:03:29,100
+Then this is the combining of groups is repeatedly recursively until all the numbers from one group
+
+41
+00:03:29,790 --> 00:03:32,490
+becomes and form form one group.
+
+42
+00:03:33,150 --> 00:03:33,570
+OK.
+
+43
+00:03:34,110 --> 00:03:36,510
+So these are the two halves.
+
+44
+00:03:36,720 --> 00:03:45,270
+Now we need to combine them by sorting and adding them to their combined and sorted.
+
+45
+00:03:47,150 --> 00:03:47,540
+Date.
+
+46
+00:03:49,040 --> 00:03:53,030
+OK, so combining complete and the sequence has been sorted.
+
+47
+00:03:53,270 --> 00:04:03,620
+This concludes the Merge sort and this is the Merge sort algorithm dividing the problem into sub arrays,
+
+48
+00:04:03,950 --> 00:04:10,280
+solve the problems and start solving the problems and then combining them to a general solution.
+
+49
+00:04:11,230 --> 00:04:22,840
+Let's move to see how that how the merged sort complexity works and how to end sea and in Java.
+
+50
+00:04:23,370 --> 00:04:23,890
+Haitham.

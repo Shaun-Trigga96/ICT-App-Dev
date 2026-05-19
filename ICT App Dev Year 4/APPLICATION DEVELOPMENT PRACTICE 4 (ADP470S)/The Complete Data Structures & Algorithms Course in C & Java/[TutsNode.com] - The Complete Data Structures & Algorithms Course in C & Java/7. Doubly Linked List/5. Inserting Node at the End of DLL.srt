@@ -1,0 +1,299 @@
+1
+00:00:00,120 --> 00:00:07,830
+How to insert a node in a double link, at least at the end, considered this doubly linked list that
+
+2
+00:00:07,830 --> 00:00:09,120
+contains two nodes.
+
+3
+00:00:09,360 --> 00:00:14,430
+The first one at Everest 1000 and the second is at others two tops.
+
+4
+00:00:14,880 --> 00:00:20,220
+The first one contains the data 100, and the second contain data to hunt.
+
+5
+00:00:21,000 --> 00:00:24,000
+And the first refer to the novel as previous.
+
+6
+00:00:24,000 --> 00:00:28,710
+And the second and the first with the next is referring to two towers.
+
+7
+00:00:29,370 --> 00:00:35,790
+And the second one referred to previous 1000, and the next is equal to none.
+
+8
+00:00:36,030 --> 00:00:41,520
+So it's very simple linkage list and we have learned more about it in the previous videos.
+
+9
+00:00:43,940 --> 00:00:47,540
+The last one should refer to the nun as next.
+
+10
+00:00:47,870 --> 00:00:53,270
+And the first note referred to now at the previous OK.
+
+11
+00:00:53,570 --> 00:00:56,870
+These are the three about the double linked list.
+
+12
+00:00:56,880 --> 00:01:07,520
+So we have seen that inserting a note at the beginning will change them into their address of the newly
+
+13
+00:01:07,520 --> 00:01:08,660
+created one.
+
+14
+00:01:08,660 --> 00:01:16,430
+And the newly inserted note should take as previous equals to not now.
+
+15
+00:01:16,730 --> 00:01:23,210
+The inverse is correct in inserting a note into a double link, at least at the end.
+
+16
+00:01:23,540 --> 00:01:31,490
+So how to do that we insert in, you know, at the end at address three thousand.
+
+17
+00:01:33,000 --> 00:01:38,040
+It contains the date that 300 and referred to the next.
+
+18
+00:01:39,010 --> 00:01:40,570
+Point there equal to none.
+
+19
+00:01:41,050 --> 00:01:46,750
+Now we need to change the order, we change the linkage.
+
+20
+00:01:47,260 --> 00:01:54,610
+So how to link three thousand and that then note the third note with the second.
+
+21
+00:01:55,670 --> 00:01:56,660
+We change.
+
+22
+00:01:58,100 --> 00:02:02,840
+That previous of the newly inserted note into the previous one.
+
+23
+00:02:03,950 --> 00:02:05,060
+Which is the last.
+
+24
+00:02:05,630 --> 00:02:14,120
+And we change then all of the last one in the in the old Dublin and list the then newly created actress.
+
+25
+00:02:14,780 --> 00:02:19,100
+So this is a changing world, create a linkage between them.
+
+26
+00:02:19,730 --> 00:02:27,440
+This the second note now referred to as next the 3000 and 3000 refer.
+
+27
+00:02:27,800 --> 00:02:36,050
+And the third note referred to the previous one as the second one, and the next is equal to know how
+
+28
+00:02:36,050 --> 00:02:36,800
+to make them.
+
+29
+00:02:37,160 --> 00:02:47,960
+This configuration and how this logic would work, including we create struct no head and we create
+
+30
+00:02:48,170 --> 00:02:51,350
+vote void at last method.
+
+31
+00:02:51,590 --> 00:02:53,750
+It contains int value.
+
+32
+00:02:53,930 --> 00:03:01,130
+And in this case, we are working in value of the data that it is newly inserted note.
+
+33
+00:03:01,460 --> 00:03:10,040
+So in our case, we have inserted in your note that contains data 300 so valid in this in this case
+
+34
+00:03:10,040 --> 00:03:11,420
+is equal to three hundred.
+
+35
+00:03:13,260 --> 00:03:19,710
+Struck note, we create a new note, and we reserve the memory by using the look and size of the note.
+
+36
+00:03:20,820 --> 00:03:30,270
+And, you know, the data equal to that, so a sign that data of this newly created node equal to that.
+
+37
+00:03:30,750 --> 00:03:31,200
+OK.
+
+38
+00:03:31,530 --> 00:03:32,550
+It's very simple.
+
+39
+00:03:32,940 --> 00:03:41,310
+I am making this in order to get the data and store it inside the newly created data.
+
+40
+00:03:42,150 --> 00:03:52,650
+Now, if had equal equal to null, if we are inserting this node at the end of an empty list, it would
+
+41
+00:03:52,650 --> 00:03:54,030
+be like this.
+
+42
+00:03:54,060 --> 00:04:02,490
+So this is the case if there is an empty double link at least, and we are trying to add atlast of it
+
+43
+00:04:02,700 --> 00:04:03,150
+in node.
+
+44
+00:04:03,150 --> 00:04:10,650
+So this node would be the end and the beginning at the same time, because there's only one node inside
+
+45
+00:04:10,650 --> 00:04:11,970
+this doubly linked list.
+
+46
+00:04:12,270 --> 00:04:17,480
+So new node next equal to null and the previous of it is equal to null.
+
+47
+00:04:17,490 --> 00:04:18,510
+It's very simple.
+
+48
+00:04:18,510 --> 00:04:22,110
+It's logic self had equal to new node.
+
+49
+00:04:23,410 --> 00:04:31,900
+But this is not our case in this example, our case, we have two nodes inside this linked list and
+
+50
+00:04:31,900 --> 00:04:35,950
+we are trying to add at the end of the 300.
+
+51
+00:04:36,690 --> 00:04:39,510
+As data contained into their newly created note.
+
+52
+00:04:41,590 --> 00:04:49,870
+For that, we will create strict no called last and why last and this does not equal to no.
+
+53
+00:04:51,470 --> 00:04:54,470
+There is no next to it does not equal to now.
+
+54
+00:04:54,500 --> 00:04:59,090
+So there is no now in the next, so there is.
+
+55
+00:05:00,370 --> 00:05:10,300
+Notes last equal, last thought and next, get the last equal to net less equal the index and the next
+
+56
+00:05:10,420 --> 00:05:20,110
+and last us next, equal to in the new note, then assign the newly created one is equal to the last.
+
+57
+00:05:20,440 --> 00:05:27,100
+Therefore, we are changing the last of the old, doubly linked list.
+
+58
+00:05:28,170 --> 00:05:31,200
+Without insertion before insertion.
+
+59
+00:05:32,050 --> 00:05:37,130
+Is equal to the previous of that newly created one.
+
+60
+00:05:37,450 --> 00:05:47,740
+So make in this case, think about 2000, the second note, the last note and the full length list before
+
+61
+00:05:47,740 --> 00:05:57,990
+we insert after we insert it, then put inside the note of the newly created one as a previous there.
+
+62
+00:05:58,720 --> 00:06:09,550
+The address of the last index of the doubly linked list before insertion, which is 2000 in this case.
+
+63
+00:06:09,970 --> 00:06:18,250
+And then don't miss to make that the next of the newly created one is equal to null and to indicate
+
+64
+00:06:18,250 --> 00:06:26,140
+that that is the end of the newly created using that list after insertion.
+
+65
+00:06:26,500 --> 00:06:34,240
+So this is the logic behind the inserting and node into a double link, at least at the end.
+
+66
+00:06:35,260 --> 00:06:38,860
+So we have talked about two cases.
+
+67
+00:06:39,190 --> 00:06:48,490
+If there is no nodes inside the linked list and we insert one to it, it becomes the end and it becomes
+
+68
+00:06:48,490 --> 00:06:55,840
+the head at the same time because it is only contained, only not contained in this link, at least.
+
+69
+00:06:56,230 --> 00:07:04,780
+Otherwise, if we have a new if we are inserting a new node at the end to a list that contains one or
+
+70
+00:07:04,780 --> 00:07:10,420
+more nodes, then the logic tells us that the last node.
+
+71
+00:07:12,020 --> 00:07:20,600
+Before insertion, it becomes that previous of the newly created a newly inserted node and the next
+
+72
+00:07:20,600 --> 00:07:23,630
+of the newly created node would equal to now.
+
+73
+00:07:23,900 --> 00:07:29,190
+And this is what we have seen in that animation and this is the code of don't.
+
+74
+00:07:29,870 --> 00:07:36,350
+We are also going to make them and real coding and intelligent using Java.
+
+75
+00:07:36,440 --> 00:07:41,120
+So this is in C and we are going to see it ends in the Java.

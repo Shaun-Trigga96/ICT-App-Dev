@@ -1,0 +1,535 @@
+1
+00:00:00,060 --> 00:00:06,510
+No, my friends, after we have learned about the bubble sort algorithm in the previous videos, let's
+
+2
+00:00:06,510 --> 00:00:12,810
+implement this algorithm and see and in the next exercise, we are going to implement the bubble sort
+
+3
+00:00:13,110 --> 00:00:21,300
+in Java and let's learn about that complexity, the time and the space complexity of this algorithm
+
+4
+00:00:21,690 --> 00:00:27,390
+and try to make optimization for this bubble sort of algorithm.
+
+5
+00:00:28,050 --> 00:00:36,300
+First of all, we include the S3, the IO detach, and we try to create a method that we imparts to
+
+6
+00:00:36,300 --> 00:00:36,750
+party me.
+
+7
+00:00:36,750 --> 00:00:37,740
+There's two numbers.
+
+8
+00:00:37,980 --> 00:00:44,340
+So we are swiping the first and no value with the second and the second with the first, so we create
+
+9
+00:00:44,340 --> 00:00:45,660
+a void swab.
+
+10
+00:00:45,690 --> 00:00:52,200
+Its role is to swab that the X do Y and Y to export that.
+
+11
+00:00:52,200 --> 00:00:58,350
+We have learned in early exercises in this course how to make this swiping swiping.
+
+12
+00:00:58,620 --> 00:01:13,170
+So swiping will make for it will make will be done by creating a temp temporarily and that took the
+
+13
+00:01:13,170 --> 00:01:22,650
+value of X and stored it inside this temp variable and assigned the X to Y and assigned the Y to tap.
+
+14
+00:01:22,680 --> 00:01:29,850
+This is the three steps three course three lines that we are going to make in order to swap the two
+
+15
+00:01:29,850 --> 00:01:30,450
+elements.
+
+16
+00:01:30,480 --> 00:01:39,360
+Now let's create the bubbles sort algorithm by creating a method called Void Bubbles Sort Int Array.
+
+17
+00:01:39,360 --> 00:01:47,360
+It took into their perimeters the array that we are going to sort, and the end how many numbers.
+
+18
+00:01:47,370 --> 00:01:52,470
+So and I and J that we are going to use in there for loops.
+
+19
+00:01:52,800 --> 00:02:01,460
+These four loops acts as that the balance that we have seen in that in the animation before.
+
+20
+00:02:01,470 --> 00:02:01,830
+So.
+
+21
+00:02:03,420 --> 00:02:08,890
+Four are equal to zero I less than and minus one and I plus plus.
+
+22
+00:02:09,130 --> 00:02:16,180
+So we are going to move from zero to all the numbers from zero to and minus one considering through
+
+23
+00:02:16,180 --> 00:02:18,190
+all the elements by plus plus.
+
+24
+00:02:18,550 --> 00:02:21,850
+So the last I elements are already in the place.
+
+25
+00:02:22,300 --> 00:02:29,320
+We have learned in the previous videos that when we move their elements, we are going to move at the
+
+26
+00:02:29,320 --> 00:02:36,940
+first step at the first iteration, like iterating through all the elements and reaching the end.
+
+27
+00:02:37,150 --> 00:02:44,950
+We have moved them minimum elements inside the nine elements, which is one, and we have moved it to
+
+28
+00:02:44,950 --> 00:02:46,510
+that extreme left.
+
+29
+00:02:47,170 --> 00:02:52,810
+So we have considered that one is the element that is already sorted.
+
+30
+00:02:53,170 --> 00:03:00,700
+Then we have moved again in a second second step that goes through all the iterations through all their
+
+31
+00:03:00,700 --> 00:03:08,800
+remaining eight elements, and we have moved the number two to become near to one before one or shortly
+
+32
+00:03:08,800 --> 00:03:09,620
+after one.
+
+33
+00:03:09,640 --> 00:03:19,720
+So we have considered one and two are sorted and we do the same thing until we reach that nine elements.
+
+34
+00:03:19,930 --> 00:03:28,600
+So guys, think about it if we need to conserve the elements and preserve them and take them as sort
+
+35
+00:03:28,600 --> 00:03:37,960
+that we need to use in another loop that starts from zero do and minus one minus I.
+
+36
+00:03:38,170 --> 00:03:40,720
+So I list I elements.
+
+37
+00:03:40,720 --> 00:03:48,010
+If we consider that we have and we have made and reserved one element and we have sorted one element,
+
+38
+00:03:48,010 --> 00:03:56,470
+so we need M minus one element C because we are not going to go through that sorted elements.
+
+39
+00:03:56,470 --> 00:04:00,210
+And this is what we have been in that animation before.
+
+40
+00:04:00,220 --> 00:04:08,530
+So please go back to the previous video and see how this algorithm in details and fully animated function
+
+41
+00:04:08,530 --> 00:04:09,100
+works.
+
+42
+00:04:10,910 --> 00:04:16,010
+If every at index greater than a rate at index +1.
+
+43
+00:04:16,280 --> 00:04:21,740
+So if the preceding and if the elements that the left is greater than the element to the right, then
+
+44
+00:04:21,740 --> 00:04:22,610
+make a swap.
+
+45
+00:04:22,850 --> 00:04:30,250
+So we are going to swap this element by referring the index for this and the reference for that.
+
+46
+00:04:30,680 --> 00:04:35,710
+This element, the second element at a rate at index +1.
+
+47
+00:04:35,720 --> 00:04:38,870
+And then they say, OK, this is the bubble.
+
+48
+00:04:38,870 --> 00:04:47,060
+Sort this very simple, but you need to make that and minus one and end minus ie minus one.
+
+49
+00:04:47,090 --> 00:04:55,340
+This is the trick, and we need to create a sweeping and method that creates a sweeping function that
+
+50
+00:04:55,670 --> 00:04:59,900
+the functionality to this bubble sort until we need it.
+
+51
+00:05:00,140 --> 00:05:02,450
+So printing that everyday, it's very simple.
+
+52
+00:05:02,450 --> 00:05:05,810
+We have this exercise in the early exercises.
+
+53
+00:05:06,170 --> 00:05:09,380
+We use AI from zero to size.
+
+54
+00:05:09,380 --> 00:05:12,920
+That is fast and we print all the address.
+
+55
+00:05:13,100 --> 00:05:13,400
+OK.
+
+56
+00:05:14,230 --> 00:05:14,440
+All right.
+
+57
+00:05:16,230 --> 00:05:23,190
+In order to test our bubbles for algorithm, I want from you to put this code in that your compiler
+
+58
+00:05:23,370 --> 00:05:24,210
+c compiler.
+
+59
+00:05:24,510 --> 00:05:33,510
+And I want from you also to read the inputs and put the outputs here in the comments below in order
+
+60
+00:05:33,510 --> 00:05:39,840
+to make discussion and feel free to if you have any question, any comment coming, any recommendation,
+
+61
+00:05:39,840 --> 00:05:43,030
+any suggestion for this course or this lesson.
+
+62
+00:05:43,050 --> 00:05:49,980
+So please, I'm happy to see this and I want from you to do a favor for me to rate us five stars who
+
+63
+00:05:49,980 --> 00:05:50,460
+need me.
+
+64
+00:05:50,610 --> 00:05:55,620
+So supporting us is very beat will make a very big difference for me and.
+
+65
+00:05:56,480 --> 00:06:01,820
+Well, may I have a receipt to make the scores the largest course on the Earth?
+
+66
+00:06:02,180 --> 00:06:09,380
+And we are going to create many, many courses, so and main array, we create an array.
+
+67
+00:06:09,920 --> 00:06:14,780
+This is an array containing seven elements seven numbers.
+
+68
+00:06:15,020 --> 00:06:21,900
+We start by and size of array over size of array of index zero and bubble sort.
+
+69
+00:06:22,280 --> 00:06:23,030
+Array.
+
+70
+00:06:23,270 --> 00:06:29,300
+We passed this array to be sorted and we pass that and number of elements.
+
+71
+00:06:29,630 --> 00:06:29,870
+OK.
+
+72
+00:06:31,380 --> 00:06:37,740
+Then we print assorted array and we print out the array at index.
+
+73
+00:06:38,680 --> 00:06:47,440
+We have that, we have that we have passed and as the size of this, so we have sorted the array, we
+
+74
+00:06:47,440 --> 00:06:50,770
+have printed the array and returning so beautiful to me.
+
+75
+00:06:51,010 --> 00:06:54,280
+So this is the bubble sort algorithm inside.
+
+76
+00:06:55,030 --> 00:06:58,090
+But there is one problem.
+
+77
+00:06:58,540 --> 00:07:00,430
+Let's talk about that complexity.
+
+78
+00:07:00,730 --> 00:07:09,400
+The above function always runs to any square because we have to array it to loops here.
+
+79
+00:07:09,430 --> 00:07:15,070
+So this is the first loop if this is the outer loop and this is the inner loop.
+
+80
+00:07:15,340 --> 00:07:25,870
+So every time we have, this is for n minus one and this for n minus II minus one and times and is and
+
+81
+00:07:26,050 --> 00:07:26,540
+square.
+
+82
+00:07:26,560 --> 00:07:32,770
+So the complexity of this algorithm is still in the best case as well.
+
+83
+00:07:32,830 --> 00:07:37,990
+And the square, because we need to go through all the elements to make sorting.
+
+84
+00:07:38,440 --> 00:07:44,350
+So if we pass a sorted array, it would still off and the square.
+
+85
+00:07:45,070 --> 00:07:51,880
+This can be optimized by stopping the algorithm if inner loop didn't cause any swap.
+
+86
+00:07:52,150 --> 00:08:00,790
+So if if the array is sorted, why we are going to loop through all these two loops and to check if
+
+87
+00:08:00,790 --> 00:08:07,120
+this array and make the that things happens as if it is not a sorted array.
+
+88
+00:08:07,270 --> 00:08:16,510
+So we need to make a check for optimized bubble sort algorithm in order to be a professional and and
+
+89
+00:08:16,510 --> 00:08:17,010
+a mate.
+
+90
+00:08:17,030 --> 00:08:24,610
+And like a professional coder and professional algorithm, algorithmic production or producer.
+
+91
+00:08:24,700 --> 00:08:25,150
+Yes.
+
+92
+00:08:25,540 --> 00:08:25,900
+So.
+
+93
+00:08:27,010 --> 00:08:33,370
+We start the same include and include the studio would create this weapon, the same thing, but here
+
+94
+00:08:33,370 --> 00:08:35,650
+in the bubble sort, I will method.
+
+95
+00:08:35,650 --> 00:08:37,480
+I will make a small change.
+
+96
+00:08:37,480 --> 00:08:39,240
+I will create a Boolean swab.
+
+97
+00:08:39,700 --> 00:08:43,840
+Here, hold the swab in the same way I will create two arrays.
+
+98
+00:08:44,200 --> 00:08:48,730
+I will start making the swap equal to false initializing at two folds.
+
+99
+00:08:49,060 --> 00:08:51,380
+And this is the inner loop.
+
+100
+00:08:51,400 --> 00:09:01,420
+So if IRA J at Index J Equal Array at greater than a rate at Index J +1, then maybe the swab and put
+
+101
+00:09:01,420 --> 00:09:02,590
+this swept through.
+
+102
+00:09:02,890 --> 00:09:07,090
+This will indicate that we have made a swap, but.
+
+103
+00:09:08,010 --> 00:09:20,010
+If there is no sweat, if the array is considered as as sorted, so we need to check if no two elements
+
+104
+00:09:20,010 --> 00:09:22,890
+were swept by inner loop, then break.
+
+105
+00:09:22,890 --> 00:09:26,850
+So if swept equal equal to falls, then break.
+
+106
+00:09:27,540 --> 00:09:29,010
+This is very important.
+
+107
+00:09:29,070 --> 00:09:37,410
+We go through elements one time to check if they are sorted or not, if they are sought to them to break.
+
+108
+00:09:37,560 --> 00:09:40,680
+So we are not increasing the complexity of this.
+
+109
+00:09:41,190 --> 00:09:44,990
+This algorithm, a from a from end to end is square.
+
+110
+00:09:45,000 --> 00:09:47,460
+We are reducing this.
+
+111
+00:09:48,660 --> 00:09:57,270
+This algorithm by from and the square to an in case of that array is sort this out of the same as before.
+
+112
+00:09:57,690 --> 00:10:06,060
+So the bubble sort of algorithm complexity now becomes in the words and the average case time complexity
+
+113
+00:10:06,060 --> 00:10:07,410
+would be Oh, and the square.
+
+114
+00:10:07,650 --> 00:10:11,730
+So the worst case occurs when the error rate is reverse sorted.
+
+115
+00:10:12,420 --> 00:10:13,530
+OK, reverse sorted.
+
+116
+00:10:13,530 --> 00:10:16,550
+So we are going to sort all the elements.
+
+117
+00:10:16,560 --> 00:10:24,600
+So we are we have nine five nine eight six seven nine eight seven six five four three two one.
+
+118
+00:10:25,410 --> 00:10:30,270
+We are going to increase them into we sort them into the increasing order.
+
+119
+00:10:30,480 --> 00:10:33,420
+One two, three, four, five, six and seven, eight, nine and 10.
+
+120
+00:10:33,570 --> 00:10:37,320
+So this is the worst case in the bubble sort algorithm.
+
+121
+00:10:38,610 --> 00:10:41,730
+Best case time complexity is all of em.
+
+122
+00:10:41,970 --> 00:10:45,450
+So best case occurs when the array is already sorted.
+
+123
+00:10:45,750 --> 00:10:54,360
+We have decreased that on the square to all end time complexity because we have added so.
+
+124
+00:10:54,360 --> 00:11:03,360
+This function, this condition, if is swept this check, we are making this boolean swab and we checked
+
+125
+00:11:03,360 --> 00:11:04,950
+if we have made a swab.
+
+126
+00:11:05,010 --> 00:11:14,000
+So if there is no swab, then then then our array being sorted and no need to make or and squished,
+
+127
+00:11:14,360 --> 00:11:16,810
+it would be the best case scenario.
+
+128
+00:11:17,460 --> 00:11:17,790
+I'm.
+
+129
+00:11:19,550 --> 00:11:20,650
+Time complexity.
+
+130
+00:11:21,840 --> 00:11:27,000
+In terms of space complexity, it's very simple, it's all of one.
+
+131
+00:11:27,660 --> 00:11:35,190
+So this is what we have learned about the bubble algorithm and we have learned about the time and space
+
+132
+00:11:35,190 --> 00:11:41,460
+complexity and how to make and optimize our bubbles fourth algorithm and see.
+
+133
+00:11:41,670 --> 00:11:43,080
+Now let's move to that.
+
+134
+00:11:43,590 --> 00:11:48,150
+Add to that Java IBD Java compiler, and let's implement.

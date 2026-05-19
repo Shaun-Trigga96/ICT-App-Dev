@@ -1,0 +1,359 @@
+1
+00:00:00,300 --> 00:00:08,490
+Now, let's implement the bilmem for the algorithm and see we start by defining a structure called edge.
+
+2
+00:00:09,070 --> 00:00:18,360
+This way, so structure of the edges of the graph and we have seen this truck in and that graph data
+
+3
+00:00:18,360 --> 00:00:19,140
+structures.
+
+4
+00:00:19,290 --> 00:00:25,980
+So we create the start vertex of the edge, the end vertex of the edge and the weight of that edge.
+
+5
+00:00:26,580 --> 00:00:33,870
+Now, since we are dealing with bilmem for the cell, we are going to deal with the weight of that atlas.
+
+6
+00:00:34,230 --> 00:00:34,560
+OK.
+
+7
+00:00:34,920 --> 00:00:44,640
+So we create a graph that consists of edges and it called V a variable called V and the total number
+
+8
+00:00:44,640 --> 00:00:49,860
+of vertices in graph and interfere with the total number of edges in the graph.
+
+9
+00:00:50,400 --> 00:00:56,370
+And we create a reference of the edge that we have created previously.
+
+10
+00:00:56,730 --> 00:00:57,220
+OK.
+
+11
+00:00:58,050 --> 00:00:58,500
+So.
+
+12
+00:01:01,100 --> 00:01:08,270
+Array of images we call the method void, bilmem, Ford, and we call the method, avoid this one.
+
+13
+00:01:08,840 --> 00:01:15,830
+The Belmont Ford method, it took the perimeter of the struct graph and into source.
+
+14
+00:01:17,090 --> 00:01:27,080
+We create the variables I J U V W, the total verdicts in the graph g d v, which total vertices is
+
+15
+00:01:27,080 --> 00:01:31,850
+equal assigned G V or we get the Big G.
+
+16
+00:01:32,480 --> 00:01:37,810
+Here is the reference of this and we axis G and get V.
+
+17
+00:01:37,850 --> 00:01:41,420
+So this is accessing G and getting V.
+
+18
+00:01:41,720 --> 00:01:42,110
+OK.
+
+19
+00:01:42,590 --> 00:01:51,110
+So the total number of vertices offered g reference that we have passed is stored in TV.
+
+20
+00:01:53,360 --> 00:01:58,030
+And total edges in crafting the same way coal and stored inside.
+
+21
+00:01:59,030 --> 00:02:04,300
+Now the distance or a size equal to the number of vertices of a graph.
+
+22
+00:02:04,790 --> 00:02:15,140
+So into the at index TV predecessor array size equal to the number of vertices of the Graph G B at Index
+
+23
+00:02:15,140 --> 00:02:20,150
+TV, the first step is for the distance array and the predecessor array.
+
+24
+00:02:20,840 --> 00:02:29,540
+We start by by assigning all the elements with infinity and be at index equal to zero.
+
+25
+00:02:30,640 --> 00:02:31,000
+Now.
+
+26
+00:02:33,370 --> 00:02:39,130
+Step number two, we relax edges of the ID module minus one times.
+
+27
+00:02:39,370 --> 00:02:50,110
+So we start by making this by a nested loop starting from I equal to one and I less than or equal TV
+
+28
+00:02:50,110 --> 00:02:59,710
+minus one total vertices minus one and a j equal to zero and j less than total edges and the loops through
+
+29
+00:02:59,710 --> 00:03:03,070
+J + + + + + + +.
+
+30
+00:03:03,070 --> 00:03:04,210
+We get the edges data.
+
+31
+00:03:04,630 --> 00:03:07,110
+You store them inside you.
+
+32
+00:03:07,510 --> 00:03:09,280
+So it v and so W.
+
+33
+00:03:09,850 --> 00:03:17,710
+If the index u, there's not equal to infinity and D at index feed greater than the index U.
+
+34
+00:03:17,740 --> 00:03:20,080
+Plus B, this is a very important condition.
+
+35
+00:03:20,500 --> 00:03:25,880
+Then DV at and the at index B equal to the at the Index U.
+
+36
+00:03:25,930 --> 00:03:29,800
+Plus W and Peavey equal to U.
+
+37
+00:03:30,010 --> 00:03:35,490
+These are very important conditions and you need to understand them.
+
+38
+00:03:35,500 --> 00:03:35,850
+What?
+
+39
+00:03:37,690 --> 00:03:40,330
+The third step is detect the negative cycle.
+
+40
+00:03:40,600 --> 00:03:46,750
+We have talked about the negative cycle in the previous video and we have seen an example about it.
+
+41
+00:03:47,260 --> 00:03:54,280
+So if evaluations changes when we have a negative value cycle and negative cycle in the graph and we
+
+42
+00:03:54,280 --> 00:03:56,050
+cannot find the shortest distance.
+
+43
+00:03:58,780 --> 00:04:09,070
+So we are checking and we detect the negative cycle, if we have a negative cycle, then we can't apply
+
+44
+00:04:09,070 --> 00:04:11,500
+and we can get the shortest way.
+
+45
+00:04:11,590 --> 00:04:15,840
+And this is the way that we check for and detect the negative.
+
+46
+00:04:16,070 --> 00:04:24,850
+Same as above, but here we are using the first loop, first outer loop, and we assign the variable
+
+47
+00:04:24,850 --> 00:04:28,480
+u v w and we are checking if it is infinity.
+
+48
+00:04:28,480 --> 00:04:34,660
+And the Appendix B was greater than the EU index you and plus W.
+
+49
+00:04:37,250 --> 00:04:46,340
+Again, if no negative wait cycle found, then print the distance and the predecessor array will print,
+
+50
+00:04:46,640 --> 00:04:50,810
+which display do you call this function display here?
+
+51
+00:04:51,290 --> 00:04:59,540
+We passed the as the array that we are going to display and inside, which is total vertices and the
+
+52
+00:04:59,540 --> 00:05:00,860
+predecessor array.
+
+53
+00:05:01,010 --> 00:05:02,360
+We call it that gain.
+
+54
+00:05:02,690 --> 00:05:10,910
+And but this time we are passing the variable array, which is now let's test this program.
+
+55
+00:05:10,940 --> 00:05:17,360
+We create the graph GV will 242 vertices and edges equal to five.
+
+56
+00:05:17,720 --> 00:05:23,690
+Please go back to the previous videos about the craft in order to learn more about creating that graph
+
+57
+00:05:24,150 --> 00:05:26,030
+directed and the undirected graph.
+
+58
+00:05:28,460 --> 00:05:29,510
+Array of edges.
+
+59
+00:05:30,170 --> 00:05:33,890
+A Photograph G at Index A G.
+
+60
+00:05:34,100 --> 00:05:41,030
+The edge of G is equal to struct edge and molokwane preserving them a memory allocation, adding the
+
+61
+00:05:41,030 --> 00:05:42,170
+edges of the graph.
+
+62
+00:05:42,290 --> 00:05:51,260
+So we start by adding that correct address and we assign their values to here and we add that to the
+
+63
+00:05:51,260 --> 00:05:52,540
+way we are.
+
+64
+00:05:52,550 --> 00:05:56,900
+You the and the way, the way.
+
+65
+00:05:57,140 --> 00:05:58,540
+And here is the weight.
+
+66
+00:05:59,510 --> 00:06:01,510
+These are the edges from zero to one.
+
+67
+00:06:01,560 --> 00:06:04,700
+The first edge, second edge and the weight between them.
+
+68
+00:06:04,760 --> 00:06:06,410
+First edge, second edge.
+
+69
+00:06:06,410 --> 00:06:10,880
+And the way that weight between them and so on.
+
+70
+00:06:10,880 --> 00:06:12,950
+So we are creating the graph here.
+
+71
+00:06:14,060 --> 00:06:23,180
+OK, now we apply the Belman four and we passed the Graph G and index series the source vertex.
+
+72
+00:06:23,510 --> 00:06:27,340
+So we start from zero and we connect through this.
+
+73
+00:06:27,350 --> 00:06:31,790
+So this is the graph zero one.
+
+74
+00:06:35,170 --> 00:06:37,300
+Do and.
+
+75
+00:06:38,920 --> 00:06:39,300
+Three.
+
+76
+00:06:40,180 --> 00:06:42,100
+Let me practice.
+
+77
+00:06:45,110 --> 00:06:54,140
+Do so, there is a connection between zero and one, and the weight is equal to five zero to do and
+
+78
+00:06:54,140 --> 00:06:56,050
+the weight is equal to four.
+
+79
+00:06:57,260 --> 00:06:58,790
+One two three.
+
+80
+00:06:59,790 --> 00:07:06,720
+Then the weight is equal to three and a two to one.
+
+81
+00:07:07,710 --> 00:07:08,190
+Sorry.
+
+82
+00:07:11,790 --> 00:07:13,470
+Two to one.
+
+83
+00:07:14,640 --> 00:07:24,970
+This is equal to the weight six and three to two, which is equal to gay just like this.
+
+84
+00:07:25,060 --> 00:07:28,050
+Two to one one to three.
+
+85
+00:07:29,190 --> 00:07:31,710
+Zero to one and.
+
+86
+00:07:33,650 --> 00:07:35,090
+Zero, two, two.
+
+87
+00:07:37,610 --> 00:07:38,120
+OK.
+
+88
+00:07:38,720 --> 00:07:40,820
+This is that graph.
+
+89
+00:07:41,090 --> 00:07:47,870
+This is the Pellman for the algorithms applied in this graph using.
+
+90
+00:07:49,040 --> 00:07:49,310
+Belmont.

@@ -1,0 +1,119 @@
+1
+00:00:00,060 --> 00:00:07,710
+In many interviews and in many universities, you are asked to get the length of link, at least to
+
+2
+00:00:07,710 --> 00:00:12,090
+write a method that get the length of an ink list.
+
+3
+00:00:12,540 --> 00:00:16,920
+So we will create a method called get length.
+
+4
+00:00:17,100 --> 00:00:21,210
+It's a returning type, is integer and took into the meter.
+
+5
+00:00:21,210 --> 00:00:29,760
+There refers to the hat structure note stamp hat, so start by struct note stamp equal to the head.
+
+6
+00:00:30,060 --> 00:00:31,470
+We create this.
+
+7
+00:00:32,780 --> 00:00:38,550
+This linked list and we create a variable called count.
+
+8
+00:00:38,600 --> 00:00:39,800
+It's an orange.
+
+9
+00:00:40,770 --> 00:00:42,600
+Or in in yellow.
+
+10
+00:00:43,530 --> 00:00:49,160
+This is the counter, it's a memory and the structure note, this is the linked list.
+
+11
+00:00:49,170 --> 00:00:50,760
+We have five elements.
+
+12
+00:00:52,110 --> 00:00:56,580
+We start by making the hat equal to temp.
+
+13
+00:00:56,880 --> 00:01:05,400
+OK, so we are signing to have that now we start while temp does not equal to none.
+
+14
+00:01:05,940 --> 00:01:07,520
+So the reference is not.
+
+15
+00:01:07,530 --> 00:01:15,090
+It is referencing and pointing to the non we increase count by one.
+
+16
+00:01:15,780 --> 00:01:16,230
+OK.
+
+17
+00:01:16,770 --> 00:01:25,740
+And Temp two the next again temp does not equal to null, so move the cursor count increased by one.
+
+18
+00:01:27,440 --> 00:01:30,870
+Then stamp referencing to knowledge, no.
+
+19
+00:01:30,930 --> 00:01:32,900
+So move the cursor by one.
+
+20
+00:01:34,620 --> 00:01:41,370
+Again, the while loop count increased by one and Trump is referencing to null.
+
+21
+00:01:41,410 --> 00:01:47,730
+Yes, it's referencing so it will break out the loop and return the count.
+
+22
+00:01:48,090 --> 00:01:57,000
+So we have reached here their stamp, referencing the they're not the next, not word of forensic or
+
+23
+00:01:57,150 --> 00:01:58,980
+this, not is their forensic or not.
+
+24
+00:01:59,460 --> 00:02:03,330
+So the count now would be returned as five.
+
+25
+00:02:03,420 --> 00:02:14,490
+So we have increased the count five times, according to this wire loop, and we return the count equal
+
+26
+00:02:14,700 --> 00:02:15,450
+to five.
+
+27
+00:02:15,720 --> 00:02:16,990
+It's very simple.
+
+28
+00:02:17,010 --> 00:02:19,980
+This is the way how to get the length of that.
+
+29
+00:02:20,170 --> 00:02:23,040
+Think at least the next example?
+
+30
+00:02:23,050 --> 00:02:25,620
+We will get the middle note of link at and.

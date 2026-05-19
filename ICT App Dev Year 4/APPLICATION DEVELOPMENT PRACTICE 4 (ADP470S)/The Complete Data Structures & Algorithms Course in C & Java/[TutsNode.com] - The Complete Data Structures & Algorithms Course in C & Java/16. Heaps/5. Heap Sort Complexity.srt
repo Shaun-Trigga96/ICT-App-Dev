@@ -1,0 +1,115 @@
+1
+00:00:00,630 --> 00:00:07,560
+After we have learned about the hip sword algorithm, let's learn about its complexity and discover
+
+2
+00:00:08,250 --> 00:00:11,130
+that time complexity and the space complexity.
+
+3
+00:00:12,370 --> 00:00:20,770
+The hip sort algorithm come time complexity and the best case and look in the worst case is endless
+
+4
+00:00:20,770 --> 00:00:21,280
+again.
+
+5
+00:00:21,490 --> 00:00:29,620
+And the average case is and again, let's understand the reason why the heart of a complete binary tree
+
+6
+00:00:29,620 --> 00:00:32,730
+containing any elements is loug end.
+
+7
+00:00:33,100 --> 00:00:41,320
+And we have proved it in the binary search threes and the complete binary threes in the previous videos.
+
+8
+00:00:41,650 --> 00:00:52,240
+So as we have seen earlier, to fully typify an element whose sub trees are ready max heaps, we need
+
+9
+00:00:52,240 --> 00:01:01,120
+to keep comparing the elements with its left and right children and pushing it downwards until it reaches
+
+10
+00:01:01,120 --> 00:01:06,490
+a point where both its children are smaller than it.
+
+11
+00:01:06,880 --> 00:01:15,040
+And this worst case scenario, we will need to move an element from their route to their leaf nodes,
+
+12
+00:01:15,040 --> 00:01:21,220
+making a multiple of and or two log and comparisons and swaps.
+
+13
+00:01:21,700 --> 00:01:26,260
+So during the build max heap stage that we have done it.
+
+14
+00:01:26,590 --> 00:01:35,200
+We do that and over two elements so that the worst case complexity of the build a hit step is and over
+
+15
+00:01:35,200 --> 00:01:42,070
+two times longer and which has meaning and look n and the during the average time, it's the same.
+
+16
+00:01:42,310 --> 00:01:51,730
+So also it performs like also since the build max heap and the heap sort steps are executed one after
+
+17
+00:01:52,090 --> 00:01:52,660
+another.
+
+18
+00:01:52,930 --> 00:01:59,280
+The algorithmic complexity is not multiplied and it remains in the order of and Logan.
+
+19
+00:01:59,860 --> 00:02:06,820
+So this is what the reason behind the time complexity in the best worse than the average.
+
+20
+00:02:08,580 --> 00:02:19,200
+In terms of space complexity, also the heap sort algorithm performs, sorting in all one space complex
+
+21
+00:02:19,620 --> 00:02:27,030
+compared with quick sort is it has a better worst case scenario, which is and look and the quick sort
+
+22
+00:02:27,030 --> 00:02:31,380
+has complexity all and power do for worst case.
+
+23
+00:02:31,710 --> 00:02:41,250
+But in other cases, quick sort is fast and sort is an alternative to hips or that combines quick sort.
+
+24
+00:02:41,250 --> 00:02:48,450
+And he it's hard to retain the advantages of both the worst case speed of hip sort and the average speed
+
+25
+00:02:48,450 --> 00:02:50,250
+of quick sort.
+
+26
+00:02:50,850 --> 00:03:02,850
+So this stability is not the stable algorithm, and we like to make to use that many, many algorithms
+
+27
+00:03:03,150 --> 00:03:06,450
+better than a quick sort and merge sort.
+
+28
+00:03:07,140 --> 00:03:16,140
+Now let's move to the C language implementation of the hip sort algorithm and later on that solve them
+
+29
+00:03:16,140 --> 00:03:17,820
+exercise to implement.

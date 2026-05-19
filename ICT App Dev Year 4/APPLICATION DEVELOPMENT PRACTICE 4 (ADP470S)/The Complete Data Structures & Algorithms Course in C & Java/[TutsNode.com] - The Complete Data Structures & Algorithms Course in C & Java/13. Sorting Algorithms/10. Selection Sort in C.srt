@@ -1,0 +1,259 @@
+1
+00:00:00,060 --> 00:00:02,910
+There we have learned about the selection sort algorithm.
+
+2
+00:00:03,750 --> 00:00:05,700
+Now let's implement it and see.
+
+3
+00:00:06,390 --> 00:00:16,140
+We start by include a studio that age and we create a new method called swab the swab method that we
+
+4
+00:00:16,140 --> 00:00:19,560
+have learned about it in many videos.
+
+5
+00:00:20,220 --> 00:00:28,860
+Its role is to swab the value of the first argument to that or the first parameter with the value of
+
+6
+00:00:28,860 --> 00:00:32,190
+the second parameter and the second parameter with the first.
+
+7
+00:00:32,730 --> 00:00:44,040
+So we start swapping the X with Y and Y with X Y creating a temporary item, temporary integer call
+
+8
+00:00:44,040 --> 00:00:50,250
+and taking it cold, damp and taking into consideration the value of X.
+
+9
+00:00:51,180 --> 00:00:54,390
+And X now becomes Y.
+
+10
+00:00:54,660 --> 00:00:57,240
+And assigning Y to that temp.
+
+11
+00:00:57,510 --> 00:01:00,330
+So this is the algorithm behind swapping.
+
+12
+00:01:00,890 --> 00:01:01,260
+OK.
+
+13
+00:01:02,820 --> 00:01:06,720
+Now we create a new method, this method.
+
+14
+00:01:06,990 --> 00:01:13,920
+It's returning type is void and cold selection sort into took into the perimeter into an array.
+
+15
+00:01:15,700 --> 00:01:23,380
+Variable that we had with the rate that we are going to sort and and the size of this array, we can
+
+16
+00:01:24,040 --> 00:01:32,800
+like remove the and and the second parameter because we can get that this and or the size by the best
+
+17
+00:01:32,800 --> 00:01:36,820
+parameter, but best array, which is a rate of length.
+
+18
+00:01:37,240 --> 00:01:39,130
+But it's the same.
+
+19
+00:01:39,490 --> 00:01:49,720
+So if you prefer just a passing rate that you want to select, sort about an algorithm and apply it
+
+20
+00:01:49,930 --> 00:01:50,410
+on it.
+
+21
+00:01:50,800 --> 00:01:56,170
+So just consider passing one argument and one parameter.
+
+22
+00:01:57,200 --> 00:02:07,340
+And I and J and minimum I the X, we will see these variables in action by creating one by one move
+
+23
+00:02:07,340 --> 00:02:09,620
+boundary of unsorted array.
+
+24
+00:02:09,890 --> 00:02:14,450
+We need an outer loop that starts from zero to end minus one.
+
+25
+00:02:14,600 --> 00:02:22,520
+And this is logic because we need to pass through all the elements of the unsorted array, and we start
+
+26
+00:02:22,520 --> 00:02:27,020
+by selecting and finding the minimum element in unsorted array.
+
+27
+00:02:27,350 --> 00:02:35,870
+In order to do that, we need to assign the minimum ID X to AI, and we start making a nested loop that
+
+28
+00:02:35,870 --> 00:02:39,670
+goes through from J Equal I +1.
+
+29
+00:02:39,680 --> 00:02:40,520
+So we see guys.
+
+30
+00:02:41,600 --> 00:02:49,580
+We considered the first element is fully sorted or there, if obviously we are on the second iteration
+
+31
+00:02:49,580 --> 00:02:58,130
+we consider I +1, which is I is equal to the second iteration, which is one cell, one plus one.
+
+32
+00:02:58,130 --> 00:03:04,010
+We consider the first two elements are fully fully sorted.
+
+33
+00:03:04,130 --> 00:03:08,180
+So here is the trick behind this election sort.
+
+34
+00:03:08,450 --> 00:03:09,600
+This is the trick.
+
+35
+00:03:10,160 --> 00:03:16,750
+We start from Jay Equal to I +1 and Jay less than an OK.
+
+36
+00:03:18,560 --> 00:03:20,630
+This is a very important trick.
+
+37
+00:03:20,930 --> 00:03:28,360
+If less than a rate at minimum, at minimum I the X, that rate in this indexed minimum might the X,
+
+38
+00:03:28,940 --> 00:03:32,060
+we are going to change it.
+
+39
+00:03:32,780 --> 00:03:39,260
+What we are going to make the minimum now at Index X equal to.
+
+40
+00:03:40,700 --> 00:03:50,200
+Now we swab or swept the found minimum element with the first element, how to swab the two elements
+
+41
+00:03:50,210 --> 00:03:55,030
+we call the swab and we pass that to arguments.
+
+42
+00:03:55,040 --> 00:04:04,490
+We need to swab this element at the array and the minimum i.e. the X and the swab being the element
+
+43
+00:04:04,490 --> 00:04:06,800
+at array at index high.
+
+44
+00:04:06,980 --> 00:04:14,240
+So we see guys how we need to and how we done that, swapping by calling them swab.
+
+45
+00:04:15,330 --> 00:04:16,700
+Function, OK.
+
+46
+00:04:19,090 --> 00:04:28,420
+Now we have done with the selection sort, this is very important to understand that we go through all
+
+47
+00:04:28,420 --> 00:04:40,890
+the elements using this outer loop and this inner loop starts from J Eye plus one eye plus one.
+
+48
+00:04:41,230 --> 00:04:41,620
+OK.
+
+49
+00:04:41,950 --> 00:04:49,570
+This is very important and we start swapping if the minimum is if the array at index is less than that
+
+50
+00:04:49,780 --> 00:04:52,240
+at minimum at index minimum idea.
+
+51
+00:04:52,720 --> 00:04:53,110
+OK.
+
+52
+00:04:53,710 --> 00:04:54,940
+This is the algorithm.
+
+53
+00:04:56,730 --> 00:05:02,550
+Now, let's bring the area, we have seen this in the previous video, which took in the perimeter array
+
+54
+00:05:02,550 --> 00:05:03,780
+and the size of it.
+
+55
+00:05:04,110 --> 00:05:11,070
+And we start printing it, using it for driver program to test the functions.
+
+56
+00:05:11,280 --> 00:05:20,400
+We need to create an entry that we are going to short here and the inside and an is equal to the size
+
+57
+00:05:20,400 --> 00:05:27,400
+of that right over to the size of their day and year that it will calculate the size of that right now.
+
+58
+00:05:27,420 --> 00:05:30,330
+We passed the selection sought selection.
+
+59
+00:05:30,330 --> 00:05:31,890
+Sort this.
+
+60
+00:05:33,050 --> 00:05:41,840
+Well, make is will apply the selection sort algorithm on this array and start printing this sorted
+
+61
+00:05:42,170 --> 00:05:42,430
+out.
+
+62
+00:05:43,550 --> 00:05:43,940
+OK.
+
+63
+00:05:44,120 --> 00:05:54,020
+This is the implementation of the selection sort in sea, and let's move in the next video to solve
+
+64
+00:05:54,020 --> 00:05:55,850
+the exercise about this election.
+
+65
+00:05:55,850 --> 00:05:59,930
+Sort and implement it in Java I.D. and.

@@ -1,0 +1,351 @@
+1
+00:00:00,060 --> 00:00:03,720
+Have seen the merged sort algorithm in animation.
+
+2
+00:00:04,050 --> 00:00:05,900
+Now let's go and see.
+
+3
+00:00:06,330 --> 00:00:14,040
+Deeply the merge sort complexity and then try to implement the code in C and in Java later on.
+
+4
+00:00:14,550 --> 00:00:21,960
+So Merge Sort is one of the most popular sorting algorithms that is based on the principle of divide
+
+5
+00:00:21,960 --> 00:00:23,240
+and conquer algorithm.
+
+6
+00:00:23,310 --> 00:00:32,400
+We have, sir, we have watched and learn about the divide and conquer algorithm in the previous videos.
+
+7
+00:00:32,850 --> 00:00:37,890
+So here is a problem is divided into multiple sub problems.
+
+8
+00:00:38,040 --> 00:00:46,230
+Each sub problem is solved individually, and finally, sub problems are combined to form the final
+
+9
+00:00:46,230 --> 00:00:46,830
+solution.
+
+10
+00:00:47,310 --> 00:00:57,030
+If we see this array, we have divided into two main parts the left and the right, and this left part
+
+11
+00:00:57,030 --> 00:01:04,770
+have been also divided into two groups six and five two five to 12.
+
+12
+00:01:04,860 --> 00:01:16,110
+So 512 512 is being also divided and then combined into an ordered array, and we have this part six.
+
+13
+00:01:16,850 --> 00:01:25,200
+Now, in order to combine them, we start searching, which is sorting from the merge and into from
+
+14
+00:01:25,200 --> 00:01:27,960
+the parts and merge them into one.
+
+15
+00:01:27,990 --> 00:01:32,370
+So this is when we combine them, when we merge them.
+
+16
+00:01:32,610 --> 00:01:35,670
+This is why we have called it merged sort.
+
+17
+00:01:36,030 --> 00:01:38,280
+So five is less than six.
+
+18
+00:01:38,610 --> 00:01:40,170
+Six is less than 12.
+
+19
+00:01:40,170 --> 00:01:42,120
+So we have formed the first part.
+
+20
+00:01:42,690 --> 00:01:46,440
+The second part is the same, then nine at one.
+
+21
+00:01:46,650 --> 00:01:54,150
+We have divided the inten into 10 into one single row and nine one.
+
+22
+00:01:54,510 --> 00:02:01,980
+We divide this into two parts one and nine, and we have sorted by putting one in the beginning and
+
+23
+00:02:01,980 --> 00:02:05,430
+nine into the second case.
+
+24
+00:02:05,910 --> 00:02:12,290
+And now we need to combine the one nine sub array and that 10 summary.
+
+25
+00:02:12,750 --> 00:02:22,030
+We joined them by one nine and then then so we have four and another sorted editing somebody.
+
+26
+00:02:22,530 --> 00:02:30,210
+Now we need to join these two sub arrays sorted substrates.
+
+27
+00:02:31,080 --> 00:02:40,920
+So we add one five six nine then and the twelfth.
+
+28
+00:02:41,490 --> 00:02:43,660
+We add the elements later.
+
+29
+00:02:43,920 --> 00:02:52,470
+So this is how to solve the problem, how to solve the problem in sub bearnaise.
+
+30
+00:02:52,470 --> 00:03:00,420
+And then we join and merge the two solution into one solution and form the merged.
+
+31
+00:03:00,600 --> 00:03:08,880
+So the Merge sort function repeatedly divides the array into two halves until we reach the stage where
+
+32
+00:03:08,880 --> 00:03:12,900
+we tried to perform, merge, sort on a sub array of size.
+
+33
+00:03:12,930 --> 00:03:15,990
+One example be equal, equal to offer.
+
+34
+00:03:16,710 --> 00:03:23,580
+And after that, the merge functions come a function, comes into play and combined the sorted and they
+
+35
+00:03:23,580 --> 00:03:28,170
+into larger arrays until the whole array is merged.
+
+36
+00:03:29,580 --> 00:03:36,210
+Merged sort, this is the algorithm that we are going to implement in C and and Joffe.
+
+37
+00:03:36,450 --> 00:03:43,860
+So if B greater than are, then return, this is the Merge sort that accepts an essay that we are going
+
+38
+00:03:43,860 --> 00:03:50,640
+to solve and do it too short and b and ah, so it should be greater than ah.
+
+39
+00:03:51,680 --> 00:03:57,200
+And these are the sub elements, then be greater than, ah, than return.
+
+40
+00:03:58,150 --> 00:03:59,710
+OK, we have sorted them.
+
+41
+00:04:00,450 --> 00:04:05,320
+Otherwise, we create queue equal people plus are divided over two.
+
+42
+00:04:05,650 --> 00:04:13,390
+So we are getting the quotient and we start calling the Merge sort again.
+
+43
+00:04:13,600 --> 00:04:22,270
+Here we have said that the divide and conquer algorithm is based on three cartoons, so this is the
+
+44
+00:04:22,270 --> 00:04:26,970
+recursion we have passed that gain a we have best a game B.
+
+45
+00:04:27,370 --> 00:04:30,010
+And here is the quotient, not art.
+
+46
+00:04:30,040 --> 00:04:32,980
+We are passing P plus r over two.
+
+47
+00:04:32,980 --> 00:04:37,630
+So consider this B one, two three over two.
+
+48
+00:04:37,890 --> 00:04:39,970
+Ah, so one point five.
+
+49
+00:04:40,090 --> 00:04:43,690
+So we are passing this as the Merge sort.
+
+50
+00:04:43,690 --> 00:04:52,130
+We need to sort the first element here and in the second step we use Mercer Q Plus one.
+
+51
+00:04:52,150 --> 00:04:53,770
+You see, guys, this is the algorithm.
+
+52
+00:04:54,010 --> 00:05:02,110
+And ah, so we net need to make a merge sort for the other part, which is five and 12.
+
+53
+00:05:02,770 --> 00:05:11,020
+And then we use the method merge that merges B, Q and I.
+
+54
+00:05:12,790 --> 00:05:23,620
+OK, so this is the algorithm behind Mercer to sort an entire array, we need to call merge, sort a
+
+55
+00:05:23,620 --> 00:05:27,120
+at and zero and pass a.
+
+56
+00:05:28,030 --> 00:05:34,180
+As part of me, the array we pass zero fraud index and the links a minus one.
+
+57
+00:05:34,960 --> 00:05:35,420
+OK.
+
+58
+00:05:35,680 --> 00:05:45,640
+As this array or this diagram shows at right at index zero and two to three, we pass it and divide
+
+59
+00:05:45,640 --> 00:05:49,480
+it in two, zero to one and two to three.
+
+60
+00:05:50,380 --> 00:05:56,800
+As shown in the image that emerged, sort algorithm recursively divides the array into halves until
+
+61
+00:05:56,800 --> 00:06:00,040
+we reach the base case of array within one element.
+
+62
+00:06:00,070 --> 00:06:01,870
+This is the base case of one element.
+
+63
+00:06:02,970 --> 00:06:03,510
+OK.
+
+64
+00:06:06,140 --> 00:06:12,580
+Then after that, the Merge function picks up the sort that summarize and merge them to gradually sort
+
+65
+00:06:12,590 --> 00:06:13,460
+the entire area.
+
+66
+00:06:13,850 --> 00:06:18,280
+We have merged this sub array and we have merged this hurray.
+
+67
+00:06:18,620 --> 00:06:27,770
+Then we combine them, they how we when we use the Merge sort, so merge sort applications in the inversion
+
+68
+00:06:27,780 --> 00:06:34,490
+count problem in the external sorting and income e-commerce application.
+
+69
+00:06:35,090 --> 00:06:43,790
+Let's learn about the complexity before moving into that code implementation and see and next in Java
+
+70
+00:06:44,180 --> 00:06:44,990
+exercises.
+
+71
+00:06:46,070 --> 00:06:55,700
+So the time complexity of the Merge sort and the best case scenario it is and that time complexity,
+
+72
+00:06:55,700 --> 00:07:03,940
+it's old and times look, and in the worst case is and times look and and the average is and time slogan
+
+73
+00:07:04,460 --> 00:07:12,770
+sorting errors on different machines like sort of merge sort is a recursive algorithm, and time complexity
+
+74
+00:07:12,770 --> 00:07:19,100
+can be expressed as following a recursion relation at this D of an.
+
+75
+00:07:22,560 --> 00:07:26,340
+Two to two and minus.
+
+76
+00:07:27,270 --> 00:07:30,660
+Over two plus set off an.
+
+77
+00:07:32,180 --> 00:07:40,100
+But since the above recursion and this that occurred, that occurrence can be solved either using the
+
+78
+00:07:40,100 --> 00:07:46,460
+recurrence three method or the master method, it falls in their case, two of the master method and
+
+79
+00:07:46,460 --> 00:07:49,610
+the solution of recurrence is Oh, and.
+
+80
+00:07:50,830 --> 00:07:51,550
+Lug.
+
+81
+00:07:52,510 --> 00:07:58,140
+And so this would be solved in terms of all of analog.
+
+82
+00:07:58,810 --> 00:08:09,160
+OK, from this we have we have conclude that the time complexity of merged sort is and look and in three
+
+83
+00:08:09,160 --> 00:08:16,060
+cases, the worst, average and best as merge, sort always divide, array into two halves and takes
+
+84
+00:08:16,330 --> 00:08:20,080
+linear time to merge two halves.
+
+85
+00:08:20,680 --> 00:08:26,950
+And the axillary space complexities of and and stability is.
+
+86
+00:08:27,010 --> 00:08:28,510
+Yes, there's there's stable.
+
+87
+00:08:28,690 --> 00:08:35,080
+So this is the merged sort, and it is a very popular algorithm.
+
+88
+00:08:36,310 --> 00:08:40,090
+Now, let's move to and learn about Merge sort.
