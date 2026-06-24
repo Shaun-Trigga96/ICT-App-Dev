@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Virtual Mind Map + Comparison Tree · The Golden Thread · Research Methodology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #f5eede;
+      --paper2: #fffdf7;
+      --card-bg: #fffcf4;
+      --ink: #221c12;
+      --ink-soft: #6b5f49;
+      --ink-faint: #9a8d72;
+      --gold: #a9781f;
+      --gold-bright: #d6a23e;
+      --gold-soft: #ecd9a8;
+      --forest: #28564a;
+      --forest-light: #d9e6df;
+      --shadow-sm: 0 6px 14px rgba(34, 28, 18, 0.06), 0 2px 4px rgba(34, 28, 18, 0.04);
+      --shadow-md: 0 12px 28px rgba(34, 28, 18, 0.08);
+      --line: rgba(34, 28, 18, 0.12);
+    }
+
+    body {
+      background: radial-gradient(1200px 600px at 20% 20%, #fbf3df 0%, #efe3ca 100%);
+      font-family: "Newsreader", Georgia, serif;
+      color: var(--ink);
+      line-height: 1.5;
+      padding: 2rem 1.5rem;
+    }
+
+    .mm-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* central hub — the golden thread core */
+    .hub {
+      text-align: center;
+      margin-bottom: 3.2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hub-core {
+      display: inline-block;
+      background: linear-gradient(135deg, #fff9ef, #fff3e0);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--gold-soft);
+      border-radius: 80px;
+      padding: 1rem 2.2rem;
+      box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,240,0.8);
+    }
+
+    .hub-core h2 {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      letter-spacing: -0.01em;
+      background: linear-gradient(135deg, #2a5220, #a9781f);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hub-core p {
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .hub-thread {
+      width: 120px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold-bright), var(--gold), var(--gold-bright), transparent);
+      margin: 1rem auto 0;
+      border-radius: 4px;
+    }
+
+    /* mind map grid */
+    .mindmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .topic-node {
+      background: var(--card-bg);
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      overflow: hidden;
+    }
+    .topic-node:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-soft);
+    }
+    .node-header {
+      background: rgba(236, 217, 168, 0.2);
+      padding: 1.2rem 1.5rem 0.8rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .topic-badge {
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      background: var(--gold-soft);
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .node-header h3 {
+      font-family: "Fraunces", serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .summary {
+      padding: 1rem 1.5rem 0.7rem;
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--line);
+    }
+    .mnemonic-block {
+      padding: 0.9rem 1.5rem 1.2rem;
+      background: #fefaf0;
+      margin: 0.5rem 1rem 1rem 1rem;
+      border-radius: 20px;
+      border-left: 4px solid var(--gold-bright);
+    }
+    .mnemonic-label {
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      color: var(--forest);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .mnemonic-phrase {
+      font-family: "Fraunces", serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      font-style: italic;
+      color: #2a4a2c;
+    }
+    .mnemonic-phrase b { color: var(--gold); font-weight: 700; font-style: normal; }
+    .topic-foot {
+      padding: 0.5rem 1.5rem 1rem;
+      font-size: 0.7rem;
+      color: var(--ink-faint);
+      text-align: right;
+    }
+
+    /* ========== COMPARISON TREE SECTION ========== */
+    .comparison-forest {
+      margin-top: 2rem;
+      background: rgba(255, 252, 240, 0.7);
+      border-radius: 48px;
+      padding: 1.8rem 1.5rem 2rem;
+      border: 1px solid var(--gold-soft);
+      backdrop-filter: blur(2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .comparison-title {
+      font-family: "Fraunces", serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+      border-left: 6px solid var(--gold);
+      padding-left: 1rem;
+    }
+    .tree-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+    .comparison-card {
+      background: var(--paper2);
+      border-radius: 28px;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      transition: all 0.2s;
+    }
+    .comparison-card:hover {
+      border-color: var(--gold-bright);
+      transform: scale(1.01);
+    }
+    .card-header {
+      background: #f9f2e2;
+      padding: 0.8rem 1.5rem;
+      font-family: "Spline Sans Mono", monospace;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      border-bottom: 2px solid var(--gold-soft);
+    }
+    .split-panel {
+      display: flex;
+      flex-direction: column;
+    }
+    .split-row {
+      display: flex;
+      border-bottom: 1px solid var(--line);
+    }
+    .split-col {
+      flex: 1;
+      padding: 1rem 1.2rem;
+    }
+    .split-col:first-child {
+      border-right: 1px solid var(--line);
+      background: rgba(236, 217, 168, 0.05);
+    }
+    .concept-title {
+      font-weight: 800;
+      font-size: 1.15rem;
+      font-family: "Fraunces", serif;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 0.6rem;
+    }
+    .when-use, .when-not {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+    .when-use strong, .when-not strong {
+      font-family: monospace;
+      background: var(--forest-light);
+      padding: 0.1rem 0.4rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+    }
+    .badge-use {
+      color: var(--forest);
+      border-left: 3px solid var(--forest);
+      padding-left: 8px;
+      margin-top: 6px;
+    }
+    .extra-note {
+      background: #fef4e8;
+      margin: 0.8rem 1rem 1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+    }
+    @media (max-width: 800px) {
+      .tree-grid { grid-template-columns: 1fr; }
+      .split-row { flex-direction: column; }
+      .split-col:first-child { border-right: none; border-bottom: 1px solid var(--line); }
+    }
+    .footer-note {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--ink-faint);
+      border-top: 1px solid var(--line);
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+<div class="mm-container">
+  <!-- HUB: GOLDEN THREAD -->
+  <div class="hub">
+    <div class="hub-core">
+      <h2>🧵 THE GOLDEN THREAD</h2>
+      <p>Research Methodology · Logical Coherence · From problem to conclusion</p>
+      <div class="hub-thread"></div>
+      <div style="font-size:0.75rem; margin-top:0.5rem; color:var(--forest);">8 core topics + comparison tree · when to use which approach</div>
+    </div>
+  </div>
+
+  <!-- MIND MAP CARDS (8 topics) -->
+  <div class="mindmap-grid">
+    <!-- Topic 1 -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">📖 TOPIC 1</div><h3><span>🧠</span> Research: A Way of Thinking</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>From opinion to evidence: Controlled, Rigorous, Systematic, Valid/Empirical/Critical. Research is a habit of critical questioning.</div><div class="mnemonic-block"><div class="mnemonic-label">🧠 MNEMONIC</div><div class="mnemonic-phrase"><b>C</b>areful <b>R</b>esearchers <b>S</b>hould <b>V</b>erify <b>E</b>very <b>C</b>laim</div><div style="font-size:0.7rem;">Controlled · Rigorous · Systematic · Valid · Empirical · Critical</div></div><div class="topic-foot">🔗 problem → evidence → decision</div></div>
+    <!-- Topic 2 -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">🗺️ TOPIC 2</div><h3><span>⚙️</span> Research Process: Quick Glance</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>8 steps: Problem → Design → Instrument → Sample → Proposal → Collect → Process → Report. The "buffet" metaphor: choose what fits your study.</div><div class="mnemonic-block"><div class="mnemonic-label">📌 MNEMONIC</div><div class="mnemonic-phrase"><b>P</b>lease <b>D</b>o <b>I</b>nform <b>S</b>tudents <b>P</b>roperly, <b>C</b>ollect <b>P</b>roper <b>R</b>ecords</div><div style="font-size:0.7rem;">Problem · Design · Instrument · Sample · Proposal · Collect · Process · Report</div></div><div class="topic-foot">⚙️ research design = study design + logistics + measurement</div></div>
+    <!-- Topic 3 -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">⚖️ TOPIC 3</div><h3><span>🤝</span> Research Ethics</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>Respect, beneficence, justice, informed consent, confidentiality, conflict, integrity. No data collection without clearance. AI ethics: human responsibility + transparency.</div><div class="mnemonic-block"><div class="mnemonic-label">🧬 MNEMONIC</div><div class="mnemonic-phrase"><b>R</b>eally <b>B</b>e <b>J</b>ust, <b>I</b>nform, <b>C</b>onfide, <b>C</b>heck <b>I</b>nterests</div><div style="font-size:0.7rem;">Respect · Beneficence · Justice · Informed · Confidentiality · Conflict · Integrity</div></div><div class="topic-foot">🤖 AI use must be disclosed, verified, human accountable</div></div>
+    <!-- Topic 4 -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">🎯 TOPIC 4</div><h3><span>📌</span> Settling on Topic & Title</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>Criteria: Interest, Manageability, Relevance, Data availability, Measurement clarity, Expertise, Ethical acceptability. Title ~12 words, clear & specific.</div><div class="mnemonic-block"><div class="mnemonic-label">📌 MNEMONIC</div><div class="mnemonic-phrase"><b>I</b> <b>M</b>ust <b>R</b>eally <b>A</b>cquire <b>M</b>ore <b>L</b>earning <b>E</b>asily</div><div style="font-size:0.7rem;">Interest · Magnitude · Relevance · Availability · Measurement · Level · Ethics</div></div><div class="topic-foot">✍️ boundaries: population, setting, timeframe, key concepts, data sources</div></div>
+    <!-- Topic 5: Golden Thread -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">🧵 TOPIC 5</div><h3><span>✨</span> The Golden Thread of Research</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>Coherence across Title → Problem → Questions → Objectives → Literature → Methodology → Analysis → Conclusions. Avoid design-language mismatch.</div><div class="mnemonic-block"><div class="mnemonic-label">🧵 CORE MNEMONIC</div><div class="mnemonic-phrase"><b>T</b>he <b>P</b>roud <b>Q</b>ueen <b>O</b>ffers <b>L</b>ovely <b>M</b>usic <b>A</b>nd <b>C</b>ake</div><div style="font-size:0.7rem;">Title · Problem · Questions · Objectives · Literature · Methodology · Analysis · Conclusions</div></div><div class="topic-foot">🔁 repair thread: align language, don't drift</div></div>
+    <!-- Topic 6: Lit review -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">📚 TOPIC 6</div><h3><span>🔍</span> Reviewing the Literature</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>Critical synthesis, not a list. PRISMA 2020: Identification → Screening → Eligibility → Included. Search log + inclusion/exclusion.</div><div class="mnemonic-block"><div class="mnemonic-label">📖 MNEMONIC</div><div class="mnemonic-phrase"><b>P</b>eople <b>C</b>an <b>M</b>ake <b>F</b>ilms <b>L</b>ook <b>R</b>eal</div><div style="font-size:0.7rem;">Purpose · Context · Method · Findings · Limitations · Relevance</div></div><div class="topic-foot">📊 PRISMA flow = transparent systematic review</div></div>
+    <!-- Topic 7: Problem formulation -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">⚠️ TOPIC 7</div><h3><span>❓</span> Formulating a Research Problem</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>4 sub-questions: What? Why? For whom? What if unaddressed? Feasibility: time, access, resources, skills, ethics.</div><div class="mnemonic-block"><div class="mnemonic-label">🧩 MNEMONIC</div><div class="mnemonic-phrase"><b>C</b>areful <b>R</b>esearchers <b>F</b>ind <b>R</b>eal <b>E</b>vidence</div><div style="font-size:0.7rem;">Clear · Researchable · Feasible · Relevant · Ethically workable</div></div><div class="topic-foot">📌 problem statement must weave all four aspects</div></div>
+    <!-- Topic 8: Aim & objectives -->
+    <div class="topic-node"><div class="node-header"><div class="topic-badge">🎯 TOPIC 8</div><h3><span>📋</span> Aim & Sub‑Objectives</h3></div><div class="summary"><strong>⚡ Strong summary</strong><br>Main aim = overall thrust; sub-objectives = action verbs (to determine, to compare). One objective ↔ one research question. Creswell: qual uses questions, not hypotheses.</div><div class="mnemonic-block"><div class="mnemonic-label">✅ MNEMONIC</div><div class="mnemonic-phrase"><b>C</b>lever <b>S</b>tudents <b>A</b>lways <b>S</b>tructure <b>D</b>etails</div><div style="font-size:0.7rem;">Clear · Single focus · Action verb · Specific scope · Design aligned</div></div><div class="topic-foot">🔗 objectives must match research design wording</div></div>
+  </div>
+
+  <!-- ========= COMPARISON TREE: WHEN TO USE / NOT USE ========= -->
+  <div class="comparison-forest">
+    <div class="comparison-title">
+      🌳 COMPARISON TREE · when to use (and when to avoid)
+    </div>
+    <div class="tree-grid">
+
+      <!-- 1. Quantitative vs Qualitative -->
+      <div class="comparison-card">
+        <div class="card-header">📊 RESEARCH APPROACHES</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">📈 Quantitative</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> measuring variables, testing hypotheses, large samples, statistical generalisation, cause-effect, surveys with closed items, experiments.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you need deep lived experiences, exploring new phenomena, unknown variables, or when context is more important than numbers.</div></div>
+            <div class="split-col"><div class="concept-title">🗣️ Qualitative</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> exploring meanings, perceptions, processes (how/why), small purposive samples, interviews, observations, thematic analysis.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you need to generalise to a population, test statistical relationships, or measure precise effect sizes.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">💡 Mixed methods: use both when one type cannot fully answer the research question (e.g., survey + follow-up interviews).</div>
+      </div>
+
+      <!-- 2. Probability vs Non-probability sampling -->
+      <div class="comparison-card">
+        <div class="card-header">🎲 SAMPLING STRATEGIES</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">🎯 Probability (Random)</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> you need representative samples, generalisation to population, inferential statistics, reduce selection bias, large sample frame available.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> population list unavailable, resources limited, or research question does not require generalisation.</div></div>
+            <div class="split-col"><div class="concept-title">🧩 Non-probability</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> exploratory/qualitative studies, hard-to-reach populations, purposive selection of information-rich cases, convenience for pilot studies.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you need to make strong statistical generalisations or when selection bias would invalidate conclusions.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">📌 Common non-probability: purposive, snowball, quota, convenience. Probability: simple random, stratified, cluster.</div>
+      </div>
+
+      <!-- 3. PRISMA‑guided SLR vs Narrative Literature Review -->
+      <div class="comparison-card">
+        <div class="card-header">📚 LITERATURE REVIEW APPROACHES</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">📑 PRISMA / Systematic Review</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> answer a focused, answerable question; need transparent, repeatable search; synthesise all available evidence; minimise bias; meta‑analysis possible.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> topic too broad, research question exploratory, or you have very few existing studies. Requires time & methodological discipline.</div></div>
+            <div class="split-col"><div class="concept-title">📖 Narrative / Traditional Review</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> establishing background, developing theoretical framework, describing historical trends, introducing a broad topic, or when a systematic review is not feasible.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you claim to be “systematic” without a protocol, or risk cherry-picking evidence — then the Golden Thread weakens.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">🔍 PRISMA = explicit inclusion/exclusion + flow diagram. Narrative = expert synthesis, but less reproducible.</div>
+      </div>
+
+      <!-- 4. Descriptive vs Inferential analysis -->
+      <div class="comparison-card">
+        <div class="card-header">📉 DATA ANALYSIS LEVELS</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">📊 Descriptive statistics</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> summarise sample characteristics, frequencies, means, percentages; show patterns without generalising to population; any study with quantitative data.</div><div class="when-not"><strong>❌ AVOID AS FINAL STEP:</strong> if your research question requires testing hypotheses or making inferences about a wider population.</div></div>
+            <div class="split-col"><div class="concept-title">📈 Inferential statistics</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> test relationships, differences, predictions; generalise from sample to population; require probability sampling and sufficient sample size.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> your sample is non‑random, too small, or research question is purely descriptive/exploratory.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">⚙️ e.g., t‑test, ANOVA, chi‑square, regression → require assumptions. Descriptive = mean, SD, frequencies.</div>
+      </div>
+
+      <!-- 5. Cross‑sectional vs Longitudinal design -->
+      <div class="comparison-card">
+        <div class="card-header">⏱️ TIME HORIZON</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">📸 Cross‑sectional</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> snapshot at one point, prevalence studies, descriptive relationships, limited time/resources, attitudes and perceptions now.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you need to study change over time, causal inference (without special techniques), or trends.</div></div>
+            <div class="split-col"><div class="concept-title">📆 Longitudinal</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> track changes, developmental trends, before‑after interventions, panel studies, causal sequences. Strong for evaluating ICT training or adoption over time.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> time, budget, attrition risk high, or research question is a single snapshot.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">📌 Longitudinal subtypes: trend, cohort, panel. Cross‑sectional is more common in student projects.</div>
+      </div>
+
+      <!-- 6. Exploratory vs Confirmatory research -->
+      <div class="comparison-card">
+        <div class="card-header">🧭 RESEARCH PURPOSE</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">🧪 Exploratory</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> new or under‑researched area, generate hypotheses, understand “what is happening”, flexible design, qualitative or mixed methods.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you already have strong theory and need to test precise predictions.</div></div>
+            <div class="split-col"><div class="concept-title">⚖️ Confirmatory</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> test existing theory/hypotheses, predetermined variables, quantitative design, experiments, structured surveys.</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> you have little prior knowledge, or the concepts are not yet clearly defined.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">🔁 Exploratory often leads to confirmatory studies later — Golden Thread still applies.</div>
+      </div>
+
+      <!-- 7. Primary vs Secondary data -->
+      <div class="comparison-card">
+        <div class="card-header">🗂️ DATA SOURCES</div>
+        <div class="split-panel">
+          <div class="split-row">
+            <div class="split-col"><div class="concept-title">📝 Primary data</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> specific questions not answered by existing data; you control measurement; need fresh insights (surveys, interviews, experiments).</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> high cost, time constraints, access to participants problematic, or reliable secondary data already exists.</div></div>
+            <div class="split-col"><div class="concept-title">💾 Secondary data</div><div class="when-use"><strong>✅ WHEN TO USE:</strong> large-scale datasets, logs, archives, reuse for new questions, cost/time efficient (e.g., LMS logs, GitHub data, government stats).</div><div class="when-not"><strong>❌ AVOID WHEN:</strong> data does not fit your variables, lacks quality, or ethical permission missing.</div></div>
+          </div>
+        </div>
+        <div class="extra-note">⚡ ICT secondary examples: server logs, ticketing systems, commit history, API usage metrics — check completeness.</div>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem; text-align: center; font-size: 0.75rem; font-family: monospace; opacity: 0.7;">
+      ⚡ The Comparison Tree helps you make informed methodological choices — always align with your Golden Thread (research questions & objectives).
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <div style="max-width: 700px; margin: 0 auto;">
+      🧵 <strong>Virtual Mind Map + Comparison Tree</strong> — Based on Kumar (2011), Creswell, PRISMA 2020 & CPUT RME notes. <br>
+      Use the tree when designing your study: decide quantitative/qualitative, sampling, review type, and analysis.
+    </div>
+  </div>
+</div>
+</body>
+</html>

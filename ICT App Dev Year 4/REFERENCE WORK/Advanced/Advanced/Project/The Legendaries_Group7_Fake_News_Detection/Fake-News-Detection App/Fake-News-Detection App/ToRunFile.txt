@@ -1,0 +1,13 @@
+How to run the App:
+Install Python and Jupyter Notebook
+Open Command Prompt and Install libraries
+pickle 
+sklearn 
+pandas
+numpy
+Flask
+
+open the directory of the app on cmd
+then run the app.py file
+copy the localhost//
+open web browser and you will see the front end 

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>APT470S Test 2 — Process Models & Requirements</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+<style>
+body{padding:20px;font-family:Arial,sans-serif;}
+h2{color:#003366;border-bottom:2px solid #003366;padding-bottom:6px;margin-top:30px;}
+table{width:100%;border-collapse:collapse;margin-top:12px;}
+table td,table th{border:1px solid #999;padding:8px 14px;vertical-align:top;}
+table thead th{background:#003366;color:#fff;}
+.marks{text-align:right;font-weight:bold;color:#003366;white-space:nowrap;}
+.header-box{background:#003366;color:#fff;padding:16px 20px;border-radius:4px;margin-bottom:20px;}
+.header-box h1{margin:0;font-size:1.4rem;}
+.header-box p{margin:4px 0 0;font-size:.95rem;}
+.instr{background:#f0f4ff;border-left:4px solid #003366;padding:10px 16px;margin-bottom:16px;}
+.scenario{background:#fff8e1;border-left:4px solid #f0a500;padding:10px 16px;margin:10px 0;font-style:italic;}
+.qnum{font-weight:bold;white-space:nowrap;}
+.answer-section{margin-top:40px;border-top:3px solid #003366;padding-top:20px;}
+.answer-section h2{color:#1a5c1a;border-bottom-color:#1a5c1a;}
+table.answers thead th{background:#1a5c1a;}
+table.answers tr:nth-child(even){background:#f0fff0;}
+.ans-q{font-weight:bold;color:#222;font-size:.88rem;}
+.ans-a{color:#1a5c1a;font-size:.88rem;}
+.page-break{page-break-before:always;}
+</style>
+</head>
+<body>
+
+<div class="header-box">
+  <h1>APT470S &nbsp;|&nbsp; Application Development</h1>
+  <p><strong>Test 2 of 5 &nbsp;|&nbsp; Software Process Models & Requirements Engineering</strong></p>
+  <p>Time: 120 mins &nbsp;&bull;&nbsp; Total: 60 marks &nbsp;&bull;&nbsp; Weight: 30%</p>
+</div>
+<div class="instr">
+  <ul>
+    <li>Answer <strong>ALL</strong> questions.</li>
+    <li>This is <strong>NOT</strong> an open book test.</li>
+    <li>Questions 02 and 03 are scenario/case study-based. Read them carefully before answering.</li>
+    <li>Specify question numbers correctly in your answer book.</li>
+  </ul>
+</div>
+<h2>QUESTION 01 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[30 Marks]</span></h2>
+<table>
+<thead><tr><th colspan="3">Multiple choice and True/False: Use the answer book provided. Specify question numbers accurately.</th></tr>
+<tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead>
+<tbody><tr>
+<td class="qnum">1.1</td>
+<td>Which process model is best suited when requirements are well-understood and unlikely to change?<br/>a) Spiral model<br/>b) Agile model<br/>c) Waterfall model<br/>d) Prototyping model</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.2</td>
+<td>In the Spiral model, which activity is explicitly included in every cycle?<br/>a) Pair programming<br/>b) Risk analysis<br/>c) Sprint review<br/>d) Use case development</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.3</td>
+<td>Which of the following is a functional requirement?<br/>a) The system shall respond within 2 seconds<br/>b) The system shall allow users to reset their password<br/>c) The system shall be available 99.9% of the time<br/>d) The system shall use AES-256 encryption</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.4</td>
+<td>What is the purpose of a use case in requirements engineering?<br/>a) To describe the physical architecture of the system<br/>b) To document the interaction between a user and the system<br/>c) To specify the database schema<br/>d) To outline the coding standards</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.5</td>
+<td>Which Agile framework divides work into fixed-length iterations and uses a product backlog?<br/>a) XP<br/>b) Kanban<br/>c) ASD<br/>d) Scrum</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.6</td>
+<td>Which UML diagram best represents a sequence of interactions between objects over time?<br/>a) Class diagram<br/>b) Use case diagram<br/>c) Sequence diagram<br/>d) State machine diagram</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.7</td>
+<td>What does SPICE stand for in software process assessment?<br/>a) Software Process Improvement and Capability dEtermination<br/>b) Software Product Integration and Compliance Evaluation<br/>c) Systematic Process Inspection and Code Estimation<br/>d) Software Process Identification and Certification Engine</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.8</td>
+<td>Which of these is a non-functional requirement?<br/>a) The system shall generate monthly sales reports<br/>b) The system shall allow admin to add new users<br/>c) The system shall handle 10,000 concurrent users<br/>d) The system shall send email notifications</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.9</td>
+<td>A use case describes what a system does from the perspective of an external actor. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.10</td>
+<td>Non-functional requirements specify specific behaviours or functions that the system must perform. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.11</td>
+<td>Which document captures all agreed system requirements for use by developers and testers?<br/>a) Project charter<br/>b) Software Requirements Specification (SRS)<br/>c) Test plan<br/>d) Risk register</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.12</td>
+<td>The Kanban method manages work by visualising it on a:<br/>a) Gantt chart<br/>b) Burndown chart<br/>c) Kanban board<br/>d) PERT chart</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.13</td>
+<td>Requirements elicitation techniques include interviews, questionnaires, and observation. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.14</td>
+<td>Which of the following is a characteristic of the Incremental development model?<br/>a) All requirements are defined before development begins<br/>b) Each increment adds new functionality to the previous version<br/>c) The system is delivered as a single complete product<br/>d) Testing occurs only after full implementation</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.15</td>
+<td>In XP, what practice involves two programmers working together at one workstation?<br/>a) Test-driven development<br/>b) Collective ownership<br/>c) Pair programming<br/>d) Continuous integration</td>
+<td class="marks">2</td>
+</tr></tbody></table><h2>QUESTION 02 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[15 Marks]</span></h2>
+<table><thead><tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead><tbody><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> EduTrack Ltd. is building an online learning management system (LMS). The client changes requirements frequently as new teaching strategies emerge. The team has 6 months to deliver a working system.</div></td></tr><tr>
+<td class="qnum">2.1</td>
+<td>Recommend and justify a suitable process model for EduTrack Ltd. Explain how it addresses the challenge of frequently changing requirements and tight deadlines.</td>
+<td class="marks">9</td>
+</tr><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> The EduTrack development team is implementing Scrum for the LMS project. They need to plan their first sprint.</div></td></tr><tr>
+<td class="qnum">2.2</td>
+<td>Describe how the Scrum framework's sprint planning activity would help the team organise and prioritise work for the first sprint of the LMS project. Include the roles involved.</td>
+<td class="marks">6</td>
+</tr></tbody></table><h2>QUESTION 03 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[15 Marks]</span></h2>
+<table><thead><tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead><tbody><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> You are a requirements engineer for a mobile banking app. Users must be able to transfer money between accounts. Security and speed are critical.</div></td></tr><tr>
+<td class="qnum">3.1</td>
+<td>Develop a detailed use case scenario for the 'Transfer Money' feature. Include actor, preconditions, main flow (at least 5 steps), alternate flow, and postcondition.</td>
+<td class="marks">9</td>
+</tr><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> Consider the mobile banking app from scenario 3a.</div></td></tr><tr>
+<td class="qnum">3.2</td>
+<td>Identify and explain TWO non-functional requirements that are critical for the money transfer feature, justifying why each is important.</td>
+<td class="marks">6</td>
+</tr></tbody></table><div class="answer-section page-break">
+<h2>&#10003; Answer Key &nbsp;<span style="font-weight:normal;font-size:.9rem;">(For Instructor Use)</span></h2>
+<p style="font-size:.85rem;color:#555;">Each answer is shown alongside the original question for easy reference.</p>
+<table class="answers">
+<thead><tr>
+  <th style="width:55px">Q#</th>
+  <th style="width:42%">Question</th>
+  <th>Model Answer</th>
+</tr></thead><tbody><tr>
+<td class="qnum">1.1</td>
+<td class="ans-q">Best model for stable, well-understood requirements?</td>
+<td class="ans-a">c) Waterfall model</td>
+</tr><tr>
+<td class="qnum">1.2</td>
+<td class="ans-q">Activity included in every Spiral cycle?</td>
+<td class="ans-a">b) Risk analysis</td>
+</tr><tr>
+<td class="qnum">1.3</td>
+<td class="ans-q">Example of a functional requirement?</td>
+<td class="ans-a">b) The system shall allow users to reset their password</td>
+</tr><tr>
+<td class="qnum">1.4</td>
+<td class="ans-q">Purpose of a use case?</td>
+<td class="ans-a">b) To document the interaction between a user and the system</td>
+</tr><tr>
+<td class="qnum">1.5</td>
+<td class="ans-q">Agile framework with product backlog and fixed iterations?</td>
+<td class="ans-a">d) Scrum</td>
+</tr><tr>
+<td class="qnum">1.6</td>
+<td class="ans-q">UML diagram for interactions over time?</td>
+<td class="ans-a">c) Sequence diagram</td>
+</tr><tr>
+<td class="qnum">1.7</td>
+<td class="ans-q">SPICE stands for?</td>
+<td class="ans-a">a) Software Process Improvement and Capability dEtermination</td>
+</tr><tr>
+<td class="qnum">1.8</td>
+<td class="ans-q">Example of a non-functional requirement?</td>
+<td class="ans-a">c) The system shall handle 10,000 concurrent users</td>
+</tr><tr>
+<td class="qnum">1.9</td>
+<td class="ans-q">Use case = system from external actor perspective?</td>
+<td class="ans-a">TRUE</td>
+</tr><tr>
+<td class="qnum">1.10</td>
+<td class="ans-q">Non-functional requirements specify specific behaviours/functions?</td>
+<td class="ans-a">FALSE — non-functional requirements specify constraints (quality, performance, security), not specific behaviours</td>
+</tr><tr>
+<td class="qnum">1.11</td>
+<td class="ans-q">Document that captures all agreed system requirements?</td>
+<td class="ans-a">b) Software Requirements Specification (SRS)</td>
+</tr><tr>
+<td class="qnum">1.12</td>
+<td class="ans-q">Kanban visualises work on a?</td>
+<td class="ans-a">c) Kanban board</td>
+</tr><tr>
+<td class="qnum">1.13</td>
+<td class="ans-q">Elicitation techniques include interviews, questionnaires, observation?</td>
+<td class="ans-a">TRUE</td>
+</tr><tr>
+<td class="qnum">1.14</td>
+<td class="ans-q">Characteristic of Incremental development?</td>
+<td class="ans-a">b) Each increment adds new functionality to the previous version</td>
+</tr><tr>
+<td class="qnum">1.15</td>
+<td class="ans-q">Two programmers, one workstation = ?</td>
+<td class="ans-a">c) Pair programming</td>
+</tr><tr>
+<td class="qnum">2.1</td>
+<td class="ans-q">Recommend process model for EduTrack?</td>
+<td class="ans-a">Recommended: Agile/Scrum. Justification: frequent requirement changes suit iterative delivery; each sprint produces working software; client can review and redirect after each sprint; tight 6-month timeline benefits from early partial releases. [3 marks recommendation+justification, 3 marks addressing change, 3 marks addressing timeline]</td>
+</tr><tr>
+<td class="qnum">2.2</td>
+<td class="ans-q">Scrum sprint planning for LMS?</td>
+<td class="ans-a">Sprint planning involves: Product Owner prioritising the product backlog; Development Team selecting items they can complete in the sprint; Team breaking items into tasks and estimating effort; Sprint Goal defined. Roles: Product Owner (priority), Scrum Master (facilitates), Development Team (commits to work). [2 marks per role explained, 3 marks for process, 1 mark sprint goal]</td>
+</tr><tr>
+<td class="qnum">3.1</td>
+<td class="ans-q">Use case: Transfer Money?</td>
+<td class="ans-a">Actor: Authenticated customer. Precondition: Logged in, source account has sufficient funds. Main flow: (1) Select Transfer option. (2) Choose source account. (3) Enter destination account number. (4) Enter amount. (5) Confirm transfer. (6) System validates and processes. (7) Confirmation message and reference number displayed. Alternate flow: Insufficient funds → error message. Postcondition: Both accounts updated; notification sent. [1.5 marks per step, up to 6 = 9 marks]</td>
+</tr><tr>
+<td class="qnum">3.2</td>
+<td class="ans-q">Two non-functional requirements for money transfer?</td>
+<td class="ans-a">(1) Security — all data must be encrypted (TLS 1.2+); two-factor authentication required to prevent unauthorised transactions. Critical because financial data is highly sensitive. (2) Performance — transfer must complete within 5 seconds under normal load. Critical because slow transactions reduce trust and usability. [3 marks each: 1 name, 1 explanation, 1 justification]</td>
+</tr></tbody></table></div><p style='text-align:center;margin-top:30px;font-weight:bold;'>****** END OF TEST 2 *******</p>
+</body>
+</html>

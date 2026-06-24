@@ -1,0 +1,1622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Golden Thread · Research Methodology Study Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5eede; --paper2:#fffdf7; --card:#fffcf4;
+  --ink:#221c12; --ink-soft:#6b5f49; --ink-faint:#9a8d72;
+  --gold:#a9781f; --gold-bright:#d6a23e; --gold-soft:#ecd9a8;
+  --forest:#28564a; --forest-soft:#d9e6df;
+  --oxblood:#8a2f2a;
+  --line:rgba(34,28,18,.13); --line-strong:rgba(34,28,18,.28);
+  --shadow:0 1px 2px rgba(34,28,18,.05),0 8px 28px rgba(34,28,18,.07);
+  --shadow-lg:0 2px 6px rgba(34,28,18,.06),0 22px 60px rgba(34,28,18,.13);
+  --ok:#2f6f4f; --ok-bg:#e3f0e6; --bad:#9c3a2f; --bad-bg:#f6e2dd;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Newsreader",Georgia,serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 700px at 88% -8%, #fbf3df 0%, transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, #f1e7cf 0%, transparent 55%),
+    var(--paper);
+  font-size:18px; line-height:1.62; min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+.wrap{position:relative;z-index:1}
+
+/* ---------- Header ---------- */
+header.top{
+  padding:30px clamp(18px,5vw,64px) 0;
+  max-width:1320px;margin:0 auto;
+}
+.kicker{
+  font-family:"Spline Sans Mono",monospace;font-size:.72rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;
+}
+h1.brand{
+  font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2rem,5vw,3.3rem);
+  line-height:1.02;margin:0;letter-spacing:-.015em;
+}
+h1.brand em{font-style:italic;color:var(--gold);}
+.sub{color:var(--ink-soft);max-width:62ch;margin:.5rem 0 0;font-size:1.02rem}
+.thread{height:3px;margin:24px 0 0;border-radius:3px;
+  background:linear-gradient(90deg,transparent,var(--gold-soft) 8%,var(--gold-bright) 50%,var(--gold-soft) 92%,transparent);
+  position:relative;overflow:hidden}
+.thread::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);
+  animation:sheen 5.5s ease-in-out infinite}
+@keyframes sheen{0%{left:-45%}55%,100%{left:115%}}
+
+/* ---------- Layout ---------- */
+.shell{display:grid;grid-template-columns:280px 1fr;gap:34px;
+  max-width:1320px;margin:0 auto;padding:26px clamp(18px,5vw,64px) 90px}
+@media(max-width:880px){.shell{grid-template-columns:1fr;gap:18px}}
+
+/* ---------- Sidebar ---------- */
+nav.side{align-self:start;position:sticky;top:18px}
+@media(max-width:880px){nav.side{position:static}}
+.side h2{font-family:"Spline Sans Mono",monospace;font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-faint);margin:0 0 12px;font-weight:600}
+.tlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+@media(max-width:880px){.tlist{flex-direction:row;overflow-x:auto;padding-bottom:8px;gap:8px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}}
+.tlist li{scroll-snap-align:start}
+.tbtn{display:flex;align-items:center;gap:11px;width:100%;text-align:left;cursor:pointer;
+  background:transparent;border:1px solid transparent;border-radius:12px;padding:9px 11px;
+  font-family:inherit;font-size:.98rem;color:var(--ink-soft);transition:.18s;white-space:nowrap}
+.tbtn:hover{background:var(--paper2);color:var(--ink)}
+.tbtn .n{font-family:"Spline Sans Mono",monospace;font-size:.74rem;font-weight:600;
+  width:25px;height:25px;flex:none;display:grid;place-items:center;border-radius:7px;
+  background:var(--paper);border:1px solid var(--line);color:var(--ink-soft);transition:.18s}
+.tbtn.active{background:var(--ink);color:var(--paper2);border-color:var(--ink)}
+.tbtn.active .n{background:var(--gold-bright);color:#2a1f06;border-color:transparent}
+.tbtn .badge{margin-left:auto;font-family:"Spline Sans Mono",monospace;font-size:.66rem;
+  font-weight:600;padding:2px 7px;border-radius:20px;background:var(--forest-soft);color:var(--forest)}
+.tbtn.active .badge{background:rgba(255,255,255,.2);color:#fff}
+.side-foot{margin-top:18px;font-size:.82rem;color:var(--ink-faint);line-height:1.45;
+  border-top:1px dashed var(--line);padding-top:14px}
+.side-foot b{color:var(--ink-soft)}
+
+/* ---------- Main ---------- */
+main{min-width:0}
+.topic-head{margin:0 0 18px}
+.topic-head .tk{font-family:"Spline Sans Mono",monospace;font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold);font-weight:600}
+.topic-head h3{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.6rem,3.4vw,2.5rem);
+  margin:.25rem 0 0;line-height:1.05;letter-spacing:-.01em}
+.topic-head .src{color:var(--ink-faint);font-style:italic;font-size:.98rem;margin-top:.2rem}
+
+.tabs{display:flex;gap:6px;margin:20px 0 22px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:0}
+.tab{cursor:pointer;border:none;background:transparent;font-family:"Spline Sans Mono",monospace;
+  font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--ink-faint);
+  padding:10px 14px;border-radius:10px 10px 0 0;position:relative;transition:.16s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--ink)}
+.tab.active::after{content:"";position:absolute;left:10px;right:10px;bottom:-1px;height:3px;border-radius:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright))}
+.tab .ct{margin-left:6px;font-size:.68rem;color:var(--ink-faint)}
+
+.panel{animation:rise .4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- Notes ---------- */
+.notes{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:clamp(20px,3.5vw,40px);box-shadow:var(--shadow)}
+.notes h4{font-family:"Fraunces",serif;font-weight:600;font-size:1.34rem;margin:1.9em 0 .5em;
+  letter-spacing:-.01em;color:var(--ink);scroll-margin-top:14px}
+.notes h4:first-child{margin-top:0}
+.notes h4 .pin{color:var(--gold);margin-right:.5rem;font-family:"Spline Sans Mono",monospace;font-size:.85rem;font-weight:600}
+.notes h5{font-family:"Spline Sans Mono",monospace;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--forest);margin:1.4em 0 .4em;font-weight:600}
+.notes p{margin:.7em 0}
+.notes ul,.notes ol{margin:.6em 0 .9em;padding-left:1.3em}
+.notes li{margin:.34em 0}
+.notes ul li::marker{color:var(--gold)}
+.notes ol li::marker{color:var(--gold);font-family:"Spline Sans Mono",monospace;font-weight:600;font-size:.85em}
+.notes b,.notes strong{color:var(--ink);font-weight:600}
+.notes em{font-style:italic}
+.lead{font-size:1.08rem;color:var(--ink-soft);border-left:3px solid var(--gold-bright);
+  padding:.2em 0 .2em 1em;margin:.2em 0 1.2em;font-style:italic}
+.callout{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.1em 0}
+.callout.gold{border-left:4px solid var(--gold-bright)}
+.callout.green{border-left:4px solid var(--forest)}
+.callout.red{border-left:4px solid var(--oxblood)}
+.callout .lab{font-family:"Spline Sans Mono",monospace;font-size:.68rem;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:600;color:var(--ink-faint);display:block;margin-bottom:5px}
+.ex{font-style:italic;color:var(--forest)}
+.notes .gridbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1em 0}
+@media(max-width:620px){.notes .gridbox{grid-template-columns:1fr}}
+.notes table{width:100%;border-collapse:collapse;margin:1em 0;font-size:.94rem}
+.notes th,.notes td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.notes th{background:var(--paper);font-family:"Spline Sans Mono",monospace;font-size:.72rem;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;margin:1em 0}
+.steps>li{position:relative;padding:0 0 0 52px;margin:0 0 16px}
+.steps>li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;
+  width:36px;height:36px;border-radius:10px;display:grid;place-items:center;
+  font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;color:#2a1f06;
+  background:linear-gradient(135deg,var(--gold-soft),var(--gold-bright));box-shadow:var(--shadow)}
+.steps>li b{display:block;font-size:1.05rem}
+
+/* ---------- Mnemonics ---------- */
+.mgrid{display:grid;gap:16px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);
+  position:relative;overflow:hidden}
+.mcard::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright),var(--forest))}
+.mcard .mt{font-family:"Spline Sans Mono",monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.mcard .phrase{font-family:"Fraunces",serif;font-style:italic;font-size:1.5rem;line-height:1.2;
+  margin:.35rem 0 .2rem;color:var(--ink)}
+.mcard .phrase b{font-style:normal;color:var(--gold);font-weight:700}
+.mcard .why{color:var(--ink-soft);font-size:.97rem;margin:.2rem 0 1rem}
+.mexp{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+.mexp li{display:flex;gap:12px;align-items:baseline;padding:8px 12px;background:var(--paper);
+  border:1px solid var(--line);border-radius:10px}
+.mexp .L{font-family:"Fraunces",serif;font-weight:700;color:#2a1f06;font-size:1.05rem;
+  width:30px;height:30px;flex:none;display:grid;place-items:center;border-radius:8px;
+  background:linear-gradient(135deg,var(--gold-soft),var(--gold-bright))}
+.mexp .W{font-weight:600}
+.mexp .D{color:var(--ink-soft);font-size:.92rem}
+.mexp .W .D{display:block}
+
+/* ---------- Activities ---------- */
+.act{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;
+  box-shadow:var(--shadow);margin-bottom:16px}
+.act .atag{font-family:"Spline Sans Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;color:#2a1f06;background:var(--gold-soft);display:inline-block;padding:3px 9px;border-radius:20px}
+.act h4{font-family:"Fraunces",serif;font-weight:600;font-size:1.3rem;margin:.6rem 0 .3rem}
+.act p{margin:.5em 0;color:var(--ink-soft)}
+.act ol,.act ul{padding-left:1.3em}
+.act li{margin:.35em 0}
+.act textarea,.act input[type=text]{width:100%;font-family:inherit;font-size:1rem;color:var(--ink);
+  background:var(--paper2);border:1px solid var(--line-strong);border-radius:10px;padding:10px 12px;margin:.3em 0;resize:vertical}
+.act textarea{min-height:62px}
+.act textarea:focus,.act input:focus,.act select:focus{outline:none;border-color:var(--gold-bright);
+  box-shadow:0 0 0 3px var(--gold-soft)}
+.act label{display:block;font-weight:600;margin:.7em 0 0;font-size:.97rem}
+details.reveal{margin:.8em 0 0;border:1px dashed var(--line-strong);border-radius:10px;background:var(--paper);overflow:hidden}
+details.reveal summary{cursor:pointer;padding:10px 14px;font-family:"Spline Sans Mono",monospace;
+  font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--forest);list-style:none}
+details.reveal summary::-webkit-details-marker{display:none}
+details.reveal summary::before{content:"▸ ";color:var(--gold)}
+details.reveal[open] summary::before{content:"▾ "}
+details.reveal .rc{padding:0 16px 14px;color:var(--ink-soft)}
+details.reveal .rc p:first-child{margin-top:0}
+.cloze{line-height:2.4}
+.cloze select{font-family:"Spline Sans Mono",monospace;font-size:.9rem;padding:4px 8px;border-radius:8px;
+  border:1px solid var(--line-strong);background:var(--paper2);color:var(--ink);margin:0 3px}
+.cloze select.right{border-color:var(--ok);background:var(--ok-bg);color:var(--ok)}
+.cloze select.wrong{border-color:var(--bad);background:var(--bad-bg);color:var(--bad)}
+
+/* ---------- Quiz ---------- */
+.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-top p{margin:0;color:var(--ink-soft)}
+.score{font-family:"Spline Sans Mono",monospace;font-weight:600;font-size:.86rem;padding:7px 14px;border-radius:30px;
+  background:var(--paper2);border:1px solid var(--line);color:var(--ink-soft)}
+.score.show{background:var(--ink);color:var(--paper2);border-color:var(--ink)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:14px;box-shadow:var(--shadow)}
+.q .qn{font-family:"Spline Sans Mono",monospace;font-size:.72rem;letter-spacing:.1em;color:var(--gold);font-weight:600}
+.q .qt{font-weight:600;font-size:1.08rem;margin:.25rem 0 .9rem;color:var(--ink)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:11px;align-items:flex-start;cursor:pointer;padding:11px 14px;border-radius:11px;
+  border:1px solid var(--line);background:var(--paper2);transition:.14s;font-size:1rem}
+.opt:hover{border-color:var(--gold-bright);background:#fff}
+.opt .key{font-family:"Spline Sans Mono",monospace;font-weight:600;font-size:.82rem;width:24px;height:24px;flex:none;
+  display:grid;place-items:center;border-radius:7px;background:var(--paper);border:1px solid var(--line);color:var(--ink-soft)}
+.opt.sel{border-color:var(--ink);background:#fff;box-shadow:inset 0 0 0 1px var(--ink)}
+.opt.sel .key{background:var(--ink);color:#fff;border-color:var(--ink)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.correct .key{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.incorrect{border-color:var(--bad);background:var(--bad-bg)}
+.opt.incorrect .key{background:var(--bad);color:#fff;border-color:var(--bad)}
+.opt.disabled{cursor:default;pointer-events:none}
+.expl{margin-top:10px;font-size:.95rem;color:var(--ink-soft);background:var(--paper);border-radius:10px;
+  padding:10px 14px;border-left:3px solid var(--forest);display:none}
+.expl.show{display:block;animation:rise .3s both}
+.expl b{color:var(--forest)}
+.qbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.btn{cursor:pointer;font-family:"Spline Sans Mono",monospace;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+  font-weight:600;border-radius:11px;padding:12px 20px;border:1px solid var(--ink);transition:.16s}
+.btn.primary{background:var(--ink);color:var(--paper2)}
+.btn.primary:hover{background:#000;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--paper2)}
+.btn:disabled{opacity:.4;cursor:default;transform:none}
+.result{text-align:center;padding:18px;border-radius:14px;margin-bottom:14px;display:none}
+.result.show{display:block;animation:rise .4s both}
+.result .big{font-family:"Fraunces",serif;font-size:2.4rem;font-weight:600}
+.result .msg{color:var(--ink-soft)}
+
+.hide{display:none!important}
+.footer{max-width:1320px;margin:0 auto;padding:0 clamp(18px,5vw,64px) 50px;color:var(--ink-faint);
+  font-size:.82rem;line-height:1.5}
+.footer .thread{margin-bottom:18px}
+::selection{background:var(--gold-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="kicker">RME Project 4 · Semester 1 · Advanced / PG Diploma in ICT</p>
+    <h1 class="brand">The <em>Golden Thread</em></h1>
+    <p class="sub">A study companion for the research methodology module — complete notes, memory aids, the activities from your own notes, and self-marking practice quizzes. Everything from your handouts, in one place.</p>
+    <div class="thread"></div>
+  </header>
+  <div class="shell">
+    <nav class="side">
+      <h2>Topics</h2>
+      <ul class="tlist" id="tlist"></ul>
+      <div class="side-foot">
+        <b>How to use this:</b> pick a topic, then move through <b>Notes → Mnemonics → Activities → Quiz</b>. Quiz scores are tracked while this page stays open.
+      </div>
+    </nav>
+    <main id="main"></main>
+  </div>
+  <div class="footer">
+    <div class="thread"></div>
+    Built from your RME Project 4 topic notes &amp; the Research Ethics lecture. Content is your course material; this tool only reorganises it for revision. Quiz progress is in-memory and resets if you reload.
+  </div>
+</div>
+
+<script>
+/* ============ ENGINE ============ */
+(function(){
+  let TOPICS=[], cur=0, tab='notes';
+  const store={};            // activity text values
+  const quizState={};        // per topic: {answers:{i:opt}, checked:bool}
+  const main=document.getElementById('main');
+  const tlist=document.getElementById('tlist');
+
+  const esc=s=>s;            // content is trusted (user's own notes)
+
+  function topicScore(t){
+    const qs=quizState[t.id];
+    if(!qs||!qs.checked) return null;
+    let c=0; t.quiz.forEach((q,i)=>{ if(qs.answers[i]===q.answer) c++; });
+    return {c,n:t.quiz.length};
+  }
+
+  function renderSidebar(){
+    tlist.innerHTML='';
+    TOPICS.forEach((t,i)=>{
+      const li=document.createElement('li');
+      const sc=topicScore(t);
+      li.innerHTML='<button class="tbtn'+(i===cur?' active':'')+'" data-i="'+i+'">'+
+        '<span class="n">'+t.num+'</span><span class="lab">'+t.title+'</span>'+
+        (sc?'<span class="badge">'+sc.c+'/'+sc.n+'</span>':'')+'</button>';
+      tlist.appendChild(li);
+    });
+  }
+
+  function renderMain(){
+    const t=TOPICS[cur];
+    const counts={notes:'',mnemonics:t.mnemonics.length,activities:t.activities.length,quiz:t.quiz.length};
+    main.innerHTML=
+      '<div class="topic-head">'+
+        '<div class="tk">Topic '+t.num+'</div>'+
+        '<h3>'+t.title+'</h3>'+
+        (t.src?'<div class="src">'+t.src+'</div>':'')+
+      '</div>'+
+      '<div class="tabs">'+
+        tabBtn('notes','Notes','')+
+        tabBtn('mnemonics','Mnemonics',counts.mnemonics)+
+        tabBtn('activities','Activities',counts.activities)+
+        tabBtn('quiz','Quiz',counts.quiz)+
+      '</div>'+
+      '<div id="panel"></div>';
+    renderPanel();
+    main.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function tabBtn(id,label,ct){
+    return '<button class="tab'+(tab===id?' active':'')+'" data-tab="'+id+'">'+label+
+      (ct!==''?'<span class="ct">'+ct+'</span>':'')+'</button>';
+  }
+
+  function renderPanel(){
+    const t=TOPICS[cur], p=document.getElementById('panel');
+    let html='';
+    if(tab==='notes'){ html='<div class="panel notes">'+t.notesHTML+'</div>'; }
+    else if(tab==='mnemonics'){ html=renderMnemonics(t); }
+    else if(tab==='activities'){ html=renderActivities(t); }
+    else if(tab==='quiz'){ html=renderQuiz(t); }
+    p.innerHTML=html;
+    if(tab==='activities') restoreStore();
+    if(tab==='quiz') bindQuiz(t);
+  }
+
+  function renderMnemonics(t){
+    let h='<div class="panel mgrid">';
+    if(!t.mnemonics.length) h+='<p>No mnemonics for this topic.</p>';
+    t.mnemonics.forEach(m=>{
+      h+='<div class="mcard"><div class="mt">'+m.title+'</div>'+
+         '<div class="phrase">'+m.phrase+'</div>'+
+         (m.why?'<div class="why">'+m.why+'</div>':'')+
+         '<ul class="mexp">';
+      m.items.forEach(it=>{ h+='<li><span class="L">'+it.l+'</span><span class="W">'+it.w+
+         (it.d?'<span class="D">'+it.d+'</span>':'')+'</span></li>'; });
+      h+='</ul></div>';
+    });
+    return h+'</div>';
+  }
+
+  function renderActivities(t){
+    let h='<div class="panel">';
+    t.activities.forEach(a=>{
+      h+='<div class="act"><span class="atag">'+(a.tag||'Activity')+'</span>'+
+         '<h4>'+a.title+'</h4>'+a.html+'</div>';
+    });
+    return h+'</div>';
+  }
+
+  function renderQuiz(t){
+    const qs=quizState[t.id]||(quizState[t.id]={answers:{},checked:false});
+    let h='<div class="panel">';
+    h+='<div class="quiz-top"><p>'+t.quiz.length+' practice questions. Pick an answer for each, then check.</p>'+
+       '<span class="score'+(qs.checked?' show':'')+'" id="scoreBadge">'+scoreText(t)+'</span></div>';
+    h+='<div class="result" id="resultBox"></div>';
+    t.quiz.forEach((q,i)=>{
+      h+='<div class="q" data-q="'+i+'"><div class="qn">Question '+(i+1)+'</div>'+
+         '<div class="qt">'+q.q+'</div><div class="opts">';
+      q.options.forEach((o,oi)=>{
+        const key=String.fromCharCode(65+oi);
+        h+='<div class="opt'+(qs.answers[i]===oi?' sel':'')+'" data-q="'+i+'" data-o="'+oi+'">'+
+           '<span class="key">'+key+'</span><span>'+o+'</span></div>';
+      });
+      h+='</div><div class="expl" id="expl-'+i+'"><b>Answer '+String.fromCharCode(65+q.answer)+'.</b> '+(q.explain||'')+'</div></div>';
+    });
+    h+='<div class="qbtns"><button class="btn primary" id="checkBtn">Check answers</button>'+
+       '<button class="btn ghost" id="resetBtn">Reset</button></div>';
+    return h+'</div>';
+  }
+  function scoreText(t){
+    const sc=topicScore(t);
+    return sc?('Score · '+sc.c+' / '+sc.n):('— / '+t.quiz.length);
+  }
+
+  function bindQuiz(t){
+    const qs=quizState[t.id];
+    const panel=document.getElementById('panel');
+    if(qs.checked) applyChecked(t);
+    panel.querySelectorAll('.opt').forEach(opt=>{
+      opt.addEventListener('click',()=>{
+        if(qs.checked) return;
+        const qi=+opt.dataset.q, oi=+opt.dataset.o;
+        qs.answers[qi]=oi;
+        panel.querySelectorAll('.opt[data-q="'+qi+'"]').forEach(o=>o.classList.remove('sel'));
+        opt.classList.add('sel');
+      });
+    });
+    document.getElementById('checkBtn').addEventListener('click',()=>{
+      const answered=Object.keys(qs.answers).length;
+      if(answered<t.quiz.length){
+        const miss=t.quiz.length-answered;
+        if(!confirm(miss+' question(s) not answered. Check anyway?')) return;
+      }
+      qs.checked=true; applyChecked(t); renderSidebar();
+    });
+    document.getElementById('resetBtn').addEventListener('click',()=>{
+      quizState[t.id]={answers:{},checked:false}; renderSidebar(); renderPanel();
+    });
+  }
+  function applyChecked(t){
+    const qs=quizState[t.id], panel=document.getElementById('panel');
+    let correct=0;
+    t.quiz.forEach((q,i)=>{
+      const chosen=qs.answers[i];
+      if(chosen===q.answer) correct++;
+      panel.querySelectorAll('.opt[data-q="'+i+'"]').forEach(o=>{
+        o.classList.add('disabled');
+        const oi=+o.dataset.o;
+        if(oi===q.answer) o.classList.add('correct');
+        else if(oi===chosen) o.classList.add('incorrect');
+      });
+      const ex=document.getElementById('expl-'+i); if(ex) ex.classList.add('show');
+    });
+    document.getElementById('checkBtn').disabled=true;
+    const sb=document.getElementById('scoreBadge'); sb.textContent=scoreText(t); sb.classList.add('show');
+    const pct=Math.round(correct/t.quiz.length*100);
+    const rb=document.getElementById('resultBox');
+    let msg= pct===100?'Flawless — golden thread intact!':pct>=80?'Strong grasp of this topic.':
+             pct>=50?'Solid start — review the explanations below.':'Worth re-reading the notes, then retry.';
+    rb.innerHTML='<div class="big">'+correct+' / '+t.quiz.length+'</div><div class="msg">'+msg+'</div>';
+    rb.classList.add('show');
+  }
+
+  /* activity store + cloze (delegated) */
+  function restoreStore(){
+    document.querySelectorAll('[data-store]').forEach(el=>{ if(store[el.dataset.store]!==undefined) el.value=store[el.dataset.store]; });
+  }
+  document.addEventListener('input',e=>{ const el=e.target; if(el.dataset&&el.dataset.store!==undefined) store[el.dataset.store]=el.value; });
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('.check-cloze'); if(!btn) return;
+    const box=btn.closest('.cloze-wrap');
+    box.querySelectorAll('select[data-answer]').forEach(s=>{
+      s.classList.remove('right','wrong');
+      if(!s.value){return;}
+      s.classList.add(s.value===s.dataset.answer?'right':'wrong');
+    });
+  });
+
+  /* top-level delegation for sidebar + tabs */
+  tlist.addEventListener('click',e=>{ const b=e.target.closest('.tbtn'); if(!b)return; cur=+b.dataset.i; tab='notes'; renderSidebar(); renderMain(); });
+  main.addEventListener('click',e=>{ const b=e.target.closest('.tab'); if(!b)return; tab=b.dataset.tab; renderMain(); });
+
+  window.__startApp=function(data){ TOPICS=data; renderSidebar(); renderMain(); };
+})();
+</script>
+<script>
+window.__DATA=[
+/* ===================== TOPIC 1 ===================== */
+{
+ id:"t1", num:1, title:"Research: A Way of Thinking", src:"Semester 1, Week 1 · Kumar Chapter 1",
+ notesHTML:`
+ <p class="lead">Research is a disciplined way of thinking that moves you from opinions and assumptions to evidence-based decisions. Kumar (2011:22) explains it is more than a set of skills — it is a habit of critical questioning and systematic examination of what you observe in practice.</p>
+ <p>In ICT contexts this means you do not simply assume a system is slow, users are unhappy, or an AI tool is accurate. You learn to ask clear questions, gather appropriate data, and justify decisions using reliable evidence.</p>
+
+ <h4><span class="pin">1</span>Research as a Way of Thinking</h4>
+ <p>Research is one structured way of finding answers to questions. Kumar (2011:26–27) argues that when you claim to be doing research, you imply your enquiry is conducted within a set of guiding philosophies, uses methods tested for validity and reliability, and is designed to be as unbiased and objective as possible.</p>
+ <h5>ICT illustration</h5>
+ <ul>
+   <li>Instead of saying "students dislike the LMS (Blackboard)", you define what "dislike" means (e.g. low satisfaction scores, repeated complaints, or low task success).</li>
+   <li>Instead of relying on a single user complaint, you collect systematic evidence (e.g. usage logs and survey data).</li>
+   <li>Instead of guessing a cause of system failure, you test plausible explanations (e.g. network latency, page load times, or confusing navigation).</li>
+ </ul>
+
+ <h4><span class="pin">2</span>What Makes an Enquiry 'Research'</h4>
+ <p>Kumar (2011:28) shows that research is a careful and systematic investigation aimed at establishing facts or principles. Research differs from everyday problem-solving mainly in the degree of <b>formality, rigour, verifiability, and general validity</b> applied to conclusions (Kumar, 2011:28).</p>
+ <div class="callout gold"><span class="lab">Quick checklist for students</span>
+   <ul style="margin:0">
+     <li>Is the question clear enough to investigate?</li>
+     <li>Can you gather evidence rather than rely on opinions?</li>
+     <li>Are your procedures logical and documented so someone else could follow them?</li>
+     <li>Can your conclusions be checked or verified?</li>
+   </ul>
+ </div>
+
+ <h4><span class="pin">3</span>Characteristics of the Research Process</h4>
+ <p>Kumar (2011:28–29) lists core characteristics that help an enquiry qualify as research. In practice these shape how you design your study and defend your results:</p>
+ <ul>
+   <li><b>Controlled:</b> you minimise the influence of other factors on your results, even if you cannot fully control conditions in real-life ICT settings.</li>
+   <li><b>Rigorous:</b> you select relevant and justified procedures and apply them carefully.</li>
+   <li><b>Systematic:</b> you follow a logical sequence of steps rather than working in random order.</li>
+   <li><b>Valid and verifiable:</b> your conclusions should be plausible and checkable by you or others.</li>
+   <li><b>Empirical:</b> you base conclusions on evidence from observation, records, or data.</li>
+   <li><b>Critical:</b> you scrutinise your own methods, look for weaknesses, and make improvements.</li>
+ </ul>
+ <h5>ICT examples matching the characteristics</h5>
+ <ul>
+   <li><b>Controlled:</b> when evaluating a new Wi-Fi access point, compare performance at similar times and locations to reduce variation.</li>
+   <li><b>Rigorous:</b> use a clear scoring rubric for student code quality, apply it consistently, and document any adjustments.</li>
+   <li><b>Systematic:</b> define the problem, decide what data you need, collect it, analyse it, then report findings in a clear order.</li>
+   <li><b>Valid &amp; verifiable:</b> when measuring usability, define success criteria (e.g. task completion within 2 minutes), store raw recordings and time logs, and show how averages were calculated so others can replicate.</li>
+   <li><b>Empirical:</b> use server logs, error rates, task completion times, and user feedback rather than informal impressions.</li>
+   <li><b>Critical:</b> after analysing LMS survey results, actively look for weaknesses such as low response rate, leading questions, or missing subgroups, and explain how these limit conclusions.</li>
+ </ul>
+
+ <h4><span class="pin">4</span>Researchability and Feasibility for ICT Topics</h4>
+ <p>A research topic must be <b>researchable</b> — investigable with available time, access, tools, and ethical clearance. In Week 1 your goal is to practise narrowing broad ideas into researchable problems that can later become proposal-ready.</p>
+ <div class="gridbox">
+   <div class="callout green"><span class="lab">Broad idea</span>"AI is changing education."</div>
+   <div class="callout gold"><span class="lab">Researchable topic</span>"How do first-year ICT students perceive the fairness of AI-based plagiarism detection tools at our campus?"</div>
+   <div class="callout green"><span class="lab">Broad idea</span>"Cybersecurity is important."</div>
+   <div class="callout gold"><span class="lab">Researchable topic</span>"What are the most common password management practices among IT support staff at a university, and what factors shape these practices?"</div>
+ </div>
+
+ <h4><span class="pin">5</span>Research: an Integral Part of Your Practice</h4>
+ <p>Research is part of most professional fields, including ICT. It is a way of thinking that strengthens professional judgement: looking critically at everyday work, identifying patterns and recurring problems, and using evidence to improve systems, services, and user experiences. In practice it becomes a habit of asking <em>"why is this happening?"</em> and <em>"how do we know?"</em>, then gathering the right evidence to support better decisions.</p>
+ <p>Whether you work as a service desk technician, systems administrator, network engineer, software developer, business analyst, IT project manager, or cybersecurity analyst — in a university, government department, hospital, bank, or company — questions arise that require more than intuition and more than one person's opinion.</p>
+ <h5>IT support &amp; service management questions</h5>
+ <ul>
+   <li>How many incidents are logged per day, and how do they change during peak periods?</li>
+   <li>What are the most frequent categories of user complaints, and which are growing?</li>
+   <li>What are the most common root causes behind repeated incidents?</li>
+   <li>Why do some departments log far more tickets than others?</li>
+   <li>How long does it take to resolve different issue types, and where are the bottlenecks?</li>
+   <li>How satisfied are users with the service, and what factors shape satisfaction?</li>
+   <li>How do we demonstrate that a new process or tool improved service quality?</li>
+   <li>Why do some users adopt self-service tools while others still phone or email?</li>
+   <li>What training or communication would reduce recurring user errors?</li>
+   <li>Which changes would improve the service most with the resources available?</li>
+ </ul>
+ <h5>Software development &amp; digital products</h5>
+ <ul>
+   <li>Which features are used most and least, and why?</li>
+   <li>What causes users to abandon a process such as online registration or payment?</li>
+   <li>What usability problems occur most often during task completion?</li>
+   <li>Does a new interface design reduce errors and improve task completion time?</li>
+   <li>What is the effect of a performance optimisation on load times and satisfaction?</li>
+   <li>How do users interpret error messages, and what changes improve clarity?</li>
+   <li>Which onboarding approach leads to faster user adoption?</li>
+   <li>How do users experience accessibility features, and what barriers remain?</li>
+ </ul>
+ <h5>Cybersecurity &amp; risk management</h5>
+ <ul>
+   <li>What are the most common security incidents in our environment?</li>
+   <li>Which behaviours increase risk, such as weak passwords or unsafe email habits?</li>
+   <li>Why do staff bypass security controls, and how can compliance be improved?</li>
+   <li>What is the impact of awareness training on phishing click rates?</li>
+   <li>Which systems are most vulnerable based on patching patterns and configuration gaps?</li>
+   <li>How do we measure whether a new control actually reduces risk?</li>
+ </ul>
+ <h5>Stakeholders are entitled to ask</h5>
+ <ul>
+   <li>Is this system reliable and effective for what I need to do?</li>
+   <li>Am I getting value from this service, given the costs and disruptions?</li>
+   <li>Are staff competent and properly trained to support the service?</li>
+   <li>Is my data protected, and are systems compliant with policy and law?</li>
+ </ul>
+ <p>As an IT professional you have a responsibility to answer these clearly and objectively. Research helps you move from assumptions to evidence, from isolated incidents to patterns, and from quick fixes to well-justified improvements.</p>
+
+ <h4><span class="pin">6</span>Conclusion</h4>
+ <p>Research is not defined by complicated statistics, advanced software, or technical procedures. It often starts with simple, practical questions drawn from everyday professional practice. What makes an activity "research" is not the topic but the <b>way the answer is sought</b>: asking clear questions, collecting evidence in a structured way, and drawing conclusions based on evidence rather than opinion or guesswork.</p>
+ <div class="callout gold"><span class="lab">Why "re-search"?</span>The prefix <b>"re"</b> suggests doing something again, revisiting, or examining more deeply, while <b>"search"</b> refers to investigating, testing, and exploring carefully. Together: a patient, organised, critical investigation that establishes facts, solves problems, and develops guiding principles. In short, <em>research is a way of thinking.</em></div>
+
+ <h4><span class="pin">9</span>Core Reading (Harvard style)</h4>
+ <p>Kumar, R. (2011). <em>Research Methodology: A Step-by-Step Guide for Beginners.</em> 3rd edn. New Delhi: Sage. Chapter 1.</p>
+ `,
+ mnemonics:[
+  {title:"The 6 characteristics of research", phrase:'<b>C</b>areful <b>R</b>esearchers <b>S</b>hould <b>V</b>erify <b>E</b>very <b>C</b>laim',
+   why:"Each word's first letter is one characteristic that turns an enquiry into research.",
+   items:[
+    {l:"C",w:"Controlled",d:"Minimise other factors' influence on results."},
+    {l:"R",w:"Rigorous",d:"Justified procedures, carefully applied."},
+    {l:"S",w:"Systematic",d:"A logical sequence of steps, not random order."},
+    {l:"V",w:"Valid & verifiable",d:"Plausible, checkable conclusions."},
+    {l:"E",w:"Empirical",d:"Based on observation, records, or data."},
+    {l:"C",w:"Critical",d:"Scrutinise your own methods for weaknesses."}
+   ]},
+  {title:"Is it really research? — the 4 hallmarks vs. everyday problem-solving", phrase:'<b>F</b>orget <b>R</b>andom <b>V</b>ague <b>G</b>uesses',
+   why:"Kumar says research differs from everyday problem-solving by these four qualities.",
+   items:[
+    {l:"F",w:"Formality",d:"Documented, structured procedures."},
+    {l:"R",w:"Rigour",d:"Careful, justified method."},
+    {l:"V",w:"Verifiability",d:"Others can check your conclusions."},
+    {l:"G",w:"General validity",d:"Conclusions hold beyond a single case."}
+   ]}
+ ],
+ activities:[
+  {tag:"In-class · pairs", title:"Topic Triage — Researchable vs Too Broad",
+   html:`<p>Work in pairs and complete each step.</p>
+    <label>1. List three ICT research topics you are interested in.</label>
+    <textarea data-store="t1a1" placeholder="Topic 1 / Topic 2 / Topic 3..."></textarea>
+    <label>2. For each topic, write one research question answerable with evidence.</label>
+    <textarea data-store="t1a2"></textarea>
+    <label>3. Quick feasibility scan — access to participants/data, time available, ethical sensitivity.</label>
+    <textarea data-store="t1a3"></textarea>
+    <label>4. Choose the strongest topic and write a 2–3 sentence justification.</label>
+    <textarea data-store="t1a4"></textarea>
+    <details class="reveal"><summary>What makes a justification strong?</summary><div class="rc"><p>It names the <b>context, group and focus</b>, shows the question can be answered with <b>real evidence</b>, and confirms it is <b>feasible</b> in the semester with the access you have. <em>Weekly artefact to submit: three topic options with a short feasibility justification.</em></p></div></details>`},
+  {tag:"Now you try", title:"Narrowing broad ideas into researchable topics",
+   html:`<label>Broad idea: "Online learning tools affect student performance." → Rewrite as "How does …?"</label>
+    <textarea data-store="t1b1" placeholder="How does ...?"></textarea>
+    <label>Broad idea: "Students use AI tools to help them study." → Rewrite as "What types of …?"</label>
+    <textarea data-store="t1b2" placeholder="What types of ...?"></textarea>
+    <details class="reveal"><summary>Model direction</summary><div class="rc"><p>e.g. <em>"How does the use of a specific LMS quiz feature affect test scores among first-year ICT students over one semester?"</em> and <em>"What types of generative-AI study tools do second-year ICT students use, and for which tasks?"</em> — both name a group, setting and measurable focus.</p></div></details>`},
+  {tag:"Higher-order · reflection", title:"Analysis & application prompts",
+   html:`<ol>
+     <li>A lecturer claims "students are cheating more because of AI." Break the claim into parts and propose what evidence you would need to evaluate it.</li>
+     <li>Compare two explanations for low engagement in an online coding platform. How would you design a small study to test which is more plausible?</li>
+     <li>An ICT department wants a new ticketing system. What would <b>controlled</b> and <b>empirical</b> look like in a practical evaluation?</li>
+     <li>You have helpdesk logs and satisfaction surveys. How would being <b>systematic</b> and <b>critical</b> guide combining and interpreting them?</li>
+     <li>A student proposes "I want to study blockchain." Why is this too broad? Rewrite it into a researchable, feasible topic.</li>
+   </ol>
+   <textarea data-store="t1c" placeholder="Sketch your answers here..."></textarea>`}
+ ],
+ quiz:[
+  {q:"Which statement best reflects Kumar's view of research as a way of thinking?",
+   options:["Research is mainly about statistics and software tools.","Research is a habit of questioning practice and examining observations systematically.","Research is only done in laboratories.","Research is the same as reading a textbook."],
+   answer:1, explain:"Research is a habit of critical questioning and systematic examination of practice — not just tools or lab work."},
+  {q:"Which characteristic of research emphasises following a logical sequence of steps?",
+   options:["Empirical","Critical","Systematic","Controlled"], answer:2,
+   explain:"'Systematic' means following a logical sequence rather than working in random order."},
+  {q:"Which option best describes empirical evidence in ICT research?",
+   options:["A personal opinion about an app's design","Server logs showing error rates over time","A guess about what users prefer","A rumour shared on social media"],
+   answer:1, explain:"Empirical evidence comes from observation, records or data — e.g. server logs."},
+  {q:"Research differs from everyday problem-solving mainly because research is more:",
+   options:["Informal and quick","Based on authority","Rigorous and verifiable","Focused only on theory"],
+   answer:2, explain:"The key difference is the degree of formality, rigour, verifiability and general validity."},
+  {q:"Which is the best example of a researchable (rather than too-broad) ICT topic?",
+   options:["AI is changing education.","Cybersecurity is important.","How do first-year ICT students perceive the fairness of AI plagiarism tools at our campus?","Technology is the future."],
+   answer:2, explain:"It names a population, a setting and a measurable focus, so it can be investigated with evidence."}
+ ]
+}
+,
+/* ===================== TOPIC 2 ===================== */
+{
+ id:"t2", num:2, title:"The Research Process: A Quick Glance", src:"Semester 1, Week 2 · Kumar Chapter 2",
+ notesHTML:`
+ <p class="lead">This topic gives a map of the full research journey so you can see how each decision connects to the next. Many projects fail not because the topic is poor, but because the study is not planned as an integrated process.</p>
+ <h4><span class="pin">A</span>The key idea: research is a journey with decisions at each step</h4>
+ <p>Kumar (2011) compares research to planning a trip: first decide <b>where you want to go</b> (your research problem, main aim and main question), then decide <b>the route</b> (your methodology). There are multiple valid routes, but you must choose one that logically matches your destination.</p>
+
+ <h4><span class="pin">B</span>The research process in eight practical steps</h4>
+ <p>A simplified model for most ICT projects. The sequence can be adjusted with experience, but the logic stays: define <em>what</em> you want to find out, choose <em>how</em> you will find it, then present what you found credibly and ethically.</p>
+ <ol class="steps">
+   <li><b>Identify a broad idea &amp; turn it into a clear research problem / question</b>
+     <p>The first and most important step — it sets the destination for the whole study. Every later decision flows from it: study design, instrument, sampling, analysis plan, even the write-up. In ICT, narrow a general interest ("AI is changing education") into something investigable: a specific system, tool, user group, setting, or purpose. Evaluate it against practical constraints — semester time, accessible resources, your technical and research skills, your supervisor's expertise. A well-formulated problem establishes a coherent <b>"golden thread"</b> connecting aim, questions, methods, analysis and reporting.</p></li>
+   <li><b>Conceptualising a research design</b>
+     <p>The plan for how you will answer your question in a systematic, defensible way — it determines whether findings are trustworthy. A research design is broader than the "type of study". It normally sets out:</p>
+     <ul>
+       <li><b>Study design</b> — survey, case study, experiment, or interviews.</li>
+       <li><b>Logistical arrangements</b> — where research happens, how participants are recruited, what permissions are needed.</li>
+       <li><b>Measurement procedures</b> — exactly what you measure and how (task completion time, error rates, Likert trust scores).</li>
+       <li><b>Sampling strategy</b> — who is included and why.</li>
+       <li><b>Frame of analysis</b> — e.g. descriptive statistics for surveys, thematic coding for interviews.</li>
+       <li><b>Timeframe</b> — how work is sequenced within the available weeks.</li>
+     </ul>
+     <div class="callout gold"><span class="lab">Study design vs research design</span>The <b>study design</b> is one <em>part</em> of the research design (the structure: e.g. descriptive survey, experiment, case study). The <b>research design</b> is broader — study design <em>plus</em> measurement, sampling, analysis and scheduling. A design must be <b>valid, workable and manageable</b>, and you must justify it.</div></li>
+   <li><b>Constructing an instrument for data collection</b>
+     <p>Anything used to collect information is a <b>research tool / instrument</b> (observation checklists, interview schedules, questionnaires, interview guides). Quantitative studies → structured questionnaires with closed items (e.g. Likert satisfaction scales). Qualitative studies → interview guides with open questions and probes.</p>
+     <ul>
+       <li><b>Primary data:</b> collected specifically for your study — build or select an instrument.</li>
+       <li><b>Secondary data:</b> already exists for another purpose (LMS logs, helpdesk histories, GitHub commits). Develop a form/template to extract it consistently.</li>
+     </ul>
+     <div class="callout green"><span class="lab">Field testing (pre-testing)</span>Trial the tool <b>before</b> real data collection to find unclear questions and technical issues. Crucially, pre-test on a <b>similar group you will not include</b> in the final sample (e.g. pilot with first-years if your study uses second-years).</div></li>
+   <li><b>Selecting a sample</b>
+     <p>The <b>sample</b> is the group you collect data from; the <b>study population</b> is the larger group you want to understand. Sampling works on efficiency — a well-chosen smaller group can reflect the population with reasonable confidence. The objective of a sampling design is to minimise the gap between what you measure in the sample and what is true in the population.</p>
+     <p>Two goals: <b>avoid bias</b> in selection, and achieve <b>maximum precision</b> within your resources. Three broad categories:</p>
+     <ul>
+       <li><b>Random (probability) sampling</b> — each member has a known chance of selection; supports generalisation and statistical testing.</li>
+       <li><b>Non-random (non-probability) sampling</b> — used when access is limited or specific characteristics are needed (e.g. purposive sampling of incident responders); common in qualitative work.</li>
+       <li><b>Mixed sampling</b> — combines both (e.g. random survey + purposive follow-up interviews).</li>
+     </ul>
+     <p>Sampling affects your ability to <b>generalise</b> and the <b>type of analysis</b> you can use (many inferential tests assume probability sampling).</p></li>
+   <li><b>Writing a research proposal</b>
+     <p>Brings all preparatory thinking into one formal plan, like an ICT project specification or system design document. It must communicate three essentials: <b>what</b> you propose to do, <b>how</b> you plan to proceed, and <b>why</b> you selected that strategy. Standard components: objectives; hypotheses (if applicable); study design; setting; instrument(s); sample size &amp; sampling design; data-processing procedures; outline of report chapters; problems &amp; limitations; and a timeframe.</p></li>
+   <li><b>Collecting data</b>
+     <p>Where the study moves from planning into action. The method must match the design chosen earlier — administer a questionnaire, conduct interviews, run a focus group, make observations, or collect system-generated data (logs, response times, clickstream, ticket records). Data collection is also an <b>ethical</b> activity: consent &amp; transparency, privacy &amp; confidentiality, minimising harm, and secure handling of data.</p></li>
+   <li><b>Processing &amp; displaying data</b>
+     <p>Raw data does not "speak for itself". How you analyse depends on the <b>type of information</b> collected and how you want to <b>communicate findings</b>.</p>
+     <h5>Qualitative / descriptive</h5>
+     <p>Analyse manually by reading for patterns, using content analysis or thematic coding (codes → themes, e.g. "lack of transparency", "fear of false positives"). For large datasets, use software such as Atlas.ti.</p>
+     <h5>Quantitative</h5>
+     <p>Clean data, code responses numerically (e.g. 1=Never … 5=Always), identify variables. Choose analysis to fit objectives: frequency distributions, cross-tabulations, or advanced procedures — <b>regression</b>, <b>ANOVA</b>, <b>factor analysis</b>. Define variables clearly (e.g. "average task completion time" in seconds).</p>
+     <h5>Displaying analysed data</h5>
+     <p>Tables of descriptive statistics; bar/line charts for comparisons; thematic diagrams or summary tables for qualitative findings.</p></li>
+   <li><b>Writing a research report</b>
+     <p>The main research output. Explain three things: <b>what you did</b>, <b>what you discovered</b>, and <b>what conclusions you drew</b>. Writing should be academic — clear, formal, logically organised, evidence-based. Common ICT report structure: Introduction &amp; problem statement → Literature review → Methodology → Findings/Results → Discussion → Conclusion &amp; recommendations.</p></li>
+ </ol>
+
+ <h4><span class="pin">·</span>Summary — the "buffet" metaphor</h4>
+ <p>The process is a structured set of <b>decision points</b>. Picture eight tables, each a step; at each table several "dishes" (options) — different study designs, sampling methods, or analysis techniques. You must visit every table, but choose what <b>fits your study</b>, not what you personally prefer. Novices benefit from using the full structure because it prevents gaps (like collecting data before clarifying which variables you need). The eight steps are <b>operational</b> and arranged in logical order so each builds on the last.</p>
+ `,
+ mnemonics:[
+  {title:"The 8 steps of the research process", phrase:'<b>P</b>lease <b>D</b>o <b>I</b>nform <b>S</b>tudents <b>P</b>roperly, <b>C</b>ollect <b>P</b>roper <b>R</b>ecords',
+   why:"Eight words → the eight steps in Kumar's process, in order.",
+   items:[
+    {l:"P",w:"Problem",d:"1 · Formulate the research problem / question."},
+    {l:"D",w:"Design",d:"2 · Conceptualise the research design."},
+    {l:"I",w:"Instrument",d:"3 · Construct the data-collection instrument."},
+    {l:"S",w:"Sample",d:"4 · Select a sample."},
+    {l:"P",w:"Proposal",d:"5 · Write a research proposal."},
+    {l:"C",w:"Collect",d:"6 · Collect data."},
+    {l:"P",w:"Process",d:"7 · Process & display data."},
+    {l:"R",w:"Report",d:"8 · Write the research report."}
+   ]},
+  {title:"What a full research design contains", phrase:'<b>S</b>ome <b>L</b>arge <b>M</b>aps <b>S</b>how <b>A</b>ll <b>T</b>owns',
+   why:"The six things a research design sets out (beyond just the study type).",
+   items:[
+    {l:"S",w:"Study design",d:"Survey, case study, experiment, interviews."},
+    {l:"L",w:"Logistics",d:"Site, recruitment, permissions."},
+    {l:"M",w:"Measurement",d:"What you measure & how."},
+    {l:"S",w:"Sampling",d:"Who is included and why."},
+    {l:"A",w:"Analysis frame",d:"How data will be analysed."},
+    {l:"T",w:"Timeframe",d:"How work is sequenced."}
+   ]}
+ ],
+ activities:[
+  {tag:"Class exercise", title:"Map your project to the research process",
+   html:`<label>Write your current working research topic in one sentence.</label>
+    <textarea data-store="t2a1"></textarea>
+    <label>Which step are you currently at, and what should the next step be?</label>
+    <textarea data-store="t2a2"></textarea>
+    <label>Draft one aim and two objectives — do they match your topic?</label>
+    <textarea data-store="t2a3"></textarea>
+    <label>List one possible data source and one analysis method aligned with each objective.</label>
+    <textarea data-store="t2a4"></textarea>`},
+  {tag:"Exit ticket", title:"Connect data collection to an objective",
+   html:`<p>Write a short paragraph explaining how your proposed data collection will answer <b>one</b> of your objectives.</p>
+    <textarea data-store="t2b" placeholder="My data collection will answer objective ... because ..."></textarea>
+    <details class="reveal"><summary>What 'alignment' looks like</summary><div class="rc"><p>If the objective is to <em>measure frequency of tool use</em>, the data should be a survey with usage-frequency options — not open interviews. If the objective is to <em>explore experiences</em>, use interviews — not CPU logs. The instrument must produce evidence that directly answers the objective.</p></div></details>`},
+  {tag:"Higher-order · reflection", title:"Analysis prompts",
+   html:`<ol>
+     <li>How does a weakly defined research problem create problems later in sampling, data collection and analysis? Use an ICT example.</li>
+     <li>A student wants to study "AI in education." How would you guide them to a specific problem and two aligned objectives?</li>
+     <li>Compare a survey design and a case study for investigating student experiences of an online assessment platform — what conclusions can each support?</li>
+     <li>How does the golden thread help you decide which questions to include or exclude in a questionnaire?</li>
+     <li>A project collected detailed interview data but wrote objectives requiring numerical measurement. What is the mismatch, and how could it be corrected?</li>
+   </ol><textarea data-store="t2c"></textarea>`}
+ ],
+ quiz:[
+  {q:"Which statement best describes a research methodology?",
+   options:["A list of software tools used in a study","The practical plan for how a study will answer its research question","The final chapter of a research report","A summary of related journal articles"],
+   answer:1, explain:"Methodology is the practical plan (the 'route') for answering the research question."},
+  {q:"What should normally come immediately after defining the research problem?",
+   options:["Establishing the research question and sub-questions","Writing the conclusion","Reviewing the literature","Establishing the aim and objectives"],
+   answer:3, explain:"The aim and objectives are established next; they organise the whole study."},
+  {q:"Which shows strong alignment between an objective and data collection?",
+   options:["Objective: explore user experiences. Data: server CPU usage logs only","Objective: compare two groups. Data: open-ended interviews only","Objective: measure frequency of tool usage. Data: a survey with usage-frequency options","Objective: develop software. Data: a list of programming languages"],
+   answer:2, explain:"Measuring frequency needs a survey capturing how often the tool is used — the data fits the objective."},
+  {q:"In the golden thread, which item directly links objectives to the evidence collected?",
+   options:["Reference list","Data collection questions and instruments","Title page","Abstract"],
+   answer:1, explain:"Instruments and data-collection questions turn objectives into the evidence you gather."},
+  {q:"Which section describes what the data shows, without explaining why it happened?",
+   options:["Findings or results section","Discussion section","Literature review","Recommendations section"],
+   answer:0, explain:"Findings/Results report what the data shows; the Discussion interprets why."},
+  {q:"Pre-testing (field testing) of an instrument should be done on:",
+   options:["Your actual study sample","A similar group you will NOT include in the study","Only your supervisor","Nobody — it wastes time"],
+   answer:1, explain:"Pre-test on a similar group not in the final sample, so it doesn't contaminate your data."}
+ ]
+}
+,
+/* ===================== TOPIC 3 ===================== */
+{
+ id:"t3", num:3, title:"Research Ethics", src:"Special Lecture (Francke, Hendricks & Kabaso, 16 Feb 2026) + 'The ethics of using generative AI in research'",
+ notesHTML:`
+ <p class="lead">Research ethics are moral principles that guide researchers to conduct and report research without deception or intention to harm participants or society — knowingly or unknowingly.</p>
+
+ <h4><span class="pin">1</span>Why research ethics matter</h4>
+ <ul>
+   <li>Practising ethical guidelines establishes the <b>validity</b> of your research.</li>
+   <li>You must adhere to ethics when presenting findings — ensuring your work is <b>plagiarism-free</b> and no unverified data reaches readers.</li>
+   <li>Ethics instil a <b>sense of responsibility</b> and make it easy to assign responsibility in cases of misconduct.</li>
+   <li>You <b>cannot conduct any data collection without receiving ethical clearance</b> to do so.</li>
+   <li>Following guidelines from regulatory committees protects participants, the public, and the researcher, and builds <b>credibility</b>.</li>
+ </ul>
+ <div class="callout red"><span class="lab">When researchers lie — real cases</span>
+   <ul style="margin:0">
+     <li><b>Michael Briggs (Deakin University, 1970s):</b> fabricated and published contraceptive-pill data; took unpublished small-scale findings and generalised them into apparently extensive trials. Exposed in the mid-1980s — some reported tests were impossible to conduct, one was a dog study he never did.</li>
+     <li><b>Murdoch &amp; Barwood (Univ. of Queensland, 2013):</b> resigned after a whistleblower said a Parkinson's experiment was never undertaken despite reported results.</li>
+     <li><b>Abebe Zegeye (Wits, 2010):</b> dismissed after repeated plagiarism complaints from senior academics.</li>
+     <li><b>David Robinson (Monash, 2002):</b> resigned after plagiarism on three occasions.</li>
+     <li><b>Citation cartels (2025–26):</b> companies selling citations ($5–$10 per reference) using fake author names to inflate citation counts — at least 20 such papers found in chemistry journals.</li>
+   </ul>
+ </div>
+
+ <h4><span class="pin">2</span>The fundamental principles of research ethics</h4>
+ <p>(City, University of London framework.)</p>
+ <ul>
+   <li><b>Respect for persons (autonomy):</b> participation must be voluntary, free from coercion or undue influence; rights, dignity and autonomy respected, and those with diminished autonomy protected.</li>
+   <li><b>Beneficence &amp; non-maleficence:</b> research should be worthwhile, with value outweighing risk or harm — maximise benefit, minimise potential harm to all concerned.</li>
+   <li><b>Justice:</b> fairness between members/groups in society, with equal treatment; consider the overall societal impact in selecting participants and outcomes.</li>
+   <li><b>Informed consent:</b> staff and participants must receive (a) appropriate information about the research, (b) in a comprehensible manner, (c) without duress or inappropriate inducement.</li>
+   <li><b>Confidentiality &amp; data protection:</b> respect individual and group preferences on anonymity and the confidential nature of personal data.</li>
+   <li><b>Conflict of interest:</b> the independence of research must be clear; any conflicts or partiality must be explicit (e.g. obligations to a funder that may compromise independence).</li>
+   <li><b>Integrity:</b> research designed, reviewed and undertaken to meet recognised standards of integrity, quality and transparency. Unacceptable practices include <b>fabrication</b> — creating false data, documentation, or participant consent.</li>
+ </ul>
+
+ <h4><span class="pin">3</span>The ethics of using generative AI in research</h4>
+ <p>(Schlagwein &amp; Willcocks, 2023; and core conditions from Cheng et al., 2025; Konwar, 2025; Resnik &amp; Hosseini, 2024, 2025.) Ethics is about assessing the <b>rightness or wrongness of actions</b>.</p>
+ <div class="callout green"><span class="lab">The headline position</span>Using generative or other AI is ethically <b>permissible only when it functions as a tool under critical human oversight</b>, with full disclosure and strict protection of originality, data integrity and confidentiality. Using AI to <b>replace</b> genuine scholarly work, <b>fabricate</b> knowledge, or <b>conceal</b> its role is widely judged unethical.</div>
+ <p>It is not <em>inherently</em> unethical to use AI for research, even though it brings ethical challenges. If AI is useful for legitimate, valid research — <b>for which the author, not the AI, takes full responsibility</b> — it should be allowed. In line with the principle of <b>transparency</b>, the exact manner in which generative AI was used must be declared, like any other tool or technique.</p>
+ <h5>Deontological vs teleological framing</h5>
+ <p>Ethical theories focus either on the <b>actions</b> (means, processes, methods → <b>deontological</b>) or on the <b>results</b> (ends, goals, outcomes → <b>teleological</b>). For research and science, given its role in society, a <b>teleological</b> assessment should take priority: AI should be used where it is a useful tool for advancing knowledge.</p>
+ <h5>Core ethical conditions for AI use</h5>
+ <table>
+   <tr><th>Principle</th><th>Practical requirement</th></tr>
+   <tr><td><b>Human responsibility</b></td><td>Substantial human intellectual contribution; humans remain accountable for all claims, data and arguments.</td></tr>
+   <tr><td><b>Transparency</b></td><td>Disclose how and where AI was used, especially if it affects content or evidence.</td></tr>
+   <tr><td><b>Integrity &amp; accuracy</b></td><td>Verify AI outputs; correct hallucinations, bias and mis-citations; avoid putting confidential or sensitive data in prompts.</td></tr>
+   <tr><td><b>Originality &amp; authorship</b></td><td>Do not present unedited AI text as your own; AI is not listed as an author; acknowledge assistance where appropriate.</td></tr>
+ </table>
+ <h5>How to ethically use generative AI — the cycle</h5>
+ <ul>
+   <li><b>Maintain transparency</b> — disclose AI usage to build trust and accountability.</li>
+   <li><b>Ensure integrity</b> — use AI to enhance research without compromising accuracy or honesty.</li>
+   <li><b>Clarify authorship</b> — establish clear authorship guidelines to avoid disputes.</li>
+   <li><b>Address bias</b> — mitigate AI bias to ensure fair, reliable outcomes.</li>
+   <li><b>Prevent misuse</b> — implement safeguards against unethical uses of AI.</li>
+ </ul>
+ <div class="callout gold"><span class="lab">CPUT resources</span>See the CPUT Student AI Practice Guide (cput.ac.za/student-ai-practice-guide) and use a recognised referencing style for acknowledging AI (e.g. Cite Them Right Harvard; UQ guide to referencing AI).</div>
+
+ <h4><span class="pin">4</span>Ethical clearance</h4>
+ <p>Remember the bottom line from the lecture: <b>no data collection may take place before ethical clearance is granted.</b> Ethical clearance ensures the safety of participants, the public, and the researcher, and that recognised standards of integrity are met.</p>
+ `,
+ mnemonics:[
+  {title:"The 7 principles of research ethics", phrase:'<b>R</b>eally <b>B</b>e <b>J</b>ust, <b>I</b>nform, <b>C</b>onfide, <b>C</b>heck <b>I</b>nterests',
+   why:"One word per principle (Beneficence pairs with non-maleficence).",
+   items:[
+    {l:"R",w:"Respect for persons",d:"Voluntary participation; autonomy & dignity protected."},
+    {l:"B",w:"Beneficence / non-maleficence",d:"Maximise benefit, minimise harm."},
+    {l:"J",w:"Justice",d:"Fair, equal treatment across groups."},
+    {l:"I",w:"Informed consent",d:"Clear info, comprehensible, no duress."},
+    {l:"C",w:"Confidentiality",d:"Protect anonymity & personal data."},
+    {l:"C",w:"Conflict of interest",d:"Independence clear; partiality explicit."},
+    {l:"I",w:"Integrity",d:"No fabrication; quality & transparency."}
+   ]},
+  {title:"Ethical AI use — 4 conditions", phrase:'<b>H</b>umans <b>T</b>ell <b>I</b>t <b>O</b>penly',
+   why:"The four core conditions for permissible generative-AI use in research.",
+   items:[
+    {l:"H",w:"Human responsibility",d:"The author — not the AI — is accountable."},
+    {l:"T",w:"Transparency",d:"Disclose how & where AI was used."},
+    {l:"I",w:"Integrity & accuracy",d:"Verify outputs; fix hallucinations; protect data."},
+    {l:"O",w:"Originality & authorship",d:"No unedited AI text as your own; AI is not an author."}
+   ]}
+ ],
+ activities:[
+  {tag:"Reflection", title:"Apply the principles to your study",
+   html:`<p>For your proposed study, note how you would satisfy each principle.</p>
+    <label>Informed consent — how will participants be informed, and how will you ensure no duress?</label>
+    <textarea data-store="t3a1"></textarea>
+    <label>Confidentiality &amp; data protection — how will you anonymise and secure data (logs, recordings, surveys)?</label>
+    <textarea data-store="t3a2"></textarea>
+    <label>Beneficence / non-maleficence — what is the benefit, and what harm might arise (e.g. anxiety around academic-misconduct questions)?</label>
+    <textarea data-store="t3a3"></textarea>
+    <label>Conflict of interest — is there any funder/institutional relationship to declare?</label>
+    <textarea data-store="t3a4"></textarea>`},
+  {tag:"Case analysis", title:"What went wrong?",
+   html:`<p>Pick one case from the notes (Briggs, Murdoch &amp; Barwood, Zegeye, Robinson, or citation cartels). Which principle(s) were breached, and what would ethical conduct have looked like?</p>
+    <textarea data-store="t3b"></textarea>
+    <details class="reveal"><summary>Hint</summary><div class="rc"><p>Most cases breach <b>Integrity</b> (fabrication/plagiarism) and <b>Transparency</b>. Citation cartels also corrupt <b>authorship</b> and the integrity of the scholarly record. Ethical conduct = real data, honest reporting, accurate authorship, and full disclosure.</p></div></details>`},
+  {tag:"AI ethics debate", title:"Deontological vs teleological",
+   html:`<p>The lecture used an art analogy: is identical, pixel-by-pixel artwork less deserving of a prize if made with AI? Decide where you stand for <b>research</b>: should we judge the <b>process</b> (deontological) or the <b>outcome</b> (teleological)?</p>
+    <textarea data-store="t3c" placeholder="I lean teleological/deontological because..."></textarea>
+    <details class="reveal"><summary>The lecture's stance</summary><div class="rc"><p>For research and science, a <b>teleological</b> assessment should take priority — AI should be used where it is a useful tool for advancing knowledge, <em>provided</em> the four conditions (human responsibility, transparency, integrity/accuracy, originality/authorship) are met.</p></div></details>`}
+ ],
+ quiz:[
+  {q:"According to the lecture, what is true about data collection and ethical clearance?",
+   options:["Clearance can be obtained after data collection","You cannot conduct any data collection without receiving ethical clearance","Clearance is optional for student projects","Clearance only applies to medical research"],
+   answer:1, explain:"No data collection may take place before ethical clearance is granted."},
+  {q:"'Participation must be voluntary, free from coercion, with dignity and autonomy respected' describes which principle?",
+   options:["Justice","Respect for persons","Beneficence","Conflict of interest"],
+   answer:1, explain:"This is respect for persons (autonomy), protecting especially those with diminished autonomy."},
+  {q:"Creating false data, documentation, or participant consent is an example of breaching:",
+   options:["Integrity","Informed consent","Justice","Beneficence"],
+   answer:0, explain:"Fabrication of data/documentation is an unacceptable practice under integrity."},
+  {q:"Under the core conditions, who remains accountable for claims made with AI assistance?",
+   options:["The AI tool","The journal","The human author","Nobody"],
+   answer:2, explain:"Human responsibility: the author, not the AI, takes full responsibility."},
+  {q:"What does the principle of transparency require when generative AI is used?",
+   options:["Hiding AI use to avoid bias","Declaring how and where AI was used, like any other tool","Listing the AI as a co-author","Only using AI for grammar"],
+   answer:1, explain:"Transparency means disclosing the exact manner of AI use, like any other authored tool/technique."},
+  {q:"Using AI to replace genuine scholarly work, fabricate knowledge, or conceal its role is:",
+   options:["Encouraged for efficiency","Ethically neutral","Widely judged unethical","Required by CPUT policy"],
+   answer:2, explain:"These uses are widely judged unethical; permissible use keeps AI as a tool under human oversight with disclosure."}
+ ]
+}
+,
+/* ===================== TOPIC 4 ===================== */
+{
+ id:"t4", num:4, title:"Settling on the Topic and Title of your Study", src:"Semester 1, Week 4",
+ notesHTML:`
+ <p class="lead">Your topic and title are the "anchor" for every later decision — the literature you review, the concepts you define, the population you choose, and the design you adopt. The goal is not a perfect topic on day one, but a well-justified, manageable topic and a working title you can refine.</p>
+
+ <h4><span class="pin">A</span>What a research topic is, and why it matters</h4>
+ <p>A research topic is the central subject or issue you study in depth. It becomes the basis for your research question(s), methodology and findings. A well-defined topic keeps the study focused and coherent; a vague topic leads to an unfocused, disjointed project.</p>
+ <h5>ICT topic examples</h5>
+ <ul>
+   <li><b>Cybersecurity behaviour:</b> how small businesses implement password policies and MFA in practice.</li>
+   <li><b>HCI:</b> usability challenges of first-year students using a university LMS.</li>
+   <li><b>AI in education:</b> how students use generative AI for programming support, and effects on learning and integrity.</li>
+   <li><b>Software engineering:</b> factors influencing adoption of automated testing in small dev teams.</li>
+ </ul>
+
+ <h4><span class="pin">B</span>Starting points for identifying a topic</h4>
+ <p>If stuck, start with what you already have: your interests, real problems you observe in ICT settings, and your developing skills. Brainstorm possible topics, then narrow them through reading and feasibility checks.</p>
+
+ <h4><span class="pin">C</span>Criteria for a good topic (and traps to avoid)</h4>
+ <ul>
+   <li><b>Interest:</b> choose something you genuinely care about — research takes persistence.</li>
+   <li><b>Magnitude &amp; manageability:</b> narrow it to fit your time, resources, and data access.</li>
+   <li><b>Relevance &amp; contribution:</b> useful to the field; adds knowledge or solves a practical problem.</li>
+   <li><b>Availability of data:</b> confirm participants, documents, logs, or survey access are realistically available.</li>
+   <li><b>Measurement &amp; clarity of concepts:</b> in quantitative work, define and measure key concepts (usability, performance, security awareness).</li>
+   <li><b>Level of expertise:</b> have (or be able to develop) the skills to collect and analyse the data.</li>
+   <li><b>Ethical acceptability:</b> identify privacy and consent risks early.</li>
+ </ul>
+ <div class="callout red"><span class="lab">Common mistakes that weaken topics</span>
+   <ul style="margin:0">
+     <li><b>Too broad:</b> covers too many issues ("Cybersecurity in South Africa").</li>
+     <li><b>Too vague:</b> unclear key terms ("Technology and productivity").</li>
+     <li><b>Low significance:</b> doesn't solve a real problem or add insight.</li>
+     <li><b>Poor feasibility:</b> needs data you cannot access (confidential corporate datasets without permission).</li>
+     <li><b>Weak literature alignment:</b> not enough credible sources to support the study.</li>
+   </ul>
+ </div>
+
+ <h4><span class="pin">D</span>Turning a topic into a working title</h4>
+ <p>A working (draft) title keeps you focused and tells others what your study is about; it is normal for it to change. <b>Technique:</b> complete the sentence "My study is about …", then rewrite it as a title others grasp quickly.</p>
+ <h5>Guidelines for a strong title</h5>
+ <ul>
+   <li>Be brief; avoid filler ("A study of …") unless needed.</li>
+   <li>Easy to read, not overly complex.</li>
+   <li>Use a single title or a double title (main + clarifying subtitle).</li>
+   <li>Include the key focus (topic, setting, population, or concept) without every detail.</li>
+   <li>Aim for ~12 words; remove unnecessary articles and prepositions.</li>
+ </ul>
+ <div class="gridbox">
+   <div class="callout gold"><span class="lab">Single title</span>Factors Influencing Adoption of Multi-Factor Authentication in Small Businesses</div>
+   <div class="callout gold"><span class="lab">Single title</span>Usability Barriers in a University LMS for First-Year ICT Students</div>
+   <div class="callout green"><span class="lab">Double title</span>An HCI Case Study: Improving Mobile Navigation for Low-Bandwidth Users</div>
+   <div class="callout green"><span class="lab">Double title</span>AI Support in Programming Education: Student Use of Generative Tools in Introductory Coding Modules</div>
+ </div>
+
+ <h4><span class="pin">E</span>Narrowing the scope — boundary settings</h4>
+ <p>Narrowing is not just "making it smaller"; it is defining boundaries so the study has a clear focus:</p>
+ <ul>
+   <li><b>Population:</b> who/what you study (first-year ICT students, small retail businesses, developers in one company).</li>
+   <li><b>Setting:</b> where it takes place (one campus, one organisation, one platform).</li>
+   <li><b>Timeframe:</b> what period (one semester; last 6 months of support tickets).</li>
+   <li><b>Key concept(s):</b> exactly what you study (user satisfaction, adoption barriers, perceived usefulness, error rates).</li>
+   <li><b>Data source(s):</b> what evidence (survey, interviews, observation, logs, documents, usability tests).</li>
+ </ul>
+ <div class="callout gold"><span class="lab">How narrowing changes a topic</span><b>Broad:</b> "AI in education." → <b>Narrowed:</b> "How first-year ICT students use generative AI tools to debug code in an introductory programming module during Semester 1." → <b>Working title:</b> "Generative AI for Debugging: First-Year ICT Student Practices in Programming."</div>
+
+ <h4><span class="pin">F</span>Worked examples — the three approaches</h4>
+ <p>Apply the three approaches: (1) list key words, (2) draw relationships, (3) define the topic in sentences.</p>
+ <h5>Example 1 — Cybersecurity awareness in universities</h5>
+ <p><b>Key words:</b> cybersecurity awareness; phishing attacks. <b>Synonyms:</b> digital security awareness, information security training. <b>Related:</b> cyber hygiene, security culture, social engineering.</p>
+ <p><b>Define in sentences:</b> I am studying <em>cybersecurity awareness training among university students</em>… in order to find out <em>whether training reduces phishing vulnerability</em>… in order to help my reader understand <em>how universities can strengthen ICT security culture.</em></p>
+ <p><b>Best-fit title:</b> "The Impact of Cybersecurity Awareness Training on Phishing Vulnerability Among University Students" — strong because it names the <b>intervention</b> (training), <b>outcome</b> (phishing vulnerability), <b>population</b> (university students), and a measurable <b>focus</b>.</p>
+ <p class="ex">Alternatives: an ICT-security-culture emphasis; an evaluation-driven version; an institution-as-unit version; a student-preparedness version. If your study is quantitative/intervention-based, the first title is best; if qualitative/culture-focused, the culture-emphasis option fits better.</p>
+ <h5>Example 2 — AI tools in software development workflows</h5>
+ <p><b>Key words:</b> AI-assisted software development; developer productivity. <b>Synonyms:</b> AI coding support, intelligent programming tools. <b>Related:</b> GitHub Copilot, ChatGPT for developers, workflow automation.</p>
+ <p><b>Define in sentences:</b> I am studying <em>the use of AI coding assistants in software development companies</em>… to find out <em>how these tools affect productivity and reliability</em>… to help my reader understand <em>how organisations can adopt AI responsibly.</em></p>
+ <p><b>Best-fit title:</b> "The Effects of AI Coding Assistants on Developer Productivity and Code Reliability in Software Development Companies" — names <b>technology</b>, <b>outcomes</b> (productivity + reliability), <b>context</b>, and a clear cause–effect focus.</p>
+ <p class="ex">If quantitative → effects/impact language; if qualitative → exploring/understanding language; if ethics/governance is central → a responsible-adoption framing.</p>
+ `,
+ mnemonics:[
+  {title:"Criteria for choosing a topic", phrase:'<b>I</b> <b>M</b>ust <b>R</b>eally <b>A</b>cquire <b>M</b>ore <b>L</b>earning <b>E</b>asily',
+   why:"Seven letters → the seven criteria for a good research topic.",
+   items:[
+    {l:"I",w:"Interest",d:"You genuinely care about it."},
+    {l:"M",w:"Magnitude / manageability",d:"Fits time, resources, access."},
+    {l:"R",w:"Relevance / contribution",d:"Useful; adds knowledge."},
+    {l:"A",w:"Availability of data",d:"Sources realistically reachable."},
+    {l:"M",w:"Measurement & clarity",d:"Concepts can be defined/measured."},
+    {l:"L",w:"Level of expertise",d:"You have/can build the skills."},
+    {l:"E",w:"Ethical acceptability",d:"Privacy & consent risks handled."}
+   ]},
+  {title:"Boundary settings that narrow a topic", phrase:'<b>P</b>lease <b>S</b>et <b>T</b>he <b>K</b>ey <b>D</b>etails',
+   why:"The five boundaries that make a topic researchable.",
+   items:[
+    {l:"P",w:"Population",d:"Who/what you study."},
+    {l:"S",w:"Setting",d:"Where it happens."},
+    {l:"T",w:"Timeframe",d:"What period."},
+    {l:"K",w:"Key concept(s)",d:"Exactly what you study."},
+    {l:"D",w:"Data source(s)",d:"What evidence you use."}
+   ]},
+  {title:"Three approaches to develop a topic", phrase:'<b>L</b>ist · <b>D</b>raw · <b>D</b>efine',
+   why:"The workflow for moving from a vague interest to a defined topic.",
+   items:[
+    {l:"L",w:"List key words",d:"Concepts, synonyms, related terms."},
+    {l:"D",w:"Draw it out",d:"Map relationships between concepts."},
+    {l:"D",w:"Define in sentences",d:"\"I am studying… to find out… to help my reader understand…\""}
+   ]}
+ ],
+ activities:[
+  {tag:"Tutorial worksheet", title:"Build your own topic and title",
+   html:`<label>1) Interest area (what you're curious about in ICT)</label><input type="text" data-store="t4w1">
+    <label>2) Real-world problem you observe</label><input type="text" data-store="t4w2">
+    <label>3) Who is affected (population)</label><input type="text" data-store="t4w3">
+    <label>4) Where it happens (setting)</label><input type="text" data-store="t4w4">
+    <label>5) Evidence you can access (data sources)</label><input type="text" data-store="t4w5">
+    <label>6) "My study is about …" sentence</label><textarea data-store="t4w6"></textarea>
+    <label>7) Working title (single or double)</label><input type="text" data-store="t4w7">
+    <label>8) One-sentence justification — why it matters &amp; is feasible</label><textarea data-store="t4w8"></textarea>`},
+  {tag:"Cloze · self-check", title:"Higher-order: fill in the blanks",
+   html:`<div class="cloze-wrap"><p class="cloze">In Week 4 we learned that a research topic and title should function as an
+     <select data-answer="anchor"><option value="">—</option><option>anchor</option><option>researchable</option><option>feasibility</option><option>refinement</option><option>coherent</option><option>availability</option></select>
+     for the entire study, because it shapes the literature you review, the variables you define, and the population you select. When a topic is too broad, you narrow it by specifying a clear context, a defined group, and a measurable focus, which helps make the topic more
+     <select data-answer="researchable"><option value="">—</option><option>anchor</option><option>researchable</option><option>feasibility</option><option>refinement</option><option>coherent</option><option>availability</option></select>.
+     Before finalising, you check whether it can realistically be completed within your time and access constraints — the principle of
+     <select data-answer="feasibility"><option value="">—</option><option>anchor</option><option>researchable</option><option>feasibility</option><option>refinement</option><option>coherent</option><option>availability</option></select>.
+     Listing key words, synonyms and related terms improves searching and clarifies what the topic includes or excludes, supporting topic
+     <select data-answer="refinement"><option value="">—</option><option>anchor</option><option>researchable</option><option>feasibility</option><option>refinement</option><option>coherent</option><option>availability</option></select>.
+     Finally, a good title should be clear and specific, so it stays
+     <select data-answer="coherent"><option value="">—</option><option>anchor</option><option>researchable</option><option>feasibility</option><option>refinement</option><option>coherent</option><option>availability</option></select>
+     throughout the research process.</p>
+     <button class="btn primary check-cloze" type="button">Check blanks</button>
+     <p style="font-size:.85rem;color:var(--ink-faint);margin-top:10px">Detractor in the bank: <em>availability</em> — it isn't used here.</p>
+     </div>`}
+ ],
+ quiz:[
+  {q:"What is the main purpose of selecting a research topic?",
+   options:["To immediately start writing the findings chapter","To choose an area that is interesting, researchable, and worthwhile","To ensure the study uses only quantitative methods","To avoid reviewing any literature"],
+   answer:1, explain:"The topic anchors the study — it must be interesting, researchable and worthwhile."},
+  {q:"A good research title should primarily be:",
+   options:["Long and highly technical","Vague to allow flexibility","Clear, specific, and reflective of the study focus","Written as a full paragraph"],
+   answer:2, explain:"Titles should be clear, specific and reflect the study's focus."},
+  {q:"Which is an example of a researchable ICT topic?",
+   options:["Why technology is important in life","The best programming language ever created","The impact of phishing awareness training on data vulnerability among bank employees","Technology will change everything in the future"],
+   answer:2, explain:"It names an intervention, outcome and population — investigable with evidence."},
+  {q:"In the three approaches, what is the purpose of listing key words and synonyms?",
+   options:["To make the title longer","To identify useful search terms and clarify the topic area","To choose statistical tests","To write the conclusion early"],
+   answer:1, explain:"Key words and synonyms sharpen searching and clarify the topic's boundaries."},
+  {q:"According to Kumar, a feasible research topic means:",
+   options:["It is based only on personal opinions","It can be completed within available time, resources, and access to data","It must involve laboratory experiments","It should avoid ICT-related problems"],
+   answer:1, explain:"Feasibility = completable within your time, resources and data access."}
+ ]
+}
+,
+/* ===================== TOPIC 5 ===================== */
+{
+ id:"t5", num:5, title:"The Golden Thread of Research", src:"Semester 1, Week 5 · Francke 2024; Clarence 2015; Spooner & Barnard 2024",
+ notesHTML:`
+ <p class="lead">The Golden Thread is the line of logical coherence that connects every part of a research project — from title and problem, through questions, objectives, literature, theory, methodology, and analysis, to conclusions.</p>
+
+ <h4><span class="pin">A</span>Why the Golden Thread matters</h4>
+ <ul>
+   <li>It prevents the study from becoming a collection of disconnected parts.</li>
+   <li>It helps the reader see clearly <b>what</b> you asked, <b>why</b> it matters, and <b>how</b> you answered it.</li>
+   <li>It supports validity and reliability by ensuring each step is logically justified and linked to the overall aim (Francke, 2024).</li>
+ </ul>
+
+ <h4><span class="pin">B</span>The essence — a guiding line through the project</h4>
+ <ol>
+   <li><b>Research title</b> — the central focus in a few words.</li>
+   <li><b>Research problem</b> — the issue or gap that makes the study necessary.</li>
+   <li><b>Research questions</b> — what you must answer to address the problem.</li>
+   <li><b>Objectives</b> — what you will do to answer the questions.</li>
+   <li><b>Literature &amp; theory</b> — concepts and scholarly conversation that frame your argument.</li>
+   <li><b>Methodology</b> — how you produce evidence that answers the questions.</li>
+   <li><b>Data analysis &amp; findings</b> — how evidence is interpreted against the questions.</li>
+   <li><b>Conclusions &amp; implications</b> — how the study resolves the problem and explains significance.</li>
+ </ol>
+
+ <h4><span class="pin">C</span>Consistency across components</h4>
+ <ul>
+   <li><b>Title → problem:</b> the problem statement must directly relate to the topic the title signals.</li>
+   <li><b>Problem → questions:</b> questions are derived from the problem and specify what must be investigated.</li>
+   <li><b>Questions → objectives:</b> objectives translate questions into achievable steps. An objective not linked to a question will not be investigated.</li>
+   <li><b>Literature/theory → questions:</b> chosen because they help answer the question and justify the study.</li>
+ </ul>
+
+ <h4><span class="pin">D</span>Alignment in methodology</h4>
+ <ul>
+   <li>Data collection must be driven by the questions and objectives — not by convenience or habit.</li>
+   <li>Analysis techniques must suit the data type and directly answer the questions.</li>
+   <li>The thread breaks when the design contradicts the approach — e.g. exploratory qualitative framing paired with hypotheses and variables, or explanatory quantitative design paired with open "why/how" questions.</li>
+ </ul>
+
+ <h4><span class="pin">E</span>Conclusions that tie back</h4>
+ <ul>
+   <li>Conclusions must answer the questions and meet the objectives.</li>
+   <li>Implications follow logically from findings, not personal preference.</li>
+   <li>Readers should never finish asking "So what? Why did I read this?" — the Golden Thread is the answer.</li>
+ </ul>
+
+ <h4><span class="pin">G</span>Analogy — a lawyer in court</h4>
+ <p>A well-constructed legal argument: clear evidence supports claims (data support questions); logical reasoning connects evidence to claims (analysis links data to questions); a verdict follows from evidence and reasoning (conclusions follow from findings).</p>
+
+ <h4><span class="pin">H</span>Practical Golden Thread checklist</h4>
+ <ul>
+   <li>Does the title match the problem statement in focus and scope?</li>
+   <li>Does the problem clearly state the gap, broken practice, or missing knowledge?</li>
+   <li>Do questions flow from the problem and stay within the same approach (qual/quant)?</li>
+   <li>Does each objective map to a research question (one-to-one where possible)?</li>
+   <li>Is the literature review organised around concepts that help answer the question?</li>
+   <li>Does the methodology produce evidence that can answer each question?</li>
+   <li>Does the analysis explicitly return to the questions and objectives?</li>
+   <li>Do conclusions and recommendations follow from findings and address the original problem?</li>
+ </ul>
+
+ <h4><span class="pin">I</span>Where the thread breaks, and how to repair it</h4>
+ <ul>
+   <li><b>Design-language mismatch</b> → rewrite questions/objectives so the language matches the design, then adjust methodology and analysis.</li>
+   <li><b>Findings introduce a new central theme the literature didn't prepare for</b> → update the literature review and revise the question if needed, keeping logical integrity.</li>
+   <li><b>Unexpected / non-significant results feel like failure</b> → keep the evidence unchanged; explain what results mean against prior literature; refine the argument rather than forcing a preferred story.</li>
+   <li><b>Writing drift</b> → keep the main research question visible while drafting; check each paragraph for relevance.</li>
+ </ul>
+
+ <h4><span class="pin">J</span>Good vs Bad Golden Thread — examples</h4>
+ <div class="callout green"><span class="lab">Good (aligned)</span><b>Title:</b> Cybersecurity Awareness Training and Phishing Risk Among University Students. <b>Problem:</b> phishing incidents affect student accounts; it's unclear whether current training reduces susceptibility. <b>Main Q:</b> How does awareness training influence phishing susceptibility among university students? <b>Aim/objectives &amp; literature</b> all keep the same focus, population and outcome — each part supports the next.</div>
+ <div class="callout red"><span class="lab">Bad (broken)</span>Same title, but the <b>problem</b> becomes "the organisation lacks a firewall and needs intrusion detection," the <b>question</b> shifts to "which firewall is most secure?", the <b>objective</b> becomes "test three firewall brands," and the <b>literature</b> covers IDS/IPS and segmentation. The topic keeps changing — the thread breaks at every step.</div>
+ <div class="callout green"><span class="lab">Good (aligned)</span><b>Title:</b> AI Coding Assistants and Code Reliability in Software Teams. <b>Problem:</b> teams adopt assistants for speed but worry about reliability and verification workload; evidence is fragmented. <b>Main Q:</b> What is the impact of AI coding assistants on code reliability in software teams? Sub-questions, objectives and literature (human-AI collaboration, code-quality metrics, assurance, governance) all serve the question.</div>
+ <div class="callout red"><span class="lab">Bad (broken)</span>Same title, but the <b>problem</b> is "many students struggle with maths," the <b>question</b> becomes "which teaching method improves maths results?", and the literature is about maths education. Even if the writing is clear, it is <b>not coherent</b> — and coherence is the Golden Thread.</div>
+ <div class="callout gold"><span class="lab">A thread is BAD when you can answer "yes" to any of these</span>Does the problem talk about something different from the title? Do the questions introduce a new focus never in the problem? Do the objectives measure something the questions never asked? Does the literature focus on a topic different from the questions?</div>
+ `,
+ mnemonics:[
+  {title:"The 8 links of the Golden Thread (in order)", phrase:'<b>T</b>he <b>P</b>roud <b>Q</b>ueen <b>O</b>ffers <b>L</b>ovely <b>M</b>usic <b>A</b>nd <b>C</b>ake',
+   why:"Eight words → the eight components the thread runs through.",
+   items:[
+    {l:"T",w:"Title",d:"The central focus in a few words."},
+    {l:"P",w:"Problem",d:"The gap that makes the study necessary."},
+    {l:"Q",w:"Questions",d:"What you must answer."},
+    {l:"O",w:"Objectives",d:"What you will do to answer them."},
+    {l:"L",w:"Literature & theory",d:"Concepts that frame the argument."},
+    {l:"M",w:"Methodology",d:"How you produce evidence."},
+    {l:"A",w:"Analysis & findings",d:"Evidence interpreted vs the questions."},
+    {l:"C",w:"Conclusions",d:"How the study resolves the problem."}
+   ]},
+  {title:"Four common breaks in the thread", phrase:'<b>D</b>esign · <b>F</b>indings · <b>R</b>esults · <b>D</b>rift',
+   why:"Where coherence usually snaps — and the cue to repair it.",
+   items:[
+    {l:"D",w:"Design-language mismatch",d:"Qual framing with hypotheses, or quant with open why/how."},
+    {l:"F",w:"Findings surprise",d:"A new theme the literature didn't prepare for."},
+    {l:"R",w:"Results feel like failure",d:"Non-significant results — keep evidence, refine argument."},
+    {l:"D",w:"Drift",d:"Writing wanders from the main question."}
+   ]}
+ ],
+ activities:[
+  {tag:"Cloze · self-check", title:"The Golden Thread — fill in the blanks",
+   html:`<div class="cloze-wrap"><p class="cloze">Research coherence depends on the logical
+     <select data-answer="alignment"><option value="">—</option><option>alignment</option><option>data</option><option>derived</option><option>support</option><option>coherence</option><option>problem statement</option></select>
+     of the core components of a study. A strong thread begins when the title signals the same focus that the
+     <select data-answer="problem statement"><option value="">—</option><option>alignment</option><option>data</option><option>derived</option><option>support</option><option>coherence</option><option>problem statement</option></select>
+     explains and justifies. From there, research questions must be
+     <select data-answer="derived"><option value="">—</option><option>alignment</option><option>data</option><option>derived</option><option>support</option><option>coherence</option><option>problem statement</option></select>
+     from the problem rather than introduced as new interests, and objectives translate each question into practical steps. Finally, the literature and theory should be selected because they directly
+     <select data-answer="support"><option value="">—</option><option>alignment</option><option>data</option><option>derived</option><option>support</option><option>coherence</option><option>problem statement</option></select>
+     the research questions. When these links are clear, a reader can trace your argument from start to finish without confusion — the essence of
+     <select data-answer="coherence"><option value="">—</option><option>alignment</option><option>data</option><option>derived</option><option>support</option><option>coherence</option><option>problem statement</option></select>.</p>
+     <button class="btn primary check-cloze" type="button">Check blanks</button>
+     <p style="font-size:.85rem;color:var(--ink-faint);margin-top:10px">Detractor in the bank: <em>data</em>.</p></div>`},
+  {tag:"Apply", title:"Audit your own thread",
+   html:`<p>Run your study through the checklist. Note any link that is weak or broken, and how you'd repair it.</p>
+    <label>Title → Problem (aligned? gap clear?)</label><textarea data-store="t5a1"></textarea>
+    <label>Problem → Questions → Objectives (one-to-one mapping?)</label><textarea data-store="t5a2"></textarea>
+    <label>Methodology → Analysis → Conclusions (do they return to the questions?)</label><textarea data-store="t5a3"></textarea>
+    <details class="reveal"><summary>Repair tips</summary><div class="rc"><p>Match question/objective <b>language</b> to your design; keep the <b>main question visible</b> while writing; if findings surprise you, update the literature rather than forcing a preferred story; ensure every objective traces to a question and every conclusion traces back to a finding.</p></div></details>`}
+ ],
+ quiz:[
+  {q:"The Golden Thread is best described as:",
+   options:["A referencing style","The line of logical coherence connecting every part of a study","A type of statistical test","The conclusion chapter"],
+   answer:1, explain:"It is the coherence/alignment that links title, problem, questions, objectives, methods, analysis and conclusions."},
+  {q:"What is the correct relationship between objectives and research questions?",
+   options:["They are unrelated","Each objective should map to a research question, ideally one-to-one","Objectives replace questions","Questions are written after the conclusions"],
+   answer:1, explain:"Objectives translate questions into steps; ideally one objective maps to one question."},
+  {q:"A study's title is about AI coding assistants, but its problem statement is about students struggling with maths. This is:",
+   options:["Acceptable flexibility","A broken Golden Thread — the problem differs from the title","A double title","A strong contribution"],
+   answer:1, explain:"When the problem differs from the title, the thread is broken at the first link."},
+  {q:"Pairing an exploratory qualitative study with hypotheses and variables is an example of:",
+   options:["Good practice","A design-language mismatch that breaks the thread","Mixed methods","A literature review"],
+   answer:1, explain:"Qualitative exploration shouldn't be framed with hypotheses/variables — that is a design-language mismatch."},
+  {q:"When unexpected or non-significant results appear, the recommended repair is to:",
+   options:["Change the data to fit the story","Keep the evidence unchanged and explain results against prior literature","Delete the objective","Switch to a new topic"],
+   answer:1, explain:"Keep evidence intact; refine the argument and explain meaning relative to prior work."}
+ ]
+}
+,
+/* ===================== TOPIC 6 ===================== */
+{
+ id:"t6", num:6, title:"Reviewing the Literature", src:"Semester 1, Week 6 · Kumar Chapter 3 · PRISMA 2020 (Page et al., 2021)",
+ notesHTML:`
+ <p class="lead">A literature review is a structured, critical reading of academic and professional sources relevant to your problem — not a list of summaries. It builds an argument for why your study is needed and how it connects to existing knowledge.</p>
+
+ <h4><span class="pin">A</span>What it does in ICT research</h4>
+ <ul>
+   <li><b>Avoid repeating</b> work already done (many usability studies already compare mobile menus).</li>
+   <li><b>Choose a proven measure</b> for your concept (task success rate, time-on-task, error rate).</li>
+   <li><b>Identify gaps &amp; justify</b> your study (tool studied generally, but not in your campus context).</li>
+   <li><b>Spot risks early</b> (low survey response rates; bias from only interviewing "power users").</li>
+ </ul>
+
+ <h4><span class="pin">B</span>Sources and how to judge quality</h4>
+ <p>From strongest to weakest for academic work:</p>
+ <ul>
+   <li><b>Peer-reviewed journal articles</b> (HCI, cybersecurity behaviour, AI in education).</li>
+   <li><b>Conference papers</b> (common in computing — still assess quality &amp; publisher).</li>
+   <li><b>Scholarly books &amp; chapters</b> (concepts and established methods).</li>
+   <li><b>Industry &amp; standards documents</b> (ISO, NIST, OWASP) when relevant.</li>
+   <li><b>Credible technical blogs &amp; vendor docs</b> — use carefully, triangulate with academic sources.</li>
+ </ul>
+ <div class="callout gold"><span class="lab">Quick quality check</span>Who wrote it &amp; what are their credentials? Is it peer-reviewed/published by a recognised body? Is the evidence and method clear? Is it recent enough (ICT moves fast, but classics matter for theory/method)? Is it directly relevant to your problem and objectives?</div>
+
+ <h4><span class="pin">C</span>A practical search process (treat it like debugging)</h4>
+ <ol class="steps">
+   <li><b>Translate your topic into keywords</b> — break it into 3–5 core concepts, then list synonyms and related terms. e.g. <em>AI plagiarism detection, academic integrity tools, fairness perceptions, student trust, false positives, higher-education ICT.</em></li>
+   <li><b>Use good search spaces</b> — library databases &amp; e-journals; Google Scholar (verify quality); IEEE Xplore &amp; ACM Digital Library for computing; Scopus / Web of Science to track citations.</li>
+   <li><b>Apply inclusion &amp; exclusion criteria</b> — decide before reading deeply. <em>Include:</em> higher-ed studies, last 5–7 years. <em>Exclude:</em> primary-school studies, articles with no method, non-credible opinion pieces.</li>
+   <li><b>Keep a search log</b> — record keywords, databases, date searched, best results. Makes your review transparent and stops you losing good sources.</li>
+ </ol>
+
+ <h4><span class="pin">D</span>Reading critically — a template for each source</h4>
+ <ul>
+   <li><b>Purpose:</b> what question was the author answering?</li>
+   <li><b>Context:</b> where and with whom was the study done?</li>
+   <li><b>Method:</b> what design, sample and instruments were used?</li>
+   <li><b>Findings:</b> what did they discover?</li>
+   <li><b>Limitations:</b> what could weaken the conclusions?</li>
+   <li><b>Relevance:</b> what does this add to <em>your</em> study?</li>
+ </ul>
+
+ <h4><span class="pin">E</span>From summary to synthesis</h4>
+ <p>Avoid one paragraph per source. Group sources and compare them — by <b>themes</b> ("trust in AI tools", "false positives"), by <b>methods</b> (survey vs interview), by <b>timeline</b>, or by <b>models/frameworks</b> (e.g. Technology Acceptance Model).</p>
+
+ <h4><span class="pin">F</span>Writing in academic style</h4>
+ <p>Introduce the topic area → define key concepts → compare what scholars found → identify gaps → link the gap to your problem and objectives. Use topic sentences that signal each paragraph's theme; compare sources in the same paragraph; cite correctly without copying wording; end by stating the gap your study addresses.</p>
+
+ <h4><span class="pin">J</span>Conducting an SLR with PRISMA</h4>
+ <p>Sometimes you won't collect new data — instead you systematically collect and analyse existing studies: a <b>systematic literature review (SLR)</b>. It follows a documented method for searching, screening and selecting, so results are transparent and repeatable. <b>PRISMA</b> (Preferred Reporting Items for Systematic reviews and Meta-Analyses) improves how reviews are reported, and works as a planning tool too.</p>
+ <div class="callout green"><span class="lab">An SLR is / is not</span><b>Is:</b> answers a focused question by searching for all relevant studies via a planned, transparent method; uses explicit inclusion/exclusion criteria and a documented screening process; <b>synthesises</b> evidence. <b>Is not:</b> a quick Google search, a list of summaries, or only the sources you already agree with.</div>
+ <h5>A gentle PRISMA-guided workflow</h5>
+ <ol>
+   <li>Write a focused review question (aligned to your Golden Thread).</li>
+   <li>Define inclusion/exclusion criteria <b>before</b> searching (date range, population, evidence type, language, minimum quality).</li>
+   <li>Create a search plan — 3–5 concepts + synonyms, 2–3 databases, record full search strings &amp; dates.</li>
+   <li>Screen in two stages — (1) title/abstract, (2) full-text eligibility; remove duplicates; keep counts.</li>
+   <li>Extract key information — table of author/year, context, method, sample, measures, findings.</li>
+   <li>Appraise quality — a simple checklist (method clarity, sample adequacy, limitations reported).</li>
+   <li>Synthesise &amp; write up — group by themes/methods/outcomes; report with the PRISMA flow diagram.</li>
+ </ol>
+ <h5>The PRISMA 2020 flow diagram (counts &amp; transparency)</h5>
+ <ul>
+   <li><b>Identification:</b> where you searched and how many records found.</li>
+   <li><b>Screening:</b> how many remained after duplicates; how many excluded at title/abstract.</li>
+   <li><b>Eligibility:</b> how many full texts assessed; reasons for excluding reports.</li>
+   <li><b>Included:</b> how many studies finally included in the synthesis.</li>
+ </ul>
+ <div class="callout gold"><span class="lab">Reusable proposal wording</span>"A systematic literature review will be conducted. A transparent search strategy will be applied across selected databases using predefined search terms. Records will be screened against inclusion and exclusion criteria, with reasons for exclusion recorded. The selection process will be documented using a PRISMA 2020 flow diagram, and included studies will be synthesised to answer the review question."</div>
+ `,
+ mnemonics:[
+  {title:"Critical-reading template (per source)", phrase:'<b>P</b>eople <b>C</b>an <b>M</b>ake <b>F</b>ilms <b>L</b>ook <b>R</b>eal',
+   why:"Six things to extract from every source you read.",
+   items:[
+    {l:"P",w:"Purpose",d:"What question did the author answer?"},
+    {l:"C",w:"Context",d:"Where & with whom?"},
+    {l:"M",w:"Method",d:"Design, sample, instruments."},
+    {l:"F",w:"Findings",d:"What did they discover?"},
+    {l:"L",w:"Limitations",d:"What weakens the conclusions?"},
+    {l:"R",w:"Relevance",d:"What does it add to YOUR study?"}
+   ]},
+  {title:"PRISMA 2020 flow — the four stages", phrase:'<b>I</b> <b>S</b>creen <b>E</b>verything <b>I</b>nclude',
+   why:"The four counted stages of a PRISMA flow diagram.",
+   items:[
+    {l:"I",w:"Identification",d:"Where searched; records found."},
+    {l:"S",w:"Screening",d:"After duplicates; title/abstract exclusions."},
+    {l:"E",w:"Eligibility",d:"Full texts assessed; exclusion reasons."},
+    {l:"I",w:"Included",d:"Final studies in the synthesis."}
+   ]},
+  {title:"Source quality, strongest → weakest", phrase:'<b>J</b>ust <b>C</b>ite <b>B</b>etter <b>S</b>tandard <b>B</b>logs',
+   why:"The academic-weight ranking of source types.",
+   items:[
+    {l:"J",w:"Journals (peer-reviewed)",d:"Strongest."},
+    {l:"C",w:"Conference papers",d:"Common in computing; assess quality."},
+    {l:"B",w:"Books & chapters",d:"Concepts & established methods."},
+    {l:"S",w:"Standards docs",d:"ISO / NIST / OWASP when relevant."},
+    {l:"B",w:"Blogs / vendor docs",d:"Weakest; triangulate carefully."}
+   ]}
+ ],
+ activities:[
+  {tag:"Self-activity", title:"From a broad idea to a literature-review plan",
+   html:`<label>One researchable topic (one sentence, real ICT context)</label><textarea data-store="t6a1"></textarea>
+    <label>4–6 keywords &amp; synonyms</label><textarea data-store="t6a2"></textarea>
+    <label>Two databases / search platforms you will use</label><input type="text" data-store="t6a3">
+    <label>Two inclusion criteria</label><textarea data-store="t6a4"></textarea>
+    <label>Two exclusion criteria</label><textarea data-store="t6a5"></textarea>
+    <label>Three relevant sources (title · author · year)</label><textarea data-store="t6a6" placeholder="1) ...\n2) ...\n3) ..."></textarea>
+    <details class="reveal"><summary>Worked starter (AI in software development)</summary><div class="rc"><p><b>Topic:</b> "How does the use of generative AI tools (e.g. GitHub Copilot, ChatGPT) influence code quality and developer productivity among software-development students during project work?" <b>Keywords:</b> generative AI / LLMs; AI coding tools; software development; developer productivity; code quality; student developers. <b>Databases:</b> Google Scholar + IEEE Xplore. <b>Include:</b> 2019–2026; studies of AI coding tools reporting productivity/quality/learning. <b>Exclude:</b> AI in unrelated fields; opinion pieces with no method.</p></div></details>`},
+  {tag:"Higher-order · reflection", title:"Analysis prompts",
+   html:`<ol>
+     <li>How does source quality influence the credibility of your chosen design and instruments?</li>
+     <li>What patterns would you look for when synthesising studies on user trust in AI tools, and why do they matter for your topic?</li>
+     <li>How can inclusion/exclusion criteria reduce bias in a review on cybersecurity practices?</li>
+     <li>How can a literature review help refine a problem that's too broad or technical?</li>
+     <li>How would you justify using both academic sources and standards (ISO/NIST) in a secure-software-development study?</li>
+   </ol><textarea data-store="t6b"></textarea>`}
+ ],
+ quiz:[
+  {q:"Which statement best describes a literature review?",
+   options:["A list of summaries of articles you found online","A structured, critical discussion of existing knowledge related to your research problem","A description of how you will collect data","A list of websites about your topic"],
+   answer:1, explain:"It's a structured, critical synthesis — not a list of summaries."},
+  {q:"Which source is usually strongest for academic evidence in ICT research?",
+   options:["Peer-reviewed journal article","Unreferenced blog post","Marketing brochure","Anonymous forum discussion"],
+   answer:0, explain:"Peer-reviewed journal articles carry the most academic weight."},
+  {q:"What is an inclusion criterion in a literature review?",
+   options:["A rule that defines which sources you will keep","A method to select participants","A way to code qualitative data","A technique to calculate sample size"],
+   answer:0, explain:"Inclusion criteria define which sources qualify to be kept."},
+  {q:"Which practice most helps you avoid a 'list of summaries'?",
+   options:["One paragraph per source without comparison","Grouping sources by themes and comparing them","Only using sources older than 10 years","Avoiding citations"],
+   answer:1, explain:"Synthesis means grouping and comparing sources, not summarising each in turn."},
+  {q:"What is the main purpose of keeping a search log?",
+   options:["To replace the reference list","To make your search process transparent and repeatable","To increase survey response rates","To calculate p-values"],
+   answer:1, explain:"A search log makes the process transparent and repeatable — key for an SLR."},
+  {q:"In a PRISMA 2020 flow diagram, which stage records the final studies used in the synthesis?",
+   options:["Identification","Screening","Eligibility","Included"],
+   answer:3, explain:"'Included' reports how many studies were finally synthesised."}
+ ]
+}
+,
+/* ===================== TOPIC 7 ===================== */
+{
+ id:"t7", num:7, title:"Formulating a Research Problem", src:"Semester 1, Topic 7 · Kumar Chapter 4",
+ notesHTML:`
+ <p class="lead">Formulating a research problem turns a broad ICT interest into a clear, feasible problem. Kumar explains this step sets your destination and influences almost every later decision — design, sample, instruments, analysis, even how you write the report.</p>
+
+ <h4><span class="pin">A</span>Why the research problem matters in ICT</h4>
+ <p>The problem tells your supervisor and reader exactly what you intend to investigate. If it's vague, everything is vague — your data-collection questions, your sample, your analysis. If it's precise, the rest becomes easier to plan and justify. In ICT the problem often emerges from practice: recurring security incidents, user complaints, high defect rates after deployment, low adoption of a new system, or conflicting views about a technology like AI coding assistants.</p>
+ <h5>ICT practice triggers</h5>
+ <ul>
+   <li>A helpdesk notices password-reset requests spike after every system update and wants to know why.</li>
+   <li>A dev team suspects AI code generation increases speed but may introduce hidden security flaws.</li>
+   <li>An institution deploys a new platform feature, but usage stays low despite training.</li>
+ </ul>
+
+ <h4><span class="pin">C</span>Characteristics of a good research problem</h4>
+ <ul>
+   <li><b>Clear &amp; specific:</b> states exactly what will be studied, in what context, with whom.</li>
+   <li><b>Researchable:</b> answerable using data, not only opinion.</li>
+   <li><b>Feasible:</b> fits your time, access, budget and skills.</li>
+   <li><b>Relevant:</b> matters to ICT — quality, security, usability, or learning.</li>
+   <li><b>Ethically workable:</b> doable with consent and privacy safeguards.</li>
+ </ul>
+
+ <h4><span class="pin">D</span>From a broad idea to a researchable problem</h4>
+ <ol class="steps">
+   <li><b>Start broad &amp; name the domain</b> — e.g. AI in software development.</li>
+   <li><b>Choose a specific setting</b> — your campus software lab, one organisation, one module team.</li>
+   <li><b>Specify the population / data source</b> — junior developers, Git commit history, code-review comments.</li>
+   <li><b>Decide what you want to find out</b> — describe, compare, or examine relationships.</li>
+   <li><b>Rewrite as a single, answerable problem / question.</b></li>
+ </ol>
+ <div class="callout green"><span class="lab">Worked example — qualitative</span>"How do junior developers in a university software project team describe the ways AI code assistants influence their debugging and code-review practices?"</div>
+ <div class="callout green"><span class="lab">Worked example — quantitative</span>"What is the difference in post-release defect density between modules developed with regular AI code-assistant use and modules developed without it in the same project?"</div>
+ <div class="callout gold"><span class="lab">Key point</span>A topic becomes researchable when it is <b>specific</b>, <b>located in a context</b>, and <b>answerable using observable data</b>.</div>
+
+ <h4><span class="pin">E</span>Feasibility &amp; scope checks</h4>
+ <ul>
+   <li><b>Time:</b> can you collect &amp; analyse the data within the semester?</li>
+   <li><b>Access:</b> do you have permission to reach participants, systems, repos, or logs?</li>
+   <li><b>Resources:</b> the tools you need (recording devices, survey platforms, analytics)?</li>
+   <li><b>Skills:</b> basic statistics, qualitative coding, or log analysis?</li>
+   <li><b>Ethics &amp; privacy:</b> handling personal data, credentials, records, or proprietary code — can you anonymise and secure it?</li>
+ </ul>
+ <p class="ex">If you can't access production security logs due to policy, shift to interviews with security analysts, anonymised incident summaries, or a controlled lab phishing simulation.</p>
+
+ <h4><span class="pin">F</span>Establishing the research problem — four sub-questions</h4>
+ <p>The problem statement is the cornerstone of your research. Build it by answering four critical sub-questions:</p>
+ <ul>
+   <li><b>What is the problem?</b> The core issue — specific, clear, tied to your title and objectives. <span class="ex">"…despite the potential benefits of predictive systems in higher education, their adoption is hindered by concerns over data privacy and a lack of staff training."</span></li>
+   <li><b>Why is it a problem?</b> Its significance and impact. <span class="ex">"…privacy concerns prevent full implementation, limiting improvements to student retention and performance; inadequate training leads to poor system usage."</span></li>
+   <li><b>For whom is it a problem?</b> The stakeholders affected and who benefits if solved. <span class="ex">"…primarily academic staff and administrators who implement the systems; also students, whose outcomes are affected."</span></li>
+   <li><b>What are the consequences if not addressed?</b> The risks of inaction. <span class="ex">"…institutions keep under-utilising predictive systems and risk non-compliance with data-protection regulations and legal exposure."</span></li>
+ </ul>
+ <div class="callout gold"><span class="lab">A complete problem statement weaves all four together</span>"The problem is that despite the potential benefits of predictive systems in higher education, their adoption could be improved by concerns over data privacy and a lack of staff training. This is a problem because these concerns prevent full implementation, limiting improvements to student retention and performance. The problem affects academic staff and administrators who use these systems, and students whose outcomes are impacted by under-utilisation. If unaddressed, institutions miss opportunities to enhance student success and face legal risks from non-compliance with data-protection regulations." The Golden Thread keeps this consistently linked to questions, objectives and methodology.</div>
+ `,
+ mnemonics:[
+  {title:"Characteristics of a good research problem", phrase:'<b>C</b>areful <b>R</b>esearchers <b>F</b>ind <b>R</b>eal <b>E</b>vidence',
+   why:"Five letters → the five hallmarks of a strong research problem.",
+   items:[
+    {l:"C",w:"Clear & specific",d:"What, in what context, with whom."},
+    {l:"R",w:"Researchable",d:"Answerable with data, not opinion."},
+    {l:"F",w:"Feasible",d:"Fits time, access, budget, skills."},
+    {l:"R",w:"Relevant",d:"Matters to an ICT context."},
+    {l:"E",w:"Ethically workable",d:"Consent & privacy safeguards possible."}
+   ]},
+  {title:"The four problem-statement questions", phrase:'<b>What</b> · <b>Why</b> · <b>Who</b> · <b>What-if</b>',
+   why:"The four sub-questions that build a complete problem statement.",
+   items:[
+    {l:"1",w:"What is the problem?",d:"The specific core issue."},
+    {l:"2",w:"Why is it a problem?",d:"Significance & impact."},
+    {l:"3",w:"For whom?",d:"Stakeholders affected."},
+    {l:"4",w:"What if unaddressed?",d:"Consequences of inaction."}
+   ]},
+  {title:"Feasibility checks", phrase:'<b>T</b>iny <b>A</b>nts <b>R</b>arely <b>S</b>kip <b>E</b>ating',
+   why:"Test any problem against these five constraints.",
+   items:[
+    {l:"T",w:"Time",d:"Doable within the semester?"},
+    {l:"A",w:"Access",d:"Permission to data/participants?"},
+    {l:"R",w:"Resources",d:"Tools & platforms?"},
+    {l:"S",w:"Skills",d:"Stats, coding, log analysis?"},
+    {l:"E",w:"Ethics",d:"Anonymise & secure data?"}
+   ]}
+ ],
+ activities:[
+  {tag:"Self-activity · pairs", title:"From a broad idea to a research problem",
+   html:`<label>Write one broad idea, then narrow it to one researchable topic (one sentence).</label><textarea data-store="t7a1"></textarea>
+    <label>State the setting and the population / data source.</label><textarea data-store="t7a2"></textarea>
+    <label>Draft one main aim and three objectives aligned to the topic.</label><textarea data-store="t7a3"></textarea>
+    <label>List one feasibility risk and how you'd handle it (access, time, or ethics).</label><textarea data-store="t7a4"></textarea>
+    <p style="font-size:.9rem;color:var(--ink-faint)">Then swap with another pair and check whether <b>every objective</b> could be answered with real data.</p>`},
+  {tag:"Build", title:"Write a full four-part problem statement",
+   html:`<label>What is the problem?</label><textarea data-store="t7b1"></textarea>
+    <label>Why is it a problem?</label><textarea data-store="t7b2"></textarea>
+    <label>For whom is it a problem?</label><textarea data-store="t7b3"></textarea>
+    <label>What are the consequences if not addressed?</label><textarea data-store="t7b4"></textarea>
+    <details class="reveal"><summary>Check it against the Golden Thread</summary><div class="rc"><p>Does the problem match your <b>title</b>? Will your <b>questions</b> and <b>objectives</b> flow from it? If a stakeholder or consequence here never reappears in your objectives, either add it to the study or trim it from the statement.</p></div></details>`}
+ ],
+ quiz:[
+  {q:"What is the main purpose of formulating a research problem?",
+   options:["To choose a statistical test","To decide what you want to find out about","To write the final conclusion","To format your reference list"],
+   answer:1, explain:"It sets the destination — what you want to find out — and everything else flows from it."},
+  {q:"Which research problem is most specific and researchable?",
+   options:["AI is good for software development","Technology is changing the world","Third-year ICT students use AI tools during programming assignments in Module X","Cybersecurity is important in universities"],
+   answer:2, explain:"It names a population, an activity and a specific setting — investigable with data."},
+  {q:"Which factor is part of a feasibility check?",
+   options:["Choosing your favourite topic","Whether you have access to participants or data","Writing a long introduction","Using as many objectives as possible"],
+   answer:1, explain:"Access to participants/data is a core feasibility constraint."},
+  {q:"In an ICT study, what does alignment mean?",
+   options:["Using the latest programming language","Matching the research problem, objectives, data collection, and analysis","Collecting data from as many people as possible","Including screenshots in the report"],
+   answer:1, explain:"Alignment is the Golden Thread — problem, objectives, data and analysis all match."},
+  {q:"Which objective is best aligned with a study on AI code assistants in debugging?",
+   options:["To describe students' favourite apps","To test a new Wi-Fi router","To explore how developers use AI suggestions when fixing errors","To list all AI tools available online"],
+   answer:2, explain:"It directly targets how developers use AI suggestions during debugging."}
+ ]
+}
+,
+/* ===================== TOPIC 8 ===================== */
+{
+ id:"t8", num:8, title:"Constructing the Research Aim & Sub-Objectives", src:"Semester 1, Week 8 · Kumar Ch.4 & Creswell Ch.7",
+ notesHTML:`
+ <p class="lead">Your aim and objectives are the blueprint for what you will study, how you will study it, and how you will report results. Get them right and the rest of the study falls into place.</p>
+
+ <h4><span class="pin">A</span>What is the main research aim?</h4>
+ <p>In Kumar's approach, objectives are the goals you set out to attain. The <b>main aim</b> is an overall statement of the <b>thrust</b> of your study and the main associations or relationships you want to discover or establish.</p>
+ <div class="callout gold"><span class="lab">Example main aim</span>"To design an AI-based solution for crime prevention in the Western Cape, South Africa, by identifying the key crime-prevention requirements and determining the functional features needed for effective implementation."</div>
+
+ <h4><span class="pin">B</span>What are objectives?</h4>
+ <p>Objectives specify the particular aspects of the topic you want to investigate within the main framework. They are <b>listed numerically</b>, and each should focus on a <b>single aspect</b> of the study. The main aim gives the overall thrust; each objective focuses on one aspect of the aim.</p>
+
+ <h4><span class="pin">C</span>How aim, objectives, questions &amp; hypotheses fit together</h4>
+ <p><b>Which comes first — aims or objectives?</b> Your <b>aim</b> is the guiding light; well-defined objectives let you tackle each step with clarity. So: embrace your aim first, then let your objectives lead.</p>
+ <p><b>Questions or objectives first?</b> Typically define your <b>objectives</b> first (the specific actions to meet your aim), then develop research questions that correspond to each objective.</p>
+ <p>Creswell explains the <b>purpose statement</b> is the first signpost; researchers narrow from the broad purpose to specific questions or hypotheses. The practical mapping:</p>
+ <ul>
+   <li><b>Purpose statement / problem focus:</b> overall direction and context.</li>
+   <li><b>Main research aim:</b> the core outcome — your overall thrust.</li>
+   <li><b>Sub-objectives:</b> the smaller measurable/investigable pieces that together achieve the aim.</li>
+   <li><b>Research questions:</b> the questions answered by collecting and analysing data.</li>
+   <li><b>Hypotheses:</b> specific predictions about relationships/differences between variables, tested statistically.</li>
+ </ul>
+ <div class="callout green"><span class="lab">Important convention</span>In <b>qualitative</b> studies, Creswell notes researchers state research <b>questions, not hypotheses</b>.</div>
+
+ <h4><span class="pin">D</span>Step-by-step method (Kumar)</h4>
+ <p>Kumar suggests raising research questions about what you want to find out, then formulating objectives that grow out of them. The difference is mainly in wording: questions are phrased as questions; objectives transform them into behavioural aims using action verbs.</p>
+ <ol class="steps">
+   <li><b>Clarify the topic &amp; setting</b> — domain, organisation, community, system, or platform.</li>
+   <li><b>Raise research questions</b> — list everything you want to find out.</li>
+   <li><b>Group &amp; reduce</b> — remove overlaps, combine similar ones, keep what's feasible.</li>
+   <li><b>Write the main aim</b> — a single sentence capturing the overall thrust.</li>
+   <li><b>Write objectives</b> — convert each key question into an objective using action verbs.</li>
+   <li><b>Check feasibility</b> — can the objectives be achieved within your time, access, resources and expertise?</li>
+ </ol>
+
+ <h4><span class="pin">E</span>Wording rules &amp; quality checks for objectives</h4>
+ <p>Objectives must be <b>clear, specific and unambiguous</b>, listed under two headings (<b>Main Aim</b> and <b>Objectives</b>), numbered, each covering one aspect, using action verbs such as "to determine", "to identify", "to ascertain", "to measure", "to explore".</p>
+ <div class="callout red"><span class="lab">Be careful</span>The way you word the aim and objectives <b>determines how the research is classified</b> (descriptive, correlational, experimental) — and therefore the research design you need.</div>
+ <h5>Quick objective checklist</h5>
+ <ul>
+   <li><b>Clear:</b> a reader understands exactly what you'll achieve.</li>
+   <li><b>Single focus:</b> one objective, one issue.</li>
+   <li><b>Action verb:</b> starts with an action-oriented verb.</li>
+   <li><b>Specific scope:</b> identifies what, who, where (and when if needed).</li>
+   <li><b>Design aligned:</b> wording matches your intended design (describe, relate, compare, test).</li>
+ </ul>
+
+ <h4><span class="pin">F</span>How Creswell supports your aim &amp; objectives</h4>
+ <ul>
+   <li>Keep <b>variables visible</b> in quantitative framing — questions/hypotheses include variables described, related, or compared.</li>
+   <li>Use a <b>consistent word order</b> — usually independent variable first, dependent variable second.</li>
+   <li>Organise quantitative work from <b>descriptive to inferential</b> — describe key variables first, then relate or compare.</li>
+ </ul>
+
+ <h4><span class="pin">G</span>Templates you can reuse</h4>
+ <div class="callout gold"><span class="lab">Main research aim template</span>"To [action verb] [central phenomenon/relationship/difference] among/between [participants/systems/cases] in/at [site or context], in order to [intended contribution or outcome]."</div>
+ <h5>Objective templates (choose one pattern)</h5>
+ <ul>
+   <li><b>Descriptive:</b> To describe [variable/phenomenon] among [population] in [context].</li>
+   <li><b>Relationship:</b> To examine the relationship between [IV] and [DV] among [population] in [context].</li>
+   <li><b>Comparison:</b> To compare [group A] and [group B] on [DV] in [context].</li>
+   <li><b>Qualitative exploration:</b> To explore how/why [participants] experience/understand [phenomenon] in [context].</li>
+ </ul>
+
+ <h4><span class="pin">H</span>ICT worked example — aim &amp; objectives</h4>
+ <p><b>Topic:</b> AI code assistants and code quality in an ICT team.</p>
+ <p><b>Main aim:</b> To examine how the use of AI code assistants influences code quality in a selected software-development team, and to identify practices that support reliable and maintainable outputs.</p>
+ <div class="gridbox">
+   <div class="callout green"><span class="lab">Quantitative-leaning objectives</span>1. To <b>determine</b> the extent to which developers use AI assistants daily. 2. To <b>measure</b> post-release defect rates for features built with vs without AI support. 3. To <b>examine the relationship</b> between AI usage intensity and defect rates, controlling for experience. 4. To <b>compare</b> code-review outcomes for AI-assisted vs non-AI commits.</div>
+   <div class="callout green"><span class="lab">Qualitative-leaning objectives</span>1. To <b>explore</b> how developers decide when to rely on or reject AI suggestions. 2. To <b>describe</b> verification and testing practices when AI-generated code is used. 3. To <b>identify</b> perceived benefits, risks and governance needs of AI adoption in the team.</div>
+ </div>
+
+ <h4><span class="pin">I</span>Linking objectives &amp; research questions (one-to-one)</h4>
+ <p>Each objective should be addressed by at least one research question, and each question should link back to an objective.</p>
+ <div class="callout gold"><span class="lab">Alignment rules</span>One objective ↔ one research question. Objectives and questions share the same focus and specificity. Questions must be researchable through data collection and analysis.</div>
+ <h5>Example 1 — Cloud computing adoption in SMEs</h5>
+ <p><b>Aim:</b> To examine the factors influencing cloud-computing adoption among SMEs in South Africa.</p>
+ <table>
+   <tr><th>Objective</th><th>Matching research question</th></tr>
+   <tr><td>1. Identify key <b>technological</b> factors influencing adoption.</td><td>What technological factors influence cloud adoption among SMEs?</td></tr>
+   <tr><td>2. Evaluate the role of organisational <b>ICT readiness</b>.</td><td>How does organisational readiness affect SMEs' decisions to adopt?</td></tr>
+   <tr><td>3. Assess the impact of <b>external environmental</b> factors.</td><td>What external environmental factors influence adoption?</td></tr>
+ </table>
+ <h5>Example 2 — Cybersecurity awareness training</h5>
+ <p><b>Aim:</b> To investigate the impact of cybersecurity awareness training on phishing vulnerability among ICT users in higher education.</p>
+ <table>
+   <tr><th>Objective</th><th>Matching research question</th></tr>
+   <tr><td>1. Measure changes in phishing recognition before/after training.</td><td>To what extent does training improve phishing recognition?</td></tr>
+   <tr><td>2. Determine the relationship between ICT experience and outcomes.</td><td>How does prior ICT experience influence training effectiveness?</td></tr>
+   <tr><td>3. Compare different training delivery methods.</td><td>Which delivery method is more effective in reducing susceptibility?</td></tr>
+ </table>
+ <h5>Example 3 — Mobile learning applications</h5>
+ <p><b>Aim:</b> To assess the effectiveness of mobile learning applications on student engagement and academic performance in ICT programmes.</p>
+ <table>
+   <tr><th>Objective</th><th>Matching research question</th></tr>
+   <tr><td>1. Analyse the relationship between app-usage frequency and engagement.</td><td>What is the relationship between app-usage frequency and engagement?</td></tr>
+   <tr><td>2. Compare performance between users and non-users.</td><td>How do outcomes differ between app users and non-users?</td></tr>
+   <tr><td>3. Explore student perceptions of usability and satisfaction.</td><td>How do students perceive the usability and usefulness of the apps?</td></tr>
+ </table>
+
+ <h4><span class="pin">J</span>Summary</h4>
+ <p>Alignment between objectives and research questions strengthens the coherence, validity, and academic defensibility of a project. Well-aligned studies ensure the design, data collection and findings directly address the study's intended purpose.</p>
+
+ <h4><span class="pin">L</span>Quick reference — action verbs for objectives</h4>
+ <p>To <b>describe · identify · determine · measure · assess · compare · examine · explore · analyse · evaluate · establish · test.</b></p>
+ `,
+ mnemonics:[
+  {title:"Objective quality checklist", phrase:'<b>C</b>lever <b>S</b>tudents <b>A</b>lways <b>S</b>tructure <b>D</b>etails',
+   why:"Five checks every objective must pass (C-S-A-S-D).",
+   items:[
+    {l:"C",w:"Clear",d:"Reader knows exactly what you'll achieve."},
+    {l:"S",w:"Single focus",d:"One objective, one issue."},
+    {l:"A",w:"Action verb",d:"Starts with 'to determine/identify/explore'…"},
+    {l:"S",w:"Specific scope",d:"What, who, where (and when)."},
+    {l:"D",w:"Design aligned",d:"Wording matches describe/relate/compare/test."}
+   ]},
+  {title:"The narrowing chain (Creswell + Kumar)", phrase:'<b>P</b>urpose → <b>A</b>im → <b>O</b>bjectives → <b>Q</b>uestions → <b>H</b>ypotheses',
+   why:"How a study narrows from broad purpose to testable predictions.",
+   items:[
+    {l:"P",w:"Purpose statement",d:"Overall direction & context."},
+    {l:"A",w:"Aim",d:"The core outcome / overall thrust."},
+    {l:"O",w:"Objectives",d:"Measurable pieces achieving the aim."},
+    {l:"Q",w:"Questions",d:"Answered by collecting/analysing data."},
+    {l:"H",w:"Hypotheses",d:"Predicted relationships — quantitative only."}
+   ]},
+  {title:"Kumar's 6-step build method", phrase:'<b>C</b>lever <b>R</b>esearchers <b>G</b>row <b>A</b>ims, <b>O</b>rder <b>F</b>easibly',
+   why:"The six steps to construct an aim and its objectives.",
+   items:[
+    {l:"C",w:"Clarify topic & setting",d:"Domain, organisation, system."},
+    {l:"R",w:"Raise questions",d:"List everything you want to find out."},
+    {l:"G",w:"Group & reduce",d:"Remove overlaps; keep the feasible."},
+    {l:"A",w:"Aim — write it",d:"One sentence; the overall thrust."},
+    {l:"O",w:"Objectives — write them",d:"Convert questions using action verbs."},
+    {l:"F",w:"Feasibility check",d:"Time, access, resources, expertise."}
+   ]}
+ ],
+ activities:[
+  {tag:"Practical · this week", title:"Build your aim, questions & objectives",
+   html:`<label>1. Choose your topic and write one draft main research aim.</label><textarea data-store="t8a1"></textarea>
+    <label>2. Write 6–10 research questions about what you want to find out.</label><textarea data-store="t8a2" placeholder="1) ...\n2) ...\n3) ..."></textarea>
+    <label>3. Convert your questions into 4–6 sub-objectives using action verbs.</label><textarea data-store="t8a3"></textarea>
+    <label>4. Check each objective with the Section E checklist — remove any that combine multiple issues or aren't feasible.</label><textarea data-store="t8a4"></textarea>
+    <label>5. Optional (quantitative only): draft 1–3 hypotheses matching your inferential objectives.</label><textarea data-store="t8a5"></textarea>
+    <details class="reveal"><summary>Action verbs to choose from</summary><div class="rc"><p>To <b>describe, identify, determine, measure, assess, compare, examine, explore, analyse, evaluate, establish, test.</b> Pick the verb that matches your intended design: <em>describe</em>→descriptive, <em>examine the relationship/test</em>→correlational or experimental, <em>compare</em>→comparison, <em>explore</em>→qualitative.</p></div></details>`},
+  {tag:"Align", title:"Map objectives to questions (one-to-one)",
+   html:`<p>Take three of your objectives and write the single research question that matches each. Check they share the same focus and specificity.</p>
+    <label>Objective 1 → Question 1</label><textarea data-store="t8b1"></textarea>
+    <label>Objective 2 → Question 2</label><textarea data-store="t8b2"></textarea>
+    <label>Objective 3 → Question 3</label><textarea data-store="t8b3"></textarea>
+    <details class="reveal"><summary>Self-check</summary><div class="rc"><p>If a question introduces a focus your objective never mentioned (or vice-versa), the thread is broken — realign the wording. Every objective should be answerable through data collection and analysis.</p></div></details>`}
+ ],
+ quiz:[
+  {q:"In Kumar's approach, what does the MAIN research aim express?",
+   options:["A list of statistical tests","The overall thrust of the study and the main relationships you want to establish","The reference list","The data-collection schedule"],
+   answer:1, explain:"The main aim is the overall thrust — the core outcome and main associations you want to discover."},
+  {q:"How should objectives be written?",
+   options:["As long paragraphs covering many issues","Numbered, each focusing on a single aspect, starting with an action verb","As yes/no questions","Only after the conclusion"],
+   answer:1, explain:"Objectives are numbered, single-focus, and begin with action verbs (to determine, to explore…)."},
+  {q:"According to Creswell, qualitative studies should state:",
+   options:["Hypotheses, not questions","Research questions, not hypotheses","Only objectives","Only a purpose statement"],
+   answer:1, explain:"In qualitative work, researchers state research questions rather than hypotheses."},
+  {q:"Which objective is correctly worded for a COMPARISON design?",
+   options:["To explore how developers feel about AI tools","To compare post-release defect rates for AI-assisted and non-AI commits","To describe students' app preferences","To list available AI tools"],
+   answer:1, explain:"'To compare … on [outcome]' signals a comparison design with two groups."},
+  {q:"What is the recommended alignment between objectives and research questions?",
+   options:["Many objectives to one question","One objective to one research question, sharing the same focus","Questions unrelated to objectives","Hypotheses replace both"],
+   answer:1, explain:"Aim for one objective ↔ one question with shared focus and specificity (the Golden Thread)."},
+  {q:"Why does the wording of your aim and objectives matter so much?",
+   options:["It changes the reference style","It determines how the research is classified and therefore the design you need","It sets the page count","It decides the submission date"],
+   answer:1, explain:"Kumar warns that wording classifies the study (descriptive/correlational/experimental) and dictates the design."}
+ ]
+}
+];
+window.__startApp(window.__DATA);
+</script>
+</body>
+</html>

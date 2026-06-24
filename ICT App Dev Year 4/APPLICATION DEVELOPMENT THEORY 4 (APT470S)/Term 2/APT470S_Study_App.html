@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APT470S Comprehensive Exam Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --background: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #475569;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --accent: #f59e0b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 300px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #38bdf8;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: white;
+            background-color: var(--primary);
+        }
+
+        nav ul li a.active {
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Main Content Container */
+        main {
+            margin-left: 300px;
+            flex: 1;
+            padding: 2.5rem;
+            width: calc(100% - 300px);
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        h4 {
+            color: var(--text);
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Dashboard Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Advanced Notes Styling */
+        .concept-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--secondary);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .theory-highlight {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .theory-title {
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #93c5fd;
+            padding-bottom: 0.5rem;
+        }
+        
+        .devops-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .devops-box h4 {
+            color: #166534;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mindmap-placeholder {
+            background-color: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .map-node {
+            background: white;
+            border: 1px solid #94a3b8;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: 500;
+        }
+
+        .map-root {
+            background: var(--secondary);
+            color: white;
+            border: none;
+        }
+
+        .map-child {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        .exam-target {
+            background-color: var(--danger);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Quiz UI components */
+        .quiz-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-top: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .question-block {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .option-label:hover {
+            background-color: #f8fafc;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .correct {
+            background-color: #dcfce7 !important;
+            border-color: #86efac !important;
+            color: #15803d;
+        }
+
+        .incorrect {
+            background-color: #fee2e2 !important;
+            border-color: #fca5a5 !important;
+            color: #b91c1c;
+        }
+
+        textarea.form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            margin-bottom: 1rem;
+            resize: vertical;
+        }
+
+        details {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        summary {
+            padding: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--primary);
+            list-style: none;
+        }
+        
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .details-content {
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        .text-bold { font-weight: bold; }
+        .mt-4 { margin-top: 1rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+        @media (max-width: 992px) {
+            nav { width: 80px; padding: 2rem 0.5rem; }
+            nav .logo span, nav ul li a span { display: none; }
+            main { margin-left: 80px; width: calc(100% - 80px); padding: 1.5rem; }
+        }
+
+        @media (max-width: 600px) {
+            body { flex-direction: column; }
+            nav { width: 100%; height: auto; position: relative; padding: 1rem; }
+            nav ul { display: flex; flex-wrap: wrap; gap: 5px; }
+            main { margin-left: 0; width: 100%; padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>APT470S Portal</span>
+        </div>
+        <ul>
+            <li><a href="#" class="nav-link active" onclick="switchSection('dashboard')"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch1')"><i class="fa-solid fa-book"></i> <span>Ch 1: Intro & Ethics</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch2')"><i class="fa-solid fa-diagram-project"></i> <span>Ch 2: SW Processes</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch3')"><i class="fa-solid fa-person-running"></i> <span>Ch 3: Agile Dev</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch4')"><i class="fa-solid fa-users"></i> <span>Ch 4: Requirements</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch5')"><i class="fa-solid fa-square-poll-horizontal"></i> <span>Ch 5: System Modeling</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch6')"><i class="fa-solid fa-sitemap"></i> <span>Ch 6: Architecture</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('ch7')"><i class="fa-solid fa-recycle"></i> <span>Ch 7: Design & Reuse</span></a></li>
+            <li><a href="#" class="nav-link" onclick="switchSection('mock')"><i class="fa-solid fa-pen-to-square"></i> <span>2025 Past Paper</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="dashboard" class="section active">
+            <div class="exam-target"><i class="fa-solid fa-calendar-check"></i> Target: Applications Development Theory 4 (June 1st)</div>
+            <h1>Advanced Diploma Exam Prep Hub</h1>
+            <p class="subtitle">Comprehensive study workspace mapped to Sommerville (10th Ed) Chapters 1 to 7.</p>
+            
+            <div class="grid-3">
+                <div class="card" style="border-top: 4px solid var(--primary);">
+                    <h3><i class="fa-solid fa-bookmark text-primary"></i> Deep-Dive Theory</h3>
+                    <p>Expanded, textbook-level notes detailing the exact mechanisms behind software processes, architectures, and UML without superficial summaries.</p>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3><i class="fa-solid fa-diagram-project text-accent"></i> Structural Clarity</h3>
+                    <p>Relies on logical grouping, text-based mind maps, and detailed categorical breakdowns rather than basic acronym mnemonics.</p>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--success);">
+                    <h3><i class="fa-solid fa-check-double text-success"></i> Exam Simulation</h3>
+                    <p>Features the full, interactive <b>June 2025 Past Paper</b> integrated into the mock section with detailed marking guidelines.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ch1" class="section">
+            <h1>Chapter 1: Professional Software Development & Ethics</h1>
+            <p class="subtitle">The Core Pillars of Engineering and Professional Conduct</p>
+            
+            <div class="card">
+                <h2>1.1 What is Software Engineering?</h2>
+                <div class="concept-box">
+                    <p>Software engineering is an engineering discipline that is concerned with all aspects of software production from the early stages of system specification through to maintaining the system after it has gone into use.</p>
+                    <ul>
+                        <li><b>Engineering discipline:</b> Using appropriate theories and methods to solve problems bearing in mind organizational and financial constraints. It is not just writing code; it involves applying scientific principles to software creation.</li>
+                        <li><b>All aspects of production:</b> This spans beyond programming to encompass project management, development of tools, methods, theories to support software production, UI design, and rigorous testing methodologies.</li>
+                    </ul>
+                </div>
+
+                <h3>Types of Software Products</h3>
+                <ul>
+                    <li><b>Generic products:</b> Stand-alone systems that are produced by a development organization and sold on the open market to any customer who is able to buy them (e.g., MS Office, CAD software). The specification is owned by the software developer.</li>
+                    <li><b>Customized (Bespoke) products:</b> Software that is commissioned by a specific customer to meet their own needs (e.g., air traffic control systems, customized hospital patient management systems). The specification is owned by the customer.</li>
+                </ul>
+                
+                <h2>1.2 Essential Attributes of Good Software</h2>
+                <p>Software must deliver the required functionality and performance to the user, but functionality alone is insufficient. The software must possess four critical attributes:</p>
+                
+                <div class="theory-highlight">
+                    <div class="theory-title"><i class="fa-solid fa-layer-group"></i> Software Quality Attributes</div>
+                    <p><b>1. Maintainability:</b> Software must be written in such a way that it can evolve to meet the changing needs of customers. Because the business environment is continuously shifting, software change is inevitable. Maintainable code is clean, modular, and well-documented.</p>
+                    <p><b>2. Dependability and Security:</b> This includes a range of characteristics spanning reliability, security, and safety. Dependable software should not cause physical or economic damage in the event of system failure. Malicious users should not be able to access or damage the system.</p>
+                    <p><b>3. Efficiency:</b> Software should not make wasteful use of system resources such as memory and processor cycles. Efficiency includes responsiveness, processing time, memory utilization, and physical hardware wear and tear in embedded systems.</p>
+                    <p><b>4. Acceptability:</b> Software must be acceptable to the type of users for which it is designed. This means that it must be understandable, highly usable, and technically compatible with other systems they use daily.</p>
+                </div>
+
+                <h2>1.3 Software Engineering Ethics</h2>
+                <p>Software engineering involves wider responsibilities than simply the application of technical skills. Engineers must behave in an honest and ethically responsible way if they are to be respected as professionals. Ethical issues are not strictly bounded by laws.</p>
+                
+                <h3>Specific Ethical Dilemmas</h3>
+                <ul>
+                    <li><b>Confidentiality:</b> Engineers must normally respect the confidentiality of their employers or clients irrespective of whether or not a formal confidentiality agreement has been signed.</li>
+                    <li><b>Competence:</b> Engineers should not intentionally misrepresent their level of competence. They should not knowingly accept work which is fundamentally outside their skillset.</li>
+                    <li><b>Intellectual Property Rights:</b> Engineers must ensure that client and employer IP is protected. This includes understanding the constraints of open-source licenses and avoiding plagiarism.</li>
+                    <li><b>Computer Misuse:</b> Software engineers should not use their technical skills to misuse other people's computers (e.g., playing games on employer machines, disseminating viruses, or unauthorized snooping).</li>
+                </ul>
+
+                <h3>ACM/IEEE Code of Ethics (The 8 Principles)</h3>
+                <p>The IEEE Computer Society and ACM published a code of ethics outlining eight key areas of responsibility:</p>
+                <ol>
+                    <li><b>Public:</b> Act consistently with the public interest (e.g., whistleblowing on dangerous systems).</li>
+                    <li><b>Client and Employer:</b> Act in a manner that is in the best interests of their client and employer consistent with the public interest.</li>
+                    <li><b>Product:</b> Ensure that their products and related modifications meet the highest professional standards possible.</li>
+                    <li><b>Judgment:</b> Maintain integrity and independence in their professional judgment.</li>
+                    <li><b>Management:</b> Engineering managers and leaders shall subscribe to and promote an ethical approach to the management of software development.</li>
+                    <li><b>Profession:</b> Advance the integrity and reputation of the profession.</li>
+                    <li><b>Colleagues:</b> Be fair to and supportive of their colleagues.</li>
+                    <li><b>Self:</b> Participate in lifelong learning regarding the practice of their profession.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="ch2" class="section">
+            <h1>Chapter 2: Software Processes and Models</h1>
+            <p class="subtitle">Structured Engineering Workflows</p>
+            
+            <div class="card">
+                <h2>2.1 Core Software Process Activities</h2>
+                <p>A software process is a structured sequence of activities required to develop a software system. While different projects organize these differently, all processes share four fundamental activities:</p>
+                
+                <ul>
+                    <li><b>Software Specification:</b> The functionality of the software and constraints on its operation must be defined.</li>
+                    <li><b>Software Design and Implementation:</b> The software to meet the specification must be structured, modeled, and subsequently programmed.</li>
+                    <li><b>Software Validation:</b> The software must be comprehensively tested to ensure that it does what the customer actually wants.</li>
+                    <li><b>Software Evolution:</b> The software must evolve to meet changing customer, market, or regulatory needs.</li>
+                </ul>
+
+                <h2>2.2 Process Models</h2>
+                <p>A software process model is an abstract representation of a process. It presents a description of a process from some particular perspective.</p>
+                
+                <h3>1. The Waterfall Model (Plan-Driven)</h3>
+                <p>A plan-driven model where phases are distinct and strictly sequential. You do not move to the next phase until the previous one is fully complete, documented, and signed off.</p>
+                <ul>
+                    <li><b>Phases:</b> Requirements Analysis &rarr; System/Software Design &rarr; Implementation & Unit Testing &rarr; Integration & System Testing &rarr; Operation & Maintenance.</li>
+                    <li><b>Advantages:</b> Simple to manage, provides clear milestones, generates extensive documentation. It is appropriate when requirements are perfectly understood and fixed upfront (e.g., hardware-interfacing systems).</li>
+                    <li><b>Disadvantages:</b> Highly inflexible. It is extremely difficult and costly to respond to changing customer requirements. A working model is only seen very late in the project ("Big Bang" integration).</li>
+                </ul>
+
+                <h3>2. Incremental Development</h3>
+                <p>Specification, design, and implementation are interleaved rather than sequential. The system is developed as a series of versions (increments), with each version adding specific functionality based on client priorities.</p>
+                <ul>
+                    <li><b>Advantages:</b> The cost of accommodating changing requirements is drastically reduced. Customers get value early and can use the core functionality while other pieces are being built. Faster feedback loops.</li>
+                    <li><b>Disadvantages:</b> The process is not highly visible (managers need regular hard deliverables to measure progress). System structure tends to degrade as new increments are added ad-hoc unless significant time is spent refactoring the codebase.</li>
+                </ul>
+
+                <h3>3. Integration and Configuration (Reuse-oriented)</h3>
+                <p>Based on widespread software reuse where systems are integrated from existing components or COTS (Commercial Off-The-Shelf) applications rather than built from scratch.</p>
+                <ul>
+                    <li><b>Process Sequence:</b> Requirements specification &rarr; Software discovery and evaluation &rarr; Requirements refinement (adapting needs to fit available software) &rarr; Application system configuration &rarr; Component adaptation and integration.</li>
+                    <li><b>Advantages:</b> Significantly reduced costs and deployment risks. Much faster delivery timelines.</li>
+                    <li><b>Disadvantages:</b> Requirements compromises are inevitable; the final system may not meet the exact bespoke needs of users. There is a complete loss of control over the evolution of the reused third-party elements.</li>
+                </ul>
+                
+                <h3>4. Boehm's Spiral Model</h3>
+                <p>A risk-driven process model framework. The process is represented as a spiral rather than a sequence of activities with backtracking. Each loop in the spiral represents a phase in the process.</p>
+                <ul>
+                    <li><b>Objective Setting:</b> Specific objectives for the phase are identified.</li>
+                    <li><b>Risk Assessment and Reduction:</b> Risks are assessed and activities put in place to reduce the key risks (e.g., building a prototype to mitigate UI risk).</li>
+                    <li><b>Development and Validation:</b> A development model for the system is chosen based on risk evaluation.</li>
+                    <li><b>Planning:</b> The project is reviewed and the next phase of the spiral is planned.</li>
+                </ul>
+
+                <h2>2.3 Coping with Change</h2>
+                <p>Change adds costs, specifically the cost of rework. Software engineering uses specific approaches to reduce the cost of rework:</p>
+                <ol>
+                    <li><b>System Prototyping:</b> An initial version of a system used to demonstrate concepts and try out design options. It allows stakeholders to experiment with a working model to refine their requirements.</li>
+                    <li><b>Incremental Delivery:</b> Deploying system increments to the customer for comment and actual operational use, rather than delivering a massive system all at once.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="ch3" class="section">
+            <h1>Chapter 3: Agile Software Development</h1>
+            <p class="subtitle">Rapid Value Delivery and Adapting to Change</p>
+            
+            <div class="card">
+                <h2>3.1 The Agile Philosophy</h2>
+                <p>Agile methods were developed in the 1990s to reduce delivery time and to overcome the bureaucratic heavy weight of plan-driven models. They focus on the code rather than the design, iterative development, and delivering working software quickly to users.</p>
+                
+                <div class="theory-highlight">
+                    <div class="theory-title"><i class="fa-solid fa-file-contract"></i> The Agile Manifesto Core Values</div>
+                    <p><b>1. Individuals and interactions</b> over strict engineering processes and tools.</p>
+                    <p><b>2. Working software</b> over massive, comprehensive traditional documentation.</p>
+                    <p><b>3. Customer collaboration</b> over complex contract negotiations and rigid scopes.</p>
+                    <p><b>4. Responding to change</b> over strictly sticking to a pre-conceived project plan.</p>
+                </div>
+
+                <h2>3.2 Extreme Programming (XP)</h2>
+                <p>XP is a prominent, highly disciplined Agile methodology focusing intensely on technical excellence and engineering practices. It pushes recognized good practices to "extreme" levels.</p>
+                <ul>
+                    <li><b>Pair Programming:</b> Two programmers sit at one workstation. One types (the Driver), one reviews the code and thinks strategically (the Observer). This leads to fewer bugs, continuous real-time code review, and shared domain knowledge across the team.</li>
+                    <li><b>Test-Driven Development (TDD):</b> Writing an automated unit test <i>before</i> writing the production code. The developer writes a failing test defining a new function, writes the minimal code to pass the test, and then refactors. This ensures 100% test coverage and acts as executable documentation.</li>
+                    <li><b>Continuous Integration (CI):</b> As soon as work on a task is complete, it is integrated into the whole system. All unit tests must pass upon integration, preventing the "integration hell" commonly found in Waterfall models.</li>
+                    <li><b>Refactoring:</b> Constantly cleaning up and improving the internal structure of the code without altering its external behavior to prevent code rot.</li>
+                </ul>
+
+                <h2>3.3 Scrum Framework</h2>
+                <p>Scrum is an Agile management framework used to manage complex product development. It is an empirical process based on transparency, inspection, and adaptation.</p>
+                
+                <div class="mindmap-placeholder">
+                    <h4><i class="fa-solid fa-network-wired"></i> Textual Mind Map: Scrum Anatomy</h4>
+                    <div class="map-node map-root">Scrum Framework</div> &rarr; 
+                    <div class="map-node map-child">Roles</div> &rarr; 
+                    <div class="map-node">Product Owner</div>
+                    <div class="map-node">Scrum Master</div>
+                    <div class="map-node">Development Team</div>
+                    <br><br>&rarr; 
+                    <div class="map-node map-child">Artifacts</div> &rarr; 
+                    <div class="map-node">Product Backlog</div>
+                    <div class="map-node">Sprint Backlog</div>
+                    <div class="map-node">Product Increment</div>
+                    <br><br>&rarr; 
+                    <div class="map-node map-child">Events</div> &rarr; 
+                    <div class="map-node">Sprint Planning</div>
+                    <div class="map-node">Daily Scrum</div>
+                    <div class="map-node">Sprint Review</div>
+                    <div class="map-node">Retrospective</div>
+                </div>
+                
+                <h3>Detailed Scrum Roles</h3>
+                <ul>
+                    <li><b>Product Owner:</b> Represents the business/customer. Solely responsible for maximizing the value of the product. They own the Product Backlog and must clearly prioritize its items.</li>
+                    <li><b>Scrum Master:</b> A servant-leader and facilitator. Removes impediments (blockers) for the team, protects the team from external interference, and ensures Scrum rules are understood and enacted.</li>
+                    <li><b>Development Team:</b> A self-organizing, cross-functional group of professionals who do the actual work of delivering a potentially releasable Increment of "Done" product at the end of each Sprint.</li>
+                </ul>
+
+                <h3>Detailed Scrum Events</h3>
+                <ul>
+                    <li><b>The Sprint:</b> A fixed timebox (usually 2-4 weeks) during which work is completed. Once a Sprint begins, its goals cannot be changed.</li>
+                    <li><b>Daily Scrum:</b> A 15-minute daily synchronization meeting for the Dev Team to inspect progress toward the Sprint Goal. (What did I do yesterday? What will I do today? Are there any blockers?)</li>
+                    <li><b>Sprint Review:</b> Held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed. A collaborative demonstration, not a status report.</li>
+                    <li><b>Sprint Retrospective:</b> An internal team meeting to inspect how the last Sprint went regarding people, relationships, processes, and tools, aiming to identify improvements for the next Sprint.</li>
+                </ul>
+                
+                <h2>3.4 Scaling Agile</h2>
+                <p>While Agile works well for small, co-located teams building independent software, scaling it to large enterprises (e.g., systems of systems, teams of 500+ developers) presents challenges. Frameworks like SAFe (Scaled Agile Framework) and Spotify's "Tribes and Squads" model attempt to solve cross-team dependencies and architecture alignment.</p>
+            </div>
+        </section>
+
+        <section id="ch4" class="section">
+            <h1>Chapter 4: Requirements Engineering & Human Aspects</h1>
+            <p class="subtitle">Elicitation, Analysis, and Team Dynamics</p>
+            
+            <div class="card">
+                <h2>4.1 The Requirements Engineering Process</h2>
+                <p>Requirements are descriptions of the services that a system should provide and the constraints on its operation. The overall RE process involves four high-level activities:</p>
+                <ol>
+                    <li><b>Elicitation and Analysis:</b> Discovering requirements by interacting with stakeholders (users, managers, domain experts).</li>
+                    <li><b>Specification:</b> Converting these requirements into a standard, structured document format.</li>
+                    <li><b>Validation:</b> Checking that the documented requirements actually define the system the customer wants.</li>
+                    <li><b>Management:</b> Managing changes to the requirements as the system evolves.</li>
+                </ol>
+
+                <h2>4.2 Types of Requirements</h2>
+                <ul>
+                    <li><b>User Requirements:</b> High-level statements in natural language plus diagrams of the services the system provides and its operational constraints. Written for customers and non-technical management.</li>
+                    <li><b>System Requirements:</b> A highly structured document setting out detailed descriptions of the system's functions, services, and operational constraints. It defines exactly what should be implemented and often serves as a binding contract between client and contractor.</li>
+                </ul>
+
+                <h3>Functional vs. Non-Functional</h3>
+                <ul>
+                    <li><b>Functional Requirements (FRs):</b> State specifically what the system should do, how it reacts to particular inputs, and how it behaves in specific situations. (e.g., "The ATM system shall dispense cash immediately upon PIN verification and limit approval").</li>
+                    <li><b>Non-Functional Requirements (NFRs):</b> Constraints on the services or functions offered. They dictate *how* the system operates rather than *what* it does. They often apply to the system as a whole rather than individual features. If NFRs are not met, the system may be entirely useless even if all functional requirements are satisfied. Categories include:
+                        <ul>
+                            <li><b>Product requirements:</b> Execution speed, response time, reliability (uptime %), security encryption standards, storage capacity.</li>
+                            <li><b>Organizational requirements:</b> Process standards that must be used, mandated implementation languages, delivery schedules.</li>
+                            <li><b>External requirements:</b> Interoperability with legacy systems, legislative/regulatory compliance (e.g., GDPR, POPIA), ethical constraints.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>4.3 Requirements Elicitation Techniques</h2>
+                <p>Gathering requirements is notoriously difficult because stakeholders often don't know what they want, express requirements in their own confusing domain terminology, and often change their minds midway through the process.</p>
+                <ul>
+                    <li><b>Interviews:</b> Formal or informal discussions with stakeholders. Good for getting an overall understanding of business goals but poor for understanding complex, unstated domain-specific rules.</li>
+                    <li><b>Ethnography:</b> An observational technique. The requirements analyst immerses themselves in the working environment to observe day-to-day work. Excellent for discovering implicit requirements and workarounds that users utilize but don't think to mention in an interview.</li>
+                    <li><b>Use Cases / Scenarios:</b> Describing specific interactions between the users and the system to clarify how the system should respond under specific conditions.</li>
+                </ul>
+
+                <h2>4.4 Requirements Validation Checks</h2>
+                <p>Checking that the requirements actually define the system that the customer really wants. Discovering a requirements error after the system has been built is the most expensive type of error to fix.</p>
+                <ul>
+                    <li><b>Validity Checks:</b> Does the system provide the functions which best support the customer's needs?</li>
+                    <li><b>Consistency Checks:</b> Are there any conflicting requirements? (e.g., requiring a system to be accessible via simple text message but also requiring biometric facial recognition).</li>
+                    <li><b>Completeness Checks:</b> Are all functions required by the customer explicitly included?</li>
+                    <li><b>Realism Checks:</b> Can the requirements actually be implemented given the available budget and contemporary technology?</li>
+                    <li><b>Verifiability:</b> Is the requirement written in a way that can be realistically and mathematically tested? (e.g., "The system must be easy to use" is untestable. "An experienced user must be able to complete a transaction in under 3 mouse clicks" is testable).</li>
+                </ul>
+
+                <h2>4.5 Human Aspects (Pressman Supplement)</h2>
+                <p>Software engineering is a highly human-centric activity. The success of a project is often determined more by team dynamics than by technical tooling.</p>
+                <ul>
+                    <li><b>Cognitive Factors:</b> Software development requires intense, sustained cognitive load. Interruptions and toxic work environments severely degrade code quality.</li>
+                    <li><b>Team Structures:</b>
+                        <ul>
+                            <li><i>Democratic Decentralized (DD):</i> No permanent leader, decisions made by consensus. Good for highly complex, novel problems requiring innovative research, but can be slow.</li>
+                            <li><i>Controlled Centralized (CC):</i> "Chief Programmer" model. Top-level problem solving by a senior engineer, internal coordination handled by a project manager. Good for straightforward, well-understood tasks.</li>
+                        </ul>
+                    </li>
+                    <li><b>Team Cohesion:</b> Productive teams rely on individual responsibility, deep attention to detail, mutual trust among members, and high resilience under pressure. "Jelled" teams exhibit significantly higher productivity and lower turnover.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="ch5" class="section">
+            <h1>Chapter 5: System Requirements Modeling</h1>
+            <p class="subtitle">Graphical UML Visualizations</p>
+            
+            <div class="card">
+                <h2>5.1 What is System Modeling?</h2>
+                <p>System modeling is the process of developing abstract models of a system, with each model presenting a different view or perspective. We almost universally use the Unified Modeling Language (UML) to establish a common visual vocabulary among engineers.</p>
+                
+                <div class="theory-highlight">
+                    <div class="theory-title"><i class="fa-solid fa-cubes"></i> The 4 Core Architectural Perspectives</div>
+                    <p><b>1. Context Models:</b> Show how the target system fits into its broader environment alongside other external boundaries and interacting systems. They establish what lies inside and outside the system scope.</p>
+                    <p><b>2. Interaction Models:</b> Show dynamic interactions between the system and external actors, or between the internal components of the system itself.</p>
+                    <p><b>3. Structural Models:</b> Show the static organization of system data, objects, and components.</p>
+                    <p><b>4. Behavioral Models:</b> Show dynamic execution patterns in response to data changes or external events.</p>
+                </div>
+
+                <h2>5.2 Key UML Diagrams in Detail</h2>
+                
+                <h3>1. Use Case Diagrams (Interaction Perspective)</h3>
+                <p>Used to represent the functional interactions between external actors (users or other systems) and the system itself. They define the functional scope of the project.</p>
+                <ul>
+                    <li><b>Actors:</b> Represented by stick figures. An actor is a role played by an external entity (e.g., "Customer", "Bank Admin System").</li>
+                    <li><b>Use Cases:</b> Represented by ovals containing text. They define discrete, valuable tasks (e.g., "Withdraw Cash", "Reset Password").</li>
+                    <li><b>System Boundary:</b> A large rectangle enclosing the use cases, indicating what is inside the system vs. the actors outside.</li>
+                    <li><b>Includes Relationship:</b> A mandatory dependency where one use case requires another to function (e.g., "Withdraw Cash" <i>&lt;&lt;includes&gt;&gt;</i> "Verify PIN").</li>
+                    <li><b>Extends Relationship:</b> An optional variation or specific condition path (e.g., "Deposit Funds" <i>&lt;&lt;extends&gt;&gt;</i> "Print Receipt").</li>
+                </ul>
+
+                <h3>2. Sequence Diagrams (Interaction Perspective)</h3>
+                <p>Models the chronological interactions between the actors and the objects within a system for a specific use case scenario.</p>
+                <ul>
+                    <li><b>Lifelines:</b> Vertical dashed lines dropping down from an object at the top, showing the existence of that object over time.</li>
+                    <li><b>Messages:</b> Horizontal arrows passing between lifelines. A solid arrow indicates a synchronous call (the sender waits for a response). A dashed arrow indicates an asynchronous message or a return value.</li>
+                    <li><b>Activation / Execution Occurrences:</b> Thin vertical rectangles placed on lifelines showing exactly when an object is actively processing data or executing a method.</li>
+                </ul>
+
+                <h3>3. Class Diagrams (Structural Perspective)</h3>
+                <p>Shows the object classes in the system and the associations between these classes. This is the foundational diagram for Object-Oriented design and database mapping.</p>
+                <ul>
+                    <li><b>Classes:</b> Represented by rectangles divided into three horizontal compartments: Top (Class Name), Middle (Attributes/Variables), Bottom (Operations/Methods).</li>
+                    <li><b>Visibility Identifiers:</b> <code>+</code> (Public), <code>-</code> (Private), <code>#</code> (Protected).</li>
+                    <li><b>Multiplicity:</b> Defines how many instances of one class can be associated with another (e.g., <code>1..*</code> means one to many; <code>0..1</code> means zero or one).</li>
+                    <li><b>Inheritance (Generalization):</b> A solid line with a hollow, un-filled arrow pointing to a superclass. Indicates an "is-a" relationship.</li>
+                    <li><b>Aggregation / Composition:</b> Represented by a diamond on the line. Aggregation (hollow diamond) implies a "has-a" relationship where the child can exist independently. Composition (filled diamond) implies strict ownership where the child dies if the parent is destroyed.</li>
+                </ul>
+
+                <h3>4. State Machine Diagrams (Behavioral Perspective)</h3>
+                <p>Shows how individual objects change state in response to specific events over time. Essential for real-time, embedded, or highly reactive systems.</p>
+                <ul>
+                    <li><b>States:</b> Rounded rectangles representing conditions during an object's life (e.g., "Waiting for PIN", "Dispensing Cash").</li>
+                    <li><b>Transitions:</b> Solid arrows connecting states, labeled with the specific event that triggers the change.</li>
+                    <li><b>Entry/Exit Actions:</b> Activities that automatically occur the moment a state is entered or exited.</li>
+                    <li><b>Guard Conditions:</b> Boolean expressions enclosed in brackets <code>[ ]</code> that must evaluate to true for a transition to occur.</li>
+                </ul>
+                
+                <h3>5. Activity Diagrams (Behavioral Perspective)</h3>
+                <p>Similar to flowcharts, they show the flow of control or object flow from activity to activity. Excellent for modeling complex business processes or algorithms.</p>
+                <ul>
+                    <li><b>Activities:</b> Rounded rectangles representing a step in the process.</li>
+                    <li><b>Decision Nodes:</b> Diamond shapes where the flow diverges based on conditions.</li>
+                    <li><b>Forks and Joins:</b> Thick black horizontal lines representing the splitting of flow into concurrent, parallel threads (fork), or the merging of parallel threads back into one (join).</li>
+                    <li><b>Swimlanes:</b> Vertical columns that divide activities based on who or what is responsible for performing them (e.g., "Customer Lane", "System Backend Lane").</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="ch6" class="section">
+            <h1>Chapter 6: Architectural Design</h1>
+            <p class="subtitle">High-Level Structural Blueprint Patterns</p>
+            
+            <div class="card">
+                <h2>6.1 The Role of Architecture</h2>
+                <p>Architectural design is the first stage in the software design process. It represents the critical link between requirements specification and detailed implementation processes. It involves identifying the major structural components in a system, their core responsibilities, and the communication relationships between them.</p>
+
+                <h3>Architecture and System Characteristics</h3>
+                <p>The chosen architecture directly impacts the non-functional properties of the system:</p>
+                <ul>
+                    <li><b>Performance:</b> Architectures that localize critical operations and minimize subsystem communications perform faster.</li>
+                    <li><b>Security:</b> Architectures that use a layered approach with critical assets in the innermost layers improve security.</li>
+                    <li><b>Safety:</b> Architectures that isolate safety-critical components from the rest of the system reduce risk.</li>
+                    <li><b>Availability:</b> Architectures utilizing redundant components and fault-tolerant failovers ensure high uptime.</li>
+                    <li><b>Maintainability:</b> Architectures utilizing fine-grained, self-contained components are easier to change without breaking other parts.</li>
+                </ul>
+
+                <h2>6.2 Architectural Views (Krutchen's 4+1 View Model)</h2>
+                <p>Software architecture cannot be documented in a single diagram. It requires multiple perspectives:</p>
+                <ul>
+                    <li><b>Logical View:</b> Shows the key abstractions in the system as objects or object classes (focus on functionality).</li>
+                    <li><b>Process View:</b> Shows how, at run-time, the system is composed of interacting processes (focus on performance and availability).</li>
+                    <li><b>Development View:</b> Shows how the software is decomposed for development into modules or packages (focus on code organization for programmers).</li>
+                    <li><b>Physical View:</b> Shows the hardware infrastructure and how software components are distributed across physical processors or cloud servers.</li>
+                    <li><b>+1 (Use Cases):</b> The scenarios that tie all the views together to prove the architecture works.</li>
+                </ul>
+
+                <h2>6.3 Core Architectural Patterns</h2>
+                <p>Patterns are stylized descriptions of good design practice, which have been tried, tested, and formalized across thousands of successful projects.</p>
+
+                <div class="mindmap-placeholder">
+                    <h4><i class="fa-solid fa-network-wired"></i> Textual Mind Map: Structural Architectural Patterns</h4>
+                    <div class="map-node map-root">Patterns</div> &rarr; 
+                    <div class="map-node map-child">MVC (Model-View-Controller)</div>
+                    <div class="map-node map-child">Layered Architecture</div>
+                    <div class="map-node map-child">Repository Pattern</div>
+                    <div class="map-node map-child">Client-Server Pattern</div>
+                </div>
+
+                <h3>1. Model-View-Controller (MVC)</h3>
+                <p>Separates presentation and interaction from the core system data and business logic. It is the dominant pattern for web and application frameworks.</p>
+                <ul>
+                    <li><b>Model:</b> Encapsulates the application data and the business rules that manipulate it. Completely blind to the user interface.</li>
+                    <li><b>View:</b> Handles rendering the data to the user interface. Multiple views can exist for the same model (e.g., a pie chart view and a spreadsheet view).</li>
+                    <li><b>Controller:</b> Manages user inputs (mouse clicks, HTTP requests), updates the model accordingly, and selects the appropriate view to display.</li>
+                </ul>
+
+                <h3>2. Layered Architecture</h3>
+                <p>Organizes the system into a set of distinct, hierarchical layers. Each layer provides a specific set of services to the layer immediately above it and consumes services from the layer below it. Promotes extreme modularity and separation of concerns.</p>
+                <ul>
+                    <li><i>Example Stack:</i> User Interface Layer &rarr; Application Logic Layer &rarr; Core Business Rules Layer &rarr; Data Access / Database Layer.</li>
+                    <li>If you swap out an Oracle database for a MySQL database, only the Data Access layer needs to change; the UI and Business logic layers remain completely untouched.</li>
+                </ul>
+
+                <h3>3. Repository Pattern</h3>
+                <p>All shared data in a system is managed in a central repository or database that is accessible to all system components. Components do not interact directly with each other; they only communicate through the central repository.</p>
+                <ul>
+                    <li>Best utilized in systems where massive amounts of data must be shared across disparate modules, such as IDEs (Integrated Development Environments) where the compiler, debugger, and code editor all interact with the same source code repository.</li>
+                </ul>
+
+                <h3>4. Client-Server Pattern</h3>
+                <p>Functionality is organized into isolated services, with each service delivered from a separate server. Clients are instances of programs that require these services and access them across a network.</p>
+                
+                <div class="devops-box">
+                    <h4><i class="fa-solid fa-cloud"></i> Modern Extension: Microservices</h4>
+                    <p>While Sommerville covers the foundational client-server pattern, modern cloud-native applications often break this down further into <b>Microservices Architecture</b>. Instead of a massive monolithic server handling all logic, the backend is split into dozens of small, independently deployable services (e.g., a dedicated "Payment Service", a separate "User Profile Service"). These are typically containerized (using Docker) and managed by orchestrators like Kubernetes, ensuring high availability, fault isolation, and independent scaling.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ch7" class="section">
+            <h1>Chapter 7: Design, Implementation & Reuse</h1>
+            <p class="subtitle">System Realization and Component Economies</p>
+            
+            <div class="card">
+                <h2>7.1 Object-Oriented Design (OOD) Process</h2>
+                <p>Developing an object-oriented system involves identifying object classes, their attributes, methods, and the relationships between them. A typical OOD process includes:</p>
+                <ol>
+                    <li><b>Understand and define the context:</b> Determine the system boundaries and define the specific modes of use via use cases.</li>
+                    <li><b>Design the system architecture:</b> Select an overarching architectural pattern (e.g., MVC or Layered) to house the objects.</li>
+                    <li><b>Identify the principal system objects:</b> Analyze the requirements document. Nouns often become Classes, while verbs become Methods/Operations.</li>
+                    <li><b>Develop design models:</b> Create UML sequence diagrams and state machine diagrams to show the dynamic run-time behavior of how objects will pass messages to each other.</li>
+                    <li><b>Specify object interfaces:</b> Precisely define the public methods (APIs) so objects can communicate, while hiding the internal implementation details (encapsulation).</li>
+                </ol>
+
+                <h3>Core Object-Oriented Principles</h3>
+                <ul>
+                    <li><b>Encapsulation:</b> Bundling data and the methods that operate on that data into a single unit (class), restricting direct access to some of the object's components.</li>
+                    <li><b>Inheritance:</b> A mechanism where a new class derives properties and characteristics from an existing class, promoting code reuse.</li>
+                    <li><b>Polymorphism:</b> The ability of different classes to be treated as instances of the same class through a common interface, allowing methods to execute differently based on the object calling them.</li>
+                </ul>
+
+                <h2>7.2 Software Reuse Economies</h2>
+                <p>Modern software engineering is rarely about writing raw code from scratch. It is largely about discovering and securely assembling pre-existing, tested components to increase speed and reliability.</p>
+                
+                <div class="theory-highlight">
+                    <div class="theory-title"><i class="fa-solid fa-recycle"></i> The Four Levels of Software Reuse</div>
+                    <p><b>1. Abstraction Level:</b> You do not reuse raw source code directly. Instead, you reuse successful overarching concepts and architectural design patterns (like utilizing the MVC pattern to structure your app).</p>
+                    <p><b>2. Object Level:</b> Directly reusing specific, compiled object classes from specialized runtime programming language libraries (e.g., importing a <code>java.util.Scanner</code> or a Python math module).</p>
+                    <p><b>3. Component Level:</b> Integrating larger collections of objects and classes that operate together as a framework to handle specific subsystems (e.g., embedding the Spring Boot framework or a React UI library).</p>
+                    <p><b>4. System Level:</b> Deploying entire, complex off-the-shelf COTS applications to fulfill broad corporate workflows (e.g., deploying Microsoft Exchange for email instead of building an email server, or integrating SAP for accounting).</p>
+                </div>
+
+                <h2>7.3 Configuration Management</h2>
+                <p>During implementation in a team environment, you must track code changes meticulously to prevent chaos. Configuration Management handles this through several pillars:</p>
+                <ul>
+                    <li><b>Version Management:</b> Keeping track of multiple different versions of software components. It ensures developers do not overwrite each other's code when working simultaneously (e.g., using Git branches and pull requests).</li>
+                    <li><b>System Building:</b> The automated process of compiling the correct versions of components, linking them, and creating an executable program.</li>
+                    <li><b>Release Management:</b> Preparing software for external release and keeping track of the system versions that have been delivered for customer use.</li>
+                </ul>
+
+                <div class="devops-box">
+                    <h4><i class="fa-solid fa-code-branch"></i> CI/CD Pipeline Integration</h4>
+                    <p>In a modern DevOps workflow, Configuration Management acts as the automated trigger for a Continuous Integration / Continuous Deployment (CI/CD) pipeline. When a developer pushes a commit to a central Git repository, the pipeline automatically spins up, pulls the code, compiles it, runs automated unit test suites, and packages it into a deployment artifact. This completely automates the risky transition from Chapter 7 Implementation to operational deployment.</p>
+                </div>
+
+                <h2>7.4 Open Source Development and Licensing</h2>
+                <p>Open source implies that the source code of a software system is published and volunteers are invited to participate in the development process. However, open source is not legally "free to do whatever you want." It is governed by strict licenses:</p>
+                <ul>
+                    <li><b>GNU General Public License (GPL):</b> A strict, reciprocal "copyleft" license. If you use GPL code within your proprietary application, you are legally forced to release your entire application's source code under the GPL as well.</li>
+                    <li><b>GNU Lesser General Public License (LGPL):</b> A compromise license. You can dynamically link to LGPL libraries within your proprietary, closed-source software without being forced to publish your own code.</li>
+                    <li><b>MIT / BSD Licenses:</b> Highly permissive. You can do almost anything with the code, including heavily modifying it and selling it in a closed-source proprietary product, as long as you maintain the original copyright notice in the documentation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="mock" class="section">
+            <h1>Official Past Paper: June Exam 2025</h1>
+            <p class="subtitle">Time: 120 Mins | Total: 60 Marks | Weight 30%</p>
+            
+            <div class="card" style="background-color: #fffbeb; border: 1px solid #fef3c7; color: #92400e; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;">
+                <i class="fa-solid fa-triangle-exclamation"></i> <b>Exam Conditions:</b> Complete Part A (MCQs) via the interactive buttons, and type your answers for Part B (Scenarios). Grade the MCQs using the button at the end of Part A, and use the "Reveal Marking Guideline" to self-assess Part B based on the comprehensive notes provided above.
+            </div>
+
+            <div class="quiz-container">
+                <h2>PART A: Multiple Choice & True/False [30 Marks]</h2>
+                <p class="text-light mb-4">Each question is worth 02 marks.</p>
+
+                <div class="question-block">
+                    <p class="question-text">1.1 What are the three framework activities for the adaptive Software (ASD) development process model?</p>
+                    <label class="option-label"><input type="radio" name="mq1" value="A"> A) Requirements gathering, adaptive cycle planning, iterative development</label>
+                    <label class="option-label"><input type="radio" name="mq1" value="B"> B) Analysis, design, coding</label>
+                    <label class="option-label"><input type="radio" name="mq1" value="C"> C) Feasibility study, functional model iteration, implementation</label>
+                    <label class="option-label"><input type="radio" name="mq1" value="D" data-correct="true"> D) Speculation, collaboration, learning</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.2 Which of the following traits need to exist among the members of an agile software team?</p>
+                    <label class="option-label"><input type="radio" name="mq2" value="A"> A) Competence</label>
+                    <label class="option-label"><input type="radio" name="mq2" value="B"> B) Decision-making ability</label>
+                    <label class="option-label"><input type="radio" name="mq2" value="C"> C) Mutual trust and respect</label>
+                    <label class="option-label"><input type="radio" name="mq2" value="D" data-correct="true"> D) All of the above</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.3 What are the four framework activities found in the Extreme Programming (XP) process model?</p>
+                    <label class="option-label"><input type="radio" name="mq3" value="A"> A) Analysis, design, coding, testing</label>
+                    <label class="option-label"><input type="radio" name="mq3" value="B"> B) Planning, analysis, design, coding</label>
+                    <label class="option-label"><input type="radio" name="mq3" value="C"> C) Planning, analysis, coding, testing</label>
+                    <label class="option-label"><input type="radio" name="mq3" value="D" data-correct="true"> D) Planning, design, coding, testing</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.4 The formal methods model of software development makes use of mathematical methods to</p>
+                    <label class="option-label"><input type="radio" name="mq4" value="A"> A) Define the specification for computer-based system</label>
+                    <label class="option-label"><input type="radio" name="mq4" value="B"> B) Develop defect free computer-based system</label>
+                    <label class="option-label"><input type="radio" name="mq4" value="C" data-correct="true"> C) Verify the correctness of computer-based system</label>
+                    <label class="option-label"><input type="radio" name="mq4" value="D"> D) All of the above</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.5 The prototyping model of software development is</p>
+                    <label class="option-label"><input type="radio" name="mq5" value="A"> A) A reasonable approach when requirements are well defined</label>
+                    <label class="option-label"><input type="radio" name="mq5" value="B"> B) The best approach to use for projects with large development teams</label>
+                    <label class="option-label"><input type="radio" name="mq5" value="C"> C) A risky Model that rarely produces a meaningful product</label>
+                    <label class="option-label"><input type="radio" name="mq5" value="D" data-correct="true"> D) A useful approach when a customer cannot define requirement clearly</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.6 Which of these are standards for assessing software processes?</p>
+                    <label class="option-label"><input type="radio" name="mq6" value="A"> A) ISO 9000</label>
+                    <label class="option-label"><input type="radio" name="mq6" value="B"> B) SPICE</label>
+                    <label class="option-label"><input type="radio" name="mq6" value="C"> C) ISO 90001</label>
+                    <label class="option-label"><input type="radio" name="mq6" value="D" data-correct="true"> D) a and b</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.7 It is generally accepted that one cannot have weak software processes and create high quality end products.</p>
+                    <label class="option-label"><input type="radio" name="mq7" value="True"> True</label>
+                    <label class="option-label"><input type="radio" name="mq7" value="False" data-correct="true"> False</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.8 In agile software processes the highest priorities is to satisfy the customer through early and continuous delivery of valuable software.</p>
+                    <label class="option-label"><input type="radio" name="mq8" value="True" data-correct="true"> True</label>
+                    <label class="option-label"><input type="radio" name="mq8" value="False"> False</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.9 Software processes can be constructed out of preexisting software patterns to best meet the needs of a software project.</p>
+                    <label class="option-label"><input type="radio" name="mq9" value="True" data-correct="true"> True</label>
+                    <label class="option-label"><input type="radio" name="mq9" value="False"> False</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.10 Which UML diagram is primarily used to represent the static structure of a system by showing its classes, attributes, methods, and the relationships among objects?</p>
+                    <label class="option-label"><input type="radio" name="mq10" value="A"> A) Use case diagram</label>
+                    <label class="option-label"><input type="radio" name="mq10" value="B"> B) Sequence diagram</label>
+                    <label class="option-label"><input type="radio" name="mq10" value="C" data-correct="true"> C) Class diagram</label>
+                    <label class="option-label"><input type="radio" name="mq10" value="D"> D) Activity diagram</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.11 Which of the following is a key principle of Agile development?</p>
+                    <label class="option-label"><input type="radio" name="mq11" value="A"> A) Comprehensive documentation</label>
+                    <label class="option-label"><input type="radio" name="mq11" value="B"> B) Following a rigid plan</label>
+                    <label class="option-label"><input type="radio" name="mq11" value="C" data-correct="true"> C) Customer collaboration over contract negotiation</label>
+                    <label class="option-label"><input type="radio" name="mq11" value="D"> D) Processes and tools over individuals and interactions</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.12 What is the primary goal of using formal methods in software engineering?</p>
+                    <label class="option-label"><input type="radio" name="mq12" value="A"> A) To increase the speed of software development</label>
+                    <label class="option-label"><input type="radio" name="mq12" value="B"> B) To eliminate the need for testing</label>
+                    <label class="option-label"><input type="radio" name="mq12" value="C" data-correct="true"> C) To mathematically prove the correctness of a system</label>
+                    <label class="option-label"><input type="radio" name="mq12" value="D"> D) To replace programming languages</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.13 Which Agile methodology uses iterative cycles called "sprints"?</p>
+                    <label class="option-label"><input type="radio" name="mq13" value="A"> A) Waterfall</label>
+                    <label class="option-label"><input type="radio" name="mq13" value="B"> B) Kanban</label>
+                    <label class="option-label"><input type="radio" name="mq13" value="C" data-correct="true"> C) Scrum</label>
+                    <label class="option-label"><input type="radio" name="mq13" value="D"> D) Spiral</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.14 Which UML diagram would you use to model the possible states of an object and the transitions between those states?</p>
+                    <label class="option-label"><input type="radio" name="mq14" value="A"> A) Class diagram</label>
+                    <label class="option-label"><input type="radio" name="mq14" value="B"> B) Sequence diagram</label>
+                    <label class="option-label"><input type="radio" name="mq14" value="C" data-correct="true"> C) State machine diagram</label>
+                    <label class="option-label"><input type="radio" name="mq14" value="D"> D) Use case diagram</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">1.15 Which of the following is NOT a core value of the Agile Manifesto?</p>
+                    <label class="option-label"><input type="radio" name="mq15" value="A" data-correct="true"> A) Processes and tools</label>
+                    <label class="option-label"><input type="radio" name="mq15" value="B"> B) Customer collaboration</label>
+                    <label class="option-label"><input type="radio" name="mq15" value="C"> C) Working software</label>
+                    <label class="option-label"><input type="radio" name="mq15" value="D"> D) Individuals and interactions</label>
+                </div>
+
+                <div class="flex-between mt-4">
+                    <button class="btn" style="background-color: var(--success);" onclick="gradeMockExam()">Grade Part A (MCQs)</button>
+                    <div id="mockScore" style="font-size: 1.2rem; font-weight: bold; color: var(--secondary);"></div>
+                </div>
+            </div>
+
+            <div class="quiz-container mt-4">
+                <h2>PART B: Scenario-Based Questions [30 Marks]</h2>
+                
+                <h3 class="mt-4"><i class="fa-solid fa-file-contract"></i> QUESTION 02 [15 MARKS]</h3>
+                
+                <div class="concept-box">
+                    <strong>Scenario-2a:</strong> TechHealth Inc. is developing a new health monitoring application that integrates with wearable devices to track vital signs and provide health recommendations. The project is in its early stages, and the requirements are not fully defined. Given the uncertain and evolving nature of the project requirements:
+                </div>
+                
+                <p class="text-bold">2.1 Evaluate the suitability of the prescriptive process model (such as Waterfall Model) for TechHealth Inc.'s development of the health monitoring application and discuss the potential challenges and benefits of using the Waterfall Model in this scenario. [09 Marks]</p>
+                <textarea class="form-control" rows="6" placeholder="Draft your answer to 2.1 here..."></textarea>
+                
+                <details>
+                    <summary><i class="fa-solid fa-eye"></i> Reveal Marking Guideline & Advanced Breakdown for 2.1</summary>
+                    <div class="details-content">
+                        <strong>The Core Evaluation:</strong> The Waterfall model relies on a rigid, sequential linear progression where each phase must be "frozen" before the next begins. It assumes requirements are perfectly understood upfront. Because requirements are undefined and evolving in this scenario, Waterfall is highly unsuitable.<br><br>
+                        <strong>Challenges/Penalties:</strong>
+                        <ul>
+                            <li><strong>Cost of Rework:</strong> Returning to the requirements phase from the testing or implementation phase to accommodate changing clinical definitions would be catastrophically expensive.</li>
+                            <li><strong>Delayed Value Delivery:</strong> Working software is only produced very late in the lifecycle ("Big Bang"). The client cannot interact with a prototype to refine their clinical needs early on.</li>
+                            <li><strong>Risk of Obsolescence:</strong> The rapidly shifting hardware capabilities of wearable devices may bypass the original specification before the project is even finished.</li>
+                        </ul>
+                        <strong>Potential (but limited) Benefits:</strong> Provides clear milestones and extensive documentation, which might assist in eventual regulatory compliance, though this does not outweigh the severe inflexibility risks.
+                    </div>
+                </details>
+
+                <hr class="mt-4 mb-4" style="border: 0; border-top: 1px solid var(--border);">
+
+                <div class="concept-box">
+                    <strong>Scenario-2b:</strong> A software development team at TechSolutions Inc. is transitioning from a prescriptive process to Agile methodology to enhance their responsiveness to client feedback and improve project delivery timelines. The team is currently working on a customer relationship management (CRM) system.
+                </div>
+
+                <p class="text-bold">2.2 Describe how the Extreme Programming (XP) process would use any of its two framework activities to change the team's approach to developing the CRM system. [06 Marks]</p>
+                <textarea class="form-control" rows="5" placeholder="Draft your answer to 2.2 here..."></textarea>
+                
+                <details>
+                    <summary><i class="fa-solid fa-eye"></i> Reveal Marking Guideline & Advanced Breakdown for 2.2</summary>
+                    <div class="details-content">
+                        <em>(Students must detail exactly 2 of the 4 XP activities: Planning, Design, Coding, or Testing and apply them specifically to the CRM context).</em><br><br>
+                        <strong>Example 1: Coding via Pair Programming & Continuous Integration</strong><br>
+                        Instead of isolated development, engineers will write the CRM business logic in pairs at a single workstation. This provides real-time code review, catching logic errors in sensitive customer data handling immediately. Furthermore, code is integrated into the main repository multiple times a day via CI pipelines, ensuring new CRM features don't break existing client modules.<br><br>
+                        <strong>Example 2: Testing via Test-Driven Development (TDD)</strong><br>
+                        Before writing any CRM feature (e.g., an automated email trigger), the developers will write an automated unit test that defines the desired improvement based on client feedback. The code is then written purely to pass that test, guaranteeing client feedback is explicitly mapped to verifiable software outcomes.
+                    </div>
+                </details>
+
+                <h3 class="mt-5"><i class="fa-solid fa-file-contract"></i> QUESTION 03 [15 MARKS]</h3>
+                
+                <div class="concept-box">
+                    <strong>Scenario-3a:</strong> You are a software engineer tasked with optimizing the user experience for making withdrawals at automated teller machines (ATMs). As part of the requirements engineering process, you are focusing on defining a complete use case scenario for the activities involved in making a withdrawal at an ATM.
+                </div>
+                
+                <p class="text-bold">3.1 Develop a use case scenario for the process of making a withdrawal at an ATM. Outline the main activities involved in this scenario and describe how each activity contributes to providing a seamless and secure transaction experience for users. [09 Marks]</p>
+                <textarea class="form-control" rows="8" placeholder="Draft your answer to 3.1 here..."></textarea>
+                
+                <details>
+                    <summary><i class="fa-solid fa-eye"></i> Reveal Marking Guideline & Advanced Breakdown for 3.1</summary>
+                    <div class="details-content">
+                        <strong>Actor:</strong> Bank Customer<br>
+                        <strong>Preconditions:</strong> The ATM has cash, network connectivity is active, and the customer possesses a valid bank card and PIN.<br><br>
+                        <strong>Main Success Scenario (Happy Path):</strong>
+                        <ol>
+                            <li>Customer inserts the ATM card (Initiates session).</li>
+                            <li>System reads the card and prompts for the PIN securely.</li>
+                            <li>Customer enters the PIN; System securely validates it against the core banking server (Ensures authorization).</li>
+                            <li>Customer selects "Cash Withdrawal" and enters the desired amount.</li>
+                            <li>System checks the account balance and daily withdrawal limits (Prevents overdrafts).</li>
+                            <li>System authorizes the transaction, debits the account, and dispenses the cash securely via hardware interface.</li>
+                            <li>System ejects the card and prints a receipt if requested (Provides audit trail).</li>
+                        </ol>
+                        <strong>Exception Handling (Alternate Flows):</strong>
+                        <ul>
+                            <li><em>Invalid PIN:</em> System rejects entry and prompts retry. After 3 failures, it retains the card for security to prevent brute force attacks.</li>
+                            <li><em>Insufficient Funds:</em> System alerts the customer and gracefully terminates the withdrawal request without dispensing.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <hr class="mt-4 mb-4" style="border: 0; border-top: 1px solid var(--border);">
+
+                <div class="concept-box">
+                    <strong>Scenario-3b:</strong> Consider the use case you have created from scenario-3a in Question 03.
+                </div>
+
+                <p class="text-bold">3.2 Explain 2 non-functional requirements that can affect the performance of the application. [06 Marks]</p>
+                <textarea class="form-control" rows="5" placeholder="Draft your answer to 3.2 here..."></textarea>
+                
+                <details>
+                    <summary><i class="fa-solid fa-eye"></i> Reveal Marking Guideline & Advanced Breakdown for 3.2</summary>
+                    <div class="details-content">
+                        <em>(Students must identify and deeply explain any 2 Non-Functional Requirements such as Security, Availability, Usability, Performance, or Reliability).</em><br><br>
+                        <strong>1. Security:</strong> The system must utilize strong end-to-end encryption (e.g., AES-256) for all PIN and account data transmitted between the physical ATM terminal and the bank's central servers to prevent packet sniffing and theft during the authorization step.<br><br>
+                        <strong>2. Dependability / High Availability:</strong> The ATM software architecture must guarantee a 99.99% network uptime (fault tolerance). If the primary banking server goes offline, the system must seamlessly failover to a redundant backup node without stranding the customer mid-transaction or freezing the terminal.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function switchSection(sectionId) {
+            // Hide all views
+            document.querySelectorAll('.section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            // Show selected view
+            document.getElementById(sectionId).classList.add('active');
+
+            // Toggle active styling on navigation items
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+            
+            // Scroll back up neatly
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Live checking logic when clicking a radio button
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const name = this.name;
+                const parentLabel = this.closest('.option-label');
+                const container = this.closest('.quiz-container');
+                
+                // Remove styling from all siblings in this specific question
+                container.querySelectorAll(`input[name="${name}"]`).forEach(opt => {
+                    opt.closest('.option-label').classList.remove('correct', 'incorrect');
+                });
+            });
+        });
+
+        // Grading logic for the full 15 questions
+        function gradeMockExam() {
+            const mockSection = document.getElementById('mock');
+            const totalQuestions = 15;
+            let correctCount = 0;
+
+            for(let i = 1; i <= totalQuestions; i++) {
+                const selected = mockSection.querySelector(`input[name="mq${i}"]:checked`);
+                const options = mockSection.querySelectorAll(`input[name="mq${i}"]`);
+                
+                // Show the right answer regardless
+                options.forEach(opt => {
+                    const parentLabel = opt.closest('.option-label');
+                    parentLabel.classList.remove('correct', 'incorrect');
+                    if (opt.hasAttribute('data-correct')) {
+                        parentLabel.classList.add('correct');
+                    }
+                });
+
+                // Evaluate user selection
+                if (selected) {
+                    if (selected.hasAttribute('data-correct')) {
+                        correctCount++;
+                    } else {
+                        selected.closest('.option-label').classList.add('incorrect');
+                    }
+                }
+            }
+
+            // Calculation (2 marks per question)
+            const marksAchieved = correctCount * 2;
+            const totalMarks = 30;
+            const percent = Math.round((marksAchieved / totalMarks) * 100);
+            
+            const scoreDiv = document.getElementById('mockScore');
+            scoreDiv.innerHTML = `MCQ Score: ${marksAchieved}/${totalMarks} Marks (${percent}%)`;
+            
+            if(percent >= 50) {
+                scoreDiv.style.color = 'var(--success)';
+            } else {
+                scoreDiv.style.color = 'var(--danger)';
+            }
+        }
+    </script>
+</body>
+</html>
+
+```

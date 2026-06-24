@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>APT470S Test 4 — Testing & Maintenance</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+<style>
+body{padding:20px;font-family:Arial,sans-serif;}
+h2{color:#003366;border-bottom:2px solid #003366;padding-bottom:6px;margin-top:30px;}
+table{width:100%;border-collapse:collapse;margin-top:12px;}
+table td,table th{border:1px solid #999;padding:8px 14px;vertical-align:top;}
+table thead th{background:#003366;color:#fff;}
+.marks{text-align:right;font-weight:bold;color:#003366;white-space:nowrap;}
+.header-box{background:#003366;color:#fff;padding:16px 20px;border-radius:4px;margin-bottom:20px;}
+.header-box h1{margin:0;font-size:1.4rem;}
+.header-box p{margin:4px 0 0;font-size:.95rem;}
+.instr{background:#f0f4ff;border-left:4px solid #003366;padding:10px 16px;margin-bottom:16px;}
+.scenario{background:#fff8e1;border-left:4px solid #f0a500;padding:10px 16px;margin:10px 0;font-style:italic;}
+.qnum{font-weight:bold;white-space:nowrap;}
+.answer-section{margin-top:40px;border-top:3px solid #003366;padding-top:20px;}
+.answer-section h2{color:#1a5c1a;border-bottom-color:#1a5c1a;}
+table.answers thead th{background:#1a5c1a;}
+table.answers tr:nth-child(even){background:#f0fff0;}
+.ans-q{font-weight:bold;color:#222;font-size:.88rem;}
+.ans-a{color:#1a5c1a;font-size:.88rem;}
+.page-break{page-break-before:always;}
+</style>
+</head>
+<body>
+
+<div class="header-box">
+  <h1>APT470S &nbsp;|&nbsp; Application Development</h1>
+  <p><strong>Test 4 of 5 &nbsp;|&nbsp; Testing Strategies, Maintenance & Project Management</strong></p>
+  <p>Time: 120 mins &nbsp;&bull;&nbsp; Total: 60 marks &nbsp;&bull;&nbsp; Weight: 30%</p>
+</div>
+<div class="instr">
+  <ul>
+    <li>Answer <strong>ALL</strong> questions.</li>
+    <li>This is <strong>NOT</strong> an open book test.</li>
+    <li>Questions 02 and 03 are scenario/case study-based. Read them carefully before answering.</li>
+    <li>Specify question numbers correctly in your answer book.</li>
+  </ul>
+</div>
+<h2>QUESTION 01 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[30 Marks]</span></h2>
+<table>
+<thead><tr><th colspan="3">Multiple choice and True/False: Use the answer book provided. Specify question numbers accurately.</th></tr>
+<tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead>
+<tbody><tr>
+<td class="qnum">1.1</td>
+<td>Which testing level tests the complete integrated system against the system requirements?<br/>a) Unit testing<br/>b) Integration testing<br/>c) System testing<br/>d) Acceptance testing</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.2</td>
+<td>What is regression testing?<br/>a) Testing new features only<br/>b) Re-running previously passing tests after code changes to ensure nothing broke<br/>c) Testing the system under maximum load<br/>d) Testing individual units in isolation</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.3</td>
+<td>Which type of maintenance involves making changes to correct discovered faults?<br/>a) Adaptive maintenance<br/>b) Perfective maintenance<br/>c) Corrective maintenance<br/>d) Preventive maintenance</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.4</td>
+<td>What is a software project baseline?<br/>a) The minimum acceptable test coverage<br/>b) A formally reviewed snapshot of a work product used as a reference for future change<br/>c) The initial cost estimate for the project<br/>d) The list of team members on the project</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.5</td>
+<td>Which risk category covers risks that may delay the software schedule or increase costs?<br/>a) Business risk<br/>b) Project risk<br/>c) Technical risk<br/>d) Known risk</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.6</td>
+<td>What is the purpose of a software configuration management (SCM) system?<br/>a) To write unit tests automatically<br/>b) To track and control changes to software artifacts<br/>c) To manage the project budget<br/>d) To generate UML diagrams</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.7</td>
+<td>Which project estimation technique uses historical data from similar past projects?<br/>a) Expert judgment<br/>b) Algorithmic cost modelling<br/>c) Analogy-based estimation<br/>d) Top-down estimation</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.8</td>
+<td>In agile, what is a 'Definition of Done'?<br/>a) A list of features in the product backlog<br/>b) A shared understanding of what completed work means for the team<br/>c) The final acceptance test plan<br/>d) The sprint retrospective report</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.9</td>
+<td>White-box testing derives test cases from the internal logic and structure of the code. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.10</td>
+<td>Software maintenance only involves fixing bugs found after deployment. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.11</td>
+<td>Which diagram is used in project management to show task sequences and dependencies?<br/>a) Class diagram<br/>b) Gantt chart<br/>c) State machine diagram<br/>d) Activity diagram</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.12</td>
+<td>What does 'technical debt' mean in software development?<br/>a) The cost of hardware for the project<br/>b) The implied cost of rework caused by choosing a quick solution now instead of a better approach<br/>c) The budget allocated for testing<br/>d) The fee charged by software vendors</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.13</td>
+<td>A Gantt chart shows the critical path through a project network. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.14</td>
+<td>Which software process improvement framework uses five maturity levels?<br/>a) ISO 9001<br/>b) SPICE<br/>c) CMMI<br/>d) Agile Manifesto</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.15</td>
+<td>What is the main purpose of a sprint retrospective in Scrum?<br/>a) To plan the next sprint backlog<br/>b) To demo working software to stakeholders<br/>c) To inspect and adapt the team's process for continuous improvement<br/>d) To update the product backlog</td>
+<td class="marks">2</td>
+</tr></tbody></table><h2>QUESTION 02 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[15 Marks]</span></h2>
+<table><thead><tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead><tbody><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> FinServe Bank is releasing a new online loan application module. The testing team must design a comprehensive test strategy covering functional and non-functional aspects before go-live.</div></td></tr><tr>
+<td class="qnum">2.1</td>
+<td>Describe a testing strategy for FinServe Bank's loan application module. Explain the testing levels to be applied (unit, integration, system, acceptance) and the types of non-functional testing that should be included. Justify your choices.</td>
+<td class="marks">9</td>
+</tr><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> After go-live, the FinServe Bank loan module requires ongoing maintenance as regulations change and new features are requested.</div></td></tr><tr>
+<td class="qnum">2.2</td>
+<td>Describe TWO types of software maintenance that the FinServe Bank team will need to perform and give a specific example of each in the context of the loan application module.</td>
+<td class="marks">6</td>
+</tr></tbody></table><h2>QUESTION 03 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[15 Marks]</span></h2>
+<table><thead><tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead><tbody><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> You are a project manager overseeing the development of a smart parking management system. The project has a 9-month timeline and a team of 8 developers.</div></td></tr><tr>
+<td class="qnum">3.1</td>
+<td>Identify and describe FOUR key project management activities you would perform to ensure the smart parking system is delivered on time and within budget. For each activity, explain its importance to the project.</td>
+<td class="marks">9</td>
+</tr><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> During the smart parking project, the team identifies several risks including a key developer leaving mid-project and uncertain API availability from the parking sensor vendor.</div></td></tr><tr>
+<td class="qnum">3.2</td>
+<td>For each of the TWO identified risks, describe a specific risk mitigation strategy the project team should implement.</td>
+<td class="marks">6</td>
+</tr></tbody></table><div class="answer-section page-break">
+<h2>&#10003; Answer Key &nbsp;<span style="font-weight:normal;font-size:.9rem;">(For Instructor Use)</span></h2>
+<p style="font-size:.85rem;color:#555;">Each answer is shown alongside the original question for easy reference.</p>
+<table class="answers">
+<thead><tr>
+  <th style="width:55px">Q#</th>
+  <th style="width:42%">Question</th>
+  <th>Model Answer</th>
+</tr></thead><tbody><tr>
+<td class="qnum">1.1</td>
+<td class="ans-q">Tests complete integrated system vs requirements?</td>
+<td class="ans-a">c) System testing</td>
+</tr><tr>
+<td class="qnum">1.2</td>
+<td class="ans-q">Regression testing definition?</td>
+<td class="ans-a">b) Re-running previously passing tests after code changes to ensure nothing broke</td>
+</tr><tr>
+<td class="qnum">1.3</td>
+<td class="ans-q">Maintenance type to correct discovered faults?</td>
+<td class="ans-a">c) Corrective maintenance</td>
+</tr><tr>
+<td class="qnum">1.4</td>
+<td class="ans-q">Software project baseline definition?</td>
+<td class="ans-a">b) A formally reviewed snapshot of a work product used as a reference for future change</td>
+</tr><tr>
+<td class="qnum">1.5</td>
+<td class="ans-q">Risks that delay schedule or increase costs?</td>
+<td class="ans-a">b) Project risk</td>
+</tr><tr>
+<td class="qnum">1.6</td>
+<td class="ans-q">Purpose of SCM system?</td>
+<td class="ans-a">b) To track and control changes to software artifacts</td>
+</tr><tr>
+<td class="qnum">1.7</td>
+<td class="ans-q">Uses historical data from similar past projects?</td>
+<td class="ans-a">c) Analogy-based estimation</td>
+</tr><tr>
+<td class="qnum">1.8</td>
+<td class="ans-q">Definition of Done in Agile?</td>
+<td class="ans-a">b) A shared understanding of what completed work means for the team</td>
+</tr><tr>
+<td class="qnum">1.9</td>
+<td class="ans-q">White-box testing uses internal logic/structure?</td>
+<td class="ans-a">TRUE</td>
+</tr><tr>
+<td class="qnum">1.10</td>
+<td class="ans-q">Maintenance only involves fixing bugs?</td>
+<td class="ans-a">FALSE — maintenance includes corrective, adaptive, perfective, and preventive activities</td>
+</tr><tr>
+<td class="qnum">1.11</td>
+<td class="ans-q">Shows task sequences and dependencies?</td>
+<td class="ans-a">b) Gantt chart</td>
+</tr><tr>
+<td class="qnum">1.12</td>
+<td class="ans-q">Technical debt means?</td>
+<td class="ans-a">b) The implied cost of rework caused by choosing a quick solution instead of a better approach</td>
+</tr><tr>
+<td class="qnum">1.13</td>
+<td class="ans-q">Gantt chart shows critical path?</td>
+<td class="ans-a">FALSE — a Gantt chart shows task schedule/duration; the critical path is shown on a network/PERT diagram</td>
+</tr><tr>
+<td class="qnum">1.14</td>
+<td class="ans-q">Five maturity levels framework?</td>
+<td class="ans-a">c) CMMI</td>
+</tr><tr>
+<td class="qnum">1.15</td>
+<td class="ans-q">Purpose of sprint retrospective?</td>
+<td class="ans-a">c) To inspect and adapt the team's process for continuous improvement</td>
+</tr><tr>
+<td class="qnum">2.1</td>
+<td class="ans-q">Testing strategy for FinServe loan module?</td>
+<td class="ans-a">Levels: (1) Unit testing — test individual loan calculation functions. (2) Integration testing — test loan module with customer data and credit-check API. (3) System testing — end-to-end loan application workflow. (4) Acceptance testing — bank stakeholders verify against business requirements. Non-functional: Performance testing (response <3s under 1000 users); Security testing (data encryption, SQL injection); Reliability testing (24/7 uptime). [1.5 marks per testing level, 3 marks non-functional, 1.5 marks justification]</td>
+</tr><tr>
+<td class="qnum">2.2</td>
+<td class="ans-q">Two maintenance types for FinServe?</td>
+<td class="ans-a">(1) Adaptive maintenance — e.g. updating interest rate calculation logic when government regulations change the maximum lending rate. (2) Perfective maintenance — e.g. optimising the loan approval workflow to reduce processing time from 48 hours to 24 hours based on user feedback. Accept also: Corrective (fixing bugs in repayment schedule display) or Preventive (refactoring code before adding new loan products). [3 marks per type: 1 name, 1 definition, 1 specific example]</td>
+</tr><tr>
+<td class="qnum">3.1</td>
+<td class="ans-q">Four PM activities for smart parking project?</td>
+<td class="ans-a">Any four: (1) Planning — define scope, timeline, milestones, resource allocation. Important to set clear expectations. (2) Risk management — identify/mitigate risks early to avoid delays. (3) Scheduling — create Gantt chart; assign tasks to 8 developers; identify critical path. (4) Progress monitoring — weekly stand-ups, burndown charts to track velocity. (5) Stakeholder communication — regular status reports to keep client informed. (6) Budget management — track actual vs planned spend. [2.25 marks per activity: 1 description, 1.25 importance]</td>
+</tr><tr>
+<td class="qnum">3.2</td>
+<td class="ans-q">Risk mitigation strategies?</td>
+<td class="ans-a">(1) Key developer leaving: Mitigation — implement pair programming and knowledge sharing sessions; maintain up-to-date documentation; cross-train at least 2 developers on all critical modules; have a recruitment plan ready. (2) Uncertain API availability: Mitigation — build a mock API/stub early so development can continue without the real API; negotiate an SLA with the vendor; design the system with an abstraction layer so the API can be swapped. [3 marks each: 1 risk acknowledged, 2 specific mitigation steps]</td>
+</tr></tbody></table></div><p style='text-align:center;margin-top:30px;font-weight:bold;'>****** END OF TEST 4 *******</p>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>APT470S Test 3 — Design, UML & Quality</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+<style>
+body{padding:20px;font-family:Arial,sans-serif;}
+h2{color:#003366;border-bottom:2px solid #003366;padding-bottom:6px;margin-top:30px;}
+table{width:100%;border-collapse:collapse;margin-top:12px;}
+table td,table th{border:1px solid #999;padding:8px 14px;vertical-align:top;}
+table thead th{background:#003366;color:#fff;}
+.marks{text-align:right;font-weight:bold;color:#003366;white-space:nowrap;}
+.header-box{background:#003366;color:#fff;padding:16px 20px;border-radius:4px;margin-bottom:20px;}
+.header-box h1{margin:0;font-size:1.4rem;}
+.header-box p{margin:4px 0 0;font-size:.95rem;}
+.instr{background:#f0f4ff;border-left:4px solid #003366;padding:10px 16px;margin-bottom:16px;}
+.scenario{background:#fff8e1;border-left:4px solid #f0a500;padding:10px 16px;margin:10px 0;font-style:italic;}
+.qnum{font-weight:bold;white-space:nowrap;}
+.answer-section{margin-top:40px;border-top:3px solid #003366;padding-top:20px;}
+.answer-section h2{color:#1a5c1a;border-bottom-color:#1a5c1a;}
+table.answers thead th{background:#1a5c1a;}
+table.answers tr:nth-child(even){background:#f0fff0;}
+.ans-q{font-weight:bold;color:#222;font-size:.88rem;}
+.ans-a{color:#1a5c1a;font-size:.88rem;}
+.page-break{page-break-before:always;}
+</style>
+</head>
+<body>
+
+<div class="header-box">
+  <h1>APT470S &nbsp;|&nbsp; Application Development</h1>
+  <p><strong>Test 3 of 5 &nbsp;|&nbsp; Software Design, UML Modelling & Quality</strong></p>
+  <p>Time: 120 mins &nbsp;&bull;&nbsp; Total: 60 marks &nbsp;&bull;&nbsp; Weight: 30%</p>
+</div>
+<div class="instr">
+  <ul>
+    <li>Answer <strong>ALL</strong> questions.</li>
+    <li>This is <strong>NOT</strong> an open book test.</li>
+    <li>Questions 02 and 03 are scenario/case study-based. Read them carefully before answering.</li>
+    <li>Specify question numbers correctly in your answer book.</li>
+  </ul>
+</div>
+<h2>QUESTION 01 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[30 Marks]</span></h2>
+<table>
+<thead><tr><th colspan="3">Multiple choice and True/False: Use the answer book provided. Specify question numbers accurately.</th></tr>
+<tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead>
+<tbody><tr>
+<td class="qnum">1.1</td>
+<td>Which design principle states that a class should have only one reason to change?<br/>a) Open/Closed Principle<br/>b) Single Responsibility Principle<br/>c) Liskov Substitution Principle<br/>d) Interface Segregation Principle</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.2</td>
+<td>Which UML diagram shows the flow of control or activities in a process?<br/>a) Class diagram<br/>b) State machine diagram<br/>c) Activity diagram<br/>d) Component diagram</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.3</td>
+<td>What is cohesion in software design?<br/>a) The degree to which modules depend on each other<br/>b) The degree to which elements within a module belong together<br/>c) The number of classes in a system<br/>d) The complexity of the user interface</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.4</td>
+<td>What is coupling in software design?<br/>a) The degree to which modules depend on each other<br/>b) The degree to which elements within a module belong together<br/>c) The number of methods in a class<br/>d) The level of test coverage</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.5</td>
+<td>Which of the following best describes a software architecture pattern?<br/>a) A bug fix strategy<br/>b) A high-level structure organising system components and their interactions<br/>c) A programming language feature<br/>d) A type of database</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.6</td>
+<td>In a class diagram, what does an arrow with a hollow triangle arrowhead represent?<br/>a) Association<br/>b) Dependency<br/>c) Inheritance (generalisation)<br/>d) Realisation</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.7</td>
+<td>Which testing type verifies that individual units of code work correctly in isolation?<br/>a) Integration testing<br/>b) System testing<br/>c) Unit testing<br/>d) Acceptance testing</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.8</td>
+<td>Which quality attribute means the software should be easy to modify without introducing new defects?<br/>a) Reliability<br/>b) Efficiency<br/>c) Maintainability<br/>d) Portability</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.9</td>
+<td>High cohesion and low coupling are desirable properties of a well-designed software module. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.10</td>
+<td>A sequence diagram shows the static structure of classes and their relationships. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.11</td>
+<td>Which software metric measures the number of independent paths through a program?<br/>a) Lines of code<br/>b) Cyclomatic complexity<br/>c) Function point<br/>d) Code coverage</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.12</td>
+<td>What is refactoring in software development?<br/>a) Rewriting the entire system from scratch<br/>b) Restructuring existing code without changing its external behaviour<br/>c) Adding new features to the system<br/>d) Removing unused modules from the codebase</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.13</td>
+<td>Black-box testing focuses on testing internal implementation details of a module. &nbsp;<em>(True / False)</em></td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.14</td>
+<td>Which UML diagram would best show how a 'Customer' places an 'Order' in an e-commerce system?<br/>a) Class diagram<br/>b) Sequence diagram<br/>c) Use case diagram<br/>d) Component diagram</td>
+<td class="marks">2</td>
+</tr><tr>
+<td class="qnum">1.15</td>
+<td>Which of the following is an example of a design pattern?<br/>a) Waterfall<br/>b) Singleton<br/>c) Scrum<br/>d) UML</td>
+<td class="marks">2</td>
+</tr></tbody></table><h2>QUESTION 02 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[15 Marks]</span></h2>
+<table><thead><tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead><tbody><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> RetailPlus is building an e-commerce platform. The architecture team is deciding between a Monolithic architecture and a Microservices architecture for the backend system.</div></td></tr><tr>
+<td class="qnum">2.1</td>
+<td>Compare and contrast Monolithic and Microservices architectures for the RetailPlus platform. Discuss the advantages and disadvantages of each and recommend which is more suitable, providing justification.</td>
+<td class="marks">9</td>
+</tr><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> The RetailPlus development team must design the 'Place Order' workflow.</div></td></tr><tr>
+<td class="qnum">2.2</td>
+<td>Draw or describe a UML Activity Diagram for the 'Place Order' process in the RetailPlus e-commerce system. Identify at least 5 key activities and any decision points.</td>
+<td class="marks">6</td>
+</tr></tbody></table><h2>QUESTION 03 &nbsp;<span style="font-weight:normal;font-size:.9rem;">[15 Marks]</span></h2>
+<table><thead><tr><th style="width:60px">Q#</th><th>Question</th><th class="marks">Marks</th></tr></thead><tbody><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> You are a software engineer reviewing the design of a Library Management System. The system must manage books, members, and borrowing transactions.</div></td></tr><tr>
+<td class="qnum">3.1</td>
+<td>Design a UML Class Diagram for the Library Management System. Identify at least FOUR classes, their key attributes and methods, and the relationships between them.</td>
+<td class="marks">9</td>
+</tr><tr><td colspan="3"><div class="scenario"><strong>Scenario:</strong> The Library Management System must meet specific quality standards before go-live.</div></td></tr><tr>
+<td class="qnum">3.2</td>
+<td>Explain TWO software quality attributes that are most critical for the Library Management System, providing a specific example of how each would be measured or tested.</td>
+<td class="marks">6</td>
+</tr></tbody></table><div class="answer-section page-break">
+<h2>&#10003; Answer Key &nbsp;<span style="font-weight:normal;font-size:.9rem;">(For Instructor Use)</span></h2>
+<p style="font-size:.85rem;color:#555;">Each answer is shown alongside the original question for easy reference.</p>
+<table class="answers">
+<thead><tr>
+  <th style="width:55px">Q#</th>
+  <th style="width:42%">Question</th>
+  <th>Model Answer</th>
+</tr></thead><tbody><tr>
+<td class="qnum">1.1</td>
+<td class="ans-q">Class should have only one reason to change?</td>
+<td class="ans-a">b) Single Responsibility Principle</td>
+</tr><tr>
+<td class="qnum">1.2</td>
+<td class="ans-q">UML diagram showing flow of control/activities?</td>
+<td class="ans-a">c) Activity diagram</td>
+</tr><tr>
+<td class="qnum">1.3</td>
+<td class="ans-q">Cohesion definition?</td>
+<td class="ans-a">b) The degree to which elements within a module belong together</td>
+</tr><tr>
+<td class="qnum">1.4</td>
+<td class="ans-q">Coupling definition?</td>
+<td class="ans-a">a) The degree to which modules depend on each other</td>
+</tr><tr>
+<td class="qnum">1.5</td>
+<td class="ans-q">Software architecture pattern?</td>
+<td class="ans-a">b) A high-level structure organising system components and their interactions</td>
+</tr><tr>
+<td class="qnum">1.6</td>
+<td class="ans-q">Hollow triangle arrowhead in class diagram?</td>
+<td class="ans-a">c) Inheritance (generalisation)</td>
+</tr><tr>
+<td class="qnum">1.7</td>
+<td class="ans-q">Tests individual units in isolation?</td>
+<td class="ans-a">c) Unit testing</td>
+</tr><tr>
+<td class="qnum">1.8</td>
+<td class="ans-q">Easy to modify without introducing defects?</td>
+<td class="ans-a">c) Maintainability</td>
+</tr><tr>
+<td class="qnum">1.9</td>
+<td class="ans-q">High cohesion, low coupling desirable?</td>
+<td class="ans-a">TRUE</td>
+</tr><tr>
+<td class="qnum">1.10</td>
+<td class="ans-q">Sequence diagram shows static structure?</td>
+<td class="ans-a">FALSE — sequence diagrams show dynamic interactions over time; class diagrams show static structure</td>
+</tr><tr>
+<td class="qnum">1.11</td>
+<td class="ans-q">Measures independent paths through a program?</td>
+<td class="ans-a">b) Cyclomatic complexity</td>
+</tr><tr>
+<td class="qnum">1.12</td>
+<td class="ans-q">Refactoring definition?</td>
+<td class="ans-a">b) Restructuring existing code without changing its external behaviour</td>
+</tr><tr>
+<td class="qnum">1.13</td>
+<td class="ans-q">Black-box testing focuses on internal implementation?</td>
+<td class="ans-a">FALSE — black-box testing tests inputs/outputs without knowledge of internal implementation</td>
+</tr><tr>
+<td class="qnum">1.14</td>
+<td class="ans-q">Customer places Order — best UML diagram?</td>
+<td class="ans-a">b) Sequence diagram (shows the interaction/flow between Customer, Cart, and Order objects over time)</td>
+</tr><tr>
+<td class="qnum">1.15</td>
+<td class="ans-q">Example of a design pattern?</td>
+<td class="ans-a">b) Singleton</td>
+</tr><tr>
+<td class="qnum">2.1</td>
+<td class="ans-q">Monolithic vs Microservices for RetailPlus?</td>
+<td class="ans-a">Monolithic: simple to develop initially, single deployable unit, easier testing. Disadvantages: hard to scale individual components, slow to deploy changes, technology lock-in. Microservices: each service independently deployable/scalable (e.g. product service separate from payment). Disadvantages: complex orchestration, network latency, distributed system challenges. Recommendation: Microservices for RetailPlus as e-commerce platforms need independent scaling of catalogue, cart, payment. [3 marks each architecture, 3 marks recommendation with justification]</td>
+</tr><tr>
+<td class="qnum">2.2</td>
+<td class="ans-q">Activity Diagram for Place Order?</td>
+<td class="ans-a">Key activities: (1) Customer browses catalogue → (2) Adds item to cart → (3) Proceeds to checkout → (4) [Decision] Is user logged in? Yes → (5) Enters delivery details → (6) Selects payment method → (7) Confirms order → (8) System processes payment → [Decision] Payment approved? Yes → (9) Order confirmed, email sent. No → Error message. [1 mark per clearly described activity + decision point, up to 6 marks]</td>
+</tr><tr>
+<td class="qnum">3.1</td>
+<td class="ans-q">UML Class Diagram for Library Management System?</td>
+<td class="ans-a">Minimum 4 classes: Book (attributes: ISBN, title, author, available; methods: checkOut(), returnBook()), Member (attributes: memberID, name, email; methods: borrowBook(), returnBook()), Loan (attributes: loanID, loanDate, dueDate; methods: calculateFine()), Librarian (attributes: staffID; methods: addBook(), removeMember()). Relationships: Member borrows Book (many-to-many via Loan); Librarian manages Book. [1.5 marks per class with attributes+methods, 1.5 marks for correct relationships = 9 marks]</td>
+</tr><tr>
+<td class="qnum">3.2</td>
+<td class="ans-q">Two quality attributes for Library System?</td>
+<td class="ans-a">Any two: (1) Reliability — system must correctly track all loans without data loss. Measured by: running system under load and checking transaction accuracy; target <0.1% error rate. (2) Usability — librarians and members must find the system easy to use. Measured by: usability testing with real users; task completion rate target >90%. (3) Security — member data must be protected. Measured by: penetration testing; ensure data encrypted at rest. [3 marks each: 1 attribute name, 1 explanation, 1 measurement example]</td>
+</tr></tbody></table></div><p style='text-align:center;margin-top:30px;font-weight:bold;'>****** END OF TEST 3 *******</p>
+</body>
+</html>

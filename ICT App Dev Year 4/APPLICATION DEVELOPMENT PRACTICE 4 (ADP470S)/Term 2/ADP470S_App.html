@@ -1,0 +1,3459 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0d0d1a;color:#e4e4f0;display:flex;height:100vh;overflow:hidden}
+#sidebar{width:210px;min-width:210px;background:#111126;border-right:1px solid #252545;display:flex;flex-direction:column;overflow-y:auto}
+.brand{padding:1rem;border-bottom:1px solid #252545}
+.brand-name{font-weight:700;color:#00c9a7;font-size:15px;letter-spacing:.5px}
+.brand-sub{font-size:11px;color:#8888aa;margin-top:2px}
+.nav-row{display:flex;border-bottom:1px solid #252545;padding:6px 6px 0}
+.ntab{flex:1;background:transparent;border:none;cursor:pointer;font-size:18px;padding:7px 2px;border-bottom:2px solid transparent;color:#44445a;transition:.15s}
+.ntab.on{border-bottom-color:#00c9a7;color:#00c9a7}
+.sec-lbl{padding:6px 10px 2px;font-size:10px;color:#44445a;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-top:4px}
+.slist{flex:1;overflow-y:auto;padding:6px}
+.sitem{width:100%;text-align:left;background:transparent;border:none;border-left:3px solid transparent;border-radius:6px;cursor:pointer;padding:8px 8px;margin-bottom:2px;color:#8888aa;font-size:12px;display:block}
+.sitem.on{background:#1e1e38;border-left-color:#00c9a7;color:#e4e4f0;font-weight:500}
+.sfooter{padding:.75rem;border-top:1px solid #252545;font-size:12px;color:#8888aa;display:flex;justify-content:space-between}
+#main{flex:1;overflow-y:auto;padding:1.5rem}
+.wrap{max-width:820px}
+.pgtitle{font-size:20px;font-weight:600;color:#e4e4f0;margin-bottom:1.25rem}
+.ptag{display:inline-block;font-size:12px;background:#00c9a720;color:#00c9a7;padding:3px 8px;border-radius:4px;font-weight:600;margin-right:8px}
+.pinfo{font-size:12px;color:#8888aa}
+.pcount{float:right;font-size:12px;color:#00c9a7;border:1px solid #00c9a750;padding:3px 10px;border-radius:20px;background:#00c9a715}
+.qcard{border:1px solid #252545;border-radius:10px;overflow:hidden;margin-bottom:1rem;background:#14142a}
+.qhead{padding:1rem 1.25rem}
+.qbadge{display:inline-block;color:#000;font-weight:700;font-size:12px;padding:3px 9px;border-radius:4px;margin-right:8px;vertical-align:middle}
+.qtitle{font-weight:500;font-size:15px;color:#e4e4f0;vertical-align:middle}
+.qmeta{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
+.qmarks{font-size:12px;color:#8888aa}
+.qtag{display:inline-block;font-size:11px;color:#00c9a7;background:#00c9a720;padding:2px 8px;border-radius:4px;margin-bottom:.75rem}
+.qbody{font-family:monospace;font-size:13px;color:#8888aa;white-space:pre-wrap;margin:.5rem 0 .75rem;line-height:1.65}
+.ftable{width:100%;border-collapse:collapse;font-size:12px;border-radius:6px;overflow:hidden;margin:.75rem 0;border:1px solid #44445a}
+.ftable th{background:#44445a;padding:7px 10px;color:#e4e4f0;font-weight:500;text-align:left;white-space:nowrap}
+.ftable td{padding:7px 10px;border-top:1px solid #44445a;vertical-align:top;color:#8888aa}
+.ftable td:first-child{font-family:monospace;color:#00c9a7;white-space:nowrap}
+.ftable tr:nth-child(even) td{background:#0a0a18}
+.btn-show{padding:8px 18px;border-radius:6px;border:none;font-weight:600;font-size:13px;cursor:pointer;background:#00c9a7;color:#000;transition:.15s}
+.btn-show:hover{background:#00b896}
+.qans{border-top:1px solid #252545;background:#1a1a32;padding:1.25rem;display:none}
+.qans.open{display:block}
+.ans-lbl{font-size:12px;font-weight:600;color:#00c9a7;letter-spacing:1px;margin-bottom:.75rem}
+.ans-pre{font-family:monospace;font-size:12.5px;color:#e4e4f0;white-space:pre-wrap;line-height:1.7;margin-bottom:1rem}
+.mark-row{display:flex;gap:8px}
+.mbtn{font-size:12px;padding:6px 14px;border-radius:5px;cursor:pointer;background:transparent}
+.mbtn.got{border:1px solid #00c9a7;color:#00c9a7}
+.mbtn.nope{border:1px solid #e17055;color:#e17055}
+.mbtn:not(.got):not(.nope){border:1px solid #44445a;color:#8888aa}
+.acc-item{border:1px solid #252545;border-radius:8px;overflow:hidden;margin-bottom:.75rem}
+.acc-head{width:100%;background:#1a1a32;border:none;cursor:pointer;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;text-align:left}
+.acc-title{font-weight:500;font-size:14px;color:#e4e4f0}
+.acc-body{padding:1rem;background:#14142a;display:none}
+.acc-body.open{display:block}
+.acc-pre{font-family:monospace;font-size:13px;color:#8888aa;white-space:pre-wrap;line-height:1.7}
+.topic-tabs{display:flex;flex-direction:column;gap:2px}
+.dtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem}
+.dtab{padding:6px 12px;border-radius:20px;border:1px solid #44445a;background:transparent;color:#8888aa;cursor:pointer;font-size:13px;transition:.15s}
+.dtab.on{border-color:#00c9a7;background:#00c9a720;color:#00c9a7}
+.dbox{padding:1rem;background:#1a1a32;border-radius:8px;border:1px solid #252545}
+.dbox p{font-size:13px;color:#8888aa;margin:.5rem 0 0}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.mcard{border:1px solid #252545;border-radius:10px;overflow:hidden;background:#14142a}
+.mchead{padding:10px 14px;background:#1a1a32;border-bottom:1px solid #252545}
+.mctitle{font-weight:600;font-size:14px}
+.mcsub{font-size:11px;color:#8888aa;margin-top:2px}
+.mcbody{font-family:monospace;font-size:12px;color:#8888aa;white-space:pre-wrap;padding:12px 14px;line-height:1.65}
+.stable{width:100%;border-collapse:collapse;font-size:13px;overflow-x:auto}
+.stable th{padding:10px 12px;color:#e4e4f0;font-weight:600;text-align:left;border-bottom:1px solid #252545;background:#1a1a32;white-space:nowrap}
+.stable td{padding:9px 12px;border-bottom:1px solid #44445a;vertical-align:top;font-size:12px}
+.stable tr:nth-child(even) td{background:#0a0a14}
+.stable td:first-child{color:#e4e4f0;font-weight:500}
+.stable td:nth-child(2){color:#00c9a7;font-family:monospace;white-space:nowrap}
+.stable td:nth-child(3){color:#8888aa}
+.ibox{padding:1rem;background:#1a1a32;border-radius:8px;border:1px solid #252545;margin-bottom:1.25rem}
+.ibox-title{font-weight:600;color:#00c9a7;margin-bottom:8px;font-size:14px}
+.ibox-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;font-size:13px;color:#8888aa}
+input[type=number],input[type=text]{padding:4px 8px;border-radius:4px;border:1px solid #44445a;background:#0a0a18;color:#e4e4f0;font-size:13px;width:80px}
+.btn-sm{padding:4px 10px;border-radius:4px;border:1px solid #44445a;background:transparent;color:#8888aa;cursor:pointer;font-size:12px}
+.btn-ac{padding:4px 10px;border-radius:4px;border:none;background:#00c9a7;color:#000;cursor:pointer;font-size:12px;font-weight:600}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-lbl{width:90px;font-family:monospace;font-size:13px;flex-shrink:0}
+.bar-desc{width:110px;font-size:12px;color:#8888aa;flex-shrink:0}
+.bar-track{flex:1;background:#44445a;border-radius:3px;height:18px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;transition:width .4s}
+.bar-val{width:70px;font-size:12px;font-family:monospace;text-align:right;flex-shrink:0;color:#8888aa}
+.sort-arr{display:flex;align-items:flex-end;gap:6px;height:110px;margin-bottom:.75rem;justify-content:center}
+.sort-block{display:flex;flex-direction:column;align-items:center;gap:4px}
+.sort-bar{width:34px;border-radius:3px 3px 0 0;transition:height .2s,background .2s}
+.sort-val{font-size:12px;font-family:monospace}
+.dstack{display:flex;flex-direction:column-reverse;gap:4px;min-height:80px;margin-bottom:.75rem;align-items:center;padding:0 1rem}
+.dqueue{display:flex;flex-direction:row;gap:4px;min-height:60px;align-items:center;flex-wrap:wrap;margin-bottom:.75rem;padding:0 .5rem}
+.ds-item{padding:6px 12px;border-radius:4px;font-family:monospace;font-size:13px;border:1px solid;text-align:center;min-width:40px}
+.ds-top{background:#e1705540;border-color:#e17055;color:#e17055}
+.ds-norm{background:#2a2a40;border-color:#44445a;color:#8888aa}
+.ds-front{background:#00c9a740;border-color:#00c9a7;color:#00c9a7}
+.ds-label{font-size:9px;text-align:center;margin-top:2px}
+.empty-ds{color:#44445a;font-size:12px;text-align:center;width:100%;padding:.5rem}
+.ds-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ds-box{padding:1rem;background:#0a0a18;border-radius:8px;border:1px solid #252545}
+.ds-title{font-size:13px;font-weight:600;margin-bottom:.75rem}
+.ds-ctrl{display:flex;gap:4px;margin-bottom:6px}
+.ds-msg{font-size:11px;min-height:16px;margin-top:4px}
+.step-msg{text-align:center;font-size:12px;color:#8888aa;margin-bottom:.75rem;min-height:20px}
+.step-btns{display:flex;gap:8px;justify-content:center}
+</style></head>
+<body>
+<div id="sidebar">
+  <div class="brand"><div class="brand-name">ADP470S</div><div class="brand-sub">Advanced Dev Practice</div></div>
+  <div class="nav-row">
+    <button class="ntab on" onclick="setNav('papers')" title="Past Papers">📄</button>
+    <button class="ntab" onclick="setNav('notes')" title="Notes &amp; Theory">📝</button>
+    <button class="ntab" onclick="setNav('diagrams')" title="Visual Diagrams">🎨</button>
+    <button class="ntab" onclick="setNav('memory')" title="Memory Aids">🧠</button>
+    <button class="ntab" onclick="setNav('scope')" title="Exam Scope">🎯</button>
+  </div>
+  <div class="sec-lbl" id="nav-lbl">Past Papers</div>
+  <div class="slist" id="sidebar-list"></div>
+  <div class="sfooter"><span>June Exam</span><span style="color:#00c9a7">CPUT</span></div>
+</div>
+<div id="main"><div class="wrap" id="mc"></div></div>
+
+<script>
+// ══════════════════════════════════════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════════════════════════════════════
+
+const QC=['#00c9a7','#0984e3','#a29bfe','#e17055','#fd79a8','#fdcb6e'];
+
+const PAPERS=[
+  {id:'apr25',label:'Test 1 — April 2025',sub:'75m · 2 hours'},
+  {id:'jun23',label:'Test 1 — June 2023',sub:'80m · 2 hours'},
+  {id:'mar24',label:'Test 1 — March 2024',sub:'50m · 1.5 hours'},
+  {id:'mid21',label:'Midyear Exam 2021',sub:'100m · 3 hours'},
+  {id:'test21',label:'Test 1 — May 2021',sub:'80m · 2.5 hours'},
+  {id:'asgn23',label:'Assignment 1 — 2023',sub:'100m · Take-home'},
+  {id:'nov20',label:'Nov Test — 2020',sub:'100m · 2.5 hours'},
+  {id:'apr26',label:'Test 1 — April 2026',sub:'80m · 2 hours',new:true},
+  {id:'asgn24',label:'Assignment — May 2024',sub:'100m · Take-home'},
+  {id:'pred26',label:'🎯 Predicted June 2026',sub:'100m · YOUR EXAM',new:true},
+];
+
+const BIGO_TBL={head:['Expression','Big-O','Reason'],rows:[
+  ['Two sequential for loops (both n)','O(n)','O(n)+O(n)=O(2n)=O(n)'],
+  ['Outer O(n), inner j*=3','O(n log n)','O(log n) inner × O(n) outer'],
+  ['Outer i+=3, inner j-- from n','O(n²)','O(n) outer × O(n) inner'],
+  ['Single loop','O(n)','Linear scan'],
+  ['j/=2 inner loop','O(log n)','Binary halving'],
+  ['5000n+0.001n³+0.025n²','O(n³)','n³ dominates'],
+]};
+
+const SORT_TBL={head:['Algorithm','Best','Average','Worst','Space'],rows:[
+  ['Bubble Sort','O(n)','O(n²)','O(n²)','O(1)'],
+  ['Selection Sort','O(n²)','O(n²)','O(n²)','O(1)'],
+  ['Insertion Sort','O(n)','O(n²)','O(n²)','O(1)'],
+  ['Quick Sort','O(n log n)','O(n log n)','O(n²)*','O(log n)'],
+  ['Heap Sort','O(n log n)','O(n log n)','O(n log n)✓','O(1)'],
+]};
+
+const FACT_TBL={head:['Method','Time','Space','Notes'],rows:[
+  ['Recursive','O(n)','O(n)','n stack frames — risk of overflow!'],
+  ['Iterative','O(n)','O(1)','Single loop variable only'],
+  ['Preferred','Iterative','O(1)','No stack overflow for large n'],
+]};
+
+const DSA_TBL={head:['Structure','Operation','O','Key'],rows:[
+  ['Stack push/pop','Add/remove top','O(1)','LIFO'],
+  ['Queue en/dequeue','Add rear/remove front','O(1)','FIFO'],
+  ['Circular wrap','(idx+1)%capacity','O(1)','No wasted slots'],
+  ['BST insert/find','Compare → L or R','O(log n)','O(n) skewed'],
+  ['Inorder traversal','L→Root→R','O(n)','Always SORTED!'],
+  ['AVL BF','h(L)−h(R)','—','Must be −1,0,+1'],
+]};
+
+const GRAPH_TBL={head:['Algorithm','Structure','Time','Purpose'],rows:[
+  ['BFS','Queue (FIFO)','O(V+E)','Level-by-level, shortest path'],
+  ['DFS','Stack (LIFO)','O(V+E)','Deep first, maze/cycle'],
+  ['Dijkstra','Priority Queue','O(V²)','Shortest path (weighted≥0)'],
+  ["Prim's MST",'Priority Queue','O(E log V)','Grow MST from vertex'],
+  ["Kruskal's MST",'Union-Find','O(E log E)','Sort edges add cheapest'],
+]};
+
+const PD={
+apr25:{title:'Test 1 — April 2025',info:'ADP470S · 75 Marks · 3 April 2025',qs:[
+  {n:1,title:'Big-O Code Analysis',marks:15,tag:'Big-O Notation',tbl:BIGO_TBL,
+   body:`Determine the Big-O for each of the following code excerpts:
+
+(a) int sum=0;
+for(int i=0; i<n; i++){sum+=a[i];}
+for(int j=0; j<n; j++){sum+=a[j];}         [3]
+
+(b) int prod=1;
+for(int i=1; i<n; i++){
+  for(int j=i; j<n; j=j*3){prod*=j;}
+}                                             [3]
+
+(c) int sum=0;
+for(i=0; i<=n-1; i+=3){
+  for(j=n-1; j>0; j--){sum+=(i*j);}
+}                                             [3]`,
+   ans:`(a) O(n)
+Two sequential loops, each O(n). O(n)+O(n)=O(2n)=O(n). Drop constant.
+
+(b) O(n log n)
+Outer loop: O(n).
+Inner loop: j*=3 each step → runs log₃(n) times → O(log n).
+Nested multiply: O(n) × O(log n) = O(n log n)
+
+(c) O(n²)
+Outer i+=3 → runs n/3 times → O(n/3) = O(n) [drop constant]
+Inner j from n down to 0 → O(n)
+Nested: O(n) × O(n) = O(n²)`},
+  {n:2,title:'Factorial: Recursive & Iterative',marks:20,tag:'Recursion',tbl:FACT_TBL,
+   body:`2.1  Trace the recursive factorial for n=5.
+     Discuss time complexity in Big-O.              [10]
+
+2.2  Compare space complexity of recursive vs iterative.
+     Which is preferable and why?                   [10]`,
+   ans:`2.1 RECURSIVE TRACE — fact(5):
+fact(5) → 5 × fact(4)
+fact(4) → 4 × fact(3)
+fact(3) → 3 × fact(2)
+fact(2) → 2 × fact(1)
+fact(1) → 1  ← BASE CASE
+
+Unwinding: fact(2)=2, fact(3)=6, fact(4)=24, fact(5)=120
+Time: O(n) — makes n recursive calls
+
+RECURSIVE JAVA:
+int factRec(int n){
+  if(n<=1) return 1;
+  return n * factRec(n-1);
+}
+
+2.2 SPACE COMPARISON:
+Recursive: O(n) — n frames on call stack simultaneously
+Iterative: O(1) — only one loop variable
+
+PREFERRED: Iterative
+• No risk of StackOverflowError for large n
+• Constant memory regardless of input size
+
+ITERATIVE JAVA:
+int factIter(int n){
+  int result=1;
+  for(int i=2;i<=n;i++) result*=i;
+  return result;
+}`},
+  {n:3,title:'Sorting Algorithms (Bubble / Quick / Heap)',marks:40,tag:'Sorting',tbl:SORT_TBL,
+   body:`3.1  Bubble Sort on {90,23,5,109,12} — show passes    [8]
+3.2  Bubble Sort Big-O                                 [4]
+3.3  Quick Sort on {90,23,5,109,12}                   [8]
+3.4  Quick Sort Big-O                                  [4]
+3.5  Heap Sort on {90,23,5,109,12}                    [8]
+3.6  Heap Sort Big-O                                   [4]`,
+   ans:`BUBBLE SORT {90,23,5,109,12}:
+Strategy: compare adjacent pairs, swap if out of order.
+Pass 1:
+[90,23,5,109,12]→swap→[23,90,5,109,12]→swap→[23,5,90,109,12]
+→no swap→swap→[23,5,90,12,109] ✓ 109 placed
+Pass 2: [23,5,90,12,109]→[5,23,12,90,109] ✓ 90 placed
+Pass 3: [5,12,23,90,109] ✓ Done
+Big-O: Best O(n) [optimised flag], Avg O(n²), Worst O(n²)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK SORT {90,23,5,109,12} — pivot = last element:
+pivot=12: left={5}, right={90,23,109}
+→ [5 | 12 | 90,23,109]
+Sort right {90,23,109} pivot=109: → [23,90 | 109]
+Sort {23,90} pivot=90: → [23 | 90]
+FINAL: [5,12,23,90,109] ✓
+Big-O: Best/Avg O(n log n), Worst O(n²) [sorted+last pivot]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HEAP SORT {90,23,5,109,12}:
+Phase 1 — Build Max-Heap:
+Tree: 90(root), 23(L), 5(R), 109(LL), 12(LR)
+109>23 → swap; 109>90 → swap
+Max-Heap: [109, 90, 5, 23, 12]
+
+Phase 2 — Extract max:
+Swap 109↔12 → [12,90,5,23|109], heapify→[90,23,5,12|109]
+Swap 90↔12  → [12,23,5|90,109], heapify→[23,12,5|90,109]
+...continue...
+FINAL: [5,12,23,90,109] ✓
+Big-O: ALL cases O(n log n). Space O(1). GUARANTEED!`},
+]},
+jun23:{title:'Test 1 — June 2023',info:'ADP470S · 80 Marks · 8 June 2023',qs:[
+  {n:1,title:'Big-O & Factorial',marks:20,tag:'Big-O / Recursion',tbl:BIGO_TBL,
+   body:`1.1 Explain recursive factorial                   [2]
+1.2 Explain iterative factorial                   [4]
+1.3 Performance comparison: time & space          [5]
+1.4 Code: two sequential for loops               [3]
+1.5 Code: outer O(n), inner j*=3                [3]
+1.6 Code: outer i+=3, inner j-- from n           [3]`,
+   ans:`1.1 RECURSIVE: Base n≤1→return 1; else return n*fact(n-1)
+1.2 ITERATIVE: result=1; for i=2..n: result*=i; return result
+1.3 Time: both O(n). Space: recursive O(n) stack, iterative O(1). Iterative preferred.
+1.4 O(n) — two sequential O(n) loops, total O(2n)=O(n)
+1.5 O(n log n) — outer O(n), inner j*=3 → O(log₃n)
+1.6 O(n²) — outer O(n/3)=O(n), inner O(n), nested`},
+  {n:2,title:'Queue — Array Implementation',marks:20,tag:'Data Structures',tbl:null,
+   body:`Implement a queue using ARRAY with these operations:
+2.1  push (enqueue)     [5]
+2.2  pop (dequeue)      [5]
+2.3  isEmpty            [5]
+2.4  peek               [5]`,
+   ans:`public class Queue {
+  private int[] arr;
+  private int front, rear, size, capacity;
+
+  public Queue(int cap){
+    capacity=cap; arr=new int[cap]; front=0; rear=-1; size=0;
+  }
+
+  // 2.1 Enqueue
+  public void enqueue(int x){
+    if(size==capacity) throw new RuntimeException("Full");
+    rear=(rear+1)%capacity;  // KEY: circular wrap!
+    arr[rear]=x; size++;
+  }
+
+  // 2.2 Dequeue
+  public int dequeue(){
+    if(isEmpty()) throw new RuntimeException("Empty");
+    int val=arr[front];
+    front=(front+1)%capacity;  // KEY: circular wrap!
+    size--; return val;
+  }
+
+  // 2.3 isEmpty
+  public boolean isEmpty(){ return size==0; }
+
+  // 2.4 Peek
+  public int peek(){ return arr[front]; }
+}
+
+All operations: O(1). Circular trick: (idx+1)%capacity`},
+  {n:3,title:'Quick Sort',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`3.1 Explain Quick Sort. Use {90,23,5,109,12,22,67,34}  [12]
+3.2 Explain time performance using asymptotic notation  [8]`,
+   ans:`QUICK SORT STRATEGY: Divide-and-conquer using a PIVOT.
+1. Choose pivot (last element)
+2. PARTITION: elements < pivot go left, > pivot go right
+3. Pivot is now in its FINAL correct position
+4. Recursively sort left and right sub-arrays
+
+TRACE {90,23,5,109,12,22,67,34} pivot=34:
+left={23,5,12,22}, right={90,109,67}
+→ [23,5,12,22 | 34 | 90,109,67]
+
+Sort {23,5,12,22} pivot=22:
+left={5,12}, right={23} → [5,12,22,23]
+
+Sort {90,109,67} pivot=67:
+left={}, right={90,109} → [67,90,109]
+
+FINAL: [5,12,22,23,34,67,90,109] ✓
+
+BIG-O:
+Best:  O(n log n) — pivot always halves the array
+Avg:   O(n log n) — expected with varied data
+Worst: O(n²) — sorted array + last-element pivot (each partition n-1 vs 0)
+Space: O(log n) recursive call stack`},
+  {n:4,title:'Heap Sort',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`4.1 Explain Heap Sort. Use {90,23,5,109,12,22,67,34}   [12]
+4.2 Explain time performance using asymptotic notation   [8]`,
+   ans:`HEAP SORT — TWO PHASES:
+
+PHASE 1: Build Max-Heap (parent ≥ both children)
+Array: {90,23,5,109,12,22,67,34}
+Heapify from last non-leaf upward:
+109>23 swap; 109>90 swap; 67>5 swap
+Max-Heap: [109,90,67,23,12,22,5,34]
+Root = 109 (maximum) ✓
+
+PHASE 2: Extract max repeatedly
+• Swap root(109) with last(34): heapify→[90,34,67,...]
+• Swap root(90) with last: heapify→[67,...]
+...repeat until sorted...
+FINAL: [5,12,22,23,34,67,90,109] ✓
+
+BIG-O:
+Best:  O(n log n)
+Avg:   O(n log n)
+Worst: O(n log n)  ← ALWAYS GUARANTEED! No worst case.
+Space: O(1) — in-place
+
+KEY ADVANTAGE over Quick Sort: no degradation to O(n²)`},
+]},
+mar24:{title:'Test 1 — March 2024',info:'ADP470S · 50 Marks · 7 March 2024',qs:[
+  {n:1,title:'Factorial — Trace & Analysis',marks:20,tag:'Recursion',tbl:FACT_TBL,
+   body:`1.1 TRACE recursive factorial for n=5             [5]
+1.2 TRACE iterative factorial for n=5             [5]
+1.3 Compare Big-O time & space. Which preferred?  [6]
+1.4 What is an algorithm?                         [4]`,
+   ans:`1.1 RECURSIVE TRACE fact(5):
+fact(5)→5×fact(4)→4×fact(3)→3×fact(2)→2×fact(1)→1
+Unwind: 2, 6, 24, 120 ✓
+Time: O(n) | Space: O(n) — 5 frames on call stack
+
+1.2 ITERATIVE TRACE:
+result=1; i=2:1×2=2; i=3:2×3=6; i=4:6×4=24; i=5:24×5=120 ✓
+Time: O(n) | Space: O(1) — only 'result' variable
+
+1.3 COMPARISON:
+Time: both O(n) — equal
+Space: Recursive O(n) vs Iterative O(1)
+Preferred: ITERATIVE — no stack overflow, constant memory
+
+1.4 ALGORITHM:
+A finite sequence of well-defined, unambiguous instructions
+that takes inputs, produces outputs, and terminates.
+Characteristics: Input, Output, Definiteness, Finiteness, Effectiveness`},
+  {n:2,title:'Quick Sort & Heap Sort + Theory',marks:30,tag:'Sorting',tbl:SORT_TBL,
+   body:`2.1 Trace Quick Sort AND Heap Sort on {7,5,15,20,16,17,8,3}  [14]
+2.2 Quick Best? 2.3 Heap Best? 2.4 Quick Avg?
+2.5 Heap Avg?  2.6 Quick Worst? 2.7 Heap Worst?        [6]
+2.8 Algorithm characteristics?                          [5]
+2.9 Time complexity vs space complexity?                [5]`,
+   ans:`QUICK SORT {7,5,15,20,16,17,8,3} pivot=3:
+3 is min; all others go right.
+→ [3 | 5,7,8,15,16,17,20]
+Recurse right → sorted
+FINAL: [3,5,7,8,15,16,17,20] ✓
+
+HEAP SORT — Max-Heap: [20,16,17,5,7,15,8,3]
+Extract 20→17→16→15→8→7→5→3
+FINAL: [3,5,7,8,15,16,17,20] ✓
+
+COMPLEXITIES:
+2.2 Quick Best:  O(n log n)   2.3 Heap Best:  O(n log n)
+2.4 Quick Avg:   O(n log n)   2.5 Heap Avg:   O(n log n)
+2.6 Quick Worst: O(n²)        2.7 Heap Worst: O(n log n) ← always!
+
+2.8 ALGORITHM CHARACTERISTICS:
+1.Input  2.Output  3.Definiteness  4.Finiteness  5.Effectiveness
+
+2.9 TIME = how execution time grows with n (iterations/comparisons)
+SPACE = how memory usage grows with n (variables/stack frames)`},
+]},
+mid21:{title:'Midyear Exam 2021',info:'ADP470S · 100 Marks (ANY 5 of 6) · 21 June 2021',qs:[
+  {n:1,title:'Insertion Sort vs Selection Sort',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`1.1 Compare with code/pseudocode                 [10]
+    Best case / Average case / Worst case         [3+3+4]`,
+   ans:`INSERTION SORT:
+Traverse arr[1..n]. Compare key with predecessors.
+Shift larger elements right, insert key in correct spot.
+→ Builds sorted array on the left, one element at a time
+→ STABLE sort
+
+SELECTION SORT:
+Find minimum in unsorted portion, swap to front.
+Repeat for each position.
+→ NOT stable
+
+PERFORMANCE:
+Best:  Insertion O(n) [nearly sorted], Selection O(n²) [always scans full range]
+Avg:   Both O(n²)
+Worst: Both O(n²)
+
+Key: Insertion Sort is better for nearly-sorted data!`},
+  {n:2,title:'Factorial',marks:20,tag:'Recursion',tbl:FACT_TBL,
+   body:`2.1 Implement recursive factorial               [5]
+2.2 Implement iterative factorial               [5]
+2.3 Big-O time & space comparison. Which preferred? [10]`,
+   ans:`// RECURSIVE:
+int factRec(int n){
+  if(n<=1) return 1;
+  return n * factRec(n-1);
+}
+
+// ITERATIVE:
+int factIter(int n){
+  int r=1;
+  for(int i=2;i<=n;i++) r*=i;
+  return r;
+}
+
+Time: both O(n). Space: recursive O(n) vs iterative O(1).
+PREFERRED: ITERATIVE — no stack overflow, O(1) memory`},
+  {n:3,title:'Stack — Linked Fruit Objects',marks:20,tag:'Data Structures',tbl:null,
+   body:`Linked stack for Fruit (fruit_id, name, unit_price, volume_sold).
+Push 4 fruits, pop and print all.
+Implement: push, pop, isEmpty, peek.               [20]`,
+   ans:`class Fruit{ int fruit_id; String name; double price,vol; Fruit next; }
+
+class FruitStack{
+  private Fruit top=null;
+
+  void push(Fruit f){ f.next=top; top=f; }
+
+  Fruit pop(){
+    if(isEmpty()) throw new RuntimeException("Empty");
+    Fruit f=top; top=top.next; return f;
+  }
+
+  Fruit peek(){ return top; }
+  boolean isEmpty(){ return top==null; }
+}
+
+// Demo — LIFO output:
+stack.push(new Fruit(1,"Apple",...));
+stack.push(new Fruit(2,"Banana",...));
+stack.push(new Fruit(3,"Mango",...));
+stack.push(new Fruit(4,"Orange",...));
+while(!stack.isEmpty()) System.out.println(stack.pop().name);
+// Output: Orange, Mango, Banana, Apple (LIFO!)`},
+  {n:4,title:'Circular Queue — Mouse Events',marks:20,tag:'Data Structures',tbl:DSA_TBL,
+   body:`Circular queue for MouseEvent (event_id, event_time, event_type).
+Enqueue 5 events, dequeue all.
+Implement: Enqueue, Dequeue, isEmpty, isFull.      [20]`,
+   ans:`class CircularQueue{
+  private MouseEvent[] arr;
+  private int front,rear,size,cap;
+
+  CircularQueue(int c){
+    cap=c; arr=new MouseEvent[c]; front=0; rear=-1; size=0;
+  }
+
+  void enqueue(MouseEvent e){
+    if(isFull()) throw new RuntimeException("Full");
+    rear=(rear+1)%cap;  // KEY: wrap around!
+    arr[rear]=e; size++;
+  }
+
+  MouseEvent dequeue(){
+    if(isEmpty()) throw new RuntimeException("Empty");
+    MouseEvent e=arr[front];
+    front=(front+1)%cap;  // KEY: wrap around!
+    size--; return e;
+  }
+
+  boolean isEmpty(){ return size==0; }
+  boolean isFull() { return size==cap; }
+}
+// All operations: O(1)`},
+  {n:5,title:'BST & AVL Trees',marks:20,tag:'Trees',tbl:null,
+   body:`6.1 BST: Find,Insert,Delete,isEmpty,traversals     [10]
+6.2 Draw BST inserting {10,5,15,16,17,18,19,20}   [4]
+6.3 Draw AVL tree same values, show rotations      [6]`,
+   ans:`BST RULES: left < parent < right (for every node)
+
+TRAVERSALS:
+• Preorder  (Root→L→R): for copying tree
+• Inorder   (L→Root→R): produces SORTED output! ← most useful
+• Postorder (L→R→Root): for deleting tree
+
+PLAIN BST {10,5,15,16,17,18,19,20}:
+       10
+      /  \
+     5    15
+              \
+              16
+                \
+                17 ... ← SKEWED! O(n) search
+
+AVL TREE SOLUTION:
+Balance Factor = height(left) - height(right), must be -1,0,+1
+After insert 17: BF(15)=-2 → RR case → LEFT ROTATE at 15
+  Before: 15→16→17  After: 16(parent) with 15 left, 17 right
+AVL guarantees O(log n) for all operations always!`},
+]},
+test21:{title:'Test 1 — May 2021',info:'ADP470S · 80 Marks · 10 May 2021',qs:[
+  {n:1,title:'BST — Student Tree',marks:20,tag:'Trees',tbl:null,
+   body:`BST where STUDENT NAME is the key.
+Student: studentId, name, overallMark.
+Implement insert + inorder traversal.             [20]`,
+   ans:`class StudentNode{
+  String name,studentId; double mark;
+  StudentNode left,right;
+}
+
+class StudentBST{
+  StudentNode root;
+
+  void insert(String name,String id,double mark){
+    root=insertRec(root,name,id,mark);
+  }
+
+  StudentNode insertRec(StudentNode n,String name,String id,double mark){
+    if(n==null) return new StudentNode(name,id,mark);
+    int c=name.compareTo(n.name);
+    if(c<0) n.left=insertRec(n.left,name,id,mark);
+    else if(c>0) n.right=insertRec(n.right,name,id,mark);
+    return n;
+  }
+
+  void inorder(StudentNode n){
+    if(n==null) return;
+    inorder(n.left);
+    System.out.println(n.name+" - "+n.mark+"%");
+    inorder(n.right);
+  }
+}
+// Inorder gives ALPHABETICAL order!`},
+  {n:2,title:'BST Traversal & Circular Queue',marks:20,tag:'Trees/Queues',tbl:DSA_TBL,
+   body:`2.1 BST INSERT and INORDER TRAVERSAL             [10]
+2.2 CIRCULAR QUEUE algorithm                      [10]`,
+   ans:`2.1 BST INSERT:
+Compare new value with current node.
+Go left if smaller, right if larger.
+Insert at first null position.
+Time: O(log n) balanced, O(n) skewed worst case.
+
+INORDER (L→Root→R): ALWAYS produces sorted sequence!
+Time: O(n) — visits every node exactly once.
+
+2.2 CIRCULAR QUEUE:
+FIFO: first in, first out.
+Key trick: (index+1)%capacity wraps pointers around the array.
+→ rear  = (rear+1)%cap  on enqueue
+→ front = (front+1)%cap on dequeue
+Avoids wasted space of linear queue.
+All operations: O(1)`},
+  {n:3,title:'Stack — Student Objects',marks:20,tag:'Data Structures',tbl:null,
+   body:`Linked stack for Student (studentId, name, overallMark).
+Push: John/67, Ayanda/98, Khaya/76
+Pop and print all.                                [20]`,
+   ans:`// Push 3 students, pop in LIFO order:
+stack.push(new Student("John","21034569",67));
+stack.push(new Student("Ayanda","23245432",98));
+stack.push(new Student("Khaya","21435423",76));
+
+// Output (LIFO — last in, first out):
+// Khaya - 76.0%
+// Ayanda - 98.0%
+// John - 67.0%
+
+// Implementation same as linked stack with Student next pointer
+// push: newNode.next=top; top=newNode
+// pop:  saved=top; top=top.next; return saved`},
+  {n:4,title:'Factorial + Big-O',marks:20,tag:'Recursion',tbl:FACT_TBL,
+   body:`4.1 Implement recursive factorial               [5]
+4.2 Implement iterative factorial               [5]
+4.3 Big-O: time & space, which preferred?       [10]`,
+   ans:`RECURSIVE: int f(n){ if(n<=1) return 1; return n*f(n-1); }
+ITERATIVE: int f(n){ int r=1; for(i=2;i<=n;i++) r*=i; return r; }
+
+Time: both O(n). Space: recursive O(n) vs iterative O(1).
+Preferred: ITERATIVE — no stack overflow for large n.`},
+]},
+asgn23:{title:'Assignment 1 — 2023',info:'ADP470S · 100 Marks · Due 18 May 2023',qs:[
+  {n:1,title:'Fibonacci + Big-O Analysis',marks:20,tag:'Recursion/Big-O',tbl:BIGO_TBL,
+   body:`1.1 Recursive Fibonacci            [2]
+1.2 Iterative Fibonacci           [4]
+1.3 Performance comparison        [5]
+1.4 Code: for(i<2n,i+=2)+for(j<n) [3]
+1.5 Code: outer i<n, inner j*=2   [3]
+1.6 Code: outer i+=2, inner j--   [3]`,
+   ans:`1.1 RECURSIVE: fib(n)=fib(n-1)+fib(n-2); base: fib(0)=0,fib(1)=1
+    Problem: redundant calls → O(2ⁿ) exponential!
+
+1.2 ITERATIVE: keep only prev two values in variables
+    Time: O(n) | Space: O(1) — vastly better!
+
+1.3 Recursive O(2ⁿ) time, O(n) space vs Iterative O(n) time, O(1) space
+    Iterative wins by massive margin for large n.
+
+1.4 Loop1 i<2n,i+=2 → runs n times → O(n). Loop2 O(n). Sequential → O(n)
+1.5 Outer O(n), inner j*=2 → O(log n). Nested → O(n log n)
+1.6 Outer i+=2 → O(n). Inner O(n). Nested → O(n²)`},
+  {n:2,title:'Bubble Sort',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`2.1 Bubble Sort on {8,3,6,3,1,5}    [10]
+2.2 Time performance with Big-O    [10]`,
+   ans:`BUBBLE SORT {8,3,6,3,1,5}:
+Pass 1: [8,3,6,3,1,5]→[3,8,6,3,1,5]→[3,6,8,3,1,5]→[3,6,3,8,1,5]→[3,6,3,1,8,5]→[3,6,3,1,5,8] ✓8
+Pass 2: [3,6,3,1,5,8]→[3,3,6,1,5,8]→[3,3,1,6,5,8]→[3,3,1,5,6,8] ✓6
+Pass 3: [3,3,1,5,6,8]→[3,1,3,5,6,8]→[1,3,3,5,6,8] ✓
+FINAL: [1,3,3,5,6,8] ✓
+
+Big-O: Best O(n) [with swap flag], Avg O(n²), Worst O(n²)
+Space: O(1)`},
+  {n:3,title:'Quick Sort',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`3.1 Quick Sort on {8,3,6,3,1,5,2,9,7}   [12]
+3.2 Asymptotic time performance           [8]`,
+   ans:`{8,3,6,3,1,5,2,9,7} pivot=7:
+left={3,6,3,1,5,2}, right={8,9}
+→ [3,6,3,1,5,2 | 7 | 8,9]
+
+Sort left {3,6,3,1,5,2} pivot=2:
+left={1}, right={3,6,3,5} → [1,2,3,3,5,6]
+
+FINAL: [1,2,3,3,5,6,7,8,9] ✓
+
+Big-O: Best/Avg O(n log n), Worst O(n²), Space O(log n)`},
+  {n:4,title:'Heap Sort',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`4.1 Heap Sort on {8,3,6,3,1,5,2,9,7}   [12]
+4.2 Asymptotic time performance           [8]`,
+   ans:`Build Max-Heap from {8,3,6,3,1,5,2,9,7}:
+9>3 swap; then 9>8 swap. Max-Heap: [9,8,6,3,1,5,2,3,7]
+
+Extract phase:
+Swap 9↔7, heapify→[8,...]; Swap 8↔3, heapify→[7,...]...
+FINAL: [1,2,3,3,5,6,7,8,9] ✓
+
+Big-O: ALL cases O(n log n). Space O(1). GUARANTEED!`},
+  {n:5,title:'Big-O Theory',marks:20,tag:'Big-O Notation',tbl:BIGO_TBL,
+   body:`5.1 Dominant terms & Big-O (5 expressions)    [10]
+5.2 Characteristics of an algorithm           [5]
+5.3 Purpose of Big-O notation                 [5]`,
+   ans:`5.1 DOMINANT TERMS:
+5000n+0.001n³+0.025n²  → n³ dominates → O(n³)
+500n+0.5n^1.7          → n^1.7 > n → O(n^1.7)
+0.3n²logn+600log(n²)   → n²logn dominates → O(n²logn)
+8n log₃n+2n log₂n      → both O(n logn) → O(n logn)
+100n+0.01n²            → n² dominates → O(n²)
+
+5.2 CHARACTERISTICS: Input, Output, Definiteness, Finiteness, Effectiveness
+
+5.3 PURPOSE: Describes worst-case growth rate as n→∞.
+Allows comparison of algorithms independent of hardware.
+Drop constants and lower-order terms — focus on growth rate.`},
+]},
+nov20:{title:'Nov Test — 2020',info:'ADP470S · 100 Marks · 20 November 2020',qs:[
+  {n:1,title:'Binary Trees',marks:42,tag:'Trees',tbl:null,
+   body:`1.1 Algorithm: check if two binary trees are identical  [22]
+1.2 Expression tree → convert infix to postfix           [10]
+1.3 Given two traversals, reconstruct unique binary tree [10]`,
+   ans:`1.1 IDENTICAL TREES:
+bool identical(Node a, Node b){
+  if(a==null && b==null) return true;
+  if(a==null || b==null) return false;
+  return a.data==b.data
+    && identical(a.left,b.left)
+    && identical(a.right,b.right);
+}
+Time: O(n) | Space: O(h) — h is tree height
+
+1.2 INFIX → POSTFIX via expression tree:
+Use POSTORDER traversal (Left→Right→Root) on the expression tree.
+This naturally produces postfix notation.
+Result: 5 y 2 ^ - 3 y * / 2 * 2 +
+
+1.3 RECONSTRUCT from Preorder + Inorder:
+Algorithm:
+1. Preorder[0] = ROOT
+2. Find root in Inorder → splits into left/right subtrees
+3. Recurse on both halves
+(Preorder+Inorder OR Inorder+Postorder uniquely determines the tree)`},
+  {n:2,title:'Quick Sort vs Bubble Sort',marks:38,tag:'Sorting',tbl:SORT_TBL,
+   body:`S1: 10,7,8,9,1,5,15,6,2,20,23,11,18,13 (n=14)
+S2: same+66,22,34,33,3 (n=19)
+
+Code both. Count comparisons. Fill table:
+             S1        S2
+Bubble Sort  _         _
+Quick Sort   _         _`,
+   ans:`BUBBLE SORT code: nested loops, count++ inside inner loop
+QUICK SORT code:  count++ inside partition loop
+
+EXPECTED RESULTS:
+             S1        S2
+Bubble Sort  ~91       ~171   [n(n-1)/2]
+Quick Sort   ~45-55    ~60-75 [O(n log n)]
+
+CONCLUSION: Use Quick Sort for both sequences.
+Quick Sort has significantly fewer comparisons than Bubble Sort.
+Bubble Sort is only better when array is nearly sorted.`},
+  {n:3,title:'Hash Table — Linear Probing',marks:10,tag:'Hashing',tbl:null,
+   body:`h(x) = x mod 7. Keys: 50, 700, 76, 85, 92, 73, 101
+Linear probing. Fill the table:
+[0][1][2][3][4][5][6]`,
+   ans:`h(50)=1  → [1] free ✓
+h(700)=0 → [0] free ✓
+h(76)=6  → [6] free ✓
+h(85)=1  → [1]TAKEN → probe [2] ✓
+h(92)=1  → [1][2]TAKEN → probe [3] ✓
+h(73)=3  → [3]TAKEN → probe [4] ✓
+h(101)=3 → [3][4]TAKEN → probe [5] ✓
+
+FINAL TABLE:
+[0]=700 | [1]=50 | [2]=85 | [3]=92 | [4]=73 | [5]=101 | [6]=76
+
+Linear Probing rule: try (h+i)%n for i=1,2,3...
+Problem: PRIMARY CLUSTERING — long probe chains form.`},
+]},
+
+apr26:{title:'Test 1 — April 2026',info:'ADP470S · 80 Marks · 9 April 2026',qs:[
+  {n:1,title:'Sorting — Selection, Quick & Bubble vs Insertion',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`1.1 Trace Selection Sort on [34, 12, 5, 8, 20].
+    Show state after each swap. Indicate sorted elements.        [6]
+
+1.2 Quick Sort partitioning on [15, 3, 9, 21, 12, 18, 10].
+    Use LAST element as pivot.
+    Show pointer movements (i and j) and final pivot position.  [8]
+
+1.3 Compare Bubble Sort and Insertion Sort.
+    Both have worst-case O(n²). Explain why Insertion Sort is
+    generally more efficient for "nearly sorted" datasets.       [6]`,
+   ans:`1.1 SELECTION SORT [34, 12, 5, 8, 20]:
+Strategy: Find minimum in unsorted portion, swap to front.
+
+Pass 1: min=5 (index 2) → swap 34↔5
+  [5 | 12, 34, 8, 20]  ✓ 5 sorted
+
+Pass 2: min=8 (index 3) → swap 12↔8
+  [5, 8 | 34, 12, 20]  ✓ 8 sorted
+
+Pass 3: min=12 (index 3) → swap 34↔12
+  [5, 8, 12 | 34, 20]  ✓ 12 sorted
+
+Pass 4: min=20 (index 4) → swap 34↔20
+  [5, 8, 12, 20 | 34]  ✓ 20 sorted
+
+FINAL: [5, 8, 12, 20, 34] ✓
+Big-O: Always O(n²) — no best case improvement.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1.2 QUICK SORT PARTITION [15, 3, 9, 21, 12, 18, 10]:
+pivot = 10 (last element)
+i = -1 (pointer for elements ≤ pivot)
+j scans left to right
+
+j=0: arr[0]=15 > pivot(10) → no action
+j=1: arr[1]=3  ≤ pivot(10) → i++; i=0; swap arr[0]↔arr[1]
+     [3, 15, 9, 21, 12, 18, 10]
+j=2: arr[2]=9  ≤ pivot(10) → i++; i=1; swap arr[1]↔arr[2]
+     [3, 9, 15, 21, 12, 18, 10]
+j=3: arr[3]=21 > pivot(10) → no action
+j=4: arr[4]=12 > pivot(10) → no action
+j=5: arr[5]=18 > pivot(10) → no action
+
+End of scan: swap pivot with arr[i+1] = arr[2]
+Swap arr[2]↔arr[6]: [3, 9, 10, 21, 12, 18, 15]
+                          ↑ pivot in FINAL position!
+
+Left of 10: [3, 9] (all < 10) ✓
+Right of 10: [21, 12, 18, 15] (all > 10) ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1.3 BUBBLE vs INSERTION (both O(n²) worst case):
+
+BUBBLE SORT:
+• Compares ALL adjacent pairs in every pass
+• Even if element is already in correct position, still compares
+• Cannot stop early per element — only per full pass
+
+INSERTION SORT:
+• Takes one element and finds its correct position
+• STOPS as soon as correct position found (inner loop exits early)
+• For nearly sorted data: almost every element is already close to
+  its correct position → inner loop does very few steps
+• Best case O(n) — perfectly sorted input
+
+CONCLUSION:
+Insertion Sort is adaptive — its inner loop short-circuits.
+On nearly sorted data, it performs close to O(n).
+Bubble Sort still makes O(n²) comparisons on nearly sorted data
+unless a 'swapped' flag is explicitly added.`},
+
+  {n:2,title:'Recursion — Factorial & Fibonacci',marks:20,tag:'Recursion',tbl:FACT_TBL,
+   body:`2.1 Explain the recursive definition of Factorial (n!).
+    Trace for n=4: show each recursive call AND return values.  [7]
+
+2.2 Fibonacci: F(n) = F(n-1) + F(n-2).
+    Draw the recursion tree for F(4).
+    Explain why naive recursion is INEFFICIENT.
+    Show the Big-O time complexity expression.                   [7]
+
+2.3 Write pseudocode or code for ITERATIVE Fibonacci.
+    Explain how it avoids the overhead of the recursive version. [6]`,
+   ans:`2.1 FACTORIAL RECURSIVE TRACE — fact(4):
+
+Recursive definition:
+  n! = 1           if n = 0 or n = 1  (base case)
+  n! = n × (n-1)!  if n ≥ 2
+
+Call chain (descending):
+  fact(4) → calls fact(3)
+  fact(3) → calls fact(2)
+  fact(2) → calls fact(1)
+  fact(1) → returns 1  ← BASE CASE
+
+Return chain (ascending — unwinding the stack):
+  fact(1) returns 1
+  fact(2) returns 2 × 1 = 2
+  fact(3) returns 3 × 2 = 6
+  fact(4) returns 4 × 6 = 24  ✓
+
+Time Complexity: O(n) — makes exactly n recursive calls
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2.2 FIBONACCI RECURSION TREE — F(4):
+
+              F(4)
+            /      \
+         F(3)       F(2)
+        /    \      /  \
+      F(2)  F(1)  F(1) F(0)
+      /  \
+   F(1) F(0)
+
+Total calls: 9 for F(4)!
+
+WHY INEFFICIENT:
+• F(2) is computed TWICE
+• F(1) is computed THREE times
+• Redundant subproblems grow exponentially with n
+
+Big-O: O(2ⁿ) — each call branches into 2 more calls
+For n=50: over 1 quadrillion calls! Completely impractical.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2.3 ITERATIVE FIBONACCI:
+
+// Java:
+int fibIter(int n) {
+  if (n <= 1) return n;
+  int prev = 0, curr = 1;
+  for (int i = 2; i <= n; i++) {
+    int next = prev + curr;
+    prev = curr;
+    curr = next;
+  }
+  return curr;
+}
+
+# Python:
+def fib_iter(n):
+    if n <= 1: return n
+    prev, curr = 0, 1
+    for i in range(2, n+1):
+        prev, curr = curr, prev + curr
+    return curr
+
+HOW IT AVOIDS OVERHEAD:
+• Only stores 2 variables (prev, curr) — NO call stack frames
+• Each value computed ONCE — no redundant subproblems
+• Time: O(n) | Space: O(1)
+• No risk of stack overflow for large n`},
+
+  {n:3,title:'Sorting — Space Complexity & Comparison Table',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`3.1 Analyze Quick Sort's SPACE complexity.
+    It is in-place, yet requires additional recursion stack memory.
+    Explain why average-case space = O(log n).
+    Identify the scenario causing worst-case space = O(n).      [8]
+
+3.2 Create a table comparing Time Complexity
+    (Best, Average, Worst cases) for:
+    • Bubble Sort
+    • Insertion Sort
+    • Selection Sort
+    • Quick Sort                                                  [12]`,
+   ans:`3.1 QUICK SORT SPACE COMPLEXITY:
+
+Although Quick Sort is IN-PLACE (no extra array needed),
+it uses the RECURSION CALL STACK for its memory.
+
+AVERAGE CASE — O(log n):
+• Good pivot choice splits array roughly in half each time
+• Tree of recursive calls has depth ≈ log n
+• At each level, one stack frame is active
+• Stack depth ≈ log n → Space = O(log n)
+
+WORST CASE — O(n):
+• Scenario: already SORTED array with LAST-ELEMENT pivot
+• Each partition splits into: [empty | pivot | rest]
+• Pivot reduces array by only 1 element per call
+• n levels of recursion → n stack frames active
+• Space = O(n)
+
+Example: [1,2,3,4,5] with last-element pivot:
+  pivot=5 → left=[] right=[1,2,3,4]  [4 levels remaining]
+  pivot=4 → left=[] right=[1,2,3]    [3 levels remaining]
+  ...n levels → O(n) space
+
+Fix: Use random pivot or median-of-3 to avoid this scenario.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3.2 TIME COMPLEXITY COMPARISON TABLE:
+
+Algorithm     | Best       | Average    | Worst
+--------------|------------|------------|----------
+Bubble Sort   | O(n)†      | O(n²)      | O(n²)
+Insertion Sort| O(n)       | O(n²)      | O(n²)
+Selection Sort| O(n²)      | O(n²)      | O(n²)
+Quick Sort    | O(n log n) | O(n log n) | O(n²)*
+
+† Bubble Sort O(n) best only with optimisation flag (swapped=false exit)
+* Quick Sort O(n²) worst case: sorted input + last-element pivot
+
+KEY DIFFERENCES:
+• Selection Sort: ALWAYS O(n²) — no best-case improvement
+• Insertion/Bubble: O(n) best case on nearly/already sorted data
+• Quick Sort: O(n²) worst but O(n log n) average — fastest in practice`},
+
+  {n:4,title:'Big-O, Recursion & Call Stack',marks:20,tag:'Big-O / Recursion',tbl:FACT_TBL,
+   body:`4.1 Explain Big-O notation and its importance.
+    Why do we focus on the "worst-case" rather than "best-case"
+    when analyzing algorithm performance/scalability?           [6]
+
+4.2 Compare Space Complexity of recursive vs iterative Factorial.
+    Why does recursive require O(n) space and iterative O(1)?  [8]
+
+4.3 Describe the relationship between recursion and the call stack.
+    What happens if a recursive function fails to reach its base case?
+    What is the technical term for this error?                  [6]`,
+   ans:`4.1 BIG-O NOTATION & IMPORTANCE:
+
+Big-O notation describes the UPPER BOUND (worst-case) growth rate
+of an algorithm's time or space requirements as input size n → ∞.
+
+Constants and lower-order terms are dropped:
+  O(3n² + 5n + 100) → O(n²)
+
+IMPORTANCE:
+• Compare algorithms independent of hardware speed
+• Predict performance for very large inputs
+• Guide algorithm selection for production systems
+
+WHY WORST-CASE (not best-case)?
+• Best-case is optimistic — rarely represents real data
+• Worst-case gives GUARANTEED maximum execution time
+• For critical systems (databases, real-time apps), we must
+  know the upper limit — "how bad can it get?"
+• Example: Quick Sort best = O(n log n), worst = O(n²)
+  For a payment system, we need to know about the O(n²) case!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4.2 FACTORIAL SPACE COMPLEXITY:
+
+RECURSIVE — O(n):
+int factRec(int n){
+  if(n<=1) return 1;
+  return n * factRec(n-1);  // n-1 call waits on stack!
+}
+
+Trace for n=4:
+  fact(4) is called → WAITS for fact(3) [frame stays on stack]
+  fact(3) is called → WAITS for fact(2) [frame stays on stack]
+  fact(2) is called → WAITS for fact(1) [frame stays on stack]
+  fact(1) returns 1
+  → 4 frames ALL exist simultaneously on the call stack
+  → Space: O(n)
+
+ITERATIVE — O(1):
+int factIter(int n){
+  int result = 1;
+  for(int i=2; i<=n; i++) result *= i;
+  return result;
+}
+
+Only ONE variable (result) exists at any time.
+Previous values discarded → Space: O(1)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4.3 RECURSION AND THE CALL STACK:
+
+RELATIONSHIP:
+Every function call in a program pushes a STACK FRAME onto
+the call stack. The frame stores:
+• Local variables
+• Parameters
+• Return address (where to go when function returns)
+
+For recursion: each recursive call pushes a NEW frame.
+Frames are popped (removed) only when a call RETURNS.
+This is why recursive factorial uses O(n) space — n frames
+are stacked before any returns happen.
+
+IF BASE CASE IS NEVER REACHED:
+• The function keeps calling itself infinitely
+• Each call pushes another frame onto the stack
+• The call stack fills up completely
+• The program crashes with the error:
+
+TECHNICAL TERM: STACK OVERFLOW
+
+In Java: java.lang.StackOverflowError
+In Python: RecursionError: maximum recursion depth exceeded
+
+Example of bad recursion (no base case):
+int bad(int n){ return n * bad(n-1); }  // NEVER stops!
+→ StackOverflowError`},
+]},
+asgn24:{title:'Assignment — May 2024',info:'ADP470S · 100 Marks · Due 31 May 2024',qs:[
+  {n:1,title:'Heap Sort — Step by Step',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`Demonstrate how HeapSort sorts {8,1,9,0,5,3,1,2,7,6} step by step.
+Show how the array is modified stage by stage until sorting is completed.
+Use tree diagrams to illustrate the algorithm.                          [20]`,
+   ans:`HEAP SORT on {8,1,9,0,5,3,1,2,7,6}:
+
+PHASE 1 — Build Max-Heap (heapify from last non-leaf upward):
+Array as binary tree (index-based):
+        8(0)
+       /     \
+     1(1)    9(2)
+    /   \   /   \
+  0(3) 5(4) 3(5) 1(6)
+  / \ /
+2(7)7(8)6(9)
+
+Last non-leaf = index 4 (value 5). Work from index 4 → 0:
+
+i=4: node=5, children: left=6(9), right=none → 6>5 → swap 5↔6
+  [8,1,9,0,6,3,1,2,7,5]
+
+i=3: node=0, children: 2(7), 7(8) → 7>0 → swap 0↔7
+  [8,1,9,7,6,3,1,2,0,5]
+
+i=2: node=9, children: 3(5), 1(6) → 9>both → no swap
+
+i=1: node=1, children: 7(3), 6(4) → 7>1 → swap 1↔7
+  [8,7,9,1,6,3,1,2,0,5]
+  After swap, re-heapify at index 3: node=1, children:2,0 → 2>1 → swap
+  [8,7,9,2,6,3,1,1,0,5]
+
+i=0: node=8, children: 7(1), 9(2) → 9>8 → swap 8↔9
+  [9,7,8,2,6,3,1,1,0,5]
+  Re-heapify index 2: node=8, children:3,1 → 8>both → no swap
+
+MAX-HEAP: [9,7,8,2,6,3,1,1,0,5]
+
+        9(0)
+       /     \
+     7(1)    8(2)
+    /   \   /   \
+  2(3) 6(4) 3(5) 1(6)
+  / \ /
+1(7)0(8)5(9)
+
+PHASE 2 — Extract max n times (swap root with last, reduce heap, re-heapify):
+
+Step 1: swap 9↔5 → [5,7,8,2,6,3,1,1,0 | 9]
+  Heapify→ [8,7,5,2,6,3,1,1,0 | 9]
+
+Step 2: swap 8↔0 → [0,7,5,2,6,3,1,1 | 8,9]
+  Heapify→ [7,6,5,2,0,3,1,1 | 8,9]
+
+Step 3: swap 7↔1 → [1,6,5,2,0,3,1 | 7,8,9]
+  Heapify→ [6,2,5,1,0,3,1 | 7,8,9]
+
+Step 4: swap 6↔1 → [1,2,5,1,0,3 | 6,7,8,9]
+  Heapify→ [5,2,3,1,0,1 | 6,7,8,9]
+
+Step 5: swap 5↔1 → [1,2,3,1,0 | 5,6,7,8,9]
+  Heapify→ [3,2,1,1,0 | 5,6,7,8,9]
+
+Steps 6-9: continue extracting...
+
+FINAL: [0,1,1,2,3,5,6,7,8,9] ✓
+
+Big-O: ALL cases O(n log n). Space O(1) in-place.`},
+
+  {n:2,title:'Circular Queue — Customer Objects',marks:20,tag:'Data Structures',tbl:null,
+   body:`2a. Implement a Circular Queue for Customer objects.
+Customer has: customerId, firstName, lastName.
+Queue capacity = 5. Implement with UML/code.                         [12]
+
+2b. Show the queue state after each operation:
+enqueue(John Adams, 21)      enqueue(George Clinton, 38)
+enqueue(Grover James, 16)    dequeue()
+dequeue()                    enqueue(Bill Bronson, 19)
+enqueue(Tom Jones, 54)       enqueue(Chris Cartere, 34)
+enqueue(Wendy Williams, 26)                                           [8]`,
+   ans:`CIRCULAR QUEUE IMPLEMENTATION:
+
+class Customer {
+  int customerId;
+  String firstName, lastName;
+  Customer(String fn, String ln, int id){
+    firstName=fn; lastName=ln; customerId=id;
+  }
+  public String toString(){ return firstName+" "+lastName+"("+customerId+")"; }
+}
+
+class CircularQueue {
+  private Customer[] arr;
+  private int front, rear, size, capacity;
+
+  CircularQueue(int cap){
+    capacity=cap; arr=new Customer[cap];
+    front=0; rear=-1; size=0;
+  }
+
+  void enqueue(Customer c){
+    if(isFull()) throw new RuntimeException("Queue full — capacity "+capacity);
+    rear=(rear+1)%capacity;
+    arr[rear]=c; size++;
+  }
+
+  Customer dequeue(){
+    if(isEmpty()) throw new RuntimeException("Queue empty");
+    Customer c=arr[front];
+    front=(front+1)%capacity;
+    size--; return c;
+  }
+
+  boolean isEmpty(){ return size==0; }
+  boolean isFull() { return size==capacity; }
+}
+
+QUEUE STATE TRACE (capacity=5):
+[0]  [1]  [2]  [3]  [4]   front  rear  size
+
+Initial: all empty, front=0, rear=-1, size=0
+
+enqueue(John Adams,21):
+ John  —    —    —    —    f=0   r=0   s=1
+
+enqueue(George Clinton,38):
+ John George  —   —    —   f=0   r=1   s=2
+
+enqueue(Grover James,16):
+ John George Grover  —  —  f=0   r=2   s=3
+
+dequeue() → removes John Adams (FIFO):
+  —  George Grover  —   —  f=1   r=2   s=2
+
+dequeue() → removes George Clinton:
+  —    —   Grover  —   —   f=2   r=2   s=1
+
+enqueue(Bill Bronson,19):
+  —    —   Grover Bill  —  f=2   r=3   s=2
+
+enqueue(Tom Jones,54):
+  —    —   Grover Bill  Tom f=2  r=4   s=3
+
+enqueue(Chris Cartere,34):
+Chris  —  Grover Bill  Tom  f=2  r=0   s=4  ← wraps to [0]!
+
+enqueue(Wendy Williams,26):
+Chris Wendy Grover Bill Tom  f=2  r=1  s=5  ← FULL!
+
+NEXT enqueue → "Queue full — capacity 5" ✗`},
+
+  {n:3,title:'Insertion Sort & BST Sort',marks:20,tag:'Sorting / Trees',tbl:SORT_TBL,
+   body:`3a. Demonstrate Insertion Sort on {8,1,9,0,5,3,1,2,7,6}.
+    Show array state at each stage.                               [10]
+
+3b. Demonstrate how a BST sorts {6,9,3,5,10,7,9,2,4}.
+    Build the tree, then read via inorder traversal.             [10]`,
+   ans:`INSERTION SORT on {8,1,9,0,5,3,1,2,7,6}:
+Strategy: take next element, shift larger elements right, insert.
+
+Start: [8,1,9,0,5,3,1,2,7,6]
+
+Step 1 (key=1): 8>1 → shift 8 right → insert 1
+  [1,8,9,0,5,3,1,2,7,6]
+
+Step 2 (key=9): 8<9 → no shift needed
+  [1,8,9,0,5,3,1,2,7,6]
+
+Step 3 (key=0): 9>0,8>0,1>0 → shift all → insert 0
+  [0,1,8,9,5,3,1,2,7,6]
+
+Step 4 (key=5): 9>5,8>5 → shift → insert after 1
+  [0,1,5,8,9,3,1,2,7,6]
+
+Step 5 (key=3): 9>3,8>3,5>3 → shift → insert after 1
+  [0,1,3,5,8,9,1,2,7,6]
+
+Step 6 (key=1): shift 9,8,5,3 → insert after first 1
+  [0,1,1,3,5,8,9,2,7,6]
+
+Step 7 (key=2): shift 9,8,5,3 → insert after 1,1
+  [0,1,1,2,3,5,8,9,7,6]
+
+Step 8 (key=7): shift 9,8 → insert after 5
+  [0,1,1,2,3,5,7,8,9,6]
+
+Step 9 (key=6): shift 9,8,7 → insert after 5
+  [0,1,1,2,3,5,6,7,8,9] ✓
+
+Big-O: Best O(n) [sorted], Avg O(n²), Worst O(n²)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BST SORT on {6,9,3,5,10,7,9,2,4}:
+
+Insert in order:
+6   → root
+9   → right of 6
+3   → left of 6
+5   → right of 3
+10  → right of 9
+7   → left of 9
+9   → right of 7 (duplicate, insert as right)
+2   → left of 3
+4   → right of 2... wait, 4>2, left of 5? 4<5, left of 5: yes
+
+Final BST:
+          6
+        /   \
+       3     9
+      / \   / \
+     2   5 7   10
+          /   \
+         4     9(dup)
+
+INORDER TRAVERSAL (L→Root→R) = SORTED:
+2, 3, 4, 5, 6, 7, 9, 9, 10  ✓`},
+
+  {n:4,title:'Quick Sort — Table Method',marks:20,tag:'Sorting',tbl:SORT_TBL,
+   body:`Demonstrate QuickSort on {6, 9, 3, 5, 10, 7, 9, 2, 4}.
+Show how data items are exchanged as the algorithm executes.
+Use TABLES to show each partition step.                               [20]`,
+   ans:`QUICK SORT on {6,9,3,5,10,7,9,2,4}:
+Strategy: choose pivot (last element), partition, recurse.
+
+STEP 1: Full array [6,9,3,5,10,7,9,2,4], pivot=4
+Scan left to right with pointer i=-1:
+  j=0: 6>4 → skip
+  j=1: 9>4 → skip
+  j=2: 3<4 → i++; swap arr[0]↔arr[2]: [3,9,6,5,10,7,9,2,4]
+  j=3: 5>4 → skip
+  j=4: 10>4 → skip
+  j=5: 7>4 → skip
+  j=6: 9>4 → skip
+  j=7: 2<4 → i++; swap arr[1]↔arr[7]: [3,2,6,5,10,7,9,9,4]
+  Place pivot: swap arr[i+1]↔last: swap arr[2]↔arr[8]
+  [3,2,4,5,10,7,9,9,6]
+  Pivot 4 is now at index 2 ✓ (in final position)
+
+LEFT  sub-array: {3,2}
+RIGHT sub-array: {5,10,7,9,9,6}
+
+STEP 2: Sort {3,2}, pivot=2
+  j=0: 3>2 → skip
+  Place pivot at index 0: swap arr[0]↔arr[1]: [2,3]
+  Pivot 2 at index 0 ✓
+
+STEP 3: Sort {5,10,7,9,9,6}, pivot=6
+  j=0: 5<6 → i++; (i=0) no swap needed
+  j=1: 10>6 → skip
+  j=2: 7>6 → skip
+  j=3: 9>6 → skip
+  j=4: 9>6 → skip
+  Place pivot: swap arr[i+1]↔last: swap arr[1]↔arr[5]
+  [5,6,7,9,9,10]
+  Pivot 6 at index 1 ✓
+
+RIGHT-LEFT {7,9,9,10}, pivot=10
+  All < 10? No; all just stay. Pivot 10 already rightmost ✓
+  Sort {7,9,9}: pivot=9, scan → [7,9,9] ✓
+
+FINAL SORTED: [2,3,4,5,6,7,9,9,10] ✓
+
+TABLE SUMMARY:
+Step | Subarray           | Pivot | Result
+-----|-------------------|-------|------------------
+1    | {6,9,3,5,10,7,9,2,4} | 4  | [...4...] idx=2
+2    | {3,2}              | 2     | [2,3]
+3    | {5,10,7,9,9,6}     | 6     | [5,6,...]
+4    | {7,9,9,10}         | 10    | [...,10]
+5    | {7,9,9}            | 9     | [7,9,9]
+
+Big-O: Best/Avg O(n log n), Worst O(n²), Space O(log n)`},
+]},
+
+pred26:{title:'🎯 Predicted June 2026 Exam',info:'ADP470S · 100 Marks · Answer ANY 5 of 6 · ~3 Hours',qs:[
+  {n:1,title:'Big-O Notation & Code Analysis',marks:20,tag:'Big-O Notation ★★★★★',tbl:BIGO_TBL,
+   body:`[Appeared in ALL 9 past papers — guaranteed to appear]
+
+1.1  Determine the Big-O for each code excerpt:                    [9]
+
+(a) int sum = 0;
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        sum = sum + (i * j);
+      }
+    }
+
+(b) int prod = 1;
+    for (int i = 0; i < n; i++) {
+      for (int j = 1; j < n; j = j * 2) {
+        prod = prod * j;
+      }
+    }
+
+(c) int sum = 0;
+    for (int i = 0; i < n; i++) { sum += a[i]; }
+    for (int j = 0; j < n; j++) { sum += b[j]; }
+    for (int k = 0; k < n; k++) { sum += c[k]; }
+
+1.2  Find the dominant term and Big-O for each expression:         [6]
+     T(n) = 3n³ + 100n² + 500n
+     T(n) = 0.5n² log n + 200n
+     T(n) = 8n log₂n + 4n log₃n
+
+1.3  List and explain the FIVE characteristics of an algorithm.    [5]`,
+   ans:`1.1 BIG-O ANSWERS:
+
+(a) O(n²)
+Two nested loops, both running up to n.
+Outer O(n) × Inner O(n) = O(n²)
+
+(b) O(n log n)
+Outer loop: O(n)
+Inner loop: j*=2 each step → runs log₂(n) times → O(log n)
+Nested: O(n) × O(log n) = O(n log n)
+
+(c) O(n)
+Three SEQUENTIAL (not nested) loops.
+O(n) + O(n) + O(n) = O(3n) = O(n) [drop constant]
+
+1.2 DOMINANT TERMS:
+3n³ + 100n² + 500n → dominant = n³ → O(n³)
+0.5n² log n + 200n → dominant = n² log n → O(n² log n)
+8n log₂n + 4n log₃n → both O(n log n) → O(n log n)
+[Note: log₃n = log₂n/log₂3 — a constant factor, dropped]
+
+1.3 FIVE CHARACTERISTICS:
+1. INPUT       — Takes zero or more well-defined inputs
+2. OUTPUT      — Produces at least one output
+3. DEFINITENESS — Every step is clear and unambiguous
+4. FINITENESS  — Terminates after a finite number of steps
+5. EFFECTIVENESS — Every step is basic and executable`},
+
+  {n:2,title:'Recursion — Factorial & Fibonacci',marks:20,tag:'Recursion ★★★★★',tbl:FACT_TBL,
+   body:`[Appeared in ALL 9 past papers — guaranteed to appear]
+
+2.1  Implement BOTH recursive and iterative Factorial in Java.     [6]
+
+2.2  Trace the recursive factorial for n=5.
+     Show ALL recursive calls AND the return values unwinding.     [7]
+
+2.3  The Fibonacci sequence is F(n) = F(n-1) + F(n-2).
+     Draw the recursion tree for F(5).
+     Explain why the naive recursive approach is inefficient —
+     state the Big-O time complexity.                              [4]
+
+2.4  Write iterative Fibonacci code.
+     Compare time AND space complexity with recursive version.
+     Which is preferable and why?                                  [3]`,
+   ans:`2.1 JAVA IMPLEMENTATIONS:
+
+// Recursive:
+int factRec(int n) {
+  if (n <= 1) return 1;
+  return n * factRec(n - 1);
+}
+
+// Iterative:
+int factIter(int n) {
+  int result = 1;
+  for (int i = 2; i <= n; i++) result *= i;
+  return result;
+}
+
+2.2 RECURSIVE TRACE — fact(5):
+Call chain:
+  fact(5) → 5 × fact(4)    [push frame]
+  fact(4) → 4 × fact(3)    [push frame]
+  fact(3) → 3 × fact(2)    [push frame]
+  fact(2) → 2 × fact(1)    [push frame]
+  fact(1) → 1               ← BASE CASE
+
+Return chain (unwinding):
+  fact(1) = 1
+  fact(2) = 2 × 1 = 2
+  fact(3) = 3 × 2 = 6
+  fact(4) = 4 × 6 = 24
+  fact(5) = 5 × 24 = 120 ✓
+
+2.3 FIBONACCI RECURSION TREE F(5):
+                F(5)
+              /       \
+           F(4)         F(3)
+          /    \        /   \
+       F(3)   F(2)   F(2)  F(1)
+       / \    / \    / \
+    F(2) F(1) F(1) F(0) F(1) F(0)
+    / \
+  F(1) F(0)
+
+Calls made: 15 total for F(5)!
+F(3) computed TWICE, F(2) computed THREE TIMES.
+Big-O: O(2ⁿ) — exponential. For n=50: >1 quadrillion calls.
+
+2.4 ITERATIVE FIBONACCI:
+int fib(int n) {
+  if (n <= 1) return n;
+  int prev=0, curr=1;
+  for (int i=2; i<=n; i++) {
+    int next = prev + curr;
+    prev = curr; curr = next;
+  }
+  return curr;
+}
+
+COMPARISON:
+             Time    Space
+Recursive:   O(2ⁿ)   O(n)   ← terrible!
+Iterative:   O(n)    O(1)   ← efficient
+
+Preferred: ITERATIVE — massively better for both time and space.`},
+
+  {n:3,title:'Quick Sort & Heap Sort',marks:20,tag:'Sorting ★★★★★',tbl:SORT_TBL,
+   body:`[Both appeared in 7+ of 9 papers — extremely likely]
+
+3.1  Demonstrate Quick Sort on {12, 4, 7, 1, 9, 3, 8, 6}.
+     Use LAST element as pivot. Show each partition step.
+     Indicate pointer movements (i and j).                        [10]
+
+3.2  Explain Quick Sort time complexity:
+     Best case / Average case / Worst case.
+     What input triggers the worst case?                           [5]
+
+3.3  Demonstrate Heap Sort on {12, 4, 7, 1, 9, 3, 8, 6}.
+     Show Phase 1 (build max-heap) and Phase 2 (extract).         [5]`,
+   ans:`3.1 QUICK SORT {12,4,7,1,9,3,8,6} — pivot=6:
+
+Partition: i=-1, scan j=0..6:
+  j=0: 12>6 → skip
+  j=1: 4≤6 → i++; swap [0]↔[1]: [4,12,7,1,9,3,8,6]
+  j=2: 7>6 → skip
+  j=3: 1≤6 → i++; swap [1]↔[3]: [4,1,7,12,9,3,8,6]
+  j=4: 9>6 → skip
+  j=5: 3≤6 → i++; swap [2]↔[5]: [4,1,3,12,9,7,8,6]
+  Place pivot: swap [i+1=3]↔[last=7]: [4,1,3,6,9,7,8,12]
+  Pivot 6 at index 3 ✓ (final position)
+
+Left  {4,1,3}: pivot=3, partition → [1,3,4]
+Right {9,7,8,12}: pivot=12 → [9,7,8,12]
+  Sort {9,7,8}: pivot=8 → [7,8,9]
+
+FINAL: [1,3,4,6,7,8,9,12] ✓
+
+3.2 QUICK SORT COMPLEXITY:
+Best:  O(n log n) — pivot always splits array exactly in half
+Avg:   O(n log n) — expected with random/varied data
+Worst: O(n²) — SORTED array with last-element pivot!
+  [1,2,3,4,5] → pivot=5, left=[] right=[1,2,3,4]
+  Only reduces by 1 per step → n levels → O(n²)
+Space: O(log n) average call stack
+
+3.3 HEAP SORT {12,4,7,1,9,3,8,6}:
+Phase 1 — Build Max-Heap:
+Array: [12,4,7,1,9,3,8,6]
+Start heapify at index 3 (last non-leaf):
+  i=3: node=1, children: 6 → swap 1↔6: [12,4,7,6,9,3,8,1]
+  i=2: node=7, children: 3,8 → 8>7 → swap 7↔8: [12,4,8,6,9,3,7,1]
+  i=1: node=4, children: 6,9 → 9>4 → swap 4↔9: [12,9,8,6,4,3,7,1]
+  i=0: node=12, children: 9,8 → 12>both → no swap
+Max-Heap: [12,9,8,6,4,3,7,1]  Root=12 ✓
+
+Phase 2 — Extract max repeatedly:
+Swap 12↔1: [1,9,8,6,4,3,7|12], heapify→[9,6,8,1,4,3,7|12]
+Swap 9↔7:  [7,6,8,1,4,3|9,12], heapify→[8,6,7,1,4,3|9,12]
+...continue...
+FINAL: [1,3,4,6,7,8,9,12] ✓
+
+Big-O: ALL cases O(n log n) — GUARANTEED! Space O(1)`},
+
+  {n:4,title:'Bubble Sort, Insertion Sort & Selection Sort',marks:20,tag:'Sorting ★★★★',tbl:SORT_TBL,
+   body:`[At least one of these appears in every paper]
+
+4.1  Demonstrate Bubble Sort on {15, 3, 11, 7, 2, 9}.
+     Show each complete pass. State Big-O.                         [8]
+
+4.2  Demonstrate Insertion Sort on {15, 3, 11, 7, 2, 9}.
+     Show array state after each element is inserted.
+     State Big-O.                                                  [6]
+
+4.3  Demonstrate Selection Sort on {15, 3, 11, 7, 2, 9}.
+     Show array state after each swap.
+     State Big-O.                                                  [6]`,
+   ans:`4.1 BUBBLE SORT {15,3,11,7,2,9}:
+Strategy: compare adjacent pairs, swap if wrong order.
+
+Pass 1: [3,11,7,2,9,15] ✓ 15 placed
+Pass 2: [3,7,2,9,11,15] ✓ 11 placed
+Pass 3: [3,2,7,9,11,15] → wait...
+[3,11,7,2,9,15]
+→swap(3,11)?no→swap(11,7):yes→[3,7,11,2,9,15]
+→swap(11,2):yes→[3,7,2,11,9,15]→swap(11,9):yes→[3,7,2,9,11,15]
+Pass 2:[3,7,2,9,11,15]→[3,2,7,9,11,15]→[3,2,7,9,11,15]
+Pass 3:[2,3,7,9,11,15] ✓
+FINAL: [2,3,7,9,11,15] ✓
+
+Big-O: Best O(n) [with flag], Avg O(n²), Worst O(n²)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4.2 INSERTION SORT {15,3,11,7,2,9}:
+i=1 key=3:  15>3→shift: [3,15,11,7,2,9]
+i=2 key=11: 15>11→shift, 3<11→stop: [3,11,15,7,2,9]
+i=3 key=7:  15>7,11>7→shift, 3<7→stop: [3,7,11,15,2,9]
+i=4 key=2:  all>2→shift: [2,3,7,11,15,9]
+i=5 key=9:  15>9,11>9→shift, 7<9→stop: [2,3,7,9,11,15] ✓
+FINAL: [2,3,7,9,11,15] ✓
+
+Big-O: Best O(n) [nearly sorted!], Avg O(n²), Worst O(n²)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4.3 SELECTION SORT {15,3,11,7,2,9}:
+Pass 1: min=2 at[4] → swap 15↔2: [2,3,11,7,15,9]
+Pass 2: min=3 at[1] → already min in place: [2,3,11,7,15,9]
+Pass 3: min=7 at[3] → swap 11↔7: [2,3,7,11,15,9]
+Pass 4: min=9 at[5] → swap 11↔9: [2,3,7,9,15,11]
+Pass 5: min=11 at[5] → swap 15↔11: [2,3,7,9,11,15] ✓
+FINAL: [2,3,7,9,11,15] ✓
+
+Big-O: ALWAYS O(n²) — no best case optimisation possible`},
+
+  {n:5,title:'Stack & Circular Queue Implementation',marks:20,tag:'Data Structures ★★★★',tbl:DSA_TBL,
+   body:`[Stack appeared in 5 papers, Queue in 4 — both very likely]
+
+5.1  Implement a STACK using a LINKED representation.
+     The stack stores objects of class Employee with:
+     employeeId (int), name (String), salary (double).
+     Implement: push, pop, isEmpty, peek.
+     Push 3 employees, then pop all. Show LIFO output.            [10]
+
+5.2  Implement a CIRCULAR QUEUE using an ARRAY.
+     Store integers. Capacity = 5.
+     Implement: enqueue, dequeue, isEmpty, isFull.
+     Demonstrate: enqueue 1,2,3,4,5 → dequeue twice →
+     enqueue 6,7. Show how pointers wrap around.                  [10]`,
+   ans:`5.1 LINKED STACK — Employee:
+
+class Employee {
+  int employeeId; String name; double salary;
+  Employee next;
+  Employee(int id, String n, double s){
+    employeeId=id; name=n; salary=s;
+  }
+}
+
+class EmployeeStack {
+  private Employee top = null;
+
+  void push(Employee e) {
+    e.next = top;
+    top = e;
+  }
+
+  Employee pop() {
+    if (isEmpty()) throw new RuntimeException("Stack empty");
+    Employee e = top;
+    top = top.next;
+    return e;
+  }
+
+  Employee peek() { return top; }
+  boolean isEmpty() { return top == null; }
+}
+
+// Demo:
+EmployeeStack stack = new EmployeeStack();
+stack.push(new Employee(1, "Alice", 45000));
+stack.push(new Employee(2, "Bob",   52000));
+stack.push(new Employee(3, "Carol", 61000));
+
+while (!stack.isEmpty()) {
+  Employee e = stack.pop();
+  System.out.println(e.name + " - R" + e.salary);
+}
+// LIFO Output:
+// Carol - R61000.0
+// Bob   - R52000.0
+// Alice - R45000.0
+
+All operations: O(1)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5.2 CIRCULAR QUEUE — Array (capacity=5):
+
+class CircularQueue {
+  private int[] arr;
+  private int front, rear, size, capacity;
+
+  CircularQueue(int cap) {
+    capacity=cap; arr=new int[cap];
+    front=0; rear=-1; size=0;
+  }
+
+  void enqueue(int x) {
+    if (isFull()) throw new RuntimeException("Full");
+    rear = (rear + 1) % capacity;  // KEY: wrap!
+    arr[rear] = x; size++;
+  }
+
+  int dequeue() {
+    if (isEmpty()) throw new RuntimeException("Empty");
+    int val = arr[front];
+    front = (front + 1) % capacity;  // KEY: wrap!
+    size--; return val;
+  }
+
+  boolean isEmpty() { return size == 0; }
+  boolean isFull()  { return size == capacity; }
+}
+
+POINTER TRACE:
+Op              [0][1][2][3][4]  front rear size
+enqueue(1)      [1]              f=0   r=0  1
+enqueue(2)      [1][2]           f=0   r=1  2
+enqueue(3,4,5)  [1][2][3][4][5] f=0   r=4  5 FULL
+dequeue()→1     [ ][2][3][4][5] f=1   r=4  4
+dequeue()→2     [ ][ ][3][4][5] f=2   r=4  4... wait size=3
+enqueue(6)      [6][ ][3][4][5] f=2   r=0  4  ← WRAPS to [0]!
+enqueue(7)      [6][7][3][4][5] f=2   r=1  5  FULL again
+
+Modulo makes array behave like a CIRCLE — reuses front slots!`},
+
+  {n:6,title:'Binary Search Tree & AVL Trees',marks:20,tag:'Trees ★★★★',tbl:null,
+   body:`[BST appeared in 5 papers, AVL in 2 — trees always on June exam]
+
+6.1  Insert the following values into a BST:
+     {20, 10, 30, 5, 15, 25, 35, 12, 18}
+     Draw the resulting tree.
+     Perform and show: Inorder, Preorder, Postorder traversals.   [10]
+
+6.2  Show what happens when you insert {5, 10, 15} into an
+     AVL tree. Show the tree after each insertion, the
+     Balance Factor (BF) at each node, and any rotation applied.  [6]
+
+6.3  Explain BST DELETE for a node with TWO children.
+     What is the inorder successor and how is it used?            [4]`,
+   ans:`6.1 BST INSERT {20,10,30,5,15,25,35,12,18}:
+
+Build step by step:
+20→root; 10→left of 20; 30→right of 20;
+5→left of 10; 15→right of 10; 25→left of 30; 35→right of 30;
+12→left of 15; 18→right of 15
+
+Final BST:
+            20
+          /    \
+        10      30
+       /  \    /  \
+      5   15  25  35
+         /  \
+        12   18
+
+TRAVERSALS:
+Inorder   (L→Root→R): 5,10,12,15,18,20,25,30,35 ← SORTED!
+Preorder  (Root→L→R): 20,10,5,15,12,18,30,25,35
+Postorder (L→R→Root): 5,12,18,15,10,25,35,30,20
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6.2 AVL TREE — Insert {5, 10, 15}:
+
+After insert 5:
+  [5]  BF(5)=0 ✓ balanced
+
+After insert 10:
+  5
+   \
+   10   BF(5)=-1 ✓ balanced
+
+After insert 15:
+  5
+   \
+   10    BF(5)=-2! ← VIOLATION (right-heavy)
+     \   BF(10)=-1 ← right child is right-heavy
+     15
+→ RR CASE: LEFT ROTATE at node 5
+
+After rotation:
+    10
+   /  \
+  5    15   All BF = 0 ✓ balanced!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6.3 BST DELETE — Node with TWO children:
+
+Example: delete 10 from tree above (if it had two children)
+
+INORDER SUCCESSOR = the SMALLEST value in the RIGHT subtree
+(or equivalently: go right once, then as far left as possible)
+
+Algorithm:
+1. Find node to delete (has left AND right children)
+2. Find its inorder successor S (min of right subtree)
+3. Copy S's value into the node to delete
+4. Delete S from the right subtree
+   (S has at most 1 child, so deletion is easy)
+
+Why? S is the next larger value after the deleted node.
+Replacing with S maintains the BST ordering property.`},
+]},
+
+};
+
+const TOPICS=[
+  {id:'bigo',label:'Big-O Notation',icon:'📊'},
+  {id:'recursion',label:'Recursion & Iteration',icon:'🔁'},
+  {id:'sorting',label:'Sorting Algorithms',icon:'🔢'},
+  {id:'stackqueue',label:'Stacks & Queues',icon:'📦'},
+  {id:'trees',label:'Trees (BST & AVL)',icon:'🌳'},
+  {id:'graphs',label:'Graph Algorithms',icon:'🕸️'},
+  {id:'hashing',label:'Hash Tables',icon:'#️⃣'},
+];
+
+const NOTES={
+bigo:{title:'Big-O Notation',color:'#00c9a7',secs:[
+  {h:'What is Big-O?',body:`Big-O describes the WORST-CASE (upper bound) growth rate of time or space as n → ∞. Constants and lower-order terms are dropped.
+
+Key insight: We care about SCALE, not exact count.
+O(n²) is bad for n=1,000,000. O(n log n) is fine.`},
+  {h:'The 5 Rules',body:`1. DROP constants:      O(3n) → O(n)
+2. DROP lower terms:    O(n²+n) → O(n²)
+3. SEQUENTIAL loops ADD: O(n)+O(n) = O(n)
+4. NESTED loops MULTIPLY: O(n)×O(n) = O(n²)
+5. GEOMETRIC inner (j*=k): O(log n) inner
+   → Outer O(n) × O(log n) = O(n log n)`},
+  {h:'Exam Code Patterns',body:`Two sequential for loops (both n)  → O(n)
+Nested loops (both up to n)        → O(n²)
+Outer O(n), inner j*=3 or j*=2    → O(n log n)
+Outer i+=3 (still O(n)), inner O(n)→ O(n²)
+Single halving loop (j/=2)         → O(log n)`},
+  {h:'Dominant Terms',body:`5000n + 0.001n³ + 0.025n²  → O(n³)
+500n + 0.5n^1.7             → O(n^1.7)
+0.3n²logn + 600log(n²)      → O(n²logn)  [note: log n²=2logn]
+100n + 0.01n²               → O(n²)`},
+  {h:'Algorithm Characteristics',body:`1. INPUT       — zero or more well-defined inputs
+2. OUTPUT      — at least one output produced
+3. DEFINITENESS — every step clear and unambiguous
+4. FINITENESS  — terminates after finite steps
+5. EFFECTIVENESS — every step is basic/executable`},
+]},
+recursion:{title:'Recursion & Iteration',color:'#0984e3',secs:[
+  {h:'The Key Difference',body:`RECURSION: Function calls itself. Each call = 1 stack frame.
+ITERATION: Loop. No extra frames.
+
+For factorial & fibonacci:
+• Recursive: mirrors maths, but O(n) SPACE (stack frames)
+• Iterative: less obvious, but O(1) SPACE (no stack risk)`},
+  {h:'Factorial Recursive Trace (n=4)',body:`fact(4)
+  └─ 4 × fact(3)
+         └─ 3 × fact(2)
+                └─ 2 × fact(1)
+                       └─ 1  ← BASE CASE (n≤1)
+
+Unwind: fact(2)=2, fact(3)=6, fact(4)=24
+Time: O(n) | Space: O(n) ← 4 frames simultaneously`},
+  {h:'Factorial Iterative (n=4)',body:`result=1
+i=2: 1×2=2
+i=3: 2×3=6
+i=4: 6×4=24 → return 24
+
+Time: O(n) | Space: O(1) ← only 'result' variable`},
+  {h:'Fibonacci — Why Recursion is Terrible',body:`fib(5) calls fib(4) AND fib(3)
+fib(4) calls fib(3) AND fib(2) ← fib(3) computed TWICE!
+fib(3) called even more times deeper...
+
+Time: O(2ⁿ) — exponential! Useless for large n.
+Space: O(n)
+
+Iterative Fibonacci (keep only prev 2 values):
+Time: O(n), Space: O(1) — vastly better!`},
+  {h:'When to Use Each',body:`RECURSIVE when:
+• Problem naturally recurses (trees, graphs, divide & conquer)
+• n is small, clarity matters
+
+ITERATIVE when:
+• Large n (risk of stack overflow)
+• Memory constrained
+• Performance critical`},
+]},
+sorting:{title:'Sorting Algorithms',color:'#a29bfe',secs:[
+  {h:'Master Comparison Table',body:`Algorithm     Best        Average      Worst       Space  Stable?  Adaptive?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Bubble        O(n)†       O(n²)        O(n²)       O(1)   Yes ✓    Yes (flag)
+Selection     O(n²)       O(n²)        O(n²)       O(1)   No  ✗    No
+Insertion     O(n)        O(n²)        O(n²)       O(1)   Yes ✓    Yes ✓✓
+Quick Sort    O(n logn)   O(n logn)    O(n²)*      O(logn) No ✗    No
+Heap Sort     O(n logn)   O(n logn)    O(n logn)✓  O(1)   No  ✗    No
+
+†Bubble O(n) best only WITH swapped-flag optimisation
+*Quick Sort worst: sorted array + last-element pivot
+Adaptive = performs better on nearly-sorted input`},
+  {h:'1. Bubble Sort',body:`STRATEGY: Compare adjacent pairs, swap if out of order.
+Largest element BUBBLES to end of unsorted portion each pass.
+
+TRACE {5,3,8,1}:
+Pass 1: [3,5,8,1]→[3,5,1,8] ✓ 8 placed
+Pass 2: [3,1,5,8] ✓ 5 placed
+Pass 3: [1,3,5,8] ✓ Done
+
+OPTIMISATION: Add 'swapped' flag
+→ If entire pass has 0 swaps, array is already sorted → EXIT
+→ Turns best case from O(n²) to O(n) for sorted/nearly-sorted
+
+Big-O: Best O(n)†, Avg O(n²), Worst O(n²), Space O(1), Stable`},
+  {h:'2. Selection Sort',body:`STRATEGY: Find minimum in unsorted portion → swap to front position.
+Repeat for each position.
+
+TRACE {64,25,12,22,11}:
+Pass 1: min=11 at [4] → swap 64↔11: [11,25,12,22,64]
+Pass 2: min=12 at [2] → swap 25↔12: [11,12,25,22,64]
+Pass 3: min=22 at [3] → swap 25↔22: [11,12,22,25,64]
+Pass 4: min=25 already in place: [11,12,22,25,64] ✓
+
+KEY DIFFERENCE from Bubble/Insertion:
+→ Selection Sort ALWAYS runs O(n²) — no optimisation possible
+→ Makes at most n-1 swaps (good when swap is expensive)
+
+Big-O: Best O(n²), Avg O(n²), Worst O(n²), Space O(1), NOT stable`},
+  {h:'3. Insertion Sort',body:`STRATEGY: Take next element (key). Shift all larger elements
+in the sorted portion one position right. Insert key.
+
+TRACE {64,25,12,22,11}:
+i=1 key=25: 64>25→shift → [25,64,12,22,11]
+i=2 key=12: 64>12,25>12→shift → [12,25,64,22,11]
+i=3 key=22: 64>22,25>22→shift, 12<22→stop → [12,22,25,64,11]
+i=4 key=11: all>11→shift → [11,12,22,25,64] ✓
+
+WHY ADAPTIVE (best for nearly-sorted):
+→ Inner loop STOPS as soon as it finds correct position
+→ Nearly sorted = inner loop exits almost immediately
+→ Approaches O(n) for nearly-sorted data
+
+Big-O: Best O(n), Avg O(n²), Worst O(n²), Space O(1), Stable ✓`},
+  {h:'4. Quick Sort',body:`STRATEGY: Divide-and-conquer using a PIVOT element.
+1. Choose pivot (last element)
+2. PARTITION: elements < pivot → left, > pivot → right
+3. Pivot is now in its FINAL correct position
+4. Recursively sort left and right sub-arrays
+
+PARTITION TRACE {3,6,1,5,4} pivot=4:
+i=-1, scan j=0..3:
+  j=0: 3≤4 → i++; swap [0]↔[0]: [3,6,1,5,4]
+  j=1: 6>4 → skip
+  j=2: 1≤4 → i++; swap [1]↔[2]: [3,1,6,5,4]
+  j=3: 5>4 → skip
+Place pivot: swap [i+1=2]↔[last=4]: [3,1,4,5,6]
+  Pivot 4 at index 2 — FINAL POSITION ✓
+
+WORST CASE trigger:
+Sorted array [1,2,3,4,5] with last-element pivot
+→ Each partition: left=[], right=[rest] → n levels → O(n²)
+FIX: random pivot or median-of-3 pivot
+
+Big-O: Best O(n logn), Avg O(n logn), Worst O(n²)
+Space: O(logn) avg call stack | NOT stable`},
+  {h:'5. Heap Sort',body:`STRATEGY: Two phases using a BINARY HEAP.
+
+MAX-HEAP PROPERTY: parent ≥ both children
+Array index rules: left=2i+1, right=2i+2, parent=(i-1)/2
+
+PHASE 1 — Build Max-Heap (O(n)):
+Start from last non-leaf (index n/2-1), heapify down to 0.
+After phase 1: root = maximum element.
+
+PHASE 2 — Extract max n times (O(n logn)):
+• Swap root (max) with last element
+• Reduce heap size by 1
+• Heapify root down (O(logn))
+• Repeat → each extraction places max in sorted position
+
+KEY ADVANTAGE: GUARANTEED O(n logn) always!
+→ Unlike Quick Sort, has NO worst case degradation
+
+Big-O: Best O(n logn), Avg O(n logn), Worst O(n logn) ✓
+Space: O(1) in-place | NOT stable`},
+  {h:'Bubble Sort',body:`Compare adjacent pairs, swap if wrong order.
+Largest element BUBBLES to end each pass.
+
+Optimisation: Add 'swapped' flag.
+If pass completes with 0 swaps → stop early → O(n) best case.
+Without flag: always O(n²).`},
+  {h:'Quick Sort',body:`Divide-and-conquer with a PIVOT element.
+1. Pick pivot (last element)
+2. Partition: < pivot → left, > pivot → right
+3. Pivot is now in its FINAL correct position
+4. Recurse on left and right
+
+Worst case: sorted array + last-element pivot
+→ Each step reduces by 1 only → n levels × n = O(n²)`},
+  {h:'Heap Sort',body:`TWO PHASES:
+Phase 1: Build MAX-HEAP (parent ≥ children, root=max)
+  → Heapify from last non-leaf upward
+  → Time: O(n)
+
+Phase 2: Extract max n times
+  → Swap root with last, reduce heap, heapify down
+  → O(log n) per extraction × n = O(n logn)
+
+KEY: GUARANTEED O(n logn) always! No worst case degradation.`},
+  {h:'Exam Strategy for Sorting',body:`For TRACES: always state your pivot (Quick Sort).
+For HEAP SORT: draw the tree, show both phases.
+For BUBBLE SORT: show each full pass clearly.
+
+For BIG-O: state all three cases (best/avg/worst)!
+Heap Sort worst = O(n logn) ← different from others!`},
+]},
+stackqueue:{title:'Stacks & Queues',color:'#e17055',secs:[
+  {h:'LIFO vs FIFO',body:`STACK — LIFO (Last In, First Out)
+• push() adds to TOP, pop() removes from TOP
+• Like a stack of plates
+• Used in: function calls, undo, DFS, expression evaluation
+
+QUEUE — FIFO (First In, First Out)
+• enqueue() adds to REAR, dequeue() removes from FRONT
+• Like a bank queue — first in line, first served
+• Used in: BFS, task scheduling, printer queue`},
+  {h:'Stack Key Code Points',body:`Array-based: top starts at -1
+push:     arr[++top] = value
+pop:      return arr[top--]
+isEmpty:  top == -1
+peek:     return arr[top]
+
+Linked-based:
+push:     newNode.next = top; top = newNode
+pop:      saved=top; top=top.next; return saved
+
+All operations: O(1)`},
+  {h:'Circular Queue — The Modulo Trick',body:`PROBLEM: Linear queue wastes front slots after dequeue.
+SOLUTION: Wrap pointers with modulo:
+
+enqueue: rear  = (rear + 1) % capacity
+dequeue: front = (front + 1) % capacity
+isFull:  size == capacity
+isEmpty: size == 0
+
+Think of the array as a CLOCK FACE.
+Pointers go round and round — no wasted space!`},
+  {h:'Common Exam Mistakes',body:`❌ Forgetting % capacity in circular queue
+❌ Not handling isEmpty/isFull before operations
+❌ Stack: top starting at 0 (should be -1)
+❌ Queue: confusing front vs rear
+
+✅ Always state: "LIFO" for stack, "FIFO" for queue
+✅ Show the modulo wrap in circular queue answers`},
+]},
+trees:{title:'Trees (BST & AVL)',color:'#00c9a7',secs:[
+  {h:'BST Property',body:`For EVERY node in the tree:
+  ALL left subtree values  < node value
+  ALL right subtree values > node value
+
+Insert: compare, go left/right, repeat until null → insert
+Find:   same comparison logic
+Time: O(log n) balanced, O(n) degenerate (skewed)`},
+  {h:'The Three Traversals',body:`Inorder   (L → Root → R): produces SORTED output ← most useful!
+Preorder  (Root → L → R): copies/serialises tree
+Postorder (L → R → Root): deletes tree (children before parent)
+
+Example BST {10,5,15,3,7}:
+      10
+     /  \
+    5    15
+   / \
+  3   7
+
+Inorder: 3, 5, 7, 10, 15 ← always sorted!`},
+  {h:'BST Delete — 3 Cases',body:`Case 1 (leaf):      Simply remove it
+Case 2 (one child): Replace node with its child
+Case 3 (two children):
+  → Find INORDER SUCCESSOR (min of right subtree)
+  → Copy its value here, delete the successor
+
+Time: O(log n) balanced`},
+  {h:'AVL Trees',body:`PROBLEM: Inserting sorted data skews BST → O(n) searches
+
+AVL SOLUTION: Balance Factor = height(L) - height(R)
+Must be -1, 0, or +1 at EVERY node.
+
+If |BF| > 1 after insert → ROTATE:
+  BF=+2 (left heavy):
+    Left child BF≥0 → LL → RIGHT rotate
+    Left child BF<0 → LR → Left then Right rotate
+  BF=-2 (right heavy):
+    Right child BF≤0 → RR → LEFT rotate
+    Right child BF>0 → RL → Right then Left rotate
+
+Guarantee: height ≤ 1.44 log₂n → all ops O(log n)`},
+]},
+graphs:{title:'Graph Algorithms',color:'#fd79a8',secs:[
+  {h:'BFS vs DFS',body:`BFS — Breadth-First Search (uses QUEUE)
+• Visit all neighbours before going deeper
+• Level by level — finds SHORTEST PATH (unweighted)
+
+DFS — Depth-First Search (uses STACK or recursion)
+• Go deep on one path, backtrack when stuck
+• Good for maze solving, cycle detection
+
+Both: Time O(V+E), Space O(V)`},
+  {h:'BFS Steps',body:`1. Enqueue start, mark visited
+2. While queue not empty:
+   a. Dequeue node → current
+   b. Process current
+   c. Enqueue all unvisited neighbours
+3. Done`},
+  {h:'DFS Steps',body:`1. Push start onto stack
+2. While stack not empty:
+   a. Pop node → current
+   b. If not visited: mark visited, process
+   c. Push all unvisited neighbours
+3. Done`},
+  {h:'Shortest Path & MST',body:`DIJKSTRA'S: Shortest path from source (non-negative weights)
+• dist[source]=0, all others=∞
+• Relax edges: if dist[u]+w(u,v) < dist[v] → update
+• Time: O(V²) basic, O(E log V) with priority queue
+• CANNOT handle negative weights!
+
+PRIM'S MST: Grow from vertex, always add cheapest edge to unvisited
+KRUSKAL'S MST: Sort all edges, add cheapest that doesn't create cycle
+
+MST = All V vertices, minimum total weight, no cycles, V-1 edges`},
+  {h:'Graph Representations',body:`ADJACENCY MATRIX [V×V]:
+• matrix[i][j]=1 if edge exists
+• Space O(V²), edge check O(1)
+• Best for DENSE graphs
+
+ADJACENCY LIST [array of lists]:
+• list[i] = all neighbours of vertex i
+• Space O(V+E), best for SPARSE graphs (most real graphs!)`},
+]},
+hashing:{title:'Hash Tables',color:'#fdcb6e',secs:[
+  {h:'Hash Table Basics',body:`Hash function: h(key) = key mod tableSize
+Goal: O(1) average insert, search, delete
+
+COLLISION: Two keys map to same index (inevitable!)
+Load Factor α = n/tableSize → keep α < 0.7`},
+  {h:'Linear Probing',body:`On collision at slot h, try:
+(h+1)%n, (h+2)%n, (h+3)%n ...
+until empty slot found.
+
+PROBLEM: PRIMARY CLUSTERING
+Long runs of filled slots form → future inserts slow.
+The more filled the table, the worse it gets.`},
+  {h:'Exam Example h(x)=x mod 7',body:`Keys: 50,700,76,85,92,73,101
+h(50)=1 → [1]free ✓     h(700)=0 → [0]free ✓
+h(76)=6 → [6]free ✓     h(85)=1 → TAKEN→[2]✓
+h(92)=1 → [1][2]TAKEN→[3]✓
+h(73)=3 → TAKEN→[4]✓    h(101)=3 → [3][4]TAKEN→[5]✓
+
+Result: [0]=700,[1]=50,[2]=85,[3]=92,[4]=73,[5]=101,[6]=76`},
+]},
+};
+
+const MEMORY=[
+  {title:'Algorithm Characteristics',sub:'Mnemonic: IODEF',color:'#00c9a7',body:`I  — INPUT       zero or more well-defined inputs
+O  — OUTPUT      at least one output produced
+D  — DEFINITENESS every step clear, unambiguous
+E  — EFFECTIVENESS every step is basic/executable
+F  — FINITENESS  terminates in finite steps
+
+"I Often Dream of Excellent Food"`},
+  {title:'Big-O 4 Rules',sub:'Drop • Drop • Add • Multiply',color:'#0984e3',body:`1. DROP constants:     O(3n) → O(n)
+2. DROP lower terms:   O(n²+n) → O(n²)
+3. SEQUENTIAL adds:    O(n)+O(n) → O(n)
+4. NESTED multiplies:  O(n)×O(n) → O(n²)
+
+Bonus: j*=k inner loop → O(log n) inner
+→ Outer O(n) × O(log n) = O(n log n)`},
+  {title:'Sorting Complexity',sub:'Remember the exceptions',color:'#a29bfe',body:`BEST CASES that are NOT O(n²):
+• Insertion/Bubble (optimised): O(n) if nearly sorted!
+• Quick Sort: O(n log n)
+• Heap Sort: O(n log n)
+
+WORST CASES to remember:
+• Quick Sort: O(n²) — sorted input + last-element pivot
+• Heap Sort: O(n log n) ← ALWAYS (unlike Quick!)
+
+"Heap Sort never has a bad day"`},
+  {title:'LIFO vs FIFO',sub:'Stack vs Queue',color:'#e17055',body:`STACK = LIFO = "Stack of plates"
+→ Last plate added = first plate taken
+→ push() add top, pop() remove top
+→ Used in: DFS, function calls, undo
+
+QUEUE = FIFO = "Bank queue"
+→ First person in = first served
+→ enqueue() rear, dequeue() front
+→ Used in: BFS, scheduling`},
+  {title:'Tree Traversals',sub:'Pre/In/Post = Root position',color:'#00c9a7',body:`PRE-order:  ROOT → L → R  (Root FIRST)
+IN-order:   L → ROOT → R  (Root MIDDLE) ← SORTED!
+POST-order: L → R → ROOT  (Root LAST)
+
+Mnemonic:
+Pre  = Root comes BEFORE children
+In   = Root comes BETWEEN children → SORTED!
+Post = Root comes AFTER children
+
+Most important exam fact: Inorder BST = sorted sequence`},
+  {title:'Circular Queue',sub:'The % trick',color:'#fd79a8',body:`WHY? Linear queue wastes front slots after dequeue.
+FIX: Wrap pointers with modulo arithmetic.
+
+enqueue: rear  = (rear  + 1) % capacity
+dequeue: front = (front + 1) % capacity
+isFull:  size == capacity
+isEmpty: size == 0
+
+Visualise: array is a CLOCK FACE
+Pointers go round and round — reuse front slots!`},
+  {title:'Quick vs Heap Sort',sub:'When each wins',color:'#a29bfe',body:`QUICK SORT:
+✅ Fast in practice (better cache behaviour)
+✅ In-place: O(log n) stack space
+❌ O(n²) worst case (sorted + last-element pivot)
+
+HEAP SORT:
+✅ GUARANTEED O(n log n) always!
+✅ In-place: O(1) space
+❌ Slower in practice (poor cache performance)
+
+Exam answer: "For guaranteed performance → Heap Sort"
+             "In practice → Quick Sort is typically faster"`},
+  {title:'AVL Balance',sub:'Balance Factor',color:'#fdcb6e',body:`BF = height(LEFT) − height(RIGHT)
+Must be −1, 0, or +1 at EVERY node
+
+BF = +2 (left heavy):
+  Left child BF ≥ 0  →  LL  →  RIGHT rotate
+  Left child BF < 0  →  LR  →  Left then Right rotate
+
+BF = −2 (right heavy):
+  Right child BF ≤ 0  →  RR  →  LEFT rotate
+  Right child BF > 0  →  RL  →  Right then Left rotate`},
+  {title:'Dijkstra Remember',sub:'Shortest Path',color:'#fd79a8',body:`PURPOSE: Shortest path, WEIGHTED graph
+LIMIT:   No NEGATIVE edge weights!
+
+Key operation = RELAX:
+if dist[u] + weight(u,v) < dist[v]:
+    dist[v] = dist[u] + weight(u,v)
+
+Steps:
+1. dist[source]=0, all others=∞
+2. While unvisited nodes remain:
+   → Pick u = min distance unvisited
+   → Relax all neighbours
+   → Mark u visited`},
+  {title:'Hash Linear Probing',sub:'Exam pattern',color:'#fdcb6e',body:`FORMULA: h(key) = key mod tableSize
+ON COLLISION: try (h+i)%n for i=1,2,3...
+
+EXAM TRICK — compute h(x) mod 7:
+50 mod 7 = 1  (7×7=49, 50-49=1)
+700 mod 7 = 0 (700÷7=100 exact)
+85 mod 7 = 1  → COLLISION → probe [2]
+
+ALWAYS SHOW WORKING:
+h(key) = ? → which slot → collision? → probe
+
+PROBLEM with linear probing: PRIMARY CLUSTERING`},
+];
+
+const SCOPE=[
+  {t:'Big-O Code Analysis',m:'9–15',p:'ALL 7 papers',s:5,tip:'3 code snippets. Know: two loops=O(n), nested=O(n²), j*=k→O(n logn)'},
+  {t:'Factorial (Rec & Iter)',m:'10–20',p:'ALL 7 papers',s:5,tip:'Trace + code in Java/Python + O(n) time vs O(n)/O(1) space'},
+  {t:'Quick Sort (trace+Big-O)',m:'12–20',p:'6 of 7 papers',s:5,tip:'Show pivot, partition step, recurse. Worst O(n²) with sorted+last pivot'},
+  {t:'Heap Sort (trace+Big-O)',m:'12–20',p:'6 of 7 papers',s:5,tip:'Show BOTH phases. KEY: always O(n logn) — guaranteed!'},
+  {t:'Bubble Sort (trace+Big-O)',m:'8–12',p:'Most papers',s:4,tip:'Show each pass. O(n) best (with flag), O(n²) worst'},
+  {t:'Stack (array or linked)',m:'10–20',p:'Multiple',s:4,tip:'Implement push,pop,isEmpty,peek. State LIFO. Show code.'},
+  {t:'Circular Queue',m:'10–20',p:'Multiple',s:4,tip:'KEY: (rear+1)%cap and (front+1)%cap. Implement enqueue/dequeue/isEmpty/isFull'},
+  {t:'BST (insert, traversals)',m:'15–20',p:'Multiple',s:4,tip:'Inorder=sorted! Know insert logic and all 3 traversal definitions'},
+  {t:'AVL Tree',m:'6–10',p:'Midyear 2021',s:3,tip:'Balance factor formula, 4 rotation types, why guarantees O(logn)'},
+  {t:'Graph BFS & DFS',m:'10–20',p:'Older papers',s:3,tip:'BFS=Queue, DFS=Stack. Know step-by-step algorithm for each'},
+  {t:'Dijkstra/Prim/Kruskal',m:'10–20',p:'Older papers',s:3,tip:"Dijkstra=shortest path (no negative). Prim/Kruskal=MST"},
+  {t:'Hash Tables',m:'10',p:'Nov 2020',s:3,tip:'Apply h(x)=x mod n, show probing step by step'},
+  {t:'Algorithm Characteristics',m:'5',p:'2024 / Asgn 2023',s:4,tip:'5 characteristics: Input, Output, Definiteness, Finiteness, Effectiveness'},
+  {t:'Insertion/Selection Sort',m:'10–20',p:'Midyear 2021',s:3,tip:'Compare strategies and Big-O. Insertion better for nearly-sorted.'},
+];
+
+// ══════════════════════════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════════════════════════
+let nav='papers', paper='apr25', topic='bigo', diagram='bigo', openAccs={};
+let sortArr=[64,34,25,12,22,11,90], sortI=0, sortJ=0, sortDone=false, sortStep=0;
+let stackItems=[], queueItems=[], bstValues=[10,5,15,3,7,12,18];
+let hashKeys=[50,700,76,85,92,73,101];
+
+// ══════════════════════════════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════════════════════════════
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function fmtTable(tbl){
+  if(!tbl) return '';
+  let h=`<table class="ftable"><thead><tr>${tbl.head.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>`;
+  tbl.rows.forEach(r=>{h+=`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`;});
+  return h+'</tbody></table>';
+}
+
+// ══════════════════════════════════════════════════════════════════════════
+// RENDER SIDEBAR
+// ══════════════════════════════════════════════════════════════════════════
+function renderSidebar(){
+  const labels={papers:'Past Papers',notes:'Notes & Theory',diagrams:'Visual Diagrams',memory:'Memory Aids',scope:'Exam Scope'};
+  document.getElementById('nav-lbl').textContent=labels[nav];
+  document.querySelectorAll('.ntab').forEach((t,i)=>{
+    t.classList.toggle('on',['papers','notes','diagrams','memory','scope'][i]===nav);
+  });
+  const sl=document.getElementById('sidebar-list');
+  if(nav==='papers'){
+    sl.innerHTML=PAPERS.map(p=>`<button class="sitem${p.id===paper?' on':''}" onclick="selPaper('${p.id}')"><div>${esc(p.label)}${p.new?'<span style="font-size:9px;background:#00c9a7;color:#000;padding:1px 5px;border-radius:3px;margin-left:5px;font-weight:700">NEW</span>':''}</div><div style="font-size:11px;color:#44445a;margin-top:1px">${esc(p.sub)}</div></button>`).join('');
+  } else if(nav==='notes'){
+    sl.innerHTML=TOPICS.map(t=>`<button class="sitem${t.id===topic?' on':''}" onclick="selTopic('${t.id}')">${t.icon} ${esc(t.label)}</button>`).join('');
+  } else if(nav==='diagrams'){
+    const ds=[{id:'bigo',label:'Big-O Growth'},{id:'bubble',label:'Bubble Sort'},{id:'stackq',label:'Stack & Queue'},{id:'bst',label:'BST Insert'},{id:'hash',label:'Hash Table'}];
+    sl.innerHTML=ds.map(d=>`<button class="sitem${d.id===diagram?' on':''}" onclick="selDiagram('${d.id}')">${esc(d.label)}</button>`).join('');
+  } else {
+    sl.innerHTML='';
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════════════
+// RENDER MAIN
+// ══════════════════════════════════════════════════════════════════════════
+function renderMain(){
+  const mc=document.getElementById('mc');
+  if(nav==='papers') mc.innerHTML=renderPapers();
+  else if(nav==='notes') mc.innerHTML=renderNotes();
+  else if(nav==='diagrams') mc.innerHTML=renderDiagrams();
+  else if(nav==='memory') mc.innerHTML=renderMemory();
+  else if(nav==='scope') mc.innerHTML=renderScope();
+}
+
+function renderPapers(){
+  const p=PD[paper];
+  const isPred=paper==='pred26';
+  let h=`<div style="margin-bottom:1.25rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+    <span class="ptag">ADP470S</span>
+    <span style="font-weight:600;font-size:18px">${esc(p.title)}</span>
+    <span class="pinfo">${esc(p.info)}</span>
+    <span class="pcount">${p.qs.length} questions</span>
+  </div>`;
+  if(isPred){h+=`<div style="padding:1rem 1.25rem;background:linear-gradient(135deg,#00c9a720,#0984e320);border:1px solid #00c9a7;border-radius:10px;margin-bottom:1.5rem">
+    <div style="font-weight:700;font-size:14px;color:#00c9a7;margin-bottom:.5rem">🎯 Exam Prediction — Based on Analysis of All 9 Past Papers (2020–2026)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;font-size:12px;color:#8888aa">
+      <div>★★★★★ <strong style="color:#e4e4f0">Big-O code analysis</strong> — appeared 9/9 papers</div>
+      <div>★★★★★ <strong style="color:#e4e4f0">Factorial (recursive+iterative)</strong> — appeared 9/9</div>
+      <div>★★★★★ <strong style="color:#e4e4f0">Quick Sort trace + Big-O</strong> — appeared 8/9 papers</div>
+      <div>★★★★★ <strong style="color:#e4e4f0">Heap Sort trace + Big-O</strong> — appeared 7/9 papers</div>
+      <div>★★★★  <strong style="color:#e4e4f0">Bubble/Insertion/Selection Sort</strong> — appeared 6/9</div>
+      <div>★★★★  <strong style="color:#e4e4f0">Stack + Queue implementation</strong> — appeared 6/9</div>
+      <div>★★★★  <strong style="color:#e4e4f0">BST insert + traversals</strong> — appeared 5/9 papers</div>
+      <div>★★★   <strong style="color:#e4e4f0">AVL Trees + rotations</strong> — appeared 3/9 papers</div>
+    </div>
+    <div style="margin-top:.75rem;font-size:12px;color:#fdcb6e">⚠️ Format: Answer ANY 5 of 6 questions (20 marks each). Suggested: skip Q4 if short on time — Q1,2,3,5,6 cover highest-frequency topics.</div>
+  </div>`;}
+  p.qs.forEach((q,qi)=>{
+    const c=QC[(q.n-1)%QC.length];
+    const aid=`ans-${paper}-${qi}`;
+    const bid=`btn-${paper}-${qi}`;
+    h+=`<div class="qcard"><div class="qhead">
+      <div class="qmeta">
+        <div><span class="qbadge" style="background:${c}">${esc('Q'+q.n)}</span><span class="qtitle">${esc(q.title)}</span></div>
+        <span class="qmarks">[${q.marks} marks]</span>
+      </div>
+      <div class="qtag">${esc(q.tag)}</div>
+      <pre class="qbody">${esc(q.body)}</pre>
+      ${fmtTable(q.tbl)}
+      <button class="btn-show" id="${bid}" onclick="toggleAns('${aid}','${bid}','${paper}',${q.n})">🐧 Show Solution</button>
+    </div>
+    <div class="qans" id="${aid}">
+      <div class="ans-lbl">✓ MODEL ANSWER</div>
+      <pre class="ans-pre">${esc(q.ans)}</pre>
+      <div id="iviz-${paper}-${q.n}"></div>
+      <div class="mark-row">
+        <button class="mbtn" onclick="markQ(this,'got')">✓ Got it</button>
+        <button class="mbtn" onclick="markQ(this,'nope')">✗ Need more practice</button>
+      </div>
+    </div></div>`;
+  });
+  return h;
+}
+
+function renderNotes(){
+  const t=NOTES[topic];
+  let sidebar=`<div style="display:flex;gap:16px">
+    <div style="width:160px;flex-shrink:0">
+      ${TOPICS.map(tp=>`<button class="sitem topic-btn${tp.id===topic?' on':''}" style="display:block" onclick="selTopic('${tp.id}')">${tp.icon} ${esc(tp.label)}</button>`).join('')}
+    </div><div style="flex:1">
+    <h3 style="margin:0 0 1rem;font-size:18px;font-weight:600;color:${t.color||'#00c9a7'}">${esc(t.title)}</h3>`;
+  t.secs.forEach((s,i)=>{
+    const aid=`acc-${topic}-${i}`;
+    sidebar+=`<div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc('${aid}')">
+        <span class="acc-title">${esc(s.h)}</span>
+        <span style="color:#8888aa" id="arr-${aid}">▼</span>
+      </button>
+      <div class="acc-body${openAccs[aid]?' open':''}" id="${aid}">
+        <pre class="acc-pre">${esc(s.body)}</pre>
+      </div>
+    </div>`;
+  });
+  return sidebar+'</div></div>';
+}
+
+function renderDiagrams(){
+  const diags=[{id:'bigo',label:'📈 Big-O Growth'},{id:'bubble',label:'🫧 Bubble Sort'},{id:'selection',label:'🔍 Selection Sort'},{id:'insertion',label:'🃏 Insertion Sort'},{id:'quicksort',label:'⚡ Quick Sort'},{id:'heapsort',label:'🏔️ Heap Sort'},{id:'stackq',label:'📦 Stack & Queue'},{id:'bst',label:'🌳 BST'},{id:'hash',label:'#️⃣ Hash Table'}];
+  let h=`<h2 class="pgtitle">🎨 Visual Study Diagrams</h2>
+    <div class="dtabs">${diags.map(d=>`<button class="dtab${d.id===diagram?' on':''}" onclick="selDiagram('${d.id}')">${esc(d.label)}</button>`).join('')}</div>`;
+  h+=`<div id="diag-area">${renderDiagramContent()}</div>`;
+  return h;
+}
+
+function renderDiagramContent(){
+  if(diagram==='bigo') return renderBigO();
+  if(diagram==='bubble') return renderBubble();
+  if(diagram==='selection') return renderSelection();
+  if(diagram==='insertion') return renderInsertion();
+  if(diagram==='quicksort') return renderQuickSort();
+  if(diagram==='heapsort') return renderHeapSort();
+  if(diagram==='stackq') return renderStackQ();
+  if(diagram==='bst') return renderBST();
+  if(diagram==='hash') return renderHashTable();
+  return '';
+}
+
+// ─── SELECTION SORT ──────────────────────────────────────────────────────
+let selArr=[64,25,12,22,11,90,45],selI=0,selMin=0,selJ=1,selDone=false,selStep=0;
+function renderSelection(){
+  const max=Math.max(...selArr);
+  let bars=selArr.map((v,i)=>{
+    let bg='#44445a';
+    if(selDone) bg='#00c9a7';
+    else if(i<selI) bg='#00c9a750';
+    else if(i===selMin) bg='#fdcb6e';
+    else if(i===selJ) bg='#0984e3';
+    const ht=Math.max(8,Math.round((v/max)*80));
+    return `<div class="sort-block">
+      <span class="sort-val" style="color:${i===selMin?'#fdcb6e':i===selJ?'#0984e3':'#8888aa'}">${v}</span>
+      <div class="sort-bar" style="height:${ht}px;background:${bg}"></div>
+      ${i===selI&&!selDone?'<div style="font-size:9px;color:#8888aa;margin-top:2px">start</div>':''}
+    </div>`;
+  }).join('');
+  let msg=selDone?`✓ Sorted! [${selArr.join(', ')}]`
+    :`Pass ${selI+1}: scanning j=${selJ} — current min=${selArr[selMin]} at [${selMin}]`;
+  return `<div class="dbox">
+    <div style="margin-bottom:.75rem">
+      <div style="font-weight:600;color:#e4e4f0;font-size:15px;margin-bottom:4px">🔍 Selection Sort</div>
+      <div style="font-size:12px;color:#8888aa">Find minimum in unsorted portion → swap to front. Always O(n²).</div>
+      <div style="display:flex;gap:8px;margin-top:.5rem;font-size:11px">
+        <span style="background:#fdcb6e;color:#000;padding:2px 6px;border-radius:3px">Yellow = current min</span>
+        <span style="background:#0984e3;color:#fff;padding:2px 6px;border-radius:3px">Blue = scanning</span>
+        <span style="background:#00c9a750;color:#00c9a7;padding:2px 6px;border-radius:3px">Dim = sorted</span>
+      </div>
+    </div>
+    <div class="sort-arr">${bars}</div>
+    <div class="step-msg" style="color:${selDone?'#00c9a7':'#8888aa'}">${esc(msg)}</div>
+    <div class="step-btns">
+      <button class="btn-sm" onclick="nextSelection()" ${selDone?'disabled':''} style="${selDone?'opacity:.4':''}">Next Step →</button>
+      <button class="btn-sm" onclick="resetSelection()">↺ Reset</button>
+    </div>
+    <div style="margin-top:1rem;padding:.75rem;background:#0a0a18;border-radius:6px;font-family:monospace;font-size:12px;color:#8888aa;white-space:pre-wrap">ALGORITHM:
+for i = 0 to n-1:
+  min = i
+  for j = i+1 to n-1:
+    if arr[j] < arr[min]: min = j
+  swap arr[i] ↔ arr[min]
+
+Big-O: Best O(n²), Avg O(n²), Worst O(n²) — always same!
+Space: O(1) | Not stable</div>
+  </div>`;
+}
+function nextSelection(){
+  if(selDone) return;
+  const a=[...selArr];
+  // advance j
+  let ni=selI,nj=selJ,nm=selMin;
+  if(a[selJ]<a[nm]) nm=selJ;
+  nj++;
+  if(nj>=a.length){
+    // end of pass - do swap
+    [a[ni],a[nm]]=[a[nm],a[ni]];
+    ni++; nj=ni+1; nm=ni;
+    if(ni>=a.length-1) selDone=true;
+  }
+  selArr=a; selI=ni; selJ=nj; selMin=nm; selStep++;
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function resetSelection(){
+  selArr=[64,25,12,22,11,90,45]; selI=0; selMin=0; selJ=1; selDone=false; selStep=0;
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+
+// ─── INSERTION SORT ───────────────────────────────────────────────────────
+let insArr=[64,25,12,22,11,90,45],insI=1,insKey=25,insJ=0,insDone=false,insPhase='compare';
+function renderInsertion(){
+  const max=Math.max(...insArr);
+  let bars=insArr.map((v,i)=>{
+    let bg='#44445a';
+    if(insDone) bg='#00c9a7';
+    else if(i<insI) bg='#00c9a750';
+    else if(i===insI) bg='#a29bfe';
+    const ht=Math.max(8,Math.round((v/max)*80));
+    return `<div class="sort-block">
+      <span class="sort-val" style="color:${i===insI?'#a29bfe':i<insI?'#00c9a7':'#8888aa'}">${v}</span>
+      <div class="sort-bar" style="height:${ht}px;background:${bg}"></div>
+    </div>`;
+  }).join('');
+  let msg=insDone?`✓ Sorted! [${insArr.join(', ')}]`
+    :`Step ${insI}: inserting key=${insKey} into sorted portion [${insArr.slice(0,insI).join(',')}]`;
+  return `<div class="dbox">
+    <div style="margin-bottom:.75rem">
+      <div style="font-weight:600;color:#e4e4f0;font-size:15px;margin-bottom:4px">🃏 Insertion Sort</div>
+      <div style="font-size:12px;color:#8888aa">Pick element → find correct position in sorted portion → insert. Adaptive: O(n) on nearly-sorted data.</div>
+      <div style="display:flex;gap:8px;margin-top:.5rem;font-size:11px">
+        <span style="background:#a29bfe;color:#000;padding:2px 6px;border-radius:3px">Purple = key being inserted</span>
+        <span style="background:#00c9a750;color:#00c9a7;padding:2px 6px;border-radius:3px">Teal = sorted portion</span>
+      </div>
+    </div>
+    <div class="sort-arr">${bars}</div>
+    <div class="step-msg" style="color:${insDone?'#00c9a7':'#8888aa'}">${esc(msg)}</div>
+    <div class="step-btns">
+      <button class="btn-sm" onclick="nextInsertion()" ${insDone?'disabled':''} style="${insDone?'opacity:.4':''}">Next Step →</button>
+      <button class="btn-sm" onclick="resetInsertion()">↺ Reset</button>
+    </div>
+    <div style="margin-top:1rem;padding:.75rem;background:#0a0a18;border-radius:6px;font-family:monospace;font-size:12px;color:#8888aa;white-space:pre-wrap">ALGORITHM:
+for i = 1 to n-1:
+  key = arr[i]
+  j = i - 1
+  while j >= 0 and arr[j] > key:
+    arr[j+1] = arr[j]   // shift right
+    j--
+  arr[j+1] = key        // insert key
+
+Big-O: Best O(n) [sorted!], Avg O(n²), Worst O(n²)
+Space: O(1) | Stable ✓ | ADAPTIVE ← best sorting feature</div>
+  </div>`;
+}
+function nextInsertion(){
+  if(insDone) return;
+  const a=[...insArr];
+  let key=insKey, j=insJ;
+  if(j>=0 && a[j]>key){
+    a[j+1]=a[j]; j--;
+    insArr=a; insJ=j;
+  } else {
+    a[j+1]=key;
+    insArr=a;
+    insI++;
+    if(insI>=a.length){ insDone=true; }
+    else { insKey=insArr[insI]; insJ=insI-1; }
+  }
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function resetInsertion(){
+  insArr=[64,25,12,22,11,90,45]; insI=1; insKey=25; insJ=0; insDone=false;
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+
+// ─── QUICK SORT ───────────────────────────────────────────────────────────
+let qsArr=[8,3,6,1,5,9,4,7,2],qsLog=[],qsDone=false,qsStep=0;
+function qsPartition(a,lo,hi){
+  const pivot=a[hi]; let i=lo-1;
+  const steps=[];
+  for(let j=lo;j<hi;j++){
+    if(a[j]<=pivot){ i++; [a[i],a[j]]=[a[j],a[i]]; steps.push({arr:[...a],msg:`j=${j}: ${a[j]}≤${pivot}, swap [${i}]↔[${j}]`}); }
+    else steps.push({arr:[...a],msg:`j=${j}: ${a[j]}>${pivot}, skip`});
+  }
+  [a[i+1],a[hi]]=[a[hi],a[i+1]];
+  steps.push({arr:[...a],msg:`Place pivot ${pivot} at [${i+1}] ✓`});
+  return{pi:i+1,steps};
+}
+function initQS(){
+  qsArr=[8,3,6,1,5,9,4,7,2]; qsLog=[]; qsDone=false; qsStep=0;
+  const a=[...qsArr];
+  function qs(arr,lo,hi){
+    if(lo>=hi) return;
+    qsLog.push({arr:[...arr],msg:`Subarray [${arr.slice(lo,hi+1).join(',')}] pivot=${arr[hi]}`});
+    const {pi,steps}=qsPartition(arr,lo,hi);
+    steps.forEach(s=>qsLog.push(s));
+    qs(arr,lo,pi-1); qs(arr,pi+1,hi);
+  }
+  qs(a,0,a.length-1);
+  qsLog.push({arr:[...a],msg:'✓ Fully sorted!'});
+}
+function renderQuickSort(){
+  if(!qsLog.length) initQS();
+  const cur=qsLog[Math.min(qsStep,qsLog.length-1)];
+  const max=Math.max(...cur.arr);
+  const bars=cur.arr.map((v,i)=>{
+    const ht=Math.max(8,Math.round((v/max)*80));
+    return `<div class="sort-block"><span class="sort-val">${v}</span><div class="sort-bar" style="height:${ht}px;background:#a29bfe"></div></div>`;
+  }).join('');
+  const prog=`${Math.min(qsStep+1,qsLog.length)} / ${qsLog.length}`;
+  return `<div class="dbox">
+    <div style="margin-bottom:.75rem">
+      <div style="font-weight:600;color:#e4e4f0;font-size:15px;margin-bottom:4px">⚡ Quick Sort</div>
+      <div style="font-size:12px;color:#8888aa">Divide-and-conquer: choose pivot, partition (< left, > right), recurse. Pivot ends in final position.</div>
+    </div>
+    <div class="sort-arr">${bars}</div>
+    <div style="padding:.6rem .75rem;background:#1a1a32;border-radius:6px;font-size:12px;color:#00c9a7;font-family:monospace;margin-bottom:.75rem;min-height:32px">${esc(cur.msg)}</div>
+    <div style="font-size:11px;color:#44445a;margin-bottom:.75rem">Step ${prog}</div>
+    <div class="step-btns">
+      <button class="btn-sm" onclick="prevQS()" ${qsStep===0?'disabled':''} style="${qsStep===0?'opacity:.4':''}">← Prev</button>
+      <button class="btn-sm" onclick="nextQS()" ${qsStep>=qsLog.length-1?'disabled':''} style="${qsStep>=qsLog.length-1?'opacity:.4':''}">Next →</button>
+      <button class="btn-sm" onclick="resetQS()">↺ Reset</button>
+    </div>
+    <div style="margin-top:1rem;padding:.75rem;background:#0a0a18;border-radius:6px;font-family:monospace;font-size:12px;color:#8888aa;white-space:pre-wrap">ALGORITHM:
+quickSort(arr, lo, hi):
+  if lo < hi:
+    pi = partition(arr, lo, hi)  // pivot in final position
+    quickSort(arr, lo, pi-1)     // sort left
+    quickSort(arr, pi+1, hi)     // sort right
+
+partition(arr, lo, hi):
+  pivot = arr[hi]; i = lo-1
+  for j = lo to hi-1:
+    if arr[j] <= pivot: i++; swap arr[i]↔arr[j]
+  swap arr[i+1]↔arr[hi]
+  return i+1
+
+Big-O: Best O(n logn), Avg O(n logn), Worst O(n²)
+Space: O(logn) stack | NOT stable</div>
+  </div>`;
+}
+function nextQS(){ if(qsStep<qsLog.length-1){qsStep++;document.getElementById('diag-area').innerHTML=renderDiagramContent();} }
+function prevQS(){ if(qsStep>0){qsStep--;document.getElementById('diag-area').innerHTML=renderDiagramContent();} }
+function resetQS(){ qsLog=[]; qsStep=0; initQS(); document.getElementById('diag-area').innerHTML=renderDiagramContent(); }
+
+// ─── HEAP SORT ─────────────────────────────────────────────────────────────
+let hsArr=[9,4,3,8,2,7,1,6,5],hsLog=[],hsStep=0;
+function buildHSLog(){
+  const a=[...hsArr]; hsLog=[];
+  function heapify(arr,n,i){
+    let largest=i,l=2*i+1,r=2*i+2;
+    if(l<n&&arr[l]>arr[largest]) largest=l;
+    if(r<n&&arr[r]>arr[largest]) largest=r;
+    if(largest!==i){
+      [arr[i],arr[largest]]=[arr[largest],arr[i]];
+      hsLog.push({arr:[...arr],sorted:0,msg:`Heapify: swap [${i}]=${arr[largest]} ↔ [${largest}]=${arr[i]}, re-heapify`});
+      heapify(arr,n,largest);
+    }
+  }
+  // Phase 1
+  hsLog.push({arr:[...a],sorted:0,msg:'Phase 1: Build Max-Heap (heapify from last non-leaf)'});
+  for(let i=Math.floor(a.length/2)-1;i>=0;i--){
+    heapify(a,a.length,i);
+    hsLog.push({arr:[...a],sorted:0,msg:`After heapify at [${i}]: max-heap progress → [${a.join(',')}]`});
+  }
+  hsLog.push({arr:[...a],sorted:0,msg:`✓ Max-Heap built: [${a.join(',')}] Root=${a[0]} is maximum`});
+  // Phase 2
+  for(let i=a.length-1;i>0;i--){
+    [a[0],a[i]]=[a[i],a[0]];
+    hsLog.push({arr:[...a],sorted:a.length-i,msg:`Phase 2: Extract max ${a[i]} → swap root↔[${i}], heapify down`});
+    heapify(a,i,0);
+    hsLog.push({arr:[...a],sorted:a.length-i,msg:`After heapify: [${a.slice(0,i).join(',')} | ${a.slice(i).join(',')}]`});
+  }
+  hsLog.push({arr:[...a],sorted:a.length,msg:`✓ Sorted! [${a.join(',')}]`});
+}
+function renderHeapSort(){
+  if(!hsLog.length) buildHSLog();
+  const cur=hsLog[Math.min(hsStep,hsLog.length-1)];
+  const max=Math.max(...cur.arr);
+  const sortedFrom=cur.arr.length-cur.sorted;
+  const bars=cur.arr.map((v,i)=>{
+    const isSorted=i>=sortedFrom;
+    const ht=Math.max(8,Math.round((v/max)*80));
+    const bg=isSorted?'#00c9a7':i===0?'#fd79a8':'#a29bfe';
+    return `<div class="sort-block">
+      <span class="sort-val" style="color:${isSorted?'#00c9a7':i===0?'#fd79a8':'#8888aa'}">${v}</span>
+      <div class="sort-bar" style="height:${ht}px;background:${bg}"></div>
+      ${i===0&&!isSorted?'<div style="font-size:9px;color:#fd79a8;margin-top:2px">MAX</div>':''}
+    </div>`;
+  }).join('');
+  return `<div class="dbox">
+    <div style="margin-bottom:.75rem">
+      <div style="font-weight:600;color:#e4e4f0;font-size:15px;margin-bottom:4px">🏔️ Heap Sort</div>
+      <div style="font-size:12px;color:#8888aa">Phase 1: build max-heap. Phase 2: extract max to end repeatedly. GUARANTEED O(n log n) always!</div>
+      <div style="display:flex;gap:8px;margin-top:.5rem;font-size:11px">
+        <span style="background:#fd79a8;color:#000;padding:2px 6px;border-radius:3px">Pink = root (max)</span>
+        <span style="background:#a29bfe;color:#000;padding:2px 6px;border-radius:3px">Purple = heap</span>
+        <span style="background:#00c9a7;color:#000;padding:2px 6px;border-radius:3px">Teal = sorted</span>
+      </div>
+    </div>
+    <div class="sort-arr">${bars}</div>
+    <div style="padding:.6rem .75rem;background:#1a1a32;border-radius:6px;font-size:12px;color:#fdcb6e;font-family:monospace;margin-bottom:.75rem;min-height:32px">${esc(cur.msg)}</div>
+    <div style="font-size:11px;color:#44445a;margin-bottom:.75rem">Step ${Math.min(hsStep+1,hsLog.length)} / ${hsLog.length}</div>
+    <div class="step-btns">
+      <button class="btn-sm" onclick="prevHS()" ${hsStep===0?'disabled':''} style="${hsStep===0?'opacity:.4':''}">← Prev</button>
+      <button class="btn-sm" onclick="nextHS()" ${hsStep>=hsLog.length-1?'disabled':''} style="${hsStep>=hsLog.length-1?'opacity:.4':''}">Next →</button>
+      <button class="btn-sm" onclick="resetHS()">↺ Reset</button>
+    </div>
+    <div style="margin-top:1rem;padding:.75rem;background:#0a0a18;border-radius:6px;font-family:monospace;font-size:12px;color:#8888aa;white-space:pre-wrap">ALGORITHM:
+Phase 1 — Build Max-Heap:
+  for i = n/2-1 down to 0: heapify(arr, n, i)
+  → parent ≥ both children at every node
+  → root = maximum
+
+Phase 2 — Extract n times:
+  for i = n-1 down to 1:
+    swap arr[0] ↔ arr[i]   // root (max) → end
+    heapify(arr, i, 0)      // restore heap property
+
+Array index rules: left=2i+1, right=2i+2, parent=(i-1)/2
+
+Big-O: ALL cases O(n logn) — GUARANTEED! Space O(1)</div>
+  </div>`;
+}
+function nextHS(){ if(hsStep<hsLog.length-1){hsStep++;document.getElementById('diag-area').innerHTML=renderDiagramContent();} }
+function prevHS(){ if(hsStep>0){hsStep--;document.getElementById('diag-area').innerHTML=renderDiagramContent();} }
+function resetHS(){ hsLog=[]; hsStep=0; buildHSLog(); document.getElementById('diag-area').innerHTML=renderDiagramContent(); }
+
+
+function renderBigO(){
+  const n10={1:1,logn:3,n:10,nlogn:33,n2:100,exp:"huge"};
+  const n100={1:1,logn:7,n:100,nlogn:664,n2:10000,exp:"∞"};
+  const n1000={1:1,logn:10,n:1000,nlogn:9966,n2:1000000,exp:"∞"};
+  const nsel=window._bon||100;
+  const nv=nsel===10?n10:nsel===1000?n1000:n100;
+  const items=[
+    {lbl:'O(1)',desc:'Constant',key:'1',col:'#00c9a7'},
+    {lbl:'O(log n)',desc:'Logarithmic',key:'logn',col:'#0984e3'},
+    {lbl:'O(n)',desc:'Linear',key:'n',col:'#a29bfe'},
+    {lbl:'O(n log n)',desc:'Linearithmic',key:'nlogn',col:'#fdcb6e'},
+    {lbl:'O(n²)',desc:'Quadratic',key:'n2',col:'#e17055'},
+    {lbl:'O(2ⁿ)',desc:'Exponential',key:'exp',col:'#fd79a8'},
+  ];
+  const maxv=Math.max(...items.map(it=>typeof nv[it.key]==='number'?nv[it.key]:0));
+  let h=`<div class="dbox">
+    <p style="margin:0 0 1rem">Compare how different complexities grow with input size n.</p>
+    <div style="display:flex;gap:8px;margin-bottom:1rem">
+      ${[10,100,1000].map(v=>`<button class="btn-sm${nsel===v?' '+(v===window._bon?'':''):''}" style="${nsel===v?'border-color:#00c9a7;color:#00c9a7':''}; border-radius:20px;padding:4px 14px" onclick="setBON(${v})">${v===10?'n=10':v===100?'n=100':'n=1000'}</button>`).join('')}
+    </div>`;
+  items.forEach(it=>{
+    const v=nv[it.key];
+    const isNum=typeof v==='number';
+    const pct=isNum&&v<1e7?Math.min(100,Math.round((v/maxv)*100)):100;
+    const vstr=isNum?v.toLocaleString():v;
+    h+=`<div class="bar-row">
+      <span class="bar-lbl" style="color:${it.col}">${esc(it.lbl)}</span>
+      <span class="bar-desc">${esc(it.desc)}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${it.col};opacity:.85"></div></div>
+      <span class="bar-val" style="color:${isNum?'#8888aa':it.col}">${esc(vstr)}</span>
+    </div>`;
+  });
+  h+=`<p style="font-size:11px;color:#44445a;margin-top:.75rem">Operations count for each complexity. O(n²) and O(2ⁿ) explode rapidly.</p></div>`;
+  return h;
+}
+
+function renderBubble(){
+  const max=Math.max(...sortArr);
+  let bars=sortArr.map((v,i)=>{
+    const isActive=!sortDone&&(i===sortJ||i===sortJ+1);
+    const ht=Math.max(8,Math.round((v/max)*80));
+    return `<div class="sort-block">
+      <span class="sort-val" style="color:${isActive?'#fff':'#8888aa'}">${v}</span>
+      <div class="sort-bar" style="height:${ht}px;background:${isActive?'#00c9a7':'#44445a'}"></div>
+    </div>`;
+  }).join('');
+  let msg=sortDone?`✓ Sorted! [${sortArr.join(', ')}]`:`Pass ${sortI+1}, comparing positions ${sortJ} & ${sortJ+1} (values ${sortArr[sortJ]} & ${sortArr[sortJ+1]})`;
+  return `<div class="dbox">
+    <p style="margin:0 0 1rem">Interactive Bubble Sort — step through one comparison at a time.</p>
+    <div class="sort-arr">${bars}</div>
+    <div class="step-msg" style="color:${sortDone?'#00c9a7':'#8888aa'}">${esc(msg)}</div>
+    <div class="step-btns">
+      <button class="btn-sm" style="${sortDone?'opacity:.4':''}" onclick="nextBubble()" ${sortDone?'disabled':''}>Next Step →</button>
+      <button class="btn-sm" onclick="resetBubble()">↺ Reset</button>
+    </div>
+    <p style="font-size:11px;color:#44445a;margin-top:.75rem;text-align:center">Highlighted bars = being compared. Step: ${sortStep}</p>
+  </div>`;
+}
+
+function renderStackQ(){
+  const stackH=stackItems.map((v,i)=>{
+    const isTop=i===stackItems.length-1;
+    return `<div class="ds-item ${isTop?'ds-top':'ds-norm'}" style="width:80px;position:relative">
+      ${v}${isTop?'<div class="ds-label" style="color:#e17055">← TOP</div>':''}
+    </div>`;
+  }).join('')||'<div class="empty-ds">Empty stack</div>';
+  const qH=queueItems.map((v,i)=>{
+    const isFront=i===0, isRear=i===queueItems.length-1&&i!==0;
+    return `<div class="ds-item ${isFront?'ds-front':'ds-norm'}">
+      ${v}${isFront?'<div class="ds-label">FRONT</div>':isRear?'<div class="ds-label" style="color:#8888aa">REAR</div>':''}
+    </div>`;
+  }).join('')||'<div class="empty-ds">Empty queue</div>';
+  return `<div class="dbox">
+    <div class="ds-cols">
+      <div class="ds-box">
+        <div class="ds-title" style="color:#e17055">📚 STACK — LIFO</div>
+        <div class="dstack">${stackH}</div>
+        <div class="ds-ctrl">
+          <input type="number" id="si" placeholder="value" style="width:70px">
+          <button class="btn-ac" onclick="doPush()">Push</button>
+          <button class="btn-sm" onclick="doPop()">Pop</button>
+        </div>
+        <div class="ds-msg" id="smsg" style="color:#e17055"></div>
+      </div>
+      <div class="ds-box">
+        <div class="ds-title" style="color:#00c9a7">🚶 QUEUE — FIFO</div>
+        <div class="dqueue">${qH}</div>
+        <div class="ds-ctrl">
+          <input type="number" id="qi" placeholder="value" style="width:70px">
+          <button class="btn-ac" onclick="doEnqueue()">Enqueue</button>
+          <button class="btn-sm" onclick="doDequeue()">Dequeue</button>
+        </div>
+        <div class="ds-msg" id="qmsg" style="color:#00c9a7"></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderBST(){
+  function buildTree(vals){
+    const nodes={};
+    vals.forEach(v=>{nodes[v]={v,l:null,r:null};});
+    let root=null;
+    function ins(r,v){
+      if(!r)return v;
+      if(v<r)nodes[r].l=ins(nodes[r].l,v);
+      else if(v>r)nodes[r].r=ins(nodes[r].r,v);
+      return r;
+    }
+    vals.forEach(v=>{root=ins(root,v);});
+    return{nodes,root};
+  }
+  function getPos(root,nodes,x,y,sp){
+    if(!root)return[];
+    const p=[{v:root,x,y}];
+    if(nodes[root].l)p.push(...getPos(nodes[root].l,nodes,x-sp,y+55,sp/2));
+    if(nodes[root].r)p.push(...getPos(nodes[root].r,nodes,x+sp,y+55,sp/2));
+    return p;
+  }
+  function getEdg(root,nodes,x,y,sp){
+    if(!root)return[];
+    const e=[];
+    if(nodes[root].l){e.push({x1:x,y1:y,x2:x-sp,y2:y+55});e.push(...getEdg(nodes[root].l,nodes,x-sp,y+55,sp/2));}
+    if(nodes[root].r){e.push({x1:x,y1:y,x2:x+sp,y2:y+55});e.push(...getEdg(nodes[root].r,nodes,x+sp,y+55,sp/2));}
+    return e;
+  }
+  function inorder(r,n){if(!r)return[];return[...inorder(n[r].l,n),r,...inorder(n[r].r,n)];}
+  const tree=buildTree(bstValues);
+  const pos=tree.root?getPos(tree.root,tree.nodes,200,30,90):[];
+  const edg=tree.root?getEdg(tree.root,tree.nodes,200,30,90):[];
+  const sorted=tree.root?inorder(tree.root,tree.nodes):[];
+  const svgE=edg.map(e=>`<line x1="${e.x1}" y1="${e.y1}" x2="${e.x2}" y2="${e.y2}" stroke="#44445a" stroke-width="1.5"/>`).join('');
+  const svgN=pos.map(p=>`<g><circle cx="${p.x}" cy="${p.y}" r="17" fill="#1e1e38" stroke="#00c9a7" stroke-width="1.5"/><text x="${p.x}" y="${p.y+5}" text-anchor="middle" fill="#00c9a7" font-size="12" font-family="monospace">${p.v}</text></g>`).join('');
+  return `<div class="dbox">
+    <p style="margin:0 0 .75rem">Insert values to build a BST. Inorder traversal always gives sorted output.</p>
+    <svg width="400" height="185" style="display:block;margin:0 auto;overflow:visible">${svgE}${svgN}</svg>
+    <div style="text-align:center;font-size:12px;color:#8888aa;margin:.5rem 0 .75rem">
+      Inorder (sorted): <span style="color:#00c9a7;font-family:monospace">[${sorted.join(', ')}]</span>
+    </div>
+    <div style="display:flex;gap:6px;justify-content:center">
+      <input type="number" id="bst-in" placeholder="value" style="width:80px">
+      <button class="btn-ac" onclick="doBSTInsert()">Insert</button>
+      <button class="btn-sm" onclick="resetBST()">↺ Reset</button>
+    </div>
+  </div>`;
+}
+
+function renderHashTable(){
+  const size=7;
+  const table=Array(size).fill(null);
+  hashKeys.forEach(k=>{
+    let h=k%size;
+    let tries=0;
+    while(table[h]!==null&&tries<size){h=(h+1)%size;tries++;}
+    if(table[h]===null)table[h]=k;
+  });
+  const cells=table.map((v,i)=>`<div style="border:1px solid ${v!==null?'#00c9a7':'#44445a'};border-radius:6px;padding:8px 4px;text-align:center;background:${v!==null?'#00c9a720':'transparent'}">
+    <div style="font-size:10px;color:#44445a">[${i}]</div>
+    <div style="font-size:14px;font-family:monospace;color:${v!==null?'#00c9a7':'#44445a'};font-weight:${v?600:400}">${v!==null?v:'—'}</div>
+  </div>`).join('');
+  return `<div class="dbox">
+    <p style="margin:0 0 .75rem">Hash function: h(x) = x mod 7 | Linear probing on collision</p>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:.75rem">${cells}</div>
+    <div style="font-size:12px;color:#8888aa;margin-bottom:.75rem">Keys: [${hashKeys.join(', ')}]</div>
+    <div style="display:flex;gap:6px">
+      <input type="number" id="hk" placeholder="key" style="width:80px">
+      <button class="btn-ac" onclick="doHashInsert()">Insert</button>
+      <button class="btn-sm" onclick="resetHash()">↺ Reset</button>
+    </div>
+  </div>`;
+}
+
+function renderMemory(){
+  let h='<h2 class="pgtitle">🧠 Memory Aids</h2>';
+  h+='<p style="color:#8888aa;font-size:13px;margin-bottom:1.25rem">Mnemonics, shortcuts and memory tricks for the June exam.</p>';
+  h+='<div class="mgrid">';
+  MEMORY.forEach(m=>{
+    h+=`<div class="mcard"><div class="mchead"><div class="mctitle" style="color:${m.color}">${esc(m.title)}</div><div class="mcsub">${esc(m.sub)}</div></div><pre class="mcbody">${esc(m.body)}</pre></div>`;
+  });
+  h+='</div>';
+  return h;
+}
+
+function renderScope(){
+  const star=n=>'★'.repeat(n)+'☆'.repeat(5-n);
+  const pc=['','#fd79a8','#e17055','#fdcb6e','#0984e3','#00c9a7'];
+  let h=`<h2 class="pgtitle">🎯 Exam Scope</h2>
+    <div class="ibox">
+      <div class="ibox-title">📋 June Exam Format</div>
+      <div class="ibox-grid">
+        <div>• Answer ANY <strong style="color:#e4e4f0">5 of 6</strong> questions</div>
+        <div>• Each question: <strong style="color:#e4e4f0">20 marks</strong></div>
+        <div>• Total: <strong style="color:#e4e4f0">100 marks</strong></div>
+        <div>• Duration: <strong style="color:#e4e4f0">3 hours</strong></div>
+        <div>• OO language: Java or Python</div>
+        <div>• No identical answers</div>
+      </div>
+    </div>
+    <div style="overflow-x:auto;margin-bottom:1.25rem"><table class="stable">
+      <thead><tr>
+        <th>Topic</th><th>Marks</th><th>Appears In</th><th>Priority</th><th>Key Tip</th>
+      </tr></thead><tbody>`;
+  SCOPE.forEach((row,i)=>{
+    h+=`<tr>
+      <td>${esc(row.t)}</td>
+      <td>${esc(row.m)}</td>
+      <td>${esc(row.p)}</td>
+      <td><span style="color:${pc[row.s]}">${star(row.s)}</span></td>
+      <td style="max-width:220px;font-size:11px">${esc(row.tip)}</td>
+    </tr>`;
+  });
+  h+=`</tbody></table></div>
+    <div class="ibox">
+      <div class="ibox-title" style="color:#fdcb6e">⚡ Top 5 Topics for June</div>`;
+  ['Factorial: trace + code + O(n) time vs O(n)/O(1) space comparison',
+   'Sorting: Bubble trace, Quick Sort pivot/partition, Heap Sort 2-phase process',
+   'Big-O: 3 code patterns (sequential=O(n), nested=O(n²), j*=k→O(n logn))',
+   'Data Structures: Stack push/pop (LIFO) + Circular Queue with (i+1)%cap (FIFO)',
+   'BST: insert rule, inorder=sorted always, 3 traversals; AVL balance factor + rotations'
+  ].forEach((t,i)=>{
+    h+=`<div style="display:flex;gap:10px;margin-bottom:8px"><span style="color:#fdcb6e;font-weight:700;flex-shrink:0">${i+1}.</span><span style="color:#8888aa;font-size:13px">${esc(t)}</span></div>`;
+  });
+  h+='</div>';
+  return h;
+}
+
+// ══════════════════════════════════════════════════════════════════════════
+// EVENT HANDLERS
+// ══════════════════════════════════════════════════════════════════════════
+function setNav(n){
+  nav=n; openAccs={};
+  renderSidebar(); renderMain();
+}
+function selPaper(id){
+  paper=id; renderSidebar(); renderMain();
+}
+function selTopic(id){
+  topic=id; openAccs={}; renderSidebar(); renderMain();
+}
+function selDiagram(id){
+  diagram=id; renderSidebar();
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+  document.querySelectorAll('.dtab').forEach(b=>{
+    b.classList.toggle('on',b.textContent.includes({bigo:'Big-O',bubble:'Bubble',stackq:'Stack',bst:'BST',hash:'Hash'}[id]||''));
+  });
+}
+
+function toggleAns(aid,bid,pid,qn){
+  const el=document.getElementById(aid);
+  const btn=document.getElementById(bid);
+  const isOpen=el.classList.contains('open');
+  el.classList.toggle('open',!isOpen);
+  btn.textContent=isOpen?'🐧 Show Solution':'🔼 Hide Solution';
+  btn.style.background=isOpen?'#00c9a7':'#44445a';
+  btn.style.color=isOpen?'#000':'#e4e4f0';
+  if(!isOpen&&pid&&qn){
+    const vk=pid+'-'+qn;
+    if(VIZ_CFG[vk]){
+      initViz(vk);
+      const vel=document.getElementById('iviz-'+vk);
+      if(vel) vel.innerHTML=renderVizPanel(vk);
+    }
+  }
+}
+function toggleAcc(aid){
+  openAccs[aid]=!openAccs[aid];
+  const el=document.getElementById(aid);
+  const arr=document.getElementById('arr-'+aid);
+  if(el){el.classList.toggle('open',openAccs[aid]);}
+  if(arr){arr.textContent=openAccs[aid]?'▲':'▼';}
+}
+function markQ(btn,type){
+  const row=btn.parentElement;
+  row.querySelectorAll('.mbtn').forEach(b=>{b.classList.remove('got','nope');});
+  btn.classList.add(type==='got'?'got':'nope');
+}
+
+// Big-O
+function setBON(n){window._bon=n;document.getElementById('diag-area').innerHTML=renderDiagramContent();}
+window._bon=100;
+
+// Bubble Sort
+function nextBubble(){
+  if(sortDone)return;
+  const a=[...sortArr];
+  if(a[sortJ]>a[sortJ+1]){[a[sortJ],a[sortJ+1]]=[a[sortJ+1],a[sortJ]];}
+  let ni=sortI, nj=sortJ+1;
+  if(nj>=a.length-1-ni){nj=0;ni++;}
+  if(ni>=a.length-1)sortDone=true;
+  sortArr=a; sortI=ni; sortJ=nj; sortStep++;
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function resetBubble(){
+  sortArr=[64,34,25,12,22,11,90]; sortI=0; sortJ=0; sortDone=false; sortStep=0;
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+
+// Stack & Queue
+function doPush(){
+  const v=parseInt(document.getElementById('si').value);
+  if(!isNaN(v)){stackItems.push(v);document.getElementById('smsg').textContent='Pushed '+v+' (LIFO)';}
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function doPop(){
+  if(!stackItems.length){document.getElementById('smsg').textContent='Stack empty!';return;}
+  const v=stackItems.pop();
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+  setTimeout(()=>{const el=document.getElementById('smsg');if(el)el.textContent='Popped '+v;},10);
+}
+function doEnqueue(){
+  const v=parseInt(document.getElementById('qi').value);
+  if(!isNaN(v)){queueItems.push(v);document.getElementById('qmsg').textContent='Enqueued '+v+' (FIFO)';}
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function doDequeue(){
+  if(!queueItems.length){document.getElementById('qmsg').textContent='Queue empty!';return;}
+  const v=queueItems.shift();
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+  setTimeout(()=>{const el=document.getElementById('qmsg');if(el)el.textContent='Dequeued '+v;},10);
+}
+
+// BST
+function doBSTInsert(){
+  const v=parseInt(document.getElementById('bst-in').value);
+  if(!isNaN(v)&&!bstValues.includes(v)){bstValues=[...bstValues,v];}
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function resetBST(){
+  bstValues=[10,5,15,3,7,12,18];
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+
+// Hash Table
+function doHashInsert(){
+  const v=parseInt(document.getElementById('hk').value);
+  if(!isNaN(v)&&!hashKeys.includes(v)){hashKeys=[...hashKeys,v];}
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+function resetHash(){
+  hashKeys=[50,700,76,85,92,73,101];
+  document.getElementById('diag-area').innerHTML=renderDiagramContent();
+}
+
+// ══════════════════════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════════════
+// INLINE STEP-BY-STEP DIAGRAM SYSTEM
+// ═══════════════════════════════════════════════════════════════════════
+
+const VIZ={};
+
+// Which questions get which diagrams
+const VIZ_CFG={
+  'pred26-3':  {type:'heap', arr:[12,4,7,1,9,3,8,6]},
+  'pred26-6':  {type:'bst',  arr:[20,10,30,5,15,25,35,12,18]},
+  'asgn24-1':  {type:'heap', arr:[8,1,9,0,5,3,1,2,7,6]},
+  'asgn24-3':  {type:'bst',  arr:[6,9,3,5,10,7,9,2,4]},
+  'asgn24-4':  {type:'qs',   arr:[6,9,3,5,10,7,9,2,4]},
+  'jun23-3':   {type:'qs',   arr:[90,23,5,109,12,22,67,34]},
+  'jun23-4':   {type:'heap', arr:[90,23,5,109,12,22,67,34]},
+  'apr25-3':   {type:'heap', arr:[90,23,5,109,12]},
+  'mar24-2':   {type:'heap', arr:[7,5,15,20,16,17,8,3]},
+  'mid21-1':   {type:'ins',  arr:[8,5,11,7,2,9,4]},
+  'mid21-3':   {type:'bst',  arr:[10,5,15,16,17,18,19,20]},
+  'asgn23-2':  {type:'bub',  arr:[8,3,6,3,1,5]},
+  'asgn23-3':  {type:'qs',   arr:[8,3,6,3,1,5,2,9,7]},
+  'asgn23-4':  {type:'heap', arr:[8,3,6,3,1,5,2,9,7]},
+  'test21-1':  {type:'bst',  arr:[10,5,15,3,7,12,18]},
+};
+
+// ── TREE SVG RENDERER ────────────────────────────────────────────────────
+function treePosSVG(n, rootX, rootY, spread) {
+  const pos={};
+  function calc(i,x,y,sp){
+    if(i>=n) return;
+    pos[i]={x,y};
+    if(2*i+1<n) calc(2*i+1, x-sp, y+54, Math.max(sp/2,18));
+    if(2*i+2<n) calc(2*i+2, x+sp, y+54, Math.max(sp/2,18));
+  }
+  calc(0,rootX,rootY,spread);
+  return pos;
+}
+
+function drawArrTree(arr, opts={}){
+  const {swapA=-1,swapB=-1,sortedFrom=arr.length,highlight=-1,w=440,h=200}=opts;
+  const n=arr.length;
+  if(!n) return '<svg viewBox="0 0 440 60"><text x="220" y="30" text-anchor="middle" fill="#44445a">Empty</text></svg>';
+  const spread=Math.min(w/4, w/(Math.pow(2,Math.ceil(Math.log2(n+1)))));
+  const pos=treePosSVG(n, w/2, 28, Math.max(spread,40));
+  let s=`<svg viewBox="0 0 ${w} ${h}" style="width:100%;display:block">`;
+  // Edges
+  for(let i=0;i<n;i++){
+    if(!pos[i]) continue;
+    [2*i+1,2*i+2].forEach(c=>{
+      if(c<n&&pos[c])
+        s+=`<line x1="${pos[i].x.toFixed(1)}" y1="${pos[i].y}" x2="${pos[c].x.toFixed(1)}" y2="${pos[c].y}" stroke="#44445a" stroke-width="1.5"/>`;
+    });
+  }
+  // Nodes
+  for(let i=0;i<n;i++){
+    if(!pos[i]) continue;
+    const {x,y}=pos[i];
+    const isSorted=sortedFrom<=i;
+    const isSwap=i===swapA||i===swapB;
+    const isHL=i===highlight;
+    const isRoot=i===0&&!isSorted&&sortedFrom>0;
+    const stroke=isSorted?'#00c9a7':isSwap?'#fd79a8':isHL?'#fdcb6e':isRoot?'#a29bfe':'#44445a';
+    const fill=isSorted?'#00c9a718':isSwap?'#fd79a818':isHL?'#fdcb6e18':isRoot?'#a29bfe18':'#1a1a32';
+    const tc=isSorted?'#00c9a7':isSwap?'#fd79a8':isHL?'#fdcb6e':isRoot?'#a29bfe':'#8888aa';
+    const sw=isSwap?2.5:1.5;
+    s+=`<circle cx="${x.toFixed(1)}" cy="${y}" r="18" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`;
+    s+=`<text x="${x.toFixed(1)}" y="${y+5}" text-anchor="middle" fill="${tc}" font-size="13" font-family="monospace" font-weight="600">${arr[i]}</text>`;
+    s+=`<text x="${x.toFixed(1)}" y="${y+29}" text-anchor="middle" fill="#333355" font-size="9" font-family="monospace">[${i}]</text>`;
+  }
+  // Arrow for swaps
+  if(swapA>=0&&swapB>=0&&pos[swapA]&&pos[swapB]){
+    const ax=pos[swapA].x,ay=pos[swapA].y;
+    const bx=pos[swapB].x,by=pos[swapB].y;
+    const mx=(ax+bx)/2,my=(ay+by)/2-15;
+    s+=`<path d="M${ax.toFixed(1)},${ay-20} Q${mx.toFixed(1)},${my.toFixed(1)} ${bx.toFixed(1)},${by-20}" stroke="#fd79a8" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>`;
+    s+=`<defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#fd79a8"/></marker></defs>`;
+  }
+  s+='</svg>';
+  return s;
+}
+
+function drawBSTTreeSVG(nodes, root, highlightVal, w=440, h=220){
+  if(!root) return '';
+  // compute positions
+  function getPos(r,x,y,sp){
+    if(!r||!nodes[r]) return [];
+    const p=[{v:r,x,y}];
+    if(nodes[r].l) p.push(...getPos(nodes[r].l,x-sp,y+54,Math.max(sp/2,22)));
+    if(nodes[r].r) p.push(...getPos(nodes[r].r,x+sp,y+54,Math.max(sp/2,22)));
+    return p;
+  }
+  function getEdges(r,x,y,sp){
+    if(!r||!nodes[r]) return [];
+    const e=[];
+    if(nodes[r].l){e.push({x1:x,y1:y,x2:x-sp,y2:y+54});e.push(...getEdges(nodes[r].l,x-sp,y+54,Math.max(sp/2,22)));}
+    if(nodes[r].r){e.push({x1:x,y1:y,x2:x+sp,y2:y+54});e.push(...getEdges(nodes[r].r,x+sp,y+54,Math.max(sp/2,22)));}
+    return e;
+  }
+  const nodeCount=Object.keys(nodes).length;
+  const sp=Math.min(w/3.5, Math.max(40, w/Math.pow(2,Math.ceil(Math.log2(nodeCount+1)))));
+  const pos=getPos(root,w/2,28,sp);
+  const edges=getEdges(root,w/2,28,sp);
+  let s=`<svg viewBox="0 0 ${w} ${h}" style="width:100%;display:block">`;
+  edges.forEach(e=>{ s+=`<line x1="${e.x1.toFixed(1)}" y1="${e.y1}" x2="${e.x2.toFixed(1)}" y2="${e.y2}" stroke="#44445a" stroke-width="1.5"/>`; });
+  pos.forEach(p=>{
+    const isHL=p.v===highlightVal;
+    const isRoot=p.v===root;
+    const stroke=isHL?'#fdcb6e':isRoot?'#a29bfe':'#44445a';
+    const fill=isHL?'#fdcb6e18':isRoot?'#a29bfe18':'#1a1a32';
+    const tc=isHL?'#fdcb6e':isRoot?'#a29bfe':'#8888aa';
+    s+=`<circle cx="${p.x.toFixed(1)}" cy="${p.y}" r="18" fill="${fill}" stroke="${stroke}" stroke-width="${isHL?2.5:1.5}"/>`;
+    s+=`<text x="${p.x.toFixed(1)}" y="${p.y+5}" text-anchor="middle" fill="${tc}" font-size="13" font-family="monospace" font-weight="600">${p.v}</text>`;
+  });
+  s+='</svg>';
+  return s;
+}
+
+// Draw QS partition as colored bar array
+function drawQSBars(arr, pivotIdx, iPtr, jPtr, swappedPair=[], doneIdx=[]){
+  const max=Math.max(...arr);
+  let s='<div style="display:flex;gap:4px;align-items:flex-end;height:90px;padding:0 .5rem;justify-content:center">';
+  arr.forEach((v,i)=>{
+    const ht=Math.max(10,Math.round((v/max)*72));
+    const isPivot=i===pivotIdx;
+    const isI=i===iPtr;
+    const isJ=i===jPtr;
+    const isDone=doneIdx.includes(i);
+    const isSwap=swappedPair.includes(i);
+    let bg=isDone?'#00c9a7':isPivot?'#fdcb6e':isSwap?'#fd79a8':isI?'#0984e3':isJ?'#a29bfe':'#44445a';
+    let tc=isDone?'#00c9a7':isPivot?'#fdcb6e':isSwap?'#fd79a8':isI?'#0984e3':isJ?'#a29bfe':'#8888aa';
+    s+=`<div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+      <span style="font-size:11px;font-family:monospace;color:${tc}">${v}</span>
+      <div style="width:30px;height:${ht}px;background:${bg};border-radius:3px 3px 0 0"></div>
+      <span style="font-size:9px;color:#333355">[${i}]${isPivot?'↑P':isI?'↑i':isJ?'↑j':''}</span>
+    </div>`;
+  });
+  s+='</div>';
+  return s;
+}
+
+// Draw insertion sort array
+function drawInsArr(arr, keyIdx, sortedTo){
+  const max=Math.max(...arr);
+  let s='<div style="display:flex;gap:4px;align-items:flex-end;height:90px;padding:0 .5rem;justify-content:center">';
+  arr.forEach((v,i)=>{
+    const ht=Math.max(10,Math.round((v/max)*72));
+    const isKey=i===keyIdx;
+    const isSorted=i<sortedTo&&!isKey;
+    let bg=isKey?'#a29bfe':isSorted?'#00c9a750':'#44445a';
+    let tc=isKey?'#a29bfe':isSorted?'#00c9a7':'#8888aa';
+    s+=`<div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+      <span style="font-size:11px;font-family:monospace;color:${tc}">${v}</span>
+      <div style="width:30px;height:${ht}px;background:${bg};border-radius:3px 3px 0 0"></div>
+      <span style="font-size:9px;color:#333355">[${i}]${isKey?'←key':''}</span>
+    </div>`;
+  });
+  s+='</div>';
+  return s;
+}
+
+// Draw bubble sort array
+function drawBubArr(arr, cmpA, cmpB, sortedFrom){
+  const max=Math.max(...arr);
+  let s='<div style="display:flex;gap:4px;align-items:flex-end;height:90px;padding:0 .5rem;justify-content:center">';
+  arr.forEach((v,i)=>{
+    const ht=Math.max(10,Math.round((v/max)*72));
+    const isCmp=i===cmpA||i===cmpB;
+    const isSorted=i>=sortedFrom;
+    let bg=isSorted?'#00c9a7':isCmp?'#fd79a8':'#44445a';
+    let tc=isSorted?'#00c9a7':isCmp?'#fd79a8':'#8888aa';
+    s+=`<div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+      <span style="font-size:11px;font-family:monospace;color:${tc}">${v}</span>
+      <div style="width:30px;height:${ht}px;background:${bg};border-radius:3px 3px 0 0"></div>
+      <span style="font-size:9px;color:#333355">[${i}]</span>
+    </div>`;
+  });
+  s+='</div>';
+  return s;
+}
+
+// ── STEP GENERATORS ───────────────────────────────────────────────────────
+function genHeapSteps(inputArr){
+  const steps=[];
+  const a=[...inputArr];
+  const n=a.length;
+  steps.push({arr:[...a],swapA:-1,swapB:-1,sorted:0,desc:`Initial array: [${a.join(', ')}] → Represent as binary tree`});
+
+  function heapify(arr,sz,i){
+    let lg=i,l=2*i+1,r=2*i+2;
+    if(l<sz&&arr[l]>arr[lg]) lg=l;
+    if(r<sz&&arr[r]>arr[lg]) lg=r;
+    if(lg!==i){
+      steps.push({arr:[...arr],swapA:i,swapB:lg,sorted:n-sz,
+        desc:`Heapify [${i}]=${arr[i]}: ${arr[lg]}>${arr[i]} → SWAP [${i}]↔[${lg}]`});
+      [arr[i],arr[lg]]=[arr[lg],arr[i]];
+      steps.push({arr:[...arr],swapA:-1,swapB:-1,sorted:n-sz,
+        desc:`After swap: [${arr.join(', ')}]`});
+      heapify(arr,sz,lg);
+    } else {
+      steps.push({arr:[...arr],swapA:i,swapB:-1,sorted:n-sz,
+        desc:`Heapify [${i}]=${arr[i]}: already ≥ children (${arr[l]||'—'},${arr[r]||'—'}) → no swap`});
+    }
+  }
+
+  steps.push({arr:[...a],swapA:-1,swapB:-1,sorted:0,desc:'━━ PHASE 1: Build Max-Heap (heapify from last non-leaf → root) ━━'});
+  for(let i=Math.floor(n/2)-1;i>=0;i--) heapify(a,n,i);
+  steps.push({arr:[...a],swapA:0,swapB:-1,sorted:0,
+    desc:`✓ Max-Heap complete! Root = ${a[0]} (maximum). [${a.join(', ')}]`});
+
+  steps.push({arr:[...a],swapA:-1,swapB:-1,sorted:0,desc:'━━ PHASE 2: Extract max to sorted end, re-heapify ━━'});
+  for(let i=n-1;i>0;i--){
+    steps.push({arr:[...a],swapA:0,swapB:i,sorted:n-i,
+      desc:`Extract max ${a[0]}: swap root [0]↔[${i}], then shrink heap`});
+    [a[0],a[i]]=[a[i],a[0]];
+    steps.push({arr:[...a],swapA:-1,swapB:-1,sorted:n-i,
+      desc:`Heap: [${a.slice(0,i).join(',')}] | Sorted: [${a.slice(i).join(',')}]`});
+    heapify(a,i,0);
+  }
+  steps.push({arr:[...a],swapA:-1,swapB:-1,sorted:n,
+    desc:`✓ SORTED! [${a.join(', ')}]`});
+  return steps;
+}
+
+function genBSTSteps(values){
+  const steps=[];
+  const nodes={};
+  let root=null;
+  function ins(r,v){
+    if(!r){nodes[v]={v,l:null,r:null};return v;}
+    if(v<r) nodes[r].l=ins(nodes[r].l,v);
+    else    nodes[r].r=ins(nodes[r].r,v);
+    return r;
+  }
+  function inorder(r){
+    if(!r||!nodes[r]) return [];
+    return [...inorder(nodes[r].l),r,...inorder(nodes[r].r)];
+  }
+  function cloneTree(){
+    const cn={};
+    Object.keys(nodes).forEach(k=>{cn[k]={...nodes[k]};});
+    return{nodes:cn,root};
+  }
+  for(const v of values){
+    root=ins(root,v);
+    const sorted=inorder(root);
+    steps.push({tree:cloneTree(),highlight:v,
+      desc:`Insert ${v} → BST rule: ${v<root?'< root go left':'> root go right'} | Inorder so far: [${sorted.join(', ')}]`});
+  }
+  steps.push({tree:cloneTree(),highlight:-1,
+    desc:`✓ BST complete! Inorder = [${inorder(root).join(', ')}] (SORTED!)`});
+  return steps;
+}
+
+function genQSSteps(inputArr){
+  const steps=[];
+  const a=[...inputArr];
+  const n=a.length;
+  const placed=[];
+  steps.push({arr:[...a],pivot:n-1,i:-2,j:-1,swapped:[],done:[...placed],
+    desc:`Initial: [${a.join(', ')}] — pivot = ${a[n-1]} (last element, index ${n-1})`});
+
+  function partition(arr,lo,hi){
+    const pivot=arr[hi];
+    steps.push({arr:[...arr],pivot:hi,i:lo-1,j:lo,swapped:[],done:[...placed],
+      desc:`Partition [${arr.slice(lo,hi+1).join(',')}] — pivot=${pivot} at [${hi}]`});
+    let ii=lo-1;
+    for(let jj=lo;jj<hi;jj++){
+      if(arr[jj]<=pivot){
+        ii++;
+        if(ii!==jj){
+          steps.push({arr:[...arr],pivot:hi,i:ii,j:jj,swapped:[ii,jj],done:[...placed],
+            desc:`j=${jj}: ${arr[jj]} ≤ ${pivot} → i=${ii}, SWAP [${ii}]=${arr[ii]} ↔ [${jj}]=${arr[jj]}`});
+          [arr[ii],arr[jj]]=[arr[jj],arr[ii]];
+          steps.push({arr:[...arr],pivot:hi,i:ii,j:jj,swapped:[],done:[...placed],
+            desc:`After swap: [${arr.join(', ')}]`});
+        } else {
+          steps.push({arr:[...arr],pivot:hi,i:ii,j:jj,swapped:[],done:[...placed],
+            desc:`j=${jj}: ${arr[jj]} ≤ ${pivot} → i=${ii} (no swap needed, same position)`});
+        }
+      } else {
+        steps.push({arr:[...arr],pivot:hi,i:ii,j:jj,swapped:[],done:[...placed],
+          desc:`j=${jj}: ${arr[jj]} > ${pivot} → skip`});
+      }
+    }
+    steps.push({arr:[...arr],pivot:hi,i:ii,j:hi,swapped:[ii+1,hi],done:[...placed],
+      desc:`Place pivot ${pivot}: swap [${ii+1}]=${arr[ii+1]} ↔ [${hi}]=${arr[hi]}`});
+    [arr[ii+1],arr[hi]]=[arr[hi],arr[ii+1]];
+    const pi=ii+1;
+    placed.push(pi+lo);
+    steps.push({arr:[...arr],pivot:pi,i:-2,j:-1,swapped:[],done:[...placed],
+      desc:`✓ Pivot ${arr[pi]} at [${pi}] — FINAL POSITION! Left:[${arr.slice(lo,pi).join(',')}] Right:[${arr.slice(pi+1,hi+1).join(',')}]`});
+    return pi;
+  }
+
+  function qs(arr,lo,hi){
+    if(lo>=hi){if(lo===hi){placed.push(lo);steps.push({arr:[...arr],pivot:lo,i:-2,j:-1,swapped:[],done:[...placed],desc:`Single element [${arr[lo]}] at [${lo}] — already in place ✓`});}return;}
+    const pi=partition(arr,lo,hi);
+    qs(arr,lo,pi-1);
+    qs(arr,pi+1,hi);
+  }
+  qs(a,0,n-1);
+  steps.push({arr:[...a],pivot:-1,i:-2,j:-1,swapped:[],done:a.map((_,i)=>i),
+    desc:`✓ SORTED! [${a.join(', ')}]`});
+  return steps;
+}
+
+function genInsSteps(inputArr){
+  const steps=[];
+  const a=[...inputArr];
+  steps.push({arr:[...a],key:null,keyIdx:-1,sortedTo:1,desc:`Initial: [${a.join(', ')}] — first element [${a[0]}] is trivially sorted`});
+  for(let i=1;i<a.length;i++){
+    const key=a[i];
+    steps.push({arr:[...a],key,keyIdx:i,sortedTo:i,desc:`Pick key = ${key} (index ${i}) — find correct position in sorted portion [${a.slice(0,i).join(',')}]`});
+    let j=i-1;
+    while(j>=0&&a[j]>key){
+      a[j+1]=a[j];
+      steps.push({arr:[...a],key,keyIdx:j+1,sortedTo:i,desc:`${a[j+1]}>${key} → shift [${j+1}]=${a[j]} right`});
+      j--;
+    }
+    a[j+1]=key;
+    steps.push({arr:[...a],key:null,keyIdx:-1,sortedTo:i+1,desc:`Insert ${key} at [${j+1}] — sorted portion: [${a.slice(0,i+1).join(',')}]`});
+  }
+  steps.push({arr:[...a],key:null,keyIdx:-1,sortedTo:a.length,desc:`✓ SORTED! [${a.join(', ')}]`});
+  return steps;
+}
+
+function genBubSteps(inputArr){
+  const steps=[];
+  const a=[...inputArr];
+  const n=a.length;
+  let sortedFrom=n;
+  steps.push({arr:[...a],cmpA:-1,cmpB:-1,sortedFrom,desc:`Initial: [${a.join(', ')}]`});
+  for(let i=0;i<n-1;i++){
+    sortedFrom=n-i;
+    steps.push({arr:[...a],cmpA:-1,cmpB:-1,sortedFrom,desc:`Pass ${i+1} — scan and bubble largest to position [${n-1-i}]`});
+    for(let j=0;j<n-1-i;j++){
+      if(a[j]>a[j+1]){
+        steps.push({arr:[...a],cmpA:j,cmpB:j+1,sortedFrom,desc:`Compare ${a[j]}>${a[j+1]} → SWAP [${j}]↔[${j+1}]`});
+        [a[j],a[j+1]]=[a[j+1],a[j]];
+        steps.push({arr:[...a],cmpA:j,cmpB:j+1,sortedFrom,desc:`After swap: [${a.join(', ')}]`});
+      } else {
+        steps.push({arr:[...a],cmpA:j,cmpB:j+1,sortedFrom,desc:`Compare ${a[j]} ≤ ${a[j+1]} → no swap`});
+      }
+    }
+    steps.push({arr:[...a],cmpA:-1,cmpB:-1,sortedFrom:n-i-1,desc:`End of Pass ${i+1}: ${a[n-1-i]} placed ✓`});
+  }
+  steps.push({arr:[...a],cmpA:-1,cmpB:-1,sortedFrom:0,desc:`✓ SORTED! [${a.join(', ')}]`});
+  return steps;
+}
+
+// ── INIT VIZ STATE ─────────────────────────────────────────────────────────
+function initViz(vizKey){
+  if(VIZ[vizKey]) return;
+  const cfg=VIZ_CFG[vizKey];
+  if(!cfg) return;
+  let steps=[];
+  if(cfg.type==='heap') steps=genHeapSteps(cfg.arr);
+  else if(cfg.type==='bst')  steps=genBSTSteps(cfg.arr);
+  else if(cfg.type==='qs')   steps=genQSSteps(cfg.arr);
+  else if(cfg.type==='ins')  steps=genInsSteps(cfg.arr);
+  else if(cfg.type==='bub')  steps=genBubSteps(cfg.arr);
+  VIZ[vizKey]={type:cfg.type,steps,cur:0};
+}
+
+// ── RENDER INLINE VIZ PANEL ───────────────────────────────────────────────
+function renderVizPanel(vizKey){
+  const vs=VIZ[vizKey];
+  if(!vs||!vs.steps.length) return '';
+  const st=vs.steps[vs.cur];
+  const total=vs.steps.length;
+  const cur=vs.cur+1;
+  const pct=Math.round((vs.cur/(total-1))*100)||0;
+  let diagram='';
+
+  if(vs.type==='heap'){
+    const sortedFrom=st.arr.length-st.sorted;
+    diagram=drawArrTree(st.arr,{swapA:st.swapA,swapB:st.swapB,sortedFrom,w:440,h:200});
+  } else if(vs.type==='bst'){
+    diagram=drawBSTTreeSVG(st.tree.nodes,st.tree.root,st.highlight,440,220);
+  } else if(vs.type==='qs'){
+    diagram=drawQSBars(st.arr,st.pivot,st.i,st.j,st.swapped,st.done);
+  } else if(vs.type==='ins'){
+    diagram=drawInsArr(st.arr,st.keyIdx,st.sortedTo);
+  } else if(vs.type==='bub'){
+    diagram=drawBubArr(st.arr,st.cmpA,st.cmpB,st.sortedFrom);
+  }
+
+  const labels={heap:'🏔️ Heap Sort',bst:'🌳 BST',qs:'⚡ Quick Sort',ins:'🃏 Insertion Sort',bub:'🫧 Bubble Sort'};
+  const colours={heap:'#fdcb6e',bst:'#00c9a7',qs:'#a29bfe',ins:'#0984e3',bub:'#e17055'};
+  const col=colours[vs.type]||'#00c9a7';
+
+  return `<div style="background:#08080f;border:1px solid #252545;border-radius:10px;padding:1rem;margin-top:1.25rem">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;flex-wrap:wrap;gap:6px">
+      <div style="font-size:13px;font-weight:700;color:${col}">${labels[vs.type]||'Diagram'} — Step-by-Step</div>
+      <div style="font-size:11px;color:#44445a">${cur} / ${total}</div>
+    </div>
+    <div style="height:4px;background:#252545;border-radius:2px;margin-bottom:1rem;overflow:hidden">
+      <div style="height:4px;background:${col};border-radius:2px;width:${pct}%;transition:width .3s"></div>
+    </div>
+    ${diagram}
+    <div style="padding:.65rem .85rem;background:#111126;border:1px solid #252545;border-radius:6px;font-size:12px;color:${col};font-family:monospace;margin:.75rem 0;min-height:28px;line-height:1.5">${esc(st.desc)}</div>
+    <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+      <button class="btn-sm" onclick="vizNav('${vizKey}','first')" ${vs.cur===0?'disabled':''} style="${vs.cur===0?'opacity:.3':''}">⏮</button>
+      <button class="btn-sm" onclick="vizNav('${vizKey}','prev')" ${vs.cur===0?'disabled':''} style="${vs.cur===0?'opacity:.3':''}">← Prev</button>
+      <button class="btn-sm" onclick="vizNav('${vizKey}','next')" ${vs.cur>=total-1?'disabled':''} style="${vs.cur>=total-1?'opacity:.3':''}">Next →</button>
+      <button class="btn-sm" onclick="vizNav('${vizKey}','last')" ${vs.cur>=total-1?'disabled':''} style="${vs.cur>=total-1?'opacity:.3':''}">⏭</button>
+      <div style="flex:1;display:flex;gap:2px;align-items:center;min-width:80px">
+        ${Array.from({length:Math.min(total,30)},(_,i)=>`<div onclick="vizJump('${vizKey}',${i})" style="flex:1;height:6px;border-radius:2px;cursor:pointer;background:${i===vs.cur?col:i<vs.cur?col+'60':'#252545'};transition:.2s" title="Step ${i+1}"></div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+function vizNav(vizKey, dir){
+  const vs=VIZ[vizKey];
+  if(!vs) return;
+  const n=vs.steps.length;
+  if(dir==='first') vs.cur=0;
+  else if(dir==='last') vs.cur=n-1;
+  else if(dir==='next') vs.cur=Math.min(n-1,vs.cur+1);
+  else if(dir==='prev') vs.cur=Math.max(0,vs.cur-1);
+  const el=document.getElementById('iviz-'+vizKey);
+  if(el) el.innerHTML=renderVizPanel(vizKey);
+}
+function vizJump(vizKey,idx){
+  const vs=VIZ[vizKey];
+  if(!vs) return;
+  vs.cur=Math.max(0,Math.min(vs.steps.length-1,idx));
+  const el=document.getElementById('iviz-'+vizKey);
+  if(el) el.innerHTML=renderVizPanel(vizKey);
+}
+
+renderSidebar();
+renderMain();
+</script>
+</body></html>
