@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Academic Ledger — 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1B2A4A;
+    --ink-soft: #445068;
+    --parchment: #F6F2E8;
+    --surface: #FFFFFF;
+    --rule: #DCD3BE;
+    --gold: #B8912F;
+    --gold-soft: #E9DBAE;
+    --green: #2F6F4E;
+    --green-soft: #DCEBE2;
+    --red: #B23A2F;
+    --red-soft: #F5DEDA;
+    --muted: #8A8371;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    padding: 32px 20px 60px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+
+  header.masthead {
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+  }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 4px 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .control-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  .control-bar label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .control-bar input[type="number"] {
+    width: 70px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 8px;
+    border: 1.5px solid var(--rule);
+    border-radius: 3px;
+    color: var(--ink);
+    background: var(--parchment);
+  }
+  .control-bar .hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .save-flag {
+    font-size: 11px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--green);
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  .save-flag.show { opacity: 1; }
+
+  /* Overall status band */
+  .status-band {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+  .status-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .status-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+  }
+  .status-card.ok::before { background: var(--green); }
+  .status-card.risk::before { background: var(--red); }
+  .status-card.neutral::before { background: var(--gold); }
+  .status-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .status-value {
+    font-family: 'Source Serif 4', serif;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .status-detail {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  /* Subject ledger rows */
+  .ledger-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px 2px;
+  }
+  .subject {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .subject-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 18px 10px;
+    border-bottom: 1px solid var(--rule);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .subject-code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+  .subject-name {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  .subject-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+  .badge-achieved { background: var(--green-soft); color: var(--green); }
+  .badge-ontrack { background: var(--gold-soft); color: #8a6d1f; }
+  .badge-risk { background: var(--red-soft); color: var(--red); }
+
+  .bar-track {
+    position: relative;
+    height: 34px;
+    margin: 14px 18px 4px;
+    background: repeating-linear-gradient(
+      to right, #EFE9D8 0, #EFE9D8 1px, transparent 1px, transparent 100%
+    );
+    border-radius: 3px;
+    display: flex;
+    overflow: visible;
+    border: 1px solid var(--rule);
+  }
+  .bar-seg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.5);
+  }
+  .bar-seg:last-child { border-right: none; }
+  .bar-seg.actual { background: var(--ink); }
+  .bar-seg.assumed { background: #B7BFCF; color: var(--ink); }
+  .bar-seg.empty-slot { background: transparent; color: var(--muted); }
+
+  .threshold-line {
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    width: 0;
+    border-left: 2px dashed var(--gold);
+  }
+  .threshold-label {
+    position: absolute;
+    top: -20px;
+    transform: translateX(-50%);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    color: var(--gold);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .assessment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 18px;
+  }
+  .assess-cell {
+    background: var(--parchment);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 8px 10px;
+  }
+  .assess-cell label {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    letter-spacing: 0.04em;
+  }
+  .assess-cell .weight-tag {
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .assess-cell input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 0;
+  }
+  .assess-cell input::placeholder { color: #B9B2A0; font-weight: 500; }
+  .assess-cell input:focus { outline: none; }
+  .assess-cell.has-value { border-color: var(--ink); }
+
+  .subject-foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 18px 16px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .subject-foot b { color: var(--ink); }
+  .note {
+    font-size: 11.5px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 0 18px 14px;
+  }
+
+  .insight {
+    margin: 0 18px 18px;
+    padding: 14px 16px;
+    background: var(--parchment);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+  }
+  .insight-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .insight-motivation {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: 'Source Serif 4', serif;
+  }
+  .insight-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .insight-topics li {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .insight-topics li::before {
+    content: '\2014';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  footer {
+    margin-top: 28px;
+    font-size: 11.5px;
+    color: var(--muted);
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 600px) {
+    .status-band { grid-template-columns: 1fr; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Advanced Diploma · ICT Applications Development · 2026</div>
+    <h1>Academic Ledger</h1>
+    <div class="sub">Thabiso Patrick Matsaba — 220296006 — live distinction tracker</div>
+  </header>
+
+  <div class="control-bar">
+    <label for="assumeInput">Assume this mark (%) for every blank slot:</label>
+    <input type="number" id="assumeInput" min="0" max="100" value="75">
+    <span class="hint">Edit any actual mark below to override the assumption for that slot.</span>
+    <span class="save-flag" id="saveFlag">saved</span>
+  </div>
+
+  <div class="status-band" id="statusBand"></div>
+
+  <div class="ledger-title">Subject Ledger</div>
+  <div id="subjects"></div>
+
+  <footer>Distinction threshold: 75% per subject · Cum Laude: 75%+ overall · Summa Cum Laude: 75%+ in every subject, first attempt</footer>
+</div>
+
+<script>
+const THRESHOLD = 75;
+const STORAGE_KEY = 'ledger-2026-marks';
+
+const subjectDefs = [
+  {
+    code: 'APT470S',
+    name: 'Application Development Theory',
+    assessments: [
+      { label: 'AN1', weight: 10, mark: 85 },
+      { label: 'AN2', weight: 30, mark: null },
+      { label: 'AN3', weight: 30, mark: null },
+      { label: 'AN4', weight: 30, mark: null },
+    ],
+    motivation: 'Prescribed texts are Sommerville and Pressman \u2014 this subject formalises the software engineering judgement you\u2019ve already been applying at Liquid C2. Terms 3\u20134 carry 60% of the year\u2019s weight, so this is where the mark is actually won.',
+    topics: [
+      'Term 3 \u2014 Quality Management: quality concepts, review techniques, software quality assurance, testing strategies (traditional, OO, web app, mobile app)',
+      'Term 4 \u2014 Security, Dependability & Trends: security engineering, software configuration management, project management (planning, risk, process improvement), emerging trends',
+    ],
+  },
+  {
+    code: 'PRJ470S',
+    name: 'Projects 4',
+    assessments: [
+      { label: 'AN1', weight: 10, mark: 78 },
+      { label: 'AN2', weight: 30, mark: null },
+      { label: 'AN3', weight: 20, mark: null },
+      { label: 'AN4', weight: 40, mark: null },
+    ],
+    note: 'Official subject guide lists a 5-part breakdown (10/30/10/40/10) — differs slightly from the transcript structure used here. Confirm with your lecturer.',
+    motivation: 'This is your TOE-framework SME research project carried to completion. Strong papers get shortlisted for the department\u2019s in-house publication \u2014 a tangible outcome beyond the mark itself.',
+    topics: [
+      'Theme 3 \u2014 Oral & poster presentation of the research project (Assessment 3 & 4). Due 10 Oct 2026, Project Week',
+      'Theme 4 \u2014 Full research report + supporting data (Assessment 5). Due 17 Oct 2026, one week after Project Week',
+    ],
+  },
+  {
+    code: 'RME478S',
+    name: 'Research Methodology',
+    assessments: [
+      { label: 'AN1', weight: 10, mark: 73 },
+      { label: 'AN2', weight: 30, mark: 74 },
+      { label: 'AN3', weight: 30, mark: null },
+      { label: 'AN4', weight: 30, mark: null },
+    ],
+    note: 'Official subject guide lists a different structure (30% Jun / 35% Sep / 35% Nov, 3 assessments) — differs from the transcript structure used here. Confirm with your lecturer.',
+    motivation: 'This is the methodological engine behind PRJ470S \u2014 the analysis skills covered here are what turn your SME research into a defensible, examiner-proof report.',
+    topics: [
+      'Term 3 \u2014 Data Analysis: data collection design (qual & quant), sampling, data ethics, descriptive & inferential stats, qualitative analysis, interpreting findings',
+      'Term 4 \u2014 Significance & Contribution: delineation of the research, expected outcomes, conclusions and recommendations',
+    ],
+  },
+  {
+    code: 'ADP470S',
+    name: 'Applications Development Practice 4',
+    assessments: [
+      { label: 'T1', weight: 10, mark: null },
+      { label: 'T2', weight: 35, mark: null },
+      { label: 'T3', weight: 20, mark: null },
+      { label: 'T4', weight: 35, mark: null },
+    ],
+    motivation: 'A blank slate worth 100% of the year \u2014 no banked mark pulling you either way. Your cloud/Kubernetes background gives you a real edge here: time/space complexity is the same muscle as resource optimisation.',
+    topics: [
+      'Term 3 \u2014 Graphs: representation, traversal algorithms, shortest path (Prim\u2019s, Kruskal\u2019s, Dijkstra\u2019s, Floyd), disjoint sets, hashing',
+      'Term 4 \u2014 Applied Structures: GPS & bitmap image data structures, parity bit / CRC coding, review and final assessment',
+    ],
+  },
+  {
+    code: 'PFD473S',
+    name: 'Professional Development',
+    assessments: [
+      { label: 'T1', weight: 10, mark: null },
+      { label: 'T2', weight: 35, mark: null },
+      { label: 'T3', weight: 20, mark: null },
+      { label: 'T4', weight: 35, mark: null },
+    ],
+    motivation: 'The most directly transferable subject to your actual career \u2014 estimation, risk management, and governance are exactly what you\u2019ll do day-to-day as a cloud/DevOps engineer. Lived experience compounds the marks here.',
+    topics: [
+      'Later outcomes (guide doesn\u2019t map these to specific terms): rationale management, risk management, software project management plan, software estimation (COCOMO, Function Points)',
+      'Quality, human capital & governance: ISO & Capability Maturity Model, project audits, purchasing concepts, PMBOK review, change management, governance & compliance, professional practice',
+    ],
+  },
+];
+
+let state = {
+  assume: 75,
+  marks: {}, // key: "CODE-label" -> number
+};
+
+function keyFor(code, label) { return code + '-' + label; }
+
+async function loadState() {
+  try {
+    const res = await window.storage.get(STORAGE_KEY, false);
+    if (res && res.value) {
+      const parsed = JSON.parse(res.value);
+      state = Object.assign(state, parsed);
+    }
+  } catch (e) {
+    // no saved state yet, use defaults
+  }
+  document.getElementById('assumeInput').value = state.assume;
+  render();
+}
+
+let saveTimeout = null;
+function persist() {
+  clearTimeout(saveTimeout);
+  saveTimeout = setTimeout(async () => {
+    try {
+      await window.storage.set(STORAGE_KEY, JSON.stringify(state), false);
+      const flag = document.getElementById('saveFlag');
+      flag.classList.add('show');
+      setTimeout(() => flag.classList.remove('show'), 1200);
+    } catch (e) { /* storage unavailable, continue silently */ }
+  }, 300);
+}
+
+function getMark(code, def) {
+  const k = keyFor(code, def.label);
+  if (state.marks.hasOwnProperty(k) && state.marks[k] !== null && state.marks[k] !== '') {
+    return { value: Number(state.marks[k]), isActual: true };
+  }
+  if (def.mark !== null) {
+    return { value: def.mark, isActual: true };
+  }
+  return { value: state.assume, isActual: false };
+}
+
+function computeSubject(subj) {
+  let total = 0;
+  let filledWeight = 0;
+  let remainingWeight = 0;
+  let bankedPoints = 0;
+  subj.assessments.forEach(a => {
+    const m = getMark(subj.code, a);
+    total += (m.value * a.weight) / 100;
+    if (m.isActual) {
+      filledWeight += a.weight;
+      bankedPoints += (m.value * a.weight) / 100;
+    } else {
+      remainingWeight += a.weight;
+    }
+  });
+  let requiredAvgOnRemainder = null;
+  if (remainingWeight > 0) {
+    requiredAvgOnRemainder = ((THRESHOLD - bankedPoints) / remainingWeight) * 100;
+  }
+  return { total, filledWeight, remainingWeight, bankedPoints, requiredAvgOnRemainder };
+}
+
+function statusForSubject(comp) {
+  if (comp.remainingWeight === 0) {
+    return comp.total >= THRESHOLD ? 'achieved' : 'risk';
+  }
+  if (comp.requiredAvgOnRemainder <= THRESHOLD) return 'ontrack';
+  if (comp.requiredAvgOnRemainder <= 100) return 'ontrack-hard';
+  return 'risk';
+}
+
+function render() {
+  const subjectsEl = document.getElementById('subjects');
+  subjectsEl.innerHTML = '';
+
+  let overallTotal = 0;
+  let achievedCount = 0;
+  let allFilled = true;
+
+  const comps = subjectDefs.map(s => {
+    const c = computeSubject(s);
+    overallTotal += c.total;
+    if (c.total >= THRESHOLD && c.remainingWeight === 0) achievedCount++;
+    if (c.remainingWeight > 0) allFilled = false;
+    return c;
+  });
+  const overallAvg = overallTotal / subjectDefs.length;
+
+  subjectDefs.forEach((subj, i) => {
+    const comp = comps[i];
+    const status = statusForSubject(comp);
+
+    const card = document.createElement('div');
+    card.className = 'subject';
+
+    const badgeClass = status === 'achieved' ? 'badge-achieved' : (status === 'risk' ? 'badge-risk' : 'badge-ontrack');
+    const badgeText = comp.remainingWeight === 0
+      ? (comp.total >= THRESHOLD ? 'Distinction achieved' : 'Below distinction')
+      : (comp.requiredAvgOnRemainder <= THRESHOLD ? 'On track' : (comp.requiredAvgOnRemainder <= 100 ? 'Needs a push' : 'At risk'));
+
+    let head = document.createElement('div');
+    head.className = 'subject-head';
+    head.innerHTML = `
+      <div><span class="subject-code">${subj.code}</span><span class="subject-name">${subj.name}</span></div>
+      <div class="subject-badge ${badgeClass}">${badgeText}</div>
+    `;
+    card.appendChild(head);
+
+    // Bar visualization
+    const barWrap = document.createElement('div');
+    barWrap.className = 'bar-track';
+    subj.assessments.forEach(a => {
+      const m = getMark(subj.code, a);
+      const seg = document.createElement('div');
+      seg.className = 'bar-seg ' + (m.isActual ? 'actual' : 'assumed');
+      seg.style.width = a.weight + '%';
+      seg.textContent = a.label + ' ' + Math.round(m.value) + '%';
+      barWrap.appendChild(seg);
+    });
+    const thresh = document.createElement('div');
+    thresh.className = 'threshold-line';
+    thresh.style.left = THRESHOLD + '%';
+    const threshLabel = document.createElement('div');
+    threshLabel.className = 'threshold-label';
+    threshLabel.style.left = THRESHOLD + '%';
+    threshLabel.textContent = '75% line';
+    barWrap.appendChild(thresh);
+    barWrap.appendChild(threshLabel);
+    card.appendChild(barWrap);
+
+    // Editable grid
+    const grid = document.createElement('div');
+    grid.className = 'assessment-grid';
+    subj.assessments.forEach(a => {
+      const k = keyFor(subj.code, a.label);
+      const savedVal = state.marks[k];
+      const cell = document.createElement('div');
+      cell.className = 'assess-cell';
+      const hasVal = (savedVal !== undefined && savedVal !== '' && savedVal !== null) || a.mark !== null;
+      if (hasVal) cell.classList.add('has-value');
+      cell.innerHTML = `<label>${a.label} <span class="weight-tag">${a.weight}%</span></label>`;
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.min = 0; input.max = 100;
+      input.placeholder = 'assumed ' + state.assume;
+      const displayVal = savedVal !== undefined ? savedVal : (a.mark !== null ? a.mark : '');
+      input.value = displayVal;
+      input.addEventListener('input', (e) => {
+        state.marks[k] = e.target.value === '' ? '' : e.target.value;
+        persist();
+        render();
+      });
+      cell.appendChild(input);
+      grid.appendChild(cell);
+    });
+    card.appendChild(grid);
+
+    const foot = document.createElement('div');
+    foot.className = 'subject-foot';
+    foot.innerHTML = `<span>Projected total: <b>${comp.total.toFixed(1)}%</b></span>` +
+      (comp.remainingWeight > 0
+        ? `<span>Need <b>${comp.requiredAvgOnRemainder.toFixed(1)}%</b> avg on remaining ${comp.remainingWeight}%</span>`
+        : `<span>All assessments in</span>`);
+    card.appendChild(foot);
+
+    if (subj.motivation || (subj.topics && subj.topics.length)) {
+      const insight = document.createElement('div');
+      insight.className = 'insight';
+      let html = '<div class="insight-label">Semester 2 focus</div>';
+      if (subj.motivation) {
+        html += `<div class="insight-motivation">${subj.motivation}</div>`;
+      }
+      if (subj.topics && subj.topics.length) {
+        html += '<ul class="insight-topics">' + subj.topics.map(t => `<li>${t}</li>`).join('') + '</ul>';
+      }
+      insight.innerHTML = html;
+      card.appendChild(insight);
+    }
+
+    if (subj.note) {
+      const note = document.createElement('div');
+      note.className = 'note';
+      note.textContent = 'Note: ' + subj.note;
+      card.appendChild(note);
+    }
+
+    subjectsEl.appendChild(card);
+  });
+
+  // Status band
+  const band = document.getElementById('statusBand');
+  const overallClass = overallAvg >= THRESHOLD ? 'ok' : 'risk';
+  const summaClass = achievedCount === subjectDefs.length ? 'ok' : (allFilled ? 'risk' : 'neutral');
+  band.innerHTML = `
+    <div class="status-card ${overallClass}">
+      <div class="status-label">Overall projected average</div>
+      <div class="status-value">${overallAvg.toFixed(1)}%</div>
+      <div class="status-detail">${overallAvg >= THRESHOLD ? 'Cum Laude line cleared' : (THRESHOLD - overallAvg).toFixed(1) + '% short of Cum Laude'}</div>
+    </div>
+    <div class="status-card neutral">
+      <div class="status-label">Subjects at distinction</div>
+      <div class="status-value">${achievedCount} / ${subjectDefs.length}</div>
+      <div class="status-detail">confirmed complete &amp; ≥75%</div>
+    </div>
+    <div class="status-card ${summaClass}">
+      <div class="status-label">Summa Cum Laude</div>
+      <div class="status-value">${achievedCount === subjectDefs.length ? 'On pace' : 'Not yet'}</div>
+      <div class="status-detail">requires distinction in all 5, first attempt</div>
+    </div>
+  `;
+}
+
+document.getElementById('assumeInput').addEventListener('input', (e) => {
+  state.assume = Number(e.target.value) || 0;
+  persist();
+  render();
+});
+
+loadState();
+</script>
+</body>
+</html>

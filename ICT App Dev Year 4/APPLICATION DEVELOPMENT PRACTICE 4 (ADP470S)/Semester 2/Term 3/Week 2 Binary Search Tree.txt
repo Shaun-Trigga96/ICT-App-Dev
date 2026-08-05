@@ -1,0 +1,40 @@
+Binary Search Tree
+
+Parent Node
+Children Node
+
+0, 1 or 2 children per node
+
+left child and right child
+
+
+BTS Operation(methods)
+
+Insert an element
+Remove or delete an element
+Search or find an element
+Peek at the root
+Traversals
+Inorder
+Preorder
+Postorder
+
+Depth First Search
+Breadth First Search
+
+
+Insert the following numbers into a tree of integers
+s
+6,7,4,9,10,3,1,8
+
+           6
+           /\
+          4  7
+         /    \
+        3      9
+       /      / \
+       1     8   10
+
+Why are trees great
+
+Searchable in 0(log n) time
