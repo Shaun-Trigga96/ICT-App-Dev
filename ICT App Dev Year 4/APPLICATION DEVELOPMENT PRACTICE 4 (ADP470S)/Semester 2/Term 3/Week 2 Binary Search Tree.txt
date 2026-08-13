@@ -34,7 +34,3 @@ s
         3      9
        /      / \
        1     8   10
-
-Why are trees great
-
-Searchable in 0(log n) time
