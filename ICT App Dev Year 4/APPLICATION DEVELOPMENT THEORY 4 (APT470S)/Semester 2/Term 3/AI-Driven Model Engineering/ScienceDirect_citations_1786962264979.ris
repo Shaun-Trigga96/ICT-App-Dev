@@ -1,0 +1,690 @@
+TY  - JOUR
+T1  - Structured policy modeling and context-aware generation for multi-jurisdictional compliance in global software systems
+AU  - Zhuang, Zhixian
+AU  - Lee, Xiaodong
+AU  - Zhang, Aiyao
+AU  - Wei, Jiuqi
+AU  - Fu, Yufan
+AU  - Peng, Botao
+JO  - Information and Software Technology
+VL  - 193
+SP  - 108041
+PY  - 2026
+DA  - 2026/05/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2026.108041
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584926000303
+KW  - Software engineering
+KW  - Regulatory compliance
+KW  - Legal automation
+KW  - Policy modeling
+KW  - Data protection
+AB  - Context:
+Legal compliance is increasingly vital in software systems that process personal data across jurisdictions, yet ensuring adherence to diverse regulatory requirements remains challenging throughout the development lifecycle.
+Objective:
+We aim to develop a modular framework that enables automated, context-aware compliance policy generation and seamless integration into software engineering workflows.
+Methods:
+We propose CBCMS+, a cross-border compliance management system that introduces a structured Policy Definition Language (PDL) for representing both legal constraints and user-defined preferences. CBCMS+ employs a two-step solution: EpMap, which transforms multilingual legal texts into structured PDL representations, and ComGen, which generates contextualized policies based on runtime scenarios. The framework also supports policy conflict resolution, DevOps integration, and flexible deployment.
+Results:
+We implement CBCMS+ and evaluate it on multilingual legal corpora from multiple jurisdictions. EpMap achieves an F1 score of 89.11% in legal-to-PDL mapping, while ComGen reaches 94.21% in generating valid policies. Under high-concurrency workloads, ComGen sustains over 1200 requests per second with an average latency of 12.8ms.
+Conclusion:
+CBCMS+ provides a scalable and practical foundation for compliance-by-design in global software systems, combining structured modeling, multilingual adaptability, and efficient policy automation.
+ER  - 
+
+TY  - JOUR
+T1  - A method to generate reusable safety case argument-fragments from compositional safety analysis
+AU  - Šljivo, Irfan
+AU  - Gallina, Barbara
+AU  - Carlson, Jan
+AU  - Hansson, Hans
+AU  - Puri, Stefano
+JO  - Journal of Systems and Software
+VL  - 131
+SP  - 570
+EP  - 590
+PY  - 2017
+DA  - 2017/09/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2016.07.034
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121216301273
+KW  - Component-based architectures
+KW  - Contract-based architectures
+KW  - Compositional safety analysis
+KW  - Modular argumentation
+KW  - Safety argumentation reuse
+AB  - Safety-critical systems usually need to be accompanied by an explained and well-founded body of evidence to show that the system is acceptably safe. While reuse within such systems covers mainly code, reusing accompanying safety artefacts is limited due to a wide range of context dependencies that need to be satisfied for safety evidence to be valid in a different context. Currently, the most commonly used approaches that facilitate reuse lack support for systematic reuse of safety artefacts. To facilitate systematic reuse of safety artefacts we provide a method to generate reusable safety case argument-fragments that include supporting evidence related to compositional safety analysis. The generation is performed from safety contracts that capture safety-relevant behaviour of components in assumption/guarantee pairs backed up by the supporting evidence. We evaluate the feasibility of our approach in a real-world case study where a safety related component developed in isolation is reused within a wheel-loader.
+ER  - 
+
+TY  - JOUR
+T1  - Understanding the issues, their causes and solutions in microservices systems: An empirical study
+AU  - Waseem, Muhammad
+AU  - Liang, Peng
+AU  - Ahmad, Aakash
+AU  - Khan, Arif Ali
+AU  - Shahin, Mojtaba
+AU  - Nasab, Ali Rezaei
+AU  - Mikkonen, Tommi
+AU  - Abrahamsson, Pekka
+JO  - Journal of Systems and Software
+VL  - 237
+SP  - 112828
+PY  - 2026
+DA  - 2026/07/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2026.112828
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121226000622
+KW  - Microservices system
+KW  - Microservices architecture
+KW  - Issues
+KW  - Open source software
+KW  - Empirical study
+AB  - Many small to large organizations have adopted the Microservices Architecture (MSA) style to develop and deliver their core businesses. Despite the popularity of MSA in the software industry, there is a limited evidence-based and thorough understanding of the types of issues (e.g., errors, faults, failures, and bugs) that microservices system developers experience, the causes of the issues, and the solutions as potential fixing strategies to address the issues. To ameliorate this gap, we conducted a mixed-methods empirical study that collected data from 2641 issues from the issue tracking systems of 15 open-source microservices systems on GitHub, 15 interviews, and an online survey completed by 150 practitioners from 42 countries across 6 continents. Our analysis led to comprehensive taxonomies for the issues, causes, and solutions. The findings of this study inform that Technical Debt, Continuous Integration and Delivery, Exception Handling, Service Execution and Communication, and Security are the most dominant issues in microservices systems. Furthermore, General Programming Errors, Missing Features and Artifacts, and Invalid Configuration and Communication are the main causes behind the issues. Finally, we found 177 types of solutions that can be applied to fix the identified issues. Based on our study results, we propose a future research framework that outlines key problem dimensions and actionable study strategies to support the engineering of emergent and next-generation microservices systems.
+ER  - 
+
+TY  - JOUR
+T1  - Software product families from a phylogenetics perspective for video game content generation
+AU  - Navarro, Samuel
+AU  - Chueca, Jorge
+AU  - Blasco, Daniel
+AU  - Cetina, Carlos
+AU  - Font, Jaime
+JO  - Journal of Systems and Software
+VL  - 232
+SP  - 112649
+PY  - 2026
+DA  - 2026/02/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2025.112649
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121225003188
+KW  - Phylogenetics
+KW  - Software product families
+KW  - Game software engineering
+KW  - Procedural content generation
+AB  - A Software Product Family comprises similar products within a defined scope that share common characteristics, often due to reuse techniques applied during development. This paper introduces two approaches that apply biological insights to map the landscape of a software product family, identifying potential gaps within its scope, and identifying and extracting features from the family, respectively. Phylogenetics studies the gene similarity among groups of organisms to understand ancestry among species. Leveraging Phylogenetics in software, our approaches offer a structured view of a product family, aiding in the discovery of unexplored areas fitting the scope of the family. Our approaches create a phylogenetic tree that enables to easily identify latent products (ancestors) that did not exist in the original family. Those ancestors can then be reconstructed from existing products (descendants). Moreover, the phylogenetic tree can be exploited to identify and extract features from the family. Then, those features can be injected into other members of the family. The product family evaluated is a set of industry-scale video game non-playable characters. We assess these approaches through video game simulations and scope metrics to determine how closely the reconstructed and injected products align with the family’s scope. The results confirm that the content generated with our phylogenetics-based approaches aligns better with the family scope than the state-of-the-art procedural content generation techniques using evolutionary algorithms. Phylogenetics enhances content generation by providing a framework to understand and expand the product family with new content.
+ER  - 
+
+TY  - JOUR
+T1  - Engineering context-aware systems and applications: A survey
+AU  - Alegre, Unai
+AU  - Augusto, Juan Carlos
+AU  - Clark, Tony
+JO  - Journal of Systems and Software
+VL  - 117
+SP  - 55
+EP  - 83
+PY  - 2016
+DA  - 2016/07/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2016.02.010
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121216000467
+KW  - Context-Aware Systems Engineering
+KW  - Context-aware computing
+KW  - Context-awareness
+KW  - Context-sensitive
+KW  - Sentient computing
+KW  - Pervasive & Ubiquitous Computing
+KW  - Intelligent Environments
+KW  - Ambient Intelligence
+KW  - Software engineering
+AB  - Context-awareness is an essential component of systems developed in areas like Intelligent Environments, Pervasive & Ubiquitous Computing and Ambient Intelligence. In these emerging fields, there is a need for computerized systems to have a higher understanding of the situations in which to provide services or functionalities, to adapt accordingly. The literature shows that researchers modify existing engineering methods in order to better fit the needs of context-aware computing. These efforts are typically disconnected from each other and generally focus on solving specific development issues. We encourage the creation of a more holistic and unified engineering process that is tailored for the demands of these systems. For this purpose, we study the state-of-the-art in the development of context-aware systems, focusing on: (A) Methodologies for developing context-aware systems, analyzing the reasons behind their lack of adoption and features that the community wish they can use; (B) Context-aware system engineering challenges and techniques applied during the most common development stages; (C) Context-aware systems conceptualization.
+ER  - 
+
+TY  - JOUR
+T1  - Safety for mobile robotic systems: A systematic mapping study from a software engineering perspective
+AU  - Bozhinoski, Darko
+AU  - Di Ruscio, Davide
+AU  - Malavolta, Ivano
+AU  - Pelliccione, Patrizio
+AU  - Crnkovic, Ivica
+JO  - Journal of Systems and Software
+VL  - 151
+SP  - 150
+EP  - 179
+PY  - 2019
+DA  - 2019/05/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2019.02.021
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121219300317
+KW  - Software
+KW  - Safety for mobile robots
+KW  - Systematic mapping study
+AB  - Robotic research is making huge progress. However, existing solutions are facing a number of challenges preventing them from being used in our everyday tasks: (i) robots operate in unknown environments, (ii) robots collaborate with each other and even with humans, and (iii) robots shall never injure people or create damages. Researchers are targeting those challenges from various perspectives, producing a fragmented research landscape. We aim at providing a comprehensive and replicable picture of the state of the art from a software engineering perspective on existing solutions aiming at managing safety for mobile robotic systems. We apply the systematic mapping methodology on an initial set of 1274 potentially relevant research papers, we selected 58 primary studies and analyzed them according to a systematically-defined classification framework. This work contributes with (i) a classification framework for methods or techniques for managing safety when dealing with the software of mobile robotic systems (MSRs), (ii) a map of current software methods or techniques for software safety for MRSs, (iii) an elaboration on emerging challenges and implications for future research, and (iv) a replication package for independent replication and verification of this study. Our results confirm that generally existing solutions are not yet ready to be used in everyday life. There is the need of turn-key solutions ready to deal with all the challenges mentioned above.
+ER  - 
+
+TY  - JOUR
+T1  - Understanding the challenges and requirements for facilitating iStar learning: An empirical study with iStar learners
+AU  - Li, Tong
+AU  - Zhou, Qixiang
+AU  - Wang, Yunduo
+AU  - Xiong, Haonan
+AU  - Liu, Wenxing
+AU  - Ge, Ning
+JO  - Information and Software Technology
+VL  - 187
+SP  - 107839
+PY  - 2025
+DA  - 2025/11/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2025.107839
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584925001788
+KW  - Empirical study
+KW  - iStar learning
+KW  - Modeling education
+KW  - Bloom’s taxonomy
+KW  - Grounded theory
+AB  - Context:
+As research into the iStar framework continues, more researchers are recognizing its important role in requirements analysis. However, the steep learning curve of the iStar framework hinders widespread adoption in practice. An increasing number of recent studies focus on the practical application of the iStar framework, revealing difficulties in learning and practicing iStar.
+Objective:
+This paper aims to investigate and provide a thorough understanding of the challenges faced in learning and practicing the iStar modeling framework, utilizing empirical research and grounded theory.
+Method:
+Accordingly, we systematically designed and conducted an empirical study that involved ten iStar learners and three iStar lecturers to discover the difficulties of learning iStar. Utilizing the revised Bloom’s taxonomy, we formulated our research questions and, based on the study results, developed a systematic theory about these difficulties. We then elicited a series of requirements to facilitate iStar learning employing Strauss and Corbin’s coding paradigm from grounded theory. Furthermore, we implemented and deployed an online prototype tool inspired by this study to provide (semi-)automatic support for iStar learning and practicing.
+Results:
+The study identified key difficulties both learners and lecturers face when engaging with the iStar framework. Through grounded theory, we developed a systematic understanding of these challenges and formulated requirements to address them. These requirements were implemented into a prototype tool, aiming to facilitate iStar learning and practice.
+Conclusions:
+This paper presents an empirical study involving both beginners and lecturers in iStar modeling, providing valuable insights into the difficulties faced in learning and teaching the iStar framework. By addressing these challenges through derived strategies, proposed requirements, and the developed tool, we aim to ease the learning curve of iStar, thereby promoting its wider adoption in both educational and practical contexts.
+ER  - 
+
+TY  - JOUR
+T1  - An OSLC-based environment for system-level functional testing of ERTMS/ETCS controllers
+AU  - Nardone, Roberto
+AU  - Marrone, Stefano
+AU  - Gentile, Ugo
+AU  - Amato, Aniello
+AU  - Barberio, Gregorio
+AU  - Benerecetti, Massimo
+AU  - De Guglielmo, Renato
+AU  - Di Martino, Beniamino
+AU  - Mazzocca, Nicola
+AU  - Peron, Adriano
+AU  - Pisani, Gaetano
+AU  - Velardi, Luigi
+AU  - Vittorini, Valeria
+JO  - Journal of Systems and Software
+VL  - 161
+SP  - 110478
+PY  - 2020
+DA  - 2020/03/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2019.110478
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121219302523
+KW  - Critical systems
+KW  - Life-cycle collaboration
+KW  - Model based testing
+KW  - OSLC
+KW  - Testing automation
+AB  - Product and application life-cycle management (PLM/ALM) are the processes that govern a product and a software system, respectively, encompassing the creation, deployment and operation of a system from the beginning to the end of its life. As both PLM and ALM require cross-discipline collaboration and cooperation, tools integration and inter-operation are necessary to enable the efficient and effective usage of tool suites supporting the management of the entire system life-cycle and overcome the limitations of all-in-one solutions from one tool vendor. In this context, the Open Services for Life-cycle Collaboration (OSLC) initiative proposes a set of specifications to allow a seamless integration based on linked data. This paper describes the work performed within the ARTEMIS JU project CRYSTAL to develop an environment for the functional system-level testing of railway controllers, relying on OSLC to enable inter-operation with existing PLM/ALM tools. A concrete realization of the proposed architecture is described also discussing some design and implementation choices. A real industrial case study is used to exemplify the features and the usage of the environment in testing one of the functionalities of the Radio Block Centre, the vital core of the European Rail Traffic Management System/European Train Control System (ERTMS/ETCS) Control System.
+ER  - 
+
+TY  - JOUR
+T1  - Probabilistic program performance analysis with confidence intervals
+AU  - Stefanakos, Ioannis
+AU  - Calinescu, Radu
+AU  - Gerasimou, Simos
+JO  - Information and Software Technology
+VL  - 156
+SP  - 107143
+PY  - 2023
+DA  - 2023/04/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2022.107143
+UR  - https://www.sciencedirect.com/science/article/pii/S095058492200252X
+KW  - Program quality analysis
+KW  - Software performance
+KW  - Discrete-time Markov chains
+KW  - Probabilistic model checking
+KW  - Formal verification with confidence intervals
+AB  - Context:
+More often than not, the algorithms implemented by software systems continue to operate correctly when executed on different platforms or with different inputs, and can be easily replaced with functionally equivalent ones. However, such changes can have a significant and difficult to predict impact on the software performance, resource use, and other key quality properties.
+Objective:
+The paper introduces a method for the formal analysis of timing, resource use, cost and other quality aspects of computer programs, and a tool that automates the application of the method to Java code.
+Method:
+A tool-supported probabilistic program performance analysis (PROPER) method was developed, and was evaluated using Java code from the Apache Commons Math library, the Android messaging app Telegram, and open-source implementations of the knapsack, binary search, and minimum path sum algorithms. PROPER synthesises a parametric Markov-chain model of the analysed code, uses information from program logs to calculate confidence intervals for the parameters of this model, and employs formal verification with confidence intervals to obtain confidence intervals for the performance properties of interest. A PROPER variant that operates with point estimates instead of confidence intervals can be used when large program logs are available.
+Results:
+The PROPER point estimates for the analysed performance properties were accurate within 7.9% and 1.75% of the ground truth when using program logs with 103 and 104 entries, respectively. All PROPER confidence intervals for these properties contained the true property value, and became narrower when larger logs were used in the analysis. The analyses were completed in under 15 ms for point estimates, and in between 6.7 s and 7.8 s for confidence intervals on a regular laptop computer.
+Conclusion:
+PROPER can synthesise and reuse a parametric Markov model to accurately predict how software performance would change if the code ran on a different hardware platform, used a new function library, or had a different usage profile—supporting practitioners who are interested in these analyses.
+ER  - 
+
+TY  - JOUR
+T1  - AMon: A domain-specific language and framework for adaptive monitoring of Cyber–Physical Systems
+AU  - Vierhauser, Michael
+AU  - Wohlrab, Rebekka
+AU  - Stadler, Marco
+AU  - Cleland-Huang, Jane
+JO  - Journal of Systems and Software
+VL  - 195
+SP  - 111507
+PY  - 2023
+DA  - 2023/01/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2022.111507
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121222001832
+KW  - Runtime monitoring
+KW  - Adaptive monitoring
+KW  - Domain-specific language
+KW  - Cyber–Physical Systems
+AB  - Cyber–Physical Systems (CPS) are increasingly used in safety–critical scenarios where ensuring their correct behavior at runtime becomes a crucial task. Therefore, the behavior of the CPS needs to be monitored at runtime so that violations of requirements can be detected. With the inception of edge devices that facilitate runtime analysis at the edge and the increasingly diverse environments that CPS operate in, flexible monitoring approaches are needed that consider the data that needs to be monitored and the analyses performed on that data. In this paper, we propose AMon, a flexible adaptive monitoring framework that supports the specification and validation of monitoring adaptation rules, using a domain-specific language. Based on these rules, AMon automatically generates code for direct deployment onto devices. We evaluated AMon by applying it to TurtleBot Robots and a fleet of Unmanned Aerial Vehicles. Furthermore, we conducted a user study assessing the understandability and ease of use of our language. Results show that creating multiple adaptation rules with our DSL is feasible with minimal effort, and that adaptive monitoring can reduce the amount of runtime data transmitted from the edge device according to the current state of the system and its monitoring needs.
+ER  - 
+
+TY  - JOUR
+T1  - The Symposium on Search-Based Software Engineering: Past, Present and Future
+AU  - Colanzi, Thelma Elita
+AU  - Assunção, Wesley K.G.
+AU  - Vergilio, Silvia R.
+AU  - Farah, Paulo Roberto
+AU  - Guizzo, Giovani
+JO  - Information and Software Technology
+VL  - 127
+SP  - 106372
+PY  - 2020
+DA  - 2020/11/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2020.106372
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584919301740
+KW  - Systematic mapping
+KW  - Search-based software engineering
+KW  - Bibliometric analysis
+AB  - Context
+Search-Based Software Engineering (SBSE) is the research field where Software Engineering (SE) problems are modelled as search problems to be solved by search-based techniques. The Symposium on Search Based Software Engineering (SSBSE) is the premier event on SBSE, which had its 11th edition in 2019.
+Objective
+In order to better understand the characteristics and evolution of papers published at SSBSE, this work reports results from a mapping study targeting the proceedings of all SSBSE editions. Despite the existing mapping studies on SBSE, our contribution in this work is to provide information to researchers and practitioners willing to enter the SBSE field, being a source of information to strengthen the symposium, guide new studies, and motivate new collaboration among research groups.
+Method
+A systematic mapping study was conducted with a set of four research questions, in which 134 studies published in all editions of SSBSE, dated from 2009 to 2019, were evaluated. In a fifth question, 32 papers published in the challenge track were summarised.
+Results
+Throughout the years, 290 authors from 25 countries have contributed to the main track of the symposium, with the collaboration of at least two institutions in 46.3% of the papers. SSBSE papers have got substantial external visibility, as most citations are from different venues. The SE tasks addressed by SSBSE are mostly related to software testing, software debugging, software design, and maintenance. Evolutionary algorithms are present in 75% of the papers, being the most common search technique. The evaluation of the SBSE approaches usually includes industrial systems.
+Conclusions
+SSBSE has helped increase the popularity of SBSE in the SE research community and has played an important role on making SBSE mature. There are still problems and challenges to be addressed in the SBSE field, which can be tackled by SSBSE authors in further studies.
+ER  - 
+
+TY  - JOUR
+T1  - Deriving architectural models from requirements specifications: A systematic mapping study
+AU  - Souza, Eric
+AU  - Moreira, Ana
+AU  - Goulão, Miguel
+JO  - Information and Software Technology
+VL  - 109
+SP  - 26
+EP  - 39
+PY  - 2019
+DA  - 2019/05/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2019.01.004
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584919300035
+KW  - Software architecture
+KW  - Mapping study
+KW  - Literature review
+AB  - Context
+Software architecture design creates and documents the high-level structure of a software system. Such structure, expressed in architectural models, comprises software elements, relations among them, and properties of these elements and relations. Existing software architecture methods offer ways to derive architectural models from requirements specifications. These models must balance different forces that should be analyzed during this derivation process, such as those imposed by different application domains and quality attributes. Such balance is difficult to achieve, requiring skilled and experienced architects.
+Object
+The purpose of this paper is to provide a comprehensive overview of the existing methods to derive architectural models from requirements specifications and offer a research roadmap to challenge the community to address the identified limitations and open issues that require further investigation.
+Method
+To achieve this goal, we performed a systematic mapping study following the good practices from the Evidence-Based Software Engineering field.
+Results
+This study resulted in 39 primary studies selected for analysis and data extraction, from the 2575 initially retrieved.
+Conclusion
+The major findings indicate that current architectural derivation methods rely heavily on the architects’ tacit knowledge (experience and intuition), do not offer sufficient support for inexperienced architects, and lack explicit evaluation mechanisms. These and other findings are synthesized in a research roadmap which results would benefit researchers and practitioners.
+ER  - 
+
+TY  - JOUR
+T1  - CrossRec: Supporting software developers by recommending third-party libraries
+AU  - Nguyen, Phuong T.
+AU  - Di Rocco, Juri
+AU  - Di Ruscio, Davide
+AU  - Di Penta, Massimiliano
+JO  - Journal of Systems and Software
+VL  - 161
+SP  - 110460
+PY  - 2020
+DA  - 2020/03/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2019.110460
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121219302341
+KW  - Mining software repositories
+KW  - Recommender systems
+KW  - Open Source software
+AB  - When creating a new software system, or when evolving an existing one, developers do not reinvent the wheel but, rather, seek available libraries that suit their purpose. In such a context, open source software repositories contain rich resources that can provide developers with helpful advice to support their tasks. However, the heterogeneity of resources and the dependencies among them are the main obstacles to the effective mining and exploitation of the available data. In this sense, advanced techniques and tools are needed to mine the metadata to bring in meaningful recommendations. In this paper, we present CrossRec, a recommender system to assist open source software developers in selecting suitable third-party libraries. CrossRec exploits a collaborative filtering technique to recommend libraries to developers by relying on the set of dependencies, which are currently included in the project being developed. We perform an empirical evaluation to compare the proposed approach with three state-of-the-art baselines, i.e., LibRec, LibFinder, and LibCUP on three considerably large datasets. The experimental results show that CrossRec overcomes the limitation of the baselines by recommending also libraries with a specific version. More importantly, it outperforms LibRec and LibCUP with respect to various quality metrics.
+ER  - 
+
+TY  - JOUR
+T1  - Interactive semi-automated specification mining for debugging: An experience report
+AU  - Mashhadi, Mohammad Jafar
+AU  - Siddiqui, Taha R.
+AU  - Hemmati, Hadi
+AU  - Loewen, Howard
+JO  - Information and Software Technology
+VL  - 113
+SP  - 20
+EP  - 38
+PY  - 2019
+DA  - 2019/09/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2019.05.002
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584919301004
+KW  - Specification mining
+KW  - Debugging
+KW  - Interview
+KW  - Semi-automated
+KW  - Case study
+AB  - Context
+Specification mining techniques are typically used to extract the specification of a software in the absence of (up-to-date) specification documents. This is useful for program comprehension, testing, and anomaly detection. However, specification mining can also potentially be used for debugging, where a faulty behavior is abstracted to give developers a context about the bug and help them locating it.
+Objective
+In this project, we investigate this idea in an industrial setting. We propose a very basic semi-automated specification mining approach for debugging and apply that on real reported issues from an AutoPilot software system from our industry partner, MicroPilot Inc. The objective is to assess the feasibility and usefulness of the approach in a real-world setting.
+Method
+The approach is developed as a prototype tool, working on C code, which accept a set of relevant state fields and functions, per issue, and generates an extended finite state machine that represents the faulty behavior, abstracted with respect to the relevant context (the selected fields and functions).
+Results
+We qualitatively evaluate the approach by a set of interviews (including observational studies) with the company’s developers on their real-world reported bugs. The results show that (a) our approach is feasible, (b) it can be automated to some extent, and (c) brings advantages over only using their code-level debugging tools. We also compared this approach with traditional fully automated state-merging algorithms and reported several issues when applying those techniques on a real-world debugging context.
+Conclusion
+The main conclusion of this study is that the idea of an “interactive” specification mining rather than a fully automated mining tool is NOT impractical and indeed is useful for the debugging use case.
+ER  - 
+
+TY  - JOUR
+T1  - A meta-model for software protections and reverse engineering attacks
+AU  - Basile, Cataldo
+AU  - Canavese, Daniele
+AU  - Regano, Leonardo
+AU  - Falcarin, Paolo
+AU  - Sutter, Bjorn De
+JO  - Journal of Systems and Software
+VL  - 150
+SP  - 3
+EP  - 21
+PY  - 2019
+DA  - 2019/04/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2018.12.025
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121218302838
+KW  - Software protection
+KW  - Security knowledge base
+KW  - Decision support
+KW  - Attack modelling
+KW  - Reverse engineering
+KW  - Meta-model
+AB  - Software protection techniques are used to protect valuable software assets against man-at-the-end attacks. Those attacks include reverse engineering to steal confidential assets, and tampering to break the software’s integrity in unauthorized ways. While their ultimate aims are the original assets, attackers also target the protections along their attack path. To allow both humans and tools to reason about the strength of available protections (and combinations thereof) against potential attacks on concrete applications and their assets, i.e., to assess the true strength of layered protections, all relevant and available knowledge on the relations between the relevant aspects of protections, attacks, applications, and assets need to be collected, structured, and formalized. This paper presents a software protection meta-model that can be instantiated to construct a formal knowledge base that holds precisely that information. The presented meta-model is validated against existing models and taxonomies in the domain of software protection, and by means of prototype tools that we developed to help non-modelling-expert software defenders with populating a knowledge base and with extracting and inferring practically useful information from it. All discussed tools are available as open source, and we evaluate their use as part of a software protection work flow on an open source application and industrial use cases.
+ER  - 
+
+TY  - JOUR
+T1  - A survey of many-objective optimisation in search-based software engineering
+AU  - Ramírez, Aurora
+AU  - Romero, José Raúl
+AU  - Ventura, Sebastián
+JO  - Journal of Systems and Software
+VL  - 149
+SP  - 382
+EP  - 395
+PY  - 2019
+DA  - 2019/03/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2018.12.015
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121218302759
+KW  - Search-based software engineering
+KW  - Many-objective optimisation
+KW  - Multi-objective optimisation
+KW  - Evolutionary algorithms
+KW  - Literature survey
+AB  - Search-based software engineering (SBSE) is changing the way traditional software engineering (SE) activities are carried out by reformulating them as optimisation problems. The natural evolution of SBSE is bringing new challenges, such as the need of a large number of objectives to formally represent the many decision criteria involved in the resolution of SE tasks. This suggests that SBSE is moving towards many-objective optimisation, an emerging area that provides advanced techniques to cope with high-dimensional optimisation problems. To analyse this phenomenon, this paper surveys relevant SBSE literature focused on the resolution of many-objective problems. From the gathered knowledge, current limitations regarding problem formulation, algorithm selection, experimental design and industrial applicability are discussed. Through the analysis of observed trends, this survey provides a historical perspective and future lines of research concerning the adoption of many-objective optimisation within SBSE.
+ER  - 
+
+TY  - JOUR
+T1  - A framework for modelling tactical decision-making in autonomous systems
+AU  - Evertsz, Rick
+AU  - Thangarajah, John
+AU  - Yadav, Nitin
+AU  - Ly, Thanh
+JO  - Journal of Systems and Software
+VL  - 110
+SP  - 222
+EP  - 238
+PY  - 2015
+DA  - 2015/12/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2015.08.046
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121215001892
+KW  - Tactics modelling
+KW  - Behaviour modelling
+KW  - Multi-agent systems
+AB  - There is an increasing need for autonomous systems that exhibit effective decision-making in unpredictable environments. However, the design of autonomous decision-making systems presents considerable challenges, particularly when they have to achieve their goals within a dynamic context. Tactics designed to handle unexpected environmental change, or attack by an adversary, must balance the need for reactivity with that of remaining focused on the system’s overall goal. The lack of a design methodology and supporting tools for representing tactics makes them difficult to understand, maintain and reuse. This is a significant problem in the design of tactical decision-making systems. We describe a methodology and accompanying tool, TDF (Tactics Development Framework), based on the BDI (Beliefs, Desires, Intentions) paradigm. TDF supports structural modelling of missions, goals, scenarios, input/output, messaging and procedures, and generates skeleton code that reflects the overall design. TDF has been evaluated through comparison with UML, indicating that it provides significant benefits to those building autonomous, tactical decision-making systems.
+ER  - 
+
+TY  - JOUR
+T1  - Compositional security analysis of dynamic component-based systems
+AU  - Skandylas, Charilaos
+AU  - Khakpour, Narges
+JO  - Information and Software Technology
+VL  - 191
+SP  - 108002
+PY  - 2026
+DA  - 2026/03/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2025.108002
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584925003416
+KW  - Architecture-level security analysis
+KW  - Model checking
+KW  - Runtime security
+AB  - Context:
+To reason about and enforce security in dynamic software systems, automated analysis and verification approaches are required. However, such approaches often encounter scalability issues, particularly when employed for runtime analysis, which is necessary in software systems with dynamically changing architectures, such as self-adaptive systems.
+Objective:
+In this work, we propose an automated formal approach for security analysis of component-based systems with dynamic architectures.
+Methods:
+This approach leverages formal abstraction and incremental analysis techniques to reduce the complexity of runtime analysis. We have implemented and evaluated our approach against ZNN, a widely known self-adaptive system exemplar.
+Results:
+Compared to the state of the art, our results demonstrate an improvement both in the size of systems that can be analyzed and at the time required to complete the analysis. In particular, our incremental analysis is well suited for systems that alter their architectures at runtime.
+Conclusion:
+Therefore, this approach is suitable for analyzing the security dynamic component based both statically and at runtime.
+ER  - 
+
+TY  - JOUR
+T1  - A systematic review on the engineering of software for ubiquitous systems
+AU  - Sánchez Guinea, Alejandro
+AU  - Nain, Grégory
+AU  - Le Traon, Yves
+JO  - Journal of Systems and Software
+VL  - 118
+SP  - 251
+EP  - 276
+PY  - 2016
+DA  - 2016/08/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2016.05.024
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121216300553
+KW  - Empirical software engineering
+KW  - Evidence-based software engineering
+KW  - Systematic review
+KW  - Research synthesis
+KW  - Software development cycle
+KW  - Ubiquitous systems
+KW  - Development methods
+KW  - Pervasive systems
+AB  - Context: Software engineering for ubiquitous systems has experienced an important and rapid growth, however the vast research corpus makes it difficult to obtain valuable information from it. Objective: To identify, evaluate, and synthesize research about the most relevant approaches addressing the different phases of the software development life cycle for ubiquitous systems. Method: We conducted a systematic literature review of papers presenting and evaluating approaches for the different phases of the software development life cycle for ubiquitous systems. Approaches were classified according to the phase of the development cycle they addressed, identifying their main concerns and limitations. Results: We identified 128 papers reporting 132 approaches addressing issues related to different phases of the software development cycle for ubiquitous systems. Most approaches have been aimed at addressing the implementation, evolution/maintenance, and feedback phases, while others phases such as testing need more attention from researchers. Conclusion: We recommend to follow existing guidelines when conducting case studies to make the studies more reproducible and closer to real life cases. While some phases of the development cycle have been extensively explored, there is still room for research in other phases, toward a more agile and integrated cycle, from requirements to testing and feedback.
+ER  - 
+
+TY  - JOUR
+T1  - A systematic literature review on methods that handle multiple quality attributes in architecture-based self-adaptive systems
+AU  - Mahdavi-Hezavehi, Sara
+AU  - Durelli, Vinicius H.S.
+AU  - Weyns, Danny
+AU  - Avgeriou, Paris
+JO  - Information and Software Technology
+VL  - 90
+SP  - 1
+EP  - 26
+PY  - 2017
+DA  - 2017/10/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2017.03.013
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584917302860
+AB  - Context
+Handling multiple quality attributes (QAs) in the domain of self-adaptive systems is an understudied research area. One well-known approach to engineer adaptive software systems and fulfill QAs of the system is architecture-based self-adaptation. In order to develop models that capture the required knowledge of the QAs of interest, and to investigate how these models can be employed at runtime to handle multiple quality attributes, we need to first examine current architecture-based self-adaptive methods.
+Objective
+In this paper we review the state-of-the-art of architecture-based methods for handling multiple QAs in self-adaptive systems. We also provide a descriptive analysis of the collected data from the literature.
+Method
+We conducted a systematic literature review by performing an automatic search on 28 selected venues and books in the domain of self-adaptive systems. As a result, we selected 54 primary studies which we used for data extraction and analysis.
+Results
+Performance and cost are the most frequently addressed set of QAs. Current self-adaptive systems dealing with multiple QAs mostly belong to the domain of robotics and web-based systems paradigm. The most widely used mechanisms/models to measure and quantify QAs sets are QA data variables. After QA data variables, utility functions and Markov chain models are the most common models which are also used for decision making process and selection of the best solution in presence of many alternatives. The most widely used tools to deal with multiple QAs are PRISM and IBM's autonomic computing toolkit. KLAPER is the only language that has been specifically developed to deal with quality properties analysis.
+Conclusions
+Our results help researchers to understand the current state of research regarding architecture-based methods for handling multiple QAs in self-adaptive systems, and to identity areas for improvement in the future. To summarize, further research is required to improve existing methods performing tradeoff analysis and preemption, and in particular, new methods may be proposed to make use of models to handle multiple QAs and to enhance and facilitate the tradeoffs analysis and decision making mechanism at runtime.
+ER  - 
+
+TY  - JOUR
+T1  - Predicting resource consumption of Kubernetes container systems using resource models
+AU  - Turin, Gianluca
+AU  - Borgarelli, Andrea
+AU  - Donetti, Simone
+AU  - Damiani, Ferruccio
+AU  - Johnsen, Einar Broch
+AU  - Tapia Tarifa, S. Lizeth
+JO  - Journal of Systems and Software
+VL  - 203
+SP  - 111750
+PY  - 2023
+DA  - 2023/09/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2023.111750
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121223001450
+KW  - Kubernetes
+KW  - Microservices
+KW  - Cloud computing
+KW  - Resource models
+KW  - Resource prediction
+AB  - Cloud computing has radically changed the way organizations operate their Software by allowing them to achieve high availability of services at affordable cost. Containerized microservices is an enabling technology for this change, and advanced container orchestration platforms such as Kubernetes are used for service management. Despite the flourishing ecosystem of monitoring tools for such orchestration platforms, service management is still mainly a manual effort. The modeling of cloud computing systems is an essential step towards automatic management, but the modeling of cloud systems of such complexity remains challenging and, as yet, unaddressed. In fact modeling resource consumption will be a key to comparing the outcome of possible deployment scenarios. This paper considers how to derive resource models for cloud systems empirically. We do so based on models of deployed services in a formal modeling language with explicit CPU and memory resources; once the adherence to the real system is good enough, formal properties can be verified in the model. Targeting a likely microservices application, we present a model of Kubernetes developed in Real-Time ABS. We report on leveraging data collected empirically from small deployments to simulate the execution of higher intensity scenarios on larger deployments. We discuss the challenges and limitations that arise from this approach, and identify constraints under which we obtain satisfactory accuracy.
+ER  - 
+
+TY  - JOUR
+T1  - MeMo: Automatically identifying metamorphic relations in Javadoc comments for test automation
+AU  - Blasi, Arianna
+AU  - Gorla, Alessandra
+AU  - Ernst, Michael D.
+AU  - Pezzè, Mauro
+AU  - Carzaniga, Antonio
+JO  - Journal of Systems and Software
+VL  - 181
+SP  - 111041
+PY  - 2021
+DA  - 2021/11/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2021.111041
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121221001382
+KW  - Software testing
+KW  - Test oracle generation
+KW  - Natural language processing
+AB  - Software testing depends on effective oracles. Implicit oracles, such as checks for program crashes, are widely applicable but narrow in scope. Oracles based on formal specifications can reveal application-specific failures, but specifications are expensive to obtain and maintain. Metamorphic oracles are somewhere in-between. They test equivalence among different procedures to detect semantic failures. Until now, the identification of metamorphic relations has been a manual and expensive process, except for few specific domains where automation is possible. We present MeMo, a technique and a tool to automatically derive metamorphic equivalence relations from natural language documentation, and we use such metamorphic relations as oracles in automatically generated test cases. Our experimental evaluation demonstrates that 1) MeMo can effectively and precisely infer equivalence metamorphic relations, 2) MeMo complements existing state-of-the-art techniques that are based on dynamic program analysis, and 3) metamorphic relations discovered with MeMo effectively detect defects when used as test oracles in automatically-generated or manually-written test cases.
+ER  - 
+
+TY  - JOUR
+T1  - Model-based test suite generation for graph transformation system using model simulation and search-based techniques
+AU  - Kalaee, Akram
+AU  - Rafe, Vahid
+JO  - Information and Software Technology
+VL  - 108
+SP  - 1
+EP  - 29
+PY  - 2019
+DA  - 2019/04/01/
+SN  - 0950-5849
+DO  - https://doi.org/10.1016/j.infsof.2018.12.001
+UR  - https://www.sciencedirect.com/science/article/pii/S0950584918302477
+KW  - Model-based testing
+KW  - Search-based testing
+KW  - Graph transformation specification
+KW  - Data-flow coverage
+AB  - Context
+Test generation by model checking is a useful technique in model-based testing that allows automatic generation of test cases from models by utilizing the counter-examples/witnesses produced through a model checker. However, generating redundant test cases and state space explosion problem are two major obstacles to transfer this technique into industrial practice.
+Objective
+An idea to cope with these challenges consists in an intelligent model checking for exploring only a portion of the state space according to the test objectives. Motivated by this idea, we propose an approach that exploits meta-heuristic algorithms to adapt a model checker when used for integration testing of systems formally specified by graph transformations.
+Method
+This method is not based on model checking algorithms, but rather uses the modeling and simulation features of the underlying model checker. In the proposed approach, a population of test suites that each of which is a set of paths on the state space, is evolved towards satisfying the all def-use test objectives. Consequently, a test suite with high coverage is generated.
+Results
+To assess the efficiency of our approach, it is implemented in GROOVE, an open source toolset for designing and model checking graph transformation systems. Empirical results based on some case studies, confirm a significant improvement in terms of coverage, speed and memory usage, in comparison with the state of the art techniques.
+Conclusion
+Our analysis reveals that intelligent model checking can appropriately address the challenges of traditional model-checking-assisted testing. We further conclude that graph transformation specification is an efficient modeling solution to behavioral testing and graph transformation tools have a great potential for developing a model-based testing tool.
+ER  - 
+
+TY  - JOUR
+T1  - Landscaping systematic mapping studies in software engineering: A tertiary study
+AU  - Khan, Muhammad Uzair
+AU  - Sherin, Salman
+AU  - Iqbal, Muhammad Zohaib
+AU  - Zahid, Rubab
+JO  - Journal of Systems and Software
+VL  - 149
+SP  - 396
+EP  - 436
+PY  - 2019
+DA  - 2019/03/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2018.12.018
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121218302784
+KW  - Tertiary study
+KW  - Systematic mapping study
+KW  - Secondary study
+KW  - Survey
+KW  - Software engineering
+AB  - Context
+A number of Systematic Mapping Studies (SMSs) that cover Software Engineering (SE) are reported in literature. Tertiary studies synthesize the secondary studies to provide a holistic view of an area.
+Objectives
+We synthesize SMSs in SE to provide insights into existing SE areas and to investigate the trends and quality of SMSs.
+Methodology
+We use Systematic Literature Review protocol to analyze and map the SMSs in SE, till August 2017, to SE Body of Knowledge (SWEBOK).
+Results
+We analyze 210 SMSs and results show that: (1) Software design and construction are most active areas in SE; (2) Some areas lack SMSs, including mathematical foundations, software configuration management, and SE tools; (3) The quality of SMSs is improving with time; (4) SMSs in journals have higher quality than SMSs in conferences and are cited more often; (5) Low quality in SMSs can be attributed to a lack of quality assessment in SMSs and not reporting information about the primary studies.
+Conclusion
+There is a potential for more SMSs in some SE areas. A number of SMSs do not provide the required information for an SMS, which leads to a low quality score.
+ER  - 
+
+TY  - JOUR
+T1  - A taxonomy of service identification approaches for legacy software systems modernization
+AU  - Abdellatif, Manel
+AU  - Shatnawi, Anas
+AU  - Mili, Hafedh
+AU  - Moha, Naouel
+AU  - Boussaidi, Ghizlane El
+AU  - Hecht, Geoffrey
+AU  - Privat, Jean
+AU  - Guéhéneuc, Yann-Gaël
+JO  - Journal of Systems and Software
+VL  - 173
+SP  - 110868
+PY  - 2021
+DA  - 2021/03/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2020.110868
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121220302582
+KW  - Service identification
+KW  - Microservices
+KW  - Taxonomy
+KW  - Legacy system
+KW  - Migration
+AB  - The success of modernizing legacy software systems to Service-Oriented Architecture (SOA) depends on Service Identification Approaches (SIAs), which identify reusable functionalities that could become services. The literature describes several SIAs. However, the selection of an identification approach that is suitable for a practitioner is difficult because it depends on several factors, including the goal of modernization, the available legacy artifacts, the organization’s development process, the desired output, and the usability of the approach. Accordingly, to select a suitable service identification approach, a practitioner must have a comprehensive view of existing techniques. We report a systematic literature review (SLR) that covers 41 SIAs based on software-systems analyses. Based on this SLR, we create a taxonomy of SIAs and build a multi-layer classification of existing identification approaches. We start from a high-level classification based on the used inputs, the applied processes, the given outputs, and the usability of the SIAs. We then divide each category into a fine-grained taxonomy that helps practitioners in selecting a suitable approach for identifying services in legacy software systems. We build our SLR based on our experience with legacy software modernization, on discussions and experiences working with industrial partners, and analyses of existing SIAs. We validate the correctness and the coverage of our review with industrial experts who modernize(d) legacy software systems to SOA. The results show that our classification conforms to the industrial experts’ experiences. We also show that most of the studied SIAs are still at their infancy. Finally, we identify the main challenges that SIAs need to address, to improve their quality.
+ER  - 
+
+TY  - JOUR
+T1  - Catalog and detection techniques of microservice anti-patterns and bad smells: A tertiary study
+AU  - Cerny, Tomas
+AU  - Abdelfattah, Amr S.
+AU  - Maruf, Abdullah Al
+AU  - Janes, Andrea
+AU  - Taibi, Davide
+JO  - Journal of Systems and Software
+VL  - 206
+SP  - 111829
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 0164-1212
+DO  - https://doi.org/10.1016/j.jss.2023.111829
+UR  - https://www.sciencedirect.com/science/article/pii/S0164121223002248
+KW  - Microservices
+KW  - Anti-patterns
+KW  - Antipatterns
+KW  - Anti patterns
+KW  - Bad smells
+KW  - Software maintenance
+AB  - Background:
+Various works investigated microservice anti-patterns and bad smells in the past few years. We identified seven secondary publications that summarize these, but they have little overlap in purpose and often use different terms to describe the identified anti-patterns and smells.
+Objective:
+This work catalogs recurring bad design practices known as anti-patterns and bad smells for microservice architectures, and provides a classification into categories as well as methods for detecting these practices.
+Method:
+We conducted a systematic literature review in the form of a tertiary study targeting secondary studies identifying poor design practices for microservices.
+Results:
+We provide a comprehensive catalog of 58 disjoint anti-patterns, grouped into five categories, which we derived from 203 originally identified anti-patterns for microservices.
+Conclusion:
+The results provide a reference to microservice developers to design better-quality systems and researchers who aim to detect system quality based on anti-patterns. It also serves as an anti-pattern catalog for development-aiding tools, which are not currently available for microservice system development but could mitigate quality degradation throughout system evolution.
+ER  - 

@@ -1,0 +1,261 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="pqz9e6wMu_RqBieyKPSj" name="Page-1">
+    <mxGraphModel dx="3557" dy="1191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2460" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#000000;" value="AI-Driven Model Engineering Lifecycle &amp;amp; Artifact Taxonomy" vertex="1">
+          <mxGeometry height="32" width="2060" x="200" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;fontSize=11;fontStyle=2;align=center;verticalAlign=middle;fontColor=#333333;" value="12-Stage Landscape Map (Section 6.1a)  ·  N = 77 Primary Studies  ·  Evidence Density Shown by Line-Weight &amp;amp; Border Style" vertex="1">
+          <mxGeometry height="20" width="2060" x="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="hr" parent="1" style="line;strokeWidth=2;html=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="2340" x="60" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cA" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontSize=12;fontStyle=1;fontColor=#000000;" value="◆ CLUSTER A — EARLY-STAGE FORWARD SYNTHESIS  ·  STAGES 1–7  ·  HEAVY EMPIRICAL EVIDENCE" vertex="1">
+          <mxGeometry height="34" width="1330" x="70" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cB" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=6 3;fontSize=10;fontStyle=1;fontColor=#000000;" value="◆ CLUSTER B&lt;br&gt;REVERSE ENG.&lt;br&gt;(Stage 8)" vertex="1">
+          <mxGeometry height="34" width="180" x="1420" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cC" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=3 3;fontSize=10;fontStyle=1;fontColor=#000000;" value="◆ CLUSTER C — ZERO-EVIDENCE RUNTIME GAPS  ·  STAGES 9–11  ·  NO PRIMARY STUDIES" vertex="1">
+          <mxGeometry height="34" width="560" x="1620" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cD" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#000000;" value="◆ CLUSTER D&lt;br&gt;COLLABORATIVE (Stage 12)" vertex="1">
+          <mxGeometry height="34" width="180" x="2200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="spine" edge="1" parent="1" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=6;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="200" as="sourcePoint" />
+            <mxPoint x="2360" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="spineLabel" parent="1" style="text;html=1;fontSize=9;fontStyle=2;align=left;verticalAlign=middle;fontColor=#333333;" value="Model-Engineering Lifecycle Timeline  ▶" vertex="1">
+          <mxGeometry height="18" width="300" x="90" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;1&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="105" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;html=1;" value="&lt;b&gt;Requirements Understanding&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;RUPPs · entity extraction&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;GPT-4, spaCy, KeyBERT&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="80" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick1" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="225" as="sourcePoint" />
+            <mxPoint x="130" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;2&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="285" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Requirements-to-Model&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;UML / BPMN / PlantUML ASTs&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Seq2AST T5, GPT-4, DeepSeek-V3&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="260" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick2" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="225" as="sourcePoint" />
+            <mxPoint x="310" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;3&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="465" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Model Completion&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;classes · attributes · metaclasses&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;MemoRec (CF), MAGDA (GPT-4)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="440" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick3" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="225" as="sourcePoint" />
+            <mxPoint x="490" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;4&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="645" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Quality Assurance&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;grading · defect detection · scoring&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;GPT-3.5 / GPT-4o + CoT&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="620" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick4" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="225" as="sourcePoint" />
+            <mxPoint x="670" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;5&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="825" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Model Repair&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;hallucinations · anti-patterns · invariants&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;AGREE-Dog, SMT JKind, Ecore scanners&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="800" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick5" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="225" as="sourcePoint" />
+            <mxPoint x="850" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;6&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="1005" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Model Transformation&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;inter-model link prediction across views&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Heterogeneous GNNs (PyTorch Geom.)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="980" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick6" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1030" y="225" as="sourcePoint" />
+            <mxPoint x="1030" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;7&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="1185" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Model-to-Code Synthesis&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Java skeletons · Solidity · MQL4&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;GPT-4V, VeriGen, SCEditor-Web&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="100" x="1160" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick7" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="225" as="sourcePoint" />
+            <mxPoint x="1210" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;8&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="1485" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=6 3;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Code-to-Model Extraction&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;UML class + OCL from Java / Python&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Mistral-7B QLoRA (LLM4Models)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="130" x="1445" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick8" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1510" y="225" as="sourcePoint" />
+            <mxPoint x="1510" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop8" edge="1" parent="1" source="m8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=4 4;fontSize=9;fontStyle=2;fontColor=#333333;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="m6" value="reverse-engineering feedback loop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="420" />
+              <mxPoint x="1030" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=3 3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;9&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="1685" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=3 3;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Model–Code&lt;br&gt;Synchronisation&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;fontStyle=3;&quot;&gt;ZERO EVIDENCE&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px;&quot;&gt;no primary empirical study&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="110" x="1655" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick9" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1710" y="225" as="sourcePoint" />
+            <mxPoint x="1710" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=3 3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;10&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="1845" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=3 3;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Model Evolution&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;refactoring · metamodel co-evolution&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;fontStyle=3;&quot;&gt;ZERO EVIDENCE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="110" x="1815" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick10" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1870" y="225" as="sourcePoint" />
+            <mxPoint x="1870" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=3 3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;11&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="2005" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=3 3;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Runtime Modelling&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;live telemetry · models@run.time&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;fontStyle=3;&quot;&gt;ZERO EVIDENCE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="110" x="1975" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick11" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2030" y="225" as="sourcePoint" />
+            <mxPoint x="2030" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bandZero" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=8 4;fontSize=9;fontStyle=2;fontColor=#333333;" value="E M P T Y   S P A C E   I N   T H E   L I T E R A T U R E" vertex="1">
+          <mxGeometry height="22" width="430" x="1655" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="m12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;12&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="2255" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="b12" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;verticalAlign=top;spacingTop=4;" value="&lt;b&gt;Collaborative&lt;br&gt;Modelling&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;real-time multi-user blended · XAI log&lt;/font&gt;&lt;hr&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;On-device LLM · EAST-ADL · Xtext&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="2220" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tick12" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2280" y="225" as="sourcePoint" />
+            <mxPoint x="2280" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hr2" parent="1" style="line;strokeWidth=1;html=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="2340" x="60" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="taxTitle" parent="1" style="text;html=1;fontSize=12;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" value="DIMENSION C — OUTPUT ARTIFACT TAXONOMY (per §6.1a)" vertex="1">
+          <mxGeometry height="22" width="500" x="70" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="art1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Structural Models&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;UML Class · Object · Ecore · Domain&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="70" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Behavioural &amp;amp; Process&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;BPMN 2.0 · Activity · Statecharts&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="355" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Interaction&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;UML Sequence · Use Case&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="640" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Architectural &amp;amp; Embedded&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;SysML v2 · AADL · EAST-ADL&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="925" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Formal Constraints&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;OCL · AgileUML KM3 · AGREE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="1210" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ DSL Grammars&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;TextX PEG/EBNF · DSML schemas&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="1495" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Source Code Artifacts&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Java · Python · Solidity smart contracts&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="270" x="1780" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="art8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=6 3;fontSize=10;fontColor=#000000;verticalAlign=middle;align=left;spacingLeft=6;" value="▸ Natural-Language Outputs&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;XAI change-logs · design rationale summaries&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="335" x="2065" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="hr3" parent="1" style="line;strokeWidth=1;html=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="2340" x="60" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="lgTitle" parent="1" style="text;html=1;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" value="LEGEND —" vertex="1">
+          <mxGeometry height="22" width="90" x="70" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lg1s" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="14" width="34" x="170" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="lg1t" parent="1" style="text;html=1;fontSize=10;align=left;verticalAlign=middle;fontColor=#000000;" value="Thick solid = heavy empirical evidence" vertex="1">
+          <mxGeometry height="22" width="280" x="210" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lg2s" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=6 3;" value="" vertex="1">
+          <mxGeometry height="14" width="34" x="500" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="lg2t" parent="1" style="text;html=1;fontSize=10;align=left;verticalAlign=middle;fontColor=#000000;" value="Long dash = emerging / isolated evidence" vertex="1">
+          <mxGeometry height="22" width="300" x="540" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lg3s" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=3 3;" value="" vertex="1">
+          <mxGeometry height="14" width="34" x="850" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="lg3t" parent="1" style="text;html=1;fontSize=10;align=left;verticalAlign=middle;fontColor=#000000;" value="Short dash = ZERO-EVIDENCE gap (no primary study)" vertex="1">
+          <mxGeometry height="22" width="360" x="890" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lg4s" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=4 4;" value="" vertex="1">
+          <mxGeometry height="14" width="34" x="1270" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="lg4t" parent="1" style="text;html=1;fontSize=10;align=left;verticalAlign=middle;fontColor=#000000;" value="Dashed arrow = feedback loop (reverse-engineering)" vertex="1">
+          <mxGeometry height="22" width="400" x="1310" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="hr4" parent="1" style="line;strokeWidth=2;html=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="2340" x="60" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="foot" parent="1" style="text;html=1;fontSize=9;fontStyle=2;align=center;verticalAlign=middle;fontColor=#333333;" value="Source: AI-Driven Model Engineering SLR Master Workbook — sheets 00_Overview_&amp;amp;_PRISMA, Master Included List, Data Extraction, Quality Assessment.  Section 6.1a lifecycle taxonomy.  N = 77 included primary studies.  Stages 9–11 unrepresented in primary empirical literature." vertex="1">
+          <mxGeometry height="22" width="2300" x="80" y="660" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

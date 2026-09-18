@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ADP470S — Term 1 Study Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #080c14;
+    --bg2: #0d1320;
+    --bg3: #111827;
+    --card: #131c2e;
+    --card-hover: #1a2540;
+    --border: #1e2d47;
+    --border-bright: #2a3f62;
+    --accent: #4f9eff;
+    --accent2: #7c5cfc;
+    --accent3: #00d9a3;
+    --accent4: #ff6b6b;
+    --accent5: #ffa94d;
+    --text: #e8edf5;
+    --text-muted: #7a8ba8;
+    --text-dim: #4a5a72;
+    --mono: 'Space Mono', monospace;
+    --heading: 'Syne', sans-serif;
+    --body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── NOISE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── GRID BACKGROUND ─── */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(79,158,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,158,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── HERO GLOW ─── */
+  .hero-glow {
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(79,158,255,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(8,12,20,0.85);
+    backdrop-filter: blur(16px);
+    z-index: 100;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-badge {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-title {
+    font-family: var(--heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+
+  nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    border-color: var(--border-bright);
+    background: rgba(79,158,255,0.06);
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 70px 0 50px;
+    text-align: center;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(79,158,255,0.08);
+    border: 1px solid rgba(79,158,255,0.2);
+    border-radius: 100px;
+    padding: 5px 14px 5px 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent3);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
+    font-family: var(--heading);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, #e8edf5 30%, var(--accent) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+    font-weight: 300;
+  }
+
+  /* ─── PROGRESS BAR ─── */
+  .progress-bar-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .progress-bar-inner {
+    width: 120px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    width: 16%;
+    background: linear-gradient(90deg, var(--accent), var(--accent3));
+    border-radius: 100px;
+  }
+
+  /* ─── STUDY ORDER ─── */
+  .study-order {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 56px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .study-order-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .study-order h3 {
+    font-family: var(--heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  .order-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .order-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .order-step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(79,158,255,0.12);
+    border: 1px solid rgba(79,158,255,0.3);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    flex-shrink: 0;
+  }
+
+  .order-arrow {
+    color: var(--text-dim);
+    font-size: 16px;
+  }
+
+  /* ─── SECTION HEADER ─── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+
+  .section-title {
+    font-family: var(--heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .section-accent {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ─── TOPIC SECTION ─── */
+  .topic-section {
+    margin-bottom: 64px;
+    scroll-margin-top: 90px;
+  }
+
+  .topic-intro {
+    background: linear-gradient(135deg, rgba(13,19,32,0.9), rgba(17,24,39,0.9));
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-color, var(--accent));
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+
+  .topic-intro p {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .topic-intro strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .topic-intro .so-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .so-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(79,158,255,0.1);
+    border: 1px solid rgba(79,158,255,0.2);
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── RESOURCE GRID ─── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+  }
+
+  .resource-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .resource-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(79,158,255,0.04), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .resource-card:hover {
+    background: var(--card-hover);
+    border-color: var(--border-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  .resource-card:hover::before { opacity: 1; }
+
+  .resource-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .icon-yt   { background: rgba(255,0,0,0.12); }
+  .icon-li   { background: rgba(0,119,181,0.12); }
+  .icon-or   { background: rgba(255,110,44,0.12); }
+  .icon-web  { background: rgba(0,217,163,0.12); }
+  .icon-book { background: rgba(255,169,77,0.12); }
+  .icon-tool { background: rgba(124,92,252,0.12); }
+
+  .resource-info { flex: 1; min-width: 0; }
+
+  .resource-platform {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .platform-yt   { color: #ff4444; }
+  .platform-li   { color: #0077b5; }
+  .platform-or   { color: #ff6e2c; }
+  .platform-web  { color: var(--accent3); }
+  .platform-book { color: var(--accent5); }
+  .platform-tool { color: var(--accent2); }
+
+  .resource-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+
+  .resource-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.45;
+  }
+
+  .resource-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 10px;
+    font-family: var(--mono);
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  .tag-beginner  { background: rgba(0,217,163,0.1); color: var(--accent3); border: 1px solid rgba(0,217,163,0.2); }
+  .tag-essential { background: rgba(79,158,255,0.1); color: var(--accent);  border: 1px solid rgba(79,158,255,0.2); }
+  .tag-advanced  { background: rgba(255,107,107,0.1); color: var(--accent4); border: 1px solid rgba(255,107,107,0.2); }
+  .tag-visual    { background: rgba(124,92,252,0.1); color: var(--accent2); border: 1px solid rgba(124,92,252,0.2); }
+  .tag-free      { background: rgba(255,169,77,0.1); color: var(--accent5); border: 1px solid rgba(255,169,77,0.2); }
+
+  .resource-arrow {
+    color: var(--text-dim);
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    margin-top: 2px;
+  }
+
+  .resource-card:hover .resource-arrow {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+  }
+
+  /* ─── BIG O CHEAT CARD ─── */
+  .cheat-sheet {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 56px;
+    scroll-margin-top: 90px;
+  }
+
+  .cheat-title {
+    font-family: var(--heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .complexity-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .complexity-table th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .complexity-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(30,45,71,0.5);
+    vertical-align: middle;
+  }
+
+  .complexity-table tr:last-child td { border-bottom: none; }
+  .complexity-table tr:hover td { background: rgba(79,158,255,0.03); }
+
+  .complexity-table td:first-child {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+  }
+
+  .complexity-table td:nth-child(2) {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .complexity-table td:nth-child(3) {
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+
+  .bar-cell { display: flex; align-items: center; gap: 8px; }
+
+  .bar {
+    height: 6px;
+    border-radius: 100px;
+    flex-shrink: 0;
+  }
+
+  /* ─── CODE SNIPPET ─── */
+  .code-block {
+    background: #06090f;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-x: auto;
+    margin-bottom: 56px;
+    scroll-margin-top: 90px;
+  }
+
+  .code-block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .code-block-title {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .code-dots { display: flex; gap: 6px; }
+
+  .code-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .kw  { color: #7c5cfc; }
+  .fn  { color: #4f9eff; }
+  .cm  { color: #3d5068; font-style: italic; }
+  .nm  { color: #00d9a3; }
+  .st  { color: #ffa94d; }
+  .op  { color: #ff6b6b; }
+
+  /* ─── WEEKLY SCHEDULE ─── */
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 56px;
+    scroll-margin-top: 90px;
+  }
+
+  .schedule-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .schedule-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    background: radial-gradient(circle, var(--glow-color, rgba(79,158,255,0.08)), transparent 70%);
+  }
+
+  .schedule-week {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+  }
+
+  .schedule-topic {
+    font-family: var(--heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .schedule-so {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+
+  .schedule-tasks {
+    list-style: none;
+  }
+
+  .schedule-tasks li {
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 3px 0;
+    padding-left: 14px;
+    position: relative;
+    font-weight: 300;
+  }
+
+  .schedule-tasks li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color, var(--accent));
+  }
+
+  /* ─── TIP CARDS ─── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+    margin-bottom: 64px;
+  }
+
+  .tip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .tip-emoji { font-size: 24px; margin-bottom: 10px; }
+
+  .tip-title {
+    font-family: var(--heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .tip-body {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+    font-family: var(--mono);
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 48px 0;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 600px) {
+    .study-order { flex-direction: column; }
+    .order-steps { flex-direction: column; }
+    .order-arrow { transform: rotate(90deg); }
+    .header-inner { gap: 10px; }
+    nav { display: none; }
+  }
+
+  /* ─── FADE IN ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .topic-section {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .topic-section:nth-child(1) { animation-delay: 0.05s; }
+  .topic-section:nth-child(2) { animation-delay: 0.10s; }
+  .topic-section:nth-child(3) { animation-delay: 0.15s; }
+  .topic-section:nth-child(4) { animation-delay: 0.20s; }
+  .topic-section:nth-child(5) { animation-delay: 0.25s; }
+</style>
+</head>
+<body>
+
+<div class="hero-glow"></div>
+
+<!-- ─── HEADER ─────────────────────────────── -->
+<header>
+  <div class="wrapper">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-badge">ADP470S</span>
+        <span class="logo-title">Term 1 Study Hub</span>
+      </div>
+      <nav>
+        <a href="#big-o">Big O</a>
+        <a href="#recursion">Recursion</a>
+        <a href="#sort">Sorting</a>
+        <a href="#arrays">Arrays</a>
+        <a href="#linked">Linked Lists</a>
+        <a href="#schedule">Schedule</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ─── HERO ────────────────────────────────── -->
+<section class="hero">
+  <div class="wrapper">
+    <div class="hero-tag">CPUT · Advanced Diploma ICT · NQF Level 7</div>
+    <h1>Applications Development<br>Practice 4</h1>
+    <p>Your complete Term 1 resource guide — curated books, videos, tools and tutorials for every subject outcome.</p>
+    <div class="progress-bar-wrap">
+      <span>Term 1 of 4</span>
+      <div class="progress-bar-inner"><div class="progress-bar-fill"></div></div>
+      <span style="color:var(--accent3)">25%</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrapper">
+
+  <!-- ─── STUDY ORDER ─── -->
+  <div class="study-order">
+    <div class="study-order-icon">🗺️</div>
+    <div>
+      <h3>Recommended Study Order</h3>
+      <div class="order-steps">
+        <div class="order-step"><div class="order-step-num">1</div><span>Big O & Complexity</span></div>
+        <span class="order-arrow">→</span>
+        <div class="order-step"><div class="order-step-num">2</div><span>Recursion vs Iteration</span></div>
+        <span class="order-arrow">→</span>
+        <div class="order-step"><div class="order-step-num">3</div><span>Linear & Binary Search</span></div>
+        <span class="order-arrow">→</span>
+        <div class="order-step"><div class="order-step-num">4</div><span>Bubble Sort</span></div>
+        <span class="order-arrow">→</span>
+        <div class="order-step"><div class="order-step-num">5</div><span>Arrays → Linked Lists</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SO1 + SO3 — BIG O & COMPLEXITY             -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="topic-section" id="big-o">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-accent" style="background:var(--accent)"></span>
+      <h2 class="section-title">Big O Notation & Algorithm Complexity</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="topic-intro" style="--accent-color: var(--accent)">
+      <div class="so-tags">
+        <span class="so-tag">SO1</span>
+        <span class="so-tag">SO3</span>
+      </div>
+      <p>The foundation of everything. <strong>Big O describes how an algorithm scales</strong> as input grows. Your <code>Big_O.docx</code> file is a goldmine — every method has complexity annotated. Study <code>addup()</code> → O(n), <code>bubbleSort()</code> → O(n²), and <code>fib()</code> → O(2ⁿ). Also covers <strong>Linear Search vs Binary Search</strong> best/average/worst cases.</p>
+    </div>
+
+    <div class="resource-grid">
+      <a class="resource-card" href="https://www.youtube.com/watch?v=0IAPZzGSbME" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Abdul Bari</div>
+          <div class="resource-name">Introduction to Algorithms & Big O</div>
+          <div class="resource-desc">The best free DSA series on YouTube. Bari's lecture style matches your subject closely. Start from video 1.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=v4cd1O4zkGw" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — HackerRank</div>
+          <div class="resource-name">Big O Notation (HackerRank)</div>
+          <div class="resource-desc">Short, sharp 8-minute explanation. Great for cementing the concept before diving deeper.</div>
+          <span class="resource-tag tag-beginner">Beginner</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=Mo4vesaut8g" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — CS Dojo</div>
+          <div class="resource-name">Introduction to Big O Notation</div>
+          <div class="resource-desc">Extremely beginner-friendly walkthrough of O(1), O(n), O(n²) with clear examples.</div>
+          <span class="resource-tag tag-beginner">Beginner</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.linkedin.com/learning/programming-foundations-algorithms" target="_blank">
+        <div class="resource-icon icon-li">🔗</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-li">LinkedIn Learning</div>
+          <div class="resource-name">Programming Foundations: Algorithms</div>
+          <div class="resource-desc">By Joe Marini. Covers Big O, search algorithms, sorting. ~2 hours. Excellent structured course.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.oreilly.com/library/view/a-common-sense-guide/9781680508048/" target="_blank">
+        <div class="resource-icon icon-or">📙</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-or">O'Reilly Books</div>
+          <div class="resource-name">A Common-Sense Guide to DSA — Jay Wengrow</div>
+          <div class="resource-desc">The most readable DSA book. Chapters 1–3 cover Big O in plain English without heavy math.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.bigocheatsheet.com" target="_blank">
+        <div class="resource-icon icon-web">🌐</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-web">Website — Free Tool</div>
+          <div class="resource-name">Big O Cheat Sheet</div>
+          <div class="resource-desc">bigocheatsheet.com — reference for every common algorithm's time and space complexity. Bookmark this.</div>
+          <span class="resource-tag tag-free">Free</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=RGuJga2nl_c" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Abdul Bari</div>
+          <div class="resource-name">Linear Search vs Binary Search</div>
+          <div class="resource-desc">Covers SO3 directly — best, average, worst case analysis for both. Matches your course content exactly.</div>
+          <span class="resource-tag tag-essential">Essential · SO3</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://visualgo.net/en/sorting" target="_blank">
+        <div class="resource-icon icon-tool">⚙️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-tool">Interactive Tool</div>
+          <div class="resource-name">VisuAlgo — Algorithm Visualiser</div>
+          <div class="resource-desc">Animate any algorithm step-by-step. Watch Big O differences come alive. Essential study companion.</div>
+          <span class="resource-tag tag-visual">Visual</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── BIG O CHEAT SHEET ─── -->
+  <div class="cheat-sheet" id="cheatsheet">
+    <div class="cheat-title">📊 Big O Quick Reference — From Your Big_O.docx</div>
+    <table class="complexity-table">
+      <thead>
+        <tr>
+          <th>Notation</th>
+          <th>Name</th>
+          <th>Example in Your Code</th>
+          <th>Growth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O(1)</td>
+          <td>Constant</td>
+          <td>Single operation, no loop</td>
+          <td><div class="bar-cell"><div class="bar" style="width:20px;background:#00d9a3"></div><span style="color:#00d9a3;font-size:12px">Excellent</span></div></td>
+        </tr>
+        <tr>
+          <td>O(n)</td>
+          <td>Linear</td>
+          <td>addup(), linearSearch(), factorial(), fact()</td>
+          <td><div class="bar-cell"><div class="bar" style="width:60px;background:#4f9eff"></div><span style="color:#4f9eff;font-size:12px">Good</span></div></td>
+        </tr>
+        <tr>
+          <td>O(n log n)</td>
+          <td>Linearithmic</td>
+          <td>Merge Sort, Quick Sort</td>
+          <td><div class="bar-cell"><div class="bar" style="width:90px;background:#ffa94d"></div><span style="color:#ffa94d;font-size:12px">Fair</span></div></td>
+        </tr>
+        <tr>
+          <td>O(n²)</td>
+          <td>Quadratic</td>
+          <td>bubbleSort() — nested loops</td>
+          <td><div class="bar-cell"><div class="bar" style="width:130px;background:#ff9944"></div><span style="color:#ff9944;font-size:12px">Poor</span></div></td>
+        </tr>
+        <tr>
+          <td>O(2ⁿ)</td>
+          <td>Exponential</td>
+          <td>fib() — recursive Fibonacci</td>
+          <td><div class="bar-cell"><div class="bar" style="width:180px;background:#ff6b6b"></div><span style="color:#ff6b6b;font-size:12px">Terrible</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SO2 — RECURSION                            -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="topic-section" id="recursion">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-accent" style="background:var(--accent2)"></span>
+      <h2 class="section-title">Recursion vs Iteration</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="topic-intro" style="--accent-color: var(--accent2)">
+      <div class="so-tags"><span class="so-tag">SO2</span></div>
+      <p>Your <code>Big_O.docx</code> has <strong>both versions side-by-side</strong>: iterative <code>factorial()</code> → O(n) time, O(1) space vs recursive <code>fact()</code> → O(n) time, O(n) space. Also <code>fibonacciSequenceViaIteration()</code> vs recursive <code>fib()</code> → O(2ⁿ). The key insight is that <strong>recursion uses call stack space</strong> even when time complexity looks the same.</p>
+    </div>
+
+    <div class="resource-grid">
+      <a class="resource-card" href="https://www.youtube.com/watch?v=IJDJ0kBx2LM" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Reducible</div>
+          <div class="resource-name">What is Recursion? (Best Visual)</div>
+          <div class="resource-desc">Stunning visual breakdown of how the call stack works with recursion. Best explanation on YouTube.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=ngCos392W4w" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Computerphile</div>
+          <div class="resource-name">Recursion — "Don't Fear It"</div>
+          <div class="resource-desc">Clears up common confusion about recursion with Fibonacci and factorial walkthrough. Very accessible.</div>
+          <span class="resource-tag tag-beginner">Beginner</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=KEEKn7Me-ms" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Abdul Bari</div>
+          <div class="resource-name">Recursion & Tree of Calls</div>
+          <div class="resource-desc">Shows exactly why recursive Fibonacci is O(2ⁿ) by drawing the full call tree. Critical for your exam.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=oBt53YbR9Kk" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — freeCodeCamp</div>
+          <div class="resource-name">Dynamic Programming — Memoization (Fibonacci)</div>
+          <div class="resource-desc">Learn how to fix the O(2ⁿ) Fibonacci problem. Great context for understanding why complexity matters.</div>
+          <span class="resource-tag tag-advanced">Advanced</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.linkedin.com/learning/java-data-structures-algorithms-part-1" target="_blank">
+        <div class="resource-icon icon-li">🔗</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-li">LinkedIn Learning</div>
+          <div class="resource-name">Java Data Structures & Algorithms — Part 1</div>
+          <div class="resource-desc">Covers recursion section in Java specifically — aligns perfectly with your Big_O.docx code.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.oreilly.com/library/view/a-common-sense-guide/9781680508048/" target="_blank">
+        <div class="resource-icon icon-or">📙</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-or">O'Reilly Books</div>
+          <div class="resource-name">Wengrow — Chapter on Recursion</div>
+          <div class="resource-desc">Chapter 11 covers recursion vs iteration, base cases, and space complexity of recursive calls clearly.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://pythontutor.com/java.html" target="_blank">
+        <div class="resource-icon icon-tool">⚙️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-tool">Interactive Tool</div>
+          <div class="resource-name">Python Tutor — Java Call Stack Visualiser</div>
+          <div class="resource-desc">Paste your fact() or fib() code and watch the call stack build and unwind in real time. Invaluable.</div>
+          <span class="resource-tag tag-visual">Visual</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── CODE SNIPPET ─── -->
+  <div class="code-block">
+    <div class="code-block-header">
+      <span class="code-block-title">From your Big_O.docx — Key complexity comparison</span>
+      <div class="code-dots">
+        <div class="code-dot" style="background:#ff6b6b"></div>
+        <div class="code-dot" style="background:#ffa94d"></div>
+        <div class="code-dot" style="background:#00d9a3"></div>
+      </div>
+    </div>
+    <span class="cm">// ─── ITERATIVE FACTORIAL ─── Time O(n) · Space O(1)</span><br>
+    <span class="kw">public static int</span> <span class="fn">factorial</span>(<span class="kw">int</span> n) {<br>
+    &nbsp;&nbsp;<span class="kw">int</span> <span class="nm">prod</span> = <span class="op">1</span>;<br>
+    &nbsp;&nbsp;<span class="kw">for</span> (<span class="kw">int</span> <span class="nm">i</span> = <span class="op">1</span>; i &lt;= n; i++) { <span class="cm">// n iterations</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="nm">prod</span> *= i;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;<span class="kw">return</span> <span class="nm">prod</span>;<br>
+    }<br><br>
+    <span class="cm">// ─── RECURSIVE FACTORIAL ─── Time O(n) · Space O(n) ← stack frames!</span><br>
+    <span class="kw">public static int</span> <span class="fn">fact</span>(<span class="kw">int</span> n) {<br>
+    &nbsp;&nbsp;<span class="kw">if</span> (n == <span class="op">0</span>) <span class="kw">return</span> <span class="op">1</span>; <span class="cm">// base case</span><br>
+    &nbsp;&nbsp;<span class="kw">else return</span> n * <span class="fn">fact</span>(n - <span class="op">1</span>); <span class="cm">// recursive case — n calls on stack</span><br>
+    }<br><br>
+    <span class="cm">// ─── RECURSIVE FIBONACCI ─── Time O(2ⁿ) · duplicated calls!</span><br>
+    <span class="kw">public static int</span> <span class="fn">fib</span>(<span class="kw">int</span> n) {<br>
+    &nbsp;&nbsp;<span class="kw">if</span> (n == <span class="op">0</span> || n == <span class="op">1</span>) <span class="kw">return</span> <span class="op">1</span>;<br>
+    &nbsp;&nbsp;<span class="kw">else return</span> <span class="fn">fib</span>(n - <span class="op">1</span>) + <span class="fn">fib</span>(n - <span class="op">2</span>); <span class="cm">// branches double each level</span><br>
+    }
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SO4 — BUBBLE SORT                          -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="topic-section" id="sort">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-accent" style="background:var(--accent3)"></span>
+      <h2 class="section-title">Bubble Sort & Case Analysis</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="topic-intro" style="--accent-color: var(--accent3)">
+      <div class="so-tags"><span class="so-tag">SO4</span></div>
+      <p>Your <code>bubbleSort()</code> in <code>Big_O.docx</code> has the comment showing steps as <strong>(n-1)(n-1) = n²-2n+1</strong>, simplifying to O(n²). You need to know all three cases: <strong>Best case</strong> (already sorted) = O(n) with optimised version, <strong>Worst case</strong> (reverse sorted) = O(n²), <strong>Average case</strong> = O(n²). Also refer to your <code>Bubble_Sort_and_Matrix_Multiplication.pptx</code>.</p>
+    </div>
+
+    <div class="resource-grid">
+      <a class="resource-card" href="https://www.youtube.com/watch?v=uJLwnsLn0_Q" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Abdul Bari</div>
+          <div class="resource-name">Bubble Sort with Best/Worst/Average Analysis</div>
+          <div class="resource-desc">Covers all three cases with step counting, exactly what your exam will test. Essential watch.</div>
+          <span class="resource-tag tag-essential">Essential · SO4</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=6Gv8vg0kcHc" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Michael Sambol</div>
+          <div class="resource-name">Bubble Sort in 2 Minutes</div>
+          <div class="resource-desc">Fastest visual walkthrough of the algorithm. Perfect for a quick review before tests.</div>
+          <span class="resource-tag tag-beginner">Beginner</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://visualgo.net/en/sorting" target="_blank">
+        <div class="resource-icon icon-tool">⚙️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-tool">Interactive Tool</div>
+          <div class="resource-name">VisuAlgo — Bubble Sort Visualiser</div>
+          <div class="resource-desc">Step through bubble sort at your own pace. Toggle between best, worst and average case inputs.</div>
+          <span class="resource-tag tag-visual">Visual</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=xli_FI7CuzA" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — CS50 Harvard</div>
+          <div class="resource-name">Sorting Algorithms (CS50 2023)</div>
+          <div class="resource-desc">Harvard's legendary CS50 sorting lecture. Shows bubble sort with beautiful real-world analogies.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.linkedin.com/learning/programming-foundations-algorithms" target="_blank">
+        <div class="resource-icon icon-li">🔗</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-li">LinkedIn Learning</div>
+          <div class="resource-name">Programming Foundations: Algorithms — Sorting Section</div>
+          <div class="resource-desc">The sorting module covers bubble sort analysis clearly. Part of the broader algorithms course.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.toptal.com/developers/sorting-algorithms" target="_blank">
+        <div class="resource-icon icon-tool">⚙️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-tool">Interactive Tool</div>
+          <div class="resource-name">Sorting Algorithm Animations — Toptal</div>
+          <div class="resource-desc">Compare all sorting algorithms side by side including best/worst/average scenarios simultaneously.</div>
+          <span class="resource-tag tag-visual">Visual</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SO5 — ARRAYS & LINKED LISTS                -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="topic-section" id="arrays">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-accent" style="background:var(--accent5)"></span>
+      <h2 class="section-title">2D Arrays & Introduction to Linked Lists</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="topic-intro" style="--accent-color: var(--accent5)">
+      <div class="so-tags"><span class="so-tag">SO5</span></div>
+      <p>Understand <strong>arrays</strong> deeply first — fixed size, contiguous memory, O(1) random access. Then learn <strong>why arrays fail</strong>: costly insertion/deletion, fixed capacity. This motivates the <strong>singly linked list</strong> — dynamic size via nodes and pointers. Also covers 2D arrays, which your <code>Bubble_Sort_and_Matrix_Multiplication.pptx</code> uses for matrix multiplication.</p>
+    </div>
+
+    <div class="resource-grid">
+      <a class="resource-card" href="https://www.youtube.com/watch?v=5_5oE5lgrhw" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — CS Dojo</div>
+          <div class="resource-name">Introduction to Data Structures</div>
+          <div class="resource-desc">Covers arrays, dynamic arrays and why we need linked lists. Perfect foundation for SO5.</div>
+          <span class="resource-tag tag-beginner">Beginner</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=njTh_OwMljA" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — HackerRank</div>
+          <div class="resource-name">Data Structures: Arrays (Core Concepts)</div>
+          <div class="resource-desc">Explains 1D and 2D arrays, memory layout, and time complexity of operations clearly.</div>
+          <span class="resource-tag tag-beginner">Beginner</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=WwfhLC16bis" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — William Fiset</div>
+          <div class="resource-name">Linked List Data Structure — Full Series</div>
+          <div class="resource-desc">Best free linked list series on YouTube. Covers singly, doubly and circular with Java implementation.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.linkedin.com/learning/data-structures-and-algorithms-in-java" target="_blank">
+        <div class="resource-icon icon-li">🔗</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-li">LinkedIn Learning</div>
+          <div class="resource-name">Data Structures & Algorithms in Java</div>
+          <div class="resource-desc">By Raghavendra Dixit. Java-based course covering arrays, linked lists and their tradeoffs in depth.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.oreilly.com/library/view/data-structures-and/9781098104382/" target="_blank">
+        <div class="resource-icon icon-or">📙</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-or">O'Reilly Books</div>
+          <div class="resource-name">Data Structures & Algorithms in Java — Lafore</div>
+          <div class="resource-desc">Chapters on arrays and linked lists are hands-on with full Java code. Closest match to your module.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://visualgo.net/en/list" target="_blank">
+        <div class="resource-icon icon-tool">⚙️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-tool">Interactive Tool</div>
+          <div class="resource-name">VisuAlgo — Linked List Visualiser</div>
+          <div class="resource-desc">Animate insert, delete, search on singly linked lists. See exactly what happens to pointers.</div>
+          <span class="resource-tag tag-visual">Visual</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SO6 — DOUBLY & CIRCULAR LINKED LISTS       -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="topic-section" id="linked">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-accent" style="background:var(--accent4)"></span>
+      <h2 class="section-title">Doubly & Circular Linked Lists</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="topic-intro" style="--accent-color: var(--accent4)">
+      <div class="so-tags"><span class="so-tag">SO6</span></div>
+      <p>Singly linked lists can't traverse backwards — expensive for deletion of a known node. <strong>Doubly linked lists</strong> add a <code>prev</code> pointer to solve this. <strong>Circular linked lists</strong> connect the tail back to head — useful for round-robin scheduling. Know the <strong>trade-offs of each</strong> in terms of memory (extra pointer) and operation efficiency.</p>
+    </div>
+
+    <div class="resource-grid">
+      <a class="resource-card" href="https://www.youtube.com/watch?v=7LjQ57RqgEc" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — William Fiset</div>
+          <div class="resource-name">Doubly Linked List — Code & Concepts</div>
+          <div class="resource-desc">Detailed walkthrough with Java code. Covers insert, remove, prev pointer and all edge cases.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=PbZKbIxLZoo" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — Abdul Bari</div>
+          <div class="resource-name">Circular Linked List Explained</div>
+          <div class="resource-desc">Covers why circular lists exist, how traversal works, and use cases. Concise and clear.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/watch?v=Mut_u40Sqz4" target="_blank">
+        <div class="resource-icon icon-yt">▶️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-yt">YouTube — mycodeschool</div>
+          <div class="resource-name">Linked List — Full Series (mycodeschool)</div>
+          <div class="resource-desc">Classic series covering all 3 types of linked list with in-depth animations and Java examples.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.linkedin.com/learning/data-structures-and-algorithms-in-java" target="_blank">
+        <div class="resource-icon icon-li">🔗</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-li">LinkedIn Learning</div>
+          <div class="resource-name">Linked List module — DSA in Java</div>
+          <div class="resource-desc">The linked list section covers singly, doubly and circular. Good for exam revision with Java code.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://visualgo.net/en/list" target="_blank">
+        <div class="resource-icon icon-tool">⚙️</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-tool">Interactive Tool</div>
+          <div class="resource-name">VisuAlgo — Doubly & Circular List</div>
+          <div class="resource-desc">Switch between singly, doubly and circular list views. Watch pointer changes on insert/delete.</div>
+          <span class="resource-tag tag-visual">Visual</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+
+      <a class="resource-card" href="https://www.oreilly.com/library/view/data-structures-and/9781098104382/" target="_blank">
+        <div class="resource-icon icon-or">📙</div>
+        <div class="resource-info">
+          <div class="resource-platform platform-or">O'Reilly Books</div>
+          <div class="resource-name">Lafore — Doubly Linked List Chapter</div>
+          <div class="resource-desc">Full Java implementation with diagrams. Chapter 5 of Data Structures & Algorithms in Java.</div>
+          <span class="resource-tag tag-essential">Essential</span>
+        </div>
+        <div class="resource-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── WEEKLY SCHEDULE ─── -->
+  <section id="schedule" style="margin-bottom: 64px; scroll-margin-top: 90px;">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <span class="section-accent" style="background:var(--accent2)"></span>
+      <h2 class="section-title">Suggested Weekly Study Plan</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="schedule-grid">
+      <div class="schedule-card" style="--glow-color: rgba(79,158,255,0.1)">
+        <div class="schedule-week">Week 1–2</div>
+        <div class="schedule-topic">Big O & Algorithm Intro</div>
+        <div class="schedule-so">SO1 · SO3</div>
+        <ul class="schedule-tasks">
+          <li>Watch Abdul Bari Intro + CS Dojo Big O</li>
+          <li>Read Wengrow Chapters 1–3</li>
+          <li>Study Big_O.docx annotations</li>
+          <li>Bookmark bigocheatsheet.com</li>
+        </ul>
+      </div>
+
+      <div class="schedule-card" style="--glow-color: rgba(124,92,252,0.1)">
+        <div class="schedule-week">Week 3–4</div>
+        <div class="schedule-topic">Recursion vs Iteration</div>
+        <div class="schedule-so">SO2</div>
+        <ul class="schedule-tasks">
+          <li>Watch Reducible recursion video</li>
+          <li>Paste fact() & fib() into pythontutor.com</li>
+          <li>Study call stack diagrams</li>
+          <li>Compare time vs space complexity</li>
+        </ul>
+      </div>
+
+      <div class="schedule-card" style="--glow-color: rgba(0,217,163,0.1)">
+        <div class="schedule-week">Week 5–6</div>
+        <div class="schedule-topic">Bubble Sort & Cases</div>
+        <div class="schedule-so">SO4</div>
+        <ul class="schedule-tasks">
+          <li>Watch Abdul Bari bubble sort video</li>
+          <li>Animate on visualgo.net</li>
+          <li>Trace your bubbleSort() by hand</li>
+          <li>Count steps for best/worst/avg</li>
+        </ul>
+      </div>
+
+      <div class="schedule-card" style="--glow-color: rgba(255,169,77,0.1)">
+        <div class="schedule-week">Week 7–8</div>
+        <div class="schedule-topic">Arrays & Linked Lists</div>
+        <div class="schedule-so">SO5 · SO6</div>
+        <ul class="schedule-tasks">
+          <li>Watch William Fiset linked list series</li>
+          <li>Animate on visualgo.net</li>
+          <li>Implement singly + doubly in Java</li>
+          <li>Study Lafore chapters on lists</li>
+        </ul>
+      </div>
+
+      <div class="schedule-card" style="--glow-color: rgba(255,107,107,0.1)">
+        <div class="schedule-week">Week 9–10</div>
+        <div class="schedule-topic">Review & T1 Prep</div>
+        <div class="schedule-so">SO7 · T1</div>
+        <ul class="schedule-tasks">
+          <li>Complete all exercises from slides</li>
+          <li>Redo Big O analysis on fresh code</li>
+          <li>Re-watch key videos at 1.5×</li>
+          <li>Practice writing algorithms by hand</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STUDY TIPS ─── -->
+  <section style="margin-bottom: 64px;">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <span class="section-accent" style="background:var(--accent3)"></span>
+      <h2 class="section-title">Study Tips That Actually Work</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-emoji">🔬</div>
+        <div class="tip-title">Run Your Own Code</div>
+        <div class="tip-body">Add a step counter variable inside each loop in Big_O.docx. Print it. See O(n) vs O(n²) as real numbers — it makes Big O visceral and unforgettable.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-emoji">🎨</div>
+        <div class="tip-title">Always Visualise</div>
+        <div class="tip-body">Open visualgo.net every time you study a new algorithm. Watching pointers move in a linked list beats re-reading code 10 times.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-emoji">✍️</div>
+        <div class="tip-title">Write By Hand</div>
+        <div class="tip-body">Your T1 test is written. Practice tracing bubble sort, drawing linked list nodes, and writing Big O analysis on paper under time pressure.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-emoji">📺</div>
+        <div class="tip-title">Abdul Bari First</div>
+        <div class="tip-body">For every new topic, watch Abdul Bari before anything else. His lecture order almost perfectly mirrors your subject guide structure.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="wrapper">
+    ADP470S · Applications Development Practice 4 · CPUT · 2026 &nbsp;·&nbsp; T1 Resource Hub
+  </div>
+</footer>
+
+</body>
+</html>
